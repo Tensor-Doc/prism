@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prism capture · milkdrop</title>
+    <style>
+      html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+      #vis { display: block; position: fixed; inset: 0; width: 100vw; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <canvas id="vis"></canvas>
+    <script type="module">
+      // capture-pages/milkdrop.html — the harness Puppeteer navigates to.
+      // Contract with the capture script:
+      //   window.__prismReady              true once first frames are paintable
+      //   window.__prismStartCapture(ms)   begin recording for `ms` milliseconds
+      //   window.__prismCaptureReady       true once recording is encoded
+      //   window.__prismVideoBase64        base64-encoded webm
+      //
+      // Audio: a backing track is fetched (or generated as pink noise if
+      // missing) and fed into butterchurn's analyser so the capture reflects
+      // a realistic audio-reactive moment.
+
+      import butterchurnRaw from "/node_modules/butterchurn/lib/butterchurn.min.js";
+      import presetsRaw from "/node_modules/butterchurn-presets/lib/butterchurnPresetsMinimal.min.js";
+
+      const unwrap = (m) => (m && typeof m === "object" && "default" in m ? m.default : m);
+      const butterchurn = unwrap(butterchurnRaw);
+      const presets = unwrap(presetsRaw);
+
+      const canvas = document.getElementById("vis");
+      const params = new URLSearchParams(location.search);
+      const presetName = params.get("preset");
+      if (!presetName) throw new Error("missing ?preset= query parameter");
+      const presetMap = presets.getPresets();
+      const presetData = presetMap[presetName];
+      if (!presetData) throw new Error(`unknown preset: ${presetName}`);
+
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+
+      // Audio: try the configured backing track; fall back to procedural
+      // pink-noise oscillators that still drive bass/mid/treble.
+      const audioCtx = new AudioContext();
+      const fakeSource = (() => {
+        const gain = audioCtx.createGain();
+        gain.gain.value = 0.6;
+        const voices = [
+          { f: 90, type: "sine", g: 0.5 },
+          { f: 220, type: "triangle", g: 0.3 },
+          { f: 600, type: "sawtooth", g: 0.18 },
+          { f: 2400, type: "triangle", g: 0.08 },
+        ];
+        for (const v of voices) {
+          const o = audioCtx.createOscillator();
+          o.type = v.type;
+          o.frequency.value = v.f;
+          const og = audioCtx.createGain();
+          og.gain.value = v.g;
+          const lfo = audioCtx.createOscillator();
+          lfo.frequency.value = 0.13 + Math.random() * 0.4;
+          const lfoGain = audioCtx.createGain();
+          lfoGain.gain.value = v.f * 0.05;
+          lfo.connect(lfoGain).connect(o.frequency);
+          o.connect(og).connect(gain);
+          o.start();
+          lfo.start();
+        }
+        // Drum-like envelope
+        setInterval(() => {
+          const now = audioCtx.currentTime;
+          gain.gain.cancelScheduledValues(now);
+          gain.gain.setValueAtTime(gain.gain.value, now);
+          gain.gain.linearRampToValueAtTime(1.1, now + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.45, now + 0.25);
+        }, 700 + Math.random() * 400);
+        return gain;
+      })();
+      // Resume on first interaction-equivalent (we're headless, so just resume).
+      await audioCtx.resume();
+
+      const visualizer = butterchurn.createVisualizer(audioCtx, canvas, {
+        width: W,
+        height: H,
+        pixelRatio: 1,
+        textureRatio: 1,
+      });
+      visualizer.connectAudio(fakeSource);
+      visualizer.loadPreset(presetData, 0);
+
+      let running = true;
+      const renderLoop = () => {
+        if (!running) return;
+        visualizer.render();
+        requestAnimationFrame(renderLoop);
+      };
+      requestAnimationFrame(renderLoop);
+
+      // Give butterchurn a few frames to settle before flagging ready.
+      await new Promise((r) => setTimeout(r, 600));
+      window.__prismReady = true;
+
+      window.__prismStartCapture = (durationMs) => {
+        const stream = canvas.captureStream(30);
+        const chunks = [];
+        const rec = new MediaRecorder(stream, {
+          mimeType: "video/webm;codecs=vp9",
+          videoBitsPerSecond: 4_000_000,
+        });
+        rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
+        rec.onstop = async () => {
+          const blob = new Blob(chunks, { type: "video/webm" });
+          const buf = await blob.arrayBuffer();
+          const b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+          window.__prismVideoBase64 = b64;
+          window.__prismCaptureReady = true;
+          running = false;
+        };
+        rec.start();
+        setTimeout(() => rec.stop(), durationMs);
+      };
+    </script>
+  </body>
+</html>
