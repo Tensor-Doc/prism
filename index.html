@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <canvas id="milkdrop-canvas"></canvas>
+    <div id="controls">
+      <button id="capture">Capture tab audio</button>
+      <div id="preset-info"><span class="muted">preset:</span> <span id="preset-name">—</span></div>
+      <div id="status">Click to start. You'll be prompted to pick a tab and share its audio.</div>
+    </div>
+    <div id="vu">
+      <div class="vu-row"><span class="vu-label">bass</span><div class="vu-bar"><div id="vu-bass" class="vu-fill"></div></div></div>
+      <div class="vu-row"><span class="vu-label">mid</span><div class="vu-bar"><div id="vu-mid" class="vu-fill"></div></div></div>
+      <div class="vu-row"><span class="vu-label">treble</span><div class="vu-bar"><div id="vu-treble" class="vu-fill"></div></div></div>
+      <div class="vu-row"><span class="vu-label">beat</span><div class="vu-bar"><div id="vu-beat" class="vu-fill"></div></div></div>
+    </div>
+
+    <button id="dj-toggle" title="Open DJ board (ESC to close)">≡</button>
+    <div id="dj-board">
+      <div class="dj-header">
+        <div class="dj-tabs">
+          <button class="dj-tab active" data-tab="controls">Controls</button>
+          <button class="dj-tab" data-tab="milkdrop">Milkdrop</button>
+          <button class="dj-tab" data-tab="compositor">Compositor</button>
+        </div>
+        <button id="dj-close" title="Close (ESC)">×</button>
+      </div>
+      <div class="dj-tab-content" data-tab="controls">
+      <div id="palette-thumbs"></div>
+      <div class="dj-cols">
+        <div class="dj-col">
+          <div class="dj-col-label">energy</div>
+          <div class="dj-slider" data-key="inject_gain" data-min="0" data-max="2"   data-step="0.01"  data-default="1.0"></div>
+          <div class="dj-slider" data-key="decay"       data-min="0.2" data-max="6" data-step="0.05"  data-default="1.4"></div>
+          <div class="dj-slider" data-key="diffusion"   data-min="0" data-max="10"  data-step="0.1"   data-default="2.0"></div>
+        </div>
+        <div class="dj-col">
+          <div class="dj-col-label">motion</div>
+          <div class="dj-slider" data-key="flow_strength" data-min="0" data-max="0.5" data-step="0.005" data-default="0.14"></div>
+          <div class="dj-slider" data-key="flow_scale"    data-min="0.5" data-max="6" data-step="0.1"   data-default="2.0"></div>
+          <div class="dj-slider" data-key="bass_flow"     data-min="0" data-max="0.5" data-step="0.005" data-default="0.18"></div>
+          <div class="dj-slider" data-key="gravity"       data-min="0" data-max="0.6" data-step="0.005" data-default="0.0"></div>
+          <div class="dj-slider" data-key="mass"          data-min="0" data-max="8"   data-step="0.1"   data-default="0.0"></div>
+          <div class="dj-slider" data-key="waves"         data-min="0" data-max="15"  data-step="0.1"   data-default="0.0"></div>
+          <div class="dj-slider" data-key="music_motion"  data-min="0" data-max="5"   data-step="0.05"  data-default="1.5"></div>
+        </div>
+        <div class="dj-col">
+          <div class="dj-col-label">look</div>
+          <div class="dj-slider" data-key="slope_gain"  data-min="0" data-max="40" data-step="0.5"  data-default="12.0"></div>
+          <div class="dj-slider" data-key="saturation"  data-min="0.5" data-max="3" data-step="0.05" data-default="1.5"></div>
+          <div class="dj-slider" data-key="chroma"      data-min="0" data-max="1" data-step="0.02"  data-default="0.6"></div>
+          <div class="dj-slider" data-key="hue"         data-min="-1" data-max="1" data-step="0.01" data-default="0.0"></div>
+          <div class="dj-slider" data-key="hue_speed"   data-min="0" data-max="0.4" data-step="0.005" data-default="0.0"></div>
+          <div class="dj-slider" data-key="paint"       data-min="0" data-max="1"   data-step="0.01"  data-default="0.0"></div>
+          <div class="dj-slider" data-key="beat_relief" data-min="0" data-max="40" data-step="0.5"  data-default="16.0"></div>
+        </div>
+      </div>
+      </div>
+      <div class="dj-tab-content" data-tab="milkdrop" hidden>
+        <div class="md-controls-row">
+          <div class="dj-slider" data-key="chaos" data-min="0" data-max="1" data-step="0.01" data-default="0.0"></div>
+        </div>
+        <div class="md-preset-row">
+          <label class="md-label">preset:</label>
+          <select id="md-preset"></select>
+          <button id="md-heart" class="md-heart" title="Toggle favorite">♡</button>
+          <button id="md-random" class="md-button">random</button>
+          <button id="md-play" class="md-button" title="Auto-cycle presets">▶ play</button>
+          <input id="md-play-interval" type="number" min="3" max="120" step="1" value="15" class="md-interval-input" title="seconds between changes" />
+          <span class="md-label" style="min-width:0">s</span>
+        </div>
+        <div class="md-preset-row">
+          <label class="md-label">pool:</label>
+          <div class="md-radio-group">
+            <label><input type="radio" name="md-pool" value="all" checked> all</label>
+            <label><input type="radio" name="md-pool" value="favs"> favorites</label>
+          </div>
+          <span class="md-fav-count" id="md-fav-count">0 favorites</span>
+        </div>
+        <div class="md-status" id="md-status">click "capture tab audio" first — milkdrop loads with the audio stream.</div>
+        <textarea id="md-editor" class="cmp-editor" spellcheck="false" wrap="off" placeholder="preset will appear here after milkdrop loads…"></textarea>
+        <div class="cmp-actions">
+          <button id="md-editor-apply" class="md-button">apply edits (⌘↩)</button>
+          <button id="md-editor-revert" class="md-button">revert</button>
+          <button id="md-editor-save" class="md-button">save as…</button>
+          <button id="md-editor-delete" class="md-button">delete</button>
+          <button id="md-editor-ai" class="md-button md-ai-button">✨ AI: insert NASA</button>
+          <span id="md-editor-status" class="md-status"></span>
+        </div>
+      </div>
+      <div class="dj-tab-content" data-tab="compositor" hidden>
+        <div class="md-preset-row">
+          <label class="md-label">preset:</label>
+          <select id="cmp-preset"></select>
+          <button id="cmp-save" class="md-button">save as…</button>
+          <button id="cmp-delete" class="md-button">delete</button>
+        </div>
+        <textarea id="cmp-editor" class="cmp-editor" spellcheck="false" wrap="off"></textarea>
+        <div class="cmp-actions">
+          <button id="cmp-apply" class="md-button">apply (⌘↩)</button>
+          <span id="cmp-status" class="md-status">edit and apply to recompile.</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+/* Prism design tokens — see BRAND.md for usage rules.
+   These are the only source of color, type, motion, and spacing values.
+   Components reference these tokens; never raw hex / px. */
+
+:root {
+  /* ── Color ─────────────────────────────────────────────────── */
+  --bg:            #0a0a0d;
+  --glass:         rgba(20, 22, 28, 0.55);
+  --glass-border:  rgba(255, 255, 255, 0.10);
+  --fg:            #f5f3ee;
+  --fg-muted:      #6a6a72;
+  --mid:           #3a3a42;
+
+  /* Signal palette — each input modality owns a color */
+  --cyan:          #3dffe5;  /* audio / bass / live indicators / cursor glow */
+  --orange:        #ff7847;  /* vitals / heart / treble / warmth */
+  --lime:          #b7ff5c;  /* camera / pose / external sensors */
+  --hot:           #ff2e63;  /* beats / recording / critical */
+
+  /* Translucent variants for fills + glows */
+  --cyan-12:       rgba(61, 255, 229, 0.12);
+  --cyan-60:       rgba(61, 255, 229, 0.60);
+  --orange-12:     rgba(255, 120, 71, 0.12);
+  --orange-60:     rgba(255, 120, 71, 0.60);
+  --lime-12:       rgba(183, 255, 92, 0.12);
+  --hot-12:        rgba(255, 46, 99, 0.12);
+
+  /* ── Typography ────────────────────────────────────────────── */
+  --font-display: "Switzer", "GT Maru", system-ui, sans-serif;
+  --font-body:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "Berkeley Mono", ui-monospace, monospace;
+
+  --text-xs:   0.6875rem;   /* 11px — telemetry labels */
+  --text-sm:   0.8125rem;   /* 13px — panel labels */
+  --text-base: 1rem;        /* 16px — body */
+  --text-md:   1.25rem;     /* 20px — section headings */
+  --text-lg:   1.75rem;     /* 28px — prompt placeholder */
+  --text-xl:   3.5rem;      /* 56px — landing headline */
+  --text-2xl:  6rem;        /* 96px — logo wordmark */
+
+  --tracking-display: -0.04em;
+  --tracking-body:    0;
+  --tracking-mono:    0;
+  --tracking-label:   0.08em;  /* uppercase labels in mono */
+
+  /* ── Motion ────────────────────────────────────────────────── */
+  --ease-spring:  cubic-bezier(0.3, 0, 0, 1);
+  --ease-snap:    cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --dur-quick:    120ms;
+  --dur-base:     280ms;
+  --dur-page:     800ms;
+  --glow-decay:   600ms;
+
+  /* ── Spacing ───────────────────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  72px;
+
+  /* ── Surfaces ──────────────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+
+  --panel-blur: blur(20px) saturate(1.2);
+  --panel-shadow:
+    0 24px 60px -20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --status-bar-height: 36px;
+}
+
+/* ── Base reset ────────────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* ── Reusable panel class ──────────────────────────────────── */
+.glass {
+  background: var(--glass);
+  backdrop-filter: var(--panel-blur);
+  -webkit-backdrop-filter: var(--panel-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--panel-shadow);
+}
+
+/* ── Telemetry label (UPPERCASE mono, used everywhere) ─────── */
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--fg-muted);
+}
+
+/* ── Numeric readout (mono, fg) ────────────────────────────── */
+.readout {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+}

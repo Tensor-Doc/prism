@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prism — generative visualization</title>
+    <meta name="description" content="Signals in. Live visuals out." />
+    <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
+    <link rel="stylesheet" href="/src/tokens.css" />
+    <link rel="stylesheet" href="/src/landing/styles.css" />
+  </head>
+  <body class="landing">
+    <!-- ── background visualization ────────────────────────────── -->
+    <canvas id="milkdrop" aria-hidden="true"></canvas>
+    <canvas id="field" aria-hidden="true"></canvas>
+    <canvas id="slideshow" aria-hidden="true"></canvas>
+    <div class="slideshow-card" id="slideshow-card" data-hidden>
+      <button class="slideshow-card__collapse" type="button" id="slideshow-card-collapse" title="Collapse to thumbnail" aria-label="Collapse">
+        <span aria-hidden="true">−</span>
+      </button>
+      <span class="slideshow-card__handle slideshow-card__handle--tl" data-handle="tl" aria-hidden="true"></span>
+      <span class="slideshow-card__handle slideshow-card__handle--tr" data-handle="tr" aria-hidden="true"></span>
+      <span class="slideshow-card__handle slideshow-card__handle--bl" data-handle="bl" aria-hidden="true"></span>
+      <span class="slideshow-card__handle slideshow-card__handle--br" data-handle="br" aria-hidden="true"></span>
+    </div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="scan" aria-hidden="true"></div>
+    <div class="slideshow-progress" id="slideshow-progress" aria-hidden="true"></div>
+
+    <!-- ── status bar ──────────────────────────────────────────── -->
+    <header class="statusbar" data-reveal="1">
+      <div class="statusbar__left">
+        <a class="logo" href="/">
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 L22 20 L2 20 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="miter"/>
+            <line x1="12" y1="6" x2="12" y2="22" stroke="currentColor" stroke-width="0.6" opacity="0.55"/>
+            <line x1="12" y1="12" x2="18" y2="22" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+            <line x1="12" y1="12" x2="6" y2="22" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+          </svg>
+          <span class="logo__word">prism</span>
+        </a>
+        <span class="statusbar__sep" aria-hidden="true">/</span>
+        <span class="label statusbar__tag">generative visualization</span>
+      </div>
+      <div class="statusbar__right">
+        <button class="chip chip--dim" type="button" id="dim-toggle" title="Dim background (cycle)">
+          <span class="chip__symbol" aria-hidden="true"></span>
+        </button>
+        <button class="chip chip--state" type="button" id="state-chip" data-hidden title="Expand state panel">
+          <span class="dot dot--cyan dot--breathe" aria-hidden="true"></span>
+          <span class="readout" id="fps-chip">59.8</span>
+          <span class="chip__sep" aria-hidden="true">·</span>
+          <span class="readout" id="gpu-chip">12%</span>
+          <span class="dot chip__audio-dot" aria-hidden="true"></span>
+        </button>
+        <button class="chip chip--signals" type="button" id="signal-chip">
+          <span class="dot dot--cyan" aria-hidden="true"></span>
+          <span class="label">signals</span>
+          <span class="readout" id="signal-count">0 live</span>
+          <span class="chip__caret" aria-hidden="true">▾</span>
+        </button>
+        <button class="chip chip--auth" type="button">sign&nbsp;in</button>
+      </div>
+    </header>
+
+    <!-- ── SOURCES panel ───────────────────────────────────────── -->
+    <aside class="panel panel--sources glass" data-reveal="2" id="sources-panel" aria-label="Signal sources">
+      <header class="panel__header">
+        <span class="label">sources</span>
+        <div class="panel__controls">
+          <span class="readout panel__count" id="sources-count">1/5</span>
+          <button class="panel__collapse" type="button" id="sources-collapse" title="Collapse">
+            <span aria-hidden="true">⨯</span>
+          </button>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="signal" data-signal="cursor" data-active>
+          <span class="signal__glyph" aria-hidden="true">⌖</span>
+          <span class="signal__name label">cursor</span>
+          <canvas class="signal__vu" id="vu-cursor" aria-hidden="true"></canvas>
+          <span class="signal__rate readout" id="cursor-rate">— px/s</span>
+        </div>
+        <div class="signal signal--clickable" data-signal="audio" id="audio-row" tabindex="0" role="button" title="Share a tab's audio to drive the visualization">
+          <span class="signal__glyph" aria-hidden="true">♪</span>
+          <span class="signal__name label">audio</span>
+          <canvas class="signal__vu" id="vu-audio" aria-hidden="true"></canvas>
+          <span class="signal__rate readout">connect</span>
+        </div>
+        <div class="signal" data-signal="camera">
+          <span class="signal__glyph" aria-hidden="true">◉</span>
+          <span class="signal__name label">camera</span>
+          <span class="signal__vu signal__vu--empty" aria-hidden="true"></span>
+          <span class="signal__rate readout">offline</span>
+        </div>
+        <div class="signal signal--clickable" data-signal="watch" id="watch-row" tabindex="0" role="button" title="Connect Pulsoid heart-rate">
+          <span class="signal__glyph" aria-hidden="true">♥</span>
+          <span class="signal__name label">watch</span>
+          <canvas class="signal__vu" id="vu-watch" aria-hidden="true"></canvas>
+          <span class="signal__rate readout">connect</span>
+        </div>
+        <div class="signal signal--clickable" data-signal="gallery" id="gallery-row" tabindex="0" role="button" title="Pick an image source for the slideshow">
+          <span class="signal__glyph" aria-hidden="true">▦</span>
+          <span class="signal__name label">gallery</span>
+          <span class="signal__vu signal__vu--empty" aria-hidden="true"></span>
+          <span class="signal__rate readout">connect</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── STATE panel ─────────────────────────────────────────── -->
+    <aside class="panel panel--state glass" data-reveal="3" id="state-panel" aria-label="Engine state">
+      <header class="panel__header">
+        <span class="label">state</span>
+        <div class="panel__controls">
+          <span class="dot dot--cyan dot--breathe" aria-hidden="true"></span>
+          <button class="panel__collapse" type="button" id="state-collapse" title="Collapse">
+            <span aria-hidden="true">⨯</span>
+          </button>
+        </div>
+      </header>
+      <dl class="state-grid">
+        <dt class="label">fps</dt>
+        <dd class="readout readout--num" id="fps">59.8</dd>
+        <dt class="label">gpu</dt>
+        <dd class="readout readout--num" id="gpu">12&thinsp;%</dd>
+        <dt class="label">skill</dt>
+        <dd class="state-skill">
+          <button class="skill-play" id="skill-play" type="button" title="Auto-rotate presets (paused)" aria-label="Toggle preset rotation">▶</button>
+          <span class="readout state-skill__name" id="skill">—</span>
+        </dd>
+        <dt class="label">session</dt>
+        <dd class="readout readout--num" id="session">0:00:00</dd>
+      </dl>
+      <div class="state-spectrum" id="state-spectrum">
+        <div class="state-spectrum__header">
+          <span class="label">audio</span>
+          <span class="readout state-spectrum__energy" id="audio-energy">0.00</span>
+        </div>
+        <canvas class="state-spectrum__canvas" id="spectrum-canvas" aria-hidden="true"></canvas>
+        <div class="state-spectrum__legend">
+          <span class="label">bass</span>
+          <span class="label">mid</span>
+          <span class="label">treble</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── prompt / GENERATE panel ─────────────────────────────── -->
+    <main class="prompt glass" id="prompt-panel">
+      <header class="prompt__header">
+        <span class="label">generate</span>
+        <div class="prompt__corner">
+          <span class="label">⌘ ↵</span>
+          <button class="panel__collapse" type="button" id="prompt-collapse" title="Dock to bottom">
+            <span aria-hidden="true">⨯</span>
+          </button>
+        </div>
+      </header>
+      <div class="prompt__body">
+        <textarea
+          id="prompt-input"
+          class="prompt__input"
+          placeholder="describe a visualization, drop signals…"
+          rows="2"
+          spellcheck="false"
+          autocomplete="off"
+        ></textarea>
+      </div>
+      <footer class="prompt__footer">
+        <div class="prompt__meta">
+          <span class="label">attached</span>
+          <span class="readout" id="attached-list">none</span>
+        </div>
+        <div class="prompt__actions">
+          <button class="prompt__restore" type="button" id="prompt-restore" title="Expand to center">
+            <span aria-hidden="true">⌃</span>
+          </button>
+          <button class="btn btn--ghost" id="attach-btn" type="button" title="Attach a signal or reference">
+            <span class="btn__icon" aria-hidden="true">＋</span>
+            <span class="label">attach</span>
+          </button>
+          <button class="btn btn--primary" id="generate-btn" type="button">
+            <span class="btn__icon" aria-hidden="true">▶</span>
+            <span class="label">generate</span>
+          </button>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ── bottom status bar (mirror of top) ───────────────────── -->
+    <footer class="statusbar statusbar--bottom" data-reveal="5" aria-label="Secondary navigation">
+      <div class="statusbar__left">
+        <button class="chip chip--sources" type="button" id="sources-chip" title="Expand sources panel">
+          <span class="signal__glyph" aria-hidden="true">⌖</span>
+          <span class="label">sources</span>
+          <span class="readout" id="sources-chip-count">1 live</span>
+          <span class="chip__caret" aria-hidden="true">▴</span>
+        </button>
+      </div>
+      <div class="statusbar__right">
+        <a class="btn btn--ghost nav__btn" href="#gallery">
+          <span class="btn__icon" aria-hidden="true">⊞</span>
+          <span class="label">gallery</span>
+        </a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a class="btn btn--ghost nav__btn" href="#docs">
+          <span class="label">docs</span>
+        </a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a class="btn btn--ghost nav__btn" href="#api">
+          <span class="label">api</span>
+        </a>
+      </div>
+    </footer>
+
+    <!-- ── Gallery source picker ──────────────────────────────── -->
+    <div class="modal" id="gallery-modal" data-hidden aria-hidden="true">
+      <div class="modal__panel glass">
+        <header class="modal__header">
+          <span class="label">gallery source</span>
+          <button class="panel__collapse" type="button" id="gallery-modal-close" title="Close">
+            <span aria-hidden="true">⨯</span>
+          </button>
+        </header>
+        <div class="modal__body">
+          <p class="modal__note">choose an image source for the slideshow. each cycle samples a fresh image from the selected source.</p>
+          <div class="source-list">
+            <button class="source-option" type="button" data-source="audio-tab" id="src-audio-tab" disabled>
+              <span class="source-option__glyph" aria-hidden="true">♪</span>
+              <span class="source-option__body">
+                <span class="source-option__name">audio tab</span>
+                <span class="source-option__desc">sample the shared audio tab's screen — share audio first</span>
+              </span>
+            </button>
+            <button class="source-option" type="button" data-source="nasa-deep-space" id="src-nasa">
+              <span class="source-option__glyph" aria-hidden="true">◐</span>
+              <span class="source-option__body">
+                <span class="source-option__name">nasa · deep space</span>
+                <span class="source-option__desc">hubble + jwst + apod — nebulae, galaxies, deep sky</span>
+              </span>
+            </button>
+          </div>
+          <p class="modal__status label" id="gallery-modal-status"></p>
+        </div>
+        <footer class="modal__footer">
+          <button class="btn btn--ghost" type="button" id="gallery-disconnect" data-hidden>
+            <span class="label">disconnect</span>
+          </button>
+          <span class="modal__spacer"></span>
+          <button class="btn btn--ghost" type="button" id="gallery-cancel">
+            <span class="label">close</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ── Pulsoid token modal ─────────────────────────────────── -->
+    <div class="modal" id="watch-modal" data-hidden aria-hidden="true">
+      <div class="modal__panel glass">
+        <header class="modal__header">
+          <span class="label">connect pulsoid</span>
+          <button class="panel__collapse" type="button" id="watch-modal-close" title="Close">
+            <span aria-hidden="true">⨯</span>
+          </button>
+        </header>
+        <div class="modal__body">
+          <p class="modal__note">
+            paste a <strong>Pulsoid</strong> access token below. get one at
+            <a href="https://pulsoid.net/widget/builder" target="_blank" rel="noreferrer">pulsoid.net&nbsp;→&nbsp;widget&nbsp;builder</a>
+            — works with apple watch, garmin, polar, fitbit, BLE straps. no token? try demo mode instead.
+          </p>
+          <input type="password" class="modal__input" id="watch-token-input" placeholder="access token" autocomplete="off" spellcheck="false" />
+          <button class="btn btn--ghost modal__simulate" id="watch-simulate" type="button" title="Fake a 72 BPM heartbeat — no watch required">
+            <span class="btn__icon" aria-hidden="true">♥</span>
+            <span class="label">demo · simulate at 72 bpm</span>
+          </button>
+          <p class="modal__status label" id="watch-modal-status"></p>
+        </div>
+        <footer class="modal__footer">
+          <button class="btn btn--ghost" type="button" id="watch-disconnect" data-hidden>
+            <span class="label">disconnect</span>
+          </button>
+          <span class="modal__spacer"></span>
+          <button class="btn btn--ghost" type="button" id="watch-cancel">
+            <span class="label">cancel</span>
+          </button>
+          <button class="btn btn--primary" type="button" id="watch-connect">
+            <span class="btn__icon" aria-hidden="true">▶</span>
+            <span class="label">connect</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ── corner brackets (purely cockpit dressing) ──────────── -->
+    <span class="bracket bracket--tl" aria-hidden="true"></span>
+    <span class="bracket bracket--tr" aria-hidden="true"></span>
+    <span class="bracket bracket--bl" aria-hidden="true"></span>
+    <span class="bracket bracket--br" aria-hidden="true"></span>
+
+    <script type="module" src="/src/landing/main.ts"></script>
+  </body>
+</html>

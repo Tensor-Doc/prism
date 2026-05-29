@@ -1,0 +1,1131 @@
+/* Prism landing — page-specific styles. Tokens are imported via landing.html.
+   All values reference --tokens. Aesthetic frame: creative cockpit. */
+
+/* ─────────────────────────────────────────────────────────────
+   Layout root
+   ───────────────────────────────────────────────────────────── */
+.landing {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.landing :is(input, textarea) { user-select: text; }
+
+/* ─────────────────────────────────────────────────────────────
+   Background field
+   ───────────────────────────────────────────────────────────── */
+#milkdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;
+  opacity: 0;
+  animation: field-in 1400ms var(--ease-spring) 60ms forwards;
+  transition: opacity var(--dur-base) var(--ease-spring),
+              filter var(--dur-base) var(--ease-spring);
+}
+/* Global dim mode — toggled from the top status bar. Saturate-down too so
+   any wild colors (e.g. purple-heavy presets) lose their punch. */
+body[data-dim="1"] #milkdrop { opacity: 0.55; filter: saturate(0.5); }
+body[data-dim="2"] #milkdrop { opacity: 0.28; filter: saturate(0.3); }
+#field {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  animation: field-in 1400ms var(--ease-spring) 200ms forwards;
+}
+
+#slideshow {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-spring);
+}
+
+/* During the drop + dissolve phases, the slideshow blends additively with
+   milkdrop — strips "melt into" the surface rather than sitting on top. */
+#slideshow.is-melting {
+  mix-blend-mode: screen;
+}
+
+/* Draggable / resizable overlay positioned over the slideshow image rect.
+   The canvas underneath does the rendering; this div catches pointer events
+   for drag, resize handles, and the collapse button. */
+.slideshow-card {
+  position: fixed;
+  z-index: 3;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: border-color var(--dur-quick) var(--ease-spring),
+              box-shadow var(--dur-quick) var(--ease-spring);
+  cursor: move;
+  touch-action: none;
+}
+.slideshow-card[data-hidden] { display: none; }
+.slideshow-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+.slideshow-card:active { border-color: var(--cyan-60); }
+
+/* Collapsed thumb — cyan glow, clickable to expand. */
+.slideshow-card[data-collapsed] {
+  border-color: var(--cyan-60);
+  box-shadow: 0 0 14px var(--cyan-12), 0 6px 20px -8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: border-color var(--dur-base) var(--ease-spring),
+              box-shadow var(--dur-base) var(--ease-spring);
+}
+.slideshow-card[data-collapsed]:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 22px var(--cyan-12), 0 8px 26px -8px rgba(0, 0, 0, 0.6);
+}
+
+.slideshow-card__handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--cyan);
+  border: 1px solid var(--bg);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity var(--dur-quick) var(--ease-spring);
+  pointer-events: auto;
+}
+.slideshow-card:hover:not([data-collapsed]) .slideshow-card__handle { opacity: 0.85; }
+.slideshow-card[data-collapsed] .slideshow-card__handle { display: none; }
+
+.slideshow-card__handle--tl { top: -6px;    left: -6px;   cursor: nwse-resize; }
+.slideshow-card__handle--tr { top: -6px;    right: -6px;  cursor: nesw-resize; }
+.slideshow-card__handle--bl { bottom: -6px; left: -6px;   cursor: nesw-resize; }
+.slideshow-card__handle--br { bottom: -6px; right: -6px;  cursor: nwse-resize; }
+
+.slideshow-card__collapse {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--fg);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 0 2px 0;
+  opacity: 0;
+  transition: opacity var(--dur-quick) var(--ease-spring),
+              background var(--dur-quick) var(--ease-spring);
+}
+.slideshow-card:hover:not([data-collapsed]) .slideshow-card__collapse { opacity: 0.9; }
+.slideshow-card__collapse:hover { background: rgba(0, 0, 0, 0.85); }
+.slideshow-card[data-collapsed] .slideshow-card__collapse { display: none; }
+
+/* Slim progress bar at the bottom while a slide is held. */
+.slideshow-progress {
+  position: fixed;
+  left: 0;
+  bottom: var(--status-bar-height);
+  height: 2px;
+  width: 0%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan-60), 0 -1px 4px var(--cyan-12);
+  z-index: 9;
+  pointer-events: none;
+}
+
+@keyframes field-in { to { opacity: 1; } }
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.62) 100%);
+  mix-blend-mode: multiply;
+}
+
+/* Faint diagonal scan to give surface texture without dating. */
+.scan {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.05;
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 0 1px,
+      transparent 1px 6px
+    );
+  mix-blend-mode: overlay;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reveal stagger (orchestrated entrance)
+   ───────────────────────────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: reveal var(--dur-page) var(--ease-spring) forwards;
+}
+[data-reveal="1"] { animation-delay: 120ms; }
+[data-reveal="2"] { animation-delay: 240ms; }
+[data-reveal="3"] { animation-delay: 320ms; }
+[data-reveal="4"] { animation-delay: 480ms; }
+[data-reveal="5"] { animation-delay: 640ms; }
+
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prompt + nav have their own centering transforms, so they use a
+   transform-free opacity fade-in (declared on the elements themselves
+   below) instead of [data-reveal]. */
+@keyframes opacity-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Status bar (top, the only permanent chrome)
+   ───────────────────────────────────────────────────────────── */
+.statusbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--status-bar-height);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  background: rgba(10, 10, 13, 0.72);
+  backdrop-filter: var(--panel-blur);
+  -webkit-backdrop-filter: var(--panel-blur);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.statusbar--bottom {
+  top: auto;
+  bottom: 0;
+  border-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.statusbar--bottom .statusbar__right {
+  gap: var(--space-2);
+}
+.statusbar__sep--dot {
+  color: var(--mid);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.statusbar__left,
+.statusbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--fg);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-display);
+}
+
+.logo__mark {
+  width: 16px;
+  height: 16px;
+  color: var(--cyan);
+  filter: drop-shadow(0 0 6px var(--cyan-60));
+  animation: mark-breathe 3.4s ease-in-out infinite;
+}
+
+@keyframes mark-breathe {
+  0%, 100% { filter: drop-shadow(0 0 4px var(--cyan-60)); }
+  50%      { filter: drop-shadow(0 0 9px var(--cyan-60)); }
+}
+
+.logo__word {
+  font-weight: 500;
+  line-height: 1;
+}
+
+.statusbar__sep {
+  color: var(--mid);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.statusbar__tag { color: var(--fg-muted); }
+
+/* status chip — looks like a mini-panel inline */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 24px;
+  padding: 0 var(--space-3);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  transition: background var(--dur-quick) var(--ease-spring),
+              border-color var(--dur-quick) var(--ease-spring);
+}
+.chip:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.chip__caret { color: var(--fg-muted); }
+
+.chip--auth { padding: 0 var(--space-4); }
+
+.chip__sep { color: var(--mid); }
+
+/* Dim toggle chip — three-state cycle: full / dim / very dim */
+.chip--dim { width: 28px; padding: 0; justify-content: center; }
+.chip--dim .chip__symbol {
+  width: 12px; height: 12px;
+  background: conic-gradient(var(--fg) 0% 50%, transparent 50% 100%);
+  border: 1px solid var(--fg-muted);
+  border-radius: 50%;
+  display: block;
+  transition: transform var(--dur-base) var(--ease-spring);
+}
+body[data-dim="1"] .chip--dim .chip__symbol { transform: rotate(180deg); }
+body[data-dim="2"] .chip--dim .chip__symbol {
+  background: var(--fg-muted);
+  transform: rotate(180deg);
+}
+
+.chip--state,
+.chip--sources {
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+  opacity: 0;
+  transform: scale(0.94);
+  pointer-events: none;
+  transition: opacity var(--dur-base) var(--ease-spring),
+              transform var(--dur-base) var(--ease-spring);
+}
+.chip--state[data-visible],
+.chip--sources[data-visible] {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.chip--state { color: var(--cyan); }
+.chip--sources .signal__glyph {
+  color: var(--cyan);
+  font-size: var(--text-sm);
+  line-height: 1;
+}
+.chip__audio-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: transparent;
+  margin-left: 2px;
+  transition: background var(--dur-quick) var(--ease-spring),
+              box-shadow var(--dur-quick) var(--ease-spring);
+}
+body.audio-live .chip__audio-dot {
+  background: var(--cyan);
+  box-shadow: 0 0 6px var(--cyan-60);
+  animation: dot-breathe 0.8s ease-in-out infinite;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot--cyan { background: var(--cyan); box-shadow: 0 0 6px var(--cyan-60); }
+.dot--orange { background: var(--orange); box-shadow: 0 0 6px var(--orange-60); }
+.dot--lime { background: var(--lime); }
+.dot--hot { background: var(--hot); }
+
+.dot--breathe { animation: dot-breathe 2.2s ease-in-out infinite; }
+@keyframes dot-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(0.85); }
+  50%      { opacity: 1; transform: scale(1.05); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Floating panels (shared)
+   ───────────────────────────────────────────────────────────── */
+.panel {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--glass-border);
+}
+.panel__count { color: var(--fg); }
+.panel__body { padding: var(--space-3) var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); }
+
+.panel__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.panel__collapse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: transparent;
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: background var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring);
+}
+.panel__collapse:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fg);
+}
+
+/* Collapsed-into-chip transition: panel scales down & fades.
+   `animation: none` is required to release the `[data-reveal]` entrance
+   animation's forwards fill-mode (which would otherwise keep opacity:1). */
+.panel[data-collapsed] {
+  animation: none;
+  opacity: 0;
+  transform: translate(0, -8px) scale(0.96);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity var(--dur-base) var(--ease-snap),
+              transform var(--dur-base) var(--ease-snap),
+              visibility 0s linear var(--dur-base);
+}
+.panel--sources[data-collapsed] {
+  transform: translate(0, 8px) scale(0.96);
+}
+
+/* SOURCES (top-left) */
+.panel--sources {
+  top: calc(var(--status-bar-height) + var(--space-4));
+  left: var(--space-4);
+  width: 288px;
+}
+
+/* STATE (top-right) */
+.panel--state {
+  top: calc(var(--status-bar-height) + var(--space-4));
+  right: var(--space-4);
+  width: 252px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Signal rows (inside SOURCES)
+   ───────────────────────────────────────────────────────────── */
+.signal {
+  display: grid;
+  /* Rate column reserved for the widest stable value ("1234 px/s" or
+     "120 bpm" + buffer) so layout never reflows as numbers grow. */
+  grid-template-columns: 14px 54px 1fr 84px;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  opacity: 0.5;
+  transition: opacity var(--dur-base) var(--ease-spring);
+}
+.signal[data-active] { opacity: 1; color: var(--fg); }
+.signal[data-active] .signal__rate { color: var(--cyan); }
+.signal[data-active][data-signal="watch"] .signal__rate { color: var(--orange); }
+.signal[data-active][data-signal="watch"] .signal__glyph { color: var(--orange); }
+.signal[data-active][data-signal="gallery"] .signal__rate { color: var(--lime); }
+.signal[data-active][data-signal="gallery"] .signal__glyph { color: var(--lime); }
+
+.signal--clickable { cursor: pointer; }
+.signal--clickable:hover { opacity: 0.85; }
+.signal--clickable:hover .signal__rate { color: var(--cyan); }
+.signal--clickable[data-active]:hover .signal__rate { color: var(--orange); }
+.signal--clickable[data-active][data-signal="gallery"]:hover .signal__rate { color: var(--lime); }
+
+/* Source picker list inside the gallery modal */
+.source-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.source-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--fg);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--dur-quick) var(--ease-spring),
+              border-color var(--dur-quick) var(--ease-spring),
+              transform var(--dur-quick) var(--ease-spring);
+}
+.source-option:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.source-option:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.source-option[data-selected] {
+  border-color: var(--cyan-60);
+  background: var(--cyan-12);
+}
+.source-option__glyph {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--cyan);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.source-option__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.source-option__name {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--fg);
+}
+.source-option__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+}
+
+.signal__glyph {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+}
+.signal[data-active] .signal__glyph { color: var(--cyan); }
+
+.signal__name {
+  letter-spacing: var(--tracking-label);
+}
+
+.signal__vu {
+  width: 100%;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 2px;
+  display: block;
+}
+.signal__vu--empty {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0 2px,
+    transparent 2px 5px
+  );
+}
+
+.signal__rate {
+  text-align: right;
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   STATE panel grid
+   ───────────────────────────────────────────────────────────── */
+.state-grid {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  row-gap: var(--space-2);
+  column-gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+.state-grid dt {
+  align-self: center;
+  letter-spacing: var(--tracking-label);
+}
+.state-grid dd {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+}
+.readout--num { color: var(--cyan); }
+
+/* "Loading" state for readouts (e.g. SKILL while the first shader compiles). */
+.readout.is-loading {
+  color: var(--fg-muted);
+  animation: readout-loading 1.2s ease-in-out infinite;
+}
+@keyframes readout-loading {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.95; }
+}
+
+/* Skill cell — button + name in a right-aligned row */
+.state-skill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.state-skill__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.skill-play {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--fg-muted);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 8px;
+  line-height: 1;
+  padding: 0 0 0 1px;  /* nudge the ▶ glyph optically centred */
+  font-family: var(--font-mono);
+  transition: background var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring),
+              border-color var(--dur-quick) var(--ease-spring),
+              box-shadow var(--dur-quick) var(--ease-spring);
+}
+.skill-play:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--fg);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.skill-play[data-playing] {
+  color: var(--cyan);
+  border-color: var(--cyan-60);
+  background: var(--cyan-12);
+  box-shadow: 0 0 6px -1px var(--cyan-12);
+  padding: 0;
+  animation: skill-play-pulse 1.8s ease-in-out infinite;
+}
+@keyframes skill-play-pulse {
+  0%, 100% { opacity: 0.78; }
+  50%      { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Modal (used for the Pulsoid token entry)
+   ───────────────────────────────────────────────────────────── */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 1;
+  transition: opacity var(--dur-base) var(--ease-spring);
+}
+.modal[data-hidden] {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal__panel {
+  width: min(440px, calc(100vw - var(--space-7) * 2));
+  background: rgba(10, 12, 16, 0.92);
+  backdrop-filter: blur(28px) saturate(0.5);
+  -webkit-backdrop-filter: blur(28px) saturate(0.5);
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--glass-border);
+}
+.modal__body {
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.modal__note {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+  line-height: 1.5;
+}
+.modal__note a { color: var(--cyan); text-decoration: none; border-bottom: 1px dotted var(--cyan-60); }
+.modal__note a:hover { border-bottom-style: solid; }
+.modal__note strong { color: var(--fg); font-weight: 500; }
+.modal__input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--dur-quick) var(--ease-spring);
+}
+.modal__input:focus { border-color: var(--cyan-60); }
+.modal__status {
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  min-height: 1em;
+}
+.modal__status[data-state="error"] { color: var(--hot); }
+.modal__status[data-state="live"] { color: var(--orange); }
+
+/* Simulate / demo button — secondary alternative, dashed border for "demo" feel */
+.modal__simulate {
+  width: 100%;
+  height: 34px;
+  justify-content: center;
+  border-style: dashed;
+  color: var(--orange);
+  border-color: rgba(255, 120, 71, 0.32);
+}
+.modal__simulate .btn__icon { color: var(--orange); font-size: 11px; }
+.modal__simulate:hover {
+  background: var(--orange-12);
+  border-color: var(--orange-60);
+  border-style: solid;
+}
+.modal__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--glass-border);
+}
+.modal__spacer { flex: 1; }
+
+/* Heartbeat indicator on the watch chip while live */
+body.watch-live .signal[data-signal="watch"] .signal__glyph {
+  animation: heart-pulse calc(60s / var(--bpm, 72)) ease-in-out infinite;
+}
+@keyframes heart-pulse {
+  0%, 100% { transform: scale(1); }
+  20%      { transform: scale(1.45); }
+  40%      { transform: scale(1); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Audio spectrum strip inside STATE panel
+   Revealed only when body.audio-live; collapses with the panel.
+   ───────────────────────────────────────────────────────────── */
+.state-spectrum {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 var(--space-4);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height var(--dur-base) var(--ease-spring),
+              opacity var(--dur-base) var(--ease-spring),
+              padding-bottom var(--dur-base) var(--ease-spring);
+}
+body.audio-live .state-spectrum {
+  max-height: 140px;
+  opacity: 1;
+  padding-bottom: var(--space-4);
+}
+.state-spectrum__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--glass-border);
+}
+.state-spectrum__energy { color: var(--cyan); }
+.state-spectrum__canvas {
+  width: 100%;
+  height: 48px;
+  display: block;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.state-spectrum__legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+}
+.state-spectrum__legend .label {
+  letter-spacing: var(--tracking-label);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Prompt panel (the centerpiece)
+   ───────────────────────────────────────────────────────────── */
+.prompt {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  /* Stay clear of the SOURCES (~288px) + STATE (~252px) corner panels with
+     breathing room, but cap at a readable max for big displays. */
+  width: min(640px, calc(100vw - 620px));
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: opacity-in var(--dur-page) var(--ease-spring) 480ms forwards;
+  transition: border-color var(--dur-base) var(--ease-spring),
+              box-shadow var(--dur-base) var(--ease-spring),
+              transform var(--dur-base) var(--ease-spring);
+}
+
+/* Override the .glass background — the prompt needs to be reliably readable
+   over any milkdrop preset, including bright/saturated ones. We use a more
+   opaque dark bg + desaturated backdrop to tame chroma punching through. */
+.prompt {
+  background: rgba(8, 10, 14, 0.80);
+  backdrop-filter: blur(28px) saturate(0.45);
+  -webkit-backdrop-filter: blur(28px) saturate(0.45);
+}
+.prompt:focus-within {
+  border-color: var(--cyan-60);
+  background: rgba(8, 10, 14, 0.88);
+  box-shadow:
+    0 24px 60px -20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px var(--cyan-12),
+    0 0 32px -4px var(--cyan-12);
+}
+
+.prompt__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--glass-border);
+}
+.prompt__corner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.prompt__corner .label { color: var(--fg-muted); }
+
+/* Restore button — only visible in docked state. Same shape as panel__collapse. */
+.prompt__restore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--fg-muted);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  transition: background var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring),
+              border-color var(--dur-quick) var(--ease-spring);
+}
+.prompt__restore:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--fg);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.prompt:not([data-collapsed]) .prompt__restore { display: none; }
+
+/* ── Docked (collapsed) prompt — slim bar above the bottom status bar ── */
+.prompt[data-collapsed] {
+  top: auto;
+  bottom: calc(var(--status-bar-height) + var(--space-3));
+  left: var(--space-4);
+  right: var(--space-4);
+  transform: none;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 var(--space-3);
+  height: 48px;
+  transition: bottom var(--dur-base) var(--ease-spring);
+}
+.prompt[data-collapsed] .prompt__header,
+.prompt[data-collapsed] .prompt__meta {
+  display: none;
+}
+.prompt[data-collapsed] .prompt__body {
+  flex: 1;
+  padding: 0 var(--space-2);
+  min-width: 0;
+}
+.prompt[data-collapsed] .prompt__input {
+  font-size: var(--text-base);
+  line-height: 1.4;
+  min-height: 0;
+  height: 32px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  resize: none;
+  letter-spacing: 0;
+  font-family: var(--font-display);
+}
+.prompt[data-collapsed] .prompt__footer {
+  border-top: 0;
+  padding: 0;
+  flex-shrink: 0;
+  gap: var(--space-2);
+}
+.prompt[data-collapsed] .prompt__actions {
+  gap: var(--space-2);
+}
+
+.prompt__body {
+  padding: var(--space-4) var(--space-5) var(--space-3);
+}
+
+.prompt__input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  resize: none;
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.35;
+  letter-spacing: var(--tracking-display);
+  padding: 0;
+  min-height: 2.7em;
+}
+.prompt__input::placeholder {
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
+.prompt__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--glass-border);
+}
+.prompt__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.prompt__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Buttons
+   ───────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 28px;
+  padding: 0 var(--space-3);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  transition: background var(--dur-quick) var(--ease-spring),
+              border-color var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring),
+              box-shadow var(--dur-base) var(--ease-spring),
+              transform var(--dur-quick) var(--ease-spring);
+}
+.btn__icon { color: var(--fg-muted); font-size: 0.8em; }
+
+.btn--ghost {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.btn--ghost:hover .btn__icon { color: var(--fg); }
+
+.btn--primary {
+  background: var(--cyan-12);
+  border-color: var(--cyan-60);
+  color: var(--cyan);
+  box-shadow: 0 0 0 0 var(--cyan-12);
+}
+.btn--primary .btn__icon { color: var(--cyan); }
+.btn--primary:hover {
+  background: rgba(61, 255, 229, 0.18);
+  box-shadow: 0 0 24px -2px var(--cyan-12);
+}
+.btn--primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn.flash {
+  animation: btn-flash 360ms var(--ease-spring);
+}
+@keyframes btn-flash {
+  0%   { background: rgba(61, 255, 229, 0.45); }
+  100% { background: var(--cyan-12); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Secondary nav (bottom)
+   ───────────────────────────────────────────────────────────── */
+/* Nav items inside the bottom bar — borderless, mono labels, hover wash. */
+.nav__btn {
+  height: 24px;
+  padding: 0 var(--space-3);
+  border-color: transparent;
+  background: transparent;
+  position: relative;
+}
+.nav__btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: transparent;
+}
+.nav__sep {
+  width: 1px;
+  height: 14px;
+  background: var(--mid);
+  flex-shrink: 0;
+}
+
+/* Signal row in the "armed" state (waiting for user to pick a tab) — the
+   rate readout pulses cyan to signal "we're listening for your choice." */
+.signal[data-armed] .signal__rate {
+  color: var(--cyan);
+  animation: signal-arm-pulse 1.2s ease-in-out infinite;
+}
+@keyframes signal-arm-pulse {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Corner brackets (cockpit dressing — fixed at screen corners)
+   ───────────────────────────────────────────────────────────── */
+.bracket {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0.28;
+}
+.bracket--tl { top: calc(var(--status-bar-height) + 6px); left: 6px;
+  border-top: 1px solid var(--fg-muted); border-left: 1px solid var(--fg-muted); }
+.bracket--tr { top: calc(var(--status-bar-height) + 6px); right: 6px;
+  border-top: 1px solid var(--fg-muted); border-right: 1px solid var(--fg-muted); }
+.bracket--bl { bottom: calc(var(--status-bar-height) + 6px); left: 6px;
+  border-bottom: 1px solid var(--fg-muted); border-left: 1px solid var(--fg-muted); }
+.bracket--br { bottom: calc(var(--status-bar-height) + 6px); right: 6px;
+  border-bottom: 1px solid var(--fg-muted); border-right: 1px solid var(--fg-muted); }
+
+/* ─────────────────────────────────────────────────────────────
+   Audio-live state hooks
+   ───────────────────────────────────────────────────────────── */
+body.audio-live .logo__mark { color: var(--cyan); }
+body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animation-duration: 0.6s; }
+
+/* ─────────────────────────────────────────────────────────────
+   Webfont declarations
+   The WOFF2 files don't yet ship with the repo. They'll be added
+   under /public/fonts/ — see public/fonts/README.md. Until then,
+   the system stack in tokens.css renders cleanly.
+   ───────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Switzer";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Switzer-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/PlusJakartaSans-Variable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-Variable.woff2") format("woff2-variations");
+}

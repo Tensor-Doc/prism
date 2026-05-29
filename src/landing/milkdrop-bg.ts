@@ -1,0 +1,128 @@
+// milkdrop-bg.ts — boot a butterchurn (Milkdrop) visualizer as the landing
+// page background. Picks a random preset on each load. Starts on a silent
+// source so the visual runs without audio; the caller can call connectAudio()
+// later when tab audio is shared.
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+import butterchurnRaw from "butterchurn";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+import butterchurnPresetsRaw from "butterchurn-presets";
+
+interface VisualizerHandle {
+  connectAudio(node: AudioNode): void;
+  loadPreset(preset: unknown, blendTime?: number): void;
+  setRendererSize(w: number, h: number): void;
+  render(): void;
+}
+interface ButterchurnAPI {
+  createVisualizer(
+    ctx: AudioContext,
+    canvas: HTMLCanvasElement,
+    opts: { width: number; height: number; pixelRatio?: number; textureRatio?: number },
+  ): VisualizerHandle;
+}
+interface PresetsAPI {
+  getPresets(): Record<string, unknown>;
+}
+
+function unwrap<T>(mod: unknown): T {
+  const m = mod as { default?: T };
+  return (m && typeof m === "object" && "default" in m ? (m.default as T) : (mod as T));
+}
+const butterchurn = unwrap<ButterchurnAPI>(butterchurnRaw);
+const butterchurnPresets = unwrap<PresetsAPI>(butterchurnPresetsRaw);
+
+export interface MilkdropBg {
+  /** Pretty name of the currently-loaded preset (live; updates on rotation). */
+  readonly presetName: string;
+  /** Swap the audio source — call when real tab-audio comes in. */
+  connectAudio: (node: AudioNode) => void;
+  /** Load a new random preset (with a blend transition). Returns the
+   *  pretty name of the newly-loaded preset. */
+  loadRandom: (blendSeconds?: number) => string;
+  destroy: () => void;
+}
+
+export function createMilkdropBackground(
+  audioCtx: AudioContext,
+  canvas: HTMLCanvasElement,
+  silentSource: AudioNode,
+  onReady?: () => void,
+): MilkdropBg {
+  // Size canvas to viewport (raw pixels — butterchurn does its own DPR math via pixelRatio).
+  const sizeTo = (w: number, h: number) => {
+    canvas.width = w;
+    canvas.height = h;
+  };
+  sizeTo(window.innerWidth, window.innerHeight);
+
+  const visualizer = butterchurn.createVisualizer(audioCtx, canvas, {
+    width: canvas.width,
+    height: canvas.height,
+    pixelRatio: 1,
+    textureRatio: 1,
+  });
+  visualizer.connectAudio(silentSource);
+
+  // Pick a random preset from the bundled library.
+  const presetMap = butterchurnPresets.getPresets();
+  const names = Object.keys(presetMap);
+  let currentRaw = names[Math.floor(Math.random() * names.length)];
+  visualizer.loadPreset(presetMap[currentRaw], 0);
+
+  const onResize = (): void => {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    sizeTo(w, h);
+    visualizer.setRendererSize(w, h);
+  };
+  window.addEventListener("resize", onResize, { passive: true });
+
+  let running = true;
+  let firstFrame = true;
+  const loop = (): void => {
+    if (!running) return;
+    visualizer.render();
+    if (firstFrame) {
+      firstFrame = false;
+      // Defer slightly so the canvas actually has paint before consumers
+      // remove their "loading" UI — gives a smoother transition.
+      window.setTimeout(() => onReady?.(), 0);
+    }
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+
+  const pickNew = (): string => {
+    // avoid immediately re-picking the same preset
+    if (names.length < 2) return currentRaw;
+    let next = currentRaw;
+    while (next === currentRaw) next = names[Math.floor(Math.random() * names.length)];
+    return next;
+  };
+
+  return {
+    get presetName(): string { return prettyPresetName(currentRaw); },
+    connectAudio: (node) => visualizer.connectAudio(node),
+    loadRandom: (blendSeconds = 2.5) => {
+      const next = pickNew();
+      visualizer.loadPreset(presetMap[next], blendSeconds);
+      currentRaw = next;
+      return prettyPresetName(next);
+    },
+    destroy: () => {
+      running = false;
+      window.removeEventListener("resize", onResize);
+    },
+  };
+}
+
+/** Strip leading punctuation, kebab-ish format, lowercase. */
+function prettyPresetName(raw: string): string {
+  return raw
+    .replace(/^[\W\d]+/, "")
+    .replace(/[_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
