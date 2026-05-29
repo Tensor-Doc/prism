@@ -35,11 +35,17 @@ const butterchurnPresets = unwrap<PresetsAPI>(butterchurnPresetsRaw);
 export interface MilkdropBg {
   /** Pretty name of the currently-loaded preset (live; updates on rotation). */
   readonly presetName: string;
+  /** Raw preset key (matches catalog `preset_id`). Stable for share / API use. */
+  readonly currentPresetId: string;
   /** Swap the audio source — call when real tab-audio comes in. */
   connectAudio: (node: AudioNode) => void;
   /** Load a new random preset (with a blend transition). Returns the
    *  pretty name of the newly-loaded preset. */
   loadRandom: (blendSeconds?: number) => string;
+  /** Load a specific preset by its raw key (matches catalog `preset_id`).
+   *  Returns the pretty name on success; `null` if no preset with that key
+   *  exists in the bundled library. */
+  loadByName: (name: string, blendSeconds?: number) => string | null;
   destroy: () => void;
 }
 
@@ -103,6 +109,7 @@ export function createMilkdropBackground(
 
   return {
     get presetName(): string { return prettyPresetName(currentRaw); },
+    get currentPresetId(): string { return currentRaw; },
     connectAudio: (node) => visualizer.connectAudio(node),
     loadRandom: (blendSeconds = 2.5) => {
       const next = pickNew();
@@ -110,11 +117,31 @@ export function createMilkdropBackground(
       currentRaw = next;
       return prettyPresetName(next);
     },
+    loadByName: (name, blendSeconds = 2.5) => {
+      const key = findPresetKey(names, name);
+      if (!key) return null;
+      visualizer.loadPreset(presetMap[key], blendSeconds);
+      currentRaw = key;
+      return prettyPresetName(key);
+    },
     destroy: () => {
       running = false;
       window.removeEventListener("resize", onResize);
     },
   };
+}
+
+/** Match a preset key tolerantly: exact, case-insensitive, then
+ *  punctuation-stripped substring. Returns the raw key from the library
+ *  so loadPreset gets the exact object it expects. */
+function findPresetKey(names: string[], requested: string): string | null {
+  if (names.includes(requested)) return requested;
+  const lower = requested.toLowerCase();
+  const ci = names.find((n) => n.toLowerCase() === lower);
+  if (ci) return ci;
+  const norm = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const target = norm(requested);
+  return names.find((n) => norm(n) === target) ?? null;
 }
 
 /** Strip leading punctuation, kebab-ish format, lowercase. */

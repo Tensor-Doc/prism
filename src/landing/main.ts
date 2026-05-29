@@ -8,6 +8,8 @@ import { Vu } from "./vu";
 import { Spectrum } from "./spectrum";
 import { AudioCapture, type AudioFeatures } from "./audio";
 import { createMilkdropBackground } from "./milkdrop-bg";
+import { GraphRuntime } from "./graph/runtime";
+import type { PrismGraph } from "./graph/types";
 import { SyntheticSignal } from "./synthetic-signal";
 import { PulsoidStream } from "./pulsoid";
 import { InputPulses } from "./input-pulses";
@@ -99,6 +101,7 @@ const milkdrop = createMilkdropBackground(
   },
 );
 const field = new CursorField($<HTMLCanvasElement>("#field"));
+const runtime = new GraphRuntime({ milkdrop });
 
 // Pump the synth's energy into cursor-field so its halo also breathes with
 // the same "music" milkdrop is reacting to. Stopped once real audio kicks in.
@@ -524,19 +527,52 @@ const promptPanel = $("#prompt-panel");
 const promptCollapseBtn = $<HTMLButtonElement>("#prompt-collapse");
 const promptRestoreBtn = $<HTMLButtonElement>("#prompt-restore");
 
-function tryGenerate(): void {
+let generating = false;
+async function tryGenerate(): Promise<void> {
+  if (generating) return;
   const text = promptInput.value.trim();
   if (!text) {
     promptInput.focus();
     return;
   }
-  // Placeholder: future hook into prism.generate(prompt, signals).
-  console.info("prism · generate", { prompt: text, audio: audio.isActive });
+  generating = true;
   generateBtn.classList.add("flash");
-  setTimeout(() => generateBtn.classList.remove("flash"), 400);
+  // Stop auto-rotation while a user-driven graph is loading — otherwise
+  // the next rotate tick clobbers the chosen preset within seconds.
+  stopRotation();
+  const skillEl = document.getElementById("skill");
+  skillEl?.classList.add("is-loading");
+  if (skillEl) skillEl.textContent = "thinking…";
+  try {
+    const res = await fetch("/api/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt: text,
+        currentGraph: runtime.current,
+      }),
+    });
+    if (!res.ok) {
+      const body = (await res.json().catch(() => ({}))) as { error?: string };
+      throw new Error(body.error ?? `generate ${res.status}`);
+    }
+    const data = (await res.json()) as { graph: PrismGraph };
+    const result = runtime.apply(data.graph);
+    if (!result.ok) {
+      throw new Error(result.error ?? "graph runtime failed");
+    }
+    updateSkillDisplay(data.graph.intent);
+  } catch (err) {
+    console.warn("prism · generate failed", err);
+    updateSkillDisplay(milkdrop.presetName);
+  } finally {
+    skillEl?.classList.remove("is-loading");
+    setTimeout(() => generateBtn.classList.remove("flash"), 400);
+    generating = false;
+  }
 }
 
-generateBtn.addEventListener("click", tryGenerate);
+generateBtn.addEventListener("click", () => { void tryGenerate(); });
 
 promptInput.addEventListener("keydown", (e) => {
   if (e.key !== "Enter") return;
@@ -546,7 +582,7 @@ promptInput.addEventListener("keydown", (e) => {
   // otherwise allow Enter to insert a newline in the centered multi-line panel.
   if (isMeta || (isDocked && !e.shiftKey)) {
     e.preventDefault();
-    tryGenerate();
+    void tryGenerate();
   }
 });
 
