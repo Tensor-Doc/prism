@@ -25,8 +25,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   // repeats. Amplitudes kept under 0.20 so the vanishing point stays
   // mostly on-screen.
   vec2 pathOffset = vec2(
-    sin(iTime * 0.31) * 0.13 + sin(iTime * 0.19) * 0.06,
-    cos(iTime * 0.27) * 0.13 + cos(iTime * 0.17) * 0.06
+    sin(iTime * 0.55) * 0.13 + sin(iTime * 0.33) * 0.06,
+    cos(iTime * 0.48) * 0.13 + cos(iTime * 0.29) * 0.06
   );
   vec2 pc = p - pathOffset;
 
@@ -34,13 +34,14 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   float r = length(pc);
   float a = atan(pc.y, pc.x);
 
-  // Slow rotation around the long axis — gives that lazy-river curl as
-  // we fly forward. Without it the wall texture feels frozen.
-  a += iTime * 0.10;
+  // Rotation around the long axis — gives that lazy-river curl as we
+  // fly forward. Without it the wall texture feels frozen.
+  a += iTime * 0.18;
 
   // Cylindrical mapping. depth advances at a CONSTANT speed; bass
-  // touches brightness later, not motion.
-  float depth = 0.5 / max(r, 0.06) + iTime * 0.35;
+  // touches brightness later, not motion. Speed picked so the walls
+  // genuinely rush past instead of crawling.
+  float depth = 0.5 / max(r, 0.06) + iTime * 1.10;
   vec2 uv = vec2(a / 6.28318, depth);
 
   vec3 col = texture(iChannel1, uv).rgb;
