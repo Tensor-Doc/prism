@@ -125,7 +125,13 @@ export default async function handler(req: Request): Promise<Response> {
 
   const currentGraph = isPrismGraph(body.currentGraph) ? body.currentGraph : null;
   const metadata = isSessionMetadata(body.metadata) ? body.metadata : null;
-  const ai = new GoogleGenAI({ apiKey });
+  // Force the v1 (GA) API endpoint. @google/genai 2.7.0 defaults to
+  // v1beta where the gemini-2.5-* models return 404 NOT_FOUND for
+  // generateContent.
+  const ai = new GoogleGenAI({
+    apiKey,
+    httpOptions: { apiVersion: "v1" },
+  });
 
   let pick: { preset_id: string; intent: string };
   try {

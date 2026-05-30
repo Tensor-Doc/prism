@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Prism</title>
+  <!-- Prism triangle, cream outline (no fill — favicon background varies by browser tab) -->
+  <path d="M 32 8 L 56 50 L 8 50 Z" stroke="#f5f3ee" stroke-width="3" stroke-linejoin="round" />
+  <!-- Incoming white beam, hits the left side -->
+  <line x1="2" y1="30" x2="20" y2="30" stroke="#f5f3ee" stroke-width="2.4" stroke-linecap="round" />
+  <!-- Refracted spectrum exiting bottom-right.
+       Five bands red→orange→yellow→green→cyan. No purple — brand rule. -->
+  <g stroke-width="2.4" stroke-linecap="round">
+    <line x1="42" y1="42" x2="62" y2="36" stroke="#ff4d4d" />
+    <line x1="44" y1="44" x2="64" y2="42" stroke="#ff8a3a" />
+    <line x1="45" y1="46" x2="64" y2="49" stroke="#ffd23a" />
+    <line x1="45" y1="48" x2="62" y2="56" stroke="#3aff7e" />
+    <line x1="43" y1="50" x2="55" y2="62" stroke="#3dffe5" />
+  </g>
+</svg>
