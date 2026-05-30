@@ -180,6 +180,12 @@ git add catalog/ && git commit -m "Add N presets" && pr it
 Each entry takes about 15 seconds to capture. About 3 seconds to
 annotate. You can add 50 to 100 entries in a Saturday afternoon.
 
+**GPU note.** The capture pipeline runs headless Chrome on your real
+GPU through ANGLE. On macOS that means Metal, on Linux GL, on
+Windows D3D11. Heavy presets (Geiss "Cauldron", reaction-diffusion,
+etc.) need a real GPU to compile within the timeout. A pure-CPU
+fallback exists but every Geiss-* preset times out under it.
+
 ### 2. Add a new visualization source
 
 Today Prism runs two sources. **Milkdrop** through butterchurn.

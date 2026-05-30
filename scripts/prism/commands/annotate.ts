@@ -143,13 +143,22 @@ function buildCaptureUrl(entry: CatalogEntry): string {
 }
 
 async function captureVideo(captureUrl: string): Promise<{ webmBase64: string; firstFrameBase64: string }> {
+  // Headless GPU: use the host machine's real GPU through ANGLE
+  // (Metal on macOS, GL on Linux, D3D11 on Windows). Previous version
+  // forced --use-angle=swiftshader which is a CPU software renderer
+  // and made heavy presets (every Geiss-*) time out compiling.
+  //
+  // Trade-off: contributors with different GPUs may produce slightly
+  // different captures. Acceptable given the 10-100x speedup. CI-side
+  // reproducibility can be reintroduced later by pinning a reference
+  // SwiftShader recapture pass.
   const browser = await puppeteer.launch({
     headless: true,
     args: [
-      "--use-angle=swiftshader",
-      "--enable-unsafe-swiftshader",
+      "--use-angle=default",        // host GPU (Metal on macOS)
       "--enable-webgl",
       "--ignore-gpu-blocklist",
+      "--enable-gpu",
       "--disable-gpu-sandbox",
       "--autoplay-policy=no-user-gesture-required",
       `--window-size=${CAPTURE_WIDTH},${CAPTURE_HEIGHT}`,
@@ -166,7 +175,11 @@ async function captureVideo(captureUrl: string): Promise<{ webmBase64: string; f
       }
     });
     await page.goto(captureUrl, { waitUntil: "networkidle0", timeout: 30_000 });
-    await page.waitForFunction("window.__prismReady === true", { timeout: 30_000 });
+    // 90s timeout — Geiss "Cauldron / Cosmic Dust / Cycloid" presets
+    // routinely take 30-60s to compile under SwiftShader's software
+    // renderer (every Geiss-* attempt with the 30s ceiling errored).
+    // Real GPU is instant; this only matters for headless capture.
+    await page.waitForFunction("window.__prismReady === true", { timeout: 90_000 });
     await new Promise((r) => setTimeout(r, 1000)); // let blends settle
     const firstFrameBase64 = await page.evaluate(() => {
       const canvas = document.getElementById("vis") as HTMLCanvasElement | null;

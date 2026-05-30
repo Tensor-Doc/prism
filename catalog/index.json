@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T23:17:33.834Z",
+  "generated_at": "2026-05-30T23:21:26.735Z",
   "total": 644,
-  "annotated_count": 88,
-  "pending_count": 556,
+  "annotated_count": 90,
+  "pending_count": 554,
   "entries": [
     {
       "id": "milkdrop:geiss-casino",
@@ -595,6 +595,79 @@
       "added_by": "prism",
       "added_at": "2026-05-30T00:00:00.000Z",
       "captured_at": "2026-05-30T21:32:59.773Z"
+    },
+    {
+      "id": "milkdrop:geiss-cauldron-tendrils-saturation-remix",
+      "slug": "geiss-cauldron-tendrils-saturation-remix",
+      "name": "Geiss - Cauldron - Tendrils (saturation remix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "stark",
+        "sparse"
+      ],
+      "motion": 0.25,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.4,
+        "treble": 0.5
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "hue_cycle"
+      ],
+      "technical_notes": "A single custom_wave element is rendered as a rotating, audio-reactive vector against a pitch-black void. The wave's length and vertex displacement modulate dynamically with the bass and treble frequencies of the synthetic test signal. High decay rates prevent any frame feedback, leaving only the instantaneous state of the vector visible.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-cauldron-tendrils-saturation-remix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron-tendrils-saturation-remix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron-tendrils-saturation-remix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.221Z",
+      "captured_at": "2026-05-30T23:20:54.379Z"
+    },
+    {
+      "id": "milkdrop:geiss-chrome",
+      "slug": "geiss-chrome",
+      "name": "Geiss - Chrome",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.15,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle"
+      ],
+      "technical_notes": "A single custom wave is rendered in the center of a dark void, with a high decay rate preventing any frame feedback or persistent trails in sampler_main. The shape's geometry and scale are modulated by the mid and treble frequencies of the synthetic test signal, while discrete beat-gated bursts trigger momentary color shifts and expansions. The color of the central element cycles through a basic hue rotation over time.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "fw_clouds"
+      ],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-chrome.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-chrome.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-chrome.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.224Z",
+      "captured_at": "2026-05-30T23:18:38.124Z"
     },
     {
       "id": "milkdrop:geiss-eggs",

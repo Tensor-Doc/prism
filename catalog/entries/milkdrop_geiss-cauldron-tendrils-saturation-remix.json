@@ -11,9 +11,41 @@
     "name": "Geiss - Cauldron - Tendrils (saturation remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "sparse"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#a2f2f2",
+      "#f2a2b2",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom_wave element is rendered as a rotating, audio-reactive vector against a pitch-black void. The wave's length and vertex displacement modulate dynamically with the bass and treble frequencies of the synthetic test signal. High decay rates prevent any frame feedback, leaving only the instantaneous state of the vector visible.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:20:54.379Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron-tendrils-saturation-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron-tendrils-saturation-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
