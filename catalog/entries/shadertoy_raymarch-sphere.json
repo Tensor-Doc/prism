@@ -1,0 +1,37 @@
+{
+  "id": "shadertoy:raymarch-sphere",
+  "schema_version": 2,
+  "source": {
+    "type": "shadertoy",
+    "loader": "url",
+    "url": "/presets/shadertoy/raymarch-sphere.glsl",
+    "format": "glsl-300es"
+  },
+  "display": {
+    "name": "Raymarch Sphere",
+    "author": "prism",
+    "blurb": "Mandelbox-fold sphere SDF with cyan rim light; mid-band audio modulates iteration."
+  },
+  "annotation": {
+    "vibe": ["3d", "sculptural", "kaleidoscopic", "metallic"],
+    "motion": 0.55,
+    "palette_anchor": ["#3dffe5", "#ff7847", "#0a0a0e"],
+    "audio_affinity": { "bass": 0.4, "mid": 0.7, "treble": 0.2 },
+    "techniques": ["raymarch_sdf", "domain_repetition", "cosine_palette"],
+    "technical_notes": "64-step raymarched signed distance field of a sphere folded through Mandelbox-style abs+rotate iterations; analytic normal via central differences; Lambert + Fresnel rim shading with cyan accent. Mid-band audio amplitude modulates the sphere radius.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 2,
+    "captured_at": "2026-05-30T00:00:00.000Z"
+  },
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-30T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": { "renders": true }
+}

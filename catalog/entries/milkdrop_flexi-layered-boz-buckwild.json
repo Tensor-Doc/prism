@@ -11,9 +11,38 @@
     "name": "Flexi - layered + Boz - Buckwild",
     "author": "Flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "stark",
+      "void"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#e1e64b"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "The visualizer remains entirely black until triggered by transient peaks in the synthetic test signal, which gate full-screen color flashes. This high-threshold audio gating produces a stark, strobe-like effect with zero decay trail, returning instantly to a dark void state.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:09:37.803Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-layered-boz-buckwild.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-layered-boz-buckwild.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

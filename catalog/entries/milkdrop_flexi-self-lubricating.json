@@ -11,9 +11,39 @@
     "name": "Flexi - self-lubricating",
     "author": "Flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "stark",
+      "glitchy"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#ff00ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.2,
+      "treble": 0.2
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the synthetic test signal, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:10:28.389Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-self-lubricating.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-self-lubricating.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

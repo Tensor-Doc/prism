@@ -11,9 +11,38 @@
     "name": "Flexi - hue burst",
     "author": "Flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#7c7dfa"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave configured as a circular waveform is rendered against a stark black background. The wave's radius and vertex displacement react sharply to the bass frequencies of the synthetic test signal, while sudden position jumps are gated to the synthetic kick. The lack of frame feedback (sampler_main is not blended) results in a clean, trail-free geometric presentation.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:08:15.468Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-hue-burst.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-hue-burst.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
