@@ -19,6 +19,7 @@ interface IndexEntry {
   motion: number;
   audio_affinity: { bass: number; mid: number; treble: number };
   techniques: string[];
+  technical_notes: string | null;
   refik_mode: boolean;
   brand_safe: boolean;
   textures_needed: string[];
@@ -98,11 +99,33 @@ function applyFilters(entries: IndexEntry[]): IndexEntry[] {
 
 /** Build the card DOM for a single entry. Lazy-loads thumb via
  *  IntersectionObserver; loads video metadata on hover, plays on hover. */
+/** Build a rich multi-line tooltip for a card. Uses native browser
+ *  title attribute (multi-line via \n). Includes display + technical
+ *  notes (the Gemini-generated shader-dialect description) + audio
+ *  affinity numbers + tag rollup. */
+function buildCardTitle(e: IndexEntry): string {
+  const lines: string[] = [];
+  lines.push(e.author ? `${e.name} · by ${e.author}` : e.name);
+  if (e.blurb) lines.push(`"${e.blurb}"`);
+  if (e.technical_notes) {
+    lines.push("");
+    lines.push(e.technical_notes);
+  }
+  lines.push("");
+  if (e.vibe.length) lines.push(`vibe: ${e.vibe.join(", ")}`);
+  if (e.techniques.length) lines.push(`techniques: ${e.techniques.join(", ")}`);
+  const a = e.audio_affinity;
+  lines.push(`audio: bass ${a.bass.toFixed(2)} · mid ${a.mid.toFixed(2)} · treble ${a.treble.toFixed(2)} · motion ${e.motion.toFixed(2)}`);
+  if (e.refik_mode) lines.push("· refik mode");
+  if (!e.brand_safe) lines.push("· purple-heavy (not brand-safe)");
+  return lines.join("\n");
+}
+
 function renderCard(e: IndexEntry): HTMLElement {
   const card = document.createElement("a");
   card.className = "card";
   card.href = `/landing.html?preset=${encodeURIComponent(e.slug)}`;
-  card.title = `${e.name}\n${e.blurb ?? ""}`;
+  card.title = buildCardTitle(e);
 
   const media = document.createElement("div");
   media.className = "card__media";

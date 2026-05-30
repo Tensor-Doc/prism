@@ -18,6 +18,10 @@ export interface IndexEntry {
   motion: number;
   audio_affinity: { bass: number; mid: number; treble: number };
   techniques: string[];
+  /** Gemini-generated 2-3 sentence shader-dialect description; surfaced
+   *  in the gallery card tooltip. Null for hand-seeded entries that
+   *  haven't been re-annotated yet. */
+  technical_notes: string | null;
   refik_mode: boolean;
   brand_safe: boolean;
   textures_needed: string[];
@@ -65,6 +69,7 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       motion: a.motion,
       audio_affinity: a.audio_affinity,
       techniques: a.techniques ?? [],
+      technical_notes: a.technical_notes ?? null,
       refik_mode: a.refik_mode ?? false,
       brand_safe: a.brand_safe,
       textures_needed: (entry.assets.textures_needed ?? []).map((t) => t.name),
