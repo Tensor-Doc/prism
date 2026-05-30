@@ -42,7 +42,8 @@ import { Progress, progressPath } from "../progress";
 import { isR2Enabled, uploadFile } from "../r2";
 
 const DEV_URL = "http://localhost:5173";
-const CAPTURE_PAGE = "/scripts/pipelines/capture-pages/milkdrop.html";
+const MILKDROP_CAPTURE_PAGE = "/scripts/pipelines/capture-pages/milkdrop.html";
+const SHADERTOY_CAPTURE_PAGE = "/scripts/pipelines/capture-pages/shadertoy.html";
 const CAPTURE_DURATION_MS = 15_000;
 const CAPTURE_WIDTH = 1280;
 const CAPTURE_HEIGHT = 720;
@@ -113,7 +114,22 @@ async function ensureDevServer(): Promise<void> {
   }
 }
 
-async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; firstFrameBase64: string }> {
+/** Build the capture-page URL for an entry. Milkdrop uses the milkdrop
+ *  capture page with ?presetUrl=; shadertoy uses the shadertoy page with
+ *  ?shaderUrl= (and optionally ?imageUrl= for default iChannel1). */
+function buildCaptureUrl(entry: CatalogEntry): string {
+  const source = entry.source;
+  if (source.type === "shadertoy") {
+    const params = new URLSearchParams({ shaderUrl: source.url ?? "" });
+    const img = entry.assets.default_image;
+    if (img) params.set("imageUrl", img);
+    return `${DEV_URL}${SHADERTOY_CAPTURE_PAGE}?${params.toString()}`;
+  }
+  // milkdrop default
+  return `${DEV_URL}${MILKDROP_CAPTURE_PAGE}?presetUrl=${encodeURIComponent(source.url ?? "")}`;
+}
+
+async function captureVideo(captureUrl: string): Promise<{ webmBase64: string; firstFrameBase64: string }> {
   const browser = await puppeteer.launch({
     headless: true,
     args: [
@@ -136,8 +152,7 @@ async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; fi
         console.error(`  [page-${t}] ${msg.text()}`);
       }
     });
-    const url = `${DEV_URL}${CAPTURE_PAGE}?presetUrl=${encodeURIComponent(presetUrl)}`;
-    await page.goto(url, { waitUntil: "networkidle0", timeout: 30_000 });
+    await page.goto(captureUrl, { waitUntil: "networkidle0", timeout: 30_000 });
     await page.waitForFunction("window.__prismReady === true", { timeout: 30_000 });
     await new Promise((r) => setTimeout(r, 1000)); // let blends settle
     const firstFrameBase64 = await page.evaluate(() => {
@@ -279,15 +294,14 @@ export async function runAnnotateOne(
     throw new Error(`no catalog entry: ${entryPath}`);
   }
   const entry = JSON.parse(readFileSync(entryPath, "utf-8")) as CatalogEntry;
-  const presetUrl = entry.source.url;
-  if (!presetUrl) {
+  if (!entry.source.url) {
     throw new Error(`entry ${slug} has no source.url — only url-loader entries can be annotated`);
   }
 
   const progress = new Progress(progressPath(repoRoot));
   console.log(`\n[annotate] ${slug}`);
   console.log(`  display: ${entry.display.name}${entry.display.author ? ` (${entry.display.author})` : ""}`);
-  console.log(`  preset:  ${presetUrl}`);
+  console.log(`  source:  ${entry.source.type} · ${entry.source.url}`);
   console.log(`  textures: ${(entry.assets.textures_needed ?? []).map((t) => t.name).join(", ") || "none"}`);
 
   const videoOut = join(repoRoot, "public/videos", `milkdrop_${slug}.webm`);
@@ -303,8 +317,8 @@ export async function runAnnotateOne(
     console.log(`  reusing existing webm: ${(webmBytes.length / 1024).toFixed(1)} KB`);
   } else {
     const t0 = Date.now();
-    console.log("  capturing 15s WebM via headless Chrome...");
-    const { webmBase64, firstFrameBase64 } = await captureVideo(presetUrl);
+    console.log(`  capturing 15s WebM via headless Chrome (${entry.source.type})...`);
+    const { webmBase64, firstFrameBase64 } = await captureVideo(buildCaptureUrl(entry));
     renderMs = Date.now() - t0;
     webmBytes = Buffer.from(webmBase64, "base64");
     mkdirSync(dirname(videoOut), { recursive: true });

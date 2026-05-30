@@ -29,10 +29,16 @@ function $<T extends HTMLElement = HTMLElement>(sel: string): T {
 }
 
 // Stamp the build SHA + time into the corner tag + console banner.
+// Tooltip shows PT (PST/PDT) since that's where you're debugging from.
 const versionTag = document.getElementById("version-tag");
 if (versionTag) {
   versionTag.textContent = __PRISM_BUILD_SHA__;
-  versionTag.title = `prism build ${__PRISM_BUILD_SHA__} · ${__PRISM_BUILD_TIME__}`;
+  const pt = new Date(__PRISM_BUILD_TIME__).toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+  versionTag.title = `prism build ${__PRISM_BUILD_SHA__} · built ${pt} PT`;
 }
 console.log(
   `%cprism · build ${__PRISM_BUILD_SHA__}%c · ${__PRISM_BUILD_TIME__}`,

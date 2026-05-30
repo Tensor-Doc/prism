@@ -1,0 +1,26 @@
+{
+  "id": "shadertoy:image-pool",
+  "schema_version": 2,
+  "source": {
+    "type": "shadertoy",
+    "loader": "url",
+    "url": "/presets/shadertoy/image-pool.glsl",
+    "format": "glsl-300es"
+  },
+  "display": {
+    "name": "Image Pool",
+    "author": "prism",
+    "blurb": "An image reflected in a water surface, rippled by FBM noise; quiet but alive."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA17563%2FPIA17563~medium.jpg"
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-30T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": { "renders": true }
+}

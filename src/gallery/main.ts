@@ -292,7 +292,12 @@ function stampVersion(): void {
   const el = document.getElementById("version-tag");
   if (el) {
     el.textContent = __PRISM_BUILD_SHA__;
-    el.title = `prism build ${__PRISM_BUILD_SHA__} · ${__PRISM_BUILD_TIME__}`;
+    const pt = new Date(__PRISM_BUILD_TIME__).toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+    el.title = `prism build ${__PRISM_BUILD_SHA__} · built ${pt} PT`;
   }
   console.log(
     `%cprism · build ${__PRISM_BUILD_SHA__}%c · ${__PRISM_BUILD_TIME__}`,

@@ -1,0 +1,26 @@
+{
+  "id": "shadertoy:tunnel-of-images",
+  "schema_version": 2,
+  "source": {
+    "type": "shadertoy",
+    "loader": "url",
+    "url": "/presets/shadertoy/tunnel-of-images.glsl",
+    "format": "glsl-300es"
+  },
+  "display": {
+    "name": "Tunnel of Images",
+    "author": "prism",
+    "blurb": "A winding cylindrical tunnel wrapped in a deep-field nebula; bass drives flight speed."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA13994%2FPIA13994~medium.jpg"
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-30T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": { "renders": true }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "shadertoy:image-metaball",
+  "schema_version": 2,
+  "source": {
+    "type": "shadertoy",
+    "loader": "url",
+    "url": "/presets/shadertoy/image-metaball.glsl",
+    "format": "glsl-300es"
+  },
+  "display": {
+    "name": "Image Metaball",
+    "author": "prism",
+    "blurb": "A growing fluid blob with a nebula skin sampled by surface normal; pulses with bass."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA15985%2FPIA15985~medium.jpg"
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-30T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": { "renders": true }
+}
