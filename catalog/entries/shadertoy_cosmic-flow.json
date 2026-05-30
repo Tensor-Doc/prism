@@ -13,25 +13,49 @@
     "blurb": "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow."
   },
   "annotation": {
-    "vibe": ["fluid", "cosmic", "painterly", "calm"],
-    "motion": 0.35,
-    "palette_anchor": ["#3dffe5", "#ff7847", "#0a0a0e"],
-    "audio_affinity": { "bass": 0.7, "mid": 0.3, "treble": 0.1 },
-    "techniques": ["fbm_noise", "cosine_palette", "audio_gating"],
-    "technical_notes": "5-octave fractional Brownian motion drives a slow advection field; an Inigo-Quilez cosine palette colors the result in cyan-to-orange. Bass band (first 16 FFT bins) widens the flow's domain warp coefficient.",
-    "brand_safe": true,
+    "vibe": [
+      "fluid",
+      "organic",
+      "hypnotic",
+      "painterly"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#a80000",
+      "#6000a0",
+      "#0000d0",
+      "#008000"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "fbm_noise",
+      "decay_trail"
+    ],
+    "technical_notes": "A fluid reaction-diffusion simulation driven by a low-frequency warp field. Per-pixel warp shader uses procedural noise (fbm_noise) to advect the color channels, while frame feedback through sampler_main with a very low decay rate creates persistent, painterly trails. The color palette rotates slowly through a hue cycle driven by time, showing minimal direct high-frequency response to the synthetic test signal.",
+    "brand_safe": false,
     "refik_mode": true,
-    "model": "seed",
+    "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T00:00:00.000Z"
+    "captured_at": "2026-05-30T21:16:39.962Z"
   },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_cosmic-flow.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_cosmic-flow.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

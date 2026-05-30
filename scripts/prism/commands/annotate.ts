@@ -93,6 +93,16 @@ function entryFilename(slug: string): string {
   return `milkdrop_${slug}.json`;
 }
 
+/** Resolve a slug (e.g. "cosmic-flow") to its catalog entry path, trying
+ *  both milkdrop_ and shadertoy_ prefixes. Returns null if neither exists. */
+function findEntryPath(repoRoot: string, slug: string): string | null {
+  for (const prefix of ["milkdrop", "shadertoy"]) {
+    const p = join(repoRoot, "catalog/entries", `${prefix}_${slug}.json`);
+    if (existsSync(p)) return p;
+  }
+  return null;
+}
+
 function getApiKey(): string {
   const key = process.env.GEMINI_API_KEY ?? process.env.VITE_GEMINI_API_KEY;
   if (!key) {
@@ -289,9 +299,9 @@ export async function runAnnotateOne(
   if (!opts.reuseVideo) await ensureDevServer();
   const ai = new GoogleGenAI({ apiKey });
 
-  const entryPath = join(repoRoot, "catalog/entries", entryFilename(slug));
-  if (!existsSync(entryPath)) {
-    throw new Error(`no catalog entry: ${entryPath}`);
+  const entryPath = findEntryPath(repoRoot, slug);
+  if (!entryPath) {
+    throw new Error(`no catalog entry for slug "${slug}" (tried milkdrop_ + shadertoy_ prefixes)`);
   }
   const entry = JSON.parse(readFileSync(entryPath, "utf-8")) as CatalogEntry;
   if (!entry.source.url) {
@@ -304,8 +314,11 @@ export async function runAnnotateOne(
   console.log(`  source:  ${entry.source.type} · ${entry.source.url}`);
   console.log(`  textures: ${(entry.assets.textures_needed ?? []).map((t) => t.name).join(", ") || "none"}`);
 
-  const videoOut = join(repoRoot, "public/videos", `milkdrop_${slug}.webm`);
-  const thumbOut = join(repoRoot, "public/thumbs", `milkdrop_${slug}.jpg`);
+  // Asset filename prefix matches the entry source.type so milkdrop +
+  // shadertoy captures don't collide on slug.
+  const assetPrefix = entry.source.type; // "milkdrop" | "shadertoy"
+  const videoOut = join(repoRoot, "public/videos", `${assetPrefix}_${slug}.webm`);
+  const thumbOut = join(repoRoot, "public/thumbs", `${assetPrefix}_${slug}.jpg`);
 
   let webmBytes: Buffer;
   let renderMs = 0;
@@ -342,8 +355,8 @@ export async function runAnnotateOne(
       renders: false,
       note: `capture was empty (${webmBytes.length} bytes); preset doesn't render meaningfully against the current test signal`,
     };
-    entry.assets.video = `/videos/milkdrop_${slug}.webm`;
-    entry.assets.thumb = `/thumbs/milkdrop_${slug}.jpg`;
+    entry.assets.video = `/videos/${assetPrefix}_${slug}.webm`;
+    entry.assets.thumb = `/thumbs/${assetPrefix}_${slug}.jpg`;
     writeFileSync(entryPath, JSON.stringify(entry, null, 2) + "\n");
     progress.update(slug, {
       status: "annotated", // counted as done so bulk doesn't retry
@@ -376,8 +389,8 @@ export async function runAnnotateOne(
     try {
       const t2 = Date.now();
       const [videoUrl, thumbUrl] = await Promise.all([
-        uploadFile(videoOut, `videos/${slug}.webm`, "video/webm"),
-        uploadFile(thumbOut, `thumbs/${slug}.jpg`, "image/jpeg"),
+        uploadFile(videoOut, `videos/${assetPrefix}_${slug}.webm`, "video/webm"),
+        uploadFile(thumbOut, `thumbs/${assetPrefix}_${slug}.jpg`, "image/jpeg"),
       ]);
       console.log(`  R2: uploaded video + thumb in ${Date.now() - t2}ms`);
       if (videoUrl && thumbUrl) {
