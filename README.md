@@ -13,7 +13,7 @@ Prism fills the visualization slot in the AI modality lineup.
 | Voice | ElevenLabs |
 | Image | Stability / Midjourney |
 | Music | Suno |
-| Video | Runway / Sora |
+| Video | Runway / Veo |
 | **Visualization** | **Prism** |
 
 ## Live demo
@@ -113,7 +113,7 @@ router get it for free.
 ## How agents use Prism
 
 Agents already have ElevenLabs for voice. Stability for images. Suno
-for music. Sora for video. Prism fills the visualization slot. Three
+for music. Veo for video. Prism fills the visualization slot. Three
 patterns we expect to see.
 
 ### Tool call
