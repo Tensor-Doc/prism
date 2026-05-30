@@ -11,9 +11,34 @@
     "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (water mix)",
     "author": "Eo.S. + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "stark",
+      "minimalist",
+      "dark",
+      "dormant"
+    ],
+    "motion": 0,
+    "palette_anchor": [
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [],
+    "technical_notes": "The visualizer remains completely dark throughout the duration of the synthetic test signal, rendering no visible shapes, waveforms, or colors. No active feedback samplers or shader passes can be visually identified due to the lack of output.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:43:10.693Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,42 @@
     "name": "Eo.S. + Phat - chasers 11 sentinel C",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "fluid",
+      "organic",
+      "kinetic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#ff9933",
+      "#ffcc66",
+      "#e6ffcc"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "particle_system",
+      "audio_gating"
+    ],
+    "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:44:47.555Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

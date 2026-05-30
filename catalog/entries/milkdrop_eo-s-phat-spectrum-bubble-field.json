@@ -11,9 +11,42 @@
     "name": "Eo.S. + Phat - spectrum bubble field",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "hypnotic",
+      "monochrome",
+      "mathematical"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#2e2e2e",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "domain_repetition",
+      "warp_field",
+      "custom_wave",
+      "frame_feedback"
+    ],
+    "technical_notes": "A complex domain repetition shader tiles concentric circular SDFs across the screen, driven by a per-pixel warp field that zooms outward. Custom waves are mapped to circular paths, modulated by the treble frequencies of the synthetic test signal to produce thin, colorful orbital arcs. The feedback loop in sampler_main maintains a high decay, keeping the grid of bubbles sharp and preventing excessive smearing.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:47:02.215Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-spectrum-bubble-field.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-spectrum-bubble-field.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

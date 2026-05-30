@@ -11,9 +11,39 @@
     "name": "Eo.S. + Geiss - glowsticks v2 02 (Relief Mix)",
     "author": "Eo.S. + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "kinetic",
+      "stark",
+      "geometric"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#2bf0a5",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A single custom wave configured as a thick, curved ribbon sweeps across the screen, with its scale and rotation modulated by the synthetic test signal. High decay rate ensures no persistent trails in sampler_main, maintaining a stark black background. Beat detection on bass attenuated triggers sudden expansions in the shape's width and radius, creating a clean, minimalist kinetic display.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:42:01.959Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-02-relief-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-02-relief-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

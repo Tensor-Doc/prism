@@ -11,9 +11,44 @@
     "name": "Eo.S. + Phat - cubetrace - v2",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cybernetic",
+      "geometric",
+      "electric",
+      "cosmic"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#000000",
+      "#0055ff",
+      "#00ffff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "Custom wave equations render a shifting geometric wireframe grid that deforms in response to the synthetic test signal. Motion vectors are configured as radiating white streaks that expand outwards, while frame feedback through sampler_main creates a persistent glowing trail. A bright central bloom is triggered by the synthetic kick, accompanied by simulated lens flare circles.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:46:28.323Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-cubetrace-v2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-cubetrace-v2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

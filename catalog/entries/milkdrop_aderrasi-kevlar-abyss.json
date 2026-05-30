@@ -11,9 +11,43 @@
     "name": "Aderrasi - Kevlar Abyss",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "hypnotic",
+      "wireframe",
+      "retro"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#1b4d3e",
+      "#8a2be2",
+      "#32cd32",
+      "#ff1493"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom wave draws a chaotic scribble that jitters in response to the treble of the synthetic test signal. A complex warp field with high zoom and rotation feedback through sampler_main transforms these lines into a spiraling, nested wireframe tunnel. The color palette undergoes continuous hue cycling, shifting the entire structure through vibrant neon states.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:32:16.282Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-abyss.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-abyss.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

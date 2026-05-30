@@ -11,9 +11,43 @@
     "name": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "strobing",
+      "geometric",
+      "aggressive",
+      "retro"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#00e000",
+      "#e0b000",
+      "#0000e0",
+      "#d000d0"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "frame_feedback"
+    ],
+    "technical_notes": "An aggressive audio-gated preset where the synthetic test signal's bass kicks trigger instantaneous full-screen color palette swaps. A central custom wave displays a spinning wireframe node, while the left and right borders feature sharp, serrated spikes modulated by high-frequency audio bands. The rigid vertical grid and minimal decay in sampler_main produce a highly structured, strobing geometric aesthetic.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:34:31.662Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

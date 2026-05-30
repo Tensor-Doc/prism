@@ -11,9 +11,43 @@
     "name": "Aderrasi - Hackproof - mash0000 - stare at tv static remote viewing technique",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "glitchy",
+      "geometric",
+      "retro",
+      "strobe"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#00ff00",
+      "#0000ff",
+      "#ff5500",
+      "#ffff00"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.65
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "warp_field"
+    ],
+    "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the synthetic test signal.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:31:41.539Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Aderrasi - What cannot be",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "electric",
+      "chaotic",
+      "psychedelic",
+      "frenetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ff007f",
+      "#00ffff",
+      "#7fff00",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.9
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "hue_cycle",
+      "warp_field",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the synthetic test signal's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:35:35.561Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-what-cannot-be.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-what-cannot-be.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

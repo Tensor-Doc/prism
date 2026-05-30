@@ -11,9 +11,43 @@
     "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (Psychedelic Mix)",
     "author": "Eo.S. + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "kinetic",
+      "vortex",
+      "fractal"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#1fa2d6",
+      "#e0531b",
+      "#f5c83c",
+      "#2d163a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "beat_burst"
+    ],
+    "technical_notes": "A complex spiral warp field drives a continuous zoom and rotation feedback loop through sampler_main, creating a deep, recursive tunnel. Custom waves modulated by high-frequency bands of the synthetic test signal generate the jagged, sawtooth ribbons that spiral inward. Beat-gated triggers from the synthetic kick modulate the zoom and rotation parameters, causing sudden expansions and direction shifts.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:42:37.457Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

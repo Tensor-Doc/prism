@@ -11,9 +11,41 @@
     "name": "Bmelgren + Krash - Rainbow Orb Peacock (Centred Journey Mix 2)",
     "author": "Bmelgren + Krash"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "oscilloscope",
+      "symmetric",
+      "mechanical"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#a0a0a0"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
+    },
+    "techniques": [
+      "custom_wave",
+      "domain_repetition",
+      "decay_trail",
+      "frame_feedback"
+    ],
+    "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring complex custom waves that mimic an analog oscilloscope. The synthetic test signal's bass transients modulate the scale and opacity of two prominent white custom shapes, while treble spikes drive high-frequency jitter in the thin wireframe lines. A high decay rate in the feedback loop ensures the background remains dark, leaving only faint trails in sampler_main.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:37:15.022Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

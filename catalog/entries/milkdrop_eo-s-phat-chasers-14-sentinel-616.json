@@ -11,9 +11,43 @@
     "name": "Eo.S. + Phat - chasers 14 sentinel 616",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fiery",
+      "symmetric",
+      "energetic",
+      "organic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#e5a93b",
+      "#9e1b1b",
+      "#0d0505"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.65,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "custom_wave",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the synthetic test signal. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every synthetic kick.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:45:55.683Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-14-sentinel-616.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-14-sentinel-616.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

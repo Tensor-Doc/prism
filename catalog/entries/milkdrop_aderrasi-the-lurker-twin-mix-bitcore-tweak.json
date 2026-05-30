@@ -11,9 +11,42 @@
     "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "ethereal",
+      "hypnotic",
+      "geometric",
+      "contemplative"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#b5b2c2",
+      "#dfc5b5",
+      "#a5c2c4",
+      "#111111"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:35:02.032Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-the-lurker-twin-mix-bitcore-tweak.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-the-lurker-twin-mix-bitcore-tweak.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

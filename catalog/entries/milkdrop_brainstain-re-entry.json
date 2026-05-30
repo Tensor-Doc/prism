@@ -10,9 +10,42 @@
   "display": {
     "name": "BrainStain-re entry"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "cosmic",
+      "sparse",
+      "electric"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#d13b9c",
+      "#107c10",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A sparse, high-decay particle system emits transient streaks from the center, driven by high-frequency components of the synthetic test signal. Custom waves or motion vectors are gated to beat-detection thresholds, creating brief, energetic bursts that immediately decay into the black background. The minimal frame feedback via sampler_main prevents persistent trails, maintaining a stark, cosmic aesthetic.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:38:19.980Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/brainstain-re-entry.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/brainstain-re-entry.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

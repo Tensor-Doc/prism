@@ -210,38 +210,20 @@ function renderGrid(): void {
   observeThumbs();
 }
 
-/** Collect vibe + technique frequencies across the catalog so the filter
- *  chip row shows the most-common tags first. */
-function collectFacets(entries: IndexEntry[]): { vibes: string[]; techniques: string[] } {
-  const vibeCounts = new Map<string, number>();
-  const techCounts = new Map<string, number>();
-  for (const e of entries) {
-    for (const v of e.vibe) vibeCounts.set(v, (vibeCounts.get(v) ?? 0) + 1);
-    for (const t of e.techniques) techCounts.set(t, (techCounts.get(t) ?? 0) + 1);
-  }
-  const sortDesc = (a: [string, number], b: [string, number]): number => b[1] - a[1];
-  return {
-    vibes: [...vibeCounts.entries()].sort(sortDesc).slice(0, 12).map(([v]) => v),
-    techniques: [...techCounts.entries()].sort(sortDesc).slice(0, 8).map(([t]) => t),
-  };
-}
-
 function renderFilters(): void {
   if (!catalog) return;
   const row = $("#filter-row");
   row.innerHTML = "";
-  const { vibes, techniques } = collectFacets(catalog.entries);
 
   const makeToggleChip = (
     label: string,
     title: string,
     isActive: () => boolean,
     onToggle: () => void,
-    kind = "toggle",
   ): HTMLElement => {
     const b = document.createElement("button");
     b.type = "button";
-    b.className = `chip-fil chip-fil--${kind}`;
+    b.className = "chip-fil chip-fil--mode";
     b.textContent = label;
     b.title = title;
     if (isActive()) b.setAttribute("data-on", "");
@@ -254,21 +236,14 @@ function renderFilters(): void {
     return b;
   };
 
-  const addSep = (): void => {
-    const s = document.createElement("span");
-    s.className = "filter-row__sep";
-    s.setAttribute("aria-hidden", "true");
-    row.appendChild(s);
-  };
-
-  // Mode toggles first
+  // Minimal v1: just mode toggles. Granular filtering happens via the
+  // search bar — type "fluid" or "frame_feedback" and the grid narrows.
   row.appendChild(
     makeToggleChip(
       "refik mode",
       "Show only the painterly Refik-mode subset",
       () => state.refikOnly,
       () => { state.refikOnly = !state.refikOnly; },
-      "mode",
     ),
   );
   row.appendChild(
@@ -277,47 +252,8 @@ function renderFilters(): void {
       "Hide entries flagged purple-dominant",
       () => state.brandSafeOnly,
       () => { state.brandSafeOnly = !state.brandSafeOnly; },
-      "mode",
     ),
   );
-
-  if (vibes.length) {
-    addSep();
-    const lbl = document.createElement("span");
-    lbl.className = "filter-row__label";
-    lbl.textContent = "vibe";
-    row.appendChild(lbl);
-    for (const v of vibes) {
-      row.appendChild(
-        makeToggleChip(
-          v,
-          `Filter to entries tagged "${v}"`,
-          () => state.vibes.has(v),
-          () => { if (state.vibes.has(v)) state.vibes.delete(v); else state.vibes.add(v); },
-          "vibe",
-        ),
-      );
-    }
-  }
-
-  if (techniques.length) {
-    addSep();
-    const lbl = document.createElement("span");
-    lbl.className = "filter-row__label";
-    lbl.textContent = "technique";
-    row.appendChild(lbl);
-    for (const t of techniques) {
-      row.appendChild(
-        makeToggleChip(
-          t,
-          `Filter to entries using technique "${t}"`,
-          () => state.techniques.has(t),
-          () => { if (state.techniques.has(t)) state.techniques.delete(t); else state.techniques.add(t); },
-          "technique",
-        ),
-      );
-    }
-  }
 }
 
 function renderCounts(): void {
@@ -371,6 +307,17 @@ async function boot(): Promise<void> {
       renderGrid();
       input.blur();
     }
+  });
+
+  // "I'm feeling lucky" → load a random preset on the visualizer.
+  // Respects the active filters so visitors stay in their chosen mood.
+  const lucky = document.getElementById("lucky-btn");
+  lucky?.addEventListener("click", () => {
+    if (!catalog) return;
+    const pool = applyFilters(catalog.entries);
+    if (pool.length === 0) return;
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    window.location.href = `/landing.html?preset=${encodeURIComponent(pick.slug)}`;
   });
 
   await refresh();

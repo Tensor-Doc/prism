@@ -11,9 +11,43 @@
     "name": "Eo.S. + Phat cubetrace (cybercity madness remix) - mash0000 - evaporating crystal pharma",
     "author": "Eo.S. + Phat cubetrace (cybercity madness remix)"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "cybernetic",
+      "technical",
+      "vector"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#ff5500",
+      "#ffaa00",
+      "#331100"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "particle_system",
+      "audio_gating",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "Custom waves render a minimalist 3D wireframe cube structure alongside a localized particle emitter on the left. The synthetic test signal's bass transients trigger discrete structural shifts and spark bursts via beat-gated equations. A high decay rate in the composite pass ensures clean, sharp vector lines with minimal frame feedback persistence.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:47:33.977Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

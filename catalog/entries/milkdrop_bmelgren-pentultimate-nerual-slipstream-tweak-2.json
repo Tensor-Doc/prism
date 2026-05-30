@@ -11,9 +11,45 @@
     "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
     "author": "Bmelgren"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "energetic",
+      "electric",
+      "hyperactive",
+      "cosmic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ff66cc",
+      "#9933ff",
+      "#ffffff",
+      "#33cc66"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the synthetic test signal trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:37:46.891Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-pentultimate-nerual-slipstream-tweak-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-pentultimate-nerual-slipstream-tweak-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

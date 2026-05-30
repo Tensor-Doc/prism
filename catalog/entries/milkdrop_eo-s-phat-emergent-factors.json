@@ -11,9 +11,43 @@
     "name": "Eo.S. + Phat - Emergent factors",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kaleidoscopic",
+      "psychedelic",
+      "structured"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#0055ff",
+      "#00ff66",
+      "#aa00aa",
+      "#111122"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "domain_repetition",
+      "custom_wave",
+      "hue_cycle",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the synthetic test signal's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:44:15.477Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

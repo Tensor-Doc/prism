@@ -11,9 +11,43 @@
     "name": "Aderrasi - Kevlar Ore Deposit",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cavernous",
+      "hypnotic",
+      "organic",
+      "structural"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#8b3a82",
+      "#2e5c3a",
+      "#124182",
+      "#a66c32"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A spiral warp field combined with frame feedback through sampler_main creates a ribbed, cavernous tunnel that zooms inward. A central custom_wave reacts to the synthetic test signal's treble frequencies, drawing chaotic white scribbles that are pulled into the feedback vortex. The color palette undergoes continuous hue cycling, shifting from deep purples to earthy ochres and greens.",
+    "brand_safe": false,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:32:48.747Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-ore-deposit.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-ore-deposit.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

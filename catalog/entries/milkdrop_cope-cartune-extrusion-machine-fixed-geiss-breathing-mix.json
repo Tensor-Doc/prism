@@ -11,13 +11,44 @@
     "name": "Cope - Cartune (extrusion machine) [fixed] (Geiss breathing mix)",
     "author": "Cope"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "rhythmic",
+      "stark",
+      "sterile"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#00e5ff",
+      "#008080"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition"
+    ],
+    "technical_notes": "Custom shapes configured as semi-circles are rendered at the bottom and top boundaries of the screen, utilizing vertical domain repetition. Their scale and brightness are directly gated by the bass frequencies of the synthetic test signal. A high decay rate and zero warp displacement keep the remainder of the frame entirely black, preventing any feedback trails in sampler_main.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:39:53.057Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "cartunemask1"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

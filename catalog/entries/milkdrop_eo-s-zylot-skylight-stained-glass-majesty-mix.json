@@ -11,9 +11,45 @@
     "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
     "author": "Eo.S. + Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "hypnotic",
+      "crystalline",
+      "kinetic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#f060a0",
+      "#e6f285"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A logarithmic spiral warp field drives a rapid zoom and rotation feedback loop via sampler_main. Sharp, needle-like custom waves trace geometric stained-glass facets that shatter and reform in response to treble transients in the synthetic test signal. High-frequency beat-gated triggers invert the color palette, shifting the render from deep saturated blues and yellows to a high-contrast, high-key white and magenta aesthetic.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:48:05.837Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-zylot-skylight-stained-glass-majesty-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-zylot-skylight-stained-glass-majesty-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "Eo.S. + Phat + Geiss - chasers 15 sentinels male and female (Dementia Mix)",
     "author": "Eo.S. + Phat + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimal",
+      "kinetic",
+      "stark",
+      "abstract"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#ffb07c"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "particle_system",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave element is rendered as a sharp, peach-colored ribbon darting erratically across a pitch-black background. High decay settings ensure no persistent trails remain in sampler_main, leaving only the instantaneous shape. The trajectory and deformation of this 'chaser' are modulated by the synthetic test signal's treble and bass frequencies.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:43:41.104Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

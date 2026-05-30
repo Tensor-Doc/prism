@@ -11,9 +11,42 @@
     "name": "Aderrasi - Ghast Entity",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "ghostly",
+      "minimalist",
+      "fluid",
+      "monochrome"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#888888"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "A central custom_wave filament reacts sharply to the treble of the synthetic test signal, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:31:09.032Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-entity.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-entity.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

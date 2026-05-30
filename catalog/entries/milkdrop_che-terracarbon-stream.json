@@ -11,9 +11,44 @@
     "name": "Che - Terracarbon Stream",
     "author": "Che"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "hypnotic",
+      "biological",
+      "fluid"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0c1f12",
+      "#1a3d24",
+      "#ffffff",
+      "#4a7c59"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the synthetic test signal. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:39:22.224Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/che-terracarbon-stream.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/che-terracarbon-stream.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

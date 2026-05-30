@@ -11,9 +11,43 @@
     "name": "Aderrasi - Ghast (Full Circle Mix)",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "kinetic",
+      "cyberpunk",
+      "abstract"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#00e5ff",
+      "#d500f9"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "warp_field",
+      "frame_feedback",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the synthetic kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:30:04.300Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-full-circle-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-full-circle-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

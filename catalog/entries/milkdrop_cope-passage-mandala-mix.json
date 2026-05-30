@@ -11,9 +11,42 @@
     "name": "Cope - Passage (mandala mix)",
     "author": "Cope"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "minimalist",
+      "strobe",
+      "kinetic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#000000",
+      "#a2ff00",
+      "#2b30ff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave"
+    ],
+    "technical_notes": "Custom shapes are rendered with sharp linear gradients, modulated dynamically by the synthetic test signal's bass attenuated band. A high decay rate ensures snappy, near-instantaneous frame transitions without persistent trails in sampler_main. Discrete beat detection triggers sudden geometric inversions and rapid hue cycling.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:40:55.873Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-passage-mandala-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-passage-mandala-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

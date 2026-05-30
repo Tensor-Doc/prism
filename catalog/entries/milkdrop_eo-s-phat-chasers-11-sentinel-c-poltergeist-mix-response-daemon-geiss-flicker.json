@@ -11,9 +11,44 @@
     "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
     "author": "Eo.S. + Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "fluid",
+      "organic",
+      "mystical"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#ffaa22",
+      "#ffd700",
+      "#552200",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.85
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "domain_repetition",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the synthetic test signal modulate the wave amplitude and fine-grained displacement, while the synthetic kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:45:22.545Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

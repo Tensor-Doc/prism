@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T19:29:34.265Z",
+  "generated_at": "2026-05-30T19:48:48.643Z",
   "total": 566,
-  "annotated_count": 13,
-  "pending_count": 553,
+  "annotated_count": 48,
+  "pending_count": 518,
   "entries": [
     {
       "id": "milkdrop:aderrasi-airhandler-last-breath-calm",
@@ -99,6 +99,128 @@
       "added_by": "scottspace"
     },
     {
+      "id": "milkdrop:aderrasi-ghast-quarter-past-ghast-mix",
+      "slug": "aderrasi-ghast-quarter-past-ghast-mix",
+      "name": "Aderrasi - Ghast (Quarter Past Ghast Mix)",
+      "author": "Aderrasi",
+      "vibe": [
+        "ghostly",
+        "fluid",
+        "ethereal",
+        "organic"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.8,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "warp_field",
+        "decay_trail"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-quarter-past-ghast-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-quarter-past-ghast-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-ghast-entity",
+      "slug": "aderrasi-ghast-entity",
+      "name": "Aderrasi - Ghast Entity",
+      "author": "Aderrasi",
+      "vibe": [
+        "ghostly",
+        "minimalist",
+        "fluid",
+        "monochrome"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail",
+        "audio_gating"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-entity.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-entity.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-kevlar-ore-deposit",
+      "slug": "aderrasi-kevlar-ore-deposit",
+      "name": "Aderrasi - Kevlar Ore Deposit",
+      "author": "Aderrasi",
+      "vibe": [
+        "cavernous",
+        "hypnotic",
+        "organic",
+        "structural"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "refik_mode": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-ore-deposit.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-ore-deposit.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-the-lurker-twin-mix-bitcore-tweak",
+      "slug": "aderrasi-the-lurker-twin-mix-bitcore-tweak",
+      "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
+      "author": "Aderrasi",
+      "vibe": [
+        "ethereal",
+        "hypnotic",
+        "geometric",
+        "contemplative"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-the-lurker-twin-mix-bitcore-tweak.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-the-lurker-twin-mix-bitcore-tweak.jpg",
+      "added_by": "scottspace"
+    },
+    {
       "id": "milkdrop:aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast",
       "slug": "aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast",
       "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Painterly Tendrils Colorfast",
@@ -156,6 +278,130 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-painterly-relief-mix.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-painterly-relief-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:che-terracarbon-stream",
+      "slug": "che-terracarbon-stream",
+      "name": "Che - Terracarbon Stream",
+      "author": "Che",
+      "vibe": [
+        "organic",
+        "hypnotic",
+        "biological",
+        "fluid"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "decay_trail",
+        "audio_gating"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/che-terracarbon-stream.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/che-terracarbon-stream.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:cope-wip-strange-attractor-2",
+      "slug": "cope-wip-strange-attractor-2",
+      "name": "Cope-WIP - Strange Attractor 2",
+      "author": "Cope-WIP",
+      "vibe": [
+        "minimalist",
+        "mathematical",
+        "kinetic",
+        "stark"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-wip-strange-attractor-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-wip-strange-attractor-2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c",
+      "slug": "eo-s-phat-chasers-11-sentinel-c",
+      "name": "Eo.S. + Phat - chasers 11 sentinel C",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "cosmic",
+        "fluid",
+        "organic",
+        "kinetic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail",
+        "particle_system",
+        "audio_gating"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
+      "slug": "eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
+      "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "kinetic",
+        "fluid",
+        "organic",
+        "mystical"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.85
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail",
+        "domain_repetition",
+        "audio_gating",
+        "beat_burst"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg",
       "added_by": "scottspace"
     },
     {
@@ -265,6 +511,222 @@
       "added_by": "scottspace"
     },
     {
+      "id": "milkdrop:aderrasi-ghast-full-circle-mix",
+      "slug": "aderrasi-ghast-full-circle-mix",
+      "name": "Aderrasi - Ghast (Full Circle Mix)",
+      "author": "Aderrasi",
+      "vibe": [
+        "minimalist",
+        "kinetic",
+        "cyberpunk",
+        "abstract"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "warp_field",
+        "frame_feedback",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-full-circle-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-full-circle-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
+      "slug": "aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
+      "name": "Aderrasi - Hackproof - mash0000 - stare at tv static remote viewing technique",
+      "author": "Aderrasi",
+      "vibe": [
+        "glitchy",
+        "geometric",
+        "retro",
+        "strobe"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.65
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave",
+        "warp_field"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-kevlar-abyss",
+      "slug": "aderrasi-kevlar-abyss",
+      "name": "Aderrasi - Kevlar Abyss",
+      "author": "Aderrasi",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "wireframe",
+        "retro"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "hue_cycle",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-abyss.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-abyss.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-kevlar-tunnel",
+      "slug": "aderrasi-kevlar-tunnel",
+      "name": "Aderrasi - Kevlar Tunnel",
+      "author": "Aderrasi",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "retro",
+        "mathematical"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.75,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "custom_wave",
+        "hue_cycle",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-tunnel.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-tunnel.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit",
+      "slug": "aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit",
+      "name": "Aderrasi - Roaming Star (Himalaya Brach Office) - mash0000 - creaming the summit",
+      "author": "Aderrasi",
+      "vibe": [
+        "geometric",
+        "glitchy",
+        "minimalist",
+        "sharp"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "beat_burst",
+        "audio_gating",
+        "domain_repetition",
+        "frame_feedback"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics",
+      "slug": "aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics",
+      "name": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
+      "author": "Aderrasi",
+      "vibe": [
+        "strobing",
+        "geometric",
+        "aggressive",
+        "retro"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave",
+        "frame_feedback"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:aderrasi-what-cannot-be",
+      "slug": "aderrasi-what-cannot-be",
+      "name": "Aderrasi - What cannot be",
+      "author": "Aderrasi",
+      "vibe": [
+        "electric",
+        "chaotic",
+        "psychedelic",
+        "frenetic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.9
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "hue_cycle",
+        "warp_field",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-what-cannot-be.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-what-cannot-be.jpg",
+      "added_by": "scottspace"
+    },
+    {
       "id": "milkdrop:aderrasi-geiss-airhandler-kali-mix-canvas-mix",
       "slug": "aderrasi-geiss-airhandler-kali-mix-canvas-mix",
       "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Canvas Mix",
@@ -311,6 +773,604 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-square-mix.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-square-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:bmelgren-pentultimate-nerual-slipstream-tweak-2",
+      "slug": "bmelgren-pentultimate-nerual-slipstream-tweak-2",
+      "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
+      "author": "Bmelgren",
+      "vibe": [
+        "energetic",
+        "electric",
+        "hyperactive",
+        "cosmic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.7,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-pentultimate-nerual-slipstream-tweak-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-pentultimate-nerual-slipstream-tweak-2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix",
+      "slug": "bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix",
+      "name": "Bmelgren & Krash - Rainbow Orb Peacock (Lonely Signal Gone Mad Mix)",
+      "author": "Bmelgren & Krash",
+      "vibe": [
+        "kinetic",
+        "psychedelic",
+        "electric",
+        "energetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "warp_field",
+        "beat_burst",
+        "hue_cycle",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:bmelgren-geiss-godhead-canvas-mix",
+      "slug": "bmelgren-geiss-godhead-canvas-mix",
+      "name": "Bmelgren + Geiss - Godhead (Canvas Mix)",
+      "author": "Bmelgren + Geiss",
+      "vibe": [
+        "minimalist",
+        "dark",
+        "void"
+      ],
+      "motion": 0,
+      "audio_affinity": {
+        "bass": 0,
+        "mid": 0,
+        "treble": 0
+      },
+      "techniques": [],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-geiss-godhead-canvas-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-geiss-godhead-canvas-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2",
+      "slug": "bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2",
+      "name": "Bmelgren + Krash - Rainbow Orb Peacock (Centred Journey Mix 2)",
+      "author": "Bmelgren + Krash",
+      "vibe": [
+        "kinetic",
+        "oscilloscope",
+        "symmetric",
+        "mechanical"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "custom_wave",
+        "domain_repetition",
+        "decay_trail",
+        "frame_feedback"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:brainstain-re-entry",
+      "slug": "brainstain-re-entry",
+      "name": "BrainStain-re entry",
+      "vibe": [
+        "minimalist",
+        "cosmic",
+        "sparse",
+        "electric"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "beat_burst",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/brainstain-re-entry.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/brainstain-re-entry.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000",
+      "slug": "by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000",
+      "name": "By Adam FX 2 shifter + geiss - neon pulse (glow mix) + Rovastar + Orb  + Mstress - mash0000 - prismatic spectral haze filter",
+      "author": "By Adam FX 2 shifter + geiss",
+      "vibe": [
+        "minimalist",
+        "clinical",
+        "geometric",
+        "mechanical"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:cope-cartune-extrusion-machine-fixed",
+      "slug": "cope-cartune-extrusion-machine-fixed",
+      "name": "Cope - Cartune (extrusion machine) [fixed]",
+      "author": "Cope",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "geometric",
+        "pulsing"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.3,
+        "treble": 0.5
+      },
+      "techniques": [
+        "audio_gating",
+        "custom_wave",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "cartunemask1"
+      ],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-cartune-extrusion-machine-fixed.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-cartune-extrusion-machine-fixed.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:cope-cartune-extrusion-machine-fixed-geiss-breathing-mix",
+      "slug": "cope-cartune-extrusion-machine-fixed-geiss-breathing-mix",
+      "name": "Cope - Cartune (extrusion machine) [fixed] (Geiss breathing mix)",
+      "author": "Cope",
+      "vibe": [
+        "minimalist",
+        "rhythmic",
+        "stark",
+        "sterile"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.2,
+        "treble": 0.1
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "domain_repetition"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "cartunemask1"
+      ],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:cope-passage-mandala-mix",
+      "slug": "cope-passage-mandala-mix",
+      "name": "Cope - Passage (mandala mix)",
+      "author": "Cope",
+      "vibe": [
+        "geometric",
+        "minimalist",
+        "strobe",
+        "kinetic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.4,
+        "treble": 0.5
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-passage-mandala-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-passage-mandala-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "slug": "eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "name": "Eo.S. + flexi - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b + illumination (Stahl's Mix)",
+      "author": "Eo.S. + flexi",
+      "vibe": [
+        "minimalist",
+        "ambient",
+        "static",
+        "monochromatic"
+      ],
+      "motion": 0.05,
+      "audio_affinity": {
+        "bass": 0,
+        "mid": 0,
+        "treble": 0
+      },
+      "techniques": [
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-geiss-glowsticks-v2-02-relief-mix",
+      "slug": "eo-s-geiss-glowsticks-v2-02-relief-mix",
+      "name": "Eo.S. + Geiss - glowsticks v2 02 (Relief Mix)",
+      "author": "Eo.S. + Geiss",
+      "vibe": [
+        "minimalist",
+        "kinetic",
+        "stark",
+        "geometric"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-02-relief-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-02-relief-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix",
+      "slug": "eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix",
+      "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (Psychedelic Mix)",
+      "author": "Eo.S. + Geiss",
+      "vibe": [
+        "psychedelic",
+        "kinetic",
+        "vortex",
+        "fractal"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "hue_cycle",
+        "beat_burst"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix",
+      "slug": "eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix",
+      "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (water mix)",
+      "author": "Eo.S. + Geiss",
+      "vibe": [
+        "stark",
+        "minimalist",
+        "dark",
+        "dormant"
+      ],
+      "motion": 0,
+      "audio_affinity": {
+        "bass": 0,
+        "mid": 0,
+        "treble": 0
+      },
+      "techniques": [],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-chasers-14-sentinel-616",
+      "slug": "eo-s-phat-chasers-14-sentinel-616",
+      "name": "Eo.S. + Phat - chasers 14 sentinel 616",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "fiery",
+        "symmetric",
+        "energetic",
+        "organic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.65,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-14-sentinel-616.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-14-sentinel-616.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-cubetrace-v2",
+      "slug": "eo-s-phat-cubetrace-v2",
+      "name": "Eo.S. + Phat - cubetrace - v2",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "cybernetic",
+        "geometric",
+        "electric",
+        "cosmic"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-cubetrace-v2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-cubetrace-v2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-emergent-factors",
+      "slug": "eo-s-phat-emergent-factors",
+      "name": "Eo.S. + Phat - Emergent factors",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "psychedelic",
+        "structured"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "domain_repetition",
+        "custom_wave",
+        "hue_cycle",
+        "frame_feedback",
+        "warp_field"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-spectrum-bubble-field",
+      "slug": "eo-s-phat-spectrum-bubble-field",
+      "name": "Eo.S. + Phat - spectrum bubble field",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "monochrome",
+        "mathematical"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "domain_repetition",
+        "warp_field",
+        "custom_wave",
+        "frame_feedback"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-spectrum-bubble-field.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-spectrum-bubble-field.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix",
+      "slug": "eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix",
+      "name": "Eo.S. + Phat + Geiss - chasers 15 sentinels male and female (Dementia Mix)",
+      "author": "Eo.S. + Phat + Geiss",
+      "vibe": [
+        "minimal",
+        "kinetic",
+        "stark",
+        "abstract"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.3,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "particle_system",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma",
+      "slug": "eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma",
+      "name": "Eo.S. + Phat cubetrace (cybercity madness remix) - mash0000 - evaporating crystal pharma",
+      "author": "Eo.S. + Phat cubetrace (cybercity madness remix)",
+      "vibe": [
+        "minimalist",
+        "cybernetic",
+        "technical",
+        "vector"
+      ],
+      "motion": 0.35,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "particle_system",
+        "audio_gating",
+        "beat_burst",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-zylot-skylight-stained-glass-majesty-mix",
+      "slug": "eo-s-zylot-skylight-stained-glass-majesty-mix",
+      "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+      "author": "Eo.S. + Zylot",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "crystalline",
+        "kinetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "domain_repetition",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-zylot-skylight-stained-glass-majesty-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-zylot-skylight-stained-glass-majesty-mix.jpg",
       "added_by": "scottspace"
     },
     {

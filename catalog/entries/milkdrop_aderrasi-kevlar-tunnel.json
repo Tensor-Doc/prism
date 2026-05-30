@@ -11,9 +11,42 @@
     "name": "Aderrasi - Kevlar Tunnel",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "hypnotic",
+      "retro",
+      "mathematical"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#52a385",
+      "#b56b54",
+      "#3b24b3",
+      "#d4df17"
+    ],
+    "audio_affinity": {
+      "bass": 0.75,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "A nested, spiraling tunnel of rectangular outlines is generated via frame feedback using sampler_main with a zoom and rotation transform. A complex custom_wave in the center acts as a high-frequency oscilloscope, jittering rapidly in response to treble transients in the synthetic test signal. Continuous hue cycling rotates the background palette across the spectrum, while bass hits modulate the scale and twist of the tunnel structure.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:33:21.924Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-kevlar-tunnel.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-kevlar-tunnel.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

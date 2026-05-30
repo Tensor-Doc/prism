@@ -11,9 +11,39 @@
     "name": "By Adam FX 2 shifter + geiss - neon pulse (glow mix) + Rovastar + Orb  + Mstress - mash0000 - prismatic spectral haze filter",
     "author": "By Adam FX 2 shifter + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "clinical",
+      "geometric",
+      "mechanical"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#808080"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the synthetic test signal. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the synthetic kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:38:49.172Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

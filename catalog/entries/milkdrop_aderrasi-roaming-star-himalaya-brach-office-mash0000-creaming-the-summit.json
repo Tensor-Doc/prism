@@ -11,9 +11,43 @@
     "name": "Aderrasi - Roaming Star (Himalaya Brach Office) - mash0000 - creaming the summit",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "glitchy",
+      "minimalist",
+      "sharp"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#121212",
+      "#f1a7c4",
+      "#e2f1af",
+      "#3ab0ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating",
+      "domain_repetition",
+      "frame_feedback"
+    ],
+    "technical_notes": "Custom shapes and waves render rotating, nested triangles that scale and multiply based on the synthetic test signal's bass and treble. A high-frequency step-like per-pixel warp creates horizontal and vertical digital glitch lines across the screen, modulating with treble peaks. Beat-gated triggers suddenly fill the wireframe shapes with bright, pastel-colored gradients, while frame feedback via sampler_main is heavily attenuated to keep the background clean and dark.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:33:54.341Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

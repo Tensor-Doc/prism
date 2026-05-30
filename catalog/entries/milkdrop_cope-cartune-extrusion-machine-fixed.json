@@ -11,13 +11,45 @@
     "name": "Cope - Cartune (extrusion machine) [fixed]",
     "author": "Cope"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "geometric",
+      "pulsing"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#00f0ff",
+      "#008080",
+      "#ff0000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist preset rendering custom semi-circular shapes at the top and bottom viewport boundaries. The bottom shape scales dynamically with the bass envelope of the synthetic test signal, while the top shape is gated by high-frequency thresholds. Color transitions between teal, cyan, and red are driven by a slow hue cycle mapped to the custom shape color parameters.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:40:23.470Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "cartunemask1"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-cartune-extrusion-machine-fixed.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-cartune-extrusion-machine-fixed.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,44 @@
     "name": "Bmelgren & Krash - Rainbow Orb Peacock (Lonely Signal Gone Mad Mix)",
     "author": "Bmelgren & Krash"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "psychedelic",
+      "electric",
+      "energetic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ffffff",
+      "#f5d061",
+      "#3a86c8",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "beat_burst",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "Symmetrical custom waves render high-frequency scribbles in the center, modulated by the treble of the synthetic test signal. A per-pixel warp shader drives an hourglass distortion and concentric ripple patterns that expand outward on synthetic kick hits. Frame feedback through sampler_main with low decay creates persistent, glowing trails that cycle through vibrant rainbow and gold palettes.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:36:11.719Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

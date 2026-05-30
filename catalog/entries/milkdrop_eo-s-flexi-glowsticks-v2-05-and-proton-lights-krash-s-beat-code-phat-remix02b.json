@@ -11,9 +11,38 @@
     "name": "Eo.S. + flexi - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b + illumination (Stahl's Mix)",
     "author": "Eo.S. + flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "ambient",
+      "static",
+      "monochromatic"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#4d4a53",
+      "#595d4d",
+      "#436321"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "hue_cycle"
+    ],
+    "technical_notes": "The preset displays a uniform, slowly shifting color field transitioning from muted slate-grey to olive green, indicating a collapsed feedback loop or an uninitialized state. No structural elements, custom waves, or direct reactions to the synthetic test signal are visible in this capture, leaving only a slow temporal hue cycle.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:48:38.476Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
