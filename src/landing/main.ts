@@ -508,38 +508,21 @@ const SOURCE_LABELS: Record<Exclude<GallerySourceId, null>, string> = {
   "nasa-deep-space": "nasa · deep space",
 };
 
-// Slideshow canvas reference + the active backend tracker — both needed
-// by the "feed shader textures" pill to decide visibility and what to
-// pipe in.
-const slideshowCanvas = $<HTMLCanvasElement>("#slideshow");
+// Active backend tracker — drives the auto-binding of the gallery
+// image feed into the shader's iChannel1. No pill, no extra click:
+// if a shader is playing AND a gallery source is connected, the feed
+// is live. Drop the gallery or switch backends to milkdrop and it
+// unbinds. (Canva, not Photoshop.)
 let activeBackend: "milkdrop" | "shadertoy" = "milkdrop";
-let feedShaderOn = false;
 
-const feedShaderBtn = document.getElementById("feed-shader-btn") as HTMLButtonElement | null;
-function refreshFeedShaderPill(): void {
-  if (!feedShaderBtn) return;
-  const canShow = activeBackend === "shadertoy" && currentGallerySource !== null;
-  if (canShow) feedShaderBtn.removeAttribute("data-hidden");
-  else {
-    feedShaderBtn.setAttribute("data-hidden", "");
-    // Auto-disable when no longer applicable so we don't pipe nothing.
-    if (feedShaderOn) {
-      feedShaderOn = false;
-      feedShaderBtn.removeAttribute("data-on");
-      shadertoy.setLiveSource(null);
-    }
-  }
+function refreshShaderFeed(): void {
+  const shouldFeed = activeBackend === "shadertoy" && currentGallerySource !== null;
+  // imageSlots.canvas(0) is the 1280×720 atlas the gallery source
+  // refreshes through Slideshow's cycle. Using that (not the
+  // slideshow card's small WebGL render target) means the shader
+  // sees the full image, tiled by REPEAT wrap on the tunnel walls.
+  shadertoy.setLiveSource(shouldFeed ? imageSlots.canvas(0) : null);
 }
-feedShaderBtn?.addEventListener("click", () => {
-  feedShaderOn = !feedShaderOn;
-  if (feedShaderOn) {
-    feedShaderBtn.setAttribute("data-on", "");
-    shadertoy.setLiveSource(slideshowCanvas);
-  } else {
-    feedShaderBtn.removeAttribute("data-on");
-    shadertoy.setLiveSource(null);
-  }
-});
 
 function setGallerySource(src: GallerySourceId): void {
   currentGallerySource = src;
@@ -551,7 +534,7 @@ function setGallerySource(src: GallerySourceId): void {
     galleryRate.textContent = "connect";
     refreshSignalCount();
     refreshSourceSelection();
-    refreshFeedShaderPill();
+    refreshShaderFeed();
     return;
   }
   if (src === "audio-tab") {
@@ -563,7 +546,7 @@ function setGallerySource(src: GallerySourceId): void {
   galleryRate.textContent = SOURCE_LABELS[src];
   slideshow.start();
   showSlideshowCard();
-  refreshFeedShaderPill();
+  refreshShaderFeed();
   // Auto-collapse the prompt panel so the slideshow visualization has the
   // viewport for itself. No-op if already docked.
   void setPromptCollapsed(true);
@@ -793,7 +776,7 @@ async function tryGenerate(): Promise<void> {
       throw new Error(result.error ?? "graph runtime failed");
     }
     activeBackend = result.backend ?? activeBackend;
-    refreshFeedShaderPill();
+    refreshShaderFeed();
     graphFlow.render(data.graph);
     updateSkillDisplay(data.graph.intent, true);
     showResult(data.graph.intent);
