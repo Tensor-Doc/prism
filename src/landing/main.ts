@@ -165,6 +165,8 @@ function setActiveBackend(which: "milkdrop" | "shadertoy"): void {
     milkdropCanvas.classList.remove("bg-canvas--active");
   }
 }
+// Assert initial state — milkdrop is the cold-open backend.
+setActiveBackend("milkdrop");
 
 const runtime = new GraphRuntime({ milkdrop, shadertoy, setActiveBackend });
 const ambient = new AmbientSignals();
