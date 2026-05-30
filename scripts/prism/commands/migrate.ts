@@ -68,6 +68,8 @@ function migrateEntry(legacy: LegacyEntry): CatalogEntry {
       motion: legacy.motion,
       palette_anchor: legacy.palette_anchor,
       audio_affinity: legacy.audio_affinity,
+      techniques: null,
+      technical_notes: null,
       brand_safe: legacy.brand_safe ?? true,
       refik_mode: REFIK_PRESET_IDS.has(legacy.preset_id),
       model: legacy.annotation_model,

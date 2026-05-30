@@ -46,9 +46,16 @@ export interface Annotation {
   motion: number;
   palette_anchor: string[];
   audio_affinity: AudioAffinity;
-  /** Named techniques present in the preset (see scripts/prism/techniques.ts).
-   *  Optional in v2 — annotated by Gemini in M5b. */
-  techniques?: string[];
+  /** Structured technique tags from a controlled vocabulary. Used by the
+   *  AI router for matching ("frame_feedback", "warp", "hue_cycle", …).
+   *  Filled by the M5b annotator; null on hand-seeded entries. */
+  techniques: string[] | null;
+  /** Rich, ~2-3 sentence technical description in the canonical vocabulary
+   *  of Geiss + the Milkdrop manual + The Book of Shaders. NOT shown to
+   *  casual visitors — surfaces in the future /learn page and in the
+   *  annotation review UI. Filled by the M5b annotator; null on hand-
+   *  seeded entries. */
+  technical_notes: string | null;
   /** False if the preset is dominated by purple (brand rule). */
   brand_safe: boolean;
   /** True if the preset belongs to the painterly Refik-mode subset. */
