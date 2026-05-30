@@ -16,34 +16,32 @@
     "vibe": [
       "fluid",
       "organic",
-      "hypnotic",
-      "painterly"
+      "atmospheric",
+      "contemplative"
     ],
-    "motion": 0.3,
+    "motion": 0.2,
     "palette_anchor": [
-      "#a80000",
-      "#6000a0",
-      "#0000d0",
-      "#008000"
+      "#268d8b",
+      "#b08d24",
+      "#9b7e1c"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.3,
-      "treble": 0.2
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.1
     },
     "techniques": [
       "frame_feedback",
-      "warp_field",
-      "hue_cycle",
       "fbm_noise",
-      "decay_trail"
+      "decay_trail",
+      "warp_field"
     ],
-    "technical_notes": "A fluid reaction-diffusion simulation driven by a low-frequency warp field. Per-pixel warp shader uses procedural noise (fbm_noise) to advect the color channels, while frame feedback through sampler_main with a very low decay rate creates persistent, painterly trails. The color palette rotates slowly through a hue cycle driven by time, showing minimal direct high-frequency response to the synthetic test signal.",
-    "brand_safe": false,
+    "technical_notes": "A slow-decay feedback loop utilizing sampler_main and a subtle per-pixel warp shader driven by fbm_noise creates a painterly, fluid simulation. The color palette slowly shifts from teal to ochre, modulated by a slow time variable. The absence of sharp edges suggests heavy use of sampler_blur1 or sampler_blur2 in the composite shader to smooth out high frequencies.",
+    "brand_safe": true,
     "refik_mode": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T21:16:39.962Z"
+    "captured_at": "2026-05-30T21:44:33.436Z"
   },
   "assets": {
     "textures_needed": [],

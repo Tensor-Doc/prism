@@ -60,9 +60,12 @@ const RESPONSE_SCHEMA = {
     "thumbnail_timestamp_seconds",
   ],
   properties: {
-    vibe: { type: Type.ARRAY, items: { type: Type.STRING } },
+    // Tight bounds prevent Gemini from spinning into garbage strings on
+    // low-content captures (we hit this with tunnel-of-images: model
+    // returned a single 60kb palette entry of repeating digits).
+    vibe: { type: Type.ARRAY, minItems: 1, maxItems: 6, items: { type: Type.STRING, maxLength: 40 } },
     motion: { type: Type.NUMBER },
-    palette_anchor: { type: Type.ARRAY, items: { type: Type.STRING } },
+    palette_anchor: { type: Type.ARRAY, minItems: 1, maxItems: 6, items: { type: Type.STRING, maxLength: 9 } },
     audio_affinity: {
       type: Type.OBJECT,
       required: ["bass", "mid", "treble"],
@@ -72,8 +75,8 @@ const RESPONSE_SCHEMA = {
         treble: { type: Type.NUMBER },
       },
     },
-    techniques: { type: Type.ARRAY, items: { type: Type.STRING } },
-    technical_notes: { type: Type.STRING },
+    techniques: { type: Type.ARRAY, minItems: 0, maxItems: 8, items: { type: Type.STRING, maxLength: 40 } },
+    technical_notes: { type: Type.STRING, maxLength: 600 },
     brand_safe: { type: Type.BOOLEAN },
     refik_mode: { type: Type.BOOLEAN },
     thumbnail_timestamp_seconds: {

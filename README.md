@@ -1,6 +1,6 @@
 # Prism
 
-**Generative visualization.** Signals in. Live visuals out.
+**Generative visualization.** Signals in. Light fields out.
 
 Prism is the visualization layer for AI applications and agents with
 real-time signals. Audio reactivity is one case — heartbeat, breath,
@@ -21,58 +21,93 @@ It slots into the canonical generative-AI modality row:
 **https://prism-ten-mu.vercel.app**
 
 - Move your cursor — the field reacts before any permission prompt
-- Click *gallery* in the sources panel → pick **nasa · deep space**
-- Click *play with sound* → share a tab (YouTube, Spotify) → milkdrop
-  reacts to the audio + cycles through transition shaders
+- Type a prompt or click a chip → Gemini composes a `prism.graph` →
+  the runtime loads the matching visualizer with the right audio bias
+- Click *play with sound* → share a tab (YouTube, Spotify) → the
+  visualizer reacts to real FFT in real time
+- Open the *gallery* → wall of captured visualizers, hover to preview,
+  click to play through. "I'm feeling lucky" rolls the dice.
 
 ## What's in this repo
 
-A working web client + offline pipeline for the visualization catalog.
+A working web client + offline pipeline + a sharded catalog.
 
 ```
-src/landing/        live web app (the demo above)
-scripts/            offline pipeline: capture videos + annotate via Gemini
-api/                Vercel Edge functions (image proxy, future generate.ts)
-catalog/            annotated catalog JSON + captured video assets (built)
+src/landing/        live web app — the visualizer + prompt loop
+src/gallery/        the catalog browser at /gallery.html
+scripts/prism/      `pnpm prism` CLI — migrate, ingest, annotate, build-index
+scripts/pipelines/  Puppeteer harnesses + Gemini annotator + R2 uploader
+api/                Vercel Edge functions (generate, image-proxy)
+catalog/entries/    one JSON file per entry (source-of-truth)
+catalog/index.json  built artifact — what the gallery + API consume
+public/presets/     hand-seeded shaders (Shadertoy-flavor GLSL)
 BRAND.md            design system + aesthetic decisions
 ```
 
+The catalog is the heart of it. Today: **70 annotated / 644 total**
+(65 Milkdrop + 5 Shadertoy), all videos captured headless and hosted on
+Cloudflare R2.
+
+## How a prompt becomes a visual
+
+```
+prompt ──► api/generate (Gemini) ──► prism.graph/0.1
+                                            │
+                                            ▼
+        ┌────────────────────────────────────────────────────────────────┐
+        │ signal.audio ──► lf.milkdrop OR lf.shadertoy ──► sink.display  │
+        └────────────────────────────────────────────────────────────────┘
+```
+
+A graph is just JSON. Nodes have roles:
+- `signal.*` — audio, cursor, heartbeat, MIDI, …
+- `lf.*` — light-field generators (Milkdrop, Shadertoy, future ISF/WGSL)
+- `op.*` — operators on light fields (blend, displace, feedback)
+- `sink.*` — display, recorder
+
+The runtime dispatches by node type. Adding a new generator is a new
+`lf.*` type + a renderer that knows how to execute it.
+
 ## Three ways to contribute (the flywheel)
 
-Prism's value compounds with every contributor — like Wikipedia for
-visualizations, with AI as the curator. **Three ways to add value:**
+Prism's value compounds with every contributor — Wikipedia-for-visuals
+with AI as the curator. **Three ways to add value:**
 
 ### 1. Run the capture pipeline on your machine
 
-The catalog grows by community compute. Clone the repo, point the
-pipeline at presets you want to add, contribute the resulting JSON +
-videos via PR.
+The catalog grows by community compute. Clone the repo, ingest presets
+you want to add, contribute the resulting JSON + R2-hosted videos via
+PR.
 
 ```sh
 git clone git@github.com:scottspace/prism.git
 cd prism && pnpm install
-pnpm add -D puppeteer tsx
-export GEMINI_API_KEY=your_key
-pnpm dev &                                       # start the capture server
-pnpm tsx scripts/capture-milkdrop.ts             # captures + annotates
-git add catalog/ && git commit -m "Add N presets via capture" && pr it
+cp .env.example .env       # add GEMINI_API_KEY + R2_* + VITE_GEMINI_API_KEY
+
+pnpm dev                                          # capture server
+pnpm prism ingest <path-to-presets-or-shaders>    # adds catalog/entries/*
+pnpm prism annotate --all                         # capture + Gemini + R2 upload
+pnpm prism build-index                            # refresh catalog/index.json
+
+git add catalog/ && git commit -m "Add N presets" && pr it
 ```
 
-Each preset takes ~10s to capture + ~5s to annotate. You can contribute
+Each entry takes ~15s to capture + ~3s to annotate. You can contribute
 50–100 entries in a Saturday afternoon.
 
 ### 2. Add a new visualization source
 
-Today: Milkdrop. Next: Shadertoy, ISF, hand-written WGSL. Each new
-source family means **two new files**:
+Today: **Milkdrop** (via butterchurn) and **Shadertoy** (custom WebGL2
+runtime with `iChannel0` audio FFT + `iChannel1` image texture). Next:
+ISF, hand-written WGSL. Each new source family means **two new files**:
 
 ```
-scripts/pipelines/renderers/<source>.ts          # implements Renderer
+src/landing/<source>-bg.ts                       # the live runtime
 scripts/pipelines/capture-pages/<source>.html    # the capture harness
 ```
 
-The shared `CatalogEntry` type means everything downstream (catalog,
-generate API, gallery) just works.
+The shared `CatalogEntry` schema means everything downstream — the
+gallery, `api/generate`, the prompt loop — just works.
 
 ### 3. Add a signal source
 
@@ -81,30 +116,6 @@ cursor, audio (tab-share), heart-rate (Pulsoid), synthetic-pink-noise.
 Camera+pose, MIDI, breath, OSC, EEG — all welcome. A signal is a small
 module that produces a number / vector / texture stream.
 
-See [`src/landing/image-sources/types.ts`](src/landing/image-sources/types.ts)
-for the contract.
-
-## Architecture at a glance
-
-```
-                    ┌──────────────────────────────────────┐
-                    │  Catalog (JSON + videos + thumbnails) │
-                    │  Grown by distributed-compute community │
-                    └──────────────────────────────────────┘
-                                    ▲
-                                    │ contributed via PR
-       ┌────────────────────────────┴────────────────────────────┐
-       │                                                         │
-       ▼                                                         ▼
-┌─────────────────┐                          ┌─────────────────────┐
-│  Live web app   │  ← signals from user      │  Capture pipeline   │
-│  picks from     │     (cursor, audio,       │  scripts/* — runs   │
-│  catalog        │     heart, …)             │  on contributors'   │
-│  composes them  │                           │  machines           │
-│  renders        │                           │                     │
-└─────────────────┘                          └─────────────────────┘
-```
-
 ## Quick start (web client)
 
 ```sh
@@ -112,36 +123,41 @@ git clone git@github.com:scottspace/prism.git
 cd prism
 pnpm install
 pnpm dev
-# open http://localhost:5173/landing.html
+# visualizer:  http://localhost:5173/landing.html
+# gallery:     http://localhost:5173/gallery.html
 ```
 
 ## Stack
 
 - **Frontend**: Vite + TypeScript, vanilla — no React, no framework
-- **Visualization runtimes**: butterchurn (Milkdrop), WebGL2 transitions,
-  WebGPU compositor (in progress)
-- **AI**: Gemini 2.5 Pro / Flash for catalog annotation + future
-  pipeline composition
-- **Deploy**: Vercel (static + edge functions)
+- **Runtimes**: butterchurn (Milkdrop) + custom WebGL2 (Shadertoy
+  300-es with iChannel uniforms + image binding)
+- **AI**: `gemini-flash-latest` for catalog annotation + prompt→graph
+  composition (`@google/genai` SDK)
+- **Storage**: Cloudflare R2 (S3-compatible) for captured webms + thumbs
+- **Pipeline**: Puppeteer + headless Chrome (`--use-angle=swiftshader`)
+  + MediaRecorder VP9 at 1280×720
+- **Deploy**: Vercel (static + edge functions). Build stamps the git SHA
+  into the page; hover the version tag to see when it shipped.
 - **License**: MIT
 
 ## Docs
 
 - **[BRAND.md](BRAND.md)** — design system, aesthetic decisions, the
   "creative cockpit" frame
-- **[scripts/README.md](scripts/README.md)** — capture pipeline
-  architecture
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — how to submit your first PR
 
 ## Inspiration
 
-Milkdrop (Geiss, 2001) for proving that audio-reactive visuals could
-become culture. Shadertoy (Quílez, 2013) for showing that shader sharing
-could become a community. ISF (VIDVOX) for proving that declared inputs
-turn shaders into instruments. **Prism is the AI-era extension of all
-three: a runtime, a catalog, and a community.**
+Milkdrop (Geiss, 2001) for proving audio-reactive visuals could become
+culture. Shadertoy (Quílez, 2013) for showing that shader sharing could
+become a community. ISF (VIDVOX) for proving that declared inputs turn
+shaders into instruments. Refik Anadol for proving the painterly,
+data-driven frame is a legitimate art form.
+
+**Prism is the AI-era extension of all four: a runtime, a catalog, a
+graph language, and a community.**
 
 ---
 
-*Built by [Scott Penberthy](https://github.com/scottspace), open under MIT.
-PRs and weird ideas warmly welcomed.*
+*Built by [Scott Penberthy](https://github.com/scottspace), open under
+MIT. PRs and weird ideas warmly welcomed.*

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T21:39:01.839Z",
+  "generated_at": "2026-05-30T21:46:12.933Z",
   "total": 644,
   "annotated_count": 70,
   "pending_count": 574,
@@ -411,6 +411,40 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.165Z",
       "captured_at": "2026-05-30T19:27:37.336Z"
+    },
+    {
+      "id": "shadertoy:cosmic-flow",
+      "slug": "cosmic-flow",
+      "name": "Cosmic Flow",
+      "author": "prism",
+      "blurb": "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow.",
+      "vibe": [
+        "fluid",
+        "organic",
+        "atmospheric",
+        "contemplative"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.2,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "frame_feedback",
+        "fbm_noise",
+        "decay_trail",
+        "warp_field"
+      ],
+      "technical_notes": "A slow-decay feedback loop utilizing sampler_main and a subtle per-pixel warp shader driven by fbm_noise creates a painterly, fluid simulation. The color palette slowly shifts from teal to ochre, modulated by a slow time variable. The absence of sharp edges suggests heavy use of sampler_blur1 or sampler_blur2 in the composite shader to smooth out high frequencies.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_cosmic-flow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_cosmic-flow.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T21:44:33.436Z"
     },
     {
       "id": "shadertoy:image-pool",
@@ -1741,41 +1775,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.545Z",
       "captured_at": "2026-05-30T19:16:45.117Z"
-    },
-    {
-      "id": "shadertoy:cosmic-flow",
-      "slug": "cosmic-flow",
-      "name": "Cosmic Flow",
-      "author": "prism",
-      "blurb": "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow.",
-      "vibe": [
-        "fluid",
-        "organic",
-        "hypnotic",
-        "painterly"
-      ],
-      "motion": 0.3,
-      "audio_affinity": {
-        "bass": 0.4,
-        "mid": 0.3,
-        "treble": 0.2
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "hue_cycle",
-        "fbm_noise",
-        "decay_trail"
-      ],
-      "technical_notes": "A fluid reaction-diffusion simulation driven by a low-frequency warp field. Per-pixel warp shader uses procedural noise (fbm_noise) to advect the color channels, while frame feedback through sampler_main with a very low decay rate creates persistent, painterly trails. The color palette rotates slowly through a hue cycle driven by time, showing minimal direct high-frequency response to the synthetic test signal.",
-      "refik_mode": true,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_cosmic-flow.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_cosmic-flow.jpg",
-      "added_by": "prism",
-      "added_at": "2026-05-30T00:00:00.000Z",
-      "captured_at": "2026-05-30T21:16:39.962Z"
     },
     {
       "id": "milkdrop:flexi-self-lubricating",
