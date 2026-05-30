@@ -28,6 +28,11 @@ export interface IndexEntry {
   video?: string;
   thumb?: string;
   added_by?: string;
+  /** ISO timestamp the entry was added to the catalog (PR merge / ingest). */
+  added_at?: string;
+  /** ISO timestamp of the most-recent annotation run. The gallery uses
+   *  this for newest-first sorting so freshly-annotated entries surface. */
+  captured_at?: string;
 }
 
 export interface CatalogIndex {
@@ -76,11 +81,17 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       video: entry.assets.video,
       thumb: entry.assets.thumb,
       added_by: entry.contribution.added_by,
+      added_at: entry.contribution.added_at,
+      captured_at: a.captured_at,
     });
   }
-  // Sort: refik_mode first, then by name (deterministic).
+  // Sort: newest-annotated first so freshly-processed entries surface
+  // at the top of the gallery (especially useful during bulk runs).
+  // Falls back to added_at if captured_at missing, then name.
   annotated.sort((a, b) => {
-    if (a.refik_mode !== b.refik_mode) return a.refik_mode ? -1 : 1;
+    const aT = a.captured_at ?? a.added_at ?? "";
+    const bT = b.captured_at ?? b.added_at ?? "";
+    if (aT !== bT) return aT < bT ? 1 : -1; // descending
     return a.name.localeCompare(b.name);
   });
   return {

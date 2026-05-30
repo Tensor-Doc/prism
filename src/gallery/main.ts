@@ -26,6 +26,8 @@ interface IndexEntry {
   video?: string;
   thumb?: string;
   added_by?: string;
+  added_at?: string;
+  captured_at?: string;
 }
 
 interface CatalogIndex {
@@ -103,6 +105,21 @@ function applyFilters(entries: IndexEntry[]): IndexEntry[] {
  *  title attribute (multi-line via \n). Includes display + technical
  *  notes (the Gemini-generated shader-dialect description) + audio
  *  affinity numbers + tag rollup. */
+function relativeTime(iso: string): string {
+  const ms = Date.now() - new Date(iso).getTime();
+  if (Number.isNaN(ms)) return "";
+  const s = ms / 1000;
+  if (s < 60) return "just now";
+  const m = s / 60;
+  if (m < 60) return `${Math.round(m)}m ago`;
+  const h = m / 60;
+  if (h < 24) return `${Math.round(h)}h ago`;
+  const d = h / 24;
+  if (d < 30) return `${Math.round(d)}d ago`;
+  const mo = d / 30;
+  return `${Math.round(mo)}mo ago`;
+}
+
 function buildCardTitle(e: IndexEntry): string {
   const lines: string[] = [];
   lines.push(e.author ? `${e.name} · by ${e.author}` : e.name);
@@ -118,6 +135,8 @@ function buildCardTitle(e: IndexEntry): string {
   lines.push(`audio: bass ${a.bass.toFixed(2)} · mid ${a.mid.toFixed(2)} · treble ${a.treble.toFixed(2)} · motion ${e.motion.toFixed(2)}`);
   if (e.refik_mode) lines.push("· refik mode");
   if (!e.brand_safe) lines.push("· purple-heavy (not brand-safe)");
+  const ts = e.captured_at ?? e.added_at;
+  if (ts) lines.push(`· annotated ${relativeTime(ts)}`);
   return lines.join("\n");
 }
 
