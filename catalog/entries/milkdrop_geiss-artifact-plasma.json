@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_geiss-artifact-plasma.webm",
+    "thumb": "/thumbs/milkdrop_geiss-artifact-plasma.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (56262 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

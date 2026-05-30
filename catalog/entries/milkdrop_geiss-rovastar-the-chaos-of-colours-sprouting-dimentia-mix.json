@@ -11,9 +11,43 @@
     "name": "Geiss + Rovastar - The Chaos Of Colours (sprouting dimentia mix)",
     "author": "Geiss + Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "kaleidoscopic",
+      "geometric",
+      "vibrant"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#39ff14",
+      "#ff007f",
+      "#00ffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition"
+    ],
+    "technical_notes": "A complex domain repetition and feedback loop creates a kaleidoscopic field of geometric shapes that scale and rotate in response to the synthetic test signal. The per-pixel warp shader applies a zoom and rotational twist, while beat-gated triggers driven by the synthetic kick cause sudden hue cycles and structural shifts. Frame feedback through sampler_main maintains a dense, repeating fractal-like structure with high-frequency detail modulated by treble bands.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:54:37.736Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

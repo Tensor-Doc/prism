@@ -11,9 +11,39 @@
     "name": "Geiss - 3 layers (Minefield Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#000000",
+      "#00ffff",
+      "#7a80ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.1,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "The preset is extremely sparse and dark, displaying only a tiny, central custom_wave that briefly flashes with the test signal's transients. High decay rate instantly clears the frame, leaving a vast black void between tiny, isolated bursts of cyan, purple, and white. There is virtually no warp field or feedback visible in this highly minimalist rendering.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:55:09.289Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-minefield-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

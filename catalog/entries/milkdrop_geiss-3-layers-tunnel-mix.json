@@ -11,9 +11,39 @@
     "name": "Geiss - 3 layers (Tunnel Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "radar",
+      "void",
+      "mechanical"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#ff0000",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave renders a red circular boundary and a rotating wedge on a black background. The synthetic test signal's low-frequency transients trigger transient deformations of the circular path, causing it to wobble and distort. No frame feedback or complex warp shaders are active, resulting in a stark, high-contrast vector aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:56:45.782Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-tunnel-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-tunnel-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

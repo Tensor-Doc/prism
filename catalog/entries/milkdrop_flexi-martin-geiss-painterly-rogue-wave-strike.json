@@ -11,9 +11,40 @@
     "name": "Flexi, martin + geiss - painterly rogue wave strike",
     "author": "Flexi, martin + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "stark",
+      "flat"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#ff0033",
+      "#7f00ff",
+      "#d66f0d",
+      "#5c8aa6"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "The preset renders solid, full-screen color fields that jump discretely between frames. These sudden state transitions are likely gated by beat detection on the bass attenuated of the synthetic test signal, triggering instant palette swaps. No spatial shaders, feedback samplers, or custom waves are active, resulting in a completely flat, minimalist presentation.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:53:35.408Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

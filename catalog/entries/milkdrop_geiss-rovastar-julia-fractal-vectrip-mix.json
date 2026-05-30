@@ -11,13 +11,44 @@
     "name": "Geiss + Rovastar - Julia Fractal (Vectrip Mix)",
     "author": "Geiss + Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "flickering"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#90ee90",
+      "#ffb6c1",
+      "#da70d6"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist, sparse preset featuring a single custom wave that renders as a tiny, flickering hand-drawn squiggle on a pure black background. The wave's position, scale, and color are gated by the synthetic test signal's mid and treble frequencies. With a high decay rate and no frame feedback, each frame is instantly cleared, leaving no persistent trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:54:05.701Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "fw_lichen"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

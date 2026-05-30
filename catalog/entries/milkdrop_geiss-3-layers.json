@@ -11,9 +11,40 @@
     "name": "Geiss - 3 layers",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "digital",
+      "stark",
+      "cybernetic"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#e5c158"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "decay_trail"
+    ],
+    "technical_notes": "A custom_wave oscilloscope draws a dense, trailing comet-like waveform on the left, which reacts to the mid and treble frequencies of the synthetic test signal. At around 8 seconds, an audio-gated grid of vertical and horizontal lines is triggered, likely driven by a threshold on the bass attenuated. The background remains mostly black with very high decay, preventing persistent frame feedback except within the custom wave's own trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:57:16.480Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

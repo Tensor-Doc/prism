@@ -11,9 +11,39 @@
     "name": "Geiss - 3 layers (Planar Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "glitchy",
+      "geometric",
+      "stark",
+      "retro-tech"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#c8c8f0"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "audio_gating",
+      "custom_wave",
+      "frame_feedback"
+    ],
+    "technical_notes": "The preset undergoes rapid state-switching gated by the bass frequencies of the synthetic test signal, alternating between a dense orthogonal grid structure and a stark diagonal wedge mask. Custom waves are utilized to render the horizontal oscilloscope lines and vertical grid segments. High decay in the feedback loop ensures sharp, near-instantaneous frame transitions with minimal persistence in sampler_main.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:55:40.177Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-planar-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-planar-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

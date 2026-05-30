@@ -11,9 +11,42 @@
     "name": "Geiss - Casino",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "technical",
+      "fluid",
+      "oscillographic"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#000000",
+      "#8fa88f",
+      "#ffffff",
+      "#c2d1b2"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the synthetic test signal's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:00:42.159Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-casino.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-casino.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

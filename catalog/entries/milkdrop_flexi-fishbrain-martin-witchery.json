@@ -11,9 +11,39 @@
     "name": "Flexi, fishbrain + Martin - witchery",
     "author": "Flexi, fishbrain + Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#4a125c",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "An extremely sparse, dark preset rendering minimalist vector-like elements against a black background. Custom wave equations draw faint, thin white line segments and expanding purple circles that decay almost instantly. The visual response to the synthetic test signal is subtle, with treble transients triggering dotted line segments and bass kicks occasionally modulating the radius of the purple circles.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:51:58.520Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "Flexi, fishbrain, Geiss + Martin - tokamak witchery",
     "author": "Flexi, fishbrain, Geiss + Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#6a0dad"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.1,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "particle_system",
+      "beat_burst"
+    ],
+    "technical_notes": "Discrete custom shapes (circles) are rendered on a black background, triggered as beat-gated bursts by the synthetic kick. Extremely sparse motion vectors or particles react to the treble sparkle of the test signal. With decay set to maximum and no frame feedback via sampler_main, each element vanishes instantly, preserving a dark, minimalist void.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:52:29.608Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

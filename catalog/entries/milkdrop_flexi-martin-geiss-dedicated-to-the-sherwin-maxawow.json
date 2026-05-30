@@ -11,9 +11,40 @@
     "name": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
     "author": "Flexi, martin + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "bold",
+      "frenetic"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#e6005c",
+      "#8a2be2",
+      "#ff69b4",
+      "#808000"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A minimalist solid-color canvas driven entirely by audio-gated state changes. The background color instantly switches on detected beats from the synthetic test signal, bypassing spatial feedback loops or sampler_main processing. The absence of decay trails or warp fields results in a stark, high-contrast strobe effect.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:53:02.322Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -1,10 +1,46 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T22:50:52.117Z",
+  "generated_at": "2026-05-30T23:17:33.834Z",
   "total": 644,
-  "annotated_count": 72,
-  "pending_count": 572,
+  "annotated_count": 88,
+  "pending_count": 556,
   "entries": [
+    {
+      "id": "milkdrop:geiss-casino",
+      "slug": "geiss-casino",
+      "name": "Geiss - Casino",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "technical",
+        "fluid",
+        "oscillographic"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "warp_field",
+        "decay_trail"
+      ],
+      "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the synthetic test signal's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-casino.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-casino.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-casino.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.221Z",
+      "captured_at": "2026-05-30T23:00:42.159Z"
+    },
     {
       "id": "shadertoy:image-metaball",
       "slug": "image-metaball",
@@ -559,6 +595,391 @@
       "added_by": "prism",
       "added_at": "2026-05-30T00:00:00.000Z",
       "captured_at": "2026-05-30T21:32:59.773Z"
+    },
+    {
+      "id": "milkdrop:geiss-eggs",
+      "slug": "geiss-eggs",
+      "name": "Geiss - Eggs",
+      "author": "Geiss",
+      "vibe": [
+        "chaotic",
+        "electric",
+        "monochromatic",
+        "industrial"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "chromatic_split"
+      ],
+      "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the synthetic test signal. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-eggs.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-eggs.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-eggs.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.242Z",
+      "captured_at": "2026-05-30T23:16:48.055Z"
+    },
+    {
+      "id": "milkdrop:geiss-all-spark-sinews",
+      "slug": "geiss-all-spark-sinews",
+      "name": "Geiss - All-Spark Sinews",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "oscilloscope",
+        "void",
+        "technical"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.4
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "A single horizontal custom wave is rendered on a pure black background with zero decay, acting as a direct oscilloscope. The vertical displacement of the wave vertices is driven directly by the time-domain waveform of the synthetic test signal. No feedback sampler (sampler_main) or warp shaders are active, resulting in a stark, minimalist aesthetic.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-all-spark-sinews.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-sinews.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-sinews.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.217Z",
+      "captured_at": "2026-05-30T22:58:18.798Z"
+    },
+    {
+      "id": "milkdrop:geiss-all-spark-polar",
+      "slug": "geiss-all-spark-polar",
+      "name": "Geiss - All-Spark Polar",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "void",
+        "oscillographic"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.7,
+        "treble": 0.5
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "A single custom wave configured as a filled horizontal oscilloscope reacts directly to the amplitude of the synthetic test signal. The decay rate is instantaneous with zero frame feedback, leaving a stark, high-contrast monochrome waveform against a pure black void. No post-processing effects, warp shaders, or sampler_main feedback loops are active.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-all-spark-polar.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-polar.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-polar.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.216Z",
+      "captured_at": "2026-05-30T22:57:48.755Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers",
+      "slug": "geiss-3-layers",
+      "name": "Geiss - 3 layers",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "digital",
+        "stark",
+        "cybernetic"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "decay_trail"
+      ],
+      "technical_notes": "A custom_wave oscilloscope draws a dense, trailing comet-like waveform on the left, which reacts to the mid and treble frequencies of the synthetic test signal. At around 8 seconds, an audio-gated grid of vertical and horizontal lines is triggered, likely driven by a threshold on the bass attenuated. The background remains mostly black with very high decay, preventing persistent frame feedback except within the custom wave's own trails.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.216Z",
+      "captured_at": "2026-05-30T22:57:16.480Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-tunnel-mix",
+      "slug": "geiss-3-layers-tunnel-mix",
+      "name": "Geiss - 3 layers (Tunnel Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "radar",
+        "void",
+        "mechanical"
+      ],
+      "motion": 0.25,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "A minimalist custom wave renders a red circular boundary and a rotating wedge on a black background. The synthetic test signal's low-frequency transients trigger transient deformations of the circular path, causing it to wobble and distort. No frame feedback or complex warp shaders are active, resulting in a stark, high-contrast vector aesthetic.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-tunnel-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-tunnel-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-tunnel-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.215Z",
+      "captured_at": "2026-05-30T22:56:45.782Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-rayleigh-scattering-mix",
+      "slug": "geiss-3-layers-rayleigh-scattering-mix",
+      "name": "Geiss - 3 layers (Rayleigh Scattering Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "glitch",
+        "retro-futuristic",
+        "stark"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.6
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "domain_repetition"
+      ],
+      "technical_notes": "A stark vector-style preset alternating between a full-screen grid and a split-screen layout featuring a large, flat-shaded custom shape triangle. These rapid transitions are heavily gated by the bass transients of the synthetic test signal, while multiple custom waves act as oscilloscopes mapping mid and treble frequencies. The lack of frame feedback or decay produces a clean, aliased, retro-computing aesthetic.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-rayleigh-scattering-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-rayleigh-scattering-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-rayleigh-scattering-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.215Z",
+      "captured_at": "2026-05-30T22:56:15.679Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-planar-mix",
+      "slug": "geiss-3-layers-planar-mix",
+      "name": "Geiss - 3 layers (Planar Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "glitchy",
+        "geometric",
+        "stark",
+        "retro-tech"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "audio_gating",
+        "custom_wave",
+        "frame_feedback"
+      ],
+      "technical_notes": "The preset undergoes rapid state-switching gated by the bass frequencies of the synthetic test signal, alternating between a dense orthogonal grid structure and a stark diagonal wedge mask. Custom waves are utilized to render the horizontal oscilloscope lines and vertical grid segments. High decay in the feedback loop ensures sharp, near-instantaneous frame transitions with minimal persistence in sampler_main.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-planar-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-planar-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-planar-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.214Z",
+      "captured_at": "2026-05-30T22:55:40.177Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-minefield-mix",
+      "slug": "geiss-3-layers-minefield-mix",
+      "name": "Geiss - 3 layers (Minefield Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.05,
+      "audio_affinity": {
+        "bass": 0.1,
+        "mid": 0.1,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "The preset is extremely sparse and dark, displaying only a tiny, central custom_wave that briefly flashes with the test signal's transients. High decay rate instantly clears the frame, leaving a vast black void between tiny, isolated bursts of cyan, purple, and white. There is virtually no warp field or feedback visible in this highly minimalist rendering.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-minefield-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-minefield-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.214Z",
+      "captured_at": "2026-05-30T22:55:09.289Z"
+    },
+    {
+      "id": "milkdrop:geiss-rovastar-julia-fractal-vectrip-mix",
+      "slug": "geiss-rovastar-julia-fractal-vectrip-mix",
+      "name": "Geiss + Rovastar - Julia Fractal (Vectrip Mix)",
+      "author": "Geiss + Rovastar",
+      "vibe": [
+        "minimalist",
+        "sparse",
+        "void",
+        "flickering"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.2,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "A highly minimalist, sparse preset featuring a single custom wave that renders as a tiny, flickering hand-drawn squiggle on a pure black background. The wave's position, scale, and color are gated by the synthetic test signal's mid and treble frequencies. With a high decay rate and no frame feedback, each frame is instantly cleared, leaving no persistent trails.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "fw_lichen"
+      ],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-rovastar-julia-fractal-vectrip-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.212Z",
+      "captured_at": "2026-05-30T22:54:05.701Z"
+    },
+    {
+      "id": "milkdrop:flexi-fishbrain-geiss-martin-tokamak-witchery",
+      "slug": "flexi-fishbrain-geiss-martin-tokamak-witchery",
+      "name": "Flexi, fishbrain, Geiss + Martin - tokamak witchery",
+      "author": "Flexi, fishbrain, Geiss + Martin",
+      "vibe": [
+        "minimalist",
+        "dark",
+        "sparse",
+        "void"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.1,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "particle_system",
+        "beat_burst"
+      ],
+      "technical_notes": "Discrete custom shapes (circles) are rendered on a black background, triggered as beat-gated bursts by the synthetic kick. Extremely sparse motion vectors or particles react to the treble sparkle of the test signal. With decay set to maximum and no frame feedback via sampler_main, each element vanishes instantly, preserving a dark, minimalist void.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-fishbrain-geiss-martin-tokamak-witchery.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.210Z",
+      "captured_at": "2026-05-30T22:52:29.608Z"
+    },
+    {
+      "id": "milkdrop:flexi-fishbrain-martin-witchery",
+      "slug": "flexi-fishbrain-martin-witchery",
+      "name": "Flexi, fishbrain + Martin - witchery",
+      "author": "Flexi, fishbrain + Martin",
+      "vibe": [
+        "minimalist",
+        "dark",
+        "sparse",
+        "void"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.2,
+        "mid": 0.1,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "decay_trail"
+      ],
+      "technical_notes": "An extremely sparse, dark preset rendering minimalist vector-like elements against a black background. Custom wave equations draw faint, thin white line segments and expanding purple circles that decay almost instantly. The visual response to the synthetic test signal is subtle, with treble transients triggering dotted line segments and bass kicks occasionally modulating the radius of the purple circles.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-fishbrain-martin-witchery.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.210Z",
+      "captured_at": "2026-05-30T22:51:58.520Z"
     },
     {
       "id": "shadertoy:tunnel-of-images",
@@ -2010,6 +2431,148 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.545Z",
       "captured_at": "2026-05-30T19:16:45.117Z"
+    },
+    {
+      "id": "milkdrop:geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix",
+      "slug": "geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix",
+      "name": "Geiss + Rovastar - The Chaos Of Colours (sprouting dimentia mix)",
+      "author": "Geiss + Rovastar",
+      "vibe": [
+        "psychedelic",
+        "kaleidoscopic",
+        "geometric",
+        "vibrant"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "domain_repetition"
+      ],
+      "technical_notes": "A complex domain repetition and feedback loop creates a kaleidoscopic field of geometric shapes that scale and rotate in response to the synthetic test signal. The per-pixel warp shader applies a zoom and rotational twist, while beat-gated triggers driven by the synthetic kick cause sudden hue cycles and structural shifts. Frame feedback through sampler_main maintains a dense, repeating fractal-like structure with high-frequency detail modulated by treble bands.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.213Z",
+      "captured_at": "2026-05-30T22:54:37.736Z"
+    },
+    {
+      "id": "milkdrop:flexi-martin-geiss-painterly-rogue-wave-strike",
+      "slug": "flexi-martin-geiss-painterly-rogue-wave-strike",
+      "name": "Flexi, martin + geiss - painterly rogue wave strike",
+      "author": "Flexi, martin + geiss",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "flat"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "audio_gating",
+        "hue_cycle"
+      ],
+      "technical_notes": "The preset renders solid, full-screen color fields that jump discretely between frames. These sudden state transitions are likely gated by beat detection on the bass attenuated of the synthetic test signal, triggering instant palette swaps. No spatial shaders, feedback samplers, or custom waves are active, resulting in a completely flat, minimalist presentation.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-martin-geiss-painterly-rogue-wave-strike.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.211Z",
+      "captured_at": "2026-05-30T22:53:35.408Z"
+    },
+    {
+      "id": "milkdrop:flexi-martin-geiss-dedicated-to-the-sherwin-maxawow",
+      "slug": "flexi-martin-geiss-dedicated-to-the-sherwin-maxawow",
+      "name": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
+      "author": "Flexi, martin + geiss",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "bold",
+        "frenetic"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst"
+      ],
+      "technical_notes": "A minimalist solid-color canvas driven entirely by audio-gated state changes. The background color instantly switches on detected beats from the synthetic test signal, bypassing spatial feedback loops or sampler_main processing. The absence of decay trails or warp fields results in a stark, high-contrast strobe effect.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.211Z",
+      "captured_at": "2026-05-30T22:53:02.322Z"
+    },
+    {
+      "id": "milkdrop:flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set",
+      "slug": "flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set",
+      "name": "Flexi, Stahlregen, Nitorami + Shifter - shader authoring motivation set",
+      "author": "Flexi, Stahlregen, Nitorami + Shifter",
+      "vibe": [
+        "geometric",
+        "sharp",
+        "origami",
+        "minimalist",
+        "stark"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "warp_field"
+      ],
+      "technical_notes": "Custom shape equations render overlapping, sharp-edged polygonal structures that fold and shear dynamically. The vertex positions are modulated by bass attenuated from the synthetic test signal, driving rapid, origami-like structural transformations. The absence of frame feedback through sampler_main preserves the clean, high-contrast vector aesthetic against a solid black background.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.209Z",
+      "captured_at": "2026-05-30T22:51:26.838Z"
     },
     {
       "id": "milkdrop:flexi-self-lubricating",

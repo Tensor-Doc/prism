@@ -11,9 +11,38 @@
     "name": "Geiss - All-Spark Sinews",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void",
+      "technical"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#a0a0a0"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom wave is rendered on a pure black background with zero decay, acting as a direct oscilloscope. The vertical displacement of the wave vertices is driven directly by the time-domain waveform of the synthetic test signal. No feedback sampler (sampler_main) or warp shaders are active, resulting in a stark, minimalist aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:58:18.798Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-sinews.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-sinews.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

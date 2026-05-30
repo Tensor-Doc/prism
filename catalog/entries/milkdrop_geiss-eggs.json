@@ -11,9 +11,43 @@
     "name": "Geiss - Eggs",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "chaotic",
+      "electric",
+      "monochromatic",
+      "industrial"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#e0f0f5"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "chromatic_split"
+    ],
+    "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the synthetic test signal. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:16:48.055Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-eggs.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-eggs.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
