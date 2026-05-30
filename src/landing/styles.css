@@ -1047,8 +1047,93 @@ body.audio-live .state-spectrum {
   font-weight: 400;
 }
 
-/* Suggestion chips — VJ-vocabulary starter prompts. Hidden in docked mode
-   so the bottom-bar layout stays single-line. */
+/* While the AI router is thinking: cyan shimmer slides across the top
+   edge of the prompt panel + the button icon spins. The shimmer is the
+   loudest signal that *something is happening* and the request hasn't
+   silently died. */
+.prompt[data-generating]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 30%,
+    var(--cyan) 50%,
+    transparent 70%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: thinking-bar 1.2s linear infinite;
+  box-shadow: 0 0 12px var(--cyan-60);
+  pointer-events: none;
+}
+@keyframes thinking-bar {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+.prompt[data-generating] .btn--primary .btn__icon {
+  display: inline-block;
+  animation: thinking-spin 0.9s linear infinite;
+}
+@keyframes thinking-spin {
+  to { transform: rotate(360deg); }
+}
+.prompt[data-generating] .btn--primary {
+  color: var(--cyan);
+  border-color: var(--cyan-60);
+  background: var(--cyan-12);
+  cursor: progress;
+}
+.prompt[data-generating] .btn--primary[disabled] {
+  opacity: 1; /* don't dim — the thinking state is the readout */
+}
+
+/* "Now playing" result line — the AI's intent sentence after generate.
+   Persists between generations so the visitor can always see what the
+   router picked. Replaces the chip row visually after the first run. */
+.prompt__result {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--cyan);
+  border-radius: 2px;
+  background: var(--cyan-12);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  box-shadow: 0 0 12px var(--cyan-12);
+  animation: result-pop 360ms var(--ease-snap);
+}
+.prompt__result[data-hidden] { display: none; }
+.prompt__result::before {
+  content: "▸ ";
+  color: var(--cyan);
+}
+@keyframes result-pop {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.prompt[data-collapsed] .prompt__result { display: none; }
+
+/* Brief cyan flash on the SKILL readout when the AI hands back a new
+   intent — same visual rhyme as the result strip + shimmer bar. */
+.readout.has-update {
+  animation: skill-flash 1100ms var(--ease-snap);
+}
+@keyframes skill-flash {
+  0%   { color: var(--cyan); text-shadow: 0 0 8px var(--cyan-60); }
+  60%  { color: var(--cyan); text-shadow: 0 0 4px var(--cyan-60); }
+  100% { color: var(--fg); text-shadow: none; }
+}
+
+
 .prompt__chips {
   display: flex;
   flex-wrap: wrap;

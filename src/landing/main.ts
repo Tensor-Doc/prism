@@ -32,13 +32,31 @@ const ROTATE_BLEND_S = 3;
 const AUDIO_FIRST_ROTATION_MS = 9_000; // first new preset within 9s of audio
 let rotateTimer: number | null = null;
 
-function updateSkillDisplay(name: string): void {
+function updateSkillDisplay(name: string, flash = false): void {
   const display = name.length > 26 ? name.slice(0, 24) + "…" : name;
   const el = document.getElementById("skill");
   if (el) {
     el.textContent = display;
     el.title = name;
+    if (flash) {
+      // Re-trigger the flash animation by removing + re-adding the class.
+      el.classList.remove("has-update");
+      // Force reflow so removing then re-adding actually restarts the keyframe.
+      void el.offsetWidth;
+      el.classList.add("has-update");
+    }
   }
+}
+
+function showResult(intent: string): void {
+  const el = document.getElementById("prompt-result");
+  if (!el) return;
+  el.textContent = intent;
+  el.removeAttribute("data-hidden");
+  // Re-trigger the result-pop animation when the same element updates.
+  el.style.animation = "none";
+  void el.offsetWidth;
+  el.style.animation = "";
 }
 
 function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
@@ -549,6 +567,8 @@ const promptCollapseBtn = $<HTMLButtonElement>("#prompt-collapse");
 const promptRestoreBtn = $<HTMLButtonElement>("#prompt-restore");
 
 let generating = false;
+const generateBtnLabel = generateBtn.querySelector<HTMLElement>(".label");
+const generateBtnIcon = generateBtn.querySelector<HTMLElement>(".btn__icon");
 async function tryGenerate(): Promise<void> {
   if (generating) return;
   const text = promptInput.value.trim();
@@ -558,6 +578,12 @@ async function tryGenerate(): Promise<void> {
   }
   generating = true;
   generateBtn.classList.add("flash");
+  generateBtn.disabled = true;
+  promptPanel.setAttribute("data-generating", "");
+  // Swap the button content while thinking so the action is obviously
+  // in-flight (vs the panel just sitting there for a second).
+  if (generateBtnLabel) generateBtnLabel.textContent = "thinking";
+  if (generateBtnIcon) generateBtnIcon.textContent = "◐";
   // Stop auto-rotation while a user-driven graph is loading — otherwise
   // the next rotate tick clobbers the chosen preset within seconds.
   stopRotation();
@@ -583,7 +609,8 @@ async function tryGenerate(): Promise<void> {
     if (!result.ok) {
       throw new Error(result.error ?? "graph runtime failed");
     }
-    updateSkillDisplay(data.graph.intent);
+    updateSkillDisplay(data.graph.intent, true);
+    showResult(data.graph.intent);
   } catch (err) {
     const msg = (err as Error).message || "generate failed";
     console.warn("prism · generate failed", err);
@@ -594,6 +621,10 @@ async function tryGenerate(): Promise<void> {
   } finally {
     skillEl?.classList.remove("is-loading");
     setTimeout(() => generateBtn.classList.remove("flash"), 400);
+    generateBtn.disabled = false;
+    promptPanel.removeAttribute("data-generating");
+    if (generateBtnLabel) generateBtnLabel.textContent = "generate";
+    if (generateBtnIcon) generateBtnIcon.textContent = "▶";
     generating = false;
   }
 }
