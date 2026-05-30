@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-witchcraft",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-witchcraft.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fiShbRaiN - witchcraft",
+    "author": "fiShbRaiN"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.187Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

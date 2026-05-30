@@ -11,9 +11,42 @@
     "name": "Eo.S.+Phat Emergent factors - Bitcore Tweak",
     "author": "Eo.S.+Phat Emergent factors"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kaleidoscopic",
+      "kinetic",
+      "mathematical"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#0f1035",
+      "#00ffcc",
+      "#990066"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
+    },
+    "techniques": [
+      "domain_repetition",
+      "hue_cycle",
+      "audio_gating",
+      "beat_burst",
+      "warp_field"
+    ],
+    "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The synthetic test signal's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:04:12.168Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors-bitcore-tweak.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors-bitcore-tweak.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

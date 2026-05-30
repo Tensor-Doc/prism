@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:martin-qbikal-surface-turbulence",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-qbikal-surface-turbulence.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - QBikal - Surface Turbulence",
+    "author": "Martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      },
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.135Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_flexi-geiss-bipolar-vs-reaction-diffusion-mix.webm",
+    "thumb": "/thumbs/milkdrop_flexi-geiss-bipolar-vs-reaction-diffusion-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (39569 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

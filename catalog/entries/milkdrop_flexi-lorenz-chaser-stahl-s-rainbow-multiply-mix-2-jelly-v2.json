@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-lorenz-chaser-stahl-s-rainbow-multiply-mix-2-jelly-v2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-lorenz-chaser-stahl-s-rainbow-multiply-mix-2-jelly-v2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - lorenz chaser (Stahl's rainbow multiply mix 2 - Jelly V2)",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.150Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -11,9 +11,42 @@
     "name": "Eo.S.+Phat - spectrum bubble new colors_v2",
     "author": "Eo.S.+Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "metallic",
+      "industrial",
+      "abyssal"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#1a2430",
+      "#8c6d4f",
+      "#0d0f12",
+      "#4b5a6a"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "cosine_palette",
+      "domain_repetition"
+    ],
+    "technical_notes": "A deep concentric spiral tunnel is generated via a feedback loop utilizing sampler_main with a zoom factor slightly greater than unity and a small rotational warp. The metallic sheen is modulated by a cosine palette mapping that shifts between deep slate blues and bronze golds in response to the synthetic test signal's bass kicks. The overall structure resembles a classic Geiss feedback-tunnel lineage with high decay creating a clean, non-persistent edge.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:03:34.203Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-spectrum-bubble-new-colors-v2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-spectrum-bubble-new-colors-v2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

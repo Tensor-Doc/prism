@@ -72,7 +72,11 @@ function main(): void {
       }
       const limitArg = args.find((a) => a.startsWith("--limit="));
       const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
-      runIngest(repoRoot, path, { limit });
+      const subArg = args.find((a) => a.startsWith("--include-subdirs="));
+      const includeSubdirs = subArg
+        ? subArg.split("=")[1].split(",").map((s) => s.trim()).filter(Boolean)
+        : undefined;
+      runIngest(repoRoot, path, { limit, includeSubdirs });
       break;
     }
     case "annotate": {

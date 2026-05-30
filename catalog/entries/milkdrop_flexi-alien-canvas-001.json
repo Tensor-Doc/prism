@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-alien-canvas-001",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-alien-canvas-001.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - alien canvas_001",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.148Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

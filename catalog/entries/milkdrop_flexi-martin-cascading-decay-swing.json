@@ -11,9 +11,40 @@
     "name": "Flexi + Martin - cascading decay swing",
     "author": "Flexi + Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "stark",
+      "bold"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#ff00ff",
+      "#b62164",
+      "#5b8c00",
+      "#a6002c"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the synthetic test signal. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:06:14.147Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-martin-cascading-decay-swing.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-martin-cascading-decay-swing.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

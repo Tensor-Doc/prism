@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:martin-butterflies",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-butterflies.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - butterflies",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "clouds"
+      },
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.156Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:amandio-c-apollonius-tangents",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/amandio-c-apollonius-tangents.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "amandio c - Apollonius tangents",
+    "author": "amandio c"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.136Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

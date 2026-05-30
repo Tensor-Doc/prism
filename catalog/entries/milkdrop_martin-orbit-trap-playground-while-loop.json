@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:martin-orbit-trap-playground-while-loop",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-orbit-trap-playground-while-loop.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - orbit trap playground - while loop",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "manyfish"
+      },
+      {
+        "name": "rand00"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.199Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

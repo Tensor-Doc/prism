@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-the-beast",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-the-beast.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - the beast",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.172Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

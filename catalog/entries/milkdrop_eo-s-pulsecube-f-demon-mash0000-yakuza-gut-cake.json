@@ -11,9 +11,43 @@
     "name": "Eo.S. - pulsecube f demon - mash0000 - yakuza gut cake",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kinetic",
+      "retro-futuristic",
+      "glitchy"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#ff3300",
+      "#e6007e",
+      "#ffcc00"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "chromatic_split"
+    ],
+    "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the synthetic test signal. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:00:09.783Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

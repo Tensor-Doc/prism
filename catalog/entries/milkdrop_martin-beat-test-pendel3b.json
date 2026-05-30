@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-beat-test-pendel3b",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-beat-test-pendel3b.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - beat test Pendel3b",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.192Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

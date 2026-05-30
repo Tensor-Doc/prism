@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:amandio-c-feeling-well",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/amandio-c-feeling-well.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "amandio c - feeling well",
+    "author": "amandio c"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.216Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-hardcore-mix-1",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-hardcore-mix-1.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - hardcore mix 1",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.226Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

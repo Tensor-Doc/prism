@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-martin-enhanced-reflection-prototype",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-martin-enhanced-reflection-prototype.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi + martin - enhanced reflection prototype",
+    "author": "flexi + martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.188Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

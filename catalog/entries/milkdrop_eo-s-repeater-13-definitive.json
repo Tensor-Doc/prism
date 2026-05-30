@@ -11,9 +11,43 @@
     "name": "Eo.S. - repeater 13 - definitive",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kaleidoscopic",
+      "kinetic",
+      "neon",
+      "geometric"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#00ff66",
+      "#ff007f",
+      "#00f0ff",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.75,
+      "treble": 0.8
+    },
+    "techniques": [
+      "domain_repetition",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave"
+    ],
+    "technical_notes": "The preset employs aggressive domain repetition to create a multi-axial kaleidoscopic mirror effect. High-frequency elements of the synthetic test signal drive the visibility of custom waves rendered as dotted neon paths, while a high decay rate ensures snappy frame-to-frame transitions without persistent trails. State-switching logic driven by the synthetic kick gates rapid transitions between distinct geometric configurations and color palettes.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:00:45.011Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-repeater-13-definitive.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-repeater-13-definitive.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

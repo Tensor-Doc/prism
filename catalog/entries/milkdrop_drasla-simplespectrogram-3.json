@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:drasla-simplespectrogram-3",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/drasla-simplespectrogram-3.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "drasla - simplespectrogram 3",
+    "author": "drasla"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.185Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

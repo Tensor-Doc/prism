@@ -14,8 +14,8 @@
   "annotation": null,
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-kali-mix-canvas-mix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-kali-mix-canvas-mix.jpg"
+    "video": "/videos/milkdrop_aderrasi-geiss-airhandler-kali-mix-canvas-mix.webm",
+    "thumb": "/thumbs/milkdrop_aderrasi-geiss-airhandler-kali-mix-canvas-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -24,6 +24,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was empty (53184 bytes); preset doesn't render meaningfully against the current test signal"
+    "note": "capture was empty (53078 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

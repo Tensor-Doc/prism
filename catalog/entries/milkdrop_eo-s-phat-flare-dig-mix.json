@@ -11,9 +11,43 @@
     "name": "Eo.S.+Phat - Flare_dig_mix",
     "author": "Eo.S.+Phat"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "mystical",
+      "organic",
+      "dark",
+      "pulsing"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#000000",
+      "#800020",
+      "#8a2be2",
+      "#d4af37"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "domain_repetition",
+      "audio_gating",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the synthetic test signal's mid-range, while the outer red and purple wing-like structures flare outward on the synthetic kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
+    "brand_safe": false,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:03:00.899Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-flare-dig-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-flare-dig-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

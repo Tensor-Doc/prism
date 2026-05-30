@@ -11,9 +11,43 @@
     "name": "Aderrasi - Airhandler (Kali Mix) - Painterly",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "minimalist",
+      "painterly"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#40a0d0",
+      "#d06010",
+      "#80d0c0",
+      "#6020c0"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the synthetic test signal, while the overall warp scale is modulated by the synthetic kick.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:59:34.868Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-kali-mix-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-kali-mix-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

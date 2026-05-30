@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-char-test",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-char-test.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - char test",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.193Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

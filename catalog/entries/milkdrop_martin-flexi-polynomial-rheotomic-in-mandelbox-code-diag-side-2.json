@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-flexi-polynomial-rheotomic-in-mandelbox-code-diag-side-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-flexi-polynomial-rheotomic-in-mandelbox-code-diag-side-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - flexi - polynomial rheotomic in mandelbox code - diag side 2",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.194Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:amandio-c-trick-with-cubes",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/amandio-c-trick-with-cubes.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "amandio c - trick with cubes",
+    "author": "amandio c"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.147Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

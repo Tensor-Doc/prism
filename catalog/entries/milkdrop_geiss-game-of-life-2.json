@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-game-of-life-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-game-of-life-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Game of Life",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.184Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

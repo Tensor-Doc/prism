@@ -11,9 +11,38 @@
     "name": "Flexi + Geiss - Tokamak mindblob 2.0",
     "author": "Flexi + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.3
+    },
+    "techniques": [
+      "particle_system",
+      "audio_gating"
+    ],
+    "technical_notes": "The preset is extremely sparse and mostly dark, rendering only a few discrete white points or lines of dots against a black void. These minimal particles appear to be driven by transient spikes in the synthetic test signal, likely mapped to custom shapes or a simple particle system. The decay rate is extremely high, leaving no persistent trails or feedback in sampler_main.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:05:40.691Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-geiss-tokamak-mindblob-2-0.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-geiss-tokamak-mindblob-2-0.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

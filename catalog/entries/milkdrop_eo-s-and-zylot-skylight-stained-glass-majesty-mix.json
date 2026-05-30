@@ -11,9 +11,43 @@
     "name": "Eo.S. and Zylot - skylight (Stained Glass Majesty mix)",
     "author": "Eo.S. and Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kinetic",
+      "psychedelic",
+      "strobing"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#e2a490",
+      "#86efac"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A logarithmic spiral warp field drives frame feedback through sampler_main to construct a deep, repeating tunnel. The preset undergoes dramatic audio-gated inversions triggered by the synthetic kick, transitioning from a dark textured cavern to a high-contrast white field. Intricate custom waves are radially duplicated and modulated by treble frequencies to form the sharp, geometric spiral arms.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:02:26.604Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-and-zylot-skylight-stained-glass-majesty-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-and-zylot-skylight-stained-glass-majesty-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

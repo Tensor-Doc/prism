@@ -1,0 +1,32 @@
+{
+  "id": "milkdrop:3d-function-draw-template",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/3d-function-draw-template.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "3D function draw template"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      },
+      {
+        "name": "pw_noise_mq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.177Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

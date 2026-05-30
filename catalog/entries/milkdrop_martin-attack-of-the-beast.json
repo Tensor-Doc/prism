@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:martin-attack-of-the-beast",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-attack-of-the-beast.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - attack of the beast",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "sampler_pw_noise_lq"
+      },
+      {
+        "name": "shub1"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.154Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

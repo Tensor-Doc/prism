@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-flexi-witchcraft-unleashed-00-the-template",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-flexi-witchcraft-unleashed-00-the-template.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fiShbRaiN + Flexi - witchcraft unleashed [00 the template]",
+    "author": "fiShbRaiN + Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.186Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

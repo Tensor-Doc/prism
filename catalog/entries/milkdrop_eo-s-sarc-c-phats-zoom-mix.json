@@ -11,9 +11,42 @@
     "name": "Eo.S. - sarc c_Phats Zoom Mix",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "geometric",
+      "futuristic",
+      "structured"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#000814",
+      "#0088ff",
+      "#ffaa00"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "bloom_glow",
+      "beat_burst",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "A central nested triangle custom shape with an amber core pulses dynamically to the bass of the synthetic test signal. Spiraling rings of circles are rendered via custom waves that rotate and scale through space, while a radial bloom effect is achieved by blending the current frame with a blurred feedback sampler. Low decay in sampler_main maintains clean, sharp geometric lines with minimal trailing artifacts.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:01:16.144Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-sarc-c-phats-zoom-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-sarc-c-phats-zoom-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

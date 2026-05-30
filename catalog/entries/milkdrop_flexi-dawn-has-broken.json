@@ -17,7 +17,9 @@
       {
         "name": "sunrise"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_flexi-dawn-has-broken.webm",
+    "thumb": "/thumbs/milkdrop_flexi-dawn-has-broken.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (52863 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

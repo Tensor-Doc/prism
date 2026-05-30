@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-the-dome-ps2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-the-dome-ps2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - the Dome ps2",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.171Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

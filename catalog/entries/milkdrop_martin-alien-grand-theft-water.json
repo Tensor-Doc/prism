@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-alien-grand-theft-water",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-alien-grand-theft-water.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - alien grand theft water",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.153Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

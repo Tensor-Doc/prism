@@ -11,9 +11,44 @@
     "name": "Eo.S. - skylight a1 [music warp switch]",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "hypnotic",
+      "mathematical",
+      "psychedelic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ffffff",
+      "#b19cd9",
+      "#40e0d0",
+      "#8fbc8f"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "custom_wave",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the synthetic test signal's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:01:52.342Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-skylight-a1-music-warp-switch.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-skylight-a1-music-warp-switch.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

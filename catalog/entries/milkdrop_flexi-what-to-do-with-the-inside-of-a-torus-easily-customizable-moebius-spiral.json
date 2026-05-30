@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:flexi-what-to-do-with-the-inside-of-a-torus-easily-customizable-moebius-spiral",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-what-to-do-with-the-inside-of-a-torus-easily-customizable-moebius-spiral.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - what to do with the inside of a torus [easily customizable moebius spiral template]",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "rand01"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T20:04:00.191Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

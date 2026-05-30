@@ -11,9 +11,38 @@
     "name": "Flexi - evolution 3 - mash0000 - orbiting satellite coral reef time lapse",
     "author": "Flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "monochrome"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the synthetic test signal, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T20:07:41.938Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

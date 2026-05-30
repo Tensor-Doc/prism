@@ -96,7 +96,11 @@ function entryFilename(slug: string): string {
   return `milkdrop_${slug}.json`;
 }
 
-export function runIngest(repoRoot: string, sourcePath: string, opts: { limit?: number } = {}): IngestStats {
+export function runIngest(
+  repoRoot: string,
+  sourcePath: string,
+  opts: { limit?: number; includeSubdirs?: string[] } = {},
+): IngestStats {
   const presetsDir = join(sourcePath, "presets");
   if (!existsSync(presetsDir)) {
     throw new Error(`no presets/ at ${sourcePath}`);
@@ -108,13 +112,28 @@ export function runIngest(repoRoot: string, sourcePath: string, opts: { limit?: 
   console.log(`[ingest] copied ${stats.textures_copied} texture file(s) → ${PUBLIC_TEXTURES}/`);
   const availableTextures = availableTextureFiles(repoRoot);
 
-  // Step 2: scan root .milk files. Skip subdirectories (Geiss's curation buckets).
-  const allFiles = readdirSync(presetsDir).filter((f) => {
-    const full = join(presetsDir, f);
-    return statSync(full).isFile() && f.toLowerCase().endsWith(".milk");
-  });
-  stats.scanned = allFiles.length;
-  console.log(`[ingest] scanning ${presetsDir}: ${stats.scanned} .milk files at root`);
+  // Step 2: scan root .milk files + any explicitly-included subdirectories.
+  // By default we skip subdirs (Geiss's _5star_copies, _removed_jan_2020,
+  // _broken_maybe, etc.). The visitor can opt in to specific subdirs via
+  // --include-subdirs=misc,development,...
+  const scanDir = (dir: string): { dir: string; file: string }[] =>
+    readdirSync(dir)
+      .filter((f) => statSync(join(dir, f)).isFile() && f.toLowerCase().endsWith(".milk"))
+      .map((f) => ({ dir, file: f }));
+
+  const found: { dir: string; file: string }[] = scanDir(presetsDir);
+  for (const sub of opts.includeSubdirs ?? []) {
+    const subDir = join(presetsDir, sub);
+    if (!existsSync(subDir)) {
+      console.warn(`[ingest] subdir not found: ${sub}`);
+      continue;
+    }
+    const subFiles = scanDir(subDir);
+    console.log(`[ingest]   + ${sub}/: ${subFiles.length} files`);
+    found.push(...subFiles);
+  }
+  stats.scanned = found.length;
+  console.log(`[ingest] scanning ${presetsDir}${opts.includeSubdirs?.length ? ` (+${opts.includeSubdirs.length} subdirs)` : ""}: ${stats.scanned} .milk files`);
 
   const existingIds = readExistingIds(repoRoot);
   const progress = new Progress(progressPath(repoRoot));
@@ -124,11 +143,12 @@ export function runIngest(repoRoot: string, sourcePath: string, opts: { limit?: 
   mkdirSync(join(repoRoot, CATALOG_ENTRIES), { recursive: true });
 
   let processed = 0;
-  for (const file of allFiles) {
+  for (const entry of found) {
+    const { dir, file } = entry;
     if (opts.limit && processed >= opts.limit) break;
     processed++;
     const stem = basename(file, extname(file));
-    const srcMilkAbs = join(presetsDir, file);
+    const srcMilkAbs = join(dir, file);
 
     // Re-run dedupe: if this source file was already ingested under any
     // slug, reuse that slug. Otherwise disambiguate against existing ids.
