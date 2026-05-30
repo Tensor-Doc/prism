@@ -105,21 +105,6 @@ function applyFilters(entries: IndexEntry[]): IndexEntry[] {
  *  title attribute (multi-line via \n). Includes display + technical
  *  notes (the Gemini-generated shader-dialect description) + audio
  *  affinity numbers + tag rollup. */
-function relativeTime(iso: string): string {
-  const ms = Date.now() - new Date(iso).getTime();
-  if (Number.isNaN(ms)) return "";
-  const s = ms / 1000;
-  if (s < 60) return "just now";
-  const m = s / 60;
-  if (m < 60) return `${Math.round(m)}m ago`;
-  const h = m / 60;
-  if (h < 24) return `${Math.round(h)}h ago`;
-  const d = h / 24;
-  if (d < 30) return `${Math.round(d)}d ago`;
-  const mo = d / 30;
-  return `${Math.round(mo)}mo ago`;
-}
-
 function buildCardTitle(e: IndexEntry): string {
   // Just the rich technical description on hover — less text, faster read.
   // Fall back to blurb (then name) for legacy hand-seeded entries that
