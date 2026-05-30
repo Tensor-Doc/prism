@@ -13,37 +13,37 @@
   },
   "annotation": {
     "vibe": [
-      "minimal",
+      "minimalist",
       "stark",
-      "geometric",
-      "raw"
+      "oscilloscope",
+      "geometric"
     ],
     "motion": 0.6,
     "palette_anchor": [
       "#000000",
-      "#9e9e9e",
-      "#ffffff"
+      "#999999",
+      "#cccccc"
     ],
     "audio_affinity": {
       "bass": 0.8,
       "mid": 0.7,
-      "treble": 0.3
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A stark, high-contrast monochrome preset utilizing a custom wave rendered as a filled, jagged polygon. The wave's vertical displacement and amplitude are directly modulated by the synthetic test signal's waveform. With decay set to maximum, there is no frame feedback through sampler_main, resulting in a clean, raw oscilloscope-like presentation with zero persistence.",
+    "technical_notes": "A custom wave renders the raw audio waveform of the synthetic test signal as a jagged, filled polygon ribbon cutting across the screen. A secondary sharp triangular custom shape is anchored near the center, modulating its width and angle. Minimal feedback or decay is applied, keeping the background pure black and the rendering extremely crisp and snappy.",
     "brand_safe": true,
     "refik_mode": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T18:27:09.226Z"
+    "captured_at": "2026-05-30T18:34:46.797Z"
   },
   "assets": {
     "textures_needed": [],
-    "video": "/videos/milkdrop_geiss-all-spark.webm",
-    "thumb": "/thumbs/milkdrop_geiss-all-spark.jpg"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/geiss-all-spark.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/geiss-all-spark.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
