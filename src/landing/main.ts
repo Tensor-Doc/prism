@@ -412,10 +412,11 @@ const audio = new AudioCapture(audioCtx);
 let liveAudioSource: { ctx: AudioContext; node: AudioNode } | null = null;
 audio.onSource = (source, ctx) => {
   // Real audio is here — stop the synthetic driver and route the real source
-  // into butterchurn so the preset reacts to actual music.
+  // into BOTH backends so whichever one is active sees real reactivity.
   synthDrivesCursor = false;
   synth.stop();
   milkdrop.connectAudio(source);
+  shadertoy.connectAudio(source);
   // Hold the source + context for the test-signal recorder so it can tap
   // the audio graph for a clean recording (raw MediaStream recording is
   // silent when AudioContext is already consuming the track).

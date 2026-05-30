@@ -90,7 +90,9 @@ export function createShadertoyBackground(
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.LUMINANCE, 256, 1, 0, gl.LUMINANCE, gl.UNSIGNED_BYTE, null);
+  // WebGL2 single-channel texture: R8 internal + RED format. LUMINANCE
+  // is deprecated and unreliable in WebGL2 / GLSL 300 es shaders.
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, 256, 1, 0, gl.RED, gl.UNSIGNED_BYTE, null);
 
   const dummyVao = gl.createVertexArray()!; // needed for vertexAttrib-less rendering
 
@@ -147,7 +149,7 @@ export function createShadertoyBackground(
 
     analyser.getByteFrequencyData(fftBytes);
     gl.bindTexture(gl.TEXTURE_2D, audioTex);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.LUMINANCE, 256, 1, 0, gl.LUMINANCE, gl.UNSIGNED_BYTE, fftBytes);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, 256, 1, 0, gl.RED, gl.UNSIGNED_BYTE, fftBytes);
 
     if (currentProgram) {
       gl.useProgram(currentProgram);

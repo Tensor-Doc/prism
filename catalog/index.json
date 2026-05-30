@@ -1,10 +1,41 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T19:54:01.160Z",
-  "total": 566,
-  "annotated_count": 47,
-  "pending_count": 519,
+  "generated_at": "2026-05-30T20:33:05.709Z",
+  "total": 640,
+  "annotated_count": 65,
+  "pending_count": 575,
   "entries": [
+    {
+      "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly",
+      "slug": "aderrasi-airhandler-kali-mix-painterly",
+      "name": "Aderrasi - Airhandler (Kali Mix) - Painterly",
+      "author": "Aderrasi",
+      "vibe": [
+        "fluid",
+        "organic",
+        "minimalist",
+        "painterly"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-kali-mix-painterly.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-kali-mix-painterly.jpg",
+      "added_by": "scottspace"
+    },
     {
       "id": "milkdrop:aderrasi-airhandler-last-breath-calm",
       "slug": "aderrasi-airhandler-last-breath-calm",
@@ -374,6 +405,37 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-flare-dig-mix",
+      "slug": "eo-s-phat-flare-dig-mix",
+      "name": "Eo.S.+Phat - Flare_dig_mix",
+      "author": "Eo.S.+Phat",
+      "vibe": [
+        "mystical",
+        "organic",
+        "dark",
+        "pulsing"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "frame_feedback",
+        "domain_repetition",
+        "audio_gating",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "refik_mode": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-flare-dig-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-flare-dig-mix.jpg",
       "added_by": "scottspace"
     },
     {
@@ -1087,6 +1149,131 @@
       "added_by": "scottspace"
     },
     {
+      "id": "milkdrop:eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
+      "slug": "eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
+      "name": "Eo.S. - pulsecube f demon - mash0000 - yakuza gut cake",
+      "author": "Eo.S.",
+      "vibe": [
+        "geometric",
+        "kinetic",
+        "retro-futuristic",
+        "glitchy"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "chromatic_split"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-repeater-13-definitive",
+      "slug": "eo-s-repeater-13-definitive",
+      "name": "Eo.S. - repeater 13 - definitive",
+      "author": "Eo.S.",
+      "vibe": [
+        "kaleidoscopic",
+        "kinetic",
+        "neon",
+        "geometric"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.75,
+        "treble": 0.8
+      },
+      "techniques": [
+        "domain_repetition",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-repeater-13-definitive.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-repeater-13-definitive.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-sarc-c-phats-zoom-mix",
+      "slug": "eo-s-sarc-c-phats-zoom-mix",
+      "name": "Eo.S. - sarc c_Phats Zoom Mix",
+      "author": "Eo.S.",
+      "vibe": [
+        "cosmic",
+        "geometric",
+        "futuristic",
+        "structured"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "custom_wave",
+        "bloom_glow",
+        "beat_burst",
+        "domain_repetition",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-sarc-c-phats-zoom-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-sarc-c-phats-zoom-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-skylight-a1-music-warp-switch",
+      "slug": "eo-s-skylight-a1-music-warp-switch",
+      "name": "Eo.S. - skylight a1 [music warp switch]",
+      "author": "Eo.S.",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "mathematical",
+        "psychedelic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "hue_cycle",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-skylight-a1-music-warp-switch.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-skylight-a1-music-warp-switch.jpg",
+      "added_by": "scottspace"
+    },
+    {
       "id": "milkdrop:eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
       "slug": "eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
       "name": "Eo.S. + flexi - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b + illumination (Stahl's Mix)",
@@ -1389,6 +1576,362 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-zylot-skylight-stained-glass-majesty-mix.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-zylot-skylight-stained-glass-majesty-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-and-zylot-skylight-stained-glass-majesty-mix",
+      "slug": "eo-s-and-zylot-skylight-stained-glass-majesty-mix",
+      "name": "Eo.S. and Zylot - skylight (Stained Glass Majesty mix)",
+      "author": "Eo.S. and Zylot",
+      "vibe": [
+        "geometric",
+        "kinetic",
+        "psychedelic",
+        "strobing"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.75
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "domain_repetition",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-and-zylot-skylight-stained-glass-majesty-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-and-zylot-skylight-stained-glass-majesty-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-spectrum-bubble-new-colors-v2",
+      "slug": "eo-s-phat-spectrum-bubble-new-colors-v2",
+      "name": "Eo.S.+Phat - spectrum bubble new colors_v2",
+      "author": "Eo.S.+Phat",
+      "vibe": [
+        "hypnotic",
+        "metallic",
+        "industrial",
+        "abyssal"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.5,
+        "mid": 0.3,
+        "treble": 0.2
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "cosine_palette",
+        "domain_repetition"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-spectrum-bubble-new-colors-v2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-spectrum-bubble-new-colors-v2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-emergent-factors-bitcore-tweak",
+      "slug": "eo-s-phat-emergent-factors-bitcore-tweak",
+      "name": "Eo.S.+Phat Emergent factors - Bitcore Tweak",
+      "author": "Eo.S.+Phat Emergent factors",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "kinetic",
+        "mathematical"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.75
+      },
+      "techniques": [
+        "domain_repetition",
+        "hue_cycle",
+        "audio_gating",
+        "beat_burst",
+        "warp_field"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors-bitcore-tweak.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors-bitcore-tweak.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:esotic-rozzor-pixie-party-light-no-wave-invasion-mandala-chill-red-yellow-mix",
+      "slug": "esotic-rozzor-pixie-party-light-no-wave-invasion-mandala-chill-red-yellow-mix",
+      "name": "Esotic & Rozzor - Pixie Party Light ((No Wave Invasion) Mandala Chill Red Yellow Mix)",
+      "author": "Esotic & Rozzor",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "architectural",
+        "energetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "domain_repetition",
+        "audio_gating",
+        "warp_field",
+        "custom_wave",
+        "frame_feedback",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/esotic-rozzor-pixie-party-light-no-wave-invasion-mandala-chill-red-yellow-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/esotic-rozzor-pixie-party-light-no-wave-invasion-mandala-chill-red-yellow-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse",
+      "slug": "flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse",
+      "name": "Flexi - evolution 3 - mash0000 - orbiting satellite coral reef time lapse",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "void",
+        "monochrome"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.2,
+        "treble": 0.1
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-hue-burst",
+      "slug": "flexi-hue-burst",
+      "name": "Flexi - hue burst",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "geometric",
+        "void"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-hue-burst.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-hue-burst.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-infused-with-the-spiral",
+      "slug": "flexi-infused-with-the-spiral",
+      "name": "Flexi - infused with the spiral",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "geometric",
+        "dark",
+        "sculptural"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [
+        "manyfish"
+      ],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-infused-with-the-spiral.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-infused-with-the-spiral.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-layered-boz-buckwild",
+      "slug": "flexi-layered-boz-buckwild",
+      "name": "Flexi - layered + Boz - Buckwild",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "void"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.2,
+        "treble": 0.1
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-layered-boz-buckwild.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-layered-boz-buckwild.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-self-lubricating",
+      "slug": "flexi-self-lubricating",
+      "name": "Flexi - self-lubricating",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "glitchy"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.2,
+        "treble": 0.2
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-self-lubricating.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-self-lubricating.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-using-jedi-forces",
+      "slug": "flexi-using-jedi-forces",
+      "name": "Flexi - using jedi forces",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "glitchy",
+        "stark",
+        "aggressive"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "cells"
+      ],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-using-jedi-forces.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-using-jedi-forces.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-geiss-tokamak-mindblob-2-0",
+      "slug": "flexi-geiss-tokamak-mindblob-2-0",
+      "name": "Flexi + Geiss - Tokamak mindblob 2.0",
+      "author": "Flexi + Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "sparse",
+        "dark"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.2,
+        "mid": 0.1,
+        "treble": 0.3
+      },
+      "techniques": [
+        "particle_system",
+        "audio_gating"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-geiss-tokamak-mindblob-2-0.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-geiss-tokamak-mindblob-2-0.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:flexi-martin-cascading-decay-swing",
+      "slug": "flexi-martin-cascading-decay-swing",
+      "name": "Flexi + Martin - cascading decay swing",
+      "author": "Flexi + Martin",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "bold"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "audio_gating",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-martin-cascading-decay-swing.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-martin-cascading-decay-swing.jpg",
       "added_by": "scottspace"
     },
     {
