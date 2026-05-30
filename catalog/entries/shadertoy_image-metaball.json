@@ -12,15 +12,49 @@
     "author": "prism",
     "blurb": "A growing fluid blob with a nebula skin sampled by surface normal; pulses with bass."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "minimal",
+      "fluid",
+      "biomorphic"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#101419",
+      "#4df3db",
+      "#164e4a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.1
+    },
+    "techniques": [
+      "raymarch_sdf",
+      "bloom_glow",
+      "fbm_noise",
+      "audio_gating"
+    ],
+    "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the synthetic test signal, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T22:50:37.378Z"
+  },
   "assets": {
     "textures_needed": [],
-    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA15985%2FPIA15985~medium.jpg"
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA15985%2FPIA15985~medium.jpg",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-metaball.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-metaball.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

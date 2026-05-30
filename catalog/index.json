@@ -1,10 +1,48 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T22:48:25.614Z",
+  "generated_at": "2026-05-30T22:50:52.117Z",
   "total": 644,
-  "annotated_count": 71,
-  "pending_count": 573,
+  "annotated_count": 72,
+  "pending_count": 572,
   "entries": [
+    {
+      "id": "shadertoy:image-metaball",
+      "slug": "image-metaball",
+      "name": "Image Metaball",
+      "author": "prism",
+      "blurb": "A growing fluid blob with a nebula skin sampled by surface normal; pulses with bass.",
+      "vibe": [
+        "organic",
+        "minimal",
+        "fluid",
+        "biomorphic"
+      ],
+      "motion": 0.35,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.1
+      },
+      "techniques": [
+        "raymarch_sdf",
+        "bloom_glow",
+        "fbm_noise",
+        "audio_gating"
+      ],
+      "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the synthetic test signal, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "shadertoy",
+      "source_loader": "url",
+      "source_url": "/presets/shadertoy/image-metaball.glsl",
+      "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA15985%2FPIA15985~medium.jpg",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-metaball.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-metaball.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T22:50:37.378Z"
+    },
     {
       "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly",
       "slug": "aderrasi-airhandler-kali-mix-painterly",
