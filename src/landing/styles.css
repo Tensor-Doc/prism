@@ -39,8 +39,13 @@ body[data-chrome-idle] .prompt {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Persistent "play with audio" pin — visible even when chrome
-   has faded; the one lifeline back into interactivity.
+   "Play with audio" lifeline pin.
+
+   Only appears when the chrome has faded (so the visitor still has
+   one path back to connecting audio without first moving the mouse).
+   When chrome is up, the SOURCES panel's audio row owns this action,
+   and the bottom statusbar owns the navigation, so the pin would be
+   visual noise stacked on top of both.
    ───────────────────────────────────────────────────────────── */
 .audio-pin {
   position: fixed;
@@ -65,6 +70,9 @@ body[data-chrome-idle] .prompt {
   box-shadow: 0 0 22px var(--cyan-12), 0 6px 24px -10px rgba(0, 0, 0, 0.65);
   transition: opacity 200ms var(--ease-snap), transform 200ms var(--ease-snap),
     box-shadow 200ms var(--ease-snap);
+  /* Hidden by default; the rule below reveals it. */
+  opacity: 0;
+  pointer-events: none;
 }
 .audio-pin__icon {
   font-size: 13px;
@@ -74,10 +82,10 @@ body[data-chrome-idle] .prompt {
   transform: translateY(-1px);
   box-shadow: 0 0 30px var(--cyan-60), 0 10px 28px -10px rgba(0, 0, 0, 0.7);
 }
-/* When audio is live, the pin's job is done — fade it out. */
-body.audio-live .audio-pin {
-  opacity: 0;
-  pointer-events: none;
+/* Reveal only when chrome has faded AND audio isn't already live. */
+body[data-chrome-idle]:not(.audio-live) .audio-pin {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ─────────────────────────────────────────────────────────────
