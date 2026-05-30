@@ -143,11 +143,26 @@ if (skillElEarly) {
   skillElEarly.textContent = "compiling…";
   skillElEarly.classList.add("is-loading");
 }
-// Cold-open default — a hand-picked Refik-mode preset (slow, fluid,
-// painterly, breathes with bass) so visitors land on the right mood
-// instead of $$$ Royal Mashup #197. The catalog-router takes over the
-// moment they type a prompt.
-const COLD_OPEN_PRESET = "Geiss - Reaction Diffusion 2";
+// Cold-open default — pick at random from a curated pool of Refik-mode
+// presets so the landing surprises rather than always starts on the
+// same visualizer. Seeded from the current second so a quick refresh
+// keeps the same preset (less jarring) but every visit feels fresh.
+// The catalog-router takes over the moment they type a prompt.
+const COLD_OPEN_POOL = [
+  "Geiss - Reaction Diffusion 2",
+  "Geiss - Cauldron - painterly 2 (saturation remix)",
+  "Flexi - alien fish pond",
+  "martin - reflections on black tiles",
+  "martin [shadow harlequins shape code] - fata morgana",
+  "suksma - uninitialized variabowl (hydroponic chronic)",
+  "Zylot - Paint Spill (Music Reactive Paint Mix)",
+  "Aderrasi - Songflower (Moss Posy)",
+  "flexi + amandio c - organic [random mashup]",
+  "martin - frosty caves 2",
+];
+const COLD_OPEN_PRESET = COLD_OPEN_POOL[
+  Math.floor(Date.now() / 1000) % COLD_OPEN_POOL.length
+];
 
 const milkdrop = createMilkdropBackground(
   audioCtx,
