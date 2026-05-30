@@ -25,9 +25,10 @@ how *strongly* the visual differentiates by band — e.g. whether motion
 intensity jumps on bass kicks vs. whether brightness modulates with
 treble sparkle.
 
-Refer to the stimulus as "the audio loop" or "the test signal" in
-technical_notes — do not name the artist or song (you have no way to
-know which audio is being used).
+Refer to the stimulus as "the music" or "the audio" in technical_notes
+— readers will be playing real music when they use Prism, so the
+description should map to that experience. Do not name the artist or
+song (you have no way to know which audio is being used).
 
 VOCABULARY ANCHORS (use these terms; don't invent synonyms):
 - Milkdrop docs: Ryan Geiss's manual at www.geisswerks.com/milkdrop/milkdrop.html
@@ -94,9 +95,11 @@ TONE for technical_notes (2-3 sentences, dialect-appropriate):
   motion vectors, custom waves/shapes, per-vertex vs per-pixel warp,
   feedback samplers (sampler_main / sampler_fw_main / sampler_fc_main),
   blur pyramid (sampler_blur1/2/3), video echo, beat-gated bursts.
-- When you describe audio reactivity, say "the synthetic test signal" or
-  "the synthetic kick" — never "the music" or "the song" — so a reader
-  knows the visual was sampled against a controlled stimulus.
+- When you describe audio reactivity, say "the music" or "the bass"
+  or "the kick" — describe what the visual will do when someone plays
+  their own music through Prism. Don't reference the recording setup
+  ("test signal", "synthetic kick", "sampled loop") — the reader
+  doesn't care how it was captured.
 - Cite Geiss's known lineages when obvious: reaction-diffusion,
   image-spaces, mandelbox, thumb-drum, cauldron. Cite Inigo Quilez
   raymarched-SDF lineage if obviously present.
