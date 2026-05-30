@@ -563,8 +563,12 @@ async function tryGenerate(): Promise<void> {
     }
     updateSkillDisplay(data.graph.intent);
   } catch (err) {
+    const msg = (err as Error).message || "generate failed";
     console.warn("prism · generate failed", err);
-    updateSkillDisplay(milkdrop.presetName);
+    // Surface failures in the SKILL readout so silent 404s / API-key
+    // misconfigurations don't look like a no-op to the visitor.
+    updateSkillDisplay(`error · ${msg}`);
+    setTimeout(() => updateSkillDisplay(milkdrop.presetName), 3200);
   } finally {
     skillEl?.classList.remove("is-loading");
     setTimeout(() => generateBtn.classList.remove("flash"), 400);

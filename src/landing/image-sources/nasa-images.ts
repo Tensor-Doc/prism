@@ -17,10 +17,16 @@ const SEARCH_QUERIES = [
   "orion nebula",
 ];
 
+interface NasaLink {
+  href?: string;
+  rel?: string;
+  render?: string;
+}
 interface NasaSearchResponse {
   collection?: {
     items?: Array<{
       data?: Array<{ nasa_id?: string; title?: string }>;
+      links?: NasaLink[];
     }>;
   };
 }
@@ -35,6 +41,27 @@ const proxy = (rawUrl: string): string => {
   return `/api/image-proxy?url=${encodeURIComponent(rawUrl)}`;
 };
 
+/** Pick the best asset URL from a search-result item. Prefer ~medium, fall
+ *  back to ~small or the thumb. NASA's links[] are authoritative — the old
+ *  approach of constructing `{nasa_id}/{nasa_id}~medium.jpg` from the
+ *  nasa_id breaks whenever the asset filename diverges from the id. */
+function pickAssetUrl(links: NasaLink[] | undefined): string | null {
+  if (!Array.isArray(links)) return null;
+  const imageLinks = links.filter(
+    (l) => typeof l.href === "string" && l.render === "image",
+  );
+  if (imageLinks.length === 0) return null;
+  const byPreference = (l: NasaLink): number => {
+    const h = l.href ?? "";
+    if (h.includes("~medium")) return 0;
+    if (h.includes("~small")) return 1;
+    if (h.includes("~thumb")) return 3;
+    return 2;
+  };
+  imageLinks.sort((a, b) => byPreference(a) - byPreference(b));
+  return imageLinks[0].href ?? null;
+}
+
 async function fetchNasaImageUrls(): Promise<string[]> {
   try {
     const q = SEARCH_QUERIES[Math.floor(Math.random() * SEARCH_QUERIES.length)];
@@ -48,12 +75,8 @@ async function fetchNasaImageUrls(): Promise<string[]> {
     if (!Array.isArray(items)) return [];
     const urls: string[] = [];
     for (const item of items) {
-      const id = item.data?.[0]?.nasa_id;
-      if (typeof id === "string" && id.length > 0) {
-        // ~medium is generally available; CORS-proxied through weserv so the
-        // Image element can use crossOrigin="anonymous" successfully.
-        urls.push(proxy(`https://images-assets.nasa.gov/image/${id}/${id}~medium.jpg`));
-      }
+      const href = pickAssetUrl(item.links);
+      if (href) urls.push(proxy(href));
     }
     return urls;
   } catch (err) {

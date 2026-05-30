@@ -14,7 +14,26 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 import catalogJson from "../catalog/catalog.json";
-import { SCHEMA_VERSION, type PrismGraph } from "../src/landing/graph/types";
+
+// NOTE: Vercel's edge-function bundler is finicky about cross-folder TS
+// imports. We duplicate the SCHEMA_VERSION constant + a minimal PrismGraph
+// type here rather than importing from ../src/landing/graph/types. The
+// canonical schema definition lives in that file; keep them in sync.
+const SCHEMA_VERSION = "prism.graph/0.1" as const;
+
+type NodeType = "signal.audio" | "lf.milkdrop" | "sink.display" | string;
+interface NodeDef {
+  type: NodeType;
+  params?: Record<string, unknown>;
+  inputs?: Record<string, string>;
+}
+interface PrismGraph {
+  schema: typeof SCHEMA_VERSION;
+  id: string;
+  intent: string;
+  nodes: Record<string, NodeDef>;
+  output: string;
+}
 
 export const config = { runtime: "edge" };
 
