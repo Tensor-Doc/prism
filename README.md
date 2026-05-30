@@ -2,11 +2,11 @@
 
 **Generative visualization.** Signals in. Light fields out.
 
-Prism is the visualization layer for AI applications and agents with
-real-time signals. Audio reactivity is one case — heartbeat, breath,
-pose, cursor, MIDI, agent state, anything that streams becomes visuals.
+Prism turns real-time signals into live visuals. Audio is one signal.
+So are heartbeat, breath, pose, cursor, MIDI, and AI agent state.
+Anything that streams can drive a visual.
 
-It slots into the canonical generative-AI modality row:
+Prism fills the visualization slot in the AI modality lineup.
 
 | Modality | API |
 |---|---|
@@ -20,44 +20,44 @@ It slots into the canonical generative-AI modality row:
 
 **https://prism-ten-mu.vercel.app**
 
-- Move your cursor — the field reacts before any permission prompt
-- Type a prompt or click a chip → Gemini composes a `prism.graph` →
-  the runtime loads the matching visualizer with the right audio bias
-- Click *play with sound* → share a tab (YouTube, Spotify) → the
-  visualizer reacts to real FFT in real time
-- Open the *gallery* → wall of captured visualizers, hover to preview,
-  click to play through. "I'm feeling lucky" rolls the dice.
+- Move your cursor. The field reacts. No permission prompt needed.
+- Type a prompt or click a chip. Gemini composes a graph. The right
+  visualizer loads.
+- Click *play with sound*. Share a tab from YouTube or Spotify. The
+  visuals react to the music.
+- Open the *gallery*. Hover a card to preview. Click to play it. "I'm
+  feeling lucky" picks one at random.
 
 ## What's in this repo
 
-A working web client + offline pipeline + a sharded catalog.
+A working web app, an offline pipeline, and a catalog.
 
 ```
-src/landing/        live web app — the visualizer + prompt loop
+src/landing/        live web app, the visualizer and prompt loop
 src/gallery/        the catalog browser at /gallery.html
-scripts/prism/      `pnpm prism` CLI — migrate, ingest, annotate, build-index
-scripts/pipelines/  Puppeteer harnesses + Gemini annotator + R2 uploader
-api/                Vercel Edge functions (generate, image-proxy)
-catalog/entries/    one JSON file per entry (source-of-truth)
-catalog/index.json  built artifact — what the gallery + API consume
-public/presets/     hand-seeded shaders (Shadertoy-flavor GLSL)
-BRAND.md            design system + aesthetic decisions
+scripts/prism/      the `pnpm prism` CLI for migrate, ingest, annotate, build-index
+scripts/pipelines/  Puppeteer harnesses, Gemini annotator, R2 uploader
+api/                Vercel Edge functions for generate and image-proxy
+catalog/entries/    one JSON file per entry, the source of truth
+catalog/index.json  built artifact, consumed by the gallery and API
+public/presets/     hand-seeded shaders in Shadertoy-flavor GLSL
+BRAND.md            design system and aesthetic decisions
 ```
 
-The catalog is the heart of it. Today: **70 annotated / 644 total**
-(65 Milkdrop + 5 Shadertoy), all videos captured headless and hosted on
-Cloudflare R2.
+The catalog is the heart of Prism. Today there are **71 annotated
+entries out of 644 total**. All videos are captured headless. Cloudflare
+R2 hosts them.
 
 ## How a prompt becomes a visual
 
-Every Prism visualization is a small node graph — a JSON document
-describing how *signals* (audio, cursor, heartbeat, …) flow into a
-*light field* (a frame) and out to a *sink* (a canvas). The headline
-difference: **the AI writes the graph.** You give the endpoint a
-prompt; it returns valid `prism.graph/0.1` JSON; the browser runtime
-walks it and renders.
+Every visualization is a small node graph. The graph is a JSON file.
+It says how signals turn into frames. Then how those frames reach the
+screen.
 
-A typical graph (the kind most prompts produce today):
+You give the API a prompt. Gemini writes the graph. The browser runs
+it.
+
+Here is a typical graph today.
 
 ```jsonc
 {
@@ -80,87 +80,86 @@ A typical graph (the kind most prompts produce today):
 }
 ```
 
-Five role-tagged node families compose any graph:
+Every node has a role. There are five.
 
-| Role | Does | Examples today |
+| Role | What it does | Examples |
 |---|---|---|
-| `signal.*` | Produces a stream of data over time | `signal.audio`, `signal.cursor`, `signal.heartbeat` |
-| `xform.*` | Transforms a signal | `xform.gain`, `xform.beat` |
-| `lf.*` | **Light-field generator** — emits frames | `lf.milkdrop`, `lf.shadertoy`, (future `lf.isf`, `lf.wgsl`) |
-| `op.*` | Operates on light fields | `op.blend`, `op.displace`, `op.feedback` |
-| `sink.*` | Terminates the graph | `sink.display`, `sink.recorder` |
+| `signal.*` | Makes a stream of data | `signal.audio`, `signal.cursor`, `signal.heartbeat` |
+| `xform.*` | Changes a signal | `xform.gain`, `xform.beat` |
+| `lf.*` | Makes frames from signals | `lf.milkdrop`, `lf.shadertoy` |
+| `op.*` | Changes frames | `op.blend`, `op.displace`, `op.feedback` |
+| `sink.*` | Sends frames somewhere | `sink.display`, `sink.recorder` |
 
-Today's graphs are 3 nodes (`signal.audio → lf.* → sink.display`).
-The schema is intentionally roomy: tomorrow `op.*` compositors let one
-graph layer multiple light fields, and new `lf.*` types plug in
-without touching anything else downstream.
+Today's graphs use three nodes. A signal, a generator, a sink. Future
+graphs will layer many generators. New node types plug in without
+rewrites.
 
 ### Why a JSON notation?
 
-TouchDesigner, Notch, Cables.gl, vvvv, ComfyUI — all use node graphs,
-each in its own format. Prism proposes a small open JSON notation so
-visualizers are:
+TouchDesigner, Notch, Cables.gl, vvvv, and ComfyUI all use node
+graphs. Each one uses its own format. Prism proposes an open JSON
+notation so visualizers are:
 
-- **agent-friendly** — an AI can read, write, or remix a graph the
-  same way it edits code
-- **shareable** — a graph is ~1 KB; a URL hash carries the whole thing
-- **editable** — by a prompt today, a node editor tomorrow,
-  hand-written code whenever
+- **agent-friendly**. An AI can read and write a graph.
+- **shareable**. A graph is about 1 KB. A URL hash carries the whole
+  thing.
+- **editable**. By a prompt today. By a node editor tomorrow. By hand
+  whenever.
 
-Adding a new generator (a WGSL renderer, an ISF interpreter, a WebGPU
-compositor) is two files: a runtime that executes the node + a new
-`lf.*` / `op.*` type. The gallery, the prompt loop, and the AI router
-all see it for free.
+Adding a new generator takes two files. A runtime that knows how to
+play it. A new node type. The gallery, the prompt loop, and the AI
+router get it for free.
 
-## Three ways to contribute (the flywheel)
+## Three ways to contribute
 
-Prism's value compounds with every contributor — Wikipedia-for-visuals
-with AI as the curator. **Three ways to add value:**
+Prism grows with every contributor. Think Wikipedia for visualizations.
+AI is the curator.
 
 ### 1. Run the capture pipeline on your machine
 
-The catalog grows by community compute. Clone the repo, ingest presets
-you want to add, contribute the resulting JSON + R2-hosted videos via
+Add presets or shaders you like. Capture them. Annotate them. Send a
 PR.
 
 ```sh
 git clone git@github.com:scottspace/prism.git
 cd prism && pnpm install
-cp .env.example .env       # add GEMINI_API_KEY + R2_* + VITE_GEMINI_API_KEY
+cp .env.example .env       # add GEMINI_API_KEY, R2_*, VITE_GEMINI_API_KEY
 
-pnpm dev                                          # capture server
+pnpm dev                                          # the capture server
 pnpm prism ingest <path-to-presets-or-shaders>    # adds catalog/entries/*
-pnpm prism annotate --all                         # capture + Gemini + R2 upload
-pnpm prism build-index                            # refresh catalog/index.json
+pnpm prism annotate --all                         # capture, annotate, upload
+pnpm prism build-index                            # rebuild catalog/index.json
 
 git add catalog/ && git commit -m "Add N presets" && pr it
 ```
 
-Each entry takes ~15s to capture + ~3s to annotate. You can contribute
-50–100 entries in a Saturday afternoon.
+Each entry takes about 15 seconds to capture. About 3 seconds to
+annotate. You can add 50 to 100 entries in a Saturday afternoon.
 
 ### 2. Add a new visualization source
 
-Today: **Milkdrop** (via butterchurn) and **Shadertoy** (custom WebGL2
-runtime with `iChannel0` audio FFT + `iChannel1` image texture). Next:
-ISF, hand-written WGSL. Each new source family means **two new files**:
+Today Prism runs two sources. **Milkdrop** through butterchurn.
+**Shadertoy** through a custom WebGL2 runtime. Next on the list are
+ISF and hand-written WGSL.
+
+Each new source needs two files.
 
 ```
 src/landing/<source>-bg.ts                       # the live runtime
 scripts/pipelines/capture-pages/<source>.html    # the capture harness
 ```
 
-The shared `CatalogEntry` schema means everything downstream — the
-gallery, `api/generate`, the prompt loop — just works.
+The shared `CatalogEntry` schema does the rest. The gallery, the API,
+and the prompt loop work without changes.
 
 ### 3. Add a signal source
 
-Signals are what make visualizations *react*. The web app already wires
-cursor, audio (tab-share), heart-rate (Pulsoid), synthetic-pink-noise.
-Camera+pose, MIDI, breath, OSC, EEG — all welcome. A signal is a small
-module that produces a number / vector / texture stream.
+Signals make visualizations react. The app already supports cursor,
+audio from a shared tab, heart rate from Pulsoid, and a synthetic
+pink-noise driver. Camera, pose, MIDI, breath, OSC, EEG. All welcome.
+A signal is a small module that streams numbers, vectors, or textures.
 
-## Quick start (web client)
+## Quick start
 
 ```sh
 git clone git@github.com:scottspace/prism.git
@@ -173,36 +172,37 @@ pnpm dev
 
 ## Stack
 
-- **Frontend**: Vite + TypeScript, vanilla — no React, no framework
-- **Runtimes**: butterchurn (Milkdrop) + custom WebGL2 (Shadertoy
-  300-es with iChannel uniforms + image binding)
-- **AI**: `gemini-flash-latest` for catalog annotation + prompt→graph
-  composition (`@google/genai` SDK)
-- **Storage**: Cloudflare R2 (S3-compatible) for captured webms + thumbs
-- **Pipeline**: Puppeteer + headless Chrome (`--use-angle=swiftshader`)
-  + MediaRecorder VP9 at 1280×720
-- **Deploy**: Vercel (static + edge functions). Build stamps the git SHA
-  into the page; hover the version tag to see when it shipped.
-- **License**: MIT
+- **Frontend** uses Vite and TypeScript. No framework.
+- **Runtimes** are butterchurn for Milkdrop and a custom WebGL2
+  runtime for Shadertoy 300-es with iChannel uniforms.
+- **AI** is `gemini-flash-latest` through the `@google/genai` SDK. It
+  handles annotation and prompt-to-graph.
+- **Storage** is Cloudflare R2 for captured WebMs and thumbnails. R2
+  is S3-compatible.
+- **Pipeline** uses Puppeteer with headless Chrome and SwiftShader.
+  MediaRecorder writes VP9 at 1280×720.
+- **Deploy** is Vercel for static and edge functions. The build stamps
+  the git SHA into the page. Hover the version tag for the build time.
+- **License** is MIT.
 
 ## Docs
 
-- **[BRAND.md](BRAND.md)** — design system, aesthetic decisions, the
-  "creative cockpit" frame
+**[BRAND.md](BRAND.md)** covers the design system and the "creative
+cockpit" aesthetic.
 
 ## Inspiration
 
-Milkdrop (Geiss, 2001) for proving audio-reactive visuals could become
-culture. Shadertoy (Quílez, 2013) for showing that shader sharing could
-become a community. ISF (VIDVOX) for proving that declared inputs turn
-shaders into instruments. TouchDesigner and the broader generative-art
-practice for the conviction that data-driven painterly work belongs in
-galleries.
+Geiss made Milkdrop in 2001. It proved audio-reactive visuals could
+become culture. Quílez launched Shadertoy in 2013. It showed that
+shader sharing could become a community. VIDVOX made ISF. It proved
+that declared inputs turn shaders into instruments. TouchDesigner and
+the broader generative-art world proved data-driven painterly work
+belongs in galleries.
 
-**Prism is the AI-era extension of all of these: a runtime, a catalog,
-a graph language, and a community.**
+**Prism is the AI-era extension of all of these. A runtime. A catalog.
+A graph language. A community.**
 
 ---
 
-*Built by [Scott Penberthy](https://github.com/scottspace), open under
-MIT. PRs and weird ideas warmly welcomed.*
+*Built by [Scott Penberthy](https://github.com/scottspace). Open
+under MIT. PRs and weird ideas warmly welcomed.*
