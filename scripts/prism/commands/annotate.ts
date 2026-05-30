@@ -438,13 +438,21 @@ export async function runAnnotateOne(
 
 export async function runAnnotate(
   repoRoot: string,
-  args: { slug?: string; all?: boolean; limit?: number; reuseVideo?: boolean },
+  args: { slug?: string; all?: boolean; limit?: number; reuseVideo?: boolean; retryErrored?: boolean },
 ): Promise<void> {
   if (args.slug) {
     await runAnnotateOne(repoRoot, args.slug, { reuseVideo: args.reuseVideo });
     return;
   }
   const progress = new Progress(progressPath(repoRoot));
+  if (args.retryErrored) {
+    const cleared = progress.retryErrored();
+    if (cleared.length === 0) {
+      console.log(`[annotate] no errored entries to retry`);
+      return;
+    }
+    console.log(`[annotate] retrying ${cleared.length} errored entries`);
+  }
   const pending = progress.pendingSlugs("annotated").slice(0, args.limit ?? Infinity);
   console.log(`[annotate] ${pending.length} pending`);
   let done = 0;

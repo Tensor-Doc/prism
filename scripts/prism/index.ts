@@ -34,6 +34,7 @@ import { runAnnotate } from "./commands/annotate";
 import { runBuildIndex } from "./commands/build-index";
 import { runIngest } from "./commands/ingest";
 import { runMigrate } from "./commands/migrate";
+import { runValidateColdOpen } from "./commands/validate-cold-open";
 
 function findRepoRoot(): string {
   // We expect to be run from the repo root via `pnpm prism …`. Verify the
@@ -83,9 +84,10 @@ function main(): void {
       const slug = args.find((a) => !a.startsWith("--"));
       const all = args.includes("--all");
       const reuseVideo = args.includes("--reuse-video");
+      const retryErrored = args.includes("--retry-errored");
       const limitArg = args.find((a) => a.startsWith("--limit="));
       const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
-      void runAnnotate(repoRoot, { slug, all, limit, reuseVideo }).catch((err: Error) => {
+      void runAnnotate(repoRoot, { slug, all, limit, reuseVideo, retryErrored }).catch((err: Error) => {
         console.error(`[annotate] FAILED: ${err.message}`);
         if (err.stack) console.error(err.stack);
         process.exit(2);
@@ -94,6 +96,13 @@ function main(): void {
     }
     case "build-index": {
       runBuildIndex(repoRoot);
+      break;
+    }
+    case "validate-cold-open": {
+      void runValidateColdOpen(repoRoot).catch((err: Error) => {
+        console.error(`[validate-cold-open] FAILED: ${err.message}`);
+        process.exit(2);
+      });
       break;
     }
     case "validate":

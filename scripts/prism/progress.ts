@@ -102,6 +102,28 @@ export class Progress {
       .map((p) => p.slug);
   }
 
+  /** Reset every errored entry back to retryable. Returns the slugs
+   *  that were cleared. Used by `annotate --retry-errored` so a fix
+   *  (e.g. a schema change) can re-attempt the entries that were
+   *  permanently parked after 3 failed attempts. */
+  retryErrored(): string[] {
+    const cleared: string[] = [];
+    for (const p of Object.values(this.data.presets)) {
+      if (p.status !== "errored") continue;
+      cleared.push(p.slug);
+      const stage = p.stage_failed === "annotate" ? "rendered" : "ingested";
+      this.data.presets[p.slug] = {
+        ...p,
+        status: stage as Stage,
+        attempts: 0,
+        error: undefined,
+        stage_failed: undefined,
+      };
+    }
+    if (cleared.length > 0) this.recountAndSave();
+    return cleared;
+  }
+
   /** Find an already-tracked entry by its source filename. Used by
    *  ingest to dedupe across re-runs — if a source file was already
    *  processed, reuse its slug instead of disambiguating to a new one. */
