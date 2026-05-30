@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:35:02.032Z"

@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A highly symmetric geometric tunnel is generated using radial domain repetition and feedback loops. The synthetic kick in the test signal triggers dramatic, instantaneous palette shifts between bright yellow and deep red-orange, likely driven by beat-gated state variables in the composite shader. Fine wireframe lines overlaying the structure flicker dynamically with high-frequency treble transients, while per-vertex zoom equations maintain a rapid forward-marching motion.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:04:50.363Z"

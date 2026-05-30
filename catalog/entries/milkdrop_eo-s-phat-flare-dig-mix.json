@@ -39,7 +39,7 @@
     ],
     "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the synthetic test signal's mid-range, while the outer red and purple wing-like structures flare outward on the synthetic kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
     "brand_safe": false,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:03:00.899Z"

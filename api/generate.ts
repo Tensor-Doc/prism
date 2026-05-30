@@ -184,11 +184,11 @@ interface SessionMetadata {
   prefers_reduced_motion?: boolean;
 }
 
-/** Hand-picked subset of the catalog matching the Refik-Anadol-distilled
+/** Hand-picked "atelier" subset of the catalog — Prism's gallery-grade
  *  brand mood: painterly, atmospheric, fluid, contemplative, organic.
  *  The system prompt biases the router toward these unless the visitor's
  *  prompt explicitly asks for something else (chaotic, geometric, fractal). */
-const REFIK_SUBSET = new Set<string>([
+const ATELIER_SUBSET = new Set<string>([
   "Geiss - Reaction Diffusion 2",
   "Geiss - Cauldron - painterly 2 (saturation remix)",
   "Flexi - alien fish pond",
@@ -355,7 +355,7 @@ function buildSystemInstruction(
   const catalogTable = ALL_ENTRIES.map((e) => {
     const aff = `bass:${e.audio_affinity.bass} mid:${e.audio_affinity.mid} treble:${e.audio_affinity.treble}`;
     const vibe = e.vibe.join(", ");
-    const tag = REFIK_SUBSET.has(e.preset_id) ? " [refik]" : "";
+    const tag = ATELIER_SUBSET.has(e.preset_id) ? " [atelier]" : "";
     const fmt = e.source_type === "shadertoy" ? " [shader]" : "";
     return `- preset_id="${e.preset_id}"${tag}${fmt} | vibe=[${vibe}] | motion=${e.motion} | ${aff} | "${e.blurb}"`;
   }).join("\n");
@@ -367,31 +367,31 @@ function buildSystemInstruction(
     "an audio stream (or cursor / heartbeat) drives a real-time visual. You",
     "are choosing which preset to render given a natural-language prompt.",
     "",
-    "BRAND MOOD (REFIK-ANADOL-DISTILLED):",
+    "BRAND MOOD (ATELIER):",
     "Prism's default aesthetic is painterly, atmospheric, fluid, organic,",
-    "contemplative — closer to a Refik Anadol installation than a 90s rave.",
-    "Presets tagged [refik] above are the curated mood. When the prompt is",
-    "ambient / unspecified / matches the Refik mood, prefer a [refik] entry.",
+    "contemplative — gallery-grade rather than 90s rave.",
+    "Presets tagged [atelier] above are the curated mood. When the prompt is",
+    "ambient / unspecified / matches the atelier mood, prefer an [atelier] entry.",
     "When the prompt explicitly asks for chaos / fractals / geometric /",
-    "psychedelic / beats / industrial, override and pick the best non-Refik",
-    "match — don't force a [refik] entry on a chaos prompt.",
+    "psychedelic / beats / industrial, override and pick the best non-atelier",
+    "match — don't force an [atelier] entry on a chaos prompt.",
     "",
     "INTERPRETATION RULES:",
     "- 'motion' ranges 0..1. Low ≈ contemplative, calm, dreamy. High ≈ energetic, frenetic.",
     "- 'audio_affinity' tells you which frequency band the preset responds to most.",
-    '- "dreamy" / "calming" / "ambient" → low motion + soft palettes ([refik] subset).',
+    '- "dreamy" / "calming" / "ambient" → low motion + soft palettes ([atelier] subset).',
     '- "fractal" / "mathematical" / "recursion" → fractal vibe.',
     '- "space" / "cosmic" / "Pink Floyd" / "Grateful Dead" / "psychedelic" → cosmic or psychedelic vibe.',
     '- "liquid" / "fluid" / "paint" / "ink" → fluid vibe; if "responsive" or "reactive" prefer higher audio_affinity.',
     '- "moving shapes" / "geometric" / "with beats" → geometric vibe with high bass affinity.',
-    '- "plants" / "growing" / "garden" / "organic" → botanical or organic [refik] entries.',
-    '- "landscape" / "sky" / "weather" / "sea" / "cave" → atmospheric [refik] entries.',
+    '- "plants" / "growing" / "garden" / "organic" → botanical or organic [atelier] entries.',
+    '- "landscape" / "sky" / "weather" / "sea" / "cave" → atmospheric [atelier] entries.',
     '- "orb" / "sphere" / "balloon" → sphere vibe.',
     "",
     "TWO SOURCE FORMATS in the catalog (the [shader] tag marks Shadertoy entries):",
     "- Default = Milkdrop preset (rich audio reactivity, painterly/organic catalog).",
     "- [shader] = WebGL Shadertoy fragment shader (modern; the cosmic-flow shader is",
-    "  Refik-mood FBM, audio-spectrum is geometric FFT bars, raymarch-sphere is a",
+    "  atelier-mood FBM, audio-spectrum is geometric FFT bars, raymarch-sphere is a",
     "  sculptural SDF). Pick a shader when the prompt suggests technical/modern/",
     "  geometric/3D/fractal/audio-bars qualities; pick milkdrop when it leans",
     "  painterly/cosmic/organic.",

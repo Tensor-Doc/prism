@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring complex custom waves that mimic an analog oscilloscope. The synthetic test signal's bass transients modulate the scale and opacity of two prominent white custom shapes, while treble spikes drive high-frequency jitter in the thin wireframe lines. A high decay rate in the feedback loop ensures the background remains dark, leaving only faint trails in sampler_main.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:37:15.022Z"

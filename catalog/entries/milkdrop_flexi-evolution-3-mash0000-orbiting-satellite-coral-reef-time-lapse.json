@@ -34,7 +34,7 @@
     ],
     "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the synthetic test signal, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:07:41.938Z"

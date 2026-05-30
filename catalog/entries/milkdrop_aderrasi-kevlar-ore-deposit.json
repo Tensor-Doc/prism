@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A spiral warp field combined with frame feedback through sampler_main creates a ribbed, cavernous tunnel that zooms inward. A central custom_wave reacts to the synthetic test signal's treble frequencies, drawing chaotic white scribbles that are pulled into the feedback vortex. The color palette undergoes continuous hue cycling, shifting from deep purples to earthy ochres and greens.",
     "brand_safe": false,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:32:48.747Z"

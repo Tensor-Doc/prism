@@ -22,7 +22,7 @@ export interface IndexEntry {
    *  in the gallery card tooltip. Null for hand-seeded entries that
    *  haven't been re-annotated yet. */
   technical_notes: string | null;
-  refik_mode: boolean;
+  atelier: boolean;
   brand_safe: boolean;
   textures_needed: string[];
   video?: string;
@@ -75,7 +75,7 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       audio_affinity: a.audio_affinity,
       techniques: a.techniques ?? [],
       technical_notes: a.technical_notes ?? null,
-      refik_mode: a.refik_mode ?? false,
+      atelier: a.atelier ?? false,
       brand_safe: a.brand_safe,
       textures_needed: (entry.assets.textures_needed ?? []).map((t) => t.name),
       video: entry.assets.video,
@@ -86,15 +86,15 @@ export function buildIndex(repoRoot: string): CatalogIndex {
     });
   }
   // Sort: quality-curated first so the first impression is always strong.
-  //   Tier 1: brand_safe + refik_mode + motion > 0.2  (the "feature" tier)
-  //   Tier 2: brand_safe + refik_mode                  (calmer painterly)
-  //   Tier 3: brand_safe                               (everything safe)
+  //   Tier 1: brand_safe + atelier + motion > 0.2  (the "feature" tier)
+  //   Tier 2: brand_safe + atelier                 (calmer painterly)
+  //   Tier 3: brand_safe                           (everything safe)
   //   Tier 4: everything else (purple-heavy, etc.)
   // Within each tier, newer-annotated first, then alpha.
   const tier = (e: IndexEntry): number => {
     if (!e.brand_safe) return 3;
-    if (e.refik_mode && e.motion > 0.2) return 0;
-    if (e.refik_mode) return 1;
+    if (e.atelier && e.motion > 0.2) return 0;
+    if (e.atelier) return 1;
     return 2;
   };
   annotated.sort((a, b) => {

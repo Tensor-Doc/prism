@@ -36,7 +36,7 @@
     ],
     "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the synthetic test signal. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
     "brand_safe": false,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:06:14.147Z"

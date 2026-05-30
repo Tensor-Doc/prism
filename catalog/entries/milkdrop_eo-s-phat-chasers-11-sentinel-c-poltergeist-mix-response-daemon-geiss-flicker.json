@@ -40,7 +40,7 @@
     ],
     "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the synthetic test signal modulate the wave amplitude and fine-grained displacement, while the synthetic kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:45:22.545Z"

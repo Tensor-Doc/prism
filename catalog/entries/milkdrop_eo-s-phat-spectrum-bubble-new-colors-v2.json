@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A deep concentric spiral tunnel is generated via a feedback loop utilizing sampler_main with a zoom factor slightly greater than unity and a small rotational warp. The metallic sheen is modulated by a cosine palette mapping that shifts between deep slate blues and bronze golds in response to the synthetic test signal's bass kicks. The overall structure resembles a classic Geiss feedback-tunnel lineage with high decay creating a clean, non-persistent edge.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:03:34.203Z"

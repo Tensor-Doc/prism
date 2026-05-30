@@ -29,9 +29,9 @@ interface LegacyEntry {
   annotation_version: number;
 }
 
-// Hand-picked Refik subset from api/generate.ts; mirrored here so the
-// migrated entries carry the refik_mode flag forward into v2.
-const REFIK_PRESET_IDS = new Set<string>([
+// Hand-picked atelier subset from api/generate.ts; mirrored here so the
+// migrated entries carry the atelier flag forward into v2.
+const ATELIER_PRESET_IDS = new Set<string>([
   "Geiss - Reaction Diffusion 2",
   "Geiss - Cauldron - painterly 2 (saturation remix)",
   "Flexi - alien fish pond",
@@ -71,7 +71,7 @@ function migrateEntry(legacy: LegacyEntry): CatalogEntry {
       techniques: null,
       technical_notes: null,
       brand_safe: legacy.brand_safe ?? true,
-      refik_mode: REFIK_PRESET_IDS.has(legacy.preset_id),
+      atelier: ATELIER_PRESET_IDS.has(legacy.preset_id),
       model: legacy.annotation_model,
       version: legacy.annotation_version,
       captured_at: legacy.captured_at,

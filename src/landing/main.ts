@@ -144,7 +144,7 @@ if (skillElEarly) {
   skillElEarly.textContent = "compiling…";
   skillElEarly.classList.add("is-loading");
 }
-// Cold-open default — pick at random from a curated pool of Refik-mode
+// Cold-open default — pick at random from a curated pool of atelier-mode
 // presets so the landing surprises rather than always starts on the
 // same visualizer. Seeded from the current second so a quick refresh
 // keeps the same preset (less jarring) but every visit feels fresh.

@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Custom waves are rendered as sharp, ribbon-like strokes with dynamic color gradients that react directly to the synthetic test signal. The absence of frame feedback through sampler_main or warp fields results in a stark, high-contrast black background where ribbons appear and vanish instantaneously on beat-gated thresholds. The ribbon coordinates and colors are modulated by audio band amplitudes, creating a minimalist glowstick aesthetic.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:49:43.999Z"

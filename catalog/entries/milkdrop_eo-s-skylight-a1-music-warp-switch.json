@@ -40,7 +40,7 @@
     ],
     "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the synthetic test signal's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:01:52.342Z"

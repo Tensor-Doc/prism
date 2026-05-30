@@ -58,8 +58,9 @@ export interface Annotation {
   technical_notes: string | null;
   /** False if the preset is dominated by purple (brand rule). */
   brand_safe: boolean;
-  /** True if the preset belongs to the painterly Refik-mode subset. */
-  refik_mode?: boolean;
+  /** True if the preset belongs to the painterly "atelier" subset —
+   *  the slow, atmospheric, gallery-grade aesthetic Prism leads with. */
+  atelier?: boolean;
   /** Name of the model that produced the annotation. "seed" for hand-seeded. */
   model: string;
   /** Annotator version — bump when the schema or prompt changes substantially. */

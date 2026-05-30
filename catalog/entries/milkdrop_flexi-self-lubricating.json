@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the synthetic test signal, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
     "brand_safe": false,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:10:28.389Z"

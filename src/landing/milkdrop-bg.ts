@@ -65,7 +65,7 @@ export interface MilkdropBg {
 export interface MilkdropBgOptions {
   /** Preset key to load on cold open. Falls back to a random pick if the
    *  name doesn't exist in the bundle. Lets the landing pin a curated
-   *  "Refik-mode" default instead of getting random_$$$ Royal Mashup. */
+   *  "atelier" default instead of getting random_$$$ Royal Mashup. */
   initialPresetName?: string;
 }
 

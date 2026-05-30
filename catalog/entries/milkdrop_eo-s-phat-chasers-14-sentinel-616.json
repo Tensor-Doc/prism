@@ -39,7 +39,7 @@
     ],
     "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the synthetic test signal. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every synthetic kick.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:45:55.683Z"

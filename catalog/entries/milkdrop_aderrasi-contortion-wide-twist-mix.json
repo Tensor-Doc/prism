@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Per-pixel warp equations apply a logarithmic spiral deformation that pulls frame feedback through sampler_main toward a central singularity. A complex custom wave reacts to the synthetic test signal, leaving persistent trails that decay into the twisting spiral, forming a ribbed, shell-like organic structure. The feedback loop operates with a low-to-moderate decay rate to maintain the structural history of the waveform.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:28:47.020Z"

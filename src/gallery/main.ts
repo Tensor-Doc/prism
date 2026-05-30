@@ -4,7 +4,7 @@
 // thumb JPG; on hover the WebM streams in, plays muted/looped. Click a
 // card to load that preset on the live page (/landing.html?preset=<slug>).
 //
-// Filter row: vibe + technique chips, refik mode toggle, brand-safe toggle.
+// Filter row: vibe + technique chips, atelier toggle, brand-safe toggle.
 // Search: free-text across name, author, vibe, techniques.
 // Auto-refresh: re-fetches the index every 30s so new entries appear as
 // the bulk annotator finishes them.
@@ -20,7 +20,7 @@ interface IndexEntry {
   audio_affinity: { bass: number; mid: number; treble: number };
   techniques: string[];
   technical_notes: string | null;
-  refik_mode: boolean;
+  atelier: boolean;
   brand_safe: boolean;
   textures_needed: string[];
   video?: string;
@@ -41,7 +41,7 @@ interface CatalogIndex {
 
 interface ActiveFilters {
   search: string;
-  refikOnly: boolean;
+  atelierOnly: boolean;
   brandSafeOnly: boolean;
   vibes: Set<string>;
   techniques: Set<string>;
@@ -52,7 +52,7 @@ const REFRESH_MS = 30_000;
 
 const state: ActiveFilters = {
   search: "",
-  refikOnly: false,
+  atelierOnly: false,
   brandSafeOnly: false,
   vibes: new Set(),
   techniques: new Set(),
@@ -75,7 +75,7 @@ async function fetchIndex(): Promise<CatalogIndex> {
 function applyFilters(entries: IndexEntry[]): IndexEntry[] {
   const q = state.search.trim().toLowerCase();
   return entries.filter((e) => {
-    if (state.refikOnly && !e.refik_mode) return false;
+    if (state.atelierOnly && !e.atelier) return false;
     if (state.brandSafeOnly && !e.brand_safe) return false;
     if (state.vibes.size > 0) {
       const has = e.vibe.some((v) => state.vibes.has(v));
@@ -151,10 +151,10 @@ function renderCard(e: IndexEntry): HTMLElement {
   }
 
   // Tag overlays on hover
-  if (e.refik_mode) {
+  if (e.atelier) {
     const tag = document.createElement("span");
     tag.className = "card__corner-tag";
-    tag.textContent = "refik";
+    tag.textContent = "atelier";
     media.appendChild(tag);
   }
 
@@ -254,10 +254,10 @@ function renderFilters(): void {
   // search bar — type "fluid" or "frame_feedback" and the grid narrows.
   row.appendChild(
     makeToggleChip(
-      "refik mode",
-      "Show only the painterly Refik-mode subset",
-      () => state.refikOnly,
-      () => { state.refikOnly = !state.refikOnly; },
+      "atelier",
+      "Show only the painterly, gallery-grade subset",
+      () => state.atelierOnly,
+      () => { state.atelierOnly = !state.atelierOnly; },
     ),
   );
   row.appendChild(

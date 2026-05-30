@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A pixelated horizontal custom wave is rendered with a dual-color gradient transitioning from a cyan core to an orange fringe. A vertical blur pass, likely utilizing a 1D blur in the composite shader, creates a soft glowing pillar effect behind the waveform. The vertical displacement and amplitude of the wave are directly modulated by the low and mid-frequency bands of the synthetic test signal.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T21:30:32.825Z"

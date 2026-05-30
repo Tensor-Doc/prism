@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the synthetic test signal. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
     "brand_safe": false,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T20:00:09.783Z"

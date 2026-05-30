@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A slow-decay feedback loop utilizing sampler_main and a subtle per-pixel warp shader driven by fbm_noise creates a painterly, fluid simulation. The color palette slowly shifts from teal to ochre, modulated by a slow time variable. The absence of sharp edges suggests heavy use of sampler_blur1 or sampler_blur2 in the composite shader to smooth out high frequencies.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T21:44:33.436Z"

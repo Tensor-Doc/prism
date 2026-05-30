@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the synthetic test signal. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the synthetic kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:38:49.172Z"

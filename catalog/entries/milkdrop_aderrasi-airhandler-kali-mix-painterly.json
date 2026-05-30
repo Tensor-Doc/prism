@@ -39,7 +39,7 @@
     ],
     "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the synthetic test signal, while the overall warp scale is modulated by the synthetic kick.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:59:34.868Z"

@@ -56,7 +56,7 @@ const RESPONSE_SCHEMA = {
   type: Type.OBJECT,
   required: [
     "vibe", "motion", "palette_anchor", "audio_affinity",
-    "techniques", "technical_notes", "brand_safe", "refik_mode",
+    "techniques", "technical_notes", "brand_safe", "atelier",
     "thumbnail_timestamp_seconds",
   ],
   properties: {
@@ -78,7 +78,7 @@ const RESPONSE_SCHEMA = {
     techniques: { type: Type.ARRAY, minItems: 0, maxItems: 8, items: { type: Type.STRING, maxLength: 40 } },
     technical_notes: { type: Type.STRING, maxLength: 600 },
     brand_safe: { type: Type.BOOLEAN },
-    refik_mode: { type: Type.BOOLEAN },
+    atelier: { type: Type.BOOLEAN },
     thumbnail_timestamp_seconds: {
       type: Type.NUMBER,
       description:
@@ -426,7 +426,7 @@ export async function runAnnotateOne(
   console.log(`  │ palette:     ${annotation.palette_anchor.join(" ")}`);
   console.log(`  │ audio:       bass ${annotation.audio_affinity.bass.toFixed(2)} · mid ${annotation.audio_affinity.mid.toFixed(2)} · treble ${annotation.audio_affinity.treble.toFixed(2)}`);
   console.log(`  │ techniques:  ${(annotation.techniques ?? []).join(", ") || "—"}`);
-  console.log(`  │ brand_safe:  ${annotation.brand_safe}    refik_mode: ${annotation.refik_mode ?? false}`);
+  console.log(`  │ brand_safe:  ${annotation.brand_safe}    atelier: ${annotation.atelier ?? false}`);
   console.log(`  │ thumb @ t:   ${thumbnailTimestamp.toFixed(2)}s`);
   console.log(`  │ technical_notes:`);
   for (const line of wrap(annotation.technical_notes ?? "(none)")) {

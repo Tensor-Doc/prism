@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
     "brand_safe": true,
-    "refik_mode": true,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:44:47.555Z"

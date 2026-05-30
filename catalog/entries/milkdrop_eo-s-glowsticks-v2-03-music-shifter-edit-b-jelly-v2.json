@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A custom wave is rendered as a thick, tapered ribbon sweeping elegantly across a black background. Its coordinates and curvature are modulated by the synthetic test signal's bass and mid frequencies, while the color gradient along its length is driven by a cosine palette. The absence of frame feedback (decay is set to maximum) ensures a clean, high-contrast presentation with no persistent trails.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T19:49:11.040Z"

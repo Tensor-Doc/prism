@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A structured grid of repeating blocks is modulated by a per-pixel warp shader, creating a domain repetition effect where cell corners pinch into sharp teal and brown star-like shapes. The overall brightness and scale of the grid are heavily gated by the bass frequencies of the synthetic test signal, causing the pattern to collapse into a dark, flat mosaic during quiet passages and expand during peak transients. The rendering relies on a custom composition shader that masks and sharpens the grid boundaries based on audio-driven variables.",
     "brand_safe": true,
-    "refik_mode": false,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T21:32:25.578Z"

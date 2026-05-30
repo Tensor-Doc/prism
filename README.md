@@ -50,23 +50,72 @@ Cloudflare R2.
 
 ## How a prompt becomes a visual
 
-```
-prompt ──► api/generate (Gemini) ──► prism.graph/0.1
-                                            │
-                                            ▼
-        ┌────────────────────────────────────────────────────────────────┐
-        │ signal.audio ──► lf.milkdrop OR lf.shadertoy ──► sink.display  │
-        └────────────────────────────────────────────────────────────────┘
+Every Prism visualization is a small node graph — a JSON document
+describing how *signals* (audio, cursor, heartbeat, …) flow into a
+*light field* (a frame) and out to a *sink* (a canvas). The headline
+difference: **the AI writes the graph.** You give the endpoint a
+prompt; it returns valid `prism.graph/0.1` JSON; the browser runtime
+walks it and renders.
+
+A typical graph (the kind most prompts produce today):
+
+```jsonc
+{
+  "schema": "prism.graph/0.1",
+  "id": "g_calm_cosmic",
+  "intent": "calming cosmic fluid that breathes with bass",
+  "nodes": {
+    "audio":  { "type": "signal.audio" },
+    "main":   {
+      "type":   "lf.shadertoy",
+      "params": { "shader_url": "/presets/shadertoy/cosmic-flow.glsl" },
+      "inputs": { "audio": "audio.signal" }
+    },
+    "screen": {
+      "type":   "sink.display",
+      "inputs": { "frame": "main.frame" }
+    }
+  },
+  "output": "screen"
+}
 ```
 
-A graph is just JSON. Nodes have roles:
-- `signal.*` — audio, cursor, heartbeat, MIDI, …
-- `lf.*` — light-field generators (Milkdrop, Shadertoy, future ISF/WGSL)
-- `op.*` — operators on light fields (blend, displace, feedback)
-- `sink.*` — display, recorder
+Five role-tagged node families compose any graph:
 
-The runtime dispatches by node type. Adding a new generator is a new
-`lf.*` type + a renderer that knows how to execute it.
+| Role | Does | Examples today |
+|---|---|---|
+| `signal.*` | Produces a stream of data over time | `signal.audio`, `signal.cursor`, `signal.heartbeat` |
+| `xform.*` | Transforms a signal | `xform.gain`, `xform.beat` |
+| `lf.*` | **Light-field generator** — emits frames | `lf.milkdrop`, `lf.shadertoy`, (future `lf.isf`, `lf.wgsl`) |
+| `op.*` | Operates on light fields | `op.blend`, `op.displace`, `op.feedback` |
+| `sink.*` | Terminates the graph | `sink.display`, `sink.recorder` |
+
+Today's graphs are 3 nodes (`signal.audio → lf.* → sink.display`).
+The schema is intentionally roomy: tomorrow `op.*` compositors let one
+graph layer multiple light fields, and new `lf.*` types plug in
+without touching anything else downstream.
+
+### How this compares
+
+The DAG-of-nodes paradigm is shared with all the audio-visual tools
+the community already runs on. What's new is the seam.
+
+| Tool | Where it lives | Who writes the graph |
+|---|---|---|
+| **TouchDesigner** | Desktop app | You, by dragging nodes |
+| **Notch** | Stage / concert software | A VJ in the booth |
+| **Cables.gl** | Browser | You, in a visual node editor |
+| **vvvv** | Desktop app | You, in a visual node editor |
+| **ComfyUI** | Local server, image-gen | You, wired up by hand |
+| **Prism** | Browser | The model, from your prompt |
+
+The graph *is* the artifact — JSON, ~1 KB — so prompt → graph → URL
+hash makes "share this visualization" trivial, and "remix someone
+else's" is just opening their hash and editing one node. Adding a new
+generator (a WGSL renderer, an ISF interpreter, a WebGPU compositor)
+is two files: a runtime that knows how to execute the node + a new
+`lf.*` / `op.*` type. The gallery, the prompt loop, and the AI router
+all see it for free.
 
 ## Three ways to contribute (the flywheel)
 
@@ -151,11 +200,12 @@ pnpm dev
 Milkdrop (Geiss, 2001) for proving audio-reactive visuals could become
 culture. Shadertoy (Quílez, 2013) for showing that shader sharing could
 become a community. ISF (VIDVOX) for proving that declared inputs turn
-shaders into instruments. Refik Anadol for proving the painterly,
-data-driven frame is a legitimate art form.
+shaders into instruments. TouchDesigner and the broader generative-art
+practice for the conviction that data-driven painterly work belongs in
+galleries.
 
-**Prism is the AI-era extension of all four: a runtime, a catalog, a
-graph language, and a community.**
+**Prism is the AI-era extension of all of these: a runtime, a catalog,
+a graph language, and a community.**
 
 ---
 

@@ -77,15 +77,15 @@ OUTPUT SCHEMA (JSON):
      low decay produces persistent painterly trails. Hue rotates on a
      ~30s cycle. Falls in Geiss's reaction-diffusion lineage.'>",
   "brand_safe": true | false,
-  "refik_mode": true | false
+  "atelier": true | false
 }
 
 BRAND RULES:
 - brand_safe = false ONLY if the dominant palette is purple/magenta-heavy
   for a sustained portion (>30% of the capture). Otherwise true.
-- refik_mode = true if the piece reads as painterly / atmospheric /
-  contemplative / fluid / organic — the kind of thing you'd see in a Refik
-  Anadol installation. False for chaotic / geometric / strobing pieces.
+- atelier = true if the piece reads as painterly / atmospheric /
+  contemplative / fluid / organic — the gallery-grade aesthetic Prism
+  features. False for chaotic / geometric / strobing pieces.
 
 TONE for technical_notes (2-3 sentences, dialect-appropriate):
 - Name specific Milkdrop mechanics when their action is visually evident:
