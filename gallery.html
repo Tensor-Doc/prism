@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prism · catalog</title>
+    <meta name="description" content="Browse Prism's visualization catalog — 526 hand-curated, AI-annotated Milkdrop presets." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/tokens.css" />
+    <link rel="stylesheet" href="/src/gallery/styles.css" />
+  </head>
+  <body class="gallery-page">
+    <!-- ── status bar ─────────────────────────────────────────── -->
+    <header class="statusbar" data-reveal="1">
+      <div class="statusbar__left">
+        <a class="logo" href="/landing.html">
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M 12 3 L 21 19 L 3 19 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+            <line x1="0.5" y1="11" x2="7" y2="11" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            <g stroke-width="1" stroke-linecap="round">
+              <line x1="16" y1="15.5" x2="23" y2="13"   stroke="#ff4d4d"/>
+              <line x1="16.5" y1="16.5" x2="23.5" y2="15.5" stroke="#ff8a3a"/>
+              <line x1="16.8" y1="17.5" x2="23.5" y2="18.5" stroke="#ffd23a"/>
+              <line x1="16.5" y1="18" x2="22.5" y2="21"   stroke="#3aff7e"/>
+              <line x1="16" y1="18.5" x2="20" y2="22.5"   stroke="#3dffe5"/>
+            </g>
+          </svg>
+          <span class="logo__word">prism</span>
+        </a>
+        <span class="statusbar__sep" aria-hidden="true">/</span>
+        <span class="label statusbar__tag">catalog</span>
+      </div>
+      <div class="statusbar__right">
+        <span class="catalog-count label" id="catalog-count">— annotated</span>
+        <span class="catalog-pulse" id="catalog-pulse" title="Auto-refresh every 30s">●</span>
+        <a class="btn btn--ghost nav__btn" href="/landing.html">
+          <span class="btn__icon" aria-hidden="true">◐</span>
+          <span class="label">visualize</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ── corner brackets ─────────────────────────────────────── -->
+    <span class="bracket bracket--tl" aria-hidden="true"></span>
+    <span class="bracket bracket--tr" aria-hidden="true"></span>
+    <span class="bracket bracket--bl" aria-hidden="true"></span>
+    <span class="bracket bracket--br" aria-hidden="true"></span>
+
+    <!-- ── hero search ─────────────────────────────────────────── -->
+    <section class="hero" data-reveal="2">
+      <h1 class="hero__title">
+        <span class="hero__title-line1">the visualizer canon,</span>
+        <span class="hero__title-line2">indexed and live</span>
+      </h1>
+      <p class="hero__sub">
+        <span id="hero-blurb">— visualizations annotated by Gemini, served from R2, instantly remixable into the live router.</span>
+      </p>
+      <div class="search">
+        <span class="search__glyph" aria-hidden="true">⌖</span>
+        <input
+          type="search"
+          id="search-input"
+          class="search__input"
+          placeholder="search by name, vibe, technique, author…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <kbd class="search__kbd">⌘ K</kbd>
+      </div>
+      <div class="filter-row" id="filter-row" role="toolbar" aria-label="Filter catalog">
+        <!-- chips injected by gallery.ts -->
+      </div>
+    </section>
+
+    <!-- ── grid ────────────────────────────────────────────────── -->
+    <main class="grid" id="grid" data-reveal="3">
+      <!-- cards injected by gallery.ts -->
+      <p class="grid__empty" id="grid-empty" data-hidden>no matches. clear filters?</p>
+    </main>
+
+    <!-- ── footer / pending counter ────────────────────────────── -->
+    <footer class="page-foot" data-reveal="4">
+      <span class="label" id="pending-line">— pending render</span>
+      <span class="page-foot__sep" aria-hidden="true">·</span>
+      <span class="label">auto-refresh on</span>
+      <span class="page-foot__sep" aria-hidden="true">·</span>
+      <a class="label page-foot__link" href="https://github.com/scottspace/prism" target="_blank" rel="noopener">contribute on github</a>
+    </footer>
+
+    <script type="module" src="/src/gallery/main.ts"></script>
+  </body>
+</html>

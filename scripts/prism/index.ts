@@ -31,6 +31,7 @@ function loadDotenv(cwd: string): void {
 loadDotenv(process.cwd());
 
 import { runAnnotate } from "./commands/annotate";
+import { runBuildIndex } from "./commands/build-index";
 import { runIngest } from "./commands/ingest";
 import { runMigrate } from "./commands/migrate";
 
@@ -85,6 +86,10 @@ function main(): void {
         if (err.stack) console.error(err.stack);
         process.exit(2);
       });
+      break;
+    }
+    case "build-index": {
+      runBuildIndex(repoRoot);
       break;
     }
     case "validate":

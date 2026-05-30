@@ -11,9 +11,44 @@
     "name": "Aderrasi - Airhandler (Last Breath - Calm)",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "hypnotic",
+      "cosmic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#0055ff",
+      "#ff4400",
+      "#ffcc00",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "cosine_palette",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the synthetic test signal's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:27:37.336Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-calm.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-calm.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

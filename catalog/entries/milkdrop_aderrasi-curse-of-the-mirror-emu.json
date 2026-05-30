@@ -11,9 +11,43 @@
     "name": "Aderrasi - Curse of the Mirror Emu",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "fluidic",
+      "chaotic",
+      "kaleidoscopic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#9a00e6",
+      "#00ffaa",
+      "#e6c300",
+      "#1a0066"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex per-pixel warp shader applies a highly turbulent, mirrored advection field driven by the synthetic test signal's bass and mid frequencies. Frame feedback through sampler_main with a low decay rate creates persistent, bleeding fluid trails that are continuously folded by bilateral symmetry. The composite pass utilizes a high-contrast color mapping that cycles rapidly, resulting in intense chromatic shifts during transient peaks in the test signal.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:29:26.384Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-curse-of-the-mirror-emu.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-curse-of-the-mirror-emu.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Aderrasi - Airhandler (Last Breath - Eden)",
     "author": "Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "hypnotic",
+      "psychedelic",
+      "vortex"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#0000ff",
+      "#ff5500",
+      "#ffffff",
+      "#ffff00"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:28:12.300Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-eden.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-eden.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

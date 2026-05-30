@@ -14,10 +14,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: landingOnly
-        ? { landing: resolve(__dirname, "landing.html") }
+        ? {
+            landing: resolve(__dirname, "landing.html"),
+            gallery: resolve(__dirname, "gallery.html"),
+          }
         : {
             studio: resolve(__dirname, "index.html"),
             landing: resolve(__dirname, "landing.html"),
+            gallery: resolve(__dirname, "gallery.html"),
           },
     },
   },
