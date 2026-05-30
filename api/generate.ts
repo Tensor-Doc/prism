@@ -188,7 +188,11 @@ async function pickPresetWithGemini(
   );
 
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-pro",
+    // Alias maintained by Google → current flash. Diagnosed via the
+    // /api/models endpoint: this key has the gemini-3.x preview family
+    // but neither gemini-2.5-flash nor gemini-2.5-pro. Using the alias
+    // means Google rotates the model under us; we don't pin.
+    model: "gemini-flash-latest",
     contents: userParts.join("\n\n"),
     config: {
       systemInstruction,
