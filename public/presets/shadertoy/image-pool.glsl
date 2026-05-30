@@ -44,34 +44,40 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
   vec3 col = texture(iChannel1, uv + ripple).rgb;
 
-  // Reflection blur on top half
+  // Reflection blur on top half — lighter mix so the image keeps
+  // its detail instead of blooming into a milky band.
   if (uv.y > 0.5) {
     vec3 acc = vec3(0.0);
     for (int i = 0; i < 5; i++) {
       vec2 off = vec2(0.005, 0.0) * float(i - 2);
       acc += texture(iChannel1, uv + ripple + off).rgb;
     }
-    col = mix(col, acc / 5.0, 0.4);
+    col = mix(col, acc / 5.0, 0.22);
   }
 
-  // Cyan caustics — DIALED so they accent, don't dominate
-  float caust = smoothstep(0.65, 0.95, q.x + q.y);
-  col += vec3(0.24, 1.0, 0.9) * caust * (0.12 + mid * 0.25 + ring * 0.3);
+  // Cyan caustics — kept as a subtle highlight, not a glaze. Lower
+  // intensity AND a less-saturated color so they accent the water
+  // surface without painting a white veil over the image.
+  float caust = smoothstep(0.72, 0.96, q.x + q.y);
+  col += vec3(0.10, 0.55, 0.70) * caust * (0.05 + mid * 0.12 + ring * 0.18);
 
-  // Subtle bass brightness pump
-  col *= 1.0 + kick * 0.2;
+  // Soft bass lift — halved so loud passes don't push the whole frame
+  // toward white.
+  col *= 1.0 + kick * 0.10;
 
-  // Warm undertone
+  // Warm undertone (unchanged — subtle and contributes color, not wash)
   col = mix(col, col * vec3(1.05, 0.95, 0.85), 0.15);
 
   // Vignette
   col *= 1.0 - 0.4 * smoothstep(0.6, 1.2, length(p));
 
   // Reinhard tone-map so sustained audio + bright images never clip
-  // to white. Maps col / (1 + col) so values stay in [0, 1).
+  // to white. col / (1 + col) keeps values in [0, 1).
   col = col / (1.0 + col);
-  // Then gentle gamma for a punchier mid-range
-  col = pow(col, vec3(0.85));
+  // Slight darkening gamma (>1) to deepen midtones and recover
+  // contrast. Previous pow(0.85) was LIFTING midtones into a milky
+  // band — the source of the "thin layer of white" feel.
+  col = pow(col, vec3(1.10));
 
   fragColor = vec4(col, 1.0);
 }
