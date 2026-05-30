@@ -69,7 +69,11 @@ class GLRenderer {
     const gl = canvas.getContext("webgl2", {
       alpha: true,
       premultipliedAlpha: false,
-      preserveDrawingBuffer: false,
+      // True so the rendered transition pixels remain readable by
+      // another GL context after the browser composites. Required for
+      // the shader-feed pump in main.ts to sample this canvas every
+      // frame and pipe it into the shader's iChannel1.
+      preserveDrawingBuffer: true,
     });
     if (!gl) throw new Error("WebGL2 not available");
     this.gl = gl;

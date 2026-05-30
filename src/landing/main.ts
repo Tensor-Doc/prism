@@ -515,14 +515,50 @@ const SOURCE_LABELS: Record<Exclude<GallerySourceId, null>, string> = {
 // unbinds. (Canva, not Photoshop.)
 let activeBackend: "milkdrop" | "shadertoy" = "milkdrop";
 
+// Dedicated 1280×720 2D canvas that mirrors the slideshow card's
+// rendered output (transitions and all) into a shader-friendly buffer.
+// Per-frame blit happens in pumpShaderFeed below. The shader binds to
+// this canvas, never to the live slideshow canvas (which is window-
+// sized + mostly transparent and produced "small fragment, rest
+// black" tiling when sampled directly).
+const slideshowCanvas = $<HTMLCanvasElement>("#slideshow");
+const shaderFeedCanvas = document.createElement("canvas");
+shaderFeedCanvas.width = 1280;
+shaderFeedCanvas.height = 720;
+const shaderFeedCtx = shaderFeedCanvas.getContext("2d");
+
 function refreshShaderFeed(): void {
   const shouldFeed = activeBackend === "shadertoy" && currentGallerySource !== null;
-  // imageSlots.canvas(0) is the 1280×720 atlas the gallery source
-  // refreshes through Slideshow's cycle. Using that (not the
-  // slideshow card's small WebGL render target) means the shader
-  // sees the full image, tiled by REPEAT wrap on the tunnel walls.
-  shadertoy.setLiveSource(shouldFeed ? imageSlots.canvas(0) : null);
+  shadertoy.setLiveSource(shouldFeed ? shaderFeedCanvas : null);
 }
+
+// Every frame, copy the slideshow's card region into the feed canvas
+// at full resolution. Preserves whatever transition / melt animation
+// the slideshow is rendering, so the shader sees a living image.
+// Early-out when the feed isn't active so we don't spend cycles.
+function pumpShaderFeed(): void {
+  if (
+    shaderFeedCtx &&
+    activeBackend === "shadertoy" &&
+    currentGallerySource !== null
+  ) {
+    const cr = slideshow.cardRect;
+    if (cr.w > 0 && cr.h > 0) {
+      const dpr = window.devicePixelRatio || 1;
+      try {
+        shaderFeedCtx.drawImage(
+          slideshowCanvas,
+          cr.x * dpr, cr.y * dpr, cr.w * dpr, cr.h * dpr,
+          0, 0, shaderFeedCanvas.width, shaderFeedCanvas.height,
+        );
+      } catch {
+        // drawImage can throw on a tainted-cross-origin source — bail.
+      }
+    }
+  }
+  requestAnimationFrame(pumpShaderFeed);
+}
+requestAnimationFrame(pumpShaderFeed);
 
 function setGallerySource(src: GallerySourceId): void {
   currentGallerySource = src;
