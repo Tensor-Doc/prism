@@ -1104,27 +1104,19 @@ body.audio-live .state-spectrum {
   opacity: 1; /* don't dim — the thinking state is the readout */
 }
 
-/* Build version tag — bottom-LEFT corner (clear of the bottom-right
-   corner bracket). Visible enough to find without competing with the
-   visual; brighter on hover. */
+/* Build version tag — inline in the top statusbar after the brand tag.
+   Never overlaps menus, always visible, mono. Brightens cyan on hover. */
 .version-tag {
-  position: fixed;
-  bottom: 6px;
-  left: 30px; /* clear of the .bracket--bl */
-  z-index: 60;
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
   color: var(--fg-muted);
-  opacity: 0.65;
-  pointer-events: auto;
+  text-transform: lowercase;
   user-select: text;
-  transition: opacity 180ms var(--ease-snap), color 180ms var(--ease-snap);
+  cursor: help;
+  transition: color 160ms var(--ease-snap);
 }
-.version-tag:hover {
-  opacity: 1;
-  color: var(--cyan);
-}
+.version-tag:hover { color: var(--cyan); }
 .version-tag::before { content: "build "; opacity: 0.55; }
 
 /* Test-signal recorder pill — slots into the SOURCES panel just under
