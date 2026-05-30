@@ -110,6 +110,50 @@ Adding a new generator takes two files. A runtime that knows how to
 play it. A new node type. The gallery, the prompt loop, and the AI
 router get it for free.
 
+## How agents use Prism
+
+Agents already have ElevenLabs for voice. Stability for images. Suno
+for music. Sora for video. Prism fills the visualization slot. Three
+patterns we expect to see.
+
+### Tool call
+
+An agent decides it should make something visible. It calls Prism with
+a prompt. It gets back a graph in JSON. The graph is small enough to
+embed inline in a response, hand to the user as a URL, or render in a
+chat UI.
+
+```ts
+const { graph } = await fetch("https://prism.run/api/generate", {
+  method: "POST",
+  body: JSON.stringify({ prompt: "calm cosmic backdrop for meditation" }),
+}).then((r) => r.json());
+
+// graph is a prism.graph/0.1 document. Embed, share, or remix.
+```
+
+### Backdrop or mood layer
+
+The agent keeps one graph alive across a session. As the conversation
+evolves, it mutates a single node. "More bass." "Warmer." "Switch to
+fractal." The graph becomes the agent's visual memory across turns.
+The refinement loop is already wired in the web client. Exposing it as
+a tool is next.
+
+### Signal pipeline
+
+The agent has a stream of data. Logs, biometrics, customer signups,
+error rates. It wires that stream into a Prism signal source. The
+visualization becomes live ambient monitoring. "Show me production
+health as ambient art."
+
+None of the other modality APIs are time-streaming-native. This is the
+angle no one else can match.
+
+A few things still need to ship for an agent to call Prism cleanly. A
+public endpoint contract. A skill manifest for Claude and OpenAI tool
+use. An embed route. An auth model. All on the roadmap.
+
 ## Three ways to contribute
 
 Prism grows with every contributor. Think Wikipedia for visualizations.
