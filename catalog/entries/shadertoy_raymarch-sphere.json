@@ -36,7 +36,7 @@
       "beat_burst",
       "cosine_palette"
     ],
-    "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the synthetic test signal, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
+    "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the music, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -14,18 +14,18 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "stark",
       "radar",
-      "void",
+      "dark",
+      "sparse",
       "mechanical"
     ],
-    "motion": 0.25,
+    "motion": 0.15,
     "palette_anchor": [
       "#ff0000",
       "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.7,
+      "bass": 0.4,
       "mid": 0.1,
       "treble": 0.1
     },
@@ -33,12 +33,12 @@
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A minimalist custom wave renders a red circular boundary and a rotating wedge on a black background. The synthetic test signal's low-frequency transients trigger transient deformations of the circular path, causing it to wobble and distort. No frame feedback or complex warp shaders are active, resulting in a stark, high-contrast vector aesthetic.",
+    "technical_notes": "A minimalist custom wave renders a red circular boundary with a rotating radial pointer resembling a radar sweep. The circular perimeter deforms slightly in response to the bass transients of the music. High decay rates and the absence of frame feedback through sampler_main keep the background entirely dark and free of trails.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:56:45.782Z"
+    "captured_at": "2026-05-30T23:26:44.173Z"
   },
   "assets": {
     "textures_needed": [],

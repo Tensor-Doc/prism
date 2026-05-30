@@ -14,33 +14,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "glitch",
-      "retro-futuristic",
-      "stark"
+      "void",
+      "dark",
+      "sparse"
     ],
-    "motion": 0.6,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#a5f3fc",
-      "#64748b"
+      "#11112e"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.7,
-      "treble": 0.6
+      "bass": 0.3,
+      "mid": 0.1,
+      "treble": 0.1
     },
     "techniques": [
-      "audio_gating",
-      "beat_burst",
       "custom_wave",
-      "domain_repetition"
+      "audio_gating"
     ],
-    "technical_notes": "A stark vector-style preset alternating between a full-screen grid and a split-screen layout featuring a large, flat-shaded custom shape triangle. These rapid transitions are heavily gated by the bass transients of the synthetic test signal, while multiple custom waves act as oscilloscopes mapping mid and treble frequencies. The lack of frame feedback or decay produces a clean, aliased, retro-computing aesthetic.",
+    "technical_notes": "Two custom waves are rendered as thin, dark indigo lines undulating across a black background. The preset exhibits strict audio gating, causing these waves to vanish completely into a dark void when the music falls below a specific threshold. The absence of frame feedback or sampler_main accumulation results in a highly sparse, instantaneous decay.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:56:15.679Z"
+    "captured_at": "2026-05-30T23:26:14.302Z"
   },
   "assets": {
     "textures_needed": [],

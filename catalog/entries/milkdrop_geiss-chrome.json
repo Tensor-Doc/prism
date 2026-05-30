@@ -35,7 +35,7 @@
       "beat_burst",
       "hue_cycle"
     ],
-    "technical_notes": "A single custom wave is rendered in the center of a dark void, with a high decay rate preventing any frame feedback or persistent trails in sampler_main. The shape's geometry and scale are modulated by the mid and treble frequencies of the synthetic test signal, while discrete beat-gated bursts trigger momentary color shifts and expansions. The color of the central element cycles through a basic hue rotation over time.",
+    "technical_notes": "A single custom wave is rendered in the center of a dark void, with a high decay rate preventing any frame feedback or persistent trails in sampler_main. The shape's geometry and scale are modulated by the mid and treble frequencies of the music, while discrete beat-gated bursts trigger momentary color shifts and expansions. The color of the central element cycles through a basic hue rotation over time.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -39,7 +39,7 @@
       "custom_wave",
       "bloom_glow"
     ],
-    "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the synthetic test signal trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
+    "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the music trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

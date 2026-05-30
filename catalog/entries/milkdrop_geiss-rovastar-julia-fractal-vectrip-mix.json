@@ -15,31 +15,32 @@
     "vibe": [
       "minimalist",
       "sparse",
-      "void",
-      "flickering"
+      "dark",
+      "erratic"
     ],
-    "motion": 0.2,
+    "motion": 0.25,
     "palette_anchor": [
       "#000000",
-      "#90ee90",
-      "#ffb6c1",
-      "#da70d6"
+      "#e066ff",
+      "#39ff14",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.2,
+      "bass": 0.3,
       "mid": 0.5,
       "treble": 0.8
     },
     "techniques": [
       "custom_wave",
+      "beat_burst",
       "audio_gating"
     ],
-    "technical_notes": "A highly minimalist, sparse preset featuring a single custom wave that renders as a tiny, flickering hand-drawn squiggle on a pure black background. The wave's position, scale, and color are gated by the synthetic test signal's mid and treble frequencies. With a high decay rate and no frame feedback, each frame is instantly cleared, leaving no persistent trails.",
+    "technical_notes": "A highly minimalist preset that renders transient custom waves on an entirely black background. Each wave is gated by high-frequency transients in the music, causing them to spawn at randomized screen coordinates with rapid color shifts. High decay settings prevent persistent trails in sampler_main, resulting in a clean, stark, and glitch-like presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:54:05.701Z"
+    "captured_at": "2026-05-30T23:24:05.459Z"
   },
   "assets": {
     "textures_needed": [

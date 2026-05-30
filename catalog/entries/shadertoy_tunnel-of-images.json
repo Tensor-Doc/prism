@@ -34,7 +34,7 @@
       "bloom_glow",
       "custom_wave"
     ],
-    "technical_notes": "A central radial glow is rendered as a soft teal custom shape, heavily diffused using the blur pyramid (sampler_blur1). The brightness of the core modulates subtly in response to the bass frequencies of the synthetic test signal. High decay rates keep the surrounding field entirely dark, resulting in a minimalist, void-like presentation.",
+    "technical_notes": "A central radial glow is rendered as a soft teal custom shape, heavily diffused using the blur pyramid (sampler_blur1). The brightness of the core modulates subtly in response to the bass frequencies of the music. High decay rates keep the surrounding field entirely dark, resulting in a minimalist, void-like presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -32,7 +32,7 @@
     "techniques": [
       "hue_cycle"
     ],
-    "technical_notes": "The preset displays a uniform, slowly shifting color field transitioning from muted slate-grey to olive green, indicating a collapsed feedback loop or an uninitialized state. No structural elements, custom waves, or direct reactions to the synthetic test signal are visible in this capture, leaving only a slow temporal hue cycle.",
+    "technical_notes": "The preset displays a uniform, slowly shifting color field transitioning from muted slate-grey to olive green, indicating a collapsed feedback loop or an uninitialized state. No structural elements, custom waves, or direct reactions to the music are visible in this capture, leaving only a slow temporal hue cycle.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

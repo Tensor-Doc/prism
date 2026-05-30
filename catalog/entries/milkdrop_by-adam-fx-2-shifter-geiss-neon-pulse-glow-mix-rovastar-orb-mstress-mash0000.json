@@ -33,7 +33,7 @@
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the synthetic test signal. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the synthetic kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
+    "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the music. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

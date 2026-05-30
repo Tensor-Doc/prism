@@ -36,7 +36,7 @@
       "hue_cycle",
       "custom_wave"
     ],
-    "technical_notes": "Custom shapes are rendered with sharp linear gradients, modulated dynamically by the synthetic test signal's bass attenuated band. A high decay rate ensures snappy, near-instantaneous frame transitions without persistent trails in sampler_main. Discrete beat detection triggers sudden geometric inversions and rapid hue cycling.",
+    "technical_notes": "Custom shapes are rendered with sharp linear gradients, modulated dynamically by the music's bass attenuated band. A high decay rate ensures snappy, near-instantaneous frame transitions without persistent trails in sampler_main. Discrete beat detection triggers sudden geometric inversions and rapid hue cycling.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

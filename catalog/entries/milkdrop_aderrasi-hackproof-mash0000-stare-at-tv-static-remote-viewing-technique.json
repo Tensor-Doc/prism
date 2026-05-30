@@ -37,7 +37,7 @@
       "custom_wave",
       "warp_field"
     ],
-    "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the synthetic test signal.",
+    "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the music.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

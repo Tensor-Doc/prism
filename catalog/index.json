@@ -1,10 +1,44 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T23:21:26.735Z",
+  "generated_at": "2026-05-30T23:28:47.120Z",
   "total": 644,
-  "annotated_count": 90,
-  "pending_count": 554,
+  "annotated_count": 87,
+  "pending_count": 557,
   "entries": [
+    {
+      "id": "milkdrop:geiss-all-spark-sinews",
+      "slug": "geiss-all-spark-sinews",
+      "name": "Geiss - All-Spark Sinews",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "monochrome",
+        "oscilloscope",
+        "void"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.2
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "A stark, minimalist custom wave is rendered horizontally against a pure black background, mimicking a classic oscilloscope. The decay rate is set to maximum, preventing any frame feedback in sampler_main and ensuring a crisp, instantaneous response to the music. The wave draws a filled polygon between two distinct audio-driven paths, expanding vertically during bass transients.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-all-spark-sinews.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-sinews.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-sinews.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.217Z",
+      "captured_at": "2026-05-30T23:28:12.818Z"
+    },
     {
       "id": "milkdrop:geiss-casino",
       "slug": "geiss-casino",
@@ -28,7 +62,7 @@
         "warp_field",
         "decay_trail"
       ],
-      "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the synthetic test signal's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
+      "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the music's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -65,7 +99,7 @@
         "fbm_noise",
         "audio_gating"
       ],
-      "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the synthetic test signal, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
+      "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the music, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -103,7 +137,7 @@
         "decay_trail",
         "hue_cycle"
       ],
-      "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the synthetic test signal, while the overall warp scale is modulated by the synthetic kick.",
+      "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the music, while the overall warp scale is modulated by the kick.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -141,7 +175,7 @@
         "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the synthetic test signal. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the synthetic test signal trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
+      "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the music. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the music trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -179,7 +213,7 @@
         "audio_gating",
         "beat_burst"
       ],
-      "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the synthetic test signal modulate the wave amplitude and fine-grained displacement, while the synthetic kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
+      "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the music modulate the wave amplitude and fine-grained displacement, while the kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -216,7 +250,7 @@
         "particle_system",
         "audio_gating"
       ],
-      "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
+      "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The music's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -251,7 +285,7 @@
         "custom_wave",
         "decay_trail"
       ],
-      "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the synthetic test signal's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
+      "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the music's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -289,7 +323,7 @@
         "decay_trail",
         "audio_gating"
       ],
-      "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the synthetic test signal. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
+      "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the music. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -325,7 +359,7 @@
         "decay_trail",
         "hue_cycle"
       ],
-      "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
+      "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the music. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -362,7 +396,7 @@
         "decay_trail",
         "audio_gating"
       ],
-      "technical_notes": "A central custom_wave filament reacts sharply to the treble of the synthetic test signal, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
+      "technical_notes": "A central custom_wave filament reacts sharply to the treble of the music, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -398,7 +432,7 @@
         "warp_field",
         "decay_trail"
       ],
-      "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
+      "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the music. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -434,7 +468,7 @@
         "custom_wave",
         "decay_trail"
       ],
-      "technical_notes": "Per-pixel warp equations apply a logarithmic spiral deformation that pulls frame feedback through sampler_main toward a central singularity. A complex custom wave reacts to the synthetic test signal, leaving persistent trails that decay into the twisting spiral, forming a ribbed, shell-like organic structure. The feedback loop operates with a low-to-moderate decay rate to maintain the structural history of the waveform.",
+      "technical_notes": "Per-pixel warp equations apply a logarithmic spiral deformation that pulls frame feedback through sampler_main toward a central singularity. A complex custom wave reacts to the music, leaving persistent trails that decay into the twisting spiral, forming a ribbed, shell-like organic structure. The feedback loop operates with a low-to-moderate decay rate to maintain the structural history of the waveform.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -471,7 +505,7 @@
         "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
+      "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the music. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -509,7 +543,7 @@
         "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the synthetic test signal's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
+      "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the music's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
       "atelier": true,
       "brand_safe": true,
       "textures_needed": [],
@@ -521,6 +555,76 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.165Z",
       "captured_at": "2026-05-30T19:27:37.336Z"
+    },
+    {
+      "id": "milkdrop:flexi-fishbrain-geiss-martin-tokamak-witchery",
+      "slug": "flexi-fishbrain-geiss-martin-tokamak-witchery",
+      "name": "Flexi, fishbrain, Geiss + Martin - tokamak witchery",
+      "author": "Flexi, fishbrain, Geiss + Martin",
+      "vibe": [
+        "minimalist",
+        "dark",
+        "sparse",
+        "void"
+      ],
+      "motion": 0.15,
+      "audio_affinity": {
+        "bass": 0.5,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst"
+      ],
+      "technical_notes": "A highly minimalist, dark preset where custom shapes or waves in the form of thin violet circles are gated to trigger on the bass threshold of the test signal. The screen remains predominantly black between beats due to a very high decay rate that prevents persistent frame feedback in sampler_main. The rendering relies on sparse, discrete custom wave elements that briefly trace circular paths before vanishing.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-fishbrain-geiss-martin-tokamak-witchery.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.210Z",
+      "captured_at": "2026-05-30T23:23:00.276Z"
+    },
+    {
+      "id": "milkdrop:flexi-fishbrain-martin-witchery",
+      "slug": "flexi-fishbrain-martin-witchery",
+      "name": "Flexi, fishbrain + Martin - witchery",
+      "author": "Flexi, fishbrain + Martin",
+      "vibe": [
+        "void",
+        "minimalist",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.15,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.2,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "beat_burst",
+        "audio_gating"
+      ],
+      "technical_notes": "An extremely sparse, minimalist preset dominated by a black void. Custom shapes and waves render fleeting purple circles and lines that react directly to the music's bass hits. A high decay rate ensures frames clear immediately, leaving no persistent feedback trails in sampler_main.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/flexi-fishbrain-martin-witchery.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.210Z",
+      "captured_at": "2026-05-30T23:22:29.478Z"
     },
     {
       "id": "shadertoy:cosmic-flow",
@@ -597,6 +701,248 @@
       "captured_at": "2026-05-30T21:32:59.773Z"
     },
     {
+      "id": "milkdrop:geiss-all-spark-polar",
+      "slug": "geiss-all-spark-polar",
+      "name": "Geiss - All-Spark Polar",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "void",
+        "monochrome",
+        "oscilloscope"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.8,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "A minimalist oscilloscope-style preset rendering a single horizontal custom wave against a solid black background. The waveform's amplitude and vertical displacement react directly to the music's mid and bass frequencies. A high decay rate prevents any persistent trails, maintaining a stark, raw signal aesthetic with no feedback or post-processing shaders.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-all-spark-polar.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-polar.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-polar.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.216Z",
+      "captured_at": "2026-05-30T23:27:43.023Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers",
+      "slug": "geiss-3-layers",
+      "name": "Geiss - 3 layers",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "stark",
+        "sparse"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.1,
+        "mid": 0.3,
+        "treble": 0.4
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "A highly minimalist preset consisting of a single custom_wave oscilloscope line rendered against a pitch-black background. The line exhibits high-frequency ripples in response to the mid and treble bands of the music, while a high decay rate ensures no persistent trails or frame feedback remain. The absence of warp shaders or sampler_main feedback leaves the screen completely dark between activations.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.216Z",
+      "captured_at": "2026-05-30T23:27:14.468Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-tunnel-mix",
+      "slug": "geiss-3-layers-tunnel-mix",
+      "name": "Geiss - 3 layers (Tunnel Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "radar",
+        "dark",
+        "sparse",
+        "mechanical"
+      ],
+      "motion": 0.15,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "A minimalist custom wave renders a red circular boundary with a rotating radial pointer resembling a radar sweep. The circular perimeter deforms slightly in response to the bass transients of the music. High decay rates and the absence of frame feedback through sampler_main keep the background entirely dark and free of trails.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-tunnel-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-tunnel-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-tunnel-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.215Z",
+      "captured_at": "2026-05-30T23:26:44.173Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-rayleigh-scattering-mix",
+      "slug": "geiss-3-layers-rayleigh-scattering-mix",
+      "name": "Geiss - 3 layers (Rayleigh Scattering Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "Two custom waves are rendered as thin, dark indigo lines undulating across a black background. The preset exhibits strict audio gating, causing these waves to vanish completely into a dark void when the music falls below a specific threshold. The absence of frame feedback or sampler_main accumulation results in a highly sparse, instantaneous decay.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-rayleigh-scattering-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-rayleigh-scattering-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-rayleigh-scattering-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.215Z",
+      "captured_at": "2026-05-30T23:26:14.302Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-planar-mix",
+      "slug": "geiss-3-layers-planar-mix",
+      "name": "Geiss - 3 layers (Planar Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "dark",
+        "sparse",
+        "stark"
+      ],
+      "motion": 0.1,
+      "audio_affinity": {
+        "bass": 0.2,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave"
+      ],
+      "technical_notes": "Two custom_wave elements are rendered as thin, stark white lines across a black void. They display the raw waveform of the test signal with minimal processing, slowly rotating in orientation over the 15-second capture. No frame feedback or warp shaders are active, resulting in a completely clean, zero-decay presentation.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-planar-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-planar-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-planar-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.214Z",
+      "captured_at": "2026-05-30T23:25:42.117Z"
+    },
+    {
+      "id": "milkdrop:geiss-3-layers-minefield-mix",
+      "slug": "geiss-3-layers-minefield-mix",
+      "name": "Geiss - 3 layers (Minefield Mix)",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "void",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.05,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.1,
+        "treble": 0.2
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst"
+      ],
+      "technical_notes": "A highly minimalist, mostly dark preset where a tiny custom wave or custom shape in the center reacts to the music. The screen remains almost entirely black, with brief, microscopic bursts of white and purple-blue light triggered by the audio loop's bass transients. No significant frame feedback or warp field is visible, leaving the canvas in a state of near-total void.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-3-layers-minefield-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-minefield-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.214Z",
+      "captured_at": "2026-05-30T23:25:11.316Z"
+    },
+    {
+      "id": "milkdrop:geiss-rovastar-julia-fractal-vectrip-mix",
+      "slug": "geiss-rovastar-julia-fractal-vectrip-mix",
+      "name": "Geiss + Rovastar - Julia Fractal (Vectrip Mix)",
+      "author": "Geiss + Rovastar",
+      "vibe": [
+        "minimalist",
+        "sparse",
+        "dark",
+        "erratic"
+      ],
+      "motion": 0.25,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "beat_burst",
+        "audio_gating"
+      ],
+      "technical_notes": "A highly minimalist preset that renders transient custom waves on an entirely black background. Each wave is gated by high-frequency transients in the music, causing them to spawn at randomized screen coordinates with rapid color shifts. High decay settings prevent persistent trails in sampler_main, resulting in a clean, stark, and glitch-like presentation.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [
+        "fw_lichen"
+      ],
+      "source_type": "milkdrop",
+      "source_loader": "url",
+      "source_url": "/presets/milkdrop/geiss-rovastar-julia-fractal-vectrip-mix.milk",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.212Z",
+      "captured_at": "2026-05-30T23:24:05.459Z"
+    },
+    {
       "id": "milkdrop:geiss-cauldron-tendrils-saturation-remix",
       "slug": "geiss-cauldron-tendrils-saturation-remix",
       "name": "Geiss - Cauldron - Tendrils (saturation remix)",
@@ -618,7 +964,7 @@
         "audio_gating",
         "hue_cycle"
       ],
-      "technical_notes": "A single custom_wave element is rendered as a rotating, audio-reactive vector against a pitch-black void. The wave's length and vertex displacement modulate dynamically with the bass and treble frequencies of the synthetic test signal. High decay rates prevent any frame feedback, leaving only the instantaneous state of the vector visible.",
+      "technical_notes": "A single custom_wave element is rendered as a rotating, audio-reactive vector against a pitch-black void. The wave's length and vertex displacement modulate dynamically with the bass and treble frequencies of the music. High decay rates prevent any frame feedback, leaving only the instantaneous state of the vector visible.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -654,7 +1000,7 @@
         "beat_burst",
         "hue_cycle"
       ],
-      "technical_notes": "A single custom wave is rendered in the center of a dark void, with a high decay rate preventing any frame feedback or persistent trails in sampler_main. The shape's geometry and scale are modulated by the mid and treble frequencies of the synthetic test signal, while discrete beat-gated bursts trigger momentary color shifts and expansions. The color of the central element cycles through a basic hue rotation over time.",
+      "technical_notes": "A single custom wave is rendered in the center of a dark void, with a high decay rate preventing any frame feedback or persistent trails in sampler_main. The shape's geometry and scale are modulated by the mid and treble frequencies of the music, while discrete beat-gated bursts trigger momentary color shifts and expansions. The color of the central element cycles through a basic hue rotation over time.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [
@@ -694,7 +1040,7 @@
         "custom_wave",
         "chromatic_split"
       ],
-      "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the synthetic test signal. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
+      "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the music. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -706,353 +1052,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.242Z",
       "captured_at": "2026-05-30T23:16:48.055Z"
-    },
-    {
-      "id": "milkdrop:geiss-all-spark-sinews",
-      "slug": "geiss-all-spark-sinews",
-      "name": "Geiss - All-Spark Sinews",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "stark",
-        "oscilloscope",
-        "void",
-        "technical"
-      ],
-      "motion": 0.3,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.6,
-        "treble": 0.4
-      },
-      "techniques": [
-        "custom_wave"
-      ],
-      "technical_notes": "A single horizontal custom wave is rendered on a pure black background with zero decay, acting as a direct oscilloscope. The vertical displacement of the wave vertices is driven directly by the time-domain waveform of the synthetic test signal. No feedback sampler (sampler_main) or warp shaders are active, resulting in a stark, minimalist aesthetic.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-all-spark-sinews.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-sinews.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-sinews.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.217Z",
-      "captured_at": "2026-05-30T22:58:18.798Z"
-    },
-    {
-      "id": "milkdrop:geiss-all-spark-polar",
-      "slug": "geiss-all-spark-polar",
-      "name": "Geiss - All-Spark Polar",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "stark",
-        "void",
-        "oscillographic"
-      ],
-      "motion": 0.3,
-      "audio_affinity": {
-        "bass": 0.6,
-        "mid": 0.7,
-        "treble": 0.5
-      },
-      "techniques": [
-        "custom_wave"
-      ],
-      "technical_notes": "A single custom wave configured as a filled horizontal oscilloscope reacts directly to the amplitude of the synthetic test signal. The decay rate is instantaneous with zero frame feedback, leaving a stark, high-contrast monochrome waveform against a pure black void. No post-processing effects, warp shaders, or sampler_main feedback loops are active.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-all-spark-polar.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-all-spark-polar.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-all-spark-polar.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.216Z",
-      "captured_at": "2026-05-30T22:57:48.755Z"
-    },
-    {
-      "id": "milkdrop:geiss-3-layers",
-      "slug": "geiss-3-layers",
-      "name": "Geiss - 3 layers",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "digital",
-        "stark",
-        "cybernetic"
-      ],
-      "motion": 0.3,
-      "audio_affinity": {
-        "bass": 0.6,
-        "mid": 0.5,
-        "treble": 0.4
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating",
-        "decay_trail"
-      ],
-      "technical_notes": "A custom_wave oscilloscope draws a dense, trailing comet-like waveform on the left, which reacts to the mid and treble frequencies of the synthetic test signal. At around 8 seconds, an audio-gated grid of vertical and horizontal lines is triggered, likely driven by a threshold on the bass attenuated. The background remains mostly black with very high decay, preventing persistent frame feedback except within the custom wave's own trails.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-3-layers.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.216Z",
-      "captured_at": "2026-05-30T22:57:16.480Z"
-    },
-    {
-      "id": "milkdrop:geiss-3-layers-tunnel-mix",
-      "slug": "geiss-3-layers-tunnel-mix",
-      "name": "Geiss - 3 layers (Tunnel Mix)",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "stark",
-        "radar",
-        "void",
-        "mechanical"
-      ],
-      "motion": 0.25,
-      "audio_affinity": {
-        "bass": 0.7,
-        "mid": 0.1,
-        "treble": 0.1
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating"
-      ],
-      "technical_notes": "A minimalist custom wave renders a red circular boundary and a rotating wedge on a black background. The synthetic test signal's low-frequency transients trigger transient deformations of the circular path, causing it to wobble and distort. No frame feedback or complex warp shaders are active, resulting in a stark, high-contrast vector aesthetic.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-3-layers-tunnel-mix.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-tunnel-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-tunnel-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.215Z",
-      "captured_at": "2026-05-30T22:56:45.782Z"
-    },
-    {
-      "id": "milkdrop:geiss-3-layers-rayleigh-scattering-mix",
-      "slug": "geiss-3-layers-rayleigh-scattering-mix",
-      "name": "Geiss - 3 layers (Rayleigh Scattering Mix)",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "glitch",
-        "retro-futuristic",
-        "stark"
-      ],
-      "motion": 0.6,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.7,
-        "treble": 0.6
-      },
-      "techniques": [
-        "audio_gating",
-        "beat_burst",
-        "custom_wave",
-        "domain_repetition"
-      ],
-      "technical_notes": "A stark vector-style preset alternating between a full-screen grid and a split-screen layout featuring a large, flat-shaded custom shape triangle. These rapid transitions are heavily gated by the bass transients of the synthetic test signal, while multiple custom waves act as oscilloscopes mapping mid and treble frequencies. The lack of frame feedback or decay produces a clean, aliased, retro-computing aesthetic.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-3-layers-rayleigh-scattering-mix.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-rayleigh-scattering-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-rayleigh-scattering-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.215Z",
-      "captured_at": "2026-05-30T22:56:15.679Z"
-    },
-    {
-      "id": "milkdrop:geiss-3-layers-planar-mix",
-      "slug": "geiss-3-layers-planar-mix",
-      "name": "Geiss - 3 layers (Planar Mix)",
-      "author": "Geiss",
-      "vibe": [
-        "glitchy",
-        "geometric",
-        "stark",
-        "retro-tech"
-      ],
-      "motion": 0.6,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.4
-      },
-      "techniques": [
-        "audio_gating",
-        "custom_wave",
-        "frame_feedback"
-      ],
-      "technical_notes": "The preset undergoes rapid state-switching gated by the bass frequencies of the synthetic test signal, alternating between a dense orthogonal grid structure and a stark diagonal wedge mask. Custom waves are utilized to render the horizontal oscilloscope lines and vertical grid segments. High decay in the feedback loop ensures sharp, near-instantaneous frame transitions with minimal persistence in sampler_main.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-3-layers-planar-mix.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-planar-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-planar-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.214Z",
-      "captured_at": "2026-05-30T22:55:40.177Z"
-    },
-    {
-      "id": "milkdrop:geiss-3-layers-minefield-mix",
-      "slug": "geiss-3-layers-minefield-mix",
-      "name": "Geiss - 3 layers (Minefield Mix)",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "void",
-        "dark",
-        "sparse"
-      ],
-      "motion": 0.05,
-      "audio_affinity": {
-        "bass": 0.1,
-        "mid": 0.1,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating"
-      ],
-      "technical_notes": "The preset is extremely sparse and dark, displaying only a tiny, central custom_wave that briefly flashes with the test signal's transients. High decay rate instantly clears the frame, leaving a vast black void between tiny, isolated bursts of cyan, purple, and white. There is virtually no warp field or feedback visible in this highly minimalist rendering.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-3-layers-minefield-mix.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-3-layers-minefield-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.214Z",
-      "captured_at": "2026-05-30T22:55:09.289Z"
-    },
-    {
-      "id": "milkdrop:geiss-rovastar-julia-fractal-vectrip-mix",
-      "slug": "geiss-rovastar-julia-fractal-vectrip-mix",
-      "name": "Geiss + Rovastar - Julia Fractal (Vectrip Mix)",
-      "author": "Geiss + Rovastar",
-      "vibe": [
-        "minimalist",
-        "sparse",
-        "void",
-        "flickering"
-      ],
-      "motion": 0.2,
-      "audio_affinity": {
-        "bass": 0.2,
-        "mid": 0.5,
-        "treble": 0.8
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating"
-      ],
-      "technical_notes": "A highly minimalist, sparse preset featuring a single custom wave that renders as a tiny, flickering hand-drawn squiggle on a pure black background. The wave's position, scale, and color are gated by the synthetic test signal's mid and treble frequencies. With a high decay rate and no frame feedback, each frame is instantly cleared, leaving no persistent trails.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [
-        "fw_lichen"
-      ],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/geiss-rovastar-julia-fractal-vectrip-mix.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-julia-fractal-vectrip-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.212Z",
-      "captured_at": "2026-05-30T22:54:05.701Z"
-    },
-    {
-      "id": "milkdrop:flexi-fishbrain-geiss-martin-tokamak-witchery",
-      "slug": "flexi-fishbrain-geiss-martin-tokamak-witchery",
-      "name": "Flexi, fishbrain, Geiss + Martin - tokamak witchery",
-      "author": "Flexi, fishbrain, Geiss + Martin",
-      "vibe": [
-        "minimalist",
-        "dark",
-        "sparse",
-        "void"
-      ],
-      "motion": 0.1,
-      "audio_affinity": {
-        "bass": 0.7,
-        "mid": 0.1,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "particle_system",
-        "beat_burst"
-      ],
-      "technical_notes": "Discrete custom shapes (circles) are rendered on a black background, triggered as beat-gated bursts by the synthetic kick. Extremely sparse motion vectors or particles react to the treble sparkle of the test signal. With decay set to maximum and no frame feedback via sampler_main, each element vanishes instantly, preserving a dark, minimalist void.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/flexi-fishbrain-geiss-martin-tokamak-witchery.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.210Z",
-      "captured_at": "2026-05-30T22:52:29.608Z"
-    },
-    {
-      "id": "milkdrop:flexi-fishbrain-martin-witchery",
-      "slug": "flexi-fishbrain-martin-witchery",
-      "name": "Flexi, fishbrain + Martin - witchery",
-      "author": "Flexi, fishbrain + Martin",
-      "vibe": [
-        "minimalist",
-        "dark",
-        "sparse",
-        "void"
-      ],
-      "motion": 0.1,
-      "audio_affinity": {
-        "bass": 0.2,
-        "mid": 0.1,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "decay_trail"
-      ],
-      "technical_notes": "An extremely sparse, dark preset rendering minimalist vector-like elements against a black background. Custom wave equations draw faint, thin white line segments and expanding purple circles that decay almost instantly. The visual response to the synthetic test signal is subtle, with treble transients triggering dotted line segments and bass kicks occasionally modulating the radius of the purple circles.",
-      "atelier": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/flexi-fishbrain-martin-witchery.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.210Z",
-      "captured_at": "2026-05-30T22:51:58.520Z"
     },
     {
       "id": "shadertoy:tunnel-of-images",
@@ -1076,7 +1075,7 @@
         "bloom_glow",
         "custom_wave"
       ],
-      "technical_notes": "A central radial glow is rendered as a soft teal custom shape, heavily diffused using the blur pyramid (sampler_blur1). The brightness of the core modulates subtly in response to the bass frequencies of the synthetic test signal. High decay rates keep the surrounding field entirely dark, resulting in a minimalist, void-like presentation.",
+      "technical_notes": "A central radial glow is rendered as a soft teal custom shape, heavily diffused using the blur pyramid (sampler_blur1). The brightness of the core modulates subtly in response to the bass frequencies of the music. High decay rates keep the surrounding field entirely dark, resulting in a minimalist, void-like presentation.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1113,7 +1112,7 @@
         "warp_field",
         "audio_gating"
       ],
-      "technical_notes": "A structured grid of repeating blocks is modulated by a per-pixel warp shader, creating a domain repetition effect where cell corners pinch into sharp teal and brown star-like shapes. The overall brightness and scale of the grid are heavily gated by the bass frequencies of the synthetic test signal, causing the pattern to collapse into a dark, flat mosaic during quiet passages and expand during peak transients. The rendering relies on a custom composition shader that masks and sharpens the grid boundaries based on audio-driven variables.",
+      "technical_notes": "A structured grid of repeating blocks is modulated by a per-pixel warp shader, creating a domain repetition effect where cell corners pinch into sharp teal and brown star-like shapes. The overall brightness and scale of the grid are heavily gated by the bass frequencies of the music, causing the pattern to collapse into a dark, flat mosaic during quiet passages and expand during peak transients. The rendering relies on a custom composition shader that masks and sharpens the grid boundaries based on audio-driven variables.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1151,7 +1150,7 @@
         "beat_burst",
         "cosine_palette"
       ],
-      "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the synthetic test signal, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
+      "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the music, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1186,7 +1185,7 @@
         "custom_wave",
         "bloom_glow"
       ],
-      "technical_notes": "A pixelated horizontal custom wave is rendered with a dual-color gradient transitioning from a cyan core to an orange fringe. A vertical blur pass, likely utilizing a 1D blur in the composite shader, creates a soft glowing pillar effect behind the waveform. The vertical displacement and amplitude of the wave are directly modulated by the low and mid-frequency bands of the synthetic test signal.",
+      "technical_notes": "A pixelated horizontal custom wave is rendered with a dual-color gradient transitioning from a cyan core to an orange fringe. A vertical blur pass, likely utilizing a 1D blur in the composite shader, creates a soft glowing pillar effect behind the waveform. The vertical displacement and amplitude of the wave are directly modulated by the low and mid-frequency bands of the music.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1223,7 +1222,7 @@
         "custom_wave",
         "decay_trail"
       ],
-      "technical_notes": "A custom wave rendered as a sharp black triangle on the left edge of the screen reacts dynamically to the synthetic test signal, with its jagged, comb-like vertices modulating in response to high-frequency transients. A digital warp field creates a subtle vertical grid-like texture in the red background, while frame feedback through sampler_main preserves transient diagonal slash lines triggered by the synthetic kick.",
+      "technical_notes": "A custom wave rendered as a sharp black triangle on the left edge of the screen reacts dynamically to the music, with its jagged, comb-like vertices modulating in response to high-frequency transients. A digital warp field creates a subtle vertical grid-like texture in the red background, while frame feedback through sampler_main preserves transient diagonal slash lines triggered by the kick.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [
@@ -1259,7 +1258,7 @@
         "audio_gating",
         "beat_burst"
       ],
-      "technical_notes": "The visualizer remains entirely black until triggered by transient peaks in the synthetic test signal, which gate full-screen color flashes. This high-threshold audio gating produces a stark, strobe-like effect with zero decay trail, returning instantly to a dark void state.",
+      "technical_notes": "The visualizer remains entirely black until triggered by transient peaks in the music, which gate full-screen color flashes. This high-threshold audio gating produces a stark, strobe-like effect with zero decay trail, returning instantly to a dark void state.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1293,7 +1292,7 @@
         "custom_wave",
         "audio_gating"
       ],
-      "technical_notes": "A single custom wave configured as a circular waveform is rendered against a stark black background. The wave's radius and vertex displacement react sharply to the bass frequencies of the synthetic test signal, while sudden position jumps are gated to the synthetic kick. The lack of frame feedback (sampler_main is not blended) results in a clean, trail-free geometric presentation.",
+      "technical_notes": "A single custom wave configured as a circular waveform is rendered against a stark black background. The wave's radius and vertex displacement react sharply to the bass frequencies of the music, while sudden position jumps are gated to the kick. The lack of frame feedback (sampler_main is not blended) results in a clean, trail-free geometric presentation.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1327,7 +1326,7 @@
         "custom_wave",
         "audio_gating"
       ],
-      "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the synthetic test signal, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
+      "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the music, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1361,7 +1360,7 @@
         "particle_system",
         "audio_gating"
       ],
-      "technical_notes": "The preset is extremely sparse and mostly dark, rendering only a few discrete white points or lines of dots against a black void. These minimal particles appear to be driven by transient spikes in the synthetic test signal, likely mapped to custom shapes or a simple particle system. The decay rate is extremely high, leaving no persistent trails or feedback in sampler_main.",
+      "technical_notes": "The preset is extremely sparse and mostly dark, rendering only a few discrete white points or lines of dots against a black void. These minimal particles appear to be driven by transient spikes in the music, likely mapped to custom shapes or a simple particle system. The decay rate is extremely high, leaving no persistent trails or feedback in sampler_main.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1399,7 +1398,7 @@
         "frame_feedback",
         "hue_cycle"
       ],
-      "technical_notes": "A highly symmetric geometric tunnel is generated using radial domain repetition and feedback loops. The synthetic kick in the test signal triggers dramatic, instantaneous palette shifts between bright yellow and deep red-orange, likely driven by beat-gated state variables in the composite shader. Fine wireframe lines overlaying the structure flicker dynamically with high-frequency treble transients, while per-vertex zoom equations maintain a rapid forward-marching motion.",
+      "technical_notes": "A highly symmetric geometric tunnel is generated using radial domain repetition and feedback loops. The kick in the test signal triggers dramatic, instantaneous palette shifts between bright yellow and deep red-orange, likely driven by beat-gated state variables in the composite shader. Fine wireframe lines overlaying the structure flicker dynamically with high-frequency treble transients, while per-vertex zoom equations maintain a rapid forward-marching motion.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1435,7 +1434,7 @@
         "cosine_palette",
         "domain_repetition"
       ],
-      "technical_notes": "A deep concentric spiral tunnel is generated via a feedback loop utilizing sampler_main with a zoom factor slightly greater than unity and a small rotational warp. The metallic sheen is modulated by a cosine palette mapping that shifts between deep slate blues and bronze golds in response to the synthetic test signal's bass kicks. The overall structure resembles a classic Geiss feedback-tunnel lineage with high decay creating a clean, non-persistent edge.",
+      "technical_notes": "A deep concentric spiral tunnel is generated via a feedback loop utilizing sampler_main with a zoom factor slightly greater than unity and a small rotational warp. The metallic sheen is modulated by a cosine palette mapping that shifts between deep slate blues and bronze golds in response to the music's bass kicks. The overall structure resembles a classic Geiss feedback-tunnel lineage with high decay creating a clean, non-persistent edge.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1472,7 +1471,7 @@
         "domain_repetition",
         "custom_wave"
       ],
-      "technical_notes": "A logarithmic spiral warp field drives frame feedback through sampler_main to construct a deep, repeating tunnel. The preset undergoes dramatic audio-gated inversions triggered by the synthetic kick, transitioning from a dark textured cavern to a high-contrast white field. Intricate custom waves are radially duplicated and modulated by treble frequencies to form the sharp, geometric spiral arms.",
+      "technical_notes": "A logarithmic spiral warp field drives frame feedback through sampler_main to construct a deep, repeating tunnel. The preset undergoes dramatic audio-gated inversions triggered by the kick, transitioning from a dark textured cavern to a high-contrast white field. Intricate custom waves are radially duplicated and modulated by treble frequencies to form the sharp, geometric spiral arms.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1510,7 +1509,7 @@
         "hue_cycle",
         "bloom_glow"
       ],
-      "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the synthetic test signal's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
+      "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the music's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1547,7 +1546,7 @@
         "domain_repetition",
         "decay_trail"
       ],
-      "technical_notes": "A central nested triangle custom shape with an amber core pulses dynamically to the bass of the synthetic test signal. Spiraling rings of circles are rendered via custom waves that rotate and scale through space, while a radial bloom effect is achieved by blending the current frame with a blurred feedback sampler. Low decay in sampler_main maintains clean, sharp geometric lines with minimal trailing artifacts.",
+      "technical_notes": "A central nested triangle custom shape with an amber core pulses dynamically to the bass of the music. Spiraling rings of circles are rendered via custom waves that rotate and scale through space, while a radial bloom effect is achieved by blending the current frame with a blurred feedback sampler. Low decay in sampler_main maintains clean, sharp geometric lines with minimal trailing artifacts.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1584,7 +1583,7 @@
         "hue_cycle",
         "custom_wave"
       ],
-      "technical_notes": "The preset employs aggressive domain repetition to create a multi-axial kaleidoscopic mirror effect. High-frequency elements of the synthetic test signal drive the visibility of custom waves rendered as dotted neon paths, while a high decay rate ensures snappy frame-to-frame transitions without persistent trails. State-switching logic driven by the synthetic kick gates rapid transitions between distinct geometric configurations and color palettes.",
+      "technical_notes": "The preset employs aggressive domain repetition to create a multi-axial kaleidoscopic mirror effect. High-frequency elements of the music drive the visibility of custom waves rendered as dotted neon paths, while a high decay rate ensures snappy frame-to-frame transitions without persistent trails. State-switching logic driven by the kick gates rapid transitions between distinct geometric configurations and color palettes.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1621,7 +1620,7 @@
         "frame_feedback",
         "bloom_glow"
       ],
-      "technical_notes": "Multiple custom waves draw complex 3D parametric ribbon curves and dashed orbital trails. The synthetic test signal's bass transients drive the global zoom and rotation parameters, while high-frequency treble transients modulate the dashed particle spacing. Frame feedback through sampler_main combined with a moderate decay rate creates a clean, glowing path history.",
+      "technical_notes": "Multiple custom waves draw complex 3D parametric ribbon curves and dashed orbital trails. The music's bass transients drive the global zoom and rotation parameters, while high-frequency treble transients modulate the dashed particle spacing. Frame feedback through sampler_main combined with a moderate decay rate creates a clean, glowing path history.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1660,7 +1659,7 @@
         "custom_wave",
         "bloom_glow"
       ],
-      "technical_notes": "Custom shapes acting as glowing ribbons are rendered with high additive blending, utilizing sampler_blur1 to generate a heavy bloom glow. The warp field applies a radial spiral distortion driven by the bass of the synthetic test signal, while frame feedback through sampler_main creates persistent, high-contrast trails. Beat-gated triggers on the synthetic kick cause sudden reversals in rotation direction and sharp shifts in the color palette.",
+      "technical_notes": "Custom shapes acting as glowing ribbons are rendered with high additive blending, utilizing sampler_blur1 to generate a heavy bloom glow. The warp field applies a radial spiral distortion driven by the bass of the music, while frame feedback through sampler_main creates persistent, high-contrast trails. Beat-gated triggers on the kick cause sudden reversals in rotation direction and sharp shifts in the color palette.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1696,7 +1695,7 @@
         "beat_burst",
         "hue_cycle"
       ],
-      "technical_notes": "Custom waves are rendered as sharp, ribbon-like strokes with dynamic color gradients that react directly to the synthetic test signal. The absence of frame feedback through sampler_main or warp fields results in a stark, high-contrast black background where ribbons appear and vanish instantaneously on beat-gated thresholds. The ribbon coordinates and colors are modulated by audio band amplitudes, creating a minimalist glowstick aesthetic.",
+      "technical_notes": "Custom waves are rendered as sharp, ribbon-like strokes with dynamic color gradients that react directly to the music. The absence of frame feedback through sampler_main or warp fields results in a stark, high-contrast black background where ribbons appear and vanish instantaneously on beat-gated thresholds. The ribbon coordinates and colors are modulated by audio band amplitudes, creating a minimalist glowstick aesthetic.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1731,7 +1730,7 @@
         "cosine_palette",
         "hue_cycle"
       ],
-      "technical_notes": "A custom wave is rendered as a thick, tapered ribbon sweeping elegantly across a black background. Its coordinates and curvature are modulated by the synthetic test signal's bass and mid frequencies, while the color gradient along its length is driven by a cosine palette. The absence of frame feedback (decay is set to maximum) ensures a clean, high-contrast presentation with no persistent trails.",
+      "technical_notes": "A custom wave is rendered as a thick, tapered ribbon sweeping elegantly across a black background. Its coordinates and curvature are modulated by the music's bass and mid frequencies, while the color gradient along its length is driven by a cosine palette. The absence of frame feedback (decay is set to maximum) ensures a clean, high-contrast presentation with no persistent trails.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1764,7 +1763,7 @@
       "techniques": [
         "hue_cycle"
       ],
-      "technical_notes": "The preset displays a uniform, slowly shifting color field transitioning from muted slate-grey to olive green, indicating a collapsed feedback loop or an uninitialized state. No structural elements, custom waves, or direct reactions to the synthetic test signal are visible in this capture, leaving only a slow temporal hue cycle.",
+      "technical_notes": "The preset displays a uniform, slowly shifting color field transitioning from muted slate-grey to olive green, indicating a collapsed feedback loop or an uninitialized state. No structural elements, custom waves, or direct reactions to the music are visible in this capture, leaving only a slow temporal hue cycle.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1801,7 +1800,7 @@
         "beat_burst",
         "decay_trail"
       ],
-      "technical_notes": "Custom waves render a minimalist 3D wireframe cube structure alongside a localized particle emitter on the left. The synthetic test signal's bass transients trigger discrete structural shifts and spark bursts via beat-gated equations. A high decay rate in the composite pass ensures clean, sharp vector lines with minimal frame feedback persistence.",
+      "technical_notes": "Custom waves render a minimalist 3D wireframe cube structure alongside a localized particle emitter on the left. The music's bass transients trigger discrete structural shifts and spark bursts via beat-gated equations. A high decay rate in the composite pass ensures clean, sharp vector lines with minimal frame feedback persistence.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1837,7 +1836,7 @@
         "custom_wave",
         "frame_feedback"
       ],
-      "technical_notes": "A complex domain repetition shader tiles concentric circular SDFs across the screen, driven by a per-pixel warp field that zooms outward. Custom waves are mapped to circular paths, modulated by the treble frequencies of the synthetic test signal to produce thin, colorful orbital arcs. The feedback loop in sampler_main maintains a high decay, keeping the grid of bubbles sharp and preventing excessive smearing.",
+      "technical_notes": "A complex domain repetition shader tiles concentric circular SDFs across the screen, driven by a per-pixel warp field that zooms outward. Custom waves are mapped to circular paths, modulated by the treble frequencies of the music to produce thin, colorful orbital arcs. The feedback loop in sampler_main maintains a high decay, keeping the grid of bubbles sharp and preventing excessive smearing.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1875,7 +1874,7 @@
         "custom_wave",
         "bloom_glow"
       ],
-      "technical_notes": "Custom wave equations render a shifting geometric wireframe grid that deforms in response to the synthetic test signal. Motion vectors are configured as radiating white streaks that expand outwards, while frame feedback through sampler_main creates a persistent glowing trail. A bright central bloom is triggered by the synthetic kick, accompanied by simulated lens flare circles.",
+      "technical_notes": "Custom wave equations render a shifting geometric wireframe grid that deforms in response to the music. Motion vectors are configured as radiating white streaks that expand outwards, while frame feedback through sampler_main creates a persistent glowing trail. A bright central bloom is triggered by the kick, accompanied by simulated lens flare circles.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1913,7 +1912,7 @@
         "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the synthetic test signal. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every synthetic kick.",
+      "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the music. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every kick.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1948,7 +1947,7 @@
         "particle_system",
         "audio_gating"
       ],
-      "technical_notes": "A single custom wave element is rendered as a sharp, peach-colored ribbon darting erratically across a pitch-black background. High decay settings ensure no persistent trails remain in sampler_main, leaving only the instantaneous shape. The trajectory and deformation of this 'chaser' are modulated by the synthetic test signal's treble and bass frequencies.",
+      "technical_notes": "A single custom wave element is rendered as a sharp, peach-colored ribbon darting erratically across a pitch-black background. High decay settings ensure no persistent trails remain in sampler_main, leaving only the instantaneous shape. The trajectory and deformation of this 'chaser' are modulated by the music's treble and bass frequencies.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -1985,7 +1984,7 @@
         "hue_cycle",
         "beat_burst"
       ],
-      "technical_notes": "A complex spiral warp field drives a continuous zoom and rotation feedback loop through sampler_main, creating a deep, recursive tunnel. Custom waves modulated by high-frequency bands of the synthetic test signal generate the jagged, sawtooth ribbons that spiral inward. Beat-gated triggers from the synthetic kick modulate the zoom and rotation parameters, causing sudden expansions and direction shifts.",
+      "technical_notes": "A complex spiral warp field drives a continuous zoom and rotation feedback loop through sampler_main, creating a deep, recursive tunnel. Custom waves modulated by high-frequency bands of the music generate the jagged, sawtooth ribbons that spiral inward. Beat-gated triggers from the kick modulate the zoom and rotation parameters, causing sudden expansions and direction shifts.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2020,7 +2019,7 @@
         "audio_gating",
         "beat_burst"
       ],
-      "technical_notes": "A single custom wave configured as a thick, curved ribbon sweeps across the screen, with its scale and rotation modulated by the synthetic test signal. High decay rate ensures no persistent trails in sampler_main, maintaining a stark black background. Beat detection on bass attenuated triggers sudden expansions in the shape's width and radius, creating a clean, minimalist kinetic display.",
+      "technical_notes": "A single custom wave configured as a thick, curved ribbon sweeps across the screen, with its scale and rotation modulated by the music. High decay rate ensures no persistent trails in sampler_main, maintaining a stark black background. Beat detection on bass attenuated triggers sudden expansions in the shape's width and radius, creating a clean, minimalist kinetic display.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2056,7 +2055,7 @@
         "hue_cycle",
         "custom_wave"
       ],
-      "technical_notes": "Custom shapes are rendered with sharp linear gradients, modulated dynamically by the synthetic test signal's bass attenuated band. A high decay rate ensures snappy, near-instantaneous frame transitions without persistent trails in sampler_main. Discrete beat detection triggers sudden geometric inversions and rapid hue cycling.",
+      "technical_notes": "Custom shapes are rendered with sharp linear gradients, modulated dynamically by the music's bass attenuated band. A high decay rate ensures snappy, near-instantaneous frame transitions without persistent trails in sampler_main. Discrete beat detection triggers sudden geometric inversions and rapid hue cycling.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2091,7 +2090,7 @@
         "custom_wave",
         "hue_cycle"
       ],
-      "technical_notes": "A highly minimalist preset rendering custom semi-circular shapes at the top and bottom viewport boundaries. The bottom shape scales dynamically with the bass envelope of the synthetic test signal, while the top shape is gated by high-frequency thresholds. Color transitions between teal, cyan, and red are driven by a slow hue cycle mapped to the custom shape color parameters.",
+      "technical_notes": "A highly minimalist preset rendering custom semi-circular shapes at the top and bottom viewport boundaries. The bottom shape scales dynamically with the bass envelope of the music, while the top shape is gated by high-frequency thresholds. Color transitions between teal, cyan, and red are driven by a slow hue cycle mapped to the custom shape color parameters.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [
@@ -2128,7 +2127,7 @@
         "beat_burst",
         "domain_repetition"
       ],
-      "technical_notes": "Custom shapes configured as semi-circles are rendered at the bottom and top boundaries of the screen, utilizing vertical domain repetition. Their scale and brightness are directly gated by the bass frequencies of the synthetic test signal. A high decay rate and zero warp displacement keep the remainder of the frame entirely black, preventing any feedback trails in sampler_main.",
+      "technical_notes": "Custom shapes configured as semi-circles are rendered at the bottom and top boundaries of the screen, utilizing vertical domain repetition. Their scale and brightness are directly gated by the bass frequencies of the music. A high decay rate and zero warp displacement keep the remainder of the frame entirely black, preventing any feedback trails in sampler_main.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [
@@ -2164,7 +2163,7 @@
         "custom_wave",
         "audio_gating"
       ],
-      "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the synthetic test signal. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the synthetic kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
+      "technical_notes": "A custom wave equation renders a circular oscilloscope that deforms in response to the high-frequency components of the music. A single custom shape wedge rotates radially around the center, its angular position driven by a time-accumulated variable while its scale responds to the kick. The rendering is extremely clean with a high decay rate, bypassing sampler_main feedback to maintain a stark, minimalist monochrome aesthetic.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2199,7 +2198,7 @@
         "beat_burst",
         "decay_trail"
       ],
-      "technical_notes": "A sparse, high-decay particle system emits transient streaks from the center, driven by high-frequency components of the synthetic test signal. Custom waves or motion vectors are gated to beat-detection thresholds, creating brief, energetic bursts that immediately decay into the black background. The minimal frame feedback via sampler_main prevents persistent trails, maintaining a stark, cosmic aesthetic.",
+      "technical_notes": "A sparse, high-decay particle system emits transient streaks from the center, driven by high-frequency components of the music. Custom waves or motion vectors are gated to beat-detection thresholds, creating brief, energetic bursts that immediately decay into the black background. The minimal frame feedback via sampler_main prevents persistent trails, maintaining a stark, cosmic aesthetic.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2235,7 +2234,7 @@
         "decay_trail",
         "frame_feedback"
       ],
-      "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring complex custom waves that mimic an analog oscilloscope. The synthetic test signal's bass transients modulate the scale and opacity of two prominent white custom shapes, while treble spikes drive high-frequency jitter in the thin wireframe lines. A high decay rate in the feedback loop ensures the background remains dark, leaving only faint trails in sampler_main.",
+      "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring complex custom waves that mimic an analog oscilloscope. The music's bass transients modulate the scale and opacity of two prominent white custom shapes, while treble spikes drive high-frequency jitter in the thin wireframe lines. A high decay rate in the feedback loop ensures the background remains dark, leaving only faint trails in sampler_main.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2273,7 +2272,7 @@
         "hue_cycle",
         "bloom_glow"
       ],
-      "technical_notes": "Symmetrical custom waves render high-frequency scribbles in the center, modulated by the treble of the synthetic test signal. A per-pixel warp shader drives an hourglass distortion and concentric ripple patterns that expand outward on synthetic kick hits. Frame feedback through sampler_main with low decay creates persistent, glowing trails that cycle through vibrant rainbow and gold palettes.",
+      "technical_notes": "Symmetrical custom waves render high-frequency scribbles in the center, modulated by the treble of the music. A per-pixel warp shader drives an hourglass distortion and concentric ripple patterns that expand outward on kick hits. Frame feedback through sampler_main with low decay creates persistent, glowing trails that cycle through vibrant rainbow and gold palettes.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2310,7 +2309,7 @@
         "custom_wave",
         "frame_feedback"
       ],
-      "technical_notes": "An aggressive audio-gated preset where the synthetic test signal's bass kicks trigger instantaneous full-screen color palette swaps. A central custom wave displays a spinning wireframe node, while the left and right borders feature sharp, serrated spikes modulated by high-frequency audio bands. The rigid vertical grid and minimal decay in sampler_main produce a highly structured, strobing geometric aesthetic.",
+      "technical_notes": "An aggressive audio-gated preset where the music's bass kicks trigger instantaneous full-screen color palette swaps. A central custom wave displays a spinning wireframe node, while the left and right borders feature sharp, serrated spikes modulated by high-frequency audio bands. The rigid vertical grid and minimal decay in sampler_main produce a highly structured, strobing geometric aesthetic.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2347,7 +2346,7 @@
         "domain_repetition",
         "frame_feedback"
       ],
-      "technical_notes": "Custom shapes and waves render rotating, nested triangles that scale and multiply based on the synthetic test signal's bass and treble. A high-frequency step-like per-pixel warp creates horizontal and vertical digital glitch lines across the screen, modulating with treble peaks. Beat-gated triggers suddenly fill the wireframe shapes with bright, pastel-colored gradients, while frame feedback via sampler_main is heavily attenuated to keep the background clean and dark.",
+      "technical_notes": "Custom shapes and waves render rotating, nested triangles that scale and multiply based on the music's bass and treble. A high-frequency step-like per-pixel warp creates horizontal and vertical digital glitch lines across the screen, modulating with treble peaks. Beat-gated triggers suddenly fill the wireframe shapes with bright, pastel-colored gradients, while frame feedback via sampler_main is heavily attenuated to keep the background clean and dark.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2384,7 +2383,7 @@
         "custom_wave",
         "warp_field"
       ],
-      "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the synthetic test signal.",
+      "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the music.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2421,7 +2420,7 @@
         "decay_trail",
         "hue_cycle"
       ],
-      "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the synthetic kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
+      "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2456,7 +2455,7 @@
         "decay_trail",
         "frame_feedback"
       ],
-      "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the synthetic test signal. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the synthetic kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
+      "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the music. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2492,7 +2491,7 @@
         "beat_burst",
         "custom_wave"
       ],
-      "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the synthetic test signal.",
+      "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the music.",
       "atelier": false,
       "brand_safe": true,
       "textures_needed": [],
@@ -2513,24 +2512,22 @@
       "vibe": [
         "psychedelic",
         "kaleidoscopic",
-        "geometric",
-        "vibrant"
+        "frenetic",
+        "geometric"
       ],
       "motion": 0.8,
       "audio_affinity": {
         "bass": 0.85,
         "mid": 0.6,
-        "treble": 0.7
+        "treble": 0.5
       },
       "techniques": [
         "frame_feedback",
-        "warp_field",
-        "audio_gating",
-        "beat_burst",
+        "domain_repetition",
         "hue_cycle",
-        "domain_repetition"
+        "audio_gating"
       ],
-      "technical_notes": "A complex domain repetition and feedback loop creates a kaleidoscopic field of geometric shapes that scale and rotate in response to the synthetic test signal. The per-pixel warp shader applies a zoom and rotational twist, while beat-gated triggers driven by the synthetic kick cause sudden hue cycles and structural shifts. Frame feedback through sampler_main maintains a dense, repeating fractal-like structure with high-frequency detail modulated by treble bands.",
+      "technical_notes": "Central custom shapes (triangles and quadrilaterals) are recursively tiled into a dense background using radial domain repetition. Feedback through sampler_main creates a complex, self-similar fractal pattern that scales dynamically with the bass of the music. A sudden transition at 00:10 temporarily clears the feedback buffer, leaving high-contrast shapes against a dark void before resuming the dense, hue-cycled feedback loop.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2541,111 +2538,7 @@
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.jpg",
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.213Z",
-      "captured_at": "2026-05-30T22:54:37.736Z"
-    },
-    {
-      "id": "milkdrop:flexi-martin-geiss-painterly-rogue-wave-strike",
-      "slug": "flexi-martin-geiss-painterly-rogue-wave-strike",
-      "name": "Flexi, martin + geiss - painterly rogue wave strike",
-      "author": "Flexi, martin + geiss",
-      "vibe": [
-        "minimalist",
-        "strobe",
-        "stark",
-        "flat"
-      ],
-      "motion": 0.2,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.1,
-        "treble": 0.1
-      },
-      "techniques": [
-        "audio_gating",
-        "hue_cycle"
-      ],
-      "technical_notes": "The preset renders solid, full-screen color fields that jump discretely between frames. These sudden state transitions are likely gated by beat detection on the bass attenuated of the synthetic test signal, triggering instant palette swaps. No spatial shaders, feedback samplers, or custom waves are active, resulting in a completely flat, minimalist presentation.",
-      "atelier": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/flexi-martin-geiss-painterly-rogue-wave-strike.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.211Z",
-      "captured_at": "2026-05-30T22:53:35.408Z"
-    },
-    {
-      "id": "milkdrop:flexi-martin-geiss-dedicated-to-the-sherwin-maxawow",
-      "slug": "flexi-martin-geiss-dedicated-to-the-sherwin-maxawow",
-      "name": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
-      "author": "Flexi, martin + geiss",
-      "vibe": [
-        "minimalist",
-        "strobe",
-        "bold",
-        "frenetic"
-      ],
-      "motion": 0.5,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.5,
-        "treble": 0.3
-      },
-      "techniques": [
-        "audio_gating",
-        "beat_burst"
-      ],
-      "technical_notes": "A minimalist solid-color canvas driven entirely by audio-gated state changes. The background color instantly switches on detected beats from the synthetic test signal, bypassing spatial feedback loops or sampler_main processing. The absence of decay trails or warp fields results in a stark, high-contrast strobe effect.",
-      "atelier": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.211Z",
-      "captured_at": "2026-05-30T22:53:02.322Z"
-    },
-    {
-      "id": "milkdrop:flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set",
-      "slug": "flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set",
-      "name": "Flexi, Stahlregen, Nitorami + Shifter - shader authoring motivation set",
-      "author": "Flexi, Stahlregen, Nitorami + Shifter",
-      "vibe": [
-        "geometric",
-        "sharp",
-        "origami",
-        "minimalist",
-        "stark"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating",
-        "warp_field"
-      ],
-      "technical_notes": "Custom shape equations render overlapping, sharp-edged polygonal structures that fold and shear dynamically. The vertex positions are modulated by bass attenuated from the synthetic test signal, driving rapid, origami-like structural transformations. The absence of frame feedback through sampler_main preserves the clean, high-contrast vector aesthetic against a solid black background.",
-      "atelier": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "source_type": "milkdrop",
-      "source_loader": "url",
-      "source_url": "/presets/milkdrop/flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.milk",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.209Z",
-      "captured_at": "2026-05-30T22:51:26.838Z"
+      "captured_at": "2026-05-30T23:24:40.247Z"
     },
     {
       "id": "milkdrop:flexi-self-lubricating",
@@ -2669,7 +2562,7 @@
         "beat_burst",
         "custom_wave"
       ],
-      "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the synthetic test signal, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
+      "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the music, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2703,7 +2596,7 @@
         "custom_wave",
         "audio_gating"
       ],
-      "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the synthetic test signal's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
+      "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the music's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [
@@ -2739,7 +2632,7 @@
         "audio_gating",
         "hue_cycle"
       ],
-      "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the synthetic test signal. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
+      "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the music. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2776,7 +2669,7 @@
         "beat_burst",
         "warp_field"
       ],
-      "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The synthetic test signal's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
+      "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The music's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2813,7 +2706,7 @@
         "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the synthetic test signal's mid-range, while the outer red and purple wing-like structures flare outward on the synthetic kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
+      "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the music's mid-range, while the outer red and purple wing-like structures flare outward on the kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
       "atelier": true,
       "brand_safe": false,
       "textures_needed": [],
@@ -2850,7 +2743,7 @@
         "hue_cycle",
         "chromatic_split"
       ],
-      "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the synthetic test signal. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
+      "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the music. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2888,7 +2781,7 @@
         "custom_wave",
         "decay_trail"
       ],
-      "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the synthetic test signal. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the synthetic kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
+      "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the music. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2927,7 +2820,7 @@
         "domain_repetition",
         "custom_wave"
       ],
-      "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The synthetic test signal's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
+      "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The music's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -2964,7 +2857,7 @@
         "hue_cycle",
         "decay_trail"
       ],
-      "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the synthetic kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
+      "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3003,7 +2896,7 @@
         "domain_repetition",
         "custom_wave"
       ],
-      "technical_notes": "A logarithmic spiral warp field drives a rapid zoom and rotation feedback loop via sampler_main. Sharp, needle-like custom waves trace geometric stained-glass facets that shatter and reform in response to treble transients in the synthetic test signal. High-frequency beat-gated triggers invert the color palette, shifting the render from deep saturated blues and yellows to a high-contrast, high-key white and magenta aesthetic.",
+      "technical_notes": "A logarithmic spiral warp field drives a rapid zoom and rotation feedback loop via sampler_main. Sharp, needle-like custom waves trace geometric stained-glass facets that shatter and reform in response to treble transients in the music. High-frequency beat-gated triggers invert the color palette, shifting the render from deep saturated blues and yellows to a high-contrast, high-key white and magenta aesthetic.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3040,7 +2933,7 @@
         "frame_feedback",
         "warp_field"
       ],
-      "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the synthetic test signal's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
+      "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the music's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3079,7 +2972,7 @@
         "custom_wave",
         "bloom_glow"
       ],
-      "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the synthetic test signal trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
+      "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the music trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3116,7 +3009,7 @@
         "warp_field",
         "decay_trail"
       ],
-      "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the synthetic test signal's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
+      "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the music's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3152,7 +3045,7 @@
         "hue_cycle",
         "decay_trail"
       ],
-      "technical_notes": "A nested, spiraling tunnel of rectangular outlines is generated via frame feedback using sampler_main with a zoom and rotation transform. A complex custom_wave in the center acts as a high-frequency oscilloscope, jittering rapidly in response to treble transients in the synthetic test signal. Continuous hue cycling rotates the background palette across the spectrum, while bass hits modulate the scale and twist of the tunnel structure.",
+      "technical_notes": "A nested, spiraling tunnel of rectangular outlines is generated via frame feedback using sampler_main with a zoom and rotation transform. A complex custom_wave in the center acts as a high-frequency oscilloscope, jittering rapidly in response to treble transients in the music. Continuous hue cycling rotates the background palette across the spectrum, while bass hits modulate the scale and twist of the tunnel structure.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3189,7 +3082,7 @@
         "custom_wave",
         "decay_trail"
       ],
-      "technical_notes": "A spiral warp field combined with frame feedback through sampler_main creates a ribbed, cavernous tunnel that zooms inward. A central custom_wave reacts to the synthetic test signal's treble frequencies, drawing chaotic white scribbles that are pulled into the feedback vortex. The color palette undergoes continuous hue cycling, shifting from deep purples to earthy ochres and greens.",
+      "technical_notes": "A spiral warp field combined with frame feedback through sampler_main creates a ribbed, cavernous tunnel that zooms inward. A central custom_wave reacts to the music's treble frequencies, drawing chaotic white scribbles that are pulled into the feedback vortex. The color palette undergoes continuous hue cycling, shifting from deep purples to earthy ochres and greens.",
       "atelier": true,
       "brand_safe": false,
       "textures_needed": [],
@@ -3226,7 +3119,7 @@
         "hue_cycle",
         "decay_trail"
       ],
-      "technical_notes": "A central custom wave draws a chaotic scribble that jitters in response to the treble of the synthetic test signal. A complex warp field with high zoom and rotation feedback through sampler_main transforms these lines into a spiraling, nested wireframe tunnel. The color palette undergoes continuous hue cycling, shifting the entire structure through vibrant neon states.",
+      "technical_notes": "A central custom wave draws a chaotic scribble that jitters in response to the treble of the music. A complex warp field with high zoom and rotation feedback through sampler_main transforms these lines into a spiraling, nested wireframe tunnel. The color palette undergoes continuous hue cycling, shifting the entire structure through vibrant neon states.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],
@@ -3263,7 +3156,7 @@
         "domain_repetition",
         "decay_trail"
       ],
-      "technical_notes": "A complex per-pixel warp shader applies a highly turbulent, mirrored advection field driven by the synthetic test signal's bass and mid frequencies. Frame feedback through sampler_main with a low decay rate creates persistent, bleeding fluid trails that are continuously folded by bilateral symmetry. The composite pass utilizes a high-contrast color mapping that cycles rapidly, resulting in intense chromatic shifts during transient peaks in the test signal.",
+      "technical_notes": "A complex per-pixel warp shader applies a highly turbulent, mirrored advection field driven by the music's bass and mid frequencies. Frame feedback through sampler_main with a low decay rate creates persistent, bleeding fluid trails that are continuously folded by bilateral symmetry. The composite pass utilizes a high-contrast color mapping that cycles rapidly, resulting in intense chromatic shifts during transient peaks in the test signal.",
       "atelier": false,
       "brand_safe": false,
       "textures_needed": [],

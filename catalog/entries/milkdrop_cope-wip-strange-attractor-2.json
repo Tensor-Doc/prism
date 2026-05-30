@@ -34,7 +34,7 @@
       "custom_wave",
       "decay_trail"
     ],
-    "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the synthetic test signal's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
+    "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the music's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

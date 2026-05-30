@@ -37,7 +37,7 @@
       "hue_cycle",
       "decay_trail"
     ],
-    "technical_notes": "A central custom wave draws a chaotic scribble that jitters in response to the treble of the synthetic test signal. A complex warp field with high zoom and rotation feedback through sampler_main transforms these lines into a spiraling, nested wireframe tunnel. The color palette undergoes continuous hue cycling, shifting the entire structure through vibrant neon states.",
+    "technical_notes": "A central custom wave draws a chaotic scribble that jitters in response to the treble of the music. A complex warp field with high zoom and rotation feedback through sampler_main transforms these lines into a spiraling, nested wireframe tunnel. The color palette undergoes continuous hue cycling, shifting the entire structure through vibrant neon states.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

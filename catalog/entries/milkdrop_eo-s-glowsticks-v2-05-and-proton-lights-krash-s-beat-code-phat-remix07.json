@@ -38,7 +38,7 @@
       "domain_repetition",
       "custom_wave"
     ],
-    "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The synthetic test signal's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
+    "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The music's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

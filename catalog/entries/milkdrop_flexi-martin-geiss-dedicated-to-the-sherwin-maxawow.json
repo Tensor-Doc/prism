@@ -34,7 +34,7 @@
       "audio_gating",
       "beat_burst"
     ],
-    "technical_notes": "A minimalist solid-color canvas driven entirely by audio-gated state changes. The background color instantly switches on detected beats from the synthetic test signal, bypassing spatial feedback loops or sampler_main processing. The absence of decay trails or warp fields results in a stark, high-contrast strobe effect.",
+    "technical_notes": "A minimalist solid-color canvas driven entirely by audio-gated state changes. The background color instantly switches on detected beats from the music, bypassing spatial feedback loops or sampler_main processing. The absence of decay trails or warp fields results in a stark, high-contrast strobe effect.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
@@ -43,8 +43,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg"
+    "video": "/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
+    "thumb": "/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -52,6 +52,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

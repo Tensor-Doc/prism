@@ -38,7 +38,7 @@
       "hue_cycle",
       "bloom_glow"
     ],
-    "technical_notes": "Symmetrical custom waves render high-frequency scribbles in the center, modulated by the treble of the synthetic test signal. A per-pixel warp shader drives an hourglass distortion and concentric ripple patterns that expand outward on synthetic kick hits. Frame feedback through sampler_main with low decay creates persistent, glowing trails that cycle through vibrant rainbow and gold palettes.",
+    "technical_notes": "Symmetrical custom waves render high-frequency scribbles in the center, modulated by the treble of the music. A per-pixel warp shader drives an hourglass distortion and concentric ripple patterns that expand outward on kick hits. Frame feedback through sampler_main with low decay creates persistent, glowing trails that cycle through vibrant rainbow and gold palettes.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

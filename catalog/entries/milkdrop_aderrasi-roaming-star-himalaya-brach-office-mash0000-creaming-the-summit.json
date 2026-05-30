@@ -37,7 +37,7 @@
       "domain_repetition",
       "frame_feedback"
     ],
-    "technical_notes": "Custom shapes and waves render rotating, nested triangles that scale and multiply based on the synthetic test signal's bass and treble. A high-frequency step-like per-pixel warp creates horizontal and vertical digital glitch lines across the screen, modulating with treble peaks. Beat-gated triggers suddenly fill the wireframe shapes with bright, pastel-colored gradients, while frame feedback via sampler_main is heavily attenuated to keep the background clean and dark.",
+    "technical_notes": "Custom shapes and waves render rotating, nested triangles that scale and multiply based on the music's bass and treble. A high-frequency step-like per-pixel warp creates horizontal and vertical digital glitch lines across the screen, modulating with treble peaks. Beat-gated triggers suddenly fill the wireframe shapes with bright, pastel-colored gradients, while frame feedback via sampler_main is heavily attenuated to keep the background clean and dark.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

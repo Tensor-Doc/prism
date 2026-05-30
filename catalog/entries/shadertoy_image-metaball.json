@@ -36,7 +36,7 @@
       "fbm_noise",
       "audio_gating"
     ],
-    "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the synthetic test signal, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
+    "technical_notes": "A raymarched signed distance field (SDF) of a deformed sphere is rendered with a smooth, dark metallic surface and a glowing cyan rim light. The sphere's radius and noise deformation amplitude are modulated by the bass frequencies of the music, causing it to expand and pulse outward during kick events. The soft bloom on the rim suggests a composite shader utilizing a blur pyramid to create the glowing halo.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

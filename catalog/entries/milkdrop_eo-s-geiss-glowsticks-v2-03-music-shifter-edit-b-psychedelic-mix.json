@@ -37,7 +37,7 @@
       "hue_cycle",
       "beat_burst"
     ],
-    "technical_notes": "A complex spiral warp field drives a continuous zoom and rotation feedback loop through sampler_main, creating a deep, recursive tunnel. Custom waves modulated by high-frequency bands of the synthetic test signal generate the jagged, sawtooth ribbons that spiral inward. Beat-gated triggers from the synthetic kick modulate the zoom and rotation parameters, causing sudden expansions and direction shifts.",
+    "technical_notes": "A complex spiral warp field drives a continuous zoom and rotation feedback loop through sampler_main, creating a deep, recursive tunnel. Custom waves modulated by high-frequency bands of the music generate the jagged, sawtooth ribbons that spiral inward. Beat-gated triggers from the kick modulate the zoom and rotation parameters, causing sudden expansions and direction shifts.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

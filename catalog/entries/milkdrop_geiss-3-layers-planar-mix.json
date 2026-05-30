@@ -13,32 +13,31 @@
   },
   "annotation": {
     "vibe": [
-      "glitchy",
-      "geometric",
-      "stark",
-      "retro-tech"
+      "minimalist",
+      "void",
+      "dark",
+      "sparse",
+      "stark"
     ],
-    "motion": 0.6,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#c8c8f0"
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.4
+      "bass": 0.2,
+      "mid": 0.4,
+      "treble": 0.3
     },
     "techniques": [
-      "audio_gating",
-      "custom_wave",
-      "frame_feedback"
+      "custom_wave"
     ],
-    "technical_notes": "The preset undergoes rapid state-switching gated by the bass frequencies of the synthetic test signal, alternating between a dense orthogonal grid structure and a stark diagonal wedge mask. Custom waves are utilized to render the horizontal oscilloscope lines and vertical grid segments. High decay in the feedback loop ensures sharp, near-instantaneous frame transitions with minimal persistence in sampler_main.",
+    "technical_notes": "Two custom_wave elements are rendered as thin, stark white lines across a black void. They display the raw waveform of the test signal with minimal processing, slowly rotating in orientation over the 15-second capture. No frame feedback or warp shaders are active, resulting in a completely clean, zero-decay presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:55:40.177Z"
+    "captured_at": "2026-05-30T23:25:42.117Z"
   },
   "assets": {
     "textures_needed": [],

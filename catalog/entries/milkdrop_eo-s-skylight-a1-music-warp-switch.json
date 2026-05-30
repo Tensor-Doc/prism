@@ -38,7 +38,7 @@
       "hue_cycle",
       "bloom_glow"
     ],
-    "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the synthetic test signal's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
+    "technical_notes": "A logarithmic spiral warp field transforms custom wave inputs into an intricate, recursive geometric fractal. Frame feedback through sampler_main with a high zoom factor creates infinite nesting, while the music's bass transients modulate the rotation speed and trigger bright bloom_glow flashes. The color palette cycles through a wide spectrum, shifting from muted lavender to vibrant cyan and green.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

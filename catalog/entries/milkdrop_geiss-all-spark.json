@@ -34,7 +34,7 @@
       "decay_trail",
       "frame_feedback"
     ],
-    "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the synthetic test signal. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the synthetic kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
+    "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the music. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

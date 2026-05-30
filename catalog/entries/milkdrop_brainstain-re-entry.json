@@ -35,7 +35,7 @@
       "beat_burst",
       "decay_trail"
     ],
-    "technical_notes": "A sparse, high-decay particle system emits transient streaks from the center, driven by high-frequency components of the synthetic test signal. Custom waves or motion vectors are gated to beat-detection thresholds, creating brief, energetic bursts that immediately decay into the black background. The minimal frame feedback via sampler_main prevents persistent trails, maintaining a stark, cosmic aesthetic.",
+    "technical_notes": "A sparse, high-decay particle system emits transient streaks from the center, driven by high-frequency components of the music. Custom waves or motion vectors are gated to beat-detection thresholds, creating brief, energetic bursts that immediately decay into the black background. The minimal frame feedback via sampler_main prevents persistent trails, maintaining a stark, cosmic aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

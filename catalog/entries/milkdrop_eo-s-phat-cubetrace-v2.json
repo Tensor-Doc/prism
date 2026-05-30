@@ -38,7 +38,7 @@
       "custom_wave",
       "bloom_glow"
     ],
-    "technical_notes": "Custom wave equations render a shifting geometric wireframe grid that deforms in response to the synthetic test signal. Motion vectors are configured as radiating white streaks that expand outwards, while frame feedback through sampler_main creates a persistent glowing trail. A bright central bloom is triggered by the synthetic kick, accompanied by simulated lens flare circles.",
+    "technical_notes": "Custom wave equations render a shifting geometric wireframe grid that deforms in response to the music. Motion vectors are configured as radiating white streaks that expand outwards, while frame feedback through sampler_main creates a persistent glowing trail. A bright central bloom is triggered by the kick, accompanied by simulated lens flare circles.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -36,7 +36,7 @@
       "decay_trail",
       "audio_gating"
     ],
-    "technical_notes": "A central custom_wave filament reacts sharply to the treble of the synthetic test signal, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
+    "technical_notes": "A central custom_wave filament reacts sharply to the treble of the music, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

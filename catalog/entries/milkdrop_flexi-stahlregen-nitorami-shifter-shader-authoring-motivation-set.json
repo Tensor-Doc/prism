@@ -35,7 +35,7 @@
       "audio_gating",
       "warp_field"
     ],
-    "technical_notes": "Custom shape equations render overlapping, sharp-edged polygonal structures that fold and shear dynamically. The vertex positions are modulated by bass attenuated from the synthetic test signal, driving rapid, origami-like structural transformations. The absence of frame feedback through sampler_main preserves the clean, high-contrast vector aesthetic against a solid black background.",
+    "technical_notes": "Custom shape equations render overlapping, sharp-edged polygonal structures that fold and shear dynamically. The vertex positions are modulated by bass attenuated from the music, driving rapid, origami-like structural transformations. The absence of frame feedback through sampler_main preserves the clean, high-contrast vector aesthetic against a solid black background.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
@@ -44,8 +44,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg"
+    "video": "/videos/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.webm",
+    "thumb": "/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -53,6 +53,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24810 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

@@ -32,7 +32,7 @@
       "particle_system",
       "audio_gating"
     ],
-    "technical_notes": "The preset is extremely sparse and mostly dark, rendering only a few discrete white points or lines of dots against a black void. These minimal particles appear to be driven by transient spikes in the synthetic test signal, likely mapped to custom shapes or a simple particle system. The decay rate is extremely high, leaving no persistent trails or feedback in sampler_main.",
+    "technical_notes": "The preset is extremely sparse and mostly dark, rendering only a few discrete white points or lines of dots against a black void. These minimal particles appear to be driven by transient spikes in the music, likely mapped to custom shapes or a simple particle system. The decay rate is extremely high, leaving no persistent trails or feedback in sampler_main.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

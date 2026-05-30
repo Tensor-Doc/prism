@@ -14,32 +14,29 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "digital",
+      "void",
       "stark",
-      "cybernetic"
+      "sparse"
     ],
-    "motion": 0.3,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#ffffff",
-      "#e5c158"
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.5,
+      "bass": 0.1,
+      "mid": 0.3,
       "treble": 0.4
     },
     "techniques": [
-      "custom_wave",
-      "audio_gating",
-      "decay_trail"
+      "custom_wave"
     ],
-    "technical_notes": "A custom_wave oscilloscope draws a dense, trailing comet-like waveform on the left, which reacts to the mid and treble frequencies of the synthetic test signal. At around 8 seconds, an audio-gated grid of vertical and horizontal lines is triggered, likely driven by a threshold on the bass attenuated. The background remains mostly black with very high decay, preventing persistent frame feedback except within the custom wave's own trails.",
+    "technical_notes": "A highly minimalist preset consisting of a single custom_wave oscilloscope line rendered against a pitch-black background. The line exhibits high-frequency ripples in response to the mid and treble bands of the music, while a high decay rate ensures no persistent trails or frame feedback remain. The absence of warp shaders or sampler_main feedback leaves the screen completely dark between activations.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:57:16.480Z"
+    "captured_at": "2026-05-30T23:27:14.468Z"
   },
   "assets": {
     "textures_needed": [],

@@ -36,7 +36,7 @@
       "warp_field",
       "decay_trail"
     ],
-    "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the synthetic test signal's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
+    "technical_notes": "A central custom_wave renders a scribbling oscilloscope line that reacts dynamically to the music's treble and bass. A horizontal warp field stretches and advects the frame buffer outwards, creating a layered, undulating background of parallel lines through sampler_main feedback. The color palette is restricted to sage greens, black, and white, with a high decay rate keeping the horizontal channel clear in the center.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

@@ -36,7 +36,7 @@
       "hue_cycle",
       "decay_trail"
     ],
-    "technical_notes": "A nested, spiraling tunnel of rectangular outlines is generated via frame feedback using sampler_main with a zoom and rotation transform. A complex custom_wave in the center acts as a high-frequency oscilloscope, jittering rapidly in response to treble transients in the synthetic test signal. Continuous hue cycling rotates the background palette across the spectrum, while bass hits modulate the scale and twist of the tunnel structure.",
+    "technical_notes": "A nested, spiraling tunnel of rectangular outlines is generated via frame feedback using sampler_main with a zoom and rotation transform. A complex custom_wave in the center acts as a high-frequency oscilloscope, jittering rapidly in response to treble transients in the music. Continuous hue cycling rotates the background palette across the spectrum, while bass hits modulate the scale and twist of the tunnel structure.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

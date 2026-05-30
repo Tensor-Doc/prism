@@ -37,7 +37,7 @@
       "bloom_glow",
       "decay_trail"
     ],
-    "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the synthetic test signal. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every synthetic kick.",
+    "technical_notes": "Bilateral symmetry is enforced across the central axis, mirroring the complex orbits of custom waves that react to the music. These parametric waves trace fine, dotted trajectories that persist in the frame buffer due to a low decay rate in sampler_main, creating painterly golden wings. The background features a deep crimson glow modulated by bass attenuated, while the warp field drives a pulsating radial zoom on every kick.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -34,7 +34,7 @@
       "beat_burst",
       "custom_wave"
     ],
-    "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the synthetic test signal.",
+    "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the music.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

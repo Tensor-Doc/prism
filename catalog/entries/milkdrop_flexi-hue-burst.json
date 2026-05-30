@@ -32,7 +32,7 @@
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave configured as a circular waveform is rendered against a stark black background. The wave's radius and vertex displacement react sharply to the bass frequencies of the synthetic test signal, while sudden position jumps are gated to the synthetic kick. The lack of frame feedback (sampler_main is not blended) results in a clean, trail-free geometric presentation.",
+    "technical_notes": "A single custom wave configured as a circular waveform is rendered against a stark black background. The wave's radius and vertex displacement react sharply to the bass frequencies of the music, while sudden position jumps are gated to the kick. The lack of frame feedback (sampler_main is not blended) results in a clean, trail-free geometric presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

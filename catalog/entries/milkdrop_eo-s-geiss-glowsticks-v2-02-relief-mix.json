@@ -33,7 +33,7 @@
       "audio_gating",
       "beat_burst"
     ],
-    "technical_notes": "A single custom wave configured as a thick, curved ribbon sweeps across the screen, with its scale and rotation modulated by the synthetic test signal. High decay rate ensures no persistent trails in sampler_main, maintaining a stark black background. Beat detection on bass attenuated triggers sudden expansions in the shape's width and radius, creating a clean, minimalist kinetic display.",
+    "technical_notes": "A single custom wave configured as a thick, curved ribbon sweeps across the screen, with its scale and rotation modulated by the music. High decay rate ensures no persistent trails in sampler_main, maintaining a stark black background. Beat detection on bass attenuated triggers sudden expansions in the shape's width and radius, creating a clean, minimalist kinetic display.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

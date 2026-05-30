@@ -33,7 +33,7 @@
       "particle_system",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave element is rendered as a sharp, peach-colored ribbon darting erratically across a pitch-black background. High decay settings ensure no persistent trails remain in sampler_main, leaving only the instantaneous shape. The trajectory and deformation of this 'chaser' are modulated by the synthetic test signal's treble and bass frequencies.",
+    "technical_notes": "A single custom wave element is rendered as a sharp, peach-colored ribbon darting erratically across a pitch-black background. High decay settings ensure no persistent trails remain in sampler_main, leaving only the instantaneous shape. The trajectory and deformation of this 'chaser' are modulated by the music's treble and bass frequencies.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

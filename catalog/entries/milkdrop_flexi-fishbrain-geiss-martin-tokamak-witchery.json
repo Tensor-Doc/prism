@@ -18,27 +18,27 @@
       "sparse",
       "void"
     ],
-    "motion": 0.1,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#6a0dad"
+      "#511f73"
     ],
     "audio_affinity": {
-      "bass": 0.7,
+      "bass": 0.5,
       "mid": 0.1,
-      "treble": 0.3
+      "treble": 0.1
     },
     "techniques": [
       "custom_wave",
-      "particle_system",
+      "audio_gating",
       "beat_burst"
     ],
-    "technical_notes": "Discrete custom shapes (circles) are rendered on a black background, triggered as beat-gated bursts by the synthetic kick. Extremely sparse motion vectors or particles react to the treble sparkle of the test signal. With decay set to maximum and no frame feedback via sampler_main, each element vanishes instantly, preserving a dark, minimalist void.",
+    "technical_notes": "A highly minimalist, dark preset where custom shapes or waves in the form of thin violet circles are gated to trigger on the bass threshold of the test signal. The screen remains predominantly black between beats due to a very high decay rate that prevents persistent frame feedback in sampler_main. The rendering relies on sparse, discrete custom wave elements that briefly trace circular paths before vanishing.",
     "brand_safe": true,
-    "atelier": false,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T22:52:29.608Z"
+    "captured_at": "2026-05-30T23:23:00.276Z"
   },
   "assets": {
     "textures_needed": [],

@@ -36,7 +36,7 @@
       "particle_system",
       "audio_gating"
     ],
-    "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
+    "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The music's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

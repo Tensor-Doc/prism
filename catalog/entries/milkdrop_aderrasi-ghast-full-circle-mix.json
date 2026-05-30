@@ -37,7 +37,7 @@
       "decay_trail",
       "hue_cycle"
     ],
-    "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the synthetic kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
+    "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -39,7 +39,7 @@
       "custom_wave",
       "bloom_glow"
     ],
-    "technical_notes": "Custom shapes acting as glowing ribbons are rendered with high additive blending, utilizing sampler_blur1 to generate a heavy bloom glow. The warp field applies a radial spiral distortion driven by the bass of the synthetic test signal, while frame feedback through sampler_main creates persistent, high-contrast trails. Beat-gated triggers on the synthetic kick cause sudden reversals in rotation direction and sharp shifts in the color palette.",
+    "technical_notes": "Custom shapes acting as glowing ribbons are rendered with high additive blending, utilizing sampler_blur1 to generate a heavy bloom glow. The warp field applies a radial spiral distortion driven by the bass of the music, while frame feedback through sampler_main creates persistent, high-contrast trails. Beat-gated triggers on the kick cause sudden reversals in rotation direction and sharp shifts in the color palette.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

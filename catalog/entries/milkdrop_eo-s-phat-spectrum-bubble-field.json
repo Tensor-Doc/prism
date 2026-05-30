@@ -36,7 +36,7 @@
       "custom_wave",
       "frame_feedback"
     ],
-    "technical_notes": "A complex domain repetition shader tiles concentric circular SDFs across the screen, driven by a per-pixel warp field that zooms outward. Custom waves are mapped to circular paths, modulated by the treble frequencies of the synthetic test signal to produce thin, colorful orbital arcs. The feedback loop in sampler_main maintains a high decay, keeping the grid of bubbles sharp and preventing excessive smearing.",
+    "technical_notes": "A complex domain repetition shader tiles concentric circular SDFs across the screen, driven by a per-pixel warp field that zooms outward. Custom waves are mapped to circular paths, modulated by the treble frequencies of the music to produce thin, colorful orbital arcs. The feedback loop in sampler_main maintains a high decay, keeping the grid of bubbles sharp and preventing excessive smearing.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

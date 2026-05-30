@@ -35,7 +35,7 @@
       "custom_wave",
       "hue_cycle"
     ],
-    "technical_notes": "A highly minimalist preset rendering custom semi-circular shapes at the top and bottom viewport boundaries. The bottom shape scales dynamically with the bass envelope of the synthetic test signal, while the top shape is gated by high-frequency thresholds. Color transitions between teal, cyan, and red are driven by a slow hue cycle mapped to the custom shape color parameters.",
+    "technical_notes": "A highly minimalist preset rendering custom semi-circular shapes at the top and bottom viewport boundaries. The bottom shape scales dynamically with the bass envelope of the music, while the top shape is gated by high-frequency thresholds. Color transitions between teal, cyan, and red are driven by a slow hue cycle mapped to the custom shape color parameters.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

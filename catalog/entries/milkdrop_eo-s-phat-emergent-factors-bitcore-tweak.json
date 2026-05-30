@@ -36,7 +36,7 @@
       "beat_burst",
       "warp_field"
     ],
-    "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The synthetic test signal's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
+    "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The music's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

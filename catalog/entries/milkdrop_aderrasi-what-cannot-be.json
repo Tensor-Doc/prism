@@ -37,7 +37,7 @@
       "warp_field",
       "decay_trail"
     ],
-    "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the synthetic test signal's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
+    "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the music's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

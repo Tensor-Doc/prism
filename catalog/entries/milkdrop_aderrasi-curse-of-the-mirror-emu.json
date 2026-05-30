@@ -37,7 +37,7 @@
       "domain_repetition",
       "decay_trail"
     ],
-    "technical_notes": "A complex per-pixel warp shader applies a highly turbulent, mirrored advection field driven by the synthetic test signal's bass and mid frequencies. Frame feedback through sampler_main with a low decay rate creates persistent, bleeding fluid trails that are continuously folded by bilateral symmetry. The composite pass utilizes a high-contrast color mapping that cycles rapidly, resulting in intense chromatic shifts during transient peaks in the test signal.",
+    "technical_notes": "A complex per-pixel warp shader applies a highly turbulent, mirrored advection field driven by the music's bass and mid frequencies. Frame feedback through sampler_main with a low decay rate creates persistent, bleeding fluid trails that are continuously folded by bilateral symmetry. The composite pass utilizes a high-contrast color mapping that cycles rapidly, resulting in intense chromatic shifts during transient peaks in the test signal.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

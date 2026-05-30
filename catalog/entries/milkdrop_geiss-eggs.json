@@ -37,7 +37,7 @@
       "custom_wave",
       "chromatic_split"
     ],
-    "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the synthetic test signal. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
+    "technical_notes": "A spherical warp field creates a prominent lens distortion that expands and contracts violently in response to bass transients in the music. Chaotic custom waves are drawn as high-contrast white lines, leaving short-lived trails in sampler_main due to a high decay rate. The composite shader applies a subtle chromatic split at high-luminance boundaries, accentuating the electric, high-voltage aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

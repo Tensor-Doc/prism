@@ -33,7 +33,7 @@
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the synthetic test signal's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
+    "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the music's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

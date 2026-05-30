@@ -38,7 +38,7 @@
       "bloom_glow",
       "decay_trail"
     ],
-    "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the synthetic test signal's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
+    "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the music's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

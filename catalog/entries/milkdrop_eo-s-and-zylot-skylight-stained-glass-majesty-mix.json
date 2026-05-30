@@ -37,7 +37,7 @@
       "domain_repetition",
       "custom_wave"
     ],
-    "technical_notes": "A logarithmic spiral warp field drives frame feedback through sampler_main to construct a deep, repeating tunnel. The preset undergoes dramatic audio-gated inversions triggered by the synthetic kick, transitioning from a dark textured cavern to a high-contrast white field. Intricate custom waves are radially duplicated and modulated by treble frequencies to form the sharp, geometric spiral arms.",
+    "technical_notes": "A logarithmic spiral warp field drives frame feedback through sampler_main to construct a deep, repeating tunnel. The preset undergoes dramatic audio-gated inversions triggered by the kick, transitioning from a dark textured cavern to a high-contrast white field. Intricate custom waves are radially duplicated and modulated by treble frequencies to form the sharp, geometric spiral arms.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

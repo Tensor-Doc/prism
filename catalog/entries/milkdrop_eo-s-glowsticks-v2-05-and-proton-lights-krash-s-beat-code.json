@@ -37,7 +37,7 @@
       "frame_feedback",
       "bloom_glow"
     ],
-    "technical_notes": "Multiple custom waves draw complex 3D parametric ribbon curves and dashed orbital trails. The synthetic test signal's bass transients drive the global zoom and rotation parameters, while high-frequency treble transients modulate the dashed particle spacing. Frame feedback through sampler_main combined with a moderate decay rate creates a clean, glowing path history.",
+    "technical_notes": "Multiple custom waves draw complex 3D parametric ribbon curves and dashed orbital trails. The music's bass transients drive the global zoom and rotation parameters, while high-frequency treble transients modulate the dashed particle spacing. Frame feedback through sampler_main combined with a moderate decay rate creates a clean, glowing path history.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

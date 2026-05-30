@@ -37,7 +37,7 @@
       "beat_burst",
       "decay_trail"
     ],
-    "technical_notes": "Custom waves render a minimalist 3D wireframe cube structure alongside a localized particle emitter on the left. The synthetic test signal's bass transients trigger discrete structural shifts and spark bursts via beat-gated equations. A high decay rate in the composite pass ensures clean, sharp vector lines with minimal frame feedback persistence.",
+    "technical_notes": "Custom waves render a minimalist 3D wireframe cube structure alongside a localized particle emitter on the left. The music's bass transients trigger discrete structural shifts and spark bursts via beat-gated equations. A high decay rate in the composite pass ensures clean, sharp vector lines with minimal frame feedback persistence.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

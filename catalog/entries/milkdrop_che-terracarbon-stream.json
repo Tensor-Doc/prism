@@ -38,7 +38,7 @@
       "decay_trail",
       "audio_gating"
     ],
-    "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the synthetic test signal. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
+    "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the music. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

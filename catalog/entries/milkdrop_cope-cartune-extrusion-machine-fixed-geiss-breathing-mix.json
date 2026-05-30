@@ -34,7 +34,7 @@
       "beat_burst",
       "domain_repetition"
     ],
-    "technical_notes": "Custom shapes configured as semi-circles are rendered at the bottom and top boundaries of the screen, utilizing vertical domain repetition. Their scale and brightness are directly gated by the bass frequencies of the synthetic test signal. A high decay rate and zero warp displacement keep the remainder of the frame entirely black, preventing any feedback trails in sampler_main.",
+    "technical_notes": "Custom shapes configured as semi-circles are rendered at the bottom and top boundaries of the screen, utilizing vertical domain repetition. Their scale and brightness are directly gated by the bass frequencies of the music. A high decay rate and zero warp displacement keep the remainder of the frame entirely black, preventing any feedback trails in sampler_main.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -32,7 +32,7 @@
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the synthetic test signal, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
+    "technical_notes": "A highly minimalist preset featuring a single custom shape circle and a custom wave line acting as a pendulum. The line's vertical extension and brightness modulate in response to the music, showing no frame feedback or warp field. The rendering is stark black and white with a high decay rate that instantly clears previous frames.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

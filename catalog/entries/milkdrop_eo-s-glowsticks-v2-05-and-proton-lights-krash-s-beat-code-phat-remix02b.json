@@ -37,7 +37,7 @@
       "hue_cycle",
       "decay_trail"
     ],
-    "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the synthetic kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
+    "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

@@ -36,7 +36,7 @@
       "warp_field",
       "decay_trail"
     ],
-    "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
+    "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the music. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

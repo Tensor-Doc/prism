@@ -36,7 +36,7 @@
       "domain_repetition",
       "decay_trail"
     ],
-    "technical_notes": "A central nested triangle custom shape with an amber core pulses dynamically to the bass of the synthetic test signal. Spiraling rings of circles are rendered via custom waves that rotate and scale through space, while a radial bloom effect is achieved by blending the current frame with a blurred feedback sampler. Low decay in sampler_main maintains clean, sharp geometric lines with minimal trailing artifacts.",
+    "technical_notes": "A central nested triangle custom shape with an amber core pulses dynamically to the bass of the music. Spiraling rings of circles are rendered via custom waves that rotate and scale through space, while a radial bloom effect is achieved by blending the current frame with a blurred feedback sampler. Low decay in sampler_main maintains clean, sharp geometric lines with minimal trailing artifacts.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

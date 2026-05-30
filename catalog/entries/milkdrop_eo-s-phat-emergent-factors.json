@@ -37,7 +37,7 @@
       "frame_feedback",
       "warp_field"
     ],
-    "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the synthetic test signal's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
+    "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the music's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

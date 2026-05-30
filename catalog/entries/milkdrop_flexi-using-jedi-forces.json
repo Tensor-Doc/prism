@@ -35,7 +35,7 @@
       "custom_wave",
       "decay_trail"
     ],
-    "technical_notes": "A custom wave rendered as a sharp black triangle on the left edge of the screen reacts dynamically to the synthetic test signal, with its jagged, comb-like vertices modulating in response to high-frequency transients. A digital warp field creates a subtle vertical grid-like texture in the red background, while frame feedback through sampler_main preserves transient diagonal slash lines triggered by the synthetic kick.",
+    "technical_notes": "A custom wave rendered as a sharp black triangle on the left edge of the screen reacts dynamically to the music, with its jagged, comb-like vertices modulating in response to high-frequency transients. A digital warp field creates a subtle vertical grid-like texture in the red background, while frame feedback through sampler_main preserves transient diagonal slash lines triggered by the kick.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",

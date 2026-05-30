@@ -38,7 +38,7 @@
       "bloom_glow",
       "decay_trail"
     ],
-    "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the synthetic test signal. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the synthetic test signal trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
+    "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the music. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the music trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

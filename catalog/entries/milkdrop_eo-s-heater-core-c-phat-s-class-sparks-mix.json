@@ -37,7 +37,7 @@
       "custom_wave",
       "decay_trail"
     ],
-    "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the synthetic test signal. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the synthetic kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
+    "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the music. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",

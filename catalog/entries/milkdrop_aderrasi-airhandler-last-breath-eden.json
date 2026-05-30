@@ -37,7 +37,7 @@
       "bloom_glow",
       "decay_trail"
     ],
-    "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
+    "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the music. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",

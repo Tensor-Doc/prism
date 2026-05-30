@@ -37,7 +37,7 @@
       "hue_cycle",
       "custom_wave"
     ],
-    "technical_notes": "The preset employs aggressive domain repetition to create a multi-axial kaleidoscopic mirror effect. High-frequency elements of the synthetic test signal drive the visibility of custom waves rendered as dotted neon paths, while a high decay rate ensures snappy frame-to-frame transitions without persistent trails. State-switching logic driven by the synthetic kick gates rapid transitions between distinct geometric configurations and color palettes.",
+    "technical_notes": "The preset employs aggressive domain repetition to create a multi-axial kaleidoscopic mirror effect. High-frequency elements of the music drive the visibility of custom waves rendered as dotted neon paths, while a high decay rate ensures snappy frame-to-frame transitions without persistent trails. State-switching logic driven by the kick gates rapid transitions between distinct geometric configurations and color palettes.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
