@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-dancing-spirits",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-dancing-spirits.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Dancing Spirits",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.237Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

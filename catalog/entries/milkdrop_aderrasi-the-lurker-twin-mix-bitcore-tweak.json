@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:aderrasi-the-lurker-twin-mix-bitcore-tweak",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/aderrasi-the-lurker-twin-mix-bitcore-tweak.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
+    "author": "Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.172Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

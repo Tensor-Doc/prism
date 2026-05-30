@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-tokamak-plus-4",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-tokamak-plus-4.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Tokamak Plus 4",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.286Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

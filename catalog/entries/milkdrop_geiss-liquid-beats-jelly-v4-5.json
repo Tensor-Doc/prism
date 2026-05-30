@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-liquid-beats-jelly-v4-5",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-liquid-beats-jelly-v4-5.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "geiss - liquid beats (jelly v4.5)",
+    "author": "geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.480Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

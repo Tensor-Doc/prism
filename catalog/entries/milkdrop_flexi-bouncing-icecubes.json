@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:flexi-bouncing-icecubes",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-bouncing-icecubes.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - bouncing icecubes",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "fc_clouds"
+      },
+      {
+        "name": "fc_clouds2"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.461Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

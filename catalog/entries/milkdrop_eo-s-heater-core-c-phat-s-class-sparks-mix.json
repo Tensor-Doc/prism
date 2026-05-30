@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-heater-core-c-phat-s-class-sparks-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-heater-core-c-phat-s-class-sparks-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
+    "author": "Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.191Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

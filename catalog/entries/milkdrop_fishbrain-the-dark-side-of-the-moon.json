@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-the-dark-side-of-the-moon",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-the-dark-side-of-the-moon.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fiShbRaiN - the dark side of the moon",
+    "author": "fiShbRaiN"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.452Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

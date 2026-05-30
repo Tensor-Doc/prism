@@ -1,0 +1,25 @@
+{
+  "id": "milkdrop:mig-085-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/mig-085-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Mig_085"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.401Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

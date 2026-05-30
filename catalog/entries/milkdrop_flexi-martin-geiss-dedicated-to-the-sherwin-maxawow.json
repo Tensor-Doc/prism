@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-martin-geiss-dedicated-to-the-sherwin-maxawow",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
+    "author": "Flexi, martin + geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.211Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

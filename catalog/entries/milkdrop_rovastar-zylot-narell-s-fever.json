@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-zylot-narell-s-fever",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-zylot-narell-s-fever.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Zylot - Narell's Fever",
+    "author": "Rovastar + Zylot"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.346Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

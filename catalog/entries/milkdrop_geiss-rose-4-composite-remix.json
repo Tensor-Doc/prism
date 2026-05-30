@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-rose-4-composite-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-rose-4-composite-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Rose 4 (composite remix)",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.272Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-digitunnel",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-digitunnel.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Digitunnel",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.241Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:redi-jedi-pladman-is-no-more",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/redi-jedi-pladman-is-no-more.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Redi Jedi - pladman is no more",
+    "author": "Redi Jedi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "rand02"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.326Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

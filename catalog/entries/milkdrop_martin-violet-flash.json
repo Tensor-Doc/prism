@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-violet-flash",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-violet-flash.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - violet flash",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.558Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

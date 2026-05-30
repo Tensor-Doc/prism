@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-repeater-13-definitive",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-repeater-13-definitive.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. - repeater 13 - definitive",
+    "author": "Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.192Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

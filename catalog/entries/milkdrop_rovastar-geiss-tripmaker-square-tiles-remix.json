@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:rovastar-geiss-tripmaker-square-tiles-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-geiss-tripmaker-square-tiles-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Geiss - Tripmaker (square tiles remix)",
+    "author": "Rovastar + Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.336Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

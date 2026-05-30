@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:orb-inferno",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-inferno.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Inferno",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "grad3"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.312Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

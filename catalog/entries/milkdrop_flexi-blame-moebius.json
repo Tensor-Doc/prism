@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:flexi-blame-moebius",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-blame-moebius.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - blame moebius",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "fc_wrenches"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.458Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-wip-strange-attractor-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-wip-strange-attractor-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Cope-WIP - Strange Attractor 2",
+    "author": "Cope-WIP"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.179Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

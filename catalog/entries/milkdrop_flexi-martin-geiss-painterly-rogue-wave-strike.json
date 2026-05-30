@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-martin-geiss-painterly-rogue-wave-strike",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-martin-geiss-painterly-rogue-wave-strike.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi, martin + geiss - painterly rogue wave strike",
+    "author": "Flexi, martin + geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.211Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

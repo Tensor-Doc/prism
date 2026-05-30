@@ -12,6 +12,7 @@
 import { join } from "node:path";
 import { existsSync } from "node:fs";
 
+import { runIngest } from "./commands/ingest";
 import { runMigrate } from "./commands/migrate";
 
 function findRepoRoot(): string {
@@ -43,8 +44,18 @@ function main(): void {
       runMigrate(repoRoot, dryRun);
       break;
     }
+    case "ingest": {
+      const path = args.find((a) => !a.startsWith("--"));
+      if (!path) {
+        console.error("[prism] ingest needs a source path, e.g. `pnpm prism ingest favorites`");
+        process.exit(1);
+      }
+      const limitArg = args.find((a) => a.startsWith("--limit="));
+      const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
+      runIngest(repoRoot, path, { limit });
+      break;
+    }
     case "validate":
-    case "ingest":
     case "annotate":
     case "test-presets":
       console.error(`[prism] '${command}' not implemented yet`);

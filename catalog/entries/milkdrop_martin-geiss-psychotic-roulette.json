@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-geiss-psychotic-roulette",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-geiss-psychotic-roulette.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - Geiss - Psychotic Roulette",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.493Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

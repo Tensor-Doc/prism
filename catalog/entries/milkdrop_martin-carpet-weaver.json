@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-carpet-weaver",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-carpet-weaver.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - carpet weaver",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.502Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

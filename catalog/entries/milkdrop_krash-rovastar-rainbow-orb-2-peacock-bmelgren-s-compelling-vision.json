@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:krash-rovastar-rainbow-orb-2-peacock-bmelgren-s-compelling-vision",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/krash-rovastar-rainbow-orb-2-peacock-bmelgren-s-compelling-vision.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Krash + Rovastar - Rainbow Orb 2 Peacock (Bmelgren's Compelling Vision)",
+    "author": "Krash + Rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.300Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

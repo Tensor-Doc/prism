@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-myriad-mosaics-test",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-myriad-mosaics-test.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Myriad Mosaics --TEST--",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.387Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

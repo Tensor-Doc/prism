@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-artifact-plasma-2b",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-artifact-plasma-2b.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Artifact Plasma 2b",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.219Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

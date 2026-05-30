@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-another-kind-of-groove",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-another-kind-of-groove.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - another kind of groove",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.500Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

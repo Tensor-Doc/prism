@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-confetti-kaleidoscope-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-confetti-kaleidoscope-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Confetti (Kaleidoscope Mix)",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.384Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

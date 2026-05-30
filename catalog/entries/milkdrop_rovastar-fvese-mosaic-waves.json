@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-fvese-mosaic-waves",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-fvese-mosaic-waves.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Fvese - Mosaic Waves",
+    "author": "Rovastar + Fvese"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.333Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

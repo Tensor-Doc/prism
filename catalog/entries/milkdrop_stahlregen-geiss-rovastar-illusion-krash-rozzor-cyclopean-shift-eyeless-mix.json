@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:stahlregen-geiss-rovastar-illusion-krash-rozzor-cyclopean-shift-eyeless-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/stahlregen-geiss-rovastar-illusion-krash-rozzor-cyclopean-shift-eyeless-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Stahlregen & Geiss + Rovastar + Illusion + Krash + Rozzor - Cyclopean Shift (Eyeless Mix)",
+    "author": "Stahlregen & Geiss + Rovastar + Illusion + Krash + Rozzor"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.358Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-move-this-body",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-move-this-body.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - move this body",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.533Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

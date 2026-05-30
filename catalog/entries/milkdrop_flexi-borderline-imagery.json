@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-borderline-imagery",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-borderline-imagery.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - borderline imagery",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.459Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

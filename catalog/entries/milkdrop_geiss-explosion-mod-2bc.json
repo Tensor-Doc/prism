@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-explosion-mod-2bc",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-explosion-mod-2bc.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Explosion Mod 2bc",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.418Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

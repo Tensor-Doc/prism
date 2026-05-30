@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-artifact-6d",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-artifact-6d.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Artifact 6d",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.218Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

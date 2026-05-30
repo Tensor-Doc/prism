@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
+    "author": "Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.172Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "milkdrop:brainstain-re-entry",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/brainstain-re-entry.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "BrainStain-re entry"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.175Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

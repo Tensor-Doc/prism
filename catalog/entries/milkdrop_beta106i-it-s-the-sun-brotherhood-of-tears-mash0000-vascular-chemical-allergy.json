@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "beta106i - It's the Sun (Brotherhood of Tears) - mash0000 - vascular chemical allergy",
+    "author": "beta106i"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.432Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

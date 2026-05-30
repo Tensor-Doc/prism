@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:geiss-desert-rose-4",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-desert-rose-4.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Desert Rose 4",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "cells"
+      },
+      {
+        "name": "pic"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.238Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

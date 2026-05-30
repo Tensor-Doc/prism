@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Bmelgren + Krash - Rainbow Orb Peacock (Centred Journey Mix 2)",
+    "author": "Bmelgren + Krash"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.174Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

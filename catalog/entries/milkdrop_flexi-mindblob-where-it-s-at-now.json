@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:flexi-mindblob-where-it-s-at-now",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-mindblob-where-it-s-at-now.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - mindblob [where it's at now]",
+    "author": "Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "cells"
+      },
+      {
+        "name": "pic"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.383Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

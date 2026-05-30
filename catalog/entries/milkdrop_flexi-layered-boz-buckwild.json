@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-layered-boz-buckwild",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-layered-boz-buckwild.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - layered + Boz - Buckwild",
+    "author": "Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.205Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

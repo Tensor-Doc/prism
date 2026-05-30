@@ -1,0 +1,39 @@
+{
+  "id": "milkdrop:cope-martin-flexi-inferno-the-oil-slick-exploded",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-martin-flexi-inferno-the-oil-slick-exploded.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + martin + flexi - inferno (the oil slick exploded)",
+    "author": "cope + martin + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "fire_alpha5"
+      },
+      {
+        "name": "fire_alpha8"
+      },
+      {
+        "name": "fire_base"
+      },
+      {
+        "name": "fire_dis4"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.437Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

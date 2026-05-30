@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:unchained-free-to-feel-valium-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/unchained-free-to-feel-valium-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Unchained - Free to Feel (Valium Remix)",
+    "author": "Unchained"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.369Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-myriad-spirals-cruise-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-myriad-spirals-cruise-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Myriad Spirals - cruise mix",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.422Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

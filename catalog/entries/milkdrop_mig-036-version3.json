@@ -1,0 +1,25 @@
+{
+  "id": "milkdrop:mig-036-version3",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/mig-036-version3.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Mig_036_version3"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.395Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

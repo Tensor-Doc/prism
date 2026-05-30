@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:unchained-rovastar-luckless",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/unchained-rovastar-luckless.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Unchained & Rovastar - Luckless",
+    "author": "Unchained & Rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.365Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

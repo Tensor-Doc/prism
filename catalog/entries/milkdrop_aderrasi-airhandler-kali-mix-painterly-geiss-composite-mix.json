@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Airhandler (Kali Mix) - Painterly (Geiss composite mix)",
+    "author": "Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.164Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

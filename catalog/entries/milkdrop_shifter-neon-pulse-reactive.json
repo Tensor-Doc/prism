@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:shifter-neon-pulse-reactive",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/shifter-neon-pulse-reactive.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "shifter - neon pulse (reactive)",
+    "author": "shifter"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.575Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

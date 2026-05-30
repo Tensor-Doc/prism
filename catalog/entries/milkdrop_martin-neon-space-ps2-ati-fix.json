@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-neon-space-ps2-ati-fix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-neon-space-ps2-ati-fix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - neon space ps2 (ati fix)",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.535Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

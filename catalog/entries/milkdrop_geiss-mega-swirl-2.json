@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-mega-swirl-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-mega-swirl-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Mega Swirl 2",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.253Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:phat-eo-s-tesellatingfractal-mix3",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/phat-eo-s-tesellatingfractal-mix3.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "phat + Eo.S. - TesellatingFractal_Mix3",
+    "author": "phat + Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.567Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

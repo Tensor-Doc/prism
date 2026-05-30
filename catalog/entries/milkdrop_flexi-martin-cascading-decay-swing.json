@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-martin-cascading-decay-swing",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-martin-cascading-decay-swing.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi + Martin - cascading decay swing",
+    "author": "Flexi + Martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.200Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

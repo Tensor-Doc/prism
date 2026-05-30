@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-motion-blur-2-reverse-jelly-v3",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-motion-blur-2-reverse-jelly-v3.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Motion Blur 2 (Reverse Jelly V3)",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.259Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

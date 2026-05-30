@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "beta106i - Burning Form (Seething Mass) - mash0000 - fire paint easter egg internals",
+    "author": "beta106i"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.431Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

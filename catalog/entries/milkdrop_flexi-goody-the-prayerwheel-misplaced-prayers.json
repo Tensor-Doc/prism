@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:flexi-goody-the-prayerwheel-misplaced-prayers",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-goody-the-prayerwheel-misplaced-prayers.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi + goody - the prayerwheel - misplaced prayers",
+    "author": "flexi + goody"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "prayerwheel"
+      },
+      {
+        "name": "sunrise"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.454Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

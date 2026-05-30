@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:various-artists-1200774354134-mash0000-what-the-writer-s-guild-is-doing-with",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/various-artists-1200774354134-mash0000-what-the-writer-s-guild-is-doing-with.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "various artists - 1200774354134 - mash0000 - what the writer's guild is doing with the extra money",
+    "author": "various artists"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.584Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:suksma-aderrasi-martin-raron-geiss-are-you-mad-at-me",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/suksma-aderrasi-martin-raron-geiss-are-you-mad-at-me.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "suksma + aderrasi martin raron geiss - are you mad at me",
+    "author": "suksma + aderrasi martin raron geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.581Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

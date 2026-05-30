@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-tunnel-race",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-tunnel-race.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - tunnel race",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.557Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

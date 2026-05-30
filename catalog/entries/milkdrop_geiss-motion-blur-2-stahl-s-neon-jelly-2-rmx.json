@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-motion-blur-2-stahl-s-neon-jelly-2-rmx",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-motion-blur-2-stahl-s-neon-jelly-2-rmx.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Motion Blur 2 (Stahl's Neon Jelly 2 RMX)",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.259Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

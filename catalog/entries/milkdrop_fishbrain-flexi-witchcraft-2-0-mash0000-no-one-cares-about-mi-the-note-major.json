@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-flexi-witchcraft-2-0-mash0000-no-one-cares-about-mi-the-note-major",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-flexi-witchcraft-2-0-mash0000-no-one-cares-about-mi-the-note-major.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fiShbRaiN + flexi - witchcraft 2.0 - mash0000 - no one cares about mi, the note (major third)",
+    "author": "fiShbRaiN + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.445Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

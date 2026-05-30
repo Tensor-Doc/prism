@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:orb-quicksand-lab",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-quicksand-lab.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Quicksand Lab",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.316Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

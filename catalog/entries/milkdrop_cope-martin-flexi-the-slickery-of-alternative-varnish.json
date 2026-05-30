@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-martin-flexi-the-slickery-of-alternative-varnish",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-martin-flexi-the-slickery-of-alternative-varnish.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope, martin + flexi - the slickery of alternative varnish",
+    "author": "cope, martin + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.443Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

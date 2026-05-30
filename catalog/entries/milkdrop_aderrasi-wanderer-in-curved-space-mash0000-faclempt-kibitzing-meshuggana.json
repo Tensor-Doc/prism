@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Wanderer in Curved Space - mash0000 - faclempt kibitzing meshuggana schmaltz (Geiss color mix)",
+    "author": "Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.378Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-what-is-the-matrix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-what-is-the-matrix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "flexi - what is the matrix",
+    "author": "flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.476Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

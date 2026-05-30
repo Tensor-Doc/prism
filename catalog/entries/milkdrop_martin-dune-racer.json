@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-dune-racer",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-dune-racer.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - dune racer",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.519Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

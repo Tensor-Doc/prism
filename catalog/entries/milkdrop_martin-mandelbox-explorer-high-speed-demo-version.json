@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-mandelbox-explorer-high-speed-demo-version",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-mandelbox-explorer-high-speed-demo-version.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - mandelbox explorer - high speed demo version",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.531Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

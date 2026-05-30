@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-lock-and-release",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-lock-and-release.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - lock and release",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.529Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

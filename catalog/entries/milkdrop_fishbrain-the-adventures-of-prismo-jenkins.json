@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-the-adventures-of-prismo-jenkins",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-the-adventures-of-prismo-jenkins.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fiShbRaiN - the adventures of prismo jenkins",
+    "author": "fiShbRaiN"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.451Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

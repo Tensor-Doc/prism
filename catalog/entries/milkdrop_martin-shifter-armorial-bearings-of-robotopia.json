@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-shifter-armorial-bearings-of-robotopia",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-shifter-armorial-bearings-of-robotopia.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - shifter - armorial bearings of robotopia",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.547Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

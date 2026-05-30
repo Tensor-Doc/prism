@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:phat-eo-s-rainbow-bubble-mid3-f-me-dood",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/phat-eo-s-rainbow-bubble-mid3-f-me-dood.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Phat + Eo.S. - rainbow bubble_mid3-f. me dood",
+    "author": "Phat + Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.324Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:stahlregen-unchained-psychedelic-flower-kung-fu-corrupt",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/stahlregen-unchained-psychedelic-flower-kung-fu-corrupt.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Stahlregen + Unchained - Psychedelic Flower Kung Fu (Corrupt)",
+    "author": "Stahlregen + Unchained"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.360Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

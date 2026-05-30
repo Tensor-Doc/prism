@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Adam Fx 2 Zylot - Age of Science Fierceness BEAST2 - mash0000 - ethics is for weiner dogs - Geiss composite mix",
+    "author": "Adam Fx 2 Zylot"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.160Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

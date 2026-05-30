@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:telek-directive-swagger-spectral-inferno-with-radial-blur",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/telek-directive-swagger-spectral-inferno-with-radial-blur.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Telek - Directive Swagger (Spectral Inferno) with radial blur",
+    "author": "Telek"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.362Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

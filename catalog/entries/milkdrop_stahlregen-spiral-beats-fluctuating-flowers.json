@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:stahlregen-spiral-beats-fluctuating-flowers",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/stahlregen-spiral-beats-fluctuating-flowers.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Stahlregen - Spiral Beats (Fluctuating Flowers)",
+    "author": "Stahlregen"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.361Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

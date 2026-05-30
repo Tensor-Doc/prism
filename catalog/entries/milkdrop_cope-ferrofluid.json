@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-ferrofluid",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-ferrofluid.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope - ferrofluid",
+    "author": "cope"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.439Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

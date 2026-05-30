@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "beta106i - Brilliance (Space-Time Breaking) - mash0000 - it's 2009 and you haven't replaced your analog tv with digital",
+    "author": "beta106i"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.430Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

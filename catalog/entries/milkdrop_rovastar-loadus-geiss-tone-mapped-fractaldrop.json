@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:rovastar-loadus-geiss-tone-mapped-fractaldrop",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-loadus-geiss-tone-mapped-fractaldrop.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Loadus + Geiss - Tone-mapped FractalDrop",
+    "author": "Rovastar + Loadus + Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.339Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

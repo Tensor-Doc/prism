@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-unchained-ambrosia-mystic-dark-heart-mix-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-unchained-ambrosia-mystic-dark-heart-mix-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Unchained - Ambrosia Mystic (Dark Heart Mix)",
+    "author": "Rovastar + Unchained"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.345Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

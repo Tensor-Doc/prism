@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-constant-velocity-angular-blur",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-constant-velocity-angular-blur.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Constant Velocity - angular blur",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.227Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

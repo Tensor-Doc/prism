@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-pendulum-in-brass-ps3",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-pendulum-in-brass-ps3.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - pendulum in brass ps3",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.539Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

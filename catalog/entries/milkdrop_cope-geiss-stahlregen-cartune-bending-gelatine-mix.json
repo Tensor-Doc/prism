@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-geiss-stahlregen-cartune-bending-gelatine-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-geiss-stahlregen-cartune-bending-gelatine-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + geiss + stahlregen - cartune (bending gelatine mix)",
+    "author": "cope + geiss + stahlregen"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.436Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

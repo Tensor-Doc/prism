@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
+    "author": "Eo.S. + Phat"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.183Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

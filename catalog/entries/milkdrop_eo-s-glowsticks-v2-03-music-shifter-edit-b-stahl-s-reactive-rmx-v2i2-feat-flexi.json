@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Stahl's Reactive RMX V2i2 - feat. flexi + phat)",
+    "author": "Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.187Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

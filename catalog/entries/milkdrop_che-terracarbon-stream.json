@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:che-terracarbon-stream",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/che-terracarbon-stream.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Che - Terracarbon Stream",
+    "author": "Che"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.176Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

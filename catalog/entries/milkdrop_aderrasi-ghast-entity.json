@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:aderrasi-ghast-entity",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/aderrasi-ghast-entity.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Ghast Entity",
+    "author": "Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.169Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

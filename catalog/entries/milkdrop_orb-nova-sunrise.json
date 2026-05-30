@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:orb-nova-sunrise",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-nova-sunrise.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Nova Sunrise",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "cells"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.314Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

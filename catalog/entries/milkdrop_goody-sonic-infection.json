@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:goody-sonic-infection",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/goody-sonic-infection.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Goody - Sonic Infection",
+    "author": "Goody"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.293Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

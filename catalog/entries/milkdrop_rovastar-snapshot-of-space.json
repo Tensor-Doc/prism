@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-snapshot-of-space",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-snapshot-of-space.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar - Snapshot Of Space",
+    "author": "Rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.353Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

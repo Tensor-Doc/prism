@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fishbrain-flexi-witchcraft-graffitti-attack-mashmash",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fishbrain-flexi-witchcraft-graffitti-attack-mashmash.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fishbrain + flexi - witchcraft [graffitti attack] - mashmash",
+    "author": "fishbrain + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.424Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

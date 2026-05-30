@@ -1,0 +1,25 @@
+{
+  "id": "milkdrop:geiss-experimental-lsb-bass-cubes",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-experimental-lsb-bass-cubes.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "geiss_experimental__LSB Bass Cubes"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.425Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

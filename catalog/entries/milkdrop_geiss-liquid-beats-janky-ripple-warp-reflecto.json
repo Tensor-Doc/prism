@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-liquid-beats-janky-ripple-warp-reflecto",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-liquid-beats-janky-ripple-warp-reflecto.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Liquid Beats (janky ripple warp reflecto)",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.251Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

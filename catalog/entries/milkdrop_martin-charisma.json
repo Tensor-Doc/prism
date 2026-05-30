@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-charisma",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-charisma.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - charisma",
+    "author": "Martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "worms"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.305Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

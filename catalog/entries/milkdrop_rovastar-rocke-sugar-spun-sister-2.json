@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-rocke-sugar-spun-sister-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-rocke-sugar-spun-sister-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Rocke - Sugar Spun Sister",
+    "author": "Rovastar + Rocke"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.342Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

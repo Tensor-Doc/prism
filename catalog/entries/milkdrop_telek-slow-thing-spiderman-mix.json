@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:telek-slow-thing-spiderman-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/telek-slow-thing-spiderman-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Telek - Slow Thing (Spiderman Mix)",
+    "author": "Telek"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.363Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

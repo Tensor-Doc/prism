@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-reality-tunnel",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-reality-tunnel.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - reality tunnel",
+    "author": "Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.206Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

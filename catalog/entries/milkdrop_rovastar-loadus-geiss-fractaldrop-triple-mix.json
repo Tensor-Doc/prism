@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-loadus-geiss-fractaldrop-triple-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-loadus-geiss-fractaldrop-triple-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar + Loadus + Geiss - FractalDrop (Triple Mix)",
+    "author": "Rovastar + Loadus + Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.337Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

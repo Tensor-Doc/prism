@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:mig-304-geiss-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/mig-304-geiss-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Mig_304 - geiss remix",
+    "author": "Mig_304"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.409Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

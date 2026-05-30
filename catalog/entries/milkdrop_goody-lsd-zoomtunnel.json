@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:goody-lsd-zoomtunnel",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/goody-lsd-zoomtunnel.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Goody - LSD Zoomtunnel",
+    "author": "Goody"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.290Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

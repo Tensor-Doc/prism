@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-voov-s-movement-after-dark-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-voov-s-movement-after-dark-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar - VooV's Movement (After Dark Mix)",
+    "author": "Rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.356Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

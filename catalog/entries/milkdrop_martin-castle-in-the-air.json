@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-castle-in-the-air",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-castle-in-the-air.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - castle in the air",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.503Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

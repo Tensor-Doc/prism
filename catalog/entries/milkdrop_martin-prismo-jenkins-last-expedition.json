@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-prismo-jenkins-last-expedition",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-prismo-jenkins-last-expedition.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - prismo jenkins last expedition",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.541Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

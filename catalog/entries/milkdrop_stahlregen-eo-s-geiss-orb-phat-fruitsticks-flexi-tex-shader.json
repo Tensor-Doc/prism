@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:stahlregen-eo-s-geiss-orb-phat-fruitsticks-flexi-tex-shader",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/stahlregen-eo-s-geiss-orb-phat-fruitsticks-flexi-tex-shader.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Stahlregen & Eo.S + Geiss + ORB + Phat - Fruitsticks (Flexi-Tex Shader)",
+    "author": "Stahlregen & Eo.S + Geiss + ORB + Phat"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.357Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

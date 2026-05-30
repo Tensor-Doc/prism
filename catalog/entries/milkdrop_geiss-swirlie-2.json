@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-swirlie-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-swirlie-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Swirlie 2",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.283Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

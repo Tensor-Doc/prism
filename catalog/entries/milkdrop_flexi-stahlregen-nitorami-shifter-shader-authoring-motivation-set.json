@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi, Stahlregen, Nitorami + Shifter - shader authoring motivation set",
+    "author": "Flexi, Stahlregen, Nitorami + Shifter"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.209Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

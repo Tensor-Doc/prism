@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:goody-lights-in-the-sky",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/goody-lights-in-the-sky.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Goody - Lights in the Sky",
+    "author": "Goody"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.291Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "milkdrop:cope-flexi-mother-of-whirl",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-flexi-mother-of-whirl.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + flexi - mother-of-whirl",
+    "author": "cope + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "devboxb"
+      },
+      {
+        "name": "suff5"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.435Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

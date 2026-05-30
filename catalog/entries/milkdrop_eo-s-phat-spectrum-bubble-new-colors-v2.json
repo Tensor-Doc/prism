@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-phat-spectrum-bubble-new-colors-v2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-phat-spectrum-bubble-new-colors-v2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S.+Phat - spectrum bubble new colors_v2",
+    "author": "Eo.S.+Phat"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.196Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

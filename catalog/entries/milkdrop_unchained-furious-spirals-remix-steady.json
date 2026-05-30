@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:unchained-furious-spirals-remix-steady",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/unchained-furious-spirals-remix-steady.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Unchained - Furious Spirals (Remix) Steady",
+    "author": "Unchained"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "fw_lichen"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.371Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

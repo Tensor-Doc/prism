@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:geiss-cosmic-dust-2-trails-7",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-cosmic-dust-2-trails-7.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Cosmic Dust 2 - Trails 7",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "fw_wrenches"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.229Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:bmelgren-pentultimate-nerual-slipstream-tweak-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/bmelgren-pentultimate-nerual-slipstream-tweak-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
+    "author": "Bmelgren"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.175Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

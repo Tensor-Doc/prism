@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code)",
+    "author": "Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.188Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

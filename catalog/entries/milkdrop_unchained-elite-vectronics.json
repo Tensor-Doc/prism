@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:unchained-elite-vectronics",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/unchained-elite-vectronics.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Unchained - elite vectronics",
+    "author": "Unchained"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.373Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:martin-lightning-goody-tunnel-artifact-tweak",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-lightning-goody-tunnel-artifact-tweak.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - lightning [Goody tunnel artifact tweak]",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.528Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

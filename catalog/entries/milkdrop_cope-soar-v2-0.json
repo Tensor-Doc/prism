@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:cope-soar-v2-0",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-soar-v2-0.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope - soar (v2.0)",
+    "author": "cope"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "sky"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.441Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

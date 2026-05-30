@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. + Phat + Geiss - chasers 15 sentinels male and female (Dementia Mix)",
+    "author": "Eo.S. + Phat + Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.181Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

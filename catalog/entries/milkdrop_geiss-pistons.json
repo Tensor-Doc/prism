@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:geiss-pistons",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-pistons.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Pistons",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.262Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

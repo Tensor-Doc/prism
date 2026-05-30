@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-digital-sea",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-digital-sea.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope - digital sea",
+    "author": "cope"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.438Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

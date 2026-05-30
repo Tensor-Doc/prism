@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:geiss-planar-travel",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-planar-travel.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Planar Travel",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "seaweed"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.263Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

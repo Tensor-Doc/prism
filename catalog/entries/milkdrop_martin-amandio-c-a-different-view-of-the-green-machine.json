@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-amandio-c-a-different-view-of-the-green-machine",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-amandio-c-a-different-view-of-the-green-machine.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - amandio c - a different view of the green machine",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.497Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

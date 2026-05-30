@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:stahlregen-geiss-rovastar-fields-of-flowers-mashup-9-space-flower-rmx-mash0001",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/stahlregen-geiss-rovastar-fields-of-flowers-mashup-9-space-flower-rmx-mash0001.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "stahlregen & geiss + rovastar - fields of flowers (mashup 9 - space flower rmx) - mash0001 - pack em in, we got a long haul + flashlight",
+    "author": "stahlregen & geiss + rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.580Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

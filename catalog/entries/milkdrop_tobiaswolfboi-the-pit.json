@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:tobiaswolfboi-the-pit",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/tobiaswolfboi-the-pit.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "TobiasWolfBoi - The Pit",
+    "author": "TobiasWolfBoi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.364Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

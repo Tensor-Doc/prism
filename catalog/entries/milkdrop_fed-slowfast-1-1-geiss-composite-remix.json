@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:fed-slowfast-1-1-geiss-composite-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/fed-slowfast-1-1-geiss-composite-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "fed - slowfast 1.1 (geiss composite remix)",
+    "author": "fed"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.443Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

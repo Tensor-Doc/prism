@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:orb-quicksand",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-quicksand.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Quicksand",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "grad3"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.317Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

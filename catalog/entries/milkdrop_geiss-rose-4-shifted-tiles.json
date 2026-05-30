@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:geiss-rose-4-shifted-tiles",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/geiss-rose-4-shifted-tiles.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Rose 4 Shifted Tiles",
+    "author": "Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "pw_noise_lq"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.273Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-blame-hexcollie-twice",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-blame-hexcollie-twice.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - blame hexcollie twice",
+    "author": "Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.201Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

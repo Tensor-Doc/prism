@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:eo-s-glowsticks-v2-02-geiss-hpf",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/eo-s-glowsticks-v2-02-geiss-hpf.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. - glowsticks v2 02 - Geiss HPF",
+    "author": "Eo.S."
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.382Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

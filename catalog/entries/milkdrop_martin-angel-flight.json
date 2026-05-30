@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:martin-angel-flight",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/martin-angel-flight.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "martin - angel flight",
+    "author": "martin"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.498Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

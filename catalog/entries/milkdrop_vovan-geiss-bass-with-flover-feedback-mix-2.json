@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:vovan-geiss-bass-with-flover-feedback-mix-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix) 2",
+    "author": "Vovan + Geiss"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.415Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

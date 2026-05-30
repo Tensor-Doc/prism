@@ -1,0 +1,25 @@
+{
+  "id": "milkdrop:phat-fishbrain-eo-s-mandala-chasers-remix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/phat-fishbrain-eo-s-mandala-chasers-remix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Phat+fiShbRaiN+Eo.S_Mandala_Chasers_remix"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.325Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

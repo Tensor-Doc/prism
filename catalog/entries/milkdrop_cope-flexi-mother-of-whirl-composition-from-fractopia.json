@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:cope-flexi-mother-of-whirl-composition-from-fractopia",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-flexi-mother-of-whirl-composition-from-fractopia.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + flexi - mother-of-whirl [composition from fractopia]",
+    "author": "cope + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "manyfish"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.433Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

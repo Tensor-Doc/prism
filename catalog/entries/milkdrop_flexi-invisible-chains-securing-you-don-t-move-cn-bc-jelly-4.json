@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:flexi-invisible-chains-securing-you-don-t-move-cn-bc-jelly-4",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/flexi-invisible-chains-securing-you-don-t-move-cn-bc-jelly-4.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - invisible chains securing you don't move (cn bc jelly 4)",
+    "author": "Flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.205Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

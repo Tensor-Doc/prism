@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:hexcollie-bdrv-geiss-flexi-n-aderrasi-slime-slide-mash0000-holster-your-salad",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/hexcollie-bdrv-geiss-flexi-n-aderrasi-slime-slide-mash0000-holster-your-salad.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Hexcollie, Bdrv, Geiss, Flexi n Aderrasi - Slime Slide - mash0000 - holster your salad shot",
+    "author": "Hexcollie, Bdrv, Geiss, Flexi n Aderrasi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.296Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

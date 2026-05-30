@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-27-super-goats-orbus-maximus-breach-the-egg-mix",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-27-super-goats-orbus-maximus-breach-the-egg-mix.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + 27_super_goats - orbus maximus (breach the egg mix)",
+    "author": "cope + 27_super_goats"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.433Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

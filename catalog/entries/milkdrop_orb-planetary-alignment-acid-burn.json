@@ -1,0 +1,30 @@
+{
+  "id": "milkdrop:orb-planetary-alignment-acid-burn",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-planetary-alignment-acid-burn.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Planetary Alignment Acid Burn",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": [
+      {
+        "name": "grad3"
+      }
+    ]
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.315Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

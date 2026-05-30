@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:orb-blue-emotion",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/orb-blue-emotion.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Blue Emotion",
+    "author": "ORB"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.310Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:cope-flexi-mother-of-whirl-no-fnords-were-hurt",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/cope-flexi-mother-of-whirl-no-fnords-were-hurt.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "cope + flexi - mother-of-whirl [no fnords were hurt]",
+    "author": "cope + flexi"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.434Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

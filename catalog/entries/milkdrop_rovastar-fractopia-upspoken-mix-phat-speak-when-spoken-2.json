@@ -1,0 +1,26 @@
+{
+  "id": "milkdrop:rovastar-fractopia-upspoken-mix-phat-speak-when-spoken-2",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "url",
+    "url": "/presets/milkdrop/rovastar-fractopia-upspoken-mix-phat-speak-when-spoken-2.milk",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Rovastar - Fractopia (Upspoken Mix)_Phat_Speak_When_Spoken_2",
+    "author": "Rovastar"
+  },
+  "annotation": null,
+  "assets": {
+    "textures_needed": []
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-30T17:43:37.349Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}
