@@ -125,13 +125,10 @@ export default async function handler(req: Request): Promise<Response> {
 
   const currentGraph = isPrismGraph(body.currentGraph) ? body.currentGraph : null;
   const metadata = isSessionMetadata(body.metadata) ? body.metadata : null;
-  // Force the v1 (GA) API endpoint. @google/genai 2.7.0 defaults to
-  // v1beta where the gemini-2.5-* models return 404 NOT_FOUND for
-  // generateContent.
-  const ai = new GoogleGenAI({
-    apiKey,
-    httpOptions: { apiVersion: "v1" },
-  });
+  // @google/genai 2.7.0 (latest as of writing) targets v1beta — that's
+  // also the only endpoint that supports systemInstruction +
+  // responseSchema, which we rely on. v1 returns 400 for those fields.
+  const ai = new GoogleGenAI({ apiKey });
 
   let pick: { preset_id: string; intent: string };
   try {
@@ -191,7 +188,7 @@ async function pickPresetWithGemini(
   );
 
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
+    model: "gemini-2.5-pro",
     contents: userParts.join("\n\n"),
     config: {
       systemInstruction,
