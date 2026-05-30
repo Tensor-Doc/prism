@@ -111,9 +111,12 @@ body.audio-live .audio-pin {
   opacity: 0;
   animation: field-in 1400ms var(--ease-spring) 60ms forwards;
 }
-#shadertoy { opacity: 0; }
+/* Visibility is class-driven on the canvases (markup starts shadertoy
+   with .bg-canvas--hidden). We use !important here because the
+   #milkdrop ID-selector above otherwise outweighs the class selectors
+   for opacity — same applies to shadertoy if anything ever sets it. */
 .bg-canvas--hidden { opacity: 0 !important; pointer-events: none; }
-.bg-canvas--active { opacity: 1; }
+.bg-canvas--active { opacity: 1 !important; }
 /* Global dim mode — toggled from the top status bar. Saturate-down too so
    any wild colors (e.g. purple-heavy presets) lose their punch. */
 body[data-dim="1"] .bg-canvas { opacity: 0.55; filter: saturate(0.5); }
