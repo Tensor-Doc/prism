@@ -181,12 +181,19 @@ async function callGemini(
     }
   }
 
-  const prompt = `Preset name (metadata, not visible in video):
-"${display.name}"${display.author ? ` (attributed to: ${display.author})` : ""}
-
-Watch the 15s capture and produce the annotation JSON. The audio you can
-infer from the visual reactions is a synthetic test signal (not music) —
-do not call it "the music" or "the song" in technical_notes.`;
+  // We deliberately do NOT pass the preset name to Gemini. Earlier runs
+  // showed Gemini reading a preset name like "...Painterly Tendrils
+  // Colorfast" and confabulating a "turbulent advection field with
+  // bloom_glow" description for a video that was actually all-black for
+  // 15s. The fabricated description shipped to disk as truth. Annotation
+  // must be grounded only in what's visible in the captured WebM.
+  const prompt = `Watch the 15s capture and produce the annotation JSON.
+Describe ONLY what is visually evident in the video — do not infer or
+imagine elements that would normally be present in this style of preset.
+If the screen is mostly dark or sparse, say so honestly (motion near 0,
+vibe like "void"/"dark"/"sparse"). The audio you can infer from the
+visual reactions is the test signal loop — refer to it as "the test
+signal" or "the audio loop", never as "the music" or "the song".`;
 
   const response = await ai.models.generateContent({
     model: MODEL,
@@ -307,6 +314,31 @@ export async function runAnnotateOne(
     writeFileSync(thumbOut, Buffer.from(firstFrameBase64, "base64"));
     console.log(`  webm: ${(webmBytes.length / 1024).toFixed(1)} KB → ${videoOut.replace(repoRoot + "/", "")}`);
     console.log(`  render time: ${renderMs}ms`);
+  }
+
+  // Empty-render guard: WebMs smaller than ~100KB for a 15s capture are
+  // effectively all-black (vp9 compresses uniform color to near-nothing).
+  // Skip Gemini entirely — its descriptions of black videos confabulate
+  // from the preset name. Mark renders:false; the AI router + gallery
+  // both filter these out automatically.
+  const EMPTY_RENDER_BYTES = 100_000;
+  if (webmBytes.length < EMPTY_RENDER_BYTES) {
+    console.log(`  ⚠ empty render (${(webmBytes.length / 1024).toFixed(0)}KB < 100KB) — marking compatibility.renders=false, skipping Gemini`);
+    entry.compatibility = {
+      renders: false,
+      note: `capture was empty (${webmBytes.length} bytes); preset doesn't render meaningfully against the current test signal`,
+    };
+    entry.assets.video = `/videos/milkdrop_${slug}.webm`;
+    entry.assets.thumb = `/thumbs/milkdrop_${slug}.jpg`;
+    writeFileSync(entryPath, JSON.stringify(entry, null, 2) + "\n");
+    progress.update(slug, {
+      status: "annotated", // counted as done so bulk doesn't retry
+      ...(renderMs > 0 ? { rendered_at: new Date().toISOString(), render_ms: renderMs } : {}),
+      annotated_at: new Date().toISOString(),
+      annotate_ms: 0,
+    });
+    console.log("");
+    return;
   }
 
   const t1 = Date.now();

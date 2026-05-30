@@ -11,9 +11,43 @@
     "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code)",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "neon",
+      "kinetic",
+      "orbital",
+      "electric"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#00ff66",
+      "#ff3300",
+      "#0066ff",
+      "#ff00aa"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle",
+      "frame_feedback",
+      "bloom_glow"
+    ],
+    "technical_notes": "Multiple custom waves draw complex 3D parametric ribbon curves and dashed orbital trails. The synthetic test signal's bass transients drive the global zoom and rotation parameters, while high-frequency treble transients modulate the dashed particle spacing. Frame feedback through sampler_main combined with a moderate decay rate creates a clean, glowing path history.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:50:52.073Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

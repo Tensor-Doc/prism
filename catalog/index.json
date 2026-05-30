@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T19:48:48.643Z",
+  "generated_at": "2026-05-30T19:54:01.160Z",
   "total": 566,
-  "annotated_count": 48,
-  "pending_count": 518,
+  "annotated_count": 47,
+  "pending_count": 519,
   "entries": [
     {
       "id": "milkdrop:aderrasi-airhandler-last-breath-calm",
@@ -221,66 +221,6 @@
       "added_by": "scottspace"
     },
     {
-      "id": "milkdrop:aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast",
-      "slug": "aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast",
-      "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Painterly Tendrils Colorfast",
-      "author": "Aderrasi + Geiss",
-      "vibe": [
-        "fluid",
-        "organic",
-        "painterly",
-        "atmospheric"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.75,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "decay_trail",
-        "bloom_glow",
-        "cosine_palette"
-      ],
-      "refik_mode": true,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:aderrasi-geiss-airhandler-painterly-relief-mix",
-      "slug": "aderrasi-geiss-airhandler-painterly-relief-mix",
-      "name": "Aderrasi + Geiss - Airhandler (Painterly Relief Mix)",
-      "author": "Aderrasi + Geiss",
-      "vibe": [
-        "industrial",
-        "monochromatic",
-        "fluid",
-        "metallic"
-      ],
-      "motion": 0.1,
-      "audio_affinity": {
-        "bass": 0.2,
-        "mid": 0.1,
-        "treble": 0.1
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "fbm_noise"
-      ],
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-painterly-relief-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-painterly-relief-mix.jpg",
-      "added_by": "scottspace"
-    },
-    {
       "id": "milkdrop:che-terracarbon-stream",
       "slug": "che-terracarbon-stream",
       "name": "Che - Terracarbon Stream",
@@ -339,6 +279,38 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-wip-strange-attractor-2.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-wip-strange-attractor-2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-nematodes-e-daemon",
+      "slug": "eo-s-nematodes-e-daemon",
+      "name": "Eo.S. - nematodes E daemon",
+      "author": "Eo.S.",
+      "vibe": [
+        "organic",
+        "fiery",
+        "fluid",
+        "demonic"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-nematodes-e-daemon.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-nematodes-e-daemon.jpg",
       "added_by": "scottspace"
     },
     {
@@ -402,81 +374,6 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner-2",
-      "slug": "adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner-2",
-      "name": "Adam Fx 2 Zylot - Age of Science Fierceness BEAST2 - mash0000 - ethics is for weiner dogs",
-      "author": "Adam Fx 2 Zylot",
-      "vibe": [
-        "dark",
-        "minimalist",
-        "void"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [
-        "smalltiled_electric_nebula"
-      ],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner-2.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner-2.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner",
-      "slug": "adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner",
-      "name": "Adam Fx 2 Zylot - Age of Science Fierceness BEAST2 - mash0000 - ethics is for weiner dogs - Geiss composite mix",
-      "author": "Adam Fx 2 Zylot",
-      "vibe": [
-        "dark",
-        "minimalist",
-        "void",
-        "monochrome"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/adam-fx-2-zylot-age-of-science-fierceness-beast2-mash0000-ethics-is-for-weiner.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix",
-      "slug": "aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix",
-      "name": "Aderrasi - Airhandler (Kali Mix) - Painterly (Geiss composite mix)",
-      "author": "Aderrasi",
-      "vibe": [
-        "dark",
-        "minimalist",
-        "static"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-kali-mix-painterly-geiss-composite-mix.jpg",
       "added_by": "scottspace"
     },
     {
@@ -727,55 +624,6 @@
       "added_by": "scottspace"
     },
     {
-      "id": "milkdrop:aderrasi-geiss-airhandler-kali-mix-canvas-mix",
-      "slug": "aderrasi-geiss-airhandler-kali-mix-canvas-mix",
-      "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Canvas Mix",
-      "author": "Aderrasi + Geiss",
-      "vibe": [
-        "minimalist",
-        "dark",
-        "void"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-kali-mix-canvas-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-kali-mix-canvas-mix.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:aderrasi-geiss-airhandler-square-mix",
-      "slug": "aderrasi-geiss-airhandler-square-mix",
-      "name": "Aderrasi + Geiss - Airhandler (Square Mix)",
-      "author": "Aderrasi + Geiss",
-      "vibe": [
-        "void",
-        "minimalist",
-        "dark",
-        "static"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-square-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-geiss-airhandler-square-mix.jpg",
-      "added_by": "scottspace"
-    },
-    {
       "id": "milkdrop:bmelgren-pentultimate-nerual-slipstream-tweak-2",
       "slug": "bmelgren-pentultimate-nerual-slipstream-tweak-2",
       "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
@@ -838,30 +686,6 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:bmelgren-geiss-godhead-canvas-mix",
-      "slug": "bmelgren-geiss-godhead-canvas-mix",
-      "name": "Bmelgren + Geiss - Godhead (Canvas Mix)",
-      "author": "Bmelgren + Geiss",
-      "vibe": [
-        "minimalist",
-        "dark",
-        "void"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-geiss-godhead-canvas-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-geiss-godhead-canvas-mix.jpg",
       "added_by": "scottspace"
     },
     {
@@ -1044,6 +868,225 @@
       "added_by": "scottspace"
     },
     {
+      "id": "milkdrop:eo-s-glowsticks-v2-03-music-shifter-edit-b",
+      "slug": "eo-s-glowsticks-v2-03-music-shifter-edit-b",
+      "name": "Eo.S. - glowsticks v2 03 music shifter edit b",
+      "author": "Eo.S.",
+      "vibe": [
+        "psychedelic",
+        "kaleidoscopic",
+        "energetic",
+        "frenetic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.75
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "domain_repetition",
+        "custom_wave",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-03-music-shifter-edit-b.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-03-music-shifter-edit-b.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2",
+      "slug": "eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2",
+      "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Jelly V2)",
+      "author": "Eo.S.",
+      "vibe": [
+        "minimalist",
+        "sleek",
+        "elegant",
+        "kinetic"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "cosine_palette",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi",
+      "slug": "eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi",
+      "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Stahl's Reactive RMX V2i2 - feat. flexi + phat)",
+      "author": "Eo.S.",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "dynamic",
+        "geometric"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code",
+      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code",
+      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code)",
+      "author": "Eo.S.",
+      "vibe": [
+        "neon",
+        "kinetic",
+        "orbital",
+        "electric"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle",
+        "frame_feedback",
+        "bloom_glow"
+      ],
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b",
+      "author": "Eo.S.",
+      "vibe": [
+        "neon",
+        "kinetic",
+        "synthetic",
+        "geometric"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "beat_burst",
+        "hue_cycle",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
+      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
+      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix07",
+      "author": "Eo.S.",
+      "vibe": [
+        "psychedelic",
+        "geometric",
+        "rhythmic",
+        "neon"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "domain_repetition",
+        "custom_wave"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.jpg",
+      "added_by": "scottspace"
+    },
+    {
+      "id": "milkdrop:eo-s-heater-core-c-phat-s-class-sparks-mix",
+      "slug": "eo-s-heater-core-c-phat-s-class-sparks-mix",
+      "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
+      "author": "Eo.S.",
+      "vibe": [
+        "cybernetic",
+        "neon",
+        "frenetic",
+        "futuristic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.7,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-heater-core-c-phat-s-class-sparks-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-heater-core-c-phat-s-class-sparks-mix.jpg",
+      "added_by": "scottspace"
+    },
+    {
       "id": "milkdrop:eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
       "slug": "eo-s-flexi-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
       "name": "Eo.S. + flexi - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b + illumination (Stahl's Mix)",
@@ -1128,31 +1171,6 @@
       "textures_needed": [],
       "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.webm",
       "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.jpg",
-      "added_by": "scottspace"
-    },
-    {
-      "id": "milkdrop:eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix",
-      "slug": "eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix",
-      "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (water mix)",
-      "author": "Eo.S. + Geiss",
-      "vibe": [
-        "stark",
-        "minimalist",
-        "dark",
-        "dormant"
-      ],
-      "motion": 0,
-      "audio_affinity": {
-        "bass": 0,
-        "mid": 0,
-        "treble": 0
-      },
-      "techniques": [],
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-water-mix.jpg",
       "added_by": "scottspace"
     },
     {

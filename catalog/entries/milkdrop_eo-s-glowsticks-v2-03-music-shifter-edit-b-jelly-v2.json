@@ -11,9 +11,40 @@
     "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Jelly V2)",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sleek",
+      "elegant",
+      "kinetic"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#0088ff",
+      "#ff6600",
+      "#50e4c2"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "cosine_palette",
+      "hue_cycle"
+    ],
+    "technical_notes": "A custom wave is rendered as a thick, tapered ribbon sweeping elegantly across a black background. Its coordinates and curvature are modulated by the synthetic test signal's bass and mid frequencies, while the color gradient along its length is driven by a cosine palette. The absence of frame feedback (decay is set to maximum) ensures a clean, high-contrast presentation with no persistent trails.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:49:11.040Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

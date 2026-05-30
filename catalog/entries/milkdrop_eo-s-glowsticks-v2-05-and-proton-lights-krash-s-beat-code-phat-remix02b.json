@@ -11,9 +11,43 @@
     "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "neon",
+      "kinetic",
+      "synthetic",
+      "geometric"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#00ff00",
+      "#ff3300",
+      "#0000ff",
+      "#9900ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "beat_burst",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the synthetic kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:51:27.651Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

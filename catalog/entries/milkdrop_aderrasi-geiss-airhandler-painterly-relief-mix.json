@@ -11,36 +11,7 @@
     "name": "Aderrasi + Geiss - Airhandler (Painterly Relief Mix)",
     "author": "Aderrasi + Geiss"
   },
-  "annotation": {
-    "vibe": [
-      "industrial",
-      "monochromatic",
-      "fluid",
-      "metallic"
-    ],
-    "motion": 0.1,
-    "palette_anchor": [
-      "#000000",
-      "#121212",
-      "#1a1a1a"
-    ],
-    "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.1,
-      "treble": 0.1
-    },
-    "techniques": [
-      "frame_feedback",
-      "warp_field",
-      "fbm_noise"
-    ],
-    "technical_notes": "Per-pixel warp shader creates a subtle, embossed fluid flow resembling a dark painterly relief. Frame feedback via sampler_main with high decay maintains a low-contrast, near-black texture that reacts minimally to the synthetic test signal. The visualizer exhibits a highly attenuated reaction-diffusion aesthetic.",
-    "brand_safe": true,
-    "refik_mode": true,
-    "model": "gemini-flash-latest",
-    "version": 2,
-    "captured_at": "2026-05-30T19:25:35.149Z"
-  },
+  "annotation": null,
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-painterly-relief-mix.webm",
@@ -52,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (52332 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

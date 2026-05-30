@@ -11,38 +11,7 @@
     "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Painterly Tendrils Colorfast",
     "author": "Aderrasi + Geiss"
   },
-  "annotation": {
-    "vibe": [
-      "fluid",
-      "organic",
-      "painterly",
-      "atmospheric"
-    ],
-    "motion": 0.65,
-    "palette_anchor": [
-      "#ff00aa",
-      "#00ffff",
-      "#7a00ff"
-    ],
-    "audio_affinity": {
-      "bass": 0.75,
-      "mid": 0.5,
-      "treble": 0.6
-    },
-    "techniques": [
-      "frame_feedback",
-      "warp_field",
-      "decay_trail",
-      "bloom_glow",
-      "cosine_palette"
-    ],
-    "technical_notes": "Per-pixel warp shader applies a turbulent advection field driven by bass attenuated in the synthetic test signal; frame feedback through sampler_main with high-fidelity color retention produces persistent painterly tendrils. The warp scale and zoom are modulated by the synthetic kick, while high-frequency treble sparkle drives localized brightness variations in the composite shader.",
-    "brand_safe": false,
-    "refik_mode": true,
-    "model": "gemini-flash-latest",
-    "version": 2,
-    "captured_at": "2026-05-30T19:25:03.777Z"
-  },
+  "annotation": null,
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast.webm",
@@ -54,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (52651 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

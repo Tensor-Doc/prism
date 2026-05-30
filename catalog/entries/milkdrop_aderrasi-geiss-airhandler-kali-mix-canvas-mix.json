@@ -11,29 +11,7 @@
     "name": "Aderrasi + Geiss - Airhandler (Kali Mix) - Canvas Mix",
     "author": "Aderrasi + Geiss"
   },
-  "annotation": {
-    "vibe": [
-      "minimalist",
-      "dark",
-      "void"
-    ],
-    "motion": 0,
-    "palette_anchor": [
-      "#000000"
-    ],
-    "audio_affinity": {
-      "bass": 0,
-      "mid": 0,
-      "treble": 0
-    },
-    "techniques": [],
-    "technical_notes": "The preset renders as a completely black screen with no visible output or response to the synthetic test signal. This indicates a potential shader compilation failure or a state where decay is absolute and no initial geometry or custom waves are drawn.",
-    "brand_safe": true,
-    "refik_mode": false,
-    "model": "gemini-flash-latest",
-    "version": 2,
-    "captured_at": "2026-05-30T19:24:29.075Z"
-  },
+  "annotation": null,
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-geiss-airhandler-kali-mix-canvas-mix.webm",
@@ -45,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (53184 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

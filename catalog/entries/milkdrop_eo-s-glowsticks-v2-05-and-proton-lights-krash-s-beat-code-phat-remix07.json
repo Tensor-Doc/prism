@@ -11,9 +11,44 @@
     "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix07",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "geometric",
+      "rhythmic",
+      "neon"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#9b30ff",
+      "#00ffcc",
+      "#ff5500"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The synthetic test signal's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:51:59.862Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

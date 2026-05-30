@@ -11,9 +11,43 @@
     "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cybernetic",
+      "neon",
+      "frenetic",
+      "futuristic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#5c00f5",
+      "#ff007f",
+      "#00f3ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the synthetic test signal. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the synthetic kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
+    "brand_safe": false,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:52:35.816Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-heater-core-c-phat-s-class-sparks-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-heater-core-c-phat-s-class-sparks-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

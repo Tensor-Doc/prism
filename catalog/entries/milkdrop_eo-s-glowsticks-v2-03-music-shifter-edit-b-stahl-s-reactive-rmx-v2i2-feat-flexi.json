@@ -11,9 +11,41 @@
     "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Stahl's Reactive RMX V2i2 - feat. flexi + phat)",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "dynamic",
+      "geometric"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#00ff88",
+      "#ff007f",
+      "#8a2be2"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle"
+    ],
+    "technical_notes": "Custom waves are rendered as sharp, ribbon-like strokes with dynamic color gradients that react directly to the synthetic test signal. The absence of frame feedback through sampler_main or warp fields results in a stark, high-contrast black background where ribbons appear and vanish instantaneously on beat-gated thresholds. The ribbon coordinates and colors are modulated by audio band amplitudes, creating a minimalist glowstick aesthetic.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T19:49:43.999Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
