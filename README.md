@@ -95,25 +95,20 @@ The schema is intentionally roomy: tomorrow `op.*` compositors let one
 graph layer multiple light fields, and new `lf.*` types plug in
 without touching anything else downstream.
 
-### How this compares
+### Why a JSON notation?
 
-The DAG-of-nodes paradigm is shared with all the audio-visual tools
-the community already runs on. What's new is the seam.
+TouchDesigner, Notch, Cables.gl, vvvv, ComfyUI — all use node graphs,
+each in its own format. Prism proposes a small open JSON notation so
+visualizers are:
 
-| Tool | Where it lives | Who writes the graph |
-|---|---|---|
-| **TouchDesigner** | Desktop app | You, by dragging nodes |
-| **Notch** | Stage / concert software | A VJ in the booth |
-| **Cables.gl** | Browser | You, in a visual node editor |
-| **vvvv** | Desktop app | You, in a visual node editor |
-| **ComfyUI** | Local server, image-gen | You, wired up by hand |
-| **Prism** | Browser | The model, from your prompt |
+- **agent-friendly** — an AI can read, write, or remix a graph the
+  same way it edits code
+- **shareable** — a graph is ~1 KB; a URL hash carries the whole thing
+- **editable** — by a prompt today, a node editor tomorrow,
+  hand-written code whenever
 
-The graph *is* the artifact — JSON, ~1 KB — so prompt → graph → URL
-hash makes "share this visualization" trivial, and "remix someone
-else's" is just opening their hash and editing one node. Adding a new
-generator (a WGSL renderer, an ISF interpreter, a WebGPU compositor)
-is two files: a runtime that knows how to execute the node + a new
+Adding a new generator (a WGSL renderer, an ISF interpreter, a WebGPU
+compositor) is two files: a runtime that executes the node + a new
 `lf.*` / `op.*` type. The gallery, the prompt loop, and the AI router
 all see it for free.
 
