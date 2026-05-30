@@ -11,9 +11,39 @@
     "name": "Geiss - All-Spark",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "geometric",
+      "monochrome"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#999999",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist monochrome preset utilizing Milkdrop custom waves to render a sharp, jagged oscilloscope-style waveform and a central wedge shape. The rendering lacks frame feedback or a warp field, resulting in instantaneous frame-to-frame updates with no persistent trails. The wave's vertical amplitude and vertex displacement are directly driven by the synthetic test signal's low and mid-frequency bands.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T18:20:03.287Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_geiss-all-spark.webm",
+    "thumb": "/thumbs/milkdrop_geiss-all-spark.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

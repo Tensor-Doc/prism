@@ -10,7 +10,25 @@
 // All commands operate on the cwd's repo root.
 
 import { join } from "node:path";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+
+// Minimal .env loader — Node 20 doesn't have --env-file-if-exists; we
+// just parse the file ourselves if present and inject into process.env
+// for the rest of the run (downstream commands read from process.env).
+function loadDotenv(cwd: string): void {
+  const path = join(cwd, ".env");
+  if (!existsSync(path)) return;
+  const text = readFileSync(path, "utf-8");
+  for (const line of text.split(/\r?\n/)) {
+    const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*?)\s*$/i);
+    if (!m) continue;
+    const [, k, v] = m;
+    if (process.env[k]) continue; // existing env wins
+    process.env[k] = v.replace(/^["']|["']$/g, "");
+  }
+}
+
+loadDotenv(process.cwd());
 
 import { runAnnotate } from "./commands/annotate";
 import { runIngest } from "./commands/ingest";
@@ -59,10 +77,12 @@ function main(): void {
     case "annotate": {
       const slug = args.find((a) => !a.startsWith("--"));
       const all = args.includes("--all");
+      const reuseVideo = args.includes("--reuse-video");
       const limitArg = args.find((a) => a.startsWith("--limit="));
       const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
-      void runAnnotate(repoRoot, { slug, all, limit }).catch((err: Error) => {
+      void runAnnotate(repoRoot, { slug, all, limit, reuseVideo }).catch((err: Error) => {
         console.error(`[annotate] FAILED: ${err.message}`);
+        if (err.stack) console.error(err.stack);
         process.exit(2);
       });
       break;

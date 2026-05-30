@@ -22,16 +22,17 @@
       // missing) and fed into butterchurn's analyser so the capture reflects
       // a realistic audio-reactive moment.
 
-      import butterchurnRaw from "/node_modules/butterchurn/lib/butterchurn.min.js";
-      import presetsRaw from "/node_modules/butterchurn-presets/lib/butterchurnPresetsMinimal.min.js";
-      // milkdrop-preset-converter is UMD; importing as an ES module via Vite
-      // wraps it. The converter exports convertPreset(text) → preset object.
-      import converterRaw from "/node_modules/milkdrop-preset-converter/dist/milkdrop-preset-converter.min.js";
+      // Vite handles the CJS/UMD interop when we import by package name
+      // rather than a direct path. Direct paths bypass Vite's optimizer
+      // and the UMD files don't have a real ESM default export.
+      // milkdrop-preset-converter uses named exports (no default).
+      import butterchurnRaw from "butterchurn";
+      import presetsRaw from "butterchurn-presets";
+      import { convertPreset } from "milkdrop-preset-converter";
 
       const unwrap = (m) => (m && typeof m === "object" && "default" in m ? m.default : m);
       const butterchurn = unwrap(butterchurnRaw);
       const presets = unwrap(presetsRaw);
-      const converter = unwrap(converterRaw);
 
       const canvas = document.getElementById("vis");
       const params = new URLSearchParams(location.search);
@@ -42,10 +43,13 @@
       const presetUrl = params.get("presetUrl");
       let presetData;
       if (presetUrl) {
+        console.log("[capture] fetching", presetUrl);
         const res = await fetch(presetUrl);
         if (!res.ok) throw new Error(`fetch ${presetUrl} → ${res.status}`);
         const milkText = await res.text();
-        presetData = converter.convertPreset(milkText);
+        console.log("[capture] .milk size", milkText.length);
+        presetData = await convertPreset(milkText);
+        console.log("[capture] converted keys", Object.keys(presetData).join(","));
       } else if (presetName) {
         const presetMap = presets.getPresets();
         presetData = presetMap[presetName];
@@ -131,8 +135,15 @@
         rec.onstop = async () => {
           const blob = new Blob(chunks, { type: "video/webm" });
           const buf = await blob.arrayBuffer();
-          const b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
-          window.__prismVideoBase64 = b64;
+          const bytes = new Uint8Array(buf);
+          // Spread-based String.fromCharCode blows the stack on multi-MB
+          // payloads. Build base64 in 8K chunks.
+          let binary = "";
+          const CHUNK = 8192;
+          for (let i = 0; i < bytes.length; i += CHUNK) {
+            binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+          }
+          window.__prismVideoBase64 = btoa(binary);
           window.__prismCaptureReady = true;
           running = false;
         };

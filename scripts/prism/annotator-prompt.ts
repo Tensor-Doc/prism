@@ -82,11 +82,21 @@ BRAND RULES:
   contemplative / fluid / organic — the kind of thing you'd see in a Refik
   Anadol installation. False for chaotic / geometric / strobing pieces.
 
-TONE for technical_notes:
-- Precise and dialect-appropriate. Use the actual sampler / equation names
-  when visible cause-and-effect makes them identifiable.
-- Do not pad with adjectives. 2-3 sentences. Cite Geiss's lineage when
-  obvious (reaction-diffusion, image-spaces, mandelbox, etc.).
+TONE for technical_notes (2-3 sentences, dialect-appropriate):
+- Name specific Milkdrop mechanics when their action is visually evident:
+  decay rate (low → persistent trails; high → snappy frame-to-frame),
+  gamma / brighten, warp scale + warp animation speed, zoom, rotation,
+  motion vectors, custom waves/shapes, per-vertex vs per-pixel warp,
+  feedback samplers (sampler_main / sampler_fw_main / sampler_fc_main),
+  blur pyramid (sampler_blur1/2/3), video echo, beat-gated bursts.
+- When you describe audio reactivity, say "the synthetic test signal" or
+  "the synthetic kick" — never "the music" or "the song" — so a reader
+  knows the visual was sampled against a controlled stimulus.
+- Cite Geiss's known lineages when obvious: reaction-diffusion,
+  image-spaces, mandelbox, thumb-drum, cauldron. Cite Inigo Quilez
+  raymarched-SDF lineage if obviously present.
+- Use HLSL-style identifier names (e.g. sampler_fw_main, q1..q32) rather
+  than English equivalents when calling out specific shader elements.
 - Do not speculate about preset metadata or attribution; describe only
   what is visually evident in the capture.
 `;

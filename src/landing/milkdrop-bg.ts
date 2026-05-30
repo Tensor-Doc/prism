@@ -8,11 +8,12 @@ import butterchurnRaw from "butterchurn";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import butterchurnPresetsRaw from "butterchurn-presets";
 // milkdrop-preset-converter ships as CJS without types; pull the named
-// export we need with a structural cast.
+// export we need with a structural cast. convertPreset is async — it
+// returns a Promise<preset object> regardless of input.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import * as milkdropConverterRaw from "milkdrop-preset-converter";
 const milkdropConverter = milkdropConverterRaw as unknown as {
-  convertPreset: (text: string) => unknown;
+  convertPreset: (text: string) => Promise<unknown>;
 };
 
 interface VisualizerHandle {
@@ -157,7 +158,7 @@ export function createMilkdropBackground(
         throw new Error(`fetch ${url} → ${res.status} ${res.statusText}`);
       }
       const milkText = await res.text();
-      const converted = milkdropConverter.convertPreset(milkText);
+      const converted = await milkdropConverter.convertPreset(milkText);
       visualizer.loadPreset(converted, blendSeconds);
       // Display name is derived from the URL's last path segment.
       const stem = url.split("/").pop()?.replace(/\.milk$/, "") ?? url;

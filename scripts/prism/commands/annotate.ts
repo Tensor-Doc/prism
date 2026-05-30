@@ -1,18 +1,39 @@
 // Annotate one or more catalog entries: capture a 15s WebM of the preset
 // rendering against the synthetic audio signal, ask Gemini to describe it
-// in the structured shader/Geiss vocabulary, write the annotation block
-// back to the entry.
+// in the structured shader/Geiss vocabulary + recommend the best
+// thumbnail timestamp, write the annotation block back to the entry and
+// extract the thumb at the recommended frame.
 //
-//   pnpm prism annotate <slug>          # one preset (calibration mode)
-//   pnpm prism annotate --all           # everything with annotation: null
-//   pnpm prism annotate --limit=10      # next 10 unannotated
+//   pnpm prism annotate <slug>               # one preset (calibration mode)
+//   pnpm prism annotate <slug> --reuse-video # re-run Gemini on existing WebM
+//   pnpm prism annotate --all                # everything with annotation: null
+//   pnpm prism annotate --limit=10           # next 10 unannotated
 //
-// Prerequisite: `pnpm dev` running in another terminal (Vite serves the
-// capture-page that Puppeteer navigates to). Fails fast otherwise.
+// Prerequisite (unless --reuse-video): `pnpm dev` running in another
+// terminal so Vite serves the capture-page Puppeteer navigates to.
 
-import { GoogleGenAI, Type, createPartFromUri, createUserContent } from "@google/genai";
+import {
+  GoogleGenAI, Type, createPartFromUri, createUserContent,
+} from "@google/genai";
+import ffmpegStaticPath from "ffmpeg-static";
 import puppeteer from "puppeteer";
+import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+
+// ffmpeg-static's postinstall hook is gated behind `pnpm approve-builds`.
+// Prefer the bundled binary when it actually exists on disk; otherwise
+// fall back to the system ffmpeg (the user usually has one). One of the
+// two must work or extractFrame throws.
+function resolveFfmpeg(): string {
+  if (ffmpegStaticPath && existsSync(ffmpegStaticPath)) return ffmpegStaticPath;
+  // Spawn `which ffmpeg` to find a system install — works on macOS/Linux.
+  const which = spawnSync("which", ["ffmpeg"]);
+  const sys = which.stdout?.toString().trim();
+  if (sys && existsSync(sys)) return sys;
+  throw new Error(
+    "no ffmpeg binary available — try `pnpm approve-builds` to enable ffmpeg-static's postinstall, or `brew install ffmpeg`",
+  );
+}
 import { dirname, join } from "node:path";
 
 import { ANNOTATOR_SYSTEM_INSTRUCTION } from "../annotator-prompt";
@@ -24,14 +45,17 @@ const CAPTURE_PAGE = "/scripts/pipelines/capture-pages/milkdrop.html";
 const CAPTURE_DURATION_MS = 15_000;
 const CAPTURE_WIDTH = 1280;
 const CAPTURE_HEIGHT = 720;
+const MODEL = "gemini-flash-latest";
 
-// Response schema mirrors the Annotation TS type (minus model/version/
-// captured_at which we set ourselves). Gemini fills these fields.
-const ANNOTATION_SCHEMA = {
+// What Gemini must return: the Annotation fields (minus the ones we set
+// ourselves: model, version, captured_at) PLUS a recommended thumbnail
+// timestamp in seconds (0..15).
+const RESPONSE_SCHEMA = {
   type: Type.OBJECT,
   required: [
     "vibe", "motion", "palette_anchor", "audio_affinity",
     "techniques", "technical_notes", "brand_safe", "refik_mode",
+    "thumbnail_timestamp_seconds",
   ],
   properties: {
     vibe: { type: Type.ARRAY, items: { type: Type.STRING } },
@@ -50,11 +74,31 @@ const ANNOTATION_SCHEMA = {
     technical_notes: { type: Type.STRING },
     brand_safe: { type: Type.BOOLEAN },
     refik_mode: { type: Type.BOOLEAN },
+    thumbnail_timestamp_seconds: {
+      type: Type.NUMBER,
+      description:
+        "Timestamp (in seconds, 0..14.5) of the single frame that best represents this preset visually for a gallery thumbnail. Pick a moment where motion is settled but the characteristic shapes/colors are at their peak.",
+    },
   },
 } as const;
 
+interface GeminiResponse {
+  annotation: Annotation;
+  thumbnailTimestamp: number;
+}
+
 function entryFilename(slug: string): string {
   return `milkdrop_${slug}.json`;
+}
+
+function getApiKey(): string {
+  const key = process.env.GEMINI_API_KEY ?? process.env.VITE_GEMINI_API_KEY;
+  if (!key) {
+    throw new Error(
+      "GEMINI_API_KEY not set — `export GEMINI_API_KEY=...` first (or set VITE_GEMINI_API_KEY in .env)",
+    );
+  }
+  return key;
 }
 
 async function ensureDevServer(): Promise<void> {
@@ -68,13 +112,15 @@ async function ensureDevServer(): Promise<void> {
   }
 }
 
-async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; thumbBase64: string }> {
+async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; firstFrameBase64: string }> {
   const browser = await puppeteer.launch({
     headless: true,
     args: [
-      "--use-gl=swiftshader",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader",
       "--enable-webgl",
       "--ignore-gpu-blocklist",
+      "--disable-gpu-sandbox",
       "--autoplay-policy=no-user-gesture-required",
       `--window-size=${CAPTURE_WIDTH},${CAPTURE_HEIGHT}`,
     ],
@@ -82,17 +128,18 @@ async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; th
   });
   try {
     const page = await browser.newPage();
-    page.on("pageerror", (e) => console.error(`  [page-error] ${e.message}`));
+    page.on("pageerror", (e) => console.error(`  [page-error] ${e.message}\n  ${e.stack ?? ""}`));
     page.on("console", (msg) => {
-      if (msg.type() === "error") console.error(`  [page-console-error] ${msg.text()}`);
+      const t = msg.type();
+      if (t === "error" || t === "warning") {
+        console.error(`  [page-${t}] ${msg.text()}`);
+      }
     });
     const url = `${DEV_URL}${CAPTURE_PAGE}?presetUrl=${encodeURIComponent(presetUrl)}`;
     await page.goto(url, { waitUntil: "networkidle0", timeout: 30_000 });
     await page.waitForFunction("window.__prismReady === true", { timeout: 30_000 });
-    // Settle for 1s so blends/decay reach a stable state before recording.
-    await new Promise((r) => setTimeout(r, 1000));
-    // Capture thumbnail BEFORE the recording starts (first stable frame).
-    const thumbBase64 = await page.evaluate(() => {
+    await new Promise((r) => setTimeout(r, 1000)); // let blends settle
+    const firstFrameBase64 = await page.evaluate(() => {
       const canvas = document.getElementById("vis") as HTMLCanvasElement | null;
       if (!canvas) throw new Error("no canvas");
       return canvas.toDataURL("image/jpeg", 0.82).split(",")[1];
@@ -103,10 +150,8 @@ async function captureVideo(presetUrl: string): Promise<{ webmBase64: string; th
     await page.waitForFunction("window.__prismCaptureReady === true", {
       timeout: CAPTURE_DURATION_MS + 15_000,
     });
-    const webmBase64 = (await page.evaluate(
-      "window.__prismVideoBase64",
-    )) as string;
-    return { webmBase64, thumbBase64 };
+    const webmBase64 = (await page.evaluate("window.__prismVideoBase64")) as string;
+    return { webmBase64, firstFrameBase64 };
   } finally {
     await browser.close();
   }
@@ -116,11 +161,7 @@ async function callGemini(
   ai: GoogleGenAI,
   webmBytes: Buffer,
   display: { name: string; author?: string },
-): Promise<Annotation> {
-  // Upload the video to the Gemini Files API so we can reference it as
-  // an inline part. WebMs > ~20MB need this route; for our 15s captures
-  // either works, but the Files API path is what the M5b CI Action will
-  // use too — best to exercise it now.
+): Promise<GeminiResponse> {
   const file = await ai.files.upload({
     file: new Blob([new Uint8Array(webmBytes)], { type: "video/webm" }),
     config: { mimeType: "video/webm" },
@@ -129,51 +170,100 @@ async function callGemini(
   const fileUri = file.uri;
   const fileMime = file.mimeType;
   const fileName = file.name;
-  // Files API uploads start in PROCESSING state and need to be ACTIVE before
-  // generateContent will accept them. Poll briefly.
+  // Files API uploads start in PROCESSING; poll until ACTIVE.
   if (fileName) {
     for (let i = 0; i < 30; i++) {
       const status = await ai.files.get({ name: fileName });
       if (status.state === "ACTIVE") break;
-      if (status.state === "FAILED") throw new Error(`gemini file processing failed`);
+      if (status.state === "FAILED") throw new Error("gemini file processing failed");
       await new Promise((r) => setTimeout(r, 1000));
     }
   }
 
-  const prompt = `Preset name (as bare metadata, not visible in video):
+  const prompt = `Preset name (metadata, not visible in video):
 "${display.name}"${display.author ? ` (attributed to: ${display.author})` : ""}
 
-Watch the 15s capture and produce the annotation JSON.`;
+Watch the 15s capture and produce the annotation JSON. The audio you can
+infer from the visual reactions is a synthetic test signal (not music) —
+do not call it "the music" or "the song" in technical_notes.`;
 
   const response = await ai.models.generateContent({
-    model: "gemini-flash-latest",
+    model: MODEL,
     contents: createUserContent([createPartFromUri(fileUri, fileMime), prompt]),
     config: {
       systemInstruction: ANNOTATOR_SYSTEM_INSTRUCTION,
       responseMimeType: "application/json",
-      responseSchema: ANNOTATION_SCHEMA,
+      responseSchema: RESPONSE_SCHEMA,
       temperature: 0.4,
     },
   });
   const text = response.text;
   if (!text) throw new Error("empty gemini response");
-  const parsed = JSON.parse(text) as Omit<Annotation, "model" | "version" | "captured_at">;
+  let raw: (Omit<Annotation, "model" | "version" | "captured_at"> & {
+    thumbnail_timestamp_seconds?: number | null;
+  });
+  try {
+    raw = JSON.parse(text);
+  } catch (err) {
+    console.error("  [gemini-raw]", text.slice(0, 400));
+    throw new Error(`failed to parse gemini JSON: ${(err as Error).message}`);
+  }
+  const ts = typeof raw.thumbnail_timestamp_seconds === "number"
+    ? raw.thumbnail_timestamp_seconds
+    : 7.5; // safe middle-of-clip fallback
+  // Strip the thumbnail field from what we persist as annotation.
+  const { thumbnail_timestamp_seconds: _ts, ...annotationFields } = raw;
+  void _ts;
   return {
-    ...parsed,
-    model: "gemini-flash-latest",
-    version: 2,
-    captured_at: new Date().toISOString(),
+    annotation: {
+      ...annotationFields,
+      model: MODEL,
+      version: 2,
+      captured_at: new Date().toISOString(),
+    },
+    thumbnailTimestamp: ts,
   };
 }
 
-export async function runAnnotateOne(repoRoot: string, slug: string): Promise<void> {
-  await ensureDevServer();
-  // Accept either GEMINI_API_KEY (preferred for server work) or
-  // VITE_GEMINI_API_KEY (the existing local .env) — same key value.
-  const apiKey = process.env.GEMINI_API_KEY ?? process.env.VITE_GEMINI_API_KEY;
-  if (!apiKey) {
-    throw new Error("GEMINI_API_KEY not set — `export GEMINI_API_KEY=...` first (or set VITE_GEMINI_API_KEY in .env)");
+function extractFrame(videoPath: string, timeSeconds: number, outPath: string): void {
+  const ffmpeg = resolveFfmpeg();
+  const clamped = Math.max(0, Math.min(timeSeconds, 14.5));
+  const result = spawnSync(ffmpeg, [
+    "-y", "-loglevel", "error",
+    "-ss", clamped.toString(),
+    "-i", videoPath,
+    "-vframes", "1",
+    "-q:v", "2",
+    outPath,
+  ]);
+  if (result.error) {
+    throw new Error(`ffmpeg spawn failed: ${result.error.message}`);
   }
+  if (result.status !== 0) {
+    const stderr = result.stderr ? result.stderr.toString() : "(no stderr)";
+    throw new Error(`ffmpeg extract failed (exit ${result.status}): ${stderr}`);
+  }
+}
+
+function wrap(s: string, width = 70): string[] {
+  const words = s.split(/\s+/);
+  const lines: string[] = [];
+  let cur = "";
+  for (const w of words) {
+    if ((cur + " " + w).length > width) { lines.push(cur); cur = w; }
+    else cur = cur ? cur + " " + w : w;
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
+export async function runAnnotateOne(
+  repoRoot: string,
+  slug: string,
+  opts: { reuseVideo?: boolean } = {},
+): Promise<void> {
+  const apiKey = getApiKey();
+  if (!opts.reuseVideo) await ensureDevServer();
   const ai = new GoogleGenAI({ apiKey });
 
   const entryPath = join(repoRoot, "catalog/entries", entryFilename(slug));
@@ -192,26 +282,42 @@ export async function runAnnotateOne(repoRoot: string, slug: string): Promise<vo
   console.log(`  preset:  ${presetUrl}`);
   console.log(`  textures: ${(entry.assets.textures_needed ?? []).map((t) => t.name).join(", ") || "none"}`);
 
-  const t0 = Date.now();
-  console.log("  capturing 15s WebM via headless Chrome...");
-  const { webmBase64, thumbBase64 } = await captureVideo(presetUrl);
-  const renderMs = Date.now() - t0;
-  const webmBytes = Buffer.from(webmBase64, "base64");
-  const thumbBytes = Buffer.from(thumbBase64, "base64");
   const videoOut = join(repoRoot, "public/videos", `milkdrop_${slug}.webm`);
   const thumbOut = join(repoRoot, "public/thumbs", `milkdrop_${slug}.jpg`);
-  mkdirSync(dirname(videoOut), { recursive: true });
-  mkdirSync(dirname(thumbOut), { recursive: true });
-  writeFileSync(videoOut, webmBytes);
-  writeFileSync(thumbOut, thumbBytes);
-  console.log(`  webm: ${(webmBytes.length / 1024).toFixed(1)} KB → ${videoOut.replace(repoRoot + "/", "")}`);
-  console.log(`  thumb: ${(thumbBytes.length / 1024).toFixed(1)} KB → ${thumbOut.replace(repoRoot + "/", "")}`);
-  console.log(`  render time: ${renderMs}ms`);
+
+  let webmBytes: Buffer;
+  let renderMs = 0;
+  if (opts.reuseVideo) {
+    if (!existsSync(videoOut)) {
+      throw new Error(`--reuse-video set but no existing capture at ${videoOut}`);
+    }
+    webmBytes = readFileSync(videoOut);
+    console.log(`  reusing existing webm: ${(webmBytes.length / 1024).toFixed(1)} KB`);
+  } else {
+    const t0 = Date.now();
+    console.log("  capturing 15s WebM via headless Chrome...");
+    const { webmBase64, firstFrameBase64 } = await captureVideo(presetUrl);
+    renderMs = Date.now() - t0;
+    webmBytes = Buffer.from(webmBase64, "base64");
+    mkdirSync(dirname(videoOut), { recursive: true });
+    mkdirSync(dirname(thumbOut), { recursive: true });
+    writeFileSync(videoOut, webmBytes);
+    // Provisional thumb = first stable frame; will be replaced post-Gemini.
+    writeFileSync(thumbOut, Buffer.from(firstFrameBase64, "base64"));
+    console.log(`  webm: ${(webmBytes.length / 1024).toFixed(1)} KB → ${videoOut.replace(repoRoot + "/", "")}`);
+    console.log(`  render time: ${renderMs}ms`);
+  }
 
   const t1 = Date.now();
-  console.log("  asking Gemini (gemini-flash-latest)...");
-  const annotation = await callGemini(ai, webmBytes, entry.display);
+  console.log(`  asking Gemini (${MODEL})...`);
+  const { annotation, thumbnailTimestamp } = await callGemini(ai, webmBytes, entry.display);
   const annotateMs = Date.now() - t1;
+
+  // Replace the provisional thumb with the frame Gemini picked.
+  mkdirSync(dirname(thumbOut), { recursive: true });
+  extractFrame(videoOut, thumbnailTimestamp, thumbOut);
+  const thumbBytes = readFileSync(thumbOut);
+  console.log(`  thumb @ t=${thumbnailTimestamp.toFixed(2)}s · ${(thumbBytes.length / 1024).toFixed(1)} KB → ${thumbOut.replace(repoRoot + "/", "")}`);
 
   entry.annotation = annotation;
   entry.assets.video = `/videos/milkdrop_${slug}.webm`;
@@ -220,9 +326,8 @@ export async function runAnnotateOne(repoRoot: string, slug: string): Promise<vo
 
   progress.update(slug, {
     status: "annotated",
-    rendered_at: new Date(t0).toISOString(),
+    ...(renderMs > 0 ? { rendered_at: new Date().toISOString(), render_ms: renderMs } : {}),
     annotated_at: new Date().toISOString(),
-    render_ms: renderMs,
     annotate_ms: annotateMs,
   });
 
@@ -234,18 +339,8 @@ export async function runAnnotateOne(repoRoot: string, slug: string): Promise<vo
   console.log(`  │ audio:       bass ${annotation.audio_affinity.bass.toFixed(2)} · mid ${annotation.audio_affinity.mid.toFixed(2)} · treble ${annotation.audio_affinity.treble.toFixed(2)}`);
   console.log(`  │ techniques:  ${(annotation.techniques ?? []).join(", ") || "—"}`);
   console.log(`  │ brand_safe:  ${annotation.brand_safe}    refik_mode: ${annotation.refik_mode ?? false}`);
+  console.log(`  │ thumb @ t:   ${thumbnailTimestamp.toFixed(2)}s`);
   console.log(`  │ technical_notes:`);
-  const wrap = (s: string, width = 70): string[] => {
-    const words = s.split(" ");
-    const lines: string[] = [];
-    let cur = "";
-    for (const w of words) {
-      if ((cur + " " + w).length > width) { lines.push(cur); cur = w; }
-      else cur = cur ? cur + " " + w : w;
-    }
-    if (cur) lines.push(cur);
-    return lines;
-  };
   for (const line of wrap(annotation.technical_notes ?? "(none)")) {
     console.log(`  │   ${line}`);
   }
@@ -253,20 +348,21 @@ export async function runAnnotateOne(repoRoot: string, slug: string): Promise<vo
   console.log("");
 }
 
-export async function runAnnotate(repoRoot: string, args: { slug?: string; all?: boolean; limit?: number }): Promise<void> {
+export async function runAnnotate(
+  repoRoot: string,
+  args: { slug?: string; all?: boolean; limit?: number; reuseVideo?: boolean },
+): Promise<void> {
   if (args.slug) {
-    await runAnnotateOne(repoRoot, args.slug);
+    await runAnnotateOne(repoRoot, args.slug, { reuseVideo: args.reuseVideo });
     return;
   }
-  // Bulk mode: find candidates from progress tracker (status=ingested,
-  // annotation still null on disk), annotate up to --limit.
   const progress = new Progress(progressPath(repoRoot));
   const pending = progress.pendingSlugs("annotated").slice(0, args.limit ?? Infinity);
   console.log(`[annotate] ${pending.length} pending`);
   let done = 0;
   for (const slug of pending) {
     try {
-      await runAnnotateOne(repoRoot, slug);
+      await runAnnotateOne(repoRoot, slug, { reuseVideo: args.reuseVideo });
       done++;
     } catch (err) {
       console.error(`[annotate] ERROR ${slug}: ${(err as Error).message}`);
