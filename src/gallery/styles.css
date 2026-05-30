@@ -451,3 +451,20 @@ html, body.gallery-page {
   .hero { padding: var(--space-6) var(--space-4) var(--space-5); }
   .grid { padding: var(--space-5) var(--space-4); gap: var(--space-4); }
 }
+
+/* Build version tag — bottom-right corner; dim, lights up on hover. */
+.version-tag {
+  position: fixed;
+  bottom: 4px;
+  right: 8px;
+  z-index: 60;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  opacity: 0.45;
+  user-select: text;
+  transition: opacity 180ms var(--ease-snap), color 180ms var(--ease-snap);
+}
+.version-tag:hover { opacity: 1; color: var(--cyan); }
+.version-tag::before { content: "build "; opacity: 0.55; }

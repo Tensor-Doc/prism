@@ -28,6 +28,18 @@ function $<T extends HTMLElement = HTMLElement>(sel: string): T {
   return el;
 }
 
+// Stamp the build SHA + time into the corner tag + console banner.
+const versionTag = document.getElementById("version-tag");
+if (versionTag) {
+  versionTag.textContent = __PRISM_BUILD_SHA__;
+  versionTag.title = `prism build ${__PRISM_BUILD_SHA__} · ${__PRISM_BUILD_TIME__}`;
+}
+console.log(
+  `%cprism · build ${__PRISM_BUILD_SHA__}%c · ${__PRISM_BUILD_TIME__}`,
+  "color:#3dffe5;font-family:JetBrains Mono,monospace;font-weight:600;",
+  "color:#6a6a72;font-family:JetBrains Mono,monospace;",
+);
+
 // ── rotation helpers (declared first so onReady / onSource can call them) ──
 const ROTATE_INTERVAL_MS = 22_000;
 const ROTATE_BLEND_S = 3;

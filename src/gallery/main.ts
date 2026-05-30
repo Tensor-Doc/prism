@@ -288,7 +288,21 @@ function pulseLive(): void {
   pulse.classList.add("is-pulsing");
 }
 
+function stampVersion(): void {
+  const el = document.getElementById("version-tag");
+  if (el) {
+    el.textContent = __PRISM_BUILD_SHA__;
+    el.title = `prism build ${__PRISM_BUILD_SHA__} · ${__PRISM_BUILD_TIME__}`;
+  }
+  console.log(
+    `%cprism · build ${__PRISM_BUILD_SHA__}%c · ${__PRISM_BUILD_TIME__}`,
+    "color:#3dffe5;font-family:JetBrains Mono,monospace;font-weight:600;",
+    "color:#6a6a72;font-family:JetBrains Mono,monospace;",
+  );
+}
+
 async function boot(): Promise<void> {
+  stampVersion();
   // Search wiring
   const input = $<HTMLInputElement>("#search-input");
   input.addEventListener("input", () => {

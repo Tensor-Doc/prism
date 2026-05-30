@@ -1104,6 +1104,29 @@ body.audio-live .state-spectrum {
   opacity: 1; /* don't dim — the thinking state is the readout */
 }
 
+/* Build version tag — bottom-right corner. Dim by default, lights up
+   on hover so it never competes with the visual but is always there to
+   answer "what build is this?". */
+.version-tag {
+  position: fixed;
+  bottom: 4px;
+  right: 8px;
+  z-index: 60;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  opacity: 0.45;
+  pointer-events: auto;
+  user-select: text;
+  transition: opacity 180ms var(--ease-snap), color 180ms var(--ease-snap);
+}
+.version-tag:hover {
+  opacity: 1;
+  color: var(--cyan);
+}
+.version-tag::before { content: "build "; opacity: 0.55; }
+
 /* Test-signal recorder pill — slots into the SOURCES panel just under
    the audio row when audio is live. Saves 30s WebM/Opus of the current
    share for the annotation pipeline's deterministic stimulus. */
