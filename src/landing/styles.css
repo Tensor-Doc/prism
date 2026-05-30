@@ -967,6 +967,44 @@ body.audio-live .state-spectrum {
   font-weight: 400;
 }
 
+/* Suggestion chips — VJ-vocabulary starter prompts. Hidden in docked mode
+   so the bottom-bar layout stays single-line. */
+.prompt__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  min-height: 22px;
+}
+.prompt[data-collapsed] .prompt__chips { display: none; }
+
+.prompt-chip {
+  appearance: none;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 140ms, border-color 140ms, background 140ms,
+    box-shadow 140ms;
+}
+.prompt-chip:hover,
+.prompt-chip:focus-visible {
+  color: var(--cyan);
+  border-color: var(--cyan-60);
+  background: var(--cyan-12);
+  box-shadow: 0 0 14px var(--cyan-12);
+  outline: none;
+}
+.prompt-chip:active {
+  transform: translateY(1px);
+}
+
 .prompt__footer {
   display: flex;
   align-items: center;

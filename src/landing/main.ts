@@ -620,6 +620,50 @@ async function setPromptCollapsed(collapsed: boolean): Promise<void> {
 promptCollapseBtn.addEventListener("click", () => { void setPromptCollapsed(true); });
 promptRestoreBtn.addEventListener("click", () => { void setPromptCollapsed(false); });
 
+// ── suggestion chips ──────────────────────────────────────
+// "Describe a visualization" is a blank-canvas problem — most visitors
+// freeze. These chips put VJ-community vocabulary in their face so the
+// loop is one click away. Mix of vibe / theme / form keywords. Picking
+// 8 random ones per page load keeps the surface fresh.
+const CHIP_PROMPTS: ReadonlyArray<string> = [
+  "calming cosmic nebula",
+  "fractal kaleidoscope",
+  "dreamy dark mirage",
+  "wormhole tunnel at light speed",
+  "plants growing slowly",
+  "stormy sea at dusk",
+  "geometric neon shapes pulsing",
+  "warm painterly fire",
+  "fluid paint spilling with bass",
+  "industrial chains breaking",
+  "frosty crystal cave",
+  "a single luminous orb",
+  "sunflower opening",
+  "skylight cathedral",
+];
+
+const promptChips = document.getElementById("prompt-chips");
+if (promptChips) {
+  const pool = [...CHIP_PROMPTS];
+  // Fisher-Yates shuffle for a fresh ordering each load.
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  for (const text of pool.slice(0, 8)) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "prompt-chip";
+    btn.setAttribute("role", "listitem");
+    btn.textContent = text;
+    btn.addEventListener("click", () => {
+      promptInput.value = text;
+      void tryGenerate();
+    });
+    promptChips.appendChild(btn);
+  }
+}
+
 // Global ⌘K / ⌘L → focus prompt
 window.addEventListener("keydown", (e) => {
   if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) {
