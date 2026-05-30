@@ -121,23 +121,10 @@ function relativeTime(iso: string): string {
 }
 
 function buildCardTitle(e: IndexEntry): string {
-  const lines: string[] = [];
-  lines.push(e.author ? `${e.name} · by ${e.author}` : e.name);
-  if (e.blurb) lines.push(`"${e.blurb}"`);
-  if (e.technical_notes) {
-    lines.push("");
-    lines.push(e.technical_notes);
-  }
-  lines.push("");
-  if (e.vibe.length) lines.push(`vibe: ${e.vibe.join(", ")}`);
-  if (e.techniques.length) lines.push(`techniques: ${e.techniques.join(", ")}`);
-  const a = e.audio_affinity;
-  lines.push(`audio: bass ${a.bass.toFixed(2)} · mid ${a.mid.toFixed(2)} · treble ${a.treble.toFixed(2)} · motion ${e.motion.toFixed(2)}`);
-  if (e.refik_mode) lines.push("· refik mode");
-  if (!e.brand_safe) lines.push("· purple-heavy (not brand-safe)");
-  const ts = e.captured_at ?? e.added_at;
-  if (ts) lines.push(`· annotated ${relativeTime(ts)}`);
-  return lines.join("\n");
+  // Just the rich technical description on hover — less text, faster read.
+  // Fall back to blurb (then name) for legacy hand-seeded entries that
+  // don't have a Gemini technical_notes yet.
+  return e.technical_notes ?? e.blurb ?? e.name;
 }
 
 function renderCard(e: IndexEntry): HTMLElement {

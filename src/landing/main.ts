@@ -498,6 +498,39 @@ const SOURCE_LABELS: Record<Exclude<GallerySourceId, null>, string> = {
   "nasa-deep-space": "nasa · deep space",
 };
 
+// Slideshow canvas reference + the active backend tracker — both needed
+// by the "feed shader textures" pill to decide visibility and what to
+// pipe in.
+const slideshowCanvas = $<HTMLCanvasElement>("#slideshow");
+let activeBackend: "milkdrop" | "shadertoy" = "milkdrop";
+let feedShaderOn = false;
+
+const feedShaderBtn = document.getElementById("feed-shader-btn") as HTMLButtonElement | null;
+function refreshFeedShaderPill(): void {
+  if (!feedShaderBtn) return;
+  const canShow = activeBackend === "shadertoy" && currentGallerySource !== null;
+  if (canShow) feedShaderBtn.removeAttribute("data-hidden");
+  else {
+    feedShaderBtn.setAttribute("data-hidden", "");
+    // Auto-disable when no longer applicable so we don't pipe nothing.
+    if (feedShaderOn) {
+      feedShaderOn = false;
+      feedShaderBtn.removeAttribute("data-on");
+      shadertoy.setLiveSource(null);
+    }
+  }
+}
+feedShaderBtn?.addEventListener("click", () => {
+  feedShaderOn = !feedShaderOn;
+  if (feedShaderOn) {
+    feedShaderBtn.setAttribute("data-on", "");
+    shadertoy.setLiveSource(slideshowCanvas);
+  } else {
+    feedShaderBtn.removeAttribute("data-on");
+    shadertoy.setLiveSource(null);
+  }
+});
+
 function setGallerySource(src: GallerySourceId): void {
   currentGallerySource = src;
   if (src === null) {
@@ -508,6 +541,7 @@ function setGallerySource(src: GallerySourceId): void {
     galleryRate.textContent = "connect";
     refreshSignalCount();
     refreshSourceSelection();
+    refreshFeedShaderPill();
     return;
   }
   if (src === "audio-tab") {
@@ -519,6 +553,7 @@ function setGallerySource(src: GallerySourceId): void {
   galleryRate.textContent = SOURCE_LABELS[src];
   slideshow.start();
   showSlideshowCard();
+  refreshFeedShaderPill();
   // Auto-collapse the prompt panel so the slideshow visualization has the
   // viewport for itself. No-op if already docked.
   void setPromptCollapsed(true);
@@ -747,6 +782,8 @@ async function tryGenerate(): Promise<void> {
     if (!result.ok) {
       throw new Error(result.error ?? "graph runtime failed");
     }
+    activeBackend = result.backend ?? activeBackend;
+    refreshFeedShaderPill();
     updateSkillDisplay(data.graph.intent, true);
     showResult(data.graph.intent);
   } catch (err) {

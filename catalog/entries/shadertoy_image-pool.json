@@ -12,15 +12,48 @@
     "author": "prism",
     "blurb": "An image reflected in a water surface, rippled by FBM noise; quiet but alive."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "misty",
+      "atmospheric",
+      "contemplative"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#1c2625",
+      "#2d413e",
+      "#43615d"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "fbm_noise",
+      "frame_feedback",
+      "bloom_glow"
+    ],
+    "technical_notes": "Procedural fbm_noise generates drifting, cloud-like structures that mask a central radial glow. The glow modulates softly in intensity with the bass of the test signal, while a high decay rate in sampler_main maintains a foggy, atmospheric quality. This contemplative, low-contrast composition evokes a dark, misty sky.",
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T21:32:59.773Z"
+  },
   "assets": {
     "textures_needed": [],
-    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA17563%2FPIA17563~medium.jpg"
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA17563%2FPIA17563~medium.jpg",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-pool.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-pool.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

@@ -1,44 +1,548 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-05-30T21:24:59.353Z",
+  "generated_at": "2026-05-30T21:39:01.839Z",
   "total": 644,
-  "annotated_count": 66,
-  "pending_count": 578,
+  "annotated_count": 70,
+  "pending_count": 574,
   "entries": [
     {
-      "id": "shadertoy:cosmic-flow",
-      "slug": "cosmic-flow",
-      "name": "Cosmic Flow",
-      "author": "prism",
-      "blurb": "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow.",
+      "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly",
+      "slug": "aderrasi-airhandler-kali-mix-painterly",
+      "name": "Aderrasi - Airhandler (Kali Mix) - Painterly",
+      "author": "Aderrasi",
       "vibe": [
         "fluid",
         "organic",
-        "hypnotic",
+        "minimalist",
         "painterly"
       ],
-      "motion": 0.3,
+      "motion": 0.45,
       "audio_affinity": {
-        "bass": 0.4,
-        "mid": 0.3,
-        "treble": 0.2
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the synthetic test signal, while the overall warp scale is modulated by the synthetic kick.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-kali-mix-painterly.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-kali-mix-painterly.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.165Z",
+      "captured_at": "2026-05-30T19:59:34.868Z"
+    },
+    {
+      "id": "milkdrop:eo-s-nematodes-e-daemon",
+      "slug": "eo-s-nematodes-e-daemon",
+      "name": "Eo.S. - nematodes E daemon",
+      "author": "Eo.S.",
+      "vibe": [
+        "organic",
+        "fiery",
+        "fluid",
+        "demonic"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the synthetic test signal. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the synthetic test signal trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-nematodes-e-daemon.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-nematodes-e-daemon.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.191Z",
+      "captured_at": "2026-05-30T19:53:07.636Z"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
+      "slug": "eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
+      "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "kinetic",
+        "fluid",
+        "organic",
+        "mystical"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.85
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail",
+        "domain_repetition",
+        "audio_gating",
+        "beat_burst"
+      ],
+      "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the synthetic test signal modulate the wave amplitude and fine-grained displacement, while the synthetic kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.183Z",
+      "captured_at": "2026-05-30T19:45:22.545Z"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c",
+      "slug": "eo-s-phat-chasers-11-sentinel-c",
+      "name": "Eo.S. + Phat - chasers 11 sentinel C",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "cosmic",
+        "fluid",
+        "organic",
+        "kinetic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail",
+        "particle_system",
+        "audio_gating"
+      ],
+      "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.182Z",
+      "captured_at": "2026-05-30T19:44:47.555Z"
+    },
+    {
+      "id": "milkdrop:cope-wip-strange-attractor-2",
+      "slug": "cope-wip-strange-attractor-2",
+      "name": "Cope-WIP - Strange Attractor 2",
+      "author": "Cope-WIP",
+      "vibe": [
+        "minimalist",
+        "mathematical",
+        "kinetic",
+        "stark"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the synthetic test signal's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-wip-strange-attractor-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-wip-strange-attractor-2.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.179Z",
+      "captured_at": "2026-05-30T19:41:29.773Z"
+    },
+    {
+      "id": "milkdrop:che-terracarbon-stream",
+      "slug": "che-terracarbon-stream",
+      "name": "Che - Terracarbon Stream",
+      "author": "Che",
+      "vibe": [
+        "organic",
+        "hypnotic",
+        "biological",
+        "fluid"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "custom_wave",
+        "decay_trail",
+        "audio_gating"
+      ],
+      "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the synthetic test signal. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/che-terracarbon-stream.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/che-terracarbon-stream.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.176Z",
+      "captured_at": "2026-05-30T19:39:22.224Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-the-lurker-twin-mix-bitcore-tweak",
+      "slug": "aderrasi-the-lurker-twin-mix-bitcore-tweak",
+      "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
+      "author": "Aderrasi",
+      "vibe": [
+        "ethereal",
+        "hypnotic",
+        "geometric",
+        "contemplative"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-the-lurker-twin-mix-bitcore-tweak.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-the-lurker-twin-mix-bitcore-tweak.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.172Z",
+      "captured_at": "2026-05-30T19:35:02.032Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-ghast-entity",
+      "slug": "aderrasi-ghast-entity",
+      "name": "Aderrasi - Ghast Entity",
+      "author": "Aderrasi",
+      "vibe": [
+        "ghostly",
+        "minimalist",
+        "fluid",
+        "monochrome"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail",
+        "audio_gating"
+      ],
+      "technical_notes": "A central custom_wave filament reacts sharply to the treble of the synthetic test signal, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-entity.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-entity.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.169Z",
+      "captured_at": "2026-05-30T19:31:09.032Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-ghast-quarter-past-ghast-mix",
+      "slug": "aderrasi-ghast-quarter-past-ghast-mix",
+      "name": "Aderrasi - Ghast (Quarter Past Ghast Mix)",
+      "author": "Aderrasi",
+      "vibe": [
+        "ghostly",
+        "fluid",
+        "ethereal",
+        "organic"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.8,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "warp_field",
+        "decay_trail"
+      ],
+      "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-quarter-past-ghast-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-quarter-past-ghast-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.168Z",
+      "captured_at": "2026-05-30T19:30:36.714Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-contortion-wide-twist-mix",
+      "slug": "aderrasi-contortion-wide-twist-mix",
+      "name": "Aderrasi - Contortion (Wide Twist Mix)",
+      "author": "Aderrasi",
+      "vibe": [
+        "hypnotic",
+        "organic",
+        "fluid",
+        "dark"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.5
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "technical_notes": "Per-pixel warp equations apply a logarithmic spiral deformation that pulls frame feedback through sampler_main toward a central singularity. A complex custom wave reacts to the synthetic test signal, leaving persistent trails that decay into the twisting spiral, forming a ribbed, shell-like organic structure. The feedback loop operates with a low-to-moderate decay rate to maintain the structural history of the waveform.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-contortion-wide-twist-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-contortion-wide-twist-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.166Z",
+      "captured_at": "2026-05-30T19:28:47.020Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-airhandler-last-breath-eden",
+      "slug": "aderrasi-airhandler-last-breath-eden",
+      "name": "Aderrasi - Airhandler (Last Breath - Eden)",
+      "author": "Aderrasi",
+      "vibe": [
+        "fluid",
+        "hypnotic",
+        "psychedelic",
+        "vortex"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
       },
       "techniques": [
         "frame_feedback",
         "warp_field",
         "hue_cycle",
-        "fbm_noise",
+        "bloom_glow",
         "decay_trail"
       ],
-      "technical_notes": "A fluid reaction-diffusion simulation driven by a low-frequency warp field. Per-pixel warp shader uses procedural noise (fbm_noise) to advect the color channels, while frame feedback through sampler_main with a very low decay rate creates persistent, painterly trails. The color palette rotates slowly through a hue cycle driven by time, showing minimal direct high-frequency response to the synthetic test signal.",
+      "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
       "refik_mode": true,
-      "brand_safe": false,
+      "brand_safe": true,
       "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_cosmic-flow.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_cosmic-flow.jpg",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-eden.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-eden.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.166Z",
+      "captured_at": "2026-05-30T19:28:12.300Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-airhandler-last-breath-calm",
+      "slug": "aderrasi-airhandler-last-breath-calm",
+      "name": "Aderrasi - Airhandler (Last Breath - Calm)",
+      "author": "Aderrasi",
+      "vibe": [
+        "fluid",
+        "organic",
+        "hypnotic",
+        "cosmic"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "cosine_palette",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the synthetic test signal's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-calm.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-calm.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.165Z",
+      "captured_at": "2026-05-30T19:27:37.336Z"
+    },
+    {
+      "id": "shadertoy:image-pool",
+      "slug": "image-pool",
+      "name": "Image Pool",
+      "author": "prism",
+      "blurb": "An image reflected in a water surface, rippled by FBM noise; quiet but alive.",
+      "vibe": [
+        "dark",
+        "misty",
+        "atmospheric",
+        "contemplative"
+      ],
+      "motion": 0.15,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "fbm_noise",
+        "frame_feedback",
+        "bloom_glow"
+      ],
+      "technical_notes": "Procedural fbm_noise generates drifting, cloud-like structures that mask a central radial glow. The glow modulates softly in intensity with the bass of the test signal, while a high decay rate in sampler_main maintains a foggy, atmospheric quality. This contemplative, low-contrast composition evokes a dark, misty sky.",
+      "refik_mode": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-pool.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-pool.jpg",
       "added_by": "prism",
       "added_at": "2026-05-30T00:00:00.000Z",
-      "captured_at": "2026-05-30T21:16:39.962Z"
+      "captured_at": "2026-05-30T21:32:59.773Z"
+    },
+    {
+      "id": "shadertoy:image-mosaic",
+      "slug": "image-mosaic",
+      "name": "Image Mosaic",
+      "author": "prism",
+      "blurb": "Tessellated image tiles that pulse, scale, and offset on beats.",
+      "vibe": [
+        "minimalist",
+        "geometric",
+        "structured",
+        "rhythmic"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.3,
+        "treble": 0.2
+      },
+      "techniques": [
+        "domain_repetition",
+        "warp_field",
+        "audio_gating"
+      ],
+      "technical_notes": "A structured grid of repeating blocks is modulated by a per-pixel warp shader, creating a domain repetition effect where cell corners pinch into sharp teal and brown star-like shapes. The overall brightness and scale of the grid are heavily gated by the bass frequencies of the synthetic test signal, causing the pattern to collapse into a dark, flat mosaic during quiet passages and expand during peak transients. The rendering relies on a custom composition shader that masks and sharpens the grid boundaries based on audio-driven variables.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-mosaic.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-mosaic.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T21:32:25.578Z"
+    },
+    {
+      "id": "shadertoy:raymarch-sphere",
+      "slug": "raymarch-sphere",
+      "name": "Raymarch Sphere",
+      "author": "prism",
+      "blurb": "Mandelbox-fold sphere SDF with cyan rim light; mid-band audio modulates iteration.",
+      "vibe": [
+        "geometric",
+        "architectural",
+        "surreal",
+        "rhythmic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "raymarch_sdf",
+        "domain_repetition",
+        "beat_burst",
+        "cosine_palette"
+      ],
+      "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the synthetic test signal, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_raymarch-sphere.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_raymarch-sphere.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T21:31:09.692Z"
+    },
+    {
+      "id": "shadertoy:audio-spectrum",
+      "slug": "audio-spectrum",
+      "name": "Audio Spectrum",
+      "author": "prism",
+      "blurb": "64 mirrored FFT bars, cyan→orange gradient with soft bloom.",
+      "vibe": [
+        "retro",
+        "pixelated",
+        "minimalist",
+        "digital"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "bloom_glow"
+      ],
+      "technical_notes": "A pixelated horizontal custom wave is rendered with a dual-color gradient transitioning from a cyan core to an orange fringe. A vertical blur pass, likely utilizing a 1D blur in the composite shader, creates a soft glowing pillar effect behind the waveform. The vertical displacement and amplitude of the wave are directly modulated by the low and mid-frequency bands of the synthetic test signal.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_audio-spectrum.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_audio-spectrum.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T21:30:32.825Z"
     },
     {
       "id": "milkdrop:flexi-using-jedi-forces",
@@ -77,38 +581,6 @@
       "captured_at": "2026-05-30T20:11:20.820Z"
     },
     {
-      "id": "milkdrop:flexi-self-lubricating",
-      "slug": "flexi-self-lubricating",
-      "name": "Flexi - self-lubricating",
-      "author": "Flexi",
-      "vibe": [
-        "minimalist",
-        "strobe",
-        "stark",
-        "glitchy"
-      ],
-      "motion": 0.8,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.2,
-        "treble": 0.2
-      },
-      "techniques": [
-        "audio_gating",
-        "beat_burst",
-        "custom_wave"
-      ],
-      "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the synthetic test signal, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-self-lubricating.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-self-lubricating.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.207Z",
-      "captured_at": "2026-05-30T20:10:28.389Z"
-    },
-    {
       "id": "milkdrop:flexi-layered-boz-buckwild",
       "slug": "flexi-layered-boz-buckwild",
       "name": "Flexi - layered + Boz - Buckwild",
@@ -138,39 +610,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.205Z",
       "captured_at": "2026-05-30T20:09:37.803Z"
-    },
-    {
-      "id": "milkdrop:flexi-infused-with-the-spiral",
-      "slug": "flexi-infused-with-the-spiral",
-      "name": "Flexi - infused with the spiral",
-      "author": "Flexi",
-      "vibe": [
-        "minimalist",
-        "geometric",
-        "dark",
-        "sculptural"
-      ],
-      "motion": 0.4,
-      "audio_affinity": {
-        "bass": 0.6,
-        "mid": 0.4,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating"
-      ],
-      "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the synthetic test signal's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [
-        "manyfish"
-      ],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-infused-with-the-spiral.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-infused-with-the-spiral.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.204Z",
-      "captured_at": "2026-05-30T20:08:47.344Z"
     },
     {
       "id": "milkdrop:flexi-hue-burst",
@@ -233,37 +672,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.203Z",
       "captured_at": "2026-05-30T20:07:41.938Z"
-    },
-    {
-      "id": "milkdrop:flexi-martin-cascading-decay-swing",
-      "slug": "flexi-martin-cascading-decay-swing",
-      "name": "Flexi + Martin - cascading decay swing",
-      "author": "Flexi + Martin",
-      "vibe": [
-        "minimalist",
-        "strobe",
-        "stark",
-        "bold"
-      ],
-      "motion": 0.2,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.1,
-        "treble": 0.1
-      },
-      "techniques": [
-        "audio_gating",
-        "hue_cycle"
-      ],
-      "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the synthetic test signal. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-martin-cascading-decay-swing.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-martin-cascading-decay-swing.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.200Z",
-      "captured_at": "2026-05-30T20:06:14.147Z"
     },
     {
       "id": "milkdrop:flexi-geiss-tokamak-mindblob-2-0",
@@ -332,40 +740,6 @@
       "captured_at": "2026-05-30T20:04:50.363Z"
     },
     {
-      "id": "milkdrop:eo-s-phat-emergent-factors-bitcore-tweak",
-      "slug": "eo-s-phat-emergent-factors-bitcore-tweak",
-      "name": "Eo.S.+Phat Emergent factors - Bitcore Tweak",
-      "author": "Eo.S.+Phat Emergent factors",
-      "vibe": [
-        "geometric",
-        "kaleidoscopic",
-        "kinetic",
-        "mathematical"
-      ],
-      "motion": 0.8,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.75
-      },
-      "techniques": [
-        "domain_repetition",
-        "hue_cycle",
-        "audio_gating",
-        "beat_burst",
-        "warp_field"
-      ],
-      "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The synthetic test signal's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors-bitcore-tweak.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors-bitcore-tweak.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.196Z",
-      "captured_at": "2026-05-30T20:04:12.168Z"
-    },
-    {
       "id": "milkdrop:eo-s-phat-spectrum-bubble-new-colors-v2",
       "slug": "eo-s-phat-spectrum-bubble-new-colors-v2",
       "name": "Eo.S.+Phat - spectrum bubble new colors_v2",
@@ -397,40 +771,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.196Z",
       "captured_at": "2026-05-30T20:03:34.203Z"
-    },
-    {
-      "id": "milkdrop:eo-s-phat-flare-dig-mix",
-      "slug": "eo-s-phat-flare-dig-mix",
-      "name": "Eo.S.+Phat - Flare_dig_mix",
-      "author": "Eo.S.+Phat",
-      "vibe": [
-        "mystical",
-        "organic",
-        "dark",
-        "pulsing"
-      ],
-      "motion": 0.5,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "frame_feedback",
-        "domain_repetition",
-        "audio_gating",
-        "bloom_glow",
-        "decay_trail"
-      ],
-      "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the synthetic test signal's mid-range, while the outer red and purple wing-like structures flare outward on the synthetic kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
-      "refik_mode": true,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-flare-dig-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-flare-dig-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.195Z",
-      "captured_at": "2026-05-30T20:03:00.899Z"
     },
     {
       "id": "milkdrop:eo-s-and-zylot-skylight-stained-glass-majesty-mix",
@@ -568,214 +908,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.192Z",
       "captured_at": "2026-05-30T20:00:45.011Z"
-    },
-    {
-      "id": "milkdrop:eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
-      "slug": "eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
-      "name": "Eo.S. - pulsecube f demon - mash0000 - yakuza gut cake",
-      "author": "Eo.S.",
-      "vibe": [
-        "geometric",
-        "kinetic",
-        "retro-futuristic",
-        "glitchy"
-      ],
-      "motion": 0.85,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.6,
-        "treble": 0.8
-      },
-      "techniques": [
-        "custom_wave",
-        "audio_gating",
-        "beat_burst",
-        "hue_cycle",
-        "chromatic_split"
-      ],
-      "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the synthetic test signal. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.192Z",
-      "captured_at": "2026-05-30T20:00:09.783Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-airhandler-kali-mix-painterly",
-      "slug": "aderrasi-airhandler-kali-mix-painterly",
-      "name": "Aderrasi - Airhandler (Kali Mix) - Painterly",
-      "author": "Aderrasi",
-      "vibe": [
-        "fluid",
-        "organic",
-        "minimalist",
-        "painterly"
-      ],
-      "motion": 0.45,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.7
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "custom_wave",
-        "decay_trail",
-        "hue_cycle"
-      ],
-      "technical_notes": "Per-pixel warp shader applies a fluid advection field that curls and distorts a custom wave. Frame feedback through sampler_main with a slow decay rate creates persistent, painterly, ribbon-like trails resembling oil paint or smoke. The tip of the ribbon features a high-frequency custom wave that reacts dynamically to the treble of the synthetic test signal, while the overall warp scale is modulated by the synthetic kick.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-kali-mix-painterly.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-kali-mix-painterly.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.165Z",
-      "captured_at": "2026-05-30T19:59:34.868Z"
-    },
-    {
-      "id": "milkdrop:eo-s-nematodes-e-daemon",
-      "slug": "eo-s-nematodes-e-daemon",
-      "name": "Eo.S. - nematodes E daemon",
-      "author": "Eo.S.",
-      "vibe": [
-        "organic",
-        "fiery",
-        "fluid",
-        "demonic"
-      ],
-      "motion": 0.7,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.6,
-        "treble": 0.75
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "domain_repetition",
-        "custom_wave",
-        "bloom_glow",
-        "decay_trail"
-      ],
-      "technical_notes": "Bilateral symmetry is enforced to create a central organic figure, where fine, wispy custom waves react sharply to the treble of the synthetic test signal. Frame feedback through sampler_main combined with a low decay rate and an upward-flowing per-pixel warp field generates smoky, flame-like trails. Intense bass hits in the synthetic test signal trigger bright yellow bloom bursts utilizing sampler_blur2 to create a high-energy core.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-nematodes-e-daemon.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-nematodes-e-daemon.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.191Z",
-      "captured_at": "2026-05-30T19:53:07.636Z"
-    },
-    {
-      "id": "milkdrop:eo-s-heater-core-c-phat-s-class-sparks-mix",
-      "slug": "eo-s-heater-core-c-phat-s-class-sparks-mix",
-      "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
-      "author": "Eo.S.",
-      "vibe": [
-        "cybernetic",
-        "neon",
-        "frenetic",
-        "futuristic"
-      ],
-      "motion": 0.85,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.7,
-        "treble": 0.8
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "audio_gating",
-        "beat_burst",
-        "custom_wave",
-        "decay_trail"
-      ],
-      "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the synthetic test signal. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the synthetic kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-heater-core-c-phat-s-class-sparks-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-heater-core-c-phat-s-class-sparks-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.191Z",
-      "captured_at": "2026-05-30T19:52:35.816Z"
-    },
-    {
-      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
-      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
-      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix07",
-      "author": "Eo.S.",
-      "vibe": [
-        "psychedelic",
-        "geometric",
-        "rhythmic",
-        "neon"
-      ],
-      "motion": 0.8,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.6,
-        "treble": 0.7
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "audio_gating",
-        "beat_burst",
-        "hue_cycle",
-        "domain_repetition",
-        "custom_wave"
-      ],
-      "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The synthetic test signal's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.190Z",
-      "captured_at": "2026-05-30T19:51:59.862Z"
-    },
-    {
-      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
-      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
-      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b",
-      "author": "Eo.S.",
-      "vibe": [
-        "neon",
-        "kinetic",
-        "synthetic",
-        "geometric"
-      ],
-      "motion": 0.8,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "custom_wave",
-        "frame_feedback",
-        "beat_burst",
-        "hue_cycle",
-        "decay_trail"
-      ],
-      "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the synthetic kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.189Z",
-      "captured_at": "2026-05-30T19:51:27.651Z"
     },
     {
       "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code",
@@ -943,42 +1075,6 @@
       "captured_at": "2026-05-30T19:48:38.476Z"
     },
     {
-      "id": "milkdrop:eo-s-zylot-skylight-stained-glass-majesty-mix",
-      "slug": "eo-s-zylot-skylight-stained-glass-majesty-mix",
-      "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
-      "author": "Eo.S. + Zylot",
-      "vibe": [
-        "geometric",
-        "hypnotic",
-        "crystalline",
-        "kinetic"
-      ],
-      "motion": 0.8,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.7
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "audio_gating",
-        "beat_burst",
-        "hue_cycle",
-        "domain_repetition",
-        "custom_wave"
-      ],
-      "technical_notes": "A logarithmic spiral warp field drives a rapid zoom and rotation feedback loop via sampler_main. Sharp, needle-like custom waves trace geometric stained-glass facets that shatter and reform in response to treble transients in the synthetic test signal. High-frequency beat-gated triggers invert the color palette, shifting the render from deep saturated blues and yellows to a high-contrast, high-key white and magenta aesthetic.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-zylot-skylight-stained-glass-majesty-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-zylot-skylight-stained-glass-majesty-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.186Z",
-      "captured_at": "2026-05-30T19:48:05.837Z"
-    },
-    {
       "id": "milkdrop:eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma",
       "slug": "eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma",
       "name": "Eo.S. + Phat cubetrace (cybercity madness remix) - mash0000 - evaporating crystal pharma",
@@ -1116,109 +1212,6 @@
       "captured_at": "2026-05-30T19:45:55.683Z"
     },
     {
-      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
-      "slug": "eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker",
-      "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
-      "author": "Eo.S. + Phat",
-      "vibe": [
-        "kinetic",
-        "fluid",
-        "organic",
-        "mystical"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.7,
-        "treble": 0.85
-      },
-      "techniques": [
-        "custom_wave",
-        "frame_feedback",
-        "decay_trail",
-        "domain_repetition",
-        "audio_gating",
-        "beat_burst"
-      ],
-      "technical_notes": "Custom waves configured as ribbon-like particle chasers are mirrored across the central vertical axis using a bilateral symmetry warp. High-frequency transients in the synthetic test signal modulate the wave amplitude and fine-grained displacement, while the synthetic kick triggers sudden central flares and coordinate shifts. Frame feedback through sampler_main with high decay produces persistent, smoky trails of amber light.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.183Z",
-      "captured_at": "2026-05-30T19:45:22.545Z"
-    },
-    {
-      "id": "milkdrop:eo-s-phat-chasers-11-sentinel-c",
-      "slug": "eo-s-phat-chasers-11-sentinel-c",
-      "name": "Eo.S. + Phat - chasers 11 sentinel C",
-      "author": "Eo.S. + Phat",
-      "vibe": [
-        "cosmic",
-        "fluid",
-        "organic",
-        "kinetic"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.7
-      },
-      "techniques": [
-        "custom_wave",
-        "frame_feedback",
-        "decay_trail",
-        "particle_system",
-        "audio_gating"
-      ],
-      "technical_notes": "A complex custom wave structure renders a multi-layered ribbon of discrete points that whips across the screen in a three-dimensional trajectory. Frame feedback through sampler_main with a high decay rate creates a faint, smoky, persistent trail behind the bright golden ribbon. The synthetic test signal's bass transients drive the rotation and spatial translation of the ribbon, while treble sparkles modulate the density and jitter of the individual wave points.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-chasers-11-sentinel-c.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-chasers-11-sentinel-c.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.182Z",
-      "captured_at": "2026-05-30T19:44:47.555Z"
-    },
-    {
-      "id": "milkdrop:eo-s-phat-emergent-factors",
-      "slug": "eo-s-phat-emergent-factors",
-      "name": "Eo.S. + Phat - Emergent factors",
-      "author": "Eo.S. + Phat",
-      "vibe": [
-        "geometric",
-        "kaleidoscopic",
-        "psychedelic",
-        "structured"
-      ],
-      "motion": 0.75,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.6,
-        "treble": 0.7
-      },
-      "techniques": [
-        "domain_repetition",
-        "custom_wave",
-        "hue_cycle",
-        "frame_feedback",
-        "warp_field"
-      ],
-      "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the synthetic test signal's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.182Z",
-      "captured_at": "2026-05-30T19:44:15.477Z"
-    },
-    {
       "id": "milkdrop:eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix",
       "slug": "eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix",
       "name": "Eo.S. + Phat + Geiss - chasers 15 sentinels male and female (Dementia Mix)",
@@ -1315,38 +1308,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.179Z",
       "captured_at": "2026-05-30T19:42:01.959Z"
-    },
-    {
-      "id": "milkdrop:cope-wip-strange-attractor-2",
-      "slug": "cope-wip-strange-attractor-2",
-      "name": "Cope-WIP - Strange Attractor 2",
-      "author": "Cope-WIP",
-      "vibe": [
-        "minimalist",
-        "mathematical",
-        "kinetic",
-        "stark"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.7,
-        "mid": 0.5,
-        "treble": 0.8
-      },
-      "techniques": [
-        "particle_system",
-        "custom_wave",
-        "decay_trail"
-      ],
-      "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves to draw connecting lines between a high-density particle system. The coordinates of the attractor are modulated by the synthetic test signal's bass and treble bands, causing the structure to expand and jitter. A high-contrast inverse color scheme is maintained, likely via a composite shader that inverts the traditional dark background, leaving delicate, ink-like trails.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-wip-strange-attractor-2.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-wip-strange-attractor-2.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.179Z",
-      "captured_at": "2026-05-30T19:41:29.773Z"
     },
     {
       "id": "milkdrop:cope-passage-mandala-mix",
@@ -1450,41 +1411,6 @@
       "captured_at": "2026-05-30T19:39:53.057Z"
     },
     {
-      "id": "milkdrop:che-terracarbon-stream",
-      "slug": "che-terracarbon-stream",
-      "name": "Che - Terracarbon Stream",
-      "author": "Che",
-      "vibe": [
-        "organic",
-        "hypnotic",
-        "biological",
-        "fluid"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.7
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "domain_repetition",
-        "custom_wave",
-        "decay_trail",
-        "audio_gating"
-      ],
-      "technical_notes": "Per-pixel warp shader applies a complex radial distortion and swirling advection, heavily modulated by bass and treble frequencies from the synthetic test signal. A central custom_wave draws a bright, high-amplitude white spark that is fed into sampler_main with a low decay rate, generating persistent, painterly, organic trails. The preset utilizes radial domain repetition and mirroring to create a kaleidoscopic, biological symmetry reminiscent of Geiss's reaction-diffusion structures.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/che-terracarbon-stream.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/che-terracarbon-stream.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.176Z",
-      "captured_at": "2026-05-30T19:39:22.224Z"
-    },
-    {
       "id": "milkdrop:by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000",
       "slug": "by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000",
       "name": "By Adam FX 2 shifter + geiss - neon pulse (glow mix) + Rovastar + Orb  + Mstress - mash0000 - prismatic spectral haze filter",
@@ -1546,42 +1472,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.175Z",
       "captured_at": "2026-05-30T19:38:19.980Z"
-    },
-    {
-      "id": "milkdrop:bmelgren-pentultimate-nerual-slipstream-tweak-2",
-      "slug": "bmelgren-pentultimate-nerual-slipstream-tweak-2",
-      "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
-      "author": "Bmelgren",
-      "vibe": [
-        "energetic",
-        "electric",
-        "hyperactive",
-        "cosmic"
-      ],
-      "motion": 0.85,
-      "audio_affinity": {
-        "bass": 0.9,
-        "mid": 0.7,
-        "treble": 0.8
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "audio_gating",
-        "beat_burst",
-        "hue_cycle",
-        "custom_wave",
-        "bloom_glow"
-      ],
-      "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the synthetic test signal trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-pentultimate-nerual-slipstream-tweak-2.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-pentultimate-nerual-slipstream-tweak-2.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.175Z",
-      "captured_at": "2026-05-30T19:37:46.891Z"
     },
     {
       "id": "milkdrop:bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2",
@@ -1652,73 +1542,6 @@
       "captured_at": "2026-05-30T19:36:11.719Z"
     },
     {
-      "id": "milkdrop:aderrasi-what-cannot-be",
-      "slug": "aderrasi-what-cannot-be",
-      "name": "Aderrasi - What cannot be",
-      "author": "Aderrasi",
-      "vibe": [
-        "electric",
-        "chaotic",
-        "psychedelic",
-        "frenetic"
-      ],
-      "motion": 0.85,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.7,
-        "treble": 0.9
-      },
-      "techniques": [
-        "custom_wave",
-        "frame_feedback",
-        "hue_cycle",
-        "warp_field",
-        "decay_trail"
-      ],
-      "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the synthetic test signal's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
-      "refik_mode": false,
-      "brand_safe": false,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-what-cannot-be.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-what-cannot-be.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.173Z",
-      "captured_at": "2026-05-30T19:35:35.561Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-the-lurker-twin-mix-bitcore-tweak",
-      "slug": "aderrasi-the-lurker-twin-mix-bitcore-tweak",
-      "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
-      "author": "Aderrasi",
-      "vibe": [
-        "ethereal",
-        "hypnotic",
-        "geometric",
-        "contemplative"
-      ],
-      "motion": 0.4,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.4
-      },
-      "techniques": [
-        "frame_feedback",
-        "custom_wave",
-        "decay_trail",
-        "hue_cycle"
-      ],
-      "technical_notes": "A central custom wave draws a complex, symmetrical wireframe structure that reacts to the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a calibrated decay rate and step-wise zoom creates a layered, concentric tunnel that expands and contracts. The outer boundaries of the tunnel are modulated by bass-driven scaling variables, producing a pulsating geometric aperture.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-the-lurker-twin-mix-bitcore-tweak.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-the-lurker-twin-mix-bitcore-tweak.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.172Z",
-      "captured_at": "2026-05-30T19:35:02.032Z"
-    },
-    {
       "id": "milkdrop:aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics",
       "slug": "aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics",
       "name": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
@@ -1785,6 +1608,617 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.171Z",
       "captured_at": "2026-05-30T19:33:54.341Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
+      "slug": "aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
+      "name": "Aderrasi - Hackproof - mash0000 - stare at tv static remote viewing technique",
+      "author": "Aderrasi",
+      "vibe": [
+        "glitchy",
+        "geometric",
+        "retro",
+        "strobe"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.65
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave",
+        "warp_field"
+      ],
+      "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the synthetic test signal.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.169Z",
+      "captured_at": "2026-05-30T19:31:41.539Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-ghast-full-circle-mix",
+      "slug": "aderrasi-ghast-full-circle-mix",
+      "name": "Aderrasi - Ghast (Full Circle Mix)",
+      "author": "Aderrasi",
+      "vibe": [
+        "minimalist",
+        "kinetic",
+        "cyberpunk",
+        "abstract"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "warp_field",
+        "frame_feedback",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the synthetic kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-full-circle-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-full-circle-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.168Z",
+      "captured_at": "2026-05-30T19:30:04.300Z"
+    },
+    {
+      "id": "milkdrop:geiss-all-spark",
+      "slug": "geiss-all-spark",
+      "name": "Geiss - All-Spark",
+      "author": "Geiss",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "oscillographic",
+        "technical"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "decay_trail",
+        "frame_feedback"
+      ],
+      "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the synthetic test signal. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the synthetic kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/geiss-all-spark.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/geiss-all-spark.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.217Z",
+      "captured_at": "2026-05-30T19:17:38.871Z"
+    },
+    {
+      "id": "milkdrop:martin-reflections-on-black-tiles",
+      "slug": "martin-reflections-on-black-tiles",
+      "name": "martin - reflections on black tiles",
+      "author": "martin",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "geometric",
+        "angular",
+        "monochrome"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "custom_wave"
+      ],
+      "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the synthetic test signal.",
+      "refik_mode": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/martin-reflections-on-black-tiles.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/martin-reflections-on-black-tiles.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.545Z",
+      "captured_at": "2026-05-30T19:16:45.117Z"
+    },
+    {
+      "id": "shadertoy:cosmic-flow",
+      "slug": "cosmic-flow",
+      "name": "Cosmic Flow",
+      "author": "prism",
+      "blurb": "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow.",
+      "vibe": [
+        "fluid",
+        "organic",
+        "hypnotic",
+        "painterly"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.4,
+        "mid": 0.3,
+        "treble": 0.2
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "fbm_noise",
+        "decay_trail"
+      ],
+      "technical_notes": "A fluid reaction-diffusion simulation driven by a low-frequency warp field. Per-pixel warp shader uses procedural noise (fbm_noise) to advect the color channels, while frame feedback through sampler_main with a very low decay rate creates persistent, painterly trails. The color palette rotates slowly through a hue cycle driven by time, showing minimal direct high-frequency response to the synthetic test signal.",
+      "refik_mode": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_cosmic-flow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_cosmic-flow.jpg",
+      "added_by": "prism",
+      "added_at": "2026-05-30T00:00:00.000Z",
+      "captured_at": "2026-05-30T21:16:39.962Z"
+    },
+    {
+      "id": "milkdrop:flexi-self-lubricating",
+      "slug": "flexi-self-lubricating",
+      "name": "Flexi - self-lubricating",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "glitchy"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.2,
+        "treble": 0.2
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "custom_wave"
+      ],
+      "technical_notes": "A minimalist, high-contrast preset where custom shapes are rendered as flat magenta polygons against a solid black background. The visibility and geometry of these shapes are gated directly by the bass threshold of the synthetic test signal, resulting in a stark stroboscopic effect. No frame feedback or warp shaders are active, leaving only raw, instantaneous state changes.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-self-lubricating.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-self-lubricating.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.207Z",
+      "captured_at": "2026-05-30T20:10:28.389Z"
+    },
+    {
+      "id": "milkdrop:flexi-infused-with-the-spiral",
+      "slug": "flexi-infused-with-the-spiral",
+      "name": "Flexi - infused with the spiral",
+      "author": "Flexi",
+      "vibe": [
+        "minimalist",
+        "geometric",
+        "dark",
+        "sculptural"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating"
+      ],
+      "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the synthetic test signal's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [
+        "manyfish"
+      ],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-infused-with-the-spiral.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-infused-with-the-spiral.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.204Z",
+      "captured_at": "2026-05-30T20:08:47.344Z"
+    },
+    {
+      "id": "milkdrop:flexi-martin-cascading-decay-swing",
+      "slug": "flexi-martin-cascading-decay-swing",
+      "name": "Flexi + Martin - cascading decay swing",
+      "author": "Flexi + Martin",
+      "vibe": [
+        "minimalist",
+        "strobe",
+        "stark",
+        "bold"
+      ],
+      "motion": 0.2,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.1,
+        "treble": 0.1
+      },
+      "techniques": [
+        "audio_gating",
+        "hue_cycle"
+      ],
+      "technical_notes": "The preset displays solid, full-screen color fills that instantly switch on detected beats from the synthetic test signal. There are no spatial warp fields, custom waves, or feedback samplers active, resulting in a completely flat, minimalist strobe effect. The color transitions are driven by audio gating on the bass threshold, cycling through a wide gamut of highly saturated hues.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-martin-cascading-decay-swing.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-martin-cascading-decay-swing.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.200Z",
+      "captured_at": "2026-05-30T20:06:14.147Z"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-emergent-factors-bitcore-tweak",
+      "slug": "eo-s-phat-emergent-factors-bitcore-tweak",
+      "name": "Eo.S.+Phat Emergent factors - Bitcore Tweak",
+      "author": "Eo.S.+Phat Emergent factors",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "kinetic",
+        "mathematical"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.75
+      },
+      "techniques": [
+        "domain_repetition",
+        "hue_cycle",
+        "audio_gating",
+        "beat_burst",
+        "warp_field"
+      ],
+      "technical_notes": "A complex recursive grid structure is animated via a per-pixel warp shader that drives spiral zooming and rotation. The synthetic test signal's bass kicks trigger rapid state transitions, gating the color palette through distinct phases of deep blue, bright cyan, and intense magenta. Fine line structures and high-frequency grid subdivisions modulate dynamically with treble sparkle.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors-bitcore-tweak.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors-bitcore-tweak.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.196Z",
+      "captured_at": "2026-05-30T20:04:12.168Z"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-flare-dig-mix",
+      "slug": "eo-s-phat-flare-dig-mix",
+      "name": "Eo.S.+Phat - Flare_dig_mix",
+      "author": "Eo.S.+Phat",
+      "vibe": [
+        "mystical",
+        "organic",
+        "dark",
+        "pulsing"
+      ],
+      "motion": 0.5,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "frame_feedback",
+        "domain_repetition",
+        "audio_gating",
+        "bloom_glow",
+        "decay_trail"
+      ],
+      "technical_notes": "Bilateral symmetry is enforced across the central vertical axis, creating a mirrored organic structure. The central core features a high-frequency grid pattern modulated by the synthetic test signal's mid-range, while the outer red and purple wing-like structures flare outward on the synthetic kick. Frame feedback through sampler_main with a moderate decay rate preserves these wispy, feathered trails across frames.",
+      "refik_mode": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-flare-dig-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-flare-dig-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.195Z",
+      "captured_at": "2026-05-30T20:03:00.899Z"
+    },
+    {
+      "id": "milkdrop:eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
+      "slug": "eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake",
+      "name": "Eo.S. - pulsecube f demon - mash0000 - yakuza gut cake",
+      "author": "Eo.S.",
+      "vibe": [
+        "geometric",
+        "kinetic",
+        "retro-futuristic",
+        "glitchy"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "chromatic_split"
+      ],
+      "technical_notes": "A persistent left-aligned triangular custom wave features a high-frequency comb modulation on its trailing edge, driven by treble spikes in the synthetic test signal. Sweeping geometric arcs and hourglass custom shapes are scaled, rotated, and colored via per-frame equations mapped to bass attenuated. A high decay rate in sampler_main maintains high contrast against a dark background, while subtle vertical coordinate stretching in the warp shader creates faint vertical feedback trails.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.192Z",
+      "captured_at": "2026-05-30T20:00:09.783Z"
+    },
+    {
+      "id": "milkdrop:eo-s-heater-core-c-phat-s-class-sparks-mix",
+      "slug": "eo-s-heater-core-c-phat-s-class-sparks-mix",
+      "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
+      "author": "Eo.S.",
+      "vibe": [
+        "cybernetic",
+        "neon",
+        "frenetic",
+        "futuristic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.7,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "decay_trail"
+      ],
+      "technical_notes": "Multiple custom waves, including a diagonal oscilloscope and a central spiraling ring structure, are driven directly by the synthetic test signal. A radial warp field combined with high decay creates fast-zooming feedback trails through sampler_main. Intense beat detection on the synthetic kick triggers full-screen magenta flashes and shifts the warp scale dynamically.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-heater-core-c-phat-s-class-sparks-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-heater-core-c-phat-s-class-sparks-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.191Z",
+      "captured_at": "2026-05-30T19:52:35.816Z"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
+      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07",
+      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix07",
+      "author": "Eo.S.",
+      "vibe": [
+        "psychedelic",
+        "geometric",
+        "rhythmic",
+        "neon"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "domain_repetition",
+        "custom_wave"
+      ],
+      "technical_notes": "Custom wave ribbons representing 'glowsticks' are rendered and replicated across a bilateral symmetry plane. The synthetic test signal's bass transients trigger sudden scale jumps and rapid hue cycling via beat-gated equations. Feedback trails in sampler_main are tightly controlled with a high decay rate, leaving sharp, geometric remnants of previous frames that dissolve quickly.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.190Z",
+      "captured_at": "2026-05-30T19:51:59.862Z"
+    },
+    {
+      "id": "milkdrop:eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "slug": "eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b",
+      "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b",
+      "author": "Eo.S.",
+      "vibe": [
+        "neon",
+        "kinetic",
+        "synthetic",
+        "geometric"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "beat_burst",
+        "hue_cycle",
+        "decay_trail"
+      ],
+      "technical_notes": "Parametric ribbon structures are generated via custom waves modulated by audio-driven registers q1-q8, leaving persistent trails through a low decay rate in sampler_main. Beat-gated triggers from the synthetic kick drive rapid camera zoom resets and coordinate transformations, creating a highly kinetic pulsing effect. A background grid pattern is rendered dynamically, flickering in response to high-frequency transients in the test signal.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.189Z",
+      "captured_at": "2026-05-30T19:51:27.651Z"
+    },
+    {
+      "id": "milkdrop:eo-s-zylot-skylight-stained-glass-majesty-mix",
+      "slug": "eo-s-zylot-skylight-stained-glass-majesty-mix",
+      "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+      "author": "Eo.S. + Zylot",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "crystalline",
+        "kinetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "domain_repetition",
+        "custom_wave"
+      ],
+      "technical_notes": "A logarithmic spiral warp field drives a rapid zoom and rotation feedback loop via sampler_main. Sharp, needle-like custom waves trace geometric stained-glass facets that shatter and reform in response to treble transients in the synthetic test signal. High-frequency beat-gated triggers invert the color palette, shifting the render from deep saturated blues and yellows to a high-contrast, high-key white and magenta aesthetic.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-zylot-skylight-stained-glass-majesty-mix.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-zylot-skylight-stained-glass-majesty-mix.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.186Z",
+      "captured_at": "2026-05-30T19:48:05.837Z"
+    },
+    {
+      "id": "milkdrop:eo-s-phat-emergent-factors",
+      "slug": "eo-s-phat-emergent-factors",
+      "name": "Eo.S. + Phat - Emergent factors",
+      "author": "Eo.S. + Phat",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "psychedelic",
+        "structured"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "domain_repetition",
+        "custom_wave",
+        "hue_cycle",
+        "frame_feedback",
+        "warp_field"
+      ],
+      "technical_notes": "A complex kaleidoscopic domain repetition is driven by a per-pixel warp field reacting to the synthetic test signal's bass kicks. Custom waves form dense wireframe heptagons and circles that scale and rotate dynamically. Rapid hue cycling rotates the palette through deep blues, greens, and magentas, while frame feedback through sampler_main preserves the structural lines.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/eo-s-phat-emergent-factors.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/eo-s-phat-emergent-factors.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.182Z",
+      "captured_at": "2026-05-30T19:44:15.477Z"
+    },
+    {
+      "id": "milkdrop:bmelgren-pentultimate-nerual-slipstream-tweak-2",
+      "slug": "bmelgren-pentultimate-nerual-slipstream-tweak-2",
+      "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
+      "author": "Bmelgren",
+      "vibe": [
+        "energetic",
+        "electric",
+        "hyperactive",
+        "cosmic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.7,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle",
+        "custom_wave",
+        "bloom_glow"
+      ],
+      "technical_notes": "A radial slipstream tunnel is generated using a per-pixel warp shader that combines zoom and rotation, creating a feedback loop via sampler_main. High-amplitude bass transients in the synthetic test signal trigger dramatic beat bursts that expand the central core and saturate the frame with additive bloom. Treble-reactive custom waves draw thin, chaotic white lines and grid structures over the cycling hue palette.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/bmelgren-pentultimate-nerual-slipstream-tweak-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/bmelgren-pentultimate-nerual-slipstream-tweak-2.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.175Z",
+      "captured_at": "2026-05-30T19:37:46.891Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-what-cannot-be",
+      "slug": "aderrasi-what-cannot-be",
+      "name": "Aderrasi - What cannot be",
+      "author": "Aderrasi",
+      "vibe": [
+        "electric",
+        "chaotic",
+        "psychedelic",
+        "frenetic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.7,
+        "treble": 0.9
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "hue_cycle",
+        "warp_field",
+        "decay_trail"
+      ],
+      "technical_notes": "A complex custom_wave draws a chaotic, scribbled oscilloscope driven by the synthetic test signal's mid and treble bands. Per-pixel warp equations apply a radial zoom and subtle rotation, feeding back previous frames through sampler_main with a moderate decay rate to create persistent, painterly trails. The background color undergoes a rapid hue_cycle, modulated by treble energy.",
+      "refik_mode": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-what-cannot-be.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-what-cannot-be.jpg",
+      "added_by": "scottspace",
+      "added_at": "2026-05-30T17:43:37.173Z",
+      "captured_at": "2026-05-30T19:35:35.561Z"
     },
     {
       "id": "milkdrop:aderrasi-kevlar-tunnel",
@@ -1888,141 +2322,6 @@
       "captured_at": "2026-05-30T19:32:16.282Z"
     },
     {
-      "id": "milkdrop:aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
-      "slug": "aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique",
-      "name": "Aderrasi - Hackproof - mash0000 - stare at tv static remote viewing technique",
-      "author": "Aderrasi",
-      "vibe": [
-        "glitchy",
-        "geometric",
-        "retro",
-        "strobe"
-      ],
-      "motion": 0.75,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.65
-      },
-      "techniques": [
-        "audio_gating",
-        "beat_burst",
-        "hue_cycle",
-        "custom_wave",
-        "warp_field"
-      ],
-      "technical_notes": "A custom wave on the left renders a sharp, audio-reactive oscilloscope with a sawtooth envelope. The background grid and blocky translations are driven by coordinate quantization in the per-pixel warp equations, creating a pixelated, step-sequenced aesthetic. Abrupt color palette swaps and geometric scale jumps are gated by beat-detection thresholds triggered by the synthetic test signal.",
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.169Z",
-      "captured_at": "2026-05-30T19:31:41.539Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-ghast-entity",
-      "slug": "aderrasi-ghast-entity",
-      "name": "Aderrasi - Ghast Entity",
-      "author": "Aderrasi",
-      "vibe": [
-        "ghostly",
-        "minimalist",
-        "fluid",
-        "monochrome"
-      ],
-      "motion": 0.6,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.7
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "custom_wave",
-        "decay_trail",
-        "audio_gating"
-      ],
-      "technical_notes": "A central custom_wave filament reacts sharply to the treble of the synthetic test signal, while a per-pixel warp shader drives a fluid spiral advection field. Frame feedback through sampler_main with a moderate decay rate creates persistent, smoky trails that mimic a swirling gas cloud. Beat-gated transitions trigger sudden inversions and zoom bursts, shifting the visual state between stark high-contrast lines and dense, marbled textures.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-entity.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-entity.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.169Z",
-      "captured_at": "2026-05-30T19:31:09.032Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-ghast-quarter-past-ghast-mix",
-      "slug": "aderrasi-ghast-quarter-past-ghast-mix",
-      "name": "Aderrasi - Ghast (Quarter Past Ghast Mix)",
-      "author": "Aderrasi",
-      "vibe": [
-        "ghostly",
-        "fluid",
-        "ethereal",
-        "organic"
-      ],
-      "motion": 0.5,
-      "audio_affinity": {
-        "bass": 0.6,
-        "mid": 0.8,
-        "treble": 0.7
-      },
-      "techniques": [
-        "custom_wave",
-        "frame_feedback",
-        "warp_field",
-        "decay_trail"
-      ],
-      "technical_notes": "A complex custom_wave renders a chaotic, scribbled white line structure driven by the mid and treble frequencies of the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates a smoky, volumetric shroud that trails behind the wave. The per-pixel warp shader applies a directional advection field, stretching the feedback trails into fluid, organic wisps that mimic a reaction-diffusion smoke plume.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-quarter-past-ghast-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-quarter-past-ghast-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.168Z",
-      "captured_at": "2026-05-30T19:30:36.714Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-ghast-full-circle-mix",
-      "slug": "aderrasi-ghast-full-circle-mix",
-      "name": "Aderrasi - Ghast (Full Circle Mix)",
-      "author": "Aderrasi",
-      "vibe": [
-        "minimalist",
-        "kinetic",
-        "cyberpunk",
-        "abstract"
-      ],
-      "motion": 0.7,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "custom_wave",
-        "warp_field",
-        "frame_feedback",
-        "decay_trail",
-        "hue_cycle"
-      ],
-      "technical_notes": "A central custom_wave drawing scribbled glyphs is projected through a radial warp_field that simulates a high-speed tunnel. High decay on sampler_main limits the persistent trails to sharp, radial streaks that pulse outward on the synthetic kick. The color of these feedback trails cycles over time, shifting from cyan to green and magenta.",
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-ghast-full-circle-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-ghast-full-circle-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.168Z",
-      "captured_at": "2026-05-30T19:30:04.300Z"
-    },
-    {
       "id": "milkdrop:aderrasi-curse-of-the-mirror-emu",
       "slug": "aderrasi-curse-of-the-mirror-emu",
       "name": "Aderrasi - Curse of the Mirror Emu",
@@ -2055,173 +2354,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.167Z",
       "captured_at": "2026-05-30T19:29:26.384Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-contortion-wide-twist-mix",
-      "slug": "aderrasi-contortion-wide-twist-mix",
-      "name": "Aderrasi - Contortion (Wide Twist Mix)",
-      "author": "Aderrasi",
-      "vibe": [
-        "hypnotic",
-        "organic",
-        "fluid",
-        "dark"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.6,
-        "treble": 0.5
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "custom_wave",
-        "decay_trail"
-      ],
-      "technical_notes": "Per-pixel warp equations apply a logarithmic spiral deformation that pulls frame feedback through sampler_main toward a central singularity. A complex custom wave reacts to the synthetic test signal, leaving persistent trails that decay into the twisting spiral, forming a ribbed, shell-like organic structure. The feedback loop operates with a low-to-moderate decay rate to maintain the structural history of the waveform.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-contortion-wide-twist-mix.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-contortion-wide-twist-mix.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.166Z",
-      "captured_at": "2026-05-30T19:28:47.020Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-airhandler-last-breath-eden",
-      "slug": "aderrasi-airhandler-last-breath-eden",
-      "name": "Aderrasi - Airhandler (Last Breath - Eden)",
-      "author": "Aderrasi",
-      "vibe": [
-        "fluid",
-        "hypnotic",
-        "psychedelic",
-        "vortex"
-      ],
-      "motion": 0.7,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "hue_cycle",
-        "bloom_glow",
-        "decay_trail"
-      ],
-      "technical_notes": "A complex per-pixel warp shader drives a tight spiral vortex, drawing pixels inward and outward in response to the synthetic test signal. Frame feedback through sampler_main with a moderate decay rate creates smooth, organic fluid trails that morph dynamically. Rapid hue cycling and color inversion are gated by bass transients, shifting the palette between high-contrast white, deep blues, and fiery oranges.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-eden.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-eden.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.166Z",
-      "captured_at": "2026-05-30T19:28:12.300Z"
-    },
-    {
-      "id": "milkdrop:aderrasi-airhandler-last-breath-calm",
-      "slug": "aderrasi-airhandler-last-breath-calm",
-      "name": "Aderrasi - Airhandler (Last Breath - Calm)",
-      "author": "Aderrasi",
-      "vibe": [
-        "fluid",
-        "organic",
-        "hypnotic",
-        "cosmic"
-      ],
-      "motion": 0.6,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.6
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "hue_cycle",
-        "cosine_palette",
-        "bloom_glow",
-        "decay_trail"
-      ],
-      "technical_notes": "Per-pixel warp shader implements a spiral vortex in polar coordinates, modulated by the synthetic test signal's bass. High frame feedback through sampler_main with minimal decay creates persistent, silky fluid trails that mimic a liquid flower. The composite shader applies a dynamic cosine palette driven by radial distance and a fast hue cycle, producing high-contrast color boundaries.",
-      "refik_mode": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/aderrasi-airhandler-last-breath-calm.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/aderrasi-airhandler-last-breath-calm.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.165Z",
-      "captured_at": "2026-05-30T19:27:37.336Z"
-    },
-    {
-      "id": "milkdrop:geiss-all-spark",
-      "slug": "geiss-all-spark",
-      "name": "Geiss - All-Spark",
-      "author": "Geiss",
-      "vibe": [
-        "minimalist",
-        "stark",
-        "oscillographic",
-        "technical"
-      ],
-      "motion": 0.3,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.5,
-        "treble": 0.3
-      },
-      "techniques": [
-        "custom_wave",
-        "decay_trail",
-        "frame_feedback"
-      ],
-      "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the synthetic test signal. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the synthetic kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/geiss-all-spark.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/geiss-all-spark.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.217Z",
-      "captured_at": "2026-05-30T19:17:38.871Z"
-    },
-    {
-      "id": "milkdrop:martin-reflections-on-black-tiles",
-      "slug": "martin-reflections-on-black-tiles",
-      "name": "martin - reflections on black tiles",
-      "author": "martin",
-      "vibe": [
-        "minimalist",
-        "stark",
-        "geometric",
-        "angular",
-        "monochrome"
-      ],
-      "motion": 0.75,
-      "audio_affinity": {
-        "bass": 0.85,
-        "mid": 0.5,
-        "treble": 0.3
-      },
-      "techniques": [
-        "audio_gating",
-        "beat_burst",
-        "custom_wave"
-      ],
-      "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the synthetic test signal.",
-      "refik_mode": false,
-      "brand_safe": true,
-      "textures_needed": [],
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/martin-reflections-on-black-tiles.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/martin-reflections-on-black-tiles.jpg",
-      "added_by": "scottspace",
-      "added_at": "2026-05-30T17:43:37.545Z",
-      "captured_at": "2026-05-30T19:16:45.117Z"
     }
   ]
 }

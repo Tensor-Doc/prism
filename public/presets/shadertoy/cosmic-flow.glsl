@@ -22,9 +22,14 @@ float fbm(vec2 p) {
   return v;
 }
 
-// IQ-style cosine palette
+// Brand-locked cosine palette: oscillates between orange and cyan poles,
+// passes through warm yellow-greens at intermediates. Never produces
+// purple (R + B high, G low) because R is anti-phase with both G and B.
+//   t=0   → orange  (1.00, 0.50, 0.00)
+//   t=0.5 → cyan    (0.00, 1.00, 1.00)
 vec3 palette(float t) {
-  return vec3(0.05) + vec3(0.4, 0.3, 0.5) * cos(6.28318 * (vec3(1.0) * t + vec3(0.0, 0.33, 0.67)));
+  return vec3(0.5, 0.75, 0.5) +
+         vec3(0.5, 0.25, 0.5) * cos(6.28318 * (t + vec3(0.0, 0.5, 0.5)));
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
@@ -43,11 +48,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
                 fbm(uv + q + vec2(8.3, 2.8) + 0.13 * t));
   float f = fbm(uv + r * (1.5 + bass * 1.5));
 
-  vec3 col = palette(f + bass * 0.3 + 0.1 * iTime);
+  vec3 col = palette(f * 0.5 + bass * 0.2 + 0.04 * iTime);
   col *= 0.9 + 0.7 * smoothstep(0.0, 1.0, f);
-  // Cyan accent on highlights, orange in mids — brand colors
-  col = mix(col, vec3(0.24, 1.0, 0.9), smoothstep(0.7, 1.1, f) * 0.4);
-  col = mix(col, vec3(1.0, 0.55, 0.25), smoothstep(0.3, 0.55, f) * 0.15);
+  // Brand-color reinforcement at the visual extremes — cyan in highlights,
+  // orange in midtones. Both already in our palette but tilting harder.
+  col = mix(col, vec3(0.24, 1.0, 0.9), smoothstep(0.7, 1.1, f) * 0.35);
+  col = mix(col, vec3(1.0, 0.55, 0.25), smoothstep(0.3, 0.55, f) * 0.2);
+
+  // Reinhard tone map so audio + palette never clip
+  col = col / (1.0 + col);
+  col = pow(col, vec3(0.85));
 
   fragColor = vec4(col, 1.0);
 }

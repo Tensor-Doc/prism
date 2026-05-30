@@ -12,15 +12,49 @@
     "author": "prism",
     "blurb": "Tessellated image tiles that pulse, scale, and offset on beats."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "structured",
+      "rhythmic"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#8a8a8a",
+      "#207070",
+      "#703020",
+      "#3a3a3a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "domain_repetition",
+      "warp_field",
+      "audio_gating"
+    ],
+    "technical_notes": "A structured grid of repeating blocks is modulated by a per-pixel warp shader, creating a domain repetition effect where cell corners pinch into sharp teal and brown star-like shapes. The overall brightness and scale of the grid are heavily gated by the bass frequencies of the synthetic test signal, causing the pattern to collapse into a dark, flat mosaic during quiet passages and expand during peak transients. The rendering relies on a custom composition shader that masks and sharpens the grid boundaries based on audio-driven variables.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T21:32:25.578Z"
+  },
   "assets": {
     "textures_needed": [],
-    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22351%2FPIA22351~medium.jpg"
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22351%2FPIA22351~medium.jpg",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_image-mosaic.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_image-mosaic.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

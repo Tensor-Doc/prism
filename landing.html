@@ -126,6 +126,14 @@
           <span class="signal__vu signal__vu--empty" aria-hidden="true"></span>
           <span class="signal__rate readout">connect</span>
         </div>
+        <!-- Feed shader textures: visible only when shadertoy backend is
+             active AND a gallery source is bound. Toggling on pipes the
+             slideshow's canvas into the shader's iChannel1, so its
+             rotating image feed flows through whatever shader is running. -->
+        <button class="feed-pill" id="feed-shader-btn" type="button" data-hidden title="Pipe the gallery feed into the shader's image input (iChannel1)">
+          <span class="feed-pill__icon" aria-hidden="true">↳</span>
+          <span class="feed-pill__label label">feed shader textures</span>
+        </button>
       </div>
     </aside>
 

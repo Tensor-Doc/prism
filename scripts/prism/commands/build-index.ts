@@ -85,13 +85,24 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       captured_at: a.captured_at,
     });
   }
-  // Sort: newest-annotated first so freshly-processed entries surface
-  // at the top of the gallery (especially useful during bulk runs).
-  // Falls back to added_at if captured_at missing, then name.
+  // Sort: quality-curated first so the first impression is always strong.
+  //   Tier 1: brand_safe + refik_mode + motion > 0.2  (the "feature" tier)
+  //   Tier 2: brand_safe + refik_mode                  (calmer painterly)
+  //   Tier 3: brand_safe                               (everything safe)
+  //   Tier 4: everything else (purple-heavy, etc.)
+  // Within each tier, newer-annotated first, then alpha.
+  const tier = (e: IndexEntry): number => {
+    if (!e.brand_safe) return 3;
+    if (e.refik_mode && e.motion > 0.2) return 0;
+    if (e.refik_mode) return 1;
+    return 2;
+  };
   annotated.sort((a, b) => {
+    const tA = tier(a), tB = tier(b);
+    if (tA !== tB) return tA - tB;
     const aT = a.captured_at ?? a.added_at ?? "";
     const bT = b.captured_at ?? b.added_at ?? "";
-    if (aT !== bT) return aT < bT ? 1 : -1; // descending
+    if (aT !== bT) return aT < bT ? 1 : -1;
     return a.name.localeCompare(b.name);
   });
   return {

@@ -13,25 +13,47 @@
     "blurb": "Mandelbox-fold sphere SDF with cyan rim light; mid-band audio modulates iteration."
   },
   "annotation": {
-    "vibe": ["3d", "sculptural", "kaleidoscopic", "metallic"],
-    "motion": 0.55,
-    "palette_anchor": ["#3dffe5", "#ff7847", "#0a0a0e"],
-    "audio_affinity": { "bass": 0.4, "mid": 0.7, "treble": 0.2 },
-    "techniques": ["raymarch_sdf", "domain_repetition", "cosine_palette"],
-    "technical_notes": "64-step raymarched signed distance field of a sphere folded through Mandelbox-style abs+rotate iterations; analytic normal via central differences; Lambert + Fresnel rim shading with cyan accent. Mid-band audio amplitude modulates the sphere radius.",
+    "vibe": [
+      "geometric",
+      "architectural",
+      "surreal",
+      "rhythmic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#2a5c5d",
+      "#e08e53",
+      "#141f21"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "raymarch_sdf",
+      "domain_repetition",
+      "beat_burst",
+      "cosine_palette"
+    ],
+    "technical_notes": "A raymarched signed distance field (SDF) utilizes spatial domain repetition to create a tiled grid of geometric, capsule-like columns in the style of Inigo Quilez. The camera's forward translation and shape morphing are driven by the synthetic test signal, while a sudden full-frame flash indicates a beat-gated threshold trigger. Shading is computed via a custom cosine palette with clean diffuse lighting.",
     "brand_safe": true,
     "refik_mode": false,
-    "model": "seed",
+    "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T00:00:00.000Z"
+    "captured_at": "2026-05-30T21:31:09.692Z"
   },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_raymarch-sphere.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_raymarch-sphere.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

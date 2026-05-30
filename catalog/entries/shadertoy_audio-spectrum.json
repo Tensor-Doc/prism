@@ -13,25 +13,45 @@
     "blurb": "64 mirrored FFT bars, cyan→orange gradient with soft bloom."
   },
   "annotation": {
-    "vibe": ["geometric", "rhythmic", "neon", "kinetic"],
-    "motion": 0.85,
-    "palette_anchor": ["#3dffe5", "#ff7847", "#0a0a0e"],
-    "audio_affinity": { "bass": 0.9, "mid": 0.9, "treble": 0.9 },
-    "techniques": ["audio_gating", "bloom_glow", "custom_wave"],
-    "technical_notes": "64 vertical bars sample the iChannel0 FFT directly; bar height = pow(magnitude, 1.4); mirrored around the screen center with an additive cyan glow band just outside the lit area for soft bloom.",
+    "vibe": [
+      "retro",
+      "pixelated",
+      "minimalist",
+      "digital"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#36c5b9",
+      "#ff8c5a",
+      "#0e161b"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "A pixelated horizontal custom wave is rendered with a dual-color gradient transitioning from a cyan core to an orange fringe. A vertical blur pass, likely utilizing a 1D blur in the composite shader, creates a soft glowing pillar effect behind the waveform. The vertical displacement and amplitude of the wave are directly modulated by the low and mid-frequency bands of the synthetic test signal.",
     "brand_safe": true,
     "refik_mode": false,
-    "model": "seed",
+    "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T00:00:00.000Z"
+    "captured_at": "2026-05-30T21:30:32.825Z"
   },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_audio-spectrum.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_audio-spectrum.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }

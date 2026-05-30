@@ -57,6 +57,11 @@ export interface ShadertoyBg {
   /** Bind an image URL as iChannel1. Resolves once decoded + uploaded.
    *  Pass null to clear (resets to the 1x1 placeholder). */
   bindImage: (url: string | null) => Promise<void>;
+  /** Pipe a live source (e.g. a slideshow's canvas) into iChannel1 — its
+   *  contents are uploaded to the GPU every frame, so when the slideshow
+   *  advances to the next image, the shader sees it immediately. Pass
+   *  null to disable + revert to whatever was last bound via bindImage. */
+  setLiveSource: (source: HTMLCanvasElement | HTMLVideoElement | null) => void;
   /** Pause the render loop + free GL resources. */
   destroy: () => void;
 }
@@ -114,6 +119,7 @@ export function createShadertoyBackground(
   let currentProgram: WebGLProgram | null = null;
   let currentUrl: string | null = null;
   let currentName = "—";
+  let liveSource: HTMLCanvasElement | HTMLVideoElement | null = null;
   const startTime = performance.now();
   let lastFrameTime = startTime;
   let frame = 0;
@@ -165,6 +171,23 @@ export function createShadertoyBackground(
     analyser.getByteFrequencyData(fftBytes);
     gl.bindTexture(gl.TEXTURE_2D, audioTex);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, 256, 1, 0, gl.RED, gl.UNSIGNED_BYTE, fftBytes);
+
+    // If a live source (slideshow canvas, video element, etc.) is bound,
+    // upload its current contents to iChannel1 every frame. When the
+    // upstream advances to a new image, the shader sees it next frame.
+    if (liveSource &&
+        (liveSource instanceof HTMLCanvasElement
+          ? liveSource.width > 0 && liveSource.height > 0
+          : liveSource.readyState >= 2)) {
+      gl.bindTexture(gl.TEXTURE_2D, imageTex);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+      try {
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, liveSource);
+      } catch {
+        // tainted canvas or zero-size — skip this frame
+      }
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+    }
 
     if (currentProgram) {
       gl.useProgram(currentProgram);
@@ -219,6 +242,9 @@ export function createShadertoyBackground(
       currentUrl = url;
       currentName = url.split("/").pop()?.replace(/\.glsl$/, "") ?? url;
       return currentName;
+    },
+    setLiveSource: (source) => {
+      liveSource = source;
     },
     bindImage: async (url) => {
       if (!url) {
