@@ -15,30 +15,31 @@
     "vibe": [
       "minimalist",
       "stark",
-      "oscilloscope",
-      "geometric"
+      "oscillographic",
+      "technical"
     ],
-    "motion": 0.6,
+    "motion": 0.3,
     "palette_anchor": [
       "#000000",
       "#999999",
-      "#cccccc"
+      "#ffffff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.7,
-      "treble": 0.6
+      "mid": 0.5,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
-      "audio_gating"
+      "decay_trail",
+      "frame_feedback"
     ],
-    "technical_notes": "A custom wave renders the raw audio waveform of the synthetic test signal as a jagged, filled polygon ribbon cutting across the screen. A secondary sharp triangular custom shape is anchored near the center, modulating its width and angle. Minimal feedback or decay is applied, keeping the background pure black and the rendering extremely crisp and snappy.",
+    "technical_notes": "A minimalist custom wave rendering that spans horizontally, modulated directly by the synthetic test signal. A high decay rate keeps the canvas clean, with minimal feedback in sampler_main, while the wave's vertical displacement and thickness react sharply to the synthetic kick. This preset exemplifies Geiss's classic oscillographic wave rendering style.",
     "brand_safe": true,
     "refik_mode": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T18:34:46.797Z"
+    "captured_at": "2026-05-30T19:17:38.871Z"
   },
   "assets": {
     "textures_needed": [],

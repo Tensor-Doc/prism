@@ -14,29 +14,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "dark",
-      "monolithic",
-      "mysterious"
+      "stark",
+      "geometric",
+      "angular",
+      "monochrome"
     ],
-    "motion": 0,
+    "motion": 0.75,
     "palette_anchor": [
-      "#000000"
+      "#000000",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0,
-      "mid": 0,
-      "treble": 0
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.3
     },
     "techniques": [
-      "raymarch_sdf",
-      "domain_repetition"
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
     ],
-    "technical_notes": "The preset 'reflections on black tiles' by martin is a raymarched signed distance field scene, but in this capture under the synthetic test signal, it produces a completely black frame. This suggests the specular light sources or emissive properties of the tiles are gated or require specific audio thresholds not met by the test signal, resulting in zero visible output.",
+    "technical_notes": "Custom shapes and waves are rendered as stark, monochrome polygons that dynamically scale and morph. High decay rates ensure snappy, instantaneous transitions without persistent frame feedback or trails. The geometry's rotation and scale are directly driven by bass and mid-frequency peaks in the synthetic test signal.",
     "brand_safe": true,
     "refik_mode": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T18:37:10.375Z"
+    "captured_at": "2026-05-30T19:16:45.117Z"
   },
   "assets": {
     "textures_needed": [],
