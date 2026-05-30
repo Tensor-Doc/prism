@@ -55,7 +55,37 @@ const CATALOG = catalogJson as CatalogEntry[];
 interface GenerateBody {
   prompt?: unknown;
   currentGraph?: unknown;
+  metadata?: unknown;
 }
+
+interface SessionMetadata {
+  time_of_day?: number;
+  day_of_week?: string;
+  session_ms?: number;
+  viewport?: { w?: number; h?: number };
+  prefers_reduced_motion?: boolean;
+}
+
+/** Hand-picked subset of the catalog matching the Refik-Anadol-distilled
+ *  brand mood: painterly, atmospheric, fluid, contemplative, organic.
+ *  The system prompt biases the router toward these unless the visitor's
+ *  prompt explicitly asks for something else (chaotic, geometric, fractal). */
+const REFIK_SUBSET = new Set<string>([
+  "Geiss - Reaction Diffusion 2",
+  "Geiss - Cauldron - painterly 2 (saturation remix)",
+  "Flexi - alien fish pond",
+  "martin - reflections on black tiles",
+  "martin [shadow harlequins shape code] - fata morgana",
+  "suksma - uninitialized variabowl (hydroponic chronic)",
+  "Zylot - Paint Spill (Music Reactive Paint Mix)",
+  "Aderrasi - Songflower (Moss Posy)",
+  "flexi + amandio c - organic [random mashup]",
+  "flexi + amandio c - organic12-3d-2.milk",
+  "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+  "flexi - mom, why the sky looks different today",
+  "martin - frosty caves 2",
+  "suksma - Rovastar - Sunflower Passion (Enlightment Mix)_Phat_edit + flexi und martin shaders - circumflex in character classes in regular expression",
+]);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -94,11 +124,12 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const currentGraph = isPrismGraph(body.currentGraph) ? body.currentGraph : null;
+  const metadata = isSessionMetadata(body.metadata) ? body.metadata : null;
   const ai = new GoogleGenAI({ apiKey });
 
   let pick: { preset_id: string; intent: string };
   try {
-    pick = await pickPresetWithGemini(ai, prompt, currentGraph);
+    pick = await pickPresetWithGemini(ai, prompt, currentGraph, metadata);
   } catch (err) {
     return json(502, { error: `gemini call failed: ${(err as Error).message}` });
   }
@@ -133,8 +164,9 @@ async function pickPresetWithGemini(
   ai: GoogleGenAI,
   prompt: string,
   currentGraph: PrismGraph | null,
+  metadata: SessionMetadata | null,
 ): Promise<{ preset_id: string; intent: string }> {
-  const systemInstruction = buildSystemInstruction(currentGraph);
+  const systemInstruction = buildSystemInstruction(currentGraph, metadata);
 
   const userParts = [`Visitor prompt: "${prompt}"`];
   if (currentGraph) {
@@ -179,29 +211,66 @@ async function pickPresetWithGemini(
   return { preset_id: parsed.preset_id, intent: parsed.intent };
 }
 
-function buildSystemInstruction(currentGraph: PrismGraph | null): string {
+function buildSystemInstruction(
+  currentGraph: PrismGraph | null,
+  metadata: SessionMetadata | null,
+): string {
   const catalogTable = CATALOG.map((e) => {
     const aff = `bass:${e.audio_affinity.bass} mid:${e.audio_affinity.mid} treble:${e.audio_affinity.treble}`;
     const vibe = e.vibe.join(", ");
-    return `- preset_id="${e.preset_id}" | vibe=[${vibe}] | motion=${e.motion} | ${aff} | "${e.blurb}"`;
+    const tag = REFIK_SUBSET.has(e.preset_id) ? " [refik]" : "";
+    return `- preset_id="${e.preset_id}"${tag} | vibe=[${vibe}] | motion=${e.motion} | ${aff} | "${e.blurb}"`;
   }).join("\n");
 
-  return [
+  const sections: string[] = [
     "You are Prism's preset router.",
     "",
     "PRISM IS A VISUALIZATION ENGINE. It computes light fields from signals —",
     "an audio stream (or cursor / heartbeat) drives a real-time visual. You",
     "are choosing which preset to render given a natural-language prompt.",
     "",
+    "BRAND MOOD (REFIK-ANADOL-DISTILLED):",
+    "Prism's default aesthetic is painterly, atmospheric, fluid, organic,",
+    "contemplative — closer to a Refik Anadol installation than a 90s rave.",
+    "Presets tagged [refik] above are the curated mood. When the prompt is",
+    "ambient / unspecified / matches the Refik mood, prefer a [refik] entry.",
+    "When the prompt explicitly asks for chaos / fractals / geometric /",
+    "psychedelic / beats / industrial, override and pick the best non-Refik",
+    "match — don't force a [refik] entry on a chaos prompt.",
+    "",
     "INTERPRETATION RULES:",
     "- 'motion' ranges 0..1. Low ≈ contemplative, calm, dreamy. High ≈ energetic, frenetic.",
     "- 'audio_affinity' tells you which frequency band the preset responds to most.",
-    '- "dreamy" / "calming" / "ambient" → low motion + soft palettes.',
+    '- "dreamy" / "calming" / "ambient" → low motion + soft palettes ([refik] subset).',
     '- "fractal" / "mathematical" / "recursion" → fractal vibe.',
     '- "space" / "cosmic" / "Pink Floyd" / "Grateful Dead" / "psychedelic" → cosmic or psychedelic vibe.',
     '- "liquid" / "fluid" / "paint" / "ink" → fluid vibe; if "responsive" or "reactive" prefer higher audio_affinity.',
     '- "moving shapes" / "geometric" / "with beats" → geometric vibe with high bass affinity.',
+    '- "plants" / "growing" / "garden" / "organic" → botanical or organic [refik] entries.',
+    '- "landscape" / "sky" / "weather" / "sea" / "cave" → atmospheric [refik] entries.',
+    '- "orb" / "sphere" / "balloon" → sphere vibe.',
     "",
+  ];
+
+  if (metadata) {
+    const tod = typeof metadata.time_of_day === "number" ? metadata.time_of_day : null;
+    const hint =
+      tod === null
+        ? ""
+        : tod < 0.25 || tod > 0.83
+          ? "It's currently late-night / pre-dawn for the visitor — favor contemplative, low-motion, dim entries on ambient prompts."
+          : tod < 0.5
+            ? "It's morning for the visitor — favor luminous, growing, fresh entries on ambient prompts."
+            : tod < 0.75
+              ? "It's afternoon for the visitor — neutral bias."
+              : "It's evening for the visitor — favor warm, painterly, atmospheric entries on ambient prompts.";
+    sections.push("SESSION METADATA:");
+    sections.push(`time_of_day=${tod?.toFixed(2)} | day=${metadata.day_of_week}`);
+    if (hint) sections.push(hint);
+    sections.push("");
+  }
+
+  sections.push(
     currentGraph
       ? "REFINEMENT MODE: the visitor is iterating on what they're currently seeing. Prefer a related preset that shifts in the direction they asked for, not a wildly different one."
       : "FRESH MODE: pick the best match from the catalog.",
@@ -212,7 +281,13 @@ function buildSystemInstruction(currentGraph: PrismGraph | null): string {
     "",
     "CATALOG:",
     catalogTable,
-  ].join("\n");
+  );
+  return sections.join("\n");
+}
+
+function isSessionMetadata(value: unknown): value is SessionMetadata {
+  if (!value || typeof value !== "object") return false;
+  return true; // tolerant — any object shape is fine, fields are optional
 }
 
 function matchEntry(presetId: string): CatalogEntry | null {

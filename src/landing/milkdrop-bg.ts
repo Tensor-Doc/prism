@@ -49,11 +49,19 @@ export interface MilkdropBg {
   destroy: () => void;
 }
 
+export interface MilkdropBgOptions {
+  /** Preset key to load on cold open. Falls back to a random pick if the
+   *  name doesn't exist in the bundle. Lets the landing pin a curated
+   *  "Refik-mode" default instead of getting random_$$$ Royal Mashup. */
+  initialPresetName?: string;
+}
+
 export function createMilkdropBackground(
   audioCtx: AudioContext,
   canvas: HTMLCanvasElement,
   silentSource: AudioNode,
   onReady?: () => void,
+  options: MilkdropBgOptions = {},
 ): MilkdropBg {
   // Size canvas to viewport (raw pixels — butterchurn does its own DPR math via pixelRatio).
   const sizeTo = (w: number, h: number) => {
@@ -70,10 +78,17 @@ export function createMilkdropBackground(
   });
   visualizer.connectAudio(silentSource);
 
-  // Pick a random preset from the bundled library.
+  // Pick the curated default if it exists in the bundle; otherwise random.
   const presetMap = butterchurnPresets.getPresets();
   const names = Object.keys(presetMap);
-  let currentRaw = names[Math.floor(Math.random() * names.length)];
+  let currentRaw: string;
+  const requested = options.initialPresetName;
+  const requestedKey = requested ? findPresetKey(names, requested) : null;
+  if (requestedKey) {
+    currentRaw = requestedKey;
+  } else {
+    currentRaw = names[Math.floor(Math.random() * names.length)];
+  }
   visualizer.loadPreset(presetMap[currentRaw], 0);
 
   const onResize = (): void => {

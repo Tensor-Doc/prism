@@ -10,6 +10,8 @@ import { AudioCapture, type AudioFeatures } from "./audio";
 import { createMilkdropBackground } from "./milkdrop-bg";
 import { GraphRuntime } from "./graph/runtime";
 import type { PrismGraph } from "./graph/types";
+import { AmbientSignals } from "./ambient-signals";
+import { ChromeIdle } from "./chrome-idle";
 import { SyntheticSignal } from "./synthetic-signal";
 import { PulsoidStream } from "./pulsoid";
 import { InputPulses } from "./input-pulses";
@@ -90,6 +92,12 @@ if (skillElEarly) {
   skillElEarly.textContent = "compiling…";
   skillElEarly.classList.add("is-loading");
 }
+// Cold-open default — a hand-picked Refik-mode preset (slow, fluid,
+// painterly, breathes with bass) so visitors land on the right mood
+// instead of $$$ Royal Mashup #197. The catalog-router takes over the
+// moment they type a prompt.
+const COLD_OPEN_PRESET = "Geiss - Reaction Diffusion 2";
+
 const milkdrop = createMilkdropBackground(
   audioCtx,
   $<HTMLCanvasElement>("#milkdrop"),
@@ -99,9 +107,17 @@ const milkdrop = createMilkdropBackground(
     skillElEarly?.classList.remove("is-loading");
     updateSkillDisplay(milkdrop.presetName);
   },
+  { initialPresetName: COLD_OPEN_PRESET },
 );
 const field = new CursorField($<HTMLCanvasElement>("#field"));
 const runtime = new GraphRuntime({ milkdrop });
+const ambient = new AmbientSignals();
+
+// ── art mode: auto-fading chrome ────────────────────────────
+// Any input wakes the chrome; 4s idle fades it out. `?art=1` boots
+// straight into faded mode for shareable, immersive-from-load links.
+const artModeFromUrl = new URLSearchParams(window.location.search).get("art") === "1";
+new ChromeIdle({ idleMs: 4_000, cursorHideExtraMs: 2_000, startFaded: artModeFromUrl });
 
 // Pump the synth's energy into cursor-field so its halo also breathes with
 // the same "music" milkdrop is reacting to. Stopped once real audio kicks in.
@@ -505,6 +521,11 @@ async function armAudio(): Promise<void> {
 
 // Click the row (or Enter/Space when focused) to connect audio.
 audioRow.addEventListener("click", () => { void armAudio(); });
+
+// Persistent audio pin — same handler as the SOURCES row, but lives
+// outside the fade-on-idle layer so it's the always-reachable lifeline.
+const audioPinBtn = document.getElementById("audio-pin") as HTMLButtonElement | null;
+audioPinBtn?.addEventListener("click", () => { void armAudio(); });
 audioRow.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
@@ -550,6 +571,7 @@ async function tryGenerate(): Promise<void> {
       body: JSON.stringify({
         prompt: text,
         currentGraph: runtime.current,
+        metadata: ambient.sample(),
       }),
     });
     if (!res.ok) {

@@ -2,6 +2,78 @@
    All values reference --tokens. Aesthetic frame: creative cockpit. */
 
 /* ─────────────────────────────────────────────────────────────
+   Art mode — fade chrome to opacity 0 after 4s of input idle
+   so the visualization breathes alone. Wake faster than sleep.
+   ───────────────────────────────────────────────────────────── */
+body {
+  --chrome-fade-duration: 600ms;
+}
+body:not([data-chrome-idle]) {
+  --chrome-fade-duration: 200ms;
+}
+.statusbar,
+#sources-panel,
+#state-panel,
+.prompt,
+.chip--sources,
+.chip--state,
+.bracket {
+  transition: opacity var(--chrome-fade-duration) var(--ease-snap);
+}
+body[data-chrome-idle] .statusbar,
+body[data-chrome-idle] #sources-panel,
+body[data-chrome-idle] #state-panel,
+body[data-chrome-idle] .prompt,
+body[data-chrome-idle] .chip--sources,
+body[data-chrome-idle] .chip--state,
+body[data-chrome-idle] .bracket {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Persistent "play with audio" pin — visible even when chrome
+   has faded; the one lifeline back into interactivity.
+   ───────────────────────────────────────────────────────────── */
+.audio-pin {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 16px;
+  border: 1px solid var(--cyan-60);
+  border-radius: 999px;
+  color: var(--cyan);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow: 0 0 22px var(--cyan-12), 0 6px 24px -10px rgba(0, 0, 0, 0.65);
+  transition: opacity 200ms var(--ease-snap), transform 200ms var(--ease-snap),
+    box-shadow 200ms var(--ease-snap);
+}
+.audio-pin__icon {
+  font-size: 13px;
+  filter: drop-shadow(0 0 6px var(--cyan-60));
+}
+.audio-pin:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px var(--cyan-60), 0 10px 28px -10px rgba(0, 0, 0, 0.7);
+}
+/* When audio is live, the pin's job is done — fade it out. */
+body.audio-live .audio-pin {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
    Layout root
    ───────────────────────────────────────────────────────────── */
 .landing {
