@@ -19,6 +19,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1057.0",
     "@google/genai": "^2.7.0",
     "butterchurn": "^2.6.7",
     "butterchurn-presets": "^2.4.7",

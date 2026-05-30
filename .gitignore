@@ -13,6 +13,12 @@ tsconfig.tsbuildinfo
 # is in catalog/entries/*.json.
 catalog/.ingest-progress.json
 
+# Rendered preset videos + thumbnails. Once uploaded to R2 (M5b), the
+# entry.assets.video / .thumb fields hold public R2 URLs; local files
+# are scratch artifacts of the render pipeline.
+public/videos/
+public/thumbs/
+
 # Upstream preset/texture sources used as ingest input. The canonical
 # copies live in public/presets/ + public/textures/ after `pnpm prism
 # ingest`; favorites/ stays local-only.

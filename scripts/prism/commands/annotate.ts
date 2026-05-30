@@ -39,6 +39,7 @@ import { dirname, join } from "node:path";
 import { ANNOTATOR_SYSTEM_INSTRUCTION } from "../annotator-prompt";
 import type { CatalogEntry, Annotation } from "../entry-types";
 import { Progress, progressPath } from "../progress";
+import { isR2Enabled, uploadFile } from "../r2";
 
 const DEV_URL = "http://localhost:5173";
 const CAPTURE_PAGE = "/scripts/pipelines/capture-pages/milkdrop.html";
@@ -320,8 +321,33 @@ export async function runAnnotateOne(
   console.log(`  thumb @ t=${thumbnailTimestamp.toFixed(2)}s · ${(thumbBytes.length / 1024).toFixed(1)} KB → ${thumbOut.replace(repoRoot + "/", "")}`);
 
   entry.annotation = annotation;
+  // Default URLs are the local public/ paths. If R2 is configured,
+  // upload + replace with the public R2 URLs so the live site streams
+  // from CDN without bloating the Vercel deploy.
   entry.assets.video = `/videos/milkdrop_${slug}.webm`;
   entry.assets.thumb = `/thumbs/milkdrop_${slug}.jpg`;
+  if (isR2Enabled()) {
+    try {
+      const t2 = Date.now();
+      const [videoUrl, thumbUrl] = await Promise.all([
+        uploadFile(videoOut, `videos/${slug}.webm`, "video/webm"),
+        uploadFile(thumbOut, `thumbs/${slug}.jpg`, "image/jpeg"),
+      ]);
+      console.log(`  R2: uploaded video + thumb in ${Date.now() - t2}ms`);
+      if (videoUrl && thumbUrl) {
+        entry.assets.video = videoUrl;
+        entry.assets.thumb = thumbUrl;
+        console.log(`    video → ${videoUrl}`);
+        console.log(`    thumb → ${thumbUrl}`);
+      } else {
+        console.log("    (R2_PUBLIC_BASE not set — bytes are in R2 but");
+        console.log("     entry URLs stay local until you flip on public");
+        console.log("     access and rerun annotate with --reuse-video)");
+      }
+    } catch (err) {
+      console.warn(`  [R2] upload failed, falling back to local URLs: ${(err as Error).message}`);
+    }
+  }
   writeFileSync(entryPath, JSON.stringify(entry, null, 2) + "\n");
 
   progress.update(slug, {
