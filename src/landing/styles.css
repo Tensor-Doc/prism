@@ -23,11 +23,18 @@ body:not([data-chrome-idle]) {
 body[data-chrome-idle] .statusbar,
 body[data-chrome-idle] #sources-panel,
 body[data-chrome-idle] #state-panel,
-body[data-chrome-idle] .prompt,
 body[data-chrome-idle] .chip--sources,
 body[data-chrome-idle] .chip--state,
 body[data-chrome-idle] .bracket {
   opacity: 0;
+  pointer-events: none;
+}
+/* .prompt has a hardcoded base opacity:0 (line ~905, needed for the
+   flash-free entrance) AND its own transition list that overrides
+   opacity transitions. We bypass the base with inline opacity:1 set
+   in chrome-idle.ts; use !important here to win over that inline. */
+body[data-chrome-idle] .prompt {
+  opacity: 0 !important;
   pointer-events: none;
 }
 
@@ -906,7 +913,8 @@ body.audio-live .state-spectrum {
   animation: opacity-in var(--dur-page) var(--ease-spring) 480ms forwards;
   transition: border-color var(--dur-base) var(--ease-spring),
               box-shadow var(--dur-base) var(--ease-spring),
-              transform var(--dur-base) var(--ease-spring);
+              transform var(--dur-base) var(--ease-spring),
+              opacity var(--chrome-fade-duration) var(--ease-snap);
 }
 
 /* Override the .glass background — the prompt needs to be reliably readable

@@ -48,7 +48,15 @@ export class ChromeIdle {
         el.removeAttribute("data-reveal");
       }
       const prompt = document.getElementById("prompt-panel");
-      if (prompt) prompt.style.animation = "none";
+      if (prompt) {
+        prompt.style.animation = "none";
+        // The .prompt rule has a hardcoded base opacity:0 (needed so
+        // the entrance animation doesn't flash). With the animation
+        // stripped, that base would re-apply and pin the prompt at 0.
+        // Inline opacity:1 releases it; the idle rule uses !important
+        // to override us when fading.
+        prompt.style.opacity = "1";
+      }
     }, 1_600);
     if (opts.startFaded) {
       this.fade();
