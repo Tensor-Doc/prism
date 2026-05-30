@@ -50,7 +50,15 @@ interface CatalogEntry {
   brand_safe?: boolean;
   /** For source_type "shadertoy": static path to the .glsl file. */
   shader_url?: string;
+  /** For source_type "shadertoy": default image bound to iChannel1.
+   *  Visitors will eventually be able to swap this via the UI. */
+  default_image?: string;
 }
+
+// NASA images we'll use as the default substance for image-using shaders.
+// All come through our image-proxy so they're CORS-friendly + cached.
+const NASA = (id: string): string =>
+  `/api/image-proxy?url=${encodeURIComponent("https://images-assets.nasa.gov/image/" + id + "/" + id + "~medium.jpg")}`;
 
 const CATALOG = catalogJson as CatalogEntry[];
 
@@ -97,6 +105,66 @@ const SHADERTOYS: CatalogEntry[] = [
     blurb: "Mandelbox-fold sphere SDF with cyan rim light; mid-band audio modulates iteration.",
     brand_safe: true,
     shader_url: "/presets/shadertoy/raymarch-sphere.glsl",
+  },
+  // Image-using shaders below — each pairs a shape technique with a
+  // sampled image bound to iChannel1. Default images come from NASA's
+  // deep-field collection (proxied for CORS) so the demo is gorgeous
+  // out-of-the-box. Later: dynamic source binding via the UI / nanobanana.
+  {
+    id: "shadertoy:tunnel-of-images",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:tunnel-of-images",
+    display_name: "Tunnel of Images",
+    vibe: ["tunnel", "immersive", "kaleidoscopic", "cinematic"],
+    motion: 0.8,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.9, mid: 0.4, treble: 0.2 },
+    blurb: "A winding cylindrical tunnel wrapped in a deep-field nebula; bass drives flight speed.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/tunnel-of-images.glsl",
+    default_image: NASA("PIA13994"),
+  },
+  {
+    id: "shadertoy:image-metaball",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:image-metaball",
+    display_name: "Image Metaball",
+    vibe: ["organic", "blob", "fluid", "biological"],
+    motion: 0.5,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.7, mid: 0.5, treble: 0.2 },
+    blurb: "A growing fluid blob with a nebula skin sampled by surface normal; pulses with bass.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/image-metaball.glsl",
+    default_image: NASA("PIA15985"),
+  },
+  {
+    id: "shadertoy:image-mosaic",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:image-mosaic",
+    display_name: "Image Mosaic",
+    vibe: ["grid", "tessellated", "rhythmic", "geometric"],
+    motion: 0.7,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.8, mid: 0.6, treble: 0.4 },
+    blurb: "Tessellated image tiles that pulse, scale, and offset on beats.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/image-mosaic.glsl",
+    default_image: NASA("PIA22351"),
+  },
+  {
+    id: "shadertoy:image-pool",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:image-pool",
+    display_name: "Image Pool",
+    vibe: ["liquid", "reflective", "rippling", "contemplative"],
+    motion: 0.4,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.5, mid: 0.4, treble: 0.3 },
+    blurb: "An image reflected in a water surface, rippled by FBM noise; quiet but alive.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/image-pool.glsl",
+    default_image: NASA("PIA17563"),
   },
 ];
 
@@ -198,7 +266,10 @@ export default async function handler(req: Request): Promise<Response> {
   const main: NodeDef = isShader
     ? {
         type: "lf.shadertoy",
-        params: { shader_url: matched.shader_url ?? "" },
+        params: {
+          shader_url: matched.shader_url ?? "",
+          ...(matched.default_image ? { image_url: matched.default_image } : {}),
+        },
         inputs: { audio: "audio_in.signal" },
       }
     : {

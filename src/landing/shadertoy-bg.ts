@@ -28,7 +28,8 @@ uniform float iTimeDelta;
 uniform int iFrame;
 uniform vec3 iResolution;
 uniform vec4 iMouse;
-uniform sampler2D iChannel0;
+uniform sampler2D iChannel0; // audio FFT (256x1, R8)
+uniform sampler2D iChannel1; // image input (default_image or bound source)
 in vec2 v_uv;
 out vec4 outColor;
 
@@ -53,6 +54,9 @@ export interface ShadertoyBg {
   /** Fetch + compile + render a new shader. Resolves once first frame
    *  paints. Throws on compile error. */
   loadFromUrl: (url: string) => Promise<string>;
+  /** Bind an image URL as iChannel1. Resolves once decoded + uploaded.
+   *  Pass null to clear (resets to the 1x1 placeholder). */
+  bindImage: (url: string | null) => Promise<void>;
   /** Pause the render loop + free GL resources. */
   destroy: () => void;
 }
@@ -93,6 +97,17 @@ export function createShadertoyBackground(
   // WebGL2 single-channel texture: R8 internal + RED format. LUMINANCE
   // is deprecated and unreliable in WebGL2 / GLSL 300 es shaders.
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, 256, 1, 0, gl.RED, gl.UNSIGNED_BYTE, null);
+
+  // iChannel1: image texture. Starts as 1x1 dim-gray placeholder so the
+  // shader has something to sample before bindImage resolves.
+  const imageTex = gl.createTexture()!;
+  gl.bindTexture(gl.TEXTURE_2D, imageTex);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,
+    new Uint8Array([32, 32, 38, 255]));
 
   const dummyVao = gl.createVertexArray()!; // needed for vertexAttrib-less rendering
 
@@ -163,6 +178,9 @@ export function createShadertoyBackground(
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, audioTex);
       gl.uniform1i(loc("iChannel0"), 0);
+      gl.activeTexture(gl.TEXTURE1);
+      gl.bindTexture(gl.TEXTURE_2D, imageTex);
+      gl.uniform1i(loc("iChannel1"), 1);
       gl.bindVertexArray(dummyVao);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     } else {
@@ -202,6 +220,35 @@ export function createShadertoyBackground(
       currentName = url.split("/").pop()?.replace(/\.glsl$/, "") ?? url;
       return currentName;
     },
+    bindImage: async (url) => {
+      if (!url) {
+        // Reset to placeholder
+        gl.bindTexture(gl.TEXTURE_2D, imageTex);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,
+          new Uint8Array([32, 32, 38, 255]));
+        return;
+      }
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error(`image load failed: ${url}`));
+        img.src = url;
+      });
+      gl.bindTexture(gl.TEXTURE_2D, imageTex);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+      // Use mipmaps if power-of-2; otherwise just LINEAR.
+      const pow2 = (img.naturalWidth & (img.naturalWidth - 1)) === 0
+                && (img.naturalHeight & (img.naturalHeight - 1)) === 0;
+      if (pow2) {
+        gl.generateMipmap(gl.TEXTURE_2D);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+      } else {
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      }
+    },
     destroy: () => {
       running = false;
       window.removeEventListener("resize", onResize);
@@ -210,6 +257,7 @@ export function createShadertoyBackground(
       window.removeEventListener("pointerup", onPointerUp);
       if (currentProgram) gl.deleteProgram(currentProgram);
       gl.deleteTexture(audioTex);
+      gl.deleteTexture(imageTex);
       gl.deleteVertexArray(dummyVao);
     },
   };

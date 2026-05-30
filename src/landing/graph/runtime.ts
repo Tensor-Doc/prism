@@ -75,10 +75,17 @@ export class GraphRuntime {
       if (typeof url !== "string") {
         return { ok: false, error: "lf.shadertoy missing shader_url" };
       }
+      const imageUrl = node.params?.image_url;
       this.ctx.setActiveBackend("shadertoy");
       void this.ctx.shadertoy.loadFromUrl(url).catch((err: Error) => {
         console.warn("[runtime] shadertoy loadFromUrl failed:", err.message);
       });
+      // Bind the entry's default image to iChannel1 if specified. The
+      // shader has a 1x1 grey placeholder until this resolves.
+      void this.ctx.shadertoy.bindImage(typeof imageUrl === "string" ? imageUrl : null)
+        .catch((err: Error) => {
+          console.warn("[runtime] shadertoy bindImage failed:", err.message);
+        });
       this.active = graph;
       const name = url.split("/").pop()?.replace(/\.glsl$/, "") ?? url;
       return { ok: true, presetName: name, backend: "shadertoy" };
