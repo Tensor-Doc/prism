@@ -25,6 +25,15 @@ export interface IndexEntry {
   atelier: boolean;
   brand_safe: boolean;
   textures_needed: string[];
+  /** Source info — what backend loads this entry and how. Used by the
+   *  landing-page rotation to synthesize a prism.graph and dispatch
+   *  via the runtime without needing to fetch per-entry JSONs. */
+  source_type: "milkdrop" | "shadertoy" | "isf" | "wgsl";
+  source_loader: "url" | "npm-butterchurn-presets";
+  source_url?: string;
+  source_ref?: string;
+  /** Default image bound to iChannel1 for image-input shaders. */
+  default_image?: string;
   video?: string;
   thumb?: string;
   added_by?: string;
@@ -78,6 +87,11 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       atelier: a.atelier ?? false,
       brand_safe: a.brand_safe,
       textures_needed: (entry.assets.textures_needed ?? []).map((t) => t.name),
+      source_type: entry.source.type,
+      source_loader: entry.source.loader,
+      source_url: entry.source.url,
+      source_ref: entry.source.ref,
+      default_image: entry.assets.default_image,
       video: entry.assets.video,
       thumb: entry.assets.thumb,
       added_by: entry.contribution.added_by,

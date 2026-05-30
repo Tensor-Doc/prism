@@ -80,6 +80,10 @@ export interface Assets {
   thumb?: string;
   /** sampler_* references parsed from the shader, minus built-ins. */
   textures_needed?: TextureNeed[];
+  /** Optional default image bound to iChannel1 for image-input shaders.
+   *  Catalog router + landing rotation use this as the fallback feed
+   *  when no live gallery source is bound. */
+  default_image?: string;
 }
 
 export interface Contribution {

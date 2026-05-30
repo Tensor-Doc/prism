@@ -53,6 +53,64 @@ const ROTATE_BLEND_S = 3;
 const AUDIO_FIRST_ROTATION_MS = 9_000; // first new preset within 9s of audio
 let rotateTimer: number | null = null;
 
+// Atelier rotation pool — entries from catalog/index.json filtered to
+// brand_safe + atelier. Loaded once on boot, cached for life of the
+// session. Until it loads, rotation falls back to milkdrop.loadRandom.
+interface RotEntry {
+  id: string;
+  slug: string;
+  name: string;
+  source_type: "milkdrop" | "shadertoy" | "isf" | "wgsl";
+  source_loader: "url" | "npm-butterchurn-presets";
+  source_url?: string;
+  source_ref?: string;
+  default_image?: string;
+}
+let rotationPool: RotEntry[] = [];
+void fetch("/catalog/index.json")
+  .then((r) => r.ok ? r.json() : null)
+  .then((data) => {
+    if (!data?.entries) return;
+    rotationPool = (data.entries as RotEntry[] & { brand_safe: boolean; atelier: boolean }[])
+      .filter((e) => (e as unknown as { brand_safe: boolean }).brand_safe
+                  && (e as unknown as { atelier: boolean }).atelier);
+    console.log(`[rotate] atelier pool loaded: ${rotationPool.length} entries`);
+  })
+  .catch((err) => console.warn("[rotate] catalog fetch failed:", err));
+
+function pickRotationEntry(): RotEntry | null {
+  if (rotationPool.length === 0) return null;
+  return rotationPool[Math.floor(Math.random() * rotationPool.length)];
+}
+
+function rotEntryToGraph(e: RotEntry): PrismGraph {
+  const mainParams: Record<string, string> = {};
+  let mainType: "lf.milkdrop" | "lf.shadertoy";
+  if (e.source_type === "shadertoy") {
+    mainType = "lf.shadertoy";
+    if (e.source_url) mainParams.shader_url = e.source_url;
+    if (e.default_image) mainParams.image_url = e.default_image;
+  } else {
+    mainType = "lf.milkdrop";
+    if (e.source_loader === "url" && e.source_url) {
+      mainParams.preset_url = e.source_url;
+    } else if (e.source_ref) {
+      mainParams.preset_name = e.source_ref;
+    }
+  }
+  return {
+    schema: "prism.graph/0.1",
+    id: `rotate:${e.slug}`,
+    intent: e.name,
+    nodes: {
+      audio: { type: "signal.audio" },
+      main: { type: mainType, params: mainParams, inputs: { audio: "audio.signal" } },
+      screen: { type: "sink.display", inputs: { frame: "main.frame" } },
+    },
+    output: "screen",
+  };
+}
+
 function updateSkillDisplay(name: string, flash = false): void {
   const display = name.length > 26 ? name.slice(0, 24) + "…" : name;
   const el = document.getElementById("skill");
@@ -96,18 +154,33 @@ function hideThinking(): void {
 function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
   if (rotateTimer != null) return;
   const tick = (): void => {
-    // Rotation pool is milkdrop today. If a shader was the active
-    // backend, the swap would be invisible (milkdrop canvas is hidden)
-    // and the play button would feel broken. Drop back to milkdrop so
-    // the cycle is actually seen.
-    if (activeBackend === "shadertoy") {
-      setActiveBackend("milkdrop");
-      activeBackend = "milkdrop";
-      graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
-      refreshShaderFeed();
+    // Try the atelier pool first — picks across both milkdrop and
+    // shadertoy entries flagged brand_safe + atelier. The runtime
+    // handles backend switching, so the play button visibly cycles
+    // no matter which backend was active.
+    const entry = pickRotationEntry();
+    if (entry) {
+      const graph = rotEntryToGraph(entry);
+      const result = runtime.apply(graph, ROTATE_BLEND_S);
+      if (result.ok) {
+        activeBackend = result.backend ?? activeBackend;
+        graphFlow.render(graph);
+        refreshShaderFeed();
+        updateSkillDisplay(entry.name);
+      }
+    } else {
+      // Catalog hasn't loaded yet — fall back to bundle random so the
+      // button isn't dead on first ticks. Same milkdrop-only safeguard
+      // as before: drop back to milkdrop so the swap is visible.
+      if (activeBackend === "shadertoy") {
+        setActiveBackend("milkdrop");
+        activeBackend = "milkdrop";
+        graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
+        refreshShaderFeed();
+      }
+      const newName = milkdrop.loadRandom(ROTATE_BLEND_S);
+      updateSkillDisplay(newName);
     }
-    const newName = milkdrop.loadRandom(ROTATE_BLEND_S);
-    updateSkillDisplay(newName);
     rotateTimer = window.setTimeout(tick, ROTATE_INTERVAL_MS);
   };
   rotateTimer = window.setTimeout(tick, initialMs);
