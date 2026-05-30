@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:krash-illusion-spiral",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Krash + Illusion - Spiral Movement",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Krash + Illusion - Spiral Movement",
+    "author": "Krash/Illusion",
+    "blurb": "Hypnotic spiraling motion that rotates with each beat."
+  },
+  "annotation": {
+    "vibe": [
+      "spiral",
+      "hypnotic",
+      "rotating"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ffaa3a",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_krash-illusion-spiral.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

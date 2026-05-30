@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:royal-mashup-197",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "$$$ Royal - Mashup (197)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "$$$ Royal - Mashup (197)",
+    "author": "$$$ Royal",
+    "blurb": "High-energy geometric mashup that pounds with every kick."
+  },
+  "annotation": {
+    "vibe": [
+      "chaotic",
+      "geometric",
+      "energetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ff3aae",
+      "#3affae",
+      "#1a1a3a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_royal-mashup-197.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

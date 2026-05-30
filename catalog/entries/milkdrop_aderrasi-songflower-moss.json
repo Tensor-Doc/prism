@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:aderrasi-songflower-moss",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Aderrasi - Songflower (Moss Posy)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Songflower (Moss Posy)",
+    "author": "Aderrasi",
+    "blurb": "Petals and moss bloom outward — verdant, breath-paced, alive."
+  },
+  "annotation": {
+    "vibe": [
+      "botanical",
+      "growing",
+      "lush"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#3aaa6a",
+      "#ffd97a",
+      "#1a2a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_aderrasi-songflower-moss.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

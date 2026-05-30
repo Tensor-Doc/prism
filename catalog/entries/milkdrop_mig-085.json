@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:mig-085",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "_Mig_085",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "_Mig_085",
+    "author": "Mig",
+    "blurb": "Restrained geometric patterns that breathe quietly with the music."
+  },
+  "annotation": {
+    "vibe": [
+      "minimal",
+      "geometric",
+      "clean"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#3affae",
+      "#ff8a3a",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_mig-085.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

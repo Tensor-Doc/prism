@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:geiss-thumb-drum",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Geiss - Thumb Drum",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Thumb Drum",
+    "author": "Geiss",
+    "blurb": "Tight kick-driven thumps that radiate outward like sonar pings."
+  },
+  "annotation": {
+    "vibe": [
+      "percussive",
+      "rhythmic",
+      "abstract"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#ff3a8a",
+      "#ffd23a",
+      "#0e0e1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.4,
+      "treble": 0.2
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_geiss-thumb-drum.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

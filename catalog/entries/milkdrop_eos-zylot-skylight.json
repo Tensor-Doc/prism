@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:eos-zylot-skylight",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. + Zylot - skylight",
+    "author": "Eo.S. + Zylot",
+    "blurb": "Stained-glass skylight cascading downward — slow, devotional, warm."
+  },
+  "annotation": {
+    "vibe": [
+      "sky",
+      "luminous",
+      "cathedral"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#ffba3a",
+      "#3a8acf",
+      "#1a1a2a"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.5,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_eos-zylot-skylight.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

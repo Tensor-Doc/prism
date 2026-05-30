@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-acid-wiring",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Martin - acid wiring",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - acid wiring",
+    "author": "Martin",
+    "blurb": "Electric circuitry pulses with neon energy and current."
+  },
+  "annotation": {
+    "vibe": [
+      "electric",
+      "mechanical",
+      "neon"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#3affae",
+      "#ff3a3a",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.7,
+      "treble": 0.6
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-acid-wiring.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

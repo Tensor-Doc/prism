@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:flexi-amandio-organic",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "flexi + amandio c - organic [random mashup]",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi + amandio - organic",
+    "author": "Flexi + amandio c",
+    "blurb": "Writhing organic forms swell and breathe with the music."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "undulating",
+      "biological"
+    ],
+    "motion": 0.55,
+    "palette_anchor": [
+      "#d99a3a",
+      "#3aaa8a",
+      "#221a14"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.6,
+      "treble": 0.3
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_flexi-amandio-organic.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

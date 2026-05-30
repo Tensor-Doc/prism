@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-reflections",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "martin - reflections on black tiles",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - reflections on black tiles",
+    "author": "Martin",
+    "blurb": "Liquid reflections dance across polished black tiles."
+  },
+  "annotation": {
+    "vibe": [
+      "reflective",
+      "liquid",
+      "elegant"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ffaa3a",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.55,
+      "mid": 0.5,
+      "treble": 0.45
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-reflections.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

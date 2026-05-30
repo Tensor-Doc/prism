@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:suksma-variabowl",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "suksma - uninitialized variabowl (hydroponic chronic)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Suksma - uninitialized variabowl",
+    "author": "Suksma",
+    "blurb": "Organic shapes bloom and unfurl like time-lapse vegetation."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "growing",
+      "lush"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#3affae",
+      "#ffba3a",
+      "#0a1a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.55,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_suksma-variabowl.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

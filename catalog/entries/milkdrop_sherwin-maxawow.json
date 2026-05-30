@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:sherwin-maxawow",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Dedicated to Sherwin Maxawow",
+    "author": "Flexi/Martin/Geiss",
+    "blurb": "Three-author mashup of effects layered into a kaleidoscopic explosion."
+  },
+  "annotation": {
+    "vibe": [
+      "maximalist",
+      "explosive",
+      "kaleidoscopic"
+    ],
+    "motion": 0.9,
+    "palette_anchor": [
+      "#ff3a3a",
+      "#3afff8",
+      "#ffd23a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.6
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_sherwin-maxawow.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

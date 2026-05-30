@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-stormy-sea",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "martin - stormy sea (2010 update)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - stormy sea",
+    "author": "Martin",
+    "blurb": "Rolling sea under a charged sky — every beat is a wave breaking."
+  },
+  "annotation": {
+    "vibe": [
+      "ocean",
+      "stormy",
+      "turbulent"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#3a7a9a",
+      "#dceaff",
+      "#1a2a3a"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-stormy-sea.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

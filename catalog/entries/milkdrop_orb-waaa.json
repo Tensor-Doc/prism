@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:orb-waaa",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "ORB - Waaa",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "ORB - Waaa",
+    "author": "ORB",
+    "blurb": "A luminous orb pulses at the center — gravity in a single glowing sphere."
+  },
+  "annotation": {
+    "vibe": [
+      "sphere",
+      "orb",
+      "luminous"
+    ],
+    "motion": 0.55,
+    "palette_anchor": [
+      "#3acfff",
+      "#ff8a3a",
+      "#fffaee"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_orb-waaa.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

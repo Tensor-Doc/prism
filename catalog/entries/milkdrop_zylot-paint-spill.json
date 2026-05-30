@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:zylot-paint-spill",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Zylot - Paint Spill (Music Reactive Paint Mix)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Zylot - Paint Spill",
+    "author": "Zylot",
+    "blurb": "Vivid paint pools and spreads — fluid, reactive, alive."
+  },
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "painterly",
+      "liquid"
+    ],
+    "motion": 0.55,
+    "palette_anchor": [
+      "#ff3aae",
+      "#3aaaff",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.65,
+      "mid": 0.55,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_zylot-paint-spill.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

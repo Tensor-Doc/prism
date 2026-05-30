@@ -1,0 +1,12 @@
+
+To install
+----------
+
+1. Before beginning, you need a copy of Winamp installed.
+2. Rename this folder
+     C:\Program Files (x86)\Winamp\Plugins\Milkdrop2\presets
+   to: 
+     C:\Program Files (x86)\Winamp\Plugins\Milkdrop2\presets_OLD
+3. Extract the contents of the archive to the following folder:
+     C:\Program Files (x86)\Winamp\Plugins\Milkdrop2
+4. Fire up Winamp and run MilkDrop (CTRL+SHIFT+K).

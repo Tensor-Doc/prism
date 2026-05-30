@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:eos-phat-cubetrace",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Eo.S. + Phat - cubetrace - v2",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Eo.S. + Phat - cubetrace",
+    "author": "Eo.S./Phat",
+    "blurb": "Cubes trace paths through 3D space, driven hard by bass kicks."
+  },
+  "annotation": {
+    "vibe": [
+      "3d",
+      "geometric",
+      "shapes"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#3afff8",
+      "#ff3a96",
+      "#0a0a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_eos-phat-cubetrace.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:aderrasi-storm-of-the-eye",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Aderrasi - Storm of the Eye",
+    "author": "Aderrasi",
+    "blurb": "Concentric rings ripple through a thunder-charged sky."
+  },
+  "annotation": {
+    "vibe": [
+      "storm",
+      "thunder",
+      "atmospheric"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#3a4a6a",
+      "#e0e0e0",
+      "#0e0e1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_aderrasi-storm-of-the-eye.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

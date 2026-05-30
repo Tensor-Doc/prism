@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:flexi-sky-different-today",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "flexi - mom, why the sky looks different today",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Flexi - mom, why the sky looks different today",
+    "author": "Flexi",
+    "blurb": "An alien sky shifts overhead — clouds remembering they could move."
+  },
+  "annotation": {
+    "vibe": [
+      "sky",
+      "atmospheric",
+      "shifting"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#3acfff",
+      "#ffba9a",
+      "#2a1a3a"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_flexi-sky-different-today.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

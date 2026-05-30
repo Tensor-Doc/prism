@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-qbikal-turbulence",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Martin - QBikal - Surface Turbulence IIb",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - QBikal - Surface Turbulence",
+    "author": "Martin/QBikal",
+    "blurb": "Surface turbulence rippling like water disturbed by sound."
+  },
+  "annotation": {
+    "vibe": [
+      "turbulent",
+      "textured",
+      "flowing"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ff8a3a",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.65,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-qbikal-turbulence.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:suksma-sunflower-passion",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "suksma - Rovastar - Sunflower Passion (Enlightment Mix)_Phat_edit + flexi und martin shaders - circumflex in character classes in regular expression",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Suksma - Sunflower Passion",
+    "author": "Suksma + Rovastar",
+    "blurb": "A sunflower opens at the speed of music — heliotropic and golden."
+  },
+  "annotation": {
+    "vibe": [
+      "floral",
+      "radiant",
+      "warm"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#ffd23a",
+      "#ff8a3a",
+      "#3a2a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_suksma-sunflower-passion.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

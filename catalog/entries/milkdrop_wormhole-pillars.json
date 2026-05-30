@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:wormhole-pillars",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Unchained & Rovastar - Wormhole Pillars (Hall of Shadows mix)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Wormhole Pillars",
+    "author": "Unchained/Rovastar",
+    "blurb": "Flying through wormhole corridors of light at light-speed."
+  },
+  "annotation": {
+    "vibe": [
+      "space",
+      "tunnel",
+      "cosmic"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ff8a3a",
+      "#0a0a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.55,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_wormhole-pillars.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

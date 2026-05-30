@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-extreme-heat",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "martin - extreme heat",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - extreme heat",
+    "author": "Martin",
+    "blurb": "Blazing thermal energy radiates and warps under audio pressure."
+  },
+  "annotation": {
+    "vibe": [
+      "fire",
+      "intense",
+      "warm"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ff3a3a",
+      "#ffd23a",
+      "#1a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.7,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-extreme-heat.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

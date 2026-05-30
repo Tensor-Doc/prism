@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:royal-mashup-431",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "$$$ Royal - Mashup (431)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "$$$ Royal - Mashup (431)",
+    "author": "$$$ Royal",
+    "blurb": "Layered chaos that pulses with multiple overlapping rhythms."
+  },
+  "annotation": {
+    "vibe": [
+      "chaotic",
+      "layered",
+      "frenetic"
+    ],
+    "motion": 0.9,
+    "palette_anchor": [
+      "#ff8a3a",
+      "#3aaaff",
+      "#0a0a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_royal-mashup-431.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

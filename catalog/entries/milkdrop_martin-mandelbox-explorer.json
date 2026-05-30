@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:martin-mandelbox-explorer",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "martin - mandelbox explorer - high speed demo version",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Martin - mandelbox explorer",
+    "author": "Martin",
+    "blurb": "Endless fractal recursion through a 3D mandelbox."
+  },
+  "annotation": {
+    "vibe": [
+      "fractal",
+      "mathematical",
+      "infinite"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ffaa3a",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.5,
+      "treble": 0.5
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_martin-mandelbox-explorer.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

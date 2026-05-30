@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:yin-temporal-singularities",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "yin - 191 - Temporal singularities",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Yin - Temporal singularities",
+    "author": "Yin",
+    "blurb": "Temporal singularities warp spacetime in slow cosmic majesty."
+  },
+  "annotation": {
+    "vibe": [
+      "spacetime",
+      "cosmic",
+      "dreamy"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#3aaaff",
+      "#ffaa3a",
+      "#0a0a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.55,
+      "mid": 0.55,
+      "treble": 0.55
+    },
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_yin-temporal-singularities.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

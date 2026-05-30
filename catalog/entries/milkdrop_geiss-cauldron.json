@@ -1,0 +1,49 @@
+{
+  "id": "milkdrop:geiss-cauldron",
+  "schema_version": 2,
+  "source": {
+    "type": "milkdrop",
+    "loader": "npm-butterchurn-presets",
+    "ref": "Geiss - Cauldron - painterly 2 (saturation remix)",
+    "format": "milk-v201"
+  },
+  "display": {
+    "name": "Geiss - Cauldron (painterly)",
+    "author": "Geiss",
+    "blurb": "Boiling brushstrokes in warm oils — paint stirred by audio energy."
+  },
+  "annotation": {
+    "vibe": [
+      "painterly",
+      "warm",
+      "organic"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#ff8a3a",
+      "#ffd83a",
+      "#3a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "brand_safe": true,
+    "refik_mode": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-05-29T00:00:00.000Z"
+  },
+  "assets": {
+    "video": "/videos/milkdrop_geiss-cauldron.webm"
+  },
+  "contribution": {
+    "added_by": "scottspace",
+    "added_at": "2026-05-29T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}
