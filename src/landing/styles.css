@@ -1104,19 +1104,19 @@ body.audio-live .state-spectrum {
   opacity: 1; /* don't dim — the thinking state is the readout */
 }
 
-/* Build version tag — bottom-right corner. Dim by default, lights up
-   on hover so it never competes with the visual but is always there to
-   answer "what build is this?". */
+/* Build version tag — bottom-LEFT corner (clear of the bottom-right
+   corner bracket). Visible enough to find without competing with the
+   visual; brighter on hover. */
 .version-tag {
   position: fixed;
-  bottom: 4px;
-  right: 8px;
+  bottom: 6px;
+  left: 30px; /* clear of the .bracket--bl */
   z-index: 60;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   color: var(--fg-muted);
-  opacity: 0.45;
+  opacity: 0.65;
   pointer-events: auto;
   user-select: text;
   transition: opacity 180ms var(--ease-snap), color 180ms var(--ease-snap);
