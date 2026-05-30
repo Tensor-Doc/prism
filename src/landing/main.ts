@@ -59,6 +59,19 @@ function showResult(intent: string): void {
   el.style.animation = "";
 }
 
+const thinkingPopup = document.getElementById("thinking-popup");
+const thinkingPromptEl = document.getElementById("thinking-prompt");
+function showThinking(prompt: string): void {
+  if (thinkingPromptEl) {
+    const truncated = prompt.length > 60 ? prompt.slice(0, 58) + "…" : prompt;
+    thinkingPromptEl.textContent = `"${truncated}"`;
+  }
+  thinkingPopup?.removeAttribute("data-hidden");
+}
+function hideThinking(): void {
+  thinkingPopup?.setAttribute("data-hidden", "");
+}
+
 function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
   if (rotateTimer != null) return;
   const tick = (): void => {
@@ -584,6 +597,11 @@ async function tryGenerate(): Promise<void> {
   // in-flight (vs the panel just sitting there for a second).
   if (generateBtnLabel) generateBtnLabel.textContent = "thinking";
   if (generateBtnIcon) generateBtnIcon.textContent = "◐";
+  // Headline UX: dock the prompt to the bottom-bar immediately so the
+  // canvas + thinking popup own the center of the screen. Fire-and-
+  // forget the dock animation; it runs in parallel with the API call.
+  void setPromptCollapsed(true);
+  showThinking(text);
   // Stop auto-rotation while a user-driven graph is loading — otherwise
   // the next rotate tick clobbers the chosen preset within seconds.
   stopRotation();
@@ -620,6 +638,7 @@ async function tryGenerate(): Promise<void> {
     setTimeout(() => updateSkillDisplay(milkdrop.presetName), 3200);
   } finally {
     skillEl?.classList.remove("is-loading");
+    hideThinking();
     setTimeout(() => generateBtn.classList.remove("flash"), 400);
     generateBtn.disabled = false;
     promptPanel.removeAttribute("data-generating");

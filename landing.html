@@ -308,6 +308,14 @@
       <span class="label">play with audio</span>
     </button>
 
+    <!-- ── thinking popup (visible only while AI is routing) ─────── -->
+    <div class="thinking" id="thinking-popup" data-hidden role="status" aria-live="polite">
+      <span class="thinking__icon" aria-hidden="true">◐</span>
+      <span class="thinking__label">thinking</span>
+      <span class="thinking__sep" aria-hidden="true">·</span>
+      <span class="thinking__prompt" id="thinking-prompt"></span>
+    </div>
+
     <script type="module" src="/src/landing/main.ts"></script>
   </body>
 </html>

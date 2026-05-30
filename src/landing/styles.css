@@ -1094,6 +1094,53 @@ body.audio-live .state-spectrum {
   opacity: 1; /* don't dim — the thinking state is the readout */
 }
 
+/* "Thinking" popup — owns center-screen while the AI router is working.
+   Replaces the in-button spinner as the headline progress indicator now
+   that the prompt panel auto-docks on generate. Disappears the moment
+   the new graph applies. */
+.thinking {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 110;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border: 1px solid var(--cyan-60);
+  border-radius: 999px;
+  background: rgba(8, 10, 14, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  box-shadow: 0 0 32px var(--cyan-12), 0 12px 32px -10px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: opacity 220ms var(--ease-snap), transform 220ms var(--ease-snap);
+}
+.thinking[data-hidden] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.94);
+}
+.thinking__icon {
+  display: inline-block;
+  width: 14px;
+  text-align: center;
+  animation: thinking-spin 0.9s linear infinite;
+}
+.thinking__sep { color: var(--fg-muted); }
+.thinking__prompt {
+  color: var(--fg);
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* "Now playing" result line — the AI's intent sentence after generate.
    Persists between generations so the visitor can always see what the
    router picked. Replaces the chip row visually after the first run. */
