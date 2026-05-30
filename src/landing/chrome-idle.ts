@@ -36,6 +36,20 @@ export class ChromeIdle {
     for (const name of events) {
       window.addEventListener(name, this.wake, { passive: true });
     }
+    // The entrance reveal animations have `animation-fill-mode: forwards`,
+    // which locks opacity at 1 and beats our fade-on-idle selectors. Once
+    // the staggered reveal has completed (~longest delay 640ms + page
+    // duration 800ms + small buffer), release the locks so our transition
+    // rules can take over. We strip [data-reveal] for the panel chrome and
+    // clear inline animations from elements with their own opacity-in
+    // keyframes (the prompt panel uses one).
+    window.setTimeout(() => {
+      for (const el of document.querySelectorAll<HTMLElement>("[data-reveal]")) {
+        el.removeAttribute("data-reveal");
+      }
+      const prompt = document.getElementById("prompt-panel");
+      if (prompt) prompt.style.animation = "none";
+    }, 1_600);
     if (opts.startFaded) {
       this.fade();
     } else {
