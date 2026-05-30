@@ -1006,6 +1006,26 @@ if (promptChips) {
   }
 }
 
+// Onboarding nudge — rotate the prompt placeholder every few seconds
+// through example vocabulary so first-time visitors discover what to
+// type without any new UI surface. Stops mutating when the field is
+// focused or non-empty so it never disrupts a user mid-thought.
+let placeholderNudgeTimer: number | null = null;
+function startPlaceholderNudge(): void {
+  if (placeholderNudgeTimer != null) return;
+  const tick = (): void => {
+    if (promptInput.value === "" && document.activeElement !== promptInput) {
+      const pick = CHIP_PROMPTS[Math.floor(Math.random() * CHIP_PROMPTS.length)];
+      promptInput.placeholder = `try: ${pick}`;
+    }
+    placeholderNudgeTimer = window.setTimeout(tick, 5500);
+  };
+  // Hold the original placeholder for 7s before first rotation so
+  // newcomers can read it.
+  placeholderNudgeTimer = window.setTimeout(tick, 7000);
+}
+startPlaceholderNudge();
+
 // Global ⌘K / ⌘L → focus prompt
 window.addEventListener("keydown", (e) => {
   if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) {
