@@ -11,6 +11,7 @@ import { createMilkdropBackground } from "./milkdrop-bg";
 import { createShadertoyBackground } from "./shadertoy-bg";
 import { GraphRuntime } from "./graph/runtime";
 import type { PrismGraph } from "./graph/types";
+import { GraphFlow } from "./graph-flow";
 import { AmbientSignals } from "./ambient-signals";
 import { ChromeIdle } from "./chrome-idle";
 import { TestSignalRecorder } from "./test-signal";
@@ -202,6 +203,12 @@ function setActiveBackend(which: "milkdrop" | "shadertoy"): void {
 setActiveBackend("milkdrop");
 
 const runtime = new GraphRuntime({ milkdrop, shadertoy, setActiveBackend });
+
+// graph-flow viz — the live prism.graph chain inside the STATE panel.
+// Renders a synthetic cold-open chain immediately so the chain is on
+// screen from first paint; swaps to the real graph after each generate.
+const graphFlow = new GraphFlow();
+graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "cold-open");
 const ambient = new AmbientSignals();
 
 // ── art mode: auto-fading chrome ────────────────────────────
@@ -450,6 +457,9 @@ audio.onSource = (source, ctx) => {
   synth.stop();
   milkdrop.connectAudio(source);
   shadertoy.connectAudio(source);
+  // Light up the graph-flow edges so visitors see signal traveling
+  // through the chain in real time once audio is feeding the LF node.
+  graphFlow.setLive(true);
   // Hold the source + context for the test-signal recorder so it can tap
   // the audio graph for a clean recording (raw MediaStream recording is
   // silent when AudioContext is already consuming the track).
@@ -784,6 +794,7 @@ async function tryGenerate(): Promise<void> {
     }
     activeBackend = result.backend ?? activeBackend;
     refreshFeedShaderPill();
+    graphFlow.render(data.graph);
     updateSkillDisplay(data.graph.intent, true);
     showResult(data.graph.intent);
   } catch (err) {

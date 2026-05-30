@@ -905,6 +905,122 @@ body.audio-live .state-spectrum {
 }
 
 /* ─────────────────────────────────────────────────────────────
+   Live prism.graph chain (inside STATE panel)
+   Shows the executing graph as a 3-pill chain. The LF node is the
+   accent. When audio is live, a small cyan dot streams along each
+   edge so "signal → light field → sink" feels physical.
+   ───────────────────────────────────────────────────────────── */
+.state-graph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  border-top: 1px solid var(--glass-border);
+  transition: opacity var(--dur-base) var(--ease-snap);
+}
+.state-graph[data-empty] { display: none; }
+.state-graph__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.state-graph__id {
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+}
+.state-graph__chain {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.state-graph__node {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px 3px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.32);
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.state-graph__node[data-role="lf"] {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(61, 255, 229, 0.06);
+}
+.state-graph__node[data-role="sink"] {
+  color: var(--fg);
+}
+.state-graph__glyph {
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0.85;
+}
+.state-graph__label {
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.state-graph__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+.state-graph__node[data-active] .state-graph__dot {
+  opacity: 1;
+  box-shadow: 0 0 6px currentColor;
+  animation: state-graph-pulse 1.6s ease-in-out infinite;
+}
+@keyframes state-graph-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.state-graph__edge {
+  position: relative;
+  flex: 1 1 14px;
+  min-width: 10px;
+  height: 1px;
+  background: var(--glass-border);
+  margin: 0 2px;
+}
+.state-graph__edge::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 5px var(--cyan);
+  opacity: 0;
+}
+.state-graph[data-live] .state-graph__edge::before {
+  animation: state-graph-flow 1.4s linear infinite;
+}
+@keyframes state-graph-flow {
+  0%   { left: 0;    opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────
    Prompt panel (the centerpiece)
    ───────────────────────────────────────────────────────────── */
 .prompt {

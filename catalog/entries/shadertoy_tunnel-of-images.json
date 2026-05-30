@@ -12,15 +12,47 @@
     "author": "prism",
     "blurb": "A winding cylindrical tunnel wrapped in a deep-field nebula; bass drives flight speed."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "minimalist",
+      "ambient",
+      "dark"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#141619",
+      "#004d4a",
+      "#0a2e2d"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.05
+    },
+    "techniques": [
+      "bloom_glow",
+      "custom_wave"
+    ],
+    "technical_notes": "A central radial glow is rendered as a soft teal custom shape, heavily diffused using the blur pyramid (sampler_blur1). The brightness of the core modulates subtly in response to the bass frequencies of the synthetic test signal. High decay rates keep the surrounding field entirely dark, resulting in a minimalist, void-like presentation.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T21:47:08.984Z"
+  },
   "assets": {
     "textures_needed": [],
-    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA13994%2FPIA13994~medium.jpg"
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA13994%2FPIA13994~medium.jpg",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_tunnel-of-images.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_tunnel-of-images.jpg"
   },
   "contribution": {
     "added_by": "prism",
     "added_at": "2026-05-30T00:00:00.000Z",
     "license": "MIT"
   },
-  "compatibility": { "renders": true }
+  "compatibility": {
+    "renders": true
+  }
 }
