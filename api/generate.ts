@@ -21,7 +21,7 @@ import catalogJson from "../catalog/catalog.json";
 // canonical schema definition lives in that file; keep them in sync.
 const SCHEMA_VERSION = "prism.graph/0.1" as const;
 
-type NodeType = "signal.audio" | "lf.milkdrop" | "sink.display" | string;
+type NodeType = "signal.audio" | "lf.milkdrop" | "lf.shadertoy" | "sink.display" | string;
 interface NodeDef {
   type: NodeType;
   params?: Record<string, unknown>;
@@ -48,9 +48,59 @@ interface CatalogEntry {
   audio_affinity: { bass: number; mid: number; treble: number };
   blurb: string;
   brand_safe?: boolean;
+  /** For source_type "shadertoy": static path to the .glsl file. */
+  shader_url?: string;
 }
 
 const CATALOG = catalogJson as CatalogEntry[];
+
+// Hand-seeded shadertoy entries, parallel to the legacy milkdrop catalog.
+// Once the build-time index pipeline replaces catalog.json the router will
+// load both source types from one file; for the demo we inline the 3
+// proven shaders here.
+const SHADERTOYS: CatalogEntry[] = [
+  {
+    id: "shadertoy:cosmic-flow",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:cosmic-flow",
+    display_name: "Cosmic Flow",
+    vibe: ["fluid", "cosmic", "painterly", "calm"],
+    motion: 0.35,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.7, mid: 0.3, treble: 0.1 },
+    blurb: "Slow rolling FBM fluid in cyan/orange cosine palette; bass widens the flow.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/cosmic-flow.glsl",
+  },
+  {
+    id: "shadertoy:audio-spectrum",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:audio-spectrum",
+    display_name: "Audio Spectrum",
+    vibe: ["geometric", "rhythmic", "neon", "kinetic"],
+    motion: 0.85,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.9, mid: 0.9, treble: 0.9 },
+    blurb: "64 mirrored FFT bars, cyan→orange gradient with soft bloom.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/audio-spectrum.glsl",
+  },
+  {
+    id: "shadertoy:raymarch-sphere",
+    source_type: "shadertoy",
+    preset_id: "shadertoy:raymarch-sphere",
+    display_name: "Raymarch Sphere",
+    vibe: ["3d", "sculptural", "kaleidoscopic", "metallic"],
+    motion: 0.55,
+    palette_anchor: ["#3dffe5", "#ff7847", "#0a0a0e"],
+    audio_affinity: { bass: 0.4, mid: 0.7, treble: 0.2 },
+    blurb: "Mandelbox-fold sphere SDF with cyan rim light; mid-band audio modulates iteration.",
+    brand_safe: true,
+    shader_url: "/presets/shadertoy/raymarch-sphere.glsl",
+  },
+];
+
+const ALL_ENTRIES: CatalogEntry[] = [...CATALOG, ...SHADERTOYS];
 
 interface GenerateBody {
   prompt?: unknown;
@@ -144,17 +194,26 @@ export default async function handler(req: Request): Promise<Response> {
     });
   }
 
+  const isShader = matched.source_type === "shadertoy";
+  const main: NodeDef = isShader
+    ? {
+        type: "lf.shadertoy",
+        params: { shader_url: matched.shader_url ?? "" },
+        inputs: { audio: "audio_in.signal" },
+      }
+    : {
+        type: "lf.milkdrop",
+        params: { preset_name: matched.preset_id, blend_seconds: 2.5 },
+        inputs: { audio: "audio_in.signal" },
+      };
+
   const graph: PrismGraph = {
     schema: SCHEMA_VERSION,
     id: `g_${Math.random().toString(36).slice(2, 10)}`,
     intent: pick.intent,
     nodes: {
       audio_in: { type: "signal.audio", params: {} },
-      main: {
-        type: "lf.milkdrop",
-        params: { preset_name: matched.preset_id, blend_seconds: 2.5 },
-        inputs: { audio: "audio_in.signal" },
-      },
+      main,
       out: { type: "sink.display", inputs: { frame: "main.frame" } },
     },
     output: "out",
@@ -222,11 +281,12 @@ function buildSystemInstruction(
   currentGraph: PrismGraph | null,
   metadata: SessionMetadata | null,
 ): string {
-  const catalogTable = CATALOG.map((e) => {
+  const catalogTable = ALL_ENTRIES.map((e) => {
     const aff = `bass:${e.audio_affinity.bass} mid:${e.audio_affinity.mid} treble:${e.audio_affinity.treble}`;
     const vibe = e.vibe.join(", ");
     const tag = REFIK_SUBSET.has(e.preset_id) ? " [refik]" : "";
-    return `- preset_id="${e.preset_id}"${tag} | vibe=[${vibe}] | motion=${e.motion} | ${aff} | "${e.blurb}"`;
+    const fmt = e.source_type === "shadertoy" ? " [shader]" : "";
+    return `- preset_id="${e.preset_id}"${tag}${fmt} | vibe=[${vibe}] | motion=${e.motion} | ${aff} | "${e.blurb}"`;
   }).join("\n");
 
   const sections: string[] = [
@@ -256,6 +316,14 @@ function buildSystemInstruction(
     '- "plants" / "growing" / "garden" / "organic" → botanical or organic [refik] entries.',
     '- "landscape" / "sky" / "weather" / "sea" / "cave" → atmospheric [refik] entries.',
     '- "orb" / "sphere" / "balloon" → sphere vibe.',
+    "",
+    "TWO SOURCE FORMATS in the catalog (the [shader] tag marks Shadertoy entries):",
+    "- Default = Milkdrop preset (rich audio reactivity, painterly/organic catalog).",
+    "- [shader] = WebGL Shadertoy fragment shader (modern; the cosmic-flow shader is",
+    "  Refik-mood FBM, audio-spectrum is geometric FFT bars, raymarch-sphere is a",
+    "  sculptural SDF). Pick a shader when the prompt suggests technical/modern/",
+    "  geometric/3D/fractal/audio-bars qualities; pick milkdrop when it leans",
+    "  painterly/cosmic/organic.",
     "",
   ];
 
@@ -298,9 +366,9 @@ function isSessionMetadata(value: unknown): value is SessionMetadata {
 }
 
 function matchEntry(presetId: string): CatalogEntry | null {
-  const direct = CATALOG.find((e) => e.preset_id === presetId);
+  const direct = ALL_ENTRIES.find((e) => e.preset_id === presetId);
   if (direct) return direct;
-  const fuzzy = CATALOG.find(
+  const fuzzy = ALL_ENTRIES.find(
     (e) => e.preset_id.toLowerCase() === presetId.toLowerCase(),
   );
   return fuzzy ?? null;

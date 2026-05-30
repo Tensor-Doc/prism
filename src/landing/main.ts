@@ -8,6 +8,7 @@ import { Vu } from "./vu";
 import { Spectrum } from "./spectrum";
 import { AudioCapture, type AudioFeatures } from "./audio";
 import { createMilkdropBackground } from "./milkdrop-bg";
+import { createShadertoyBackground } from "./shadertoy-bg";
 import { GraphRuntime } from "./graph/runtime";
 import type { PrismGraph } from "./graph/types";
 import { AmbientSignals } from "./ambient-signals";
@@ -141,8 +142,31 @@ const milkdrop = createMilkdropBackground(
   },
   { initialPresetName: COLD_OPEN_PRESET },
 );
+const shadertoy = createShadertoyBackground(
+  audioCtx,
+  $<HTMLCanvasElement>("#shadertoy"),
+  synth.getOutput(),
+);
 const field = new CursorField($<HTMLCanvasElement>("#field"));
-const runtime = new GraphRuntime({ milkdrop });
+
+// Track which background canvas is active. Initially milkdrop is showing.
+const milkdropCanvas = $<HTMLCanvasElement>("#milkdrop");
+const shadertoyCanvas = $<HTMLCanvasElement>("#shadertoy");
+function setActiveBackend(which: "milkdrop" | "shadertoy"): void {
+  if (which === "milkdrop") {
+    milkdropCanvas.classList.remove("bg-canvas--hidden");
+    milkdropCanvas.classList.add("bg-canvas--active");
+    shadertoyCanvas.classList.add("bg-canvas--hidden");
+    shadertoyCanvas.classList.remove("bg-canvas--active");
+  } else {
+    shadertoyCanvas.classList.remove("bg-canvas--hidden");
+    shadertoyCanvas.classList.add("bg-canvas--active");
+    milkdropCanvas.classList.add("bg-canvas--hidden");
+    milkdropCanvas.classList.remove("bg-canvas--active");
+  }
+}
+
+const runtime = new GraphRuntime({ milkdrop, shadertoy, setActiveBackend });
 const ambient = new AmbientSignals();
 
 // ── art mode: auto-fading chrome ────────────────────────────

@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="/src/landing/styles.css" />
   </head>
   <body class="landing">
-    <!-- ── background visualization ────────────────────────────── -->
-    <canvas id="milkdrop" aria-hidden="true"></canvas>
+    <!-- ── background visualization (two backends; runtime swaps) ──── -->
+    <canvas id="milkdrop" class="bg-canvas" aria-hidden="true"></canvas>
+    <canvas id="shadertoy" class="bg-canvas bg-canvas--hidden" aria-hidden="true"></canvas>
     <canvas id="field" aria-hidden="true"></canvas>
     <canvas id="slideshow" aria-hidden="true"></canvas>
     <div class="slideshow-card" id="slideshow-card" data-hidden>

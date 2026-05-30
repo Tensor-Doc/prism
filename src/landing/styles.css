@@ -95,22 +95,29 @@ body.audio-live .audio-pin {
 /* ─────────────────────────────────────────────────────────────
    Background field
    ───────────────────────────────────────────────────────────── */
-#milkdrop {
+.bg-canvas {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   display: block;
   z-index: 0;
-  opacity: 0;
-  animation: field-in 1400ms var(--ease-spring) 60ms forwards;
-  transition: opacity var(--dur-base) var(--ease-spring),
+  transition: opacity 600ms var(--ease-spring),
               filter var(--dur-base) var(--ease-spring);
 }
+/* Milkdrop fades in on first paint via the existing field-in animation;
+   shadertoy enters hidden and crossfades when the runtime activates it. */
+#milkdrop {
+  opacity: 0;
+  animation: field-in 1400ms var(--ease-spring) 60ms forwards;
+}
+#shadertoy { opacity: 0; }
+.bg-canvas--hidden { opacity: 0 !important; pointer-events: none; }
+.bg-canvas--active { opacity: 1; }
 /* Global dim mode — toggled from the top status bar. Saturate-down too so
    any wild colors (e.g. purple-heavy presets) lose their punch. */
-body[data-dim="1"] #milkdrop { opacity: 0.55; filter: saturate(0.5); }
-body[data-dim="2"] #milkdrop { opacity: 0.28; filter: saturate(0.3); }
+body[data-dim="1"] .bg-canvas { opacity: 0.55; filter: saturate(0.5); }
+body[data-dim="2"] .bg-canvas { opacity: 0.28; filter: saturate(0.3); }
 #field {
   position: fixed;
   inset: 0;
