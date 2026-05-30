@@ -12,6 +12,7 @@
 import { join } from "node:path";
 import { existsSync } from "node:fs";
 
+import { runAnnotate } from "./commands/annotate";
 import { runIngest } from "./commands/ingest";
 import { runMigrate } from "./commands/migrate";
 
@@ -55,8 +56,18 @@ function main(): void {
       runIngest(repoRoot, path, { limit });
       break;
     }
+    case "annotate": {
+      const slug = args.find((a) => !a.startsWith("--"));
+      const all = args.includes("--all");
+      const limitArg = args.find((a) => a.startsWith("--limit="));
+      const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
+      void runAnnotate(repoRoot, { slug, all, limit }).catch((err: Error) => {
+        console.error(`[annotate] FAILED: ${err.message}`);
+        process.exit(2);
+      });
+      break;
+    }
     case "validate":
-    case "annotate":
     case "test-presets":
       console.error(`[prism] '${command}' not implemented yet`);
       process.exit(2);

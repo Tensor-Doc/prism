@@ -7,6 +7,13 @@
 import butterchurnRaw from "butterchurn";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import butterchurnPresetsRaw from "butterchurn-presets";
+// milkdrop-preset-converter ships as CJS without types; pull the named
+// export we need with a structural cast.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+import * as milkdropConverterRaw from "milkdrop-preset-converter";
+const milkdropConverter = milkdropConverterRaw as unknown as {
+  convertPreset: (text: string) => unknown;
+};
 
 interface VisualizerHandle {
   connectAudio(node: AudioNode): void;
@@ -46,6 +53,11 @@ export interface MilkdropBg {
    *  Returns the pretty name on success; `null` if no preset with that key
    *  exists in the bundled library. */
   loadByName: (name: string, blendSeconds?: number) => string | null;
+  /** Load a .milk preset from a URL: fetch text → convertPreset → loadPreset.
+   *  Used for the 526 favorites and future contributor uploads which live
+   *  at public/presets/milkdrop/<slug>.milk. Returns the pretty name on
+   *  success; throws on fetch / parse error so callers can surface it. */
+  loadFromUrl: (url: string, blendSeconds?: number) => Promise<string>;
   destroy: () => void;
 }
 
@@ -138,6 +150,19 @@ export function createMilkdropBackground(
       visualizer.loadPreset(presetMap[key], blendSeconds);
       currentRaw = key;
       return prettyPresetName(key);
+    },
+    loadFromUrl: async (url, blendSeconds = 2.5) => {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`fetch ${url} → ${res.status} ${res.statusText}`);
+      }
+      const milkText = await res.text();
+      const converted = milkdropConverter.convertPreset(milkText);
+      visualizer.loadPreset(converted, blendSeconds);
+      // Display name is derived from the URL's last path segment.
+      const stem = url.split("/").pop()?.replace(/\.milk$/, "") ?? url;
+      currentRaw = stem;
+      return prettyPresetName(stem);
     },
     destroy: () => {
       running = false;

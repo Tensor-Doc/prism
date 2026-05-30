@@ -24,18 +24,35 @@
 
       import butterchurnRaw from "/node_modules/butterchurn/lib/butterchurn.min.js";
       import presetsRaw from "/node_modules/butterchurn-presets/lib/butterchurnPresetsMinimal.min.js";
+      // milkdrop-preset-converter is UMD; importing as an ES module via Vite
+      // wraps it. The converter exports convertPreset(text) → preset object.
+      import converterRaw from "/node_modules/milkdrop-preset-converter/dist/milkdrop-preset-converter.min.js";
 
       const unwrap = (m) => (m && typeof m === "object" && "default" in m ? m.default : m);
       const butterchurn = unwrap(butterchurnRaw);
       const presets = unwrap(presetsRaw);
+      const converter = unwrap(converterRaw);
 
       const canvas = document.getElementById("vis");
       const params = new URLSearchParams(location.search);
+      // Two modes: ?preset=<name> looks up in the bundled npm pack;
+      // ?presetUrl=<path> fetches a raw .milk and converts it. The URL
+      // mode is what the M5b annotator uses against ingested favorites.
       const presetName = params.get("preset");
-      if (!presetName) throw new Error("missing ?preset= query parameter");
-      const presetMap = presets.getPresets();
-      const presetData = presetMap[presetName];
-      if (!presetData) throw new Error(`unknown preset: ${presetName}`);
+      const presetUrl = params.get("presetUrl");
+      let presetData;
+      if (presetUrl) {
+        const res = await fetch(presetUrl);
+        if (!res.ok) throw new Error(`fetch ${presetUrl} → ${res.status}`);
+        const milkText = await res.text();
+        presetData = converter.convertPreset(milkText);
+      } else if (presetName) {
+        const presetMap = presets.getPresets();
+        presetData = presetMap[presetName];
+        if (!presetData) throw new Error(`unknown preset: ${presetName}`);
+      } else {
+        throw new Error("missing ?preset= or ?presetUrl= query parameter");
+      }
 
       const W = window.innerWidth;
       const H = window.innerHeight;
