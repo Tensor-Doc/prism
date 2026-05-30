@@ -383,16 +383,17 @@ function hideSlideshowCard(): void { slideshowCard.setAttribute("data-hidden", "
 
 // ── audio capture ──────────────────────────────────────────
 const audio = new AudioCapture(audioCtx);
-let liveAudioStream: MediaStream | null = null;
-audio.onSource = (source) => {
+let liveAudioSource: { ctx: AudioContext; node: AudioNode } | null = null;
+audio.onSource = (source, ctx) => {
   // Real audio is here — stop the synthetic driver and route the real source
   // into butterchurn so the preset reacts to actual music.
   synthDrivesCursor = false;
   synth.stop();
   milkdrop.connectAudio(source);
-  // Expose the underlying MediaStream to the test-signal recorder so the
-  // user can save 30s of whatever they're playing as the annotator stimulus.
-  liveAudioStream = source.mediaStream;
+  // Hold the source + context for the test-signal recorder so it can tap
+  // the audio graph for a clean recording (raw MediaStream recording is
+  // silent when AudioContext is already consuming the track).
+  liveAudioSource = { ctx, node: source };
   const btn = document.getElementById("test-signal-btn");
   btn?.removeAttribute("data-hidden");
   // Auto-start rotation: with music playing, the user wants the visual
@@ -610,11 +611,11 @@ recorder.onStatus = (s, payload) => {
   }
 };
 testSignalBtn?.addEventListener("click", () => {
-  if (!liveAudioStream) {
-    console.warn("[test-signal] no live audio stream");
+  if (!liveAudioSource) {
+    console.warn("[test-signal] no live audio source");
     return;
   }
-  void recorder.record(liveAudioStream);
+  void recorder.record(liveAudioSource.ctx, liveAudioSource.node);
 });
 audioRow.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") {

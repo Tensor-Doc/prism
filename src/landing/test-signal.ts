@@ -25,10 +25,14 @@ export class TestSignalRecorder {
     return typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported(MIME);
   }
 
-  /** Record DURATION_MS of the provided audio-bearing MediaStream → download
-   *  as FILENAME. The stream should be the shared tab's audio track (we get
-   *  it via the AudioCapture's source.mediaStream).  */
-  async record(stream: MediaStream): Promise<void> {
+  /** Record DURATION_MS of the audio coming through the provided source
+   *  node → download as FILENAME. We route the source through a
+   *  MediaStreamDestinationNode (a "tap" in the AudioContext graph) and
+   *  record that stream — NOT the raw getDisplayMedia stream. Recording
+   *  the raw stream directly is unreliable on Chromium-based browsers
+   *  when the same track is already being consumed by an AudioContext
+   *  (you get a silent file). The tap pattern always works. */
+  async record(audioCtx: AudioContext, source: AudioNode): Promise<void> {
     if (this.recorder && this.recorder.state !== "inactive") {
       throw new Error("already recording");
     }
@@ -36,14 +40,17 @@ export class TestSignalRecorder {
       this.onStatus?.("error", { error: "MediaRecorder doesn't support audio/webm;codecs=opus in this browser" });
       return;
     }
-    // Audio-only sub-stream — drop the video track if the shared tab had one.
-    const audioOnly = new MediaStream(stream.getAudioTracks());
-    if (audioOnly.getAudioTracks().length === 0) {
-      this.onStatus?.("error", { error: "no audio track in stream" });
+    if (audioCtx.state === "suspended") await audioCtx.resume();
+    const dest = audioCtx.createMediaStreamDestination();
+    source.connect(dest);
+    const tappedStream = dest.stream;
+    if (tappedStream.getAudioTracks().length === 0) {
+      this.onStatus?.("error", { error: "AudioContext tap produced no audio tracks" });
+      source.disconnect(dest);
       return;
     }
     const chunks: Blob[] = [];
-    const rec = new MediaRecorder(audioOnly, { mimeType: MIME, audioBitsPerSecond: BITRATE });
+    const rec = new MediaRecorder(tappedStream, { mimeType: MIME, audioBitsPerSecond: BITRATE });
     this.recorder = rec;
     rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
     this.onStatus?.("recording");
@@ -54,6 +61,9 @@ export class TestSignalRecorder {
     window.setTimeout(() => rec.stop(), DURATION_MS);
     await stopped;
     this.recorder = null;
+    // Disconnect the tap so we don't add a permanent extra branch to the
+    // AudioContext graph.
+    try { source.disconnect(dest); } catch { /* already gone */ }
     this.onStatus?.("encoding");
     const blob = new Blob(chunks, { type: "audio/webm" });
     triggerDownload(blob, FILENAME);
