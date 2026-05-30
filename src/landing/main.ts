@@ -96,6 +96,16 @@ function hideThinking(): void {
 function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
   if (rotateTimer != null) return;
   const tick = (): void => {
+    // Rotation pool is milkdrop today. If a shader was the active
+    // backend, the swap would be invisible (milkdrop canvas is hidden)
+    // and the play button would feel broken. Drop back to milkdrop so
+    // the cycle is actually seen.
+    if (activeBackend === "shadertoy") {
+      setActiveBackend("milkdrop");
+      activeBackend = "milkdrop";
+      graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
+      refreshShaderFeed();
+    }
     const newName = milkdrop.loadRandom(ROTATE_BLEND_S);
     updateSkillDisplay(newName);
     rotateTimer = window.setTimeout(tick, ROTATE_INTERVAL_MS);
