@@ -63,10 +63,35 @@
       canvas.width = W;
       canvas.height = H;
 
-      // Audio: try the configured backing track; fall back to procedural
-      // pink-noise oscillators that still drive bass/mid/treble.
+      // Audio source: prefer the user-recorded test signal (e.g. Pink Floyd
+      // "Money" 1:10-1:40) at /audio/test-signal.webm. Falls back to the
+      // procedural pink-noise synth if that file isn't present.
       const audioCtx = new AudioContext();
-      const fakeSource = (() => {
+
+      async function tryRecordedTestSignal() {
+        try {
+          const res = await fetch("/audio/test-signal.webm");
+          if (!res.ok) return null;
+          const buf = await res.arrayBuffer();
+          const audio = await audioCtx.decodeAudioData(buf);
+          const node = audioCtx.createBufferSource();
+          node.buffer = audio;
+          node.loop = true;
+          // Random starting offset so we don't always sample the same opening
+          // beat of the loop in every capture.
+          node.start(0, Math.random() * audio.duration);
+          const gain = audioCtx.createGain();
+          gain.gain.value = 1.0;
+          node.connect(gain);
+          console.log("[capture] using recorded test signal:", audio.duration.toFixed(1) + "s");
+          return gain;
+        } catch (err) {
+          console.warn("[capture] failed to load /audio/test-signal.webm:", err.message);
+          return null;
+        }
+      }
+
+      function buildSynthSignal() {
         const gain = audioCtx.createGain();
         gain.gain.value = 0.6;
         const voices = [
@@ -90,7 +115,6 @@
           o.start();
           lfo.start();
         }
-        // Drum-like envelope
         setInterval(() => {
           const now = audioCtx.currentTime;
           gain.gain.cancelScheduledValues(now);
@@ -98,8 +122,11 @@
           gain.gain.linearRampToValueAtTime(1.1, now + 0.03);
           gain.gain.exponentialRampToValueAtTime(0.45, now + 0.25);
         }, 700 + Math.random() * 400);
+        console.log("[capture] using synthetic fallback signal");
         return gain;
-      })();
+      }
+
+      const fakeSource = (await tryRecordedTestSignal()) ?? buildSynthSignal();
       // Resume on first interaction-equivalent (we're headless, so just resume).
       await audioCtx.resume();
 

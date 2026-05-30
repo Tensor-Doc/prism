@@ -12,6 +12,7 @@ import { GraphRuntime } from "./graph/runtime";
 import type { PrismGraph } from "./graph/types";
 import { AmbientSignals } from "./ambient-signals";
 import { ChromeIdle } from "./chrome-idle";
+import { TestSignalRecorder } from "./test-signal";
 import { SyntheticSignal } from "./synthetic-signal";
 import { PulsoidStream } from "./pulsoid";
 import { InputPulses } from "./input-pulses";
@@ -382,12 +383,18 @@ function hideSlideshowCard(): void { slideshowCard.setAttribute("data-hidden", "
 
 // ── audio capture ──────────────────────────────────────────
 const audio = new AudioCapture(audioCtx);
+let liveAudioStream: MediaStream | null = null;
 audio.onSource = (source) => {
   // Real audio is here — stop the synthetic driver and route the real source
   // into butterchurn so the preset reacts to actual music.
   synthDrivesCursor = false;
   synth.stop();
   milkdrop.connectAudio(source);
+  // Expose the underlying MediaStream to the test-signal recorder so the
+  // user can save 30s of whatever they're playing as the annotator stimulus.
+  liveAudioStream = source.mediaStream;
+  const btn = document.getElementById("test-signal-btn");
+  btn?.removeAttribute("data-hidden");
   // Auto-start rotation: with music playing, the user wants the visual
   // skills to cycle. First rotation lands within ~9s instead of the usual
   // 22s so the change is felt quickly after audio connects.
@@ -557,6 +564,58 @@ audioRow.addEventListener("click", () => { void armAudio(); });
 // outside the fade-on-idle layer so it's the always-reachable lifeline.
 const audioPinBtn = document.getElementById("audio-pin") as HTMLButtonElement | null;
 audioPinBtn?.addEventListener("click", () => { void armAudio(); });
+
+// Test-signal recorder — wire the SOURCES "save 30s as test signal" pill.
+const testSignalBtn = document.getElementById("test-signal-btn") as HTMLButtonElement | null;
+const testSignalLabel = testSignalBtn?.querySelector<HTMLElement>(".test-signal-btn__label");
+const testSignalIcon = testSignalBtn?.querySelector<HTMLElement>(".test-signal-btn__icon");
+const recorder = new TestSignalRecorder();
+recorder.onStatus = (s, payload) => {
+  if (!testSignalBtn || !testSignalLabel || !testSignalIcon) return;
+  switch (s) {
+    case "recording":
+      testSignalBtn.setAttribute("data-recording", "");
+      testSignalBtn.removeAttribute("data-saved");
+      testSignalIcon.textContent = "●";
+      testSignalLabel.textContent = "recording 30s…";
+      testSignalBtn.disabled = true;
+      break;
+    case "encoding":
+      testSignalLabel.textContent = "encoding…";
+      break;
+    case "saved": {
+      testSignalBtn.removeAttribute("data-recording");
+      testSignalBtn.setAttribute("data-saved", "");
+      testSignalBtn.disabled = false;
+      testSignalIcon.textContent = "✓";
+      const kb = ((payload?.sizeBytes ?? 0) / 1024).toFixed(0);
+      testSignalLabel.textContent = `saved ${kb}KB — drop in public/audio/test-signal.webm`;
+      // Auto-revert the label after 12s so a follow-up record can happen.
+      setTimeout(() => {
+        if (testSignalBtn.hasAttribute("data-saved")) {
+          testSignalIcon.textContent = "💾";
+          testSignalLabel.textContent = "re-record 30s as test signal";
+        }
+      }, 12_000);
+      break;
+    }
+    case "error":
+      testSignalBtn.removeAttribute("data-recording");
+      testSignalBtn.disabled = false;
+      testSignalIcon.textContent = "⚠";
+      testSignalLabel.textContent = payload?.error ?? "record failed";
+      break;
+    case "idle":
+      break;
+  }
+};
+testSignalBtn?.addEventListener("click", () => {
+  if (!liveAudioStream) {
+    console.warn("[test-signal] no live audio stream");
+    return;
+  }
+  void recorder.record(liveAudioStream);
+});
 audioRow.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();

@@ -88,6 +88,13 @@
           <canvas class="signal__vu" id="vu-audio" aria-hidden="true"></canvas>
           <span class="signal__rate readout">connect</span>
         </div>
+        <!-- Test-signal recorder: visible only when audio is live. Saves a
+             30s WebM of whatever's playing so the annotation pipeline can
+             feed it back into all 526 captures as a consistent stimulus. -->
+        <button class="test-signal-btn" id="test-signal-btn" type="button" data-hidden title="Capture 30s of the current audio for the annotation pipeline (save to public/audio/test-signal.webm)">
+          <span class="test-signal-btn__icon" aria-hidden="true">💾</span>
+          <span class="test-signal-btn__label label">save 30s as test signal</span>
+        </button>
         <div class="signal" data-signal="camera">
           <span class="signal__glyph" aria-hidden="true">◉</span>
           <span class="signal__name label">camera</span>

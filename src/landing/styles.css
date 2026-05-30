@@ -1094,6 +1094,51 @@ body.audio-live .state-spectrum {
   opacity: 1; /* don't dim — the thinking state is the readout */
 }
 
+/* Test-signal recorder pill — slots into the SOURCES panel just under
+   the audio row when audio is live. Saves 30s WebM/Opus of the current
+   share for the annotation pipeline's deterministic stimulus. */
+.test-signal-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-1) var(--space-3) var(--space-2) var(--space-3);
+  padding: 6px 12px;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: color 140ms, border-color 140ms, background 140ms, box-shadow 140ms;
+}
+.test-signal-btn[data-hidden] { display: none; }
+.test-signal-btn:hover,
+.test-signal-btn:focus-visible {
+  color: var(--cyan);
+  border-color: var(--cyan-60);
+  background: var(--cyan-12);
+  box-shadow: 0 0 14px var(--cyan-12);
+  outline: none;
+}
+.test-signal-btn[data-recording] {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-12);
+  cursor: progress;
+  animation: test-signal-pulse 1.2s ease-in-out infinite;
+}
+.test-signal-btn[data-saved] {
+  color: var(--cyan);
+  border-color: var(--cyan-60);
+}
+@keyframes test-signal-pulse {
+  0%, 100% { box-shadow: 0 0 8px var(--cyan-12); }
+  50%      { box-shadow: 0 0 18px var(--cyan-60); }
+}
+
 /* "Thinking" popup — owns center-screen while the AI router is working.
    Replaces the in-button spinner as the headline progress indicator now
    that the prompt panel auto-docks on generate. Disappears the moment

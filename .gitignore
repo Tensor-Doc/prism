@@ -19,6 +19,12 @@ catalog/.ingest-progress.json
 public/videos/
 public/thumbs/
 
+# Recorded test-signal audio (e.g. Pink Floyd Money 1:10-1:40). Local
+# only — copyright lives with the original artist. The annotation
+# pipeline uses it as a deterministic stimulus across all 526 captures
+# but it doesn't ship in the public site.
+public/audio/test-signal.webm
+
 # Upstream preset/texture sources used as ingest input. The canonical
 # copies live in public/presets/ + public/textures/ after `pnpm prism
 # ingest`; favorites/ stays local-only.

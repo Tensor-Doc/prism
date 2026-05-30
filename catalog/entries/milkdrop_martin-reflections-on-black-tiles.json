@@ -11,9 +11,37 @@
     "name": "martin - reflections on black tiles",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "monolithic",
+      "mysterious"
+    ],
+    "motion": 0,
+    "palette_anchor": [
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "raymarch_sdf",
+      "domain_repetition"
+    ],
+    "technical_notes": "The preset 'reflections on black tiles' by martin is a raymarched signed distance field scene, but in this capture under the synthetic test signal, it produces a completely black frame. This suggests the specular light sources or emissive properties of the tiles are gated or require specific audio thresholds not met by the test signal, resulting in zero visible output.",
+    "brand_safe": true,
+    "refik_mode": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T18:37:10.375Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/martin-reflections-on-black-tiles.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/martin-reflections-on-black-tiles.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
