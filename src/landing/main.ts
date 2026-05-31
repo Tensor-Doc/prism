@@ -4,6 +4,7 @@
 
 import { ImageOverlay, PrismPlayer, type PrismGraph } from "@tensordoc/prism";
 
+import { detectGpu } from "./gpu-detect";
 import { CursorField } from "./cursor-field";
 import { Telemetry } from "./telemetry";
 import { Vu } from "./vu";
@@ -25,6 +26,41 @@ function $<T extends HTMLElement = HTMLElement>(sel: string): T {
   const el = document.querySelector<T>(sel);
   if (!el) throw new Error(`prism landing: missing element ${sel}`);
   return el;
+}
+
+// ── GPU detection ──────────────────────────────────────────
+// If the browser is running on a CPU rasterizer (SwiftShader /
+// llvmpipe / WARP) or lacks WebGL2 entirely, surface a dismissible
+// warning overlay on top of the page. The player boots normally
+// underneath; the overlay just lets the user know what to expect.
+const gpu = detectGpu();
+if (gpu.tier !== "gpu") {
+  const warning = document.getElementById("gpu-warning");
+  const bodyEl = document.getElementById("gpu-warning-body");
+  const detailEl = document.getElementById("gpu-warning-detail");
+  const continueBtn = document.getElementById("gpu-warning-continue");
+  if (warning && bodyEl && detailEl && continueBtn) {
+    if (gpu.tier === "no-webgl") {
+      bodyEl.textContent =
+        "Your browser doesn't support WebGL2, which Prism needs to render. " +
+        "Try a recent build of Chrome, Edge, Firefox, or Safari on a desktop.";
+    } else if (gpu.mobile) {
+      bodyEl.textContent =
+        "Mobile devices can run Prism but the visualization may stutter on " +
+        "complex shaders. For the full effect, try opening this on a desktop " +
+        "with a discrete or integrated GPU.";
+    } else {
+      bodyEl.textContent =
+        "Your browser appears to be using a CPU-only software renderer. " +
+        "Prism's shaders need GPU acceleration to run at 60fps — they'll " +
+        "render at single-digit fps without it.";
+    }
+    if (gpu.renderer) detailEl.textContent = `Detected renderer: ${gpu.renderer}`;
+    warning.removeAttribute("data-hidden");
+    continueBtn.addEventListener("click", () => {
+      warning.setAttribute("data-hidden", "");
+    }, { once: true });
+  }
 }
 
 // Stamp the build SHA + time into the corner tag + console banner.

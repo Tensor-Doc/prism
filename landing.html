@@ -14,6 +14,29 @@
     <!-- Background visualization. PrismPlayer mounts its two backend
          canvases inside #prism-stage; existing .bg-canvas CSS targets
          them by class + id (cold-open animation on #milkdrop, etc.). -->
+    <!-- GPU-detection warning overlay — shown only when WebGL2 is
+         missing or running on a CPU rasterizer (SwiftShader/llvmpipe/
+         WARP). User can dismiss and continue at their own risk. -->
+    <div class="gpu-warning" id="gpu-warning" data-hidden>
+      <div class="gpu-warning__panel">
+        <h1 class="gpu-warning__title">⚠ GPU recommended</h1>
+        <p class="gpu-warning__body" id="gpu-warning-body">
+          Prism renders audio-reactive WebGL2 shaders at 60fps. Your
+          browser doesn't appear to have GPU acceleration — the
+          visualization may run very slowly or not at all.
+        </p>
+        <p class="gpu-warning__detail" id="gpu-warning-detail"></p>
+        <div class="gpu-warning__actions">
+          <button class="gpu-warning__continue" type="button" id="gpu-warning-continue">
+            Continue anyway
+          </button>
+          <a class="gpu-warning__learn" href="https://github.com/Tensor-Doc/prism#faq-gpu" target="_blank" rel="noopener">
+            Why does it need a GPU?
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div id="prism-stage" aria-hidden="true"></div>
     <canvas id="field" aria-hidden="true"></canvas>
     <canvas id="slideshow" aria-hidden="true"></canvas>
