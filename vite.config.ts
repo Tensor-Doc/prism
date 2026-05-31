@@ -39,11 +39,13 @@ export default defineConfig({
         ? {
             landing: resolve(__dirname, "landing.html"),
             gallery: resolve(__dirname, "gallery.html"),
+            embed: resolve(__dirname, "examples/embed.html"),
           }
         : {
             studio: resolve(__dirname, "index.html"),
             landing: resolve(__dirname, "landing.html"),
             gallery: resolve(__dirname, "gallery.html"),
+            embed: resolve(__dirname, "examples/embed.html"),
           },
     },
   },
