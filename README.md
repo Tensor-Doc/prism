@@ -10,16 +10,13 @@ Prism turns real-time signals into live visuals. Audio is one
 signal. So are heartbeat, breath, pose, cursor, MIDI, and AI agent
 state. Anything that streams can drive a visual.
 
-This is the start of a generative visualizer, and we're being
-honest about where we are. Today, Prism **composites existing
-visualization code** — [Milkdrop](https://www.geisswerks.com/about_milkdrop.html)
-presets through [butterchurn](https://github.com/jberg/butterchurn),
+Today, Prism composites existing visualization code —
+[Milkdrop](https://www.geisswerks.com/about_milkdrop.html) presets
+through [butterchurn](https://github.com/jberg/butterchurn),
 [Shadertoy](https://www.shadertoy.com/) fragment shaders through a
 custom WebGL2 runtime — and uses an LLM to route prompts to the
-right one. **In development**: letting an AI generate its own
-shaders end to end, parameterized by the same signal nodes. We're
-starting from a sturdy base that artists have refined for two
-decades; the AI-generation layer is the next frontier.
+right one. In development: AI-generated shaders parameterized by the
+same signal nodes.
 
 - **Live demo**: [prism.scott.ai](https://prism.scott.ai)
 - **CodeSandbox**: [two-line embed playground](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
@@ -133,10 +130,7 @@ hand it to the user, or pass the graph object directly to
 
 None of the other modality APIs are time-streaming-native. Prism is
 shaped around streaming input — audio, heart rate, log volume, agent
-state — rendered live. Whether the visualization slot ends up filled
-by us, an OSS competitor, or one of the bigger model providers
-remains to be seen. We think the time-streaming angle is the gap
-worth pursuing.
+state — rendered live. That's the angle.
 
 ---
 
@@ -414,10 +408,8 @@ painterly work belongs in galleries. And
 what makes Milkdrop run in the browser today — Prism is built on top
 of it.
 
-Prism is one attempt at extending all of this into the AI era — a
-runtime, a catalog, a graph language, a small community. **Built on
-the work of giants.** If the project earns a place in this list one
-day, we'll be doing well.
+Prism extends this lineage into the AI era — a runtime, a catalog,
+a graph language, a small community. Built on the work of giants.
 
 ---
 
