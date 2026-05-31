@@ -1,7 +1,7 @@
 # Prism
 
 <p align="center">
-  <img src="docs/hero.webp" alt="Geiss — Inkblot, a Milkdrop preset rendered live by Prism" width="720" />
+  <img src="docs/hero.webp" alt="Geiss Inkblot, a Milkdrop preset rendered live by Prism" width="720" />
 </p>
 
 **Generative visualization.** Signals in. Light fields out.
@@ -10,17 +10,19 @@ Prism turns real-time signals into live visuals. Audio is one
 signal. So are heartbeat, breath, pose, cursor, MIDI, and AI agent
 state. Anything that streams can drive a visual.
 
-Today, Prism composites existing visualization code —
+Today, Prism composites existing visualization code. It runs
 [Milkdrop](https://www.geisswerks.com/about_milkdrop.html) presets
-through [butterchurn](https://github.com/jberg/butterchurn),
+through [butterchurn](https://github.com/jberg/butterchurn). It runs
 [Shadertoy](https://www.shadertoy.com/) fragment shaders through a
-custom WebGL2 runtime — and uses an LLM to route prompts to the
-right one. In development: AI-generated shaders parameterized by the
-same signal nodes.
+custom WebGL2 runtime. An LLM routes prompts to the right one.
+AI-generated shaders are in development.
 
-- **Live demo**: [prism.scott.ai](https://prism.scott.ai)
-- **CodeSandbox**: [two-line embed playground](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
-- **npm**: [`@tensordoc/prism`](https://www.npmjs.com/package/@tensordoc/prism)
+Live demo at [prism.scott.ai](https://prism.scott.ai).
+
+Play with the two-line embed in
+[CodeSandbox](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox).
+
+Install from npm as [`@tensordoc/prism`](https://www.npmjs.com/package/@tensordoc/prism).
 
 ---
 
@@ -41,10 +43,10 @@ npm install @tensordoc/prism
 That's the entire pitch. Drop a div, instantiate the player. The
 visualization runs against a built-in synthetic signal until you
 connect real audio. Works in vanilla HTML, React, Vue, Svelte,
-Next.js, Astro — see the [package README](packages/prism/README.md)
+Next.js, and Astro. See the [package README](packages/prism/README.md)
 for framework-specific patterns.
 
-**Common variants:**
+Common variants.
 
 ```js
 // React
@@ -55,7 +57,7 @@ useEffect(() => {
 }, []);
 return <div ref={ref} />;
 
-// With a specific catalog visualization (6-char share token)
+// With a specific catalog visualization
 new PrismPlayer({ container: "viz", graph: "PTzsKc" });
 
 // With your microphone driving it
@@ -69,9 +71,9 @@ Full API in [`packages/prism/README.md`](packages/prism/README.md).
 
 ## 🤖 Use the visualizer from an AI agent
 
-A Claude Code skill ships with the repo that lets any agent (Claude
-Code, Claude API, OpenAI function calling) generate visualizations or
-embed them into a user's project.
+A Claude Code skill ships with the repo. It lets any agent generate
+visualizations or embed them into a user's project. The skill works
+from Claude Code, the Claude API, and OpenAI function calling.
 
 ```bash
 mkdir -p ~/.claude/skills/prism-visualizer
@@ -79,23 +81,24 @@ curl -o ~/.claude/skills/prism-visualizer/SKILL.md \
   https://raw.githubusercontent.com/Tensor-Doc/prism/main/skills/prism-visualizer/SKILL.md
 ```
 
-Restart Claude Code. Now you can ask:
+Restart Claude Code. Now you can ask things like.
 
-- *"Make me a calming cosmic visualizer"* → returns a
-  `prism.scott.ai/?g=<id>` URL
-- *"Add a music visualizer to this React app"* → installs the
-  package, writes the component, wires up the lifecycle
+- *"Make me a calming cosmic visualizer"* returns a
+  `prism.scott.ai/?g=<id>` URL.
+- *"Add a music visualizer to this React app"* installs the
+  package, writes the component, and wires up the lifecycle.
 
-The skill handles two flows — generate a visualization (calls
-`/api/generate`, returns a share URL) and embed in a project
-(detects framework from `package.json`, runs the right install
-command, scaffolds the right component). Full spec at
+The skill handles two flows. The first generates a visualization. It
+calls `/api/generate` and returns a share URL. The second embeds
+prism in a project. It detects the framework from `package.json`,
+runs the right install command, and scaffolds the right component.
+Full spec at
 [`skills/prism-visualizer/SKILL.md`](skills/prism-visualizer/SKILL.md).
 
 ### From the raw API
 
-If you're building a custom agent integration (OpenAI function call,
-n8n workflow, your own tool), the endpoint is:
+For custom agent integrations like an OpenAI function call, an n8n
+workflow, or your own tool, the endpoint is straightforward.
 
 ```bash
 curl -X POST https://prism.scott.ai/api/generate \
@@ -103,7 +106,7 @@ curl -X POST https://prism.scott.ai/api/generate \
   -d '{ "prompt": "calming cosmic nebula" }'
 ```
 
-Response:
+Response.
 
 ```json
 {
@@ -113,7 +116,7 @@ Response:
 ```
 
 Build the share URL as `https://prism.scott.ai/?g=<short_id>` and
-hand it to the user, or pass the graph object directly to
+hand it to the user. Or pass the graph object directly to
 `new PrismPlayer({ graph })`.
 
 ---
@@ -129,8 +132,8 @@ hand it to the user, or pass the graph object directly to
 | **Visualization** | **Prism** |
 
 None of the other modality APIs are time-streaming-native. Prism is
-shaped around streaming input — audio, heart rate, log volume, agent
-state — rendered live. That's the angle.
+shaped around streaming input. Audio, heart rate, log volume, agent
+state, all rendered live. That's the angle.
 
 ---
 
@@ -141,7 +144,7 @@ says how signals turn into frames, then how those frames reach the
 screen. You give the API a prompt. Gemini writes the graph. The
 browser runs it.
 
-Here's a typical graph today:
+Here's a typical graph today.
 
 ```jsonc
 {
@@ -164,7 +167,7 @@ Here's a typical graph today:
 }
 ```
 
-Five node roles:
+Five node roles.
 
 | Role | What it does | Examples |
 |---|---|---|
@@ -174,7 +177,7 @@ Five node roles:
 | `op.*` | Changes frames | `op.blend`, `op.displace`, `op.feedback` |
 | `sink.*` | Sends frames somewhere | `sink.display`, `sink.recorder` |
 
-Today's graphs use three nodes: a signal, a generator, a sink. Future
+Today's graphs use three nodes. A signal. A generator. A sink. Future
 graphs will layer many generators. New node types plug in without
 rewrites.
 
@@ -182,11 +185,11 @@ rewrites.
 
 TouchDesigner, Notch, Cables.gl, vvvv, and ComfyUI all use node
 graphs. Each one uses its own format. Prism proposes an open JSON
-notation so visualizers are:
+notation so visualizers are easy on three fronts.
 
-- **agent-friendly** — an AI can read and write a graph
-- **shareable** — a graph is about 1 KB, a URL hash carries the whole thing
-- **editable** — by prompt today, by node editor tomorrow, by hand whenever
+- **agent-friendly**. An AI can read and write a graph.
+- **shareable**. A graph is about 1 KB. A URL hash carries the whole thing.
+- **editable**. By prompt today. By node editor tomorrow. By hand whenever.
 
 ---
 
@@ -198,10 +201,10 @@ src/gallery/        the catalog browser at /gallery.html
 scripts/prism/      the `pnpm prism` CLI for ingest, annotate, build-index
 scripts/pipelines/  Puppeteer harnesses, Gemini annotator, R2 uploader
 api/                Vercel functions for generate, image-proxy, unsplash
-lib/                shared serverless helpers (R2, cache policy)
+lib/                shared serverless helpers, R2 and cache policy
 packages/prism/     the @tensordoc/prism npm package source
 skills/prism-visualizer/   Claude skill spec
-catalog/entries/    one JSON file per entry — the source of truth
+catalog/entries/    one JSON file per entry. The source of truth.
 catalog/index.json  built artifact, consumed by the gallery and API
 public/presets/     hand-seeded shaders in Shadertoy-flavor GLSL
 examples/embed.html proves the two-line pitch
@@ -237,22 +240,22 @@ pnpm prism build-index                            # rebuild catalog/index.json
 git add catalog/ && git commit -m "Add N presets" && pr it
 ```
 
-Each entry takes about 15 seconds to capture, ~3 seconds to annotate.
-You can add 50–100 entries in a Saturday afternoon.
+Each entry takes about 15 seconds to capture, then about 3 seconds
+to annotate. You can add 50 to 100 entries in a Saturday afternoon.
 
 **GPU note.** The capture pipeline runs headless Chrome on your real
-GPU through ANGLE. On macOS that means Metal, on Linux GL, on
-Windows D3D11. Heavy presets (Geiss "Cauldron", reaction-diffusion,
-etc.) need a real GPU to compile within the timeout. A pure-CPU
-fallback exists but every Geiss-* preset times out under it.
+GPU through ANGLE. On macOS that means Metal. On Linux it's GL. On
+Windows it's D3D11. Heavy presets like Geiss Cauldron and reaction
+diffusion need a real GPU to compile within the timeout. A pure-CPU
+fallback exists, but every Geiss preset times out under it.
 
 ### 2. Add a new visualization source
 
 Today Prism runs two sources. **Milkdrop** through butterchurn.
-**Shadertoy** through a custom WebGL2 runtime. Next on the list:
-ISF, hand-written WGSL.
+**Shadertoy** through a custom WebGL2 runtime. Next on the list are
+ISF and hand-written WGSL.
 
-Each new source needs two files:
+Each new source needs two files.
 
 ```
 packages/prism/src/backends/<source>.ts             # the live runtime
@@ -266,7 +269,7 @@ and the prompt loop work without changes.
 
 Signals make visualizations react. The app already supports cursor,
 audio from a shared tab, microphone, heart rate from Pulsoid, and a
-synthetic pink-noise driver. Camera, pose, MIDI, breath, OSC, EEG —
+synthetic pink-noise driver. Camera, pose, MIDI, breath, OSC, EEG,
 all welcome. A signal is a small module that streams numbers,
 vectors, or textures.
 
@@ -283,73 +286,73 @@ pnpm dev
 # gallery:     http://localhost:5173/gallery.html
 ```
 
-For full functionality (Unsplash, R2-backed catalog, Gemini routing),
-copy `.env.example` to `.env` and fill in the keys. The site falls
-back gracefully if any are missing.
+For full functionality including Unsplash, the R2-backed catalog,
+and Gemini routing, copy `.env.example` to `.env` and fill in the
+keys. The site falls back gracefully if any are missing.
 
 ---
 
 ## Environment variables
 
-For deploying or running this whole repo (not for using the
-`@tensordoc/prism` npm package — that needs nothing). Copy
-`.env.example` to your project root and fill in.
+For deploying or running this whole repo. The `@tensordoc/prism` npm
+package itself needs nothing. Copy `.env.example` to your project
+root and fill in.
 
 ### Required for the website
 
 | Var | What for | Where to get |
 |---|---|---|
-| `GEMINI_API_KEY` | `/api/generate` — prompt → graph routing | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
-| `VITE_GEMINI_API_KEY` | Same key, also exposed to the client for studio dev mode | same as above |
-| `VITE_NASA_API_KEY` | NASA image library calls (image-proxy) | [api.nasa.gov](https://api.nasa.gov) |
+| `GEMINI_API_KEY` | Prompt to graph routing | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| `VITE_GEMINI_API_KEY` | Same key, exposed to the client for studio dev mode | Same as above |
+| `VITE_NASA_API_KEY` | NASA image library calls | [api.nasa.gov](https://api.nasa.gov) |
 
 ### Required for Unsplash as an image source
 
 | Var | What for |
 |---|---|
 | `UNSPLASH_ACCESS_KEY` | Server-side search API key |
-| `UNSPLASH_APPLICATION_ID` | App ID (kept for completeness; not currently used) |
-| `UNSPLASH_SECRET_KEY` | App secret (only used if we expand to write-style endpoints) |
+| `UNSPLASH_APPLICATION_ID` | App ID. Kept for completeness, not currently used |
+| `UNSPLASH_SECRET_KEY` | App secret. Used if we expand to write-style endpoints |
 
 **Don't have an Unsplash app yet?** Register at
-[unsplash.com/developers](https://unsplash.com/developers) — free,
-no card required. Create a new application; the Access Key,
-Application ID, and Secret all show up on the app's settings page.
-Demo apps get **50 search requests/hour**, plenty for development.
-Production-tier (5000/hr) requires a short review.
+[unsplash.com/developers](https://unsplash.com/developers). Free, no
+card required. Create a new application. The Access Key, Application
+ID, and Secret all show up on the app's settings page. Demo apps get
+**50 search requests per hour**, plenty for development. The
+production tier of 5000 per hour requires a short review.
 
 ### Required for the R2 image-feed cache
 
-The R2 cache is a small (capped at 50) metadata store that survives
-Unsplash rate-limit windows during dev. All four vars must be set for
-the cache to activate; if any are missing, the search endpoint falls
-back to live-only.
+The R2 cache is a small bounded metadata store. It survives Unsplash
+rate-limit windows during dev. The cap is 50 entries. All four vars
+must be set for the cache to activate. If any are missing, the
+search endpoint falls back to live-only.
 
 **Don't have R2 yet?** Sign up at
-[cloudflare.com/products/r2](https://www.cloudflare.com/products/r2/)
-— the free tier covers 10 GB storage, 1 million Class A operations
-per month, and ~zero egress. After enabling R2 in the dashboard,
-create an API token under
+[cloudflare.com/products/r2](https://www.cloudflare.com/products/r2/).
+The free tier covers 10 GB of storage, 1 million Class A operations
+per month, and almost zero egress. After enabling R2 in the
+dashboard, create an API token under
 [**R2 → Manage R2 API Tokens**](https://dash.cloudflare.com/?to=/:account/r2/api-tokens)
-to get the Access Key ID + Secret. The account ID is visible in the
-top-right of any Cloudflare dashboard page.
+to get the Access Key ID and Secret. The account ID is visible in
+the top-right of any Cloudflare dashboard page.
 
 | Var | What for |
 |---|---|
 | `R2_ACCOUNT_ID` | Cloudflare R2 account ID |
 | `R2_ACCESS_KEY_ID` | R2 access key |
 | `R2_SECRET_ACCESS_KEY` | R2 secret key |
-| `R2_BUCKET` | Bucket name (e.g. `prism`) |
-| `R2_PUBLIC_BASE` *(optional)* | Public URL prefix (e.g. `https://images.prism.scott.ai`); required if you want the R2 fallback URLs to be reachable from the browser |
-| `R2_KEY_PREFIX` *(optional)* | Namespace inside the bucket |
+| `R2_BUCKET` | Bucket name, like `prism` |
+| `R2_PUBLIC_BASE` *optional* | Public URL prefix. Required if you want the R2 fallback URLs to be reachable from the browser |
+| `R2_KEY_PREFIX` *optional* | Namespace inside the bucket |
 
 ### Optional toggles
 
 | Var | Default | What for |
 |---|---|---|
 | `UNSPLASH_R2_ENABLED` | `true` if R2 is configured | Set to `false` to disable the cache once on a paid Unsplash tier |
-| `UNSPLASH_R2_CAP` | `50` | Max cached entries — do not raise without legal sign-off |
-| `UNSPLASH_TRACK_ENABLED` | `false` | When `true`, fires Unsplash's download-trigger ping (required for prod TOS compliance) |
+| `UNSPLASH_R2_CAP` | `50` | Max cached entries. Do not raise without legal sign-off |
+| `UNSPLASH_TRACK_ENABLED` | `false` | When `true`, fires Unsplash's download-trigger ping. Required for prod TOS compliance |
 | `CRON_SECRET` | unset | If set, the daily revalidate cron requires `Authorization: Bearer <CRON_SECRET>` |
 
 ### Never commit your `.env`
@@ -357,7 +360,7 @@ top-right of any Cloudflare dashboard page.
 The repo's `.gitignore` blocks `.env`, `.env.local`, and `.vercel/`.
 A scan of the full git history confirms no key has ever been
 committed. If you accidentally commit one anyway, rotate it
-immediately at the source — git history is forever, even after
+immediately at the source. Git history is forever, even after
 deletion.
 
 ---
@@ -373,8 +376,8 @@ deletion.
   R2 is S3-compatible.
 - **Pipeline** uses Puppeteer with headless Chrome and ANGLE.
   MediaRecorder writes VP9 at 1280×720.
-- **Deploy** is Vercel for static + edge/node functions. The build
-  stamps the git SHA into the page; hover the version tag for the
+- **Deploy** is Vercel for static and edge functions. The build
+  stamps the git SHA into the page. Hover the version tag for the
   build time.
 - **License** is MIT.
 
@@ -382,12 +385,12 @@ deletion.
 
 ## Docs
 
-- **[Package README](packages/prism/README.md)** — full
-  `@tensordoc/prism` API surface
-- **[Agent skill](skills/prism-visualizer/SKILL.md)** — Claude /
-  OpenAI tool integration
-- **[BRAND.md](BRAND.md)** — design system and "creative cockpit"
-  aesthetic
+- **[Package README](packages/prism/README.md)** covers the full
+  `@tensordoc/prism` API surface.
+- **[Agent skill](skills/prism-visualizer/SKILL.md)** is the Claude
+  and OpenAI tool integration.
+- **[BRAND.md](BRAND.md)** is the design system and creative cockpit
+  aesthetic.
 
 ---
 
@@ -395,21 +398,21 @@ deletion.
 
 [Ryan Geiss](https://www.geisswerks.com/) made
 [Milkdrop](https://www.geisswerks.com/about_milkdrop.html) in 2001.
-It proved audio-reactive visuals could become culture — 25 years
+It proved audio-reactive visuals could become culture. 25 years
 later, Milkdrop presets are still being written and shared.
 [Iñigo Quílez](https://iquilezles.org/) launched
-[Shadertoy](https://www.shadertoy.com/) in 2013, showing that shader
-sharing could become a community. [VIDVOX](https://www.vidvox.net/)
-made [ISF](https://isf.video/) — declared inputs turn shaders into
-instruments. [TouchDesigner](https://derivative.ca/) and the broader
-generative-art world (Cables.gl, vvvv, Notch) proved data-driven
-painterly work belongs in galleries. And
-[butterchurn](https://github.com/jberg/butterchurn) by Jordan Berg is
-what makes Milkdrop run in the browser today — Prism is built on top
-of it.
+[Shadertoy](https://www.shadertoy.com/) in 2013. It showed that
+shader sharing could become a community. [VIDVOX](https://www.vidvox.net/)
+made [ISF](https://isf.video/). It proved that declared inputs turn
+shaders into instruments. [TouchDesigner](https://derivative.ca/)
+and the broader generative-art world like Cables.gl, vvvv, and Notch
+proved that data-driven painterly work belongs in galleries. And
+[butterchurn](https://github.com/jberg/butterchurn) by Jordan Berg
+makes Milkdrop run in the browser today. Prism is built on top of
+it.
 
-Prism extends this lineage into the AI era — a runtime, a catalog,
-a graph language, a small community. Built on the work of giants.
+Prism extends this lineage into the AI era. A runtime. A catalog. A
+graph language. A small community. Built on the work of giants.
 
 ---
 
