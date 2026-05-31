@@ -1,6 +1,6 @@
 {
-  "name": "@tensordoc/prism",
-  "version": "0.1.0",
+  "name": "@Tensor-Doc/prism",
+  "version": "0.1.1",
   "description": "Two-line embed for audio-reactive visualizations. Milkdrop + Shadertoy in a single PrismPlayer class.",
   "license": "MIT",
   "type": "module",
@@ -32,10 +32,10 @@
   "homepage": "https://prism.scott.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tensordoc/prism.git",
+    "url": "https://github.com/Tensor-Doc/prism.git",
     "directory": "packages/prism"
   },
-  "bugs": "https://github.com/tensordoc/prism/issues",
+  "bugs": "https://github.com/Tensor-Doc/prism/issues",
   "author": "Scott Penberthy (https://scott.ai)",
   "dependencies": {
     "butterchurn": "^2.6.7",
