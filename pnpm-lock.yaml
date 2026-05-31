@@ -15,8 +15,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0
       '@tensordoc/prism':
-        specifier: workspace:*
-        version: link:packages/prism
+        specifier: ^0.1.1
+        version: 0.1.1
       butterchurn:
         specifier: ^2.6.7
         version: 2.6.7
@@ -806,6 +806,9 @@ packages:
   '@smithy/util-utf8@2.3.0':
     resolution: {integrity: sha512-R8Rdn8Hy72KKcebgLiv8jQcQkXoLMOGGv5uI1/k0l+snqkOzQ1R0ChUBCxWMlBsFMekWjq0wRudIweFs7sKT5A==}
     engines: {node: '>=14.0.0'}
+
+  '@tensordoc/prism@0.1.1':
+    resolution: {integrity: sha512-xTJ/ineT2KyVy3Q6lr3MlD8I8bKjPB6LEUNHualdwzCvOyHiVCSooSH9eTlgPIL6zgZJDHshViTeghbHZ+LEjg==}
 
   '@types/argparse@1.0.38':
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}
@@ -2186,6 +2189,12 @@ snapshots:
     dependencies:
       '@smithy/util-buffer-from': 2.2.0
       tslib: 2.8.1
+
+  '@tensordoc/prism@0.1.1':
+    dependencies:
+      butterchurn: 2.6.7
+      butterchurn-presets: 2.4.7
+      milkdrop-preset-converter: 0.1.2
 
   '@types/argparse@1.0.38': {}
 
