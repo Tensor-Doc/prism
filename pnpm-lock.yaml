@@ -23,6 +23,9 @@ importers:
       milkdrop-preset-converter:
         specifier: ^0.1.2
         version: 0.1.2
+      prism-player:
+        specifier: workspace:*
+        version: link:packages/prism-player
     devDependencies:
       '@webgpu/types':
         specifier: ^0.1.70

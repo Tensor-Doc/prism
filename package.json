@@ -23,6 +23,7 @@
     "@google/genai": "^2.7.0",
     "butterchurn": "^2.6.7",
     "butterchurn-presets": "^2.4.7",
-    "milkdrop-preset-converter": "^0.1.2"
+    "milkdrop-preset-converter": "^0.1.2",
+    "prism-player": "workspace:*"
   }
 }

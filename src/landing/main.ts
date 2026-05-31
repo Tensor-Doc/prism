@@ -9,8 +9,9 @@ import { Spectrum } from "./spectrum";
 import { AudioCapture, type AudioFeatures } from "./audio";
 import { createMilkdropBackground } from "./milkdrop-bg";
 import { createShadertoyBackground } from "./shadertoy-bg";
+import type { PrismGraph } from "prism-player";
+
 import { GraphRuntime } from "./graph/runtime";
-import type { PrismGraph } from "./graph/types";
 import { GraphFlow } from "./graph-flow";
 import { AmbientSignals } from "./ambient-signals";
 import { ChromeIdle } from "./chrome-idle";

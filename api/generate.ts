@@ -17,8 +17,9 @@ import catalogJson from "../catalog/catalog.json";
 
 // NOTE: Vercel's edge-function bundler is finicky about cross-folder TS
 // imports. We duplicate the SCHEMA_VERSION constant + a minimal PrismGraph
-// type here rather than importing from ../src/landing/graph/types. The
-// canonical schema definition lives in that file; keep them in sync.
+// type here rather than importing from the prism-player workspace package.
+// The canonical schema definition lives in packages/prism-player/src/types.ts;
+// keep them in sync.
 const SCHEMA_VERSION = "prism.graph/0.1" as const;
 
 type NodeType = "signal.audio" | "lf.milkdrop" | "lf.shadertoy" | "sink.display" | string;
