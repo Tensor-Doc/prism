@@ -2,22 +2,17 @@
 // Orchestrates the background field, telemetry, VU bars, audio capture,
 // and prompt-input keyboard handling. Touches no studio code on this pass.
 
+import { PrismPlayer, type PrismGraph } from "prism-player";
+
 import { CursorField } from "./cursor-field";
 import { Telemetry } from "./telemetry";
 import { Vu } from "./vu";
 import { Spectrum } from "./spectrum";
 import { AudioCapture, type AudioFeatures } from "./audio";
-import {
-  createMilkdropBackground,
-  createShadertoyBackground,
-  GraphRuntime,
-  type PrismGraph,
-} from "prism-player";
 import { GraphFlow } from "./graph-flow";
 import { AmbientSignals } from "./ambient-signals";
 import { ChromeIdle } from "./chrome-idle";
 import { TestSignalRecorder } from "./test-signal";
-import { SyntheticSignal } from "./synthetic-signal";
 import { PulsoidStream } from "./pulsoid";
 import { InputPulses } from "./input-pulses";
 import { ImageSlots } from "./image-sources/slots";
@@ -165,7 +160,6 @@ function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
       const graph = rotEntryToGraph(entry);
       const result = runtime.apply(graph, ROTATE_BLEND_S);
       if (result.ok) {
-        activeBackend = result.backend ?? activeBackend;
         graphFlow.render(graph);
         refreshShaderFeed();
         updateSkillDisplay(entry.name);
@@ -174,9 +168,8 @@ function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
       // Catalog hasn't loaded yet — fall back to bundle random so the
       // button isn't dead on first ticks. Same milkdrop-only safeguard
       // as before: drop back to milkdrop so the swap is visible.
-      if (activeBackend === "shadertoy") {
-        setActiveBackend("milkdrop");
-        activeBackend = "milkdrop";
+      if (player.activeBackend === "shadertoy") {
+        player.setActiveBackend("milkdrop");
         graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
         refreshShaderFeed();
       }
@@ -207,22 +200,7 @@ function stopRotation(): void {
   }
 }
 
-// ── shared audio context ───────────────────────────────────
-// Created eagerly so butterchurn can be initialised; resumed on first gesture.
-// A SyntheticSignal generates a pink-ish "ambient music" spectrum that drives
-// the milkdrop preset before any real audio is shared — so the visualisation
-// is alive on load rather than flatlining.
-const audioCtx = new AudioContext();
-const synth = new SyntheticSignal(audioCtx);
-
-const resumeAudio = (): void => {
-  if (audioCtx.state === "suspended") void audioCtx.resume();
-};
-window.addEventListener("pointerdown", resumeAudio, { once: true });
-window.addEventListener("keydown", resumeAudio, { once: true });
-window.addEventListener("pointermove", resumeAudio, { once: true });
-
-// ── background: milkdrop (random preset) + cursor overlay ──
+// ── background visualization (managed by PrismPlayer) ─────
 // The skill readout shows "compiling…" until the first frame paints.
 const skillElEarly = document.getElementById("skill");
 if (skillElEarly) {
@@ -250,44 +228,24 @@ const COLD_OPEN_PRESET = COLD_OPEN_POOL[
   Math.floor(Date.now() / 1000) % COLD_OPEN_POOL.length
 ];
 
-const milkdrop = createMilkdropBackground(
-  audioCtx,
-  $<HTMLCanvasElement>("#milkdrop"),
-  synth.getOutput(),
-  () => {
-    // First milkdrop frame painted — clear the loading state.
+const player = new PrismPlayer({
+  container: $("#prism-stage"),
+  initialPresetName: COLD_OPEN_PRESET,
+  onReady: () => {
     skillElEarly?.classList.remove("is-loading");
-    updateSkillDisplay(milkdrop.presetName);
+    updateSkillDisplay(player.milkdrop.presetName);
   },
-  { initialPresetName: COLD_OPEN_PRESET },
-);
-const shadertoy = createShadertoyBackground(
-  audioCtx,
-  $<HTMLCanvasElement>("#shadertoy"),
-  synth.getOutput(),
-);
+});
+const { audioCtx, synth, milkdrop, runtime } = player;
+
+const resumeAudio = (): void => {
+  if (audioCtx.state === "suspended") void audioCtx.resume();
+};
+window.addEventListener("pointerdown", resumeAudio, { once: true });
+window.addEventListener("keydown", resumeAudio, { once: true });
+window.addEventListener("pointermove", resumeAudio, { once: true });
+
 const field = new CursorField($<HTMLCanvasElement>("#field"));
-
-// Track which background canvas is active. Initially milkdrop is showing.
-const milkdropCanvas = $<HTMLCanvasElement>("#milkdrop");
-const shadertoyCanvas = $<HTMLCanvasElement>("#shadertoy");
-function setActiveBackend(which: "milkdrop" | "shadertoy"): void {
-  if (which === "milkdrop") {
-    milkdropCanvas.classList.remove("bg-canvas--hidden");
-    milkdropCanvas.classList.add("bg-canvas--active");
-    shadertoyCanvas.classList.add("bg-canvas--hidden");
-    shadertoyCanvas.classList.remove("bg-canvas--active");
-  } else {
-    shadertoyCanvas.classList.remove("bg-canvas--hidden");
-    shadertoyCanvas.classList.add("bg-canvas--active");
-    milkdropCanvas.classList.add("bg-canvas--hidden");
-    milkdropCanvas.classList.remove("bg-canvas--active");
-  }
-}
-// Assert initial state — milkdrop is the cold-open backend.
-setActiveBackend("milkdrop");
-
-const runtime = new GraphRuntime({ milkdrop, shadertoy, setActiveBackend });
 
 // graph-flow viz — the live prism.graph chain inside the STATE panel.
 // Renders a synthetic cold-open chain immediately so the chain is on
@@ -536,12 +494,11 @@ function hideSlideshowCard(): void { slideshowCard.setAttribute("data-hidden", "
 const audio = new AudioCapture(audioCtx);
 let liveAudioSource: { ctx: AudioContext; node: AudioNode } | null = null;
 audio.onSource = (source, ctx) => {
-  // Real audio is here — stop the synthetic driver and route the real source
-  // into BOTH backends so whichever one is active sees real reactivity.
+  // Real audio is here — stop the synthetic driver and route the real
+  // source into the player (which routes it to both backends).
   synthDrivesCursor = false;
   synth.stop();
-  milkdrop.connectAudio(source);
-  shadertoy.connectAudio(source);
+  void player.connectAudio(source);
   // Light up the graph-flow edges so visitors see signal traveling
   // through the chain in real time once audio is feeding the LF node.
   graphFlow.setLive(true);
@@ -593,13 +550,6 @@ const SOURCE_LABELS: Record<Exclude<GallerySourceId, null>, string> = {
   "nasa-deep-space": "nasa · deep space",
 };
 
-// Active backend tracker — drives the auto-binding of the gallery
-// image feed into the shader's iChannel1. No pill, no extra click:
-// if a shader is playing AND a gallery source is connected, the feed
-// is live. Drop the gallery or switch backends to milkdrop and it
-// unbinds. (Canva, not Photoshop.)
-let activeBackend: "milkdrop" | "shadertoy" = "milkdrop";
-
 // Dedicated 1280×720 2D canvas that mirrors the slideshow card's
 // rendered output (transitions and all) into a shader-friendly buffer.
 // Per-frame blit happens in pumpShaderFeed below. The shader binds to
@@ -613,8 +563,8 @@ shaderFeedCanvas.height = 720;
 const shaderFeedCtx = shaderFeedCanvas.getContext("2d");
 
 function refreshShaderFeed(): void {
-  const shouldFeed = activeBackend === "shadertoy" && currentGallerySource !== null;
-  shadertoy.setLiveSource(shouldFeed ? shaderFeedCanvas : null);
+  const shouldFeed = player.activeBackend === "shadertoy" && currentGallerySource !== null;
+  player.setLiveSource(shouldFeed ? shaderFeedCanvas : null);
 }
 
 // Every frame, copy the slideshow's card region into the feed canvas
@@ -624,7 +574,7 @@ function refreshShaderFeed(): void {
 function pumpShaderFeed(): void {
   if (
     shaderFeedCtx &&
-    activeBackend === "shadertoy" &&
+    player.activeBackend === "shadertoy" &&
     currentGallerySource !== null
   ) {
     const cr = slideshow.cardRect;
@@ -927,7 +877,7 @@ async function tryGenerate(): Promise<void> {
     if (!result.ok) {
       throw new Error(result.error ?? "graph runtime failed");
     }
-    activeBackend = result.backend ?? activeBackend;
+    // player.activeBackend was already updated by the runtime via player.setActiveBackend.
     refreshShaderFeed();
     graphFlow.render(data.graph);
     updateSkillDisplay(data.graph.intent, true);
@@ -1199,11 +1149,9 @@ if (savedToken) pulsoid.connect(savedToken);
 // ── teardown on hot-reload (Vite) ───────────────────────────
 if (import.meta.hot) {
   import.meta.hot.dispose(() => {
-    milkdrop.destroy();
+    player.destroy();
     field.destroy();
     audio.stop();
-    synth.stop();
     inputPulses.destroy();
-    void audioCtx.close();
   });
 }
