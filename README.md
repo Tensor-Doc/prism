@@ -183,8 +183,12 @@ rewrites.
 
 ### Why a JSON notation?
 
-TouchDesigner, Notch, Cables.gl, vvvv, and ComfyUI all use node
-graphs. Each one uses its own format. Prism proposes an open JSON
+[TouchDesigner](https://derivative.ca/),
+[Notch](https://www.notch.one/),
+[Cables.gl](https://cables.gl/),
+[vvvv](https://vvvv.org/),
+and [ComfyUI](https://github.com/comfyanonymous/ComfyUI) all use
+node graphs. Each one uses its own format. Prism proposes an open JSON
 notation so visualizers are easy on three fronts.
 
 - **agent-friendly**. An AI can read and write a graph.
