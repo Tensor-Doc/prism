@@ -3,14 +3,8 @@
 // source so the visual runs without audio; the caller can call connectAudio()
 // later when real audio is shared.
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import butterchurnRaw from "butterchurn";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import butterchurnPresetsRaw from "butterchurn-presets";
-// milkdrop-preset-converter ships as CJS without types; pull the named
-// export we need with a structural cast. convertPreset is async — it
-// returns a Promise<preset object> regardless of input.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import * as milkdropConverterRaw from "milkdrop-preset-converter";
 const milkdropConverter = milkdropConverterRaw as unknown as {
   convertPreset: (text: string) => Promise<unknown>;
