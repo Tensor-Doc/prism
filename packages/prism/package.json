@@ -1,5 +1,5 @@
 {
-  "name": "@Tensor-Doc/prism",
+  "name": "@tensordoc/prism",
   "version": "0.1.1",
   "description": "Two-line embed for audio-reactive visualizations. Milkdrop + Shadertoy in a single PrismPlayer class.",
   "license": "MIT",
