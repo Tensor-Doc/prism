@@ -20,8 +20,8 @@ import {
   isR2Enabled,
   listKeys,
   putJson,
-} from "../../lib/r2";
-import { policy } from "../../lib/unsplash-cache";
+} from "../../lib/r2.js";
+import { policy } from "../../lib/unsplash-cache.js";
 
 export const config = { runtime: "nodejs" };
 

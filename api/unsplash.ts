@@ -30,8 +30,8 @@
 //     only when bytes are present in R2)
 //   - Otherwise: surface the error (502)
 
-import { exists, getJson, isR2Enabled, listKeys, publicUrl, putJson } from "../lib/r2";
-import { hasRoom, policy } from "../lib/unsplash-cache";
+import { exists, getJson, isR2Enabled, listKeys, publicUrl, putJson } from "../lib/r2.js";
+import { hasRoom, policy } from "../lib/unsplash-cache.js";
 
 // Vercel runtime config — Node.js so we can use the @aws-sdk/client-s3
 // helpers in lib/r2.ts.

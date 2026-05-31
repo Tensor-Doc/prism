@@ -22,7 +22,7 @@
 //                         Defaults to 50; do not raise without explicit
 //                         legal sign-off.
 
-import { getJson, isR2Enabled } from "./r2";
+import { getJson, isR2Enabled } from "./r2.js";
 
 const DEFAULT_CAP = 50;
 
