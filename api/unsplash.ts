@@ -35,7 +35,7 @@ import { hasRoom, policy } from "./_lib/unsplash-cache";
 
 // Vercel runtime config — Node.js so we can use the @aws-sdk/client-s3
 // helpers in api/_lib/r2.ts.
-export const config = { runtime: "nodejs20.x" };
+export const config = { runtime: "nodejs" };
 
 const CURATED_QUERIES = [
   "nebula",

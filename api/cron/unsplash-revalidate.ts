@@ -26,7 +26,7 @@ import { policy } from "../_lib/unsplash-cache";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type {} from "../_lib/r2";
 
-export const config = { runtime: "nodejs20.x" };
+export const config = { runtime: "nodejs" };
 
 const INDEX_KEY = "unsplash/index.json";
 const META_PREFIX = "unsplash/meta/";
