@@ -1,0 +1,35 @@
+# What NOT to upload to Vercel for deploy.
+#
+# Most of this overlaps with .gitignore; Vercel falls back to it, but
+# being explicit here keeps the upload size predictable and visible
+# at the deploy layer. Anything matched here is excluded from the
+# `vercel deploy` upload — Vercel's build environment regenerates
+# what it needs.
+
+# ── reproducible build artifacts ────────────────────────────
+node_modules/
+dist/
+.vite/
+tsconfig.tsbuildinfo
+
+# ── local-only operational state ────────────────────────────
+.env
+.env.local
+.vercel/                  # local link config — Vercel doesn't need this in the upload
+
+# ── 1.3 GB of capture-pipeline scratch ──────────────────────
+# Rendered preset videos / thumbs. Already on R2; catalog entries
+# point at the public R2 URLs. Local files here exist purely for
+# the capture workflow.
+public/videos/
+public/thumbs/
+public/audio/test-signal.webm
+
+# ── upstream sources for the catalog ingest ─────────────────
+favorites/
+catalog/.ingest-progress.json
+
+# ── editor + OS noise ───────────────────────────────────────
+.DS_Store
+*.log
+*~
