@@ -1,0 +1,24 @@
+{
+  "name": "prism-player",
+  "version": "0.0.0",
+  "description": "Two-line embed for Prism audio-reactive visualizations.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "butterchurn": "^2.6.7"
+  },
+  "peerDependenciesMeta": {
+    "butterchurn": {
+      "optional": true
+    }
+  }
+}
