@@ -303,6 +303,13 @@ For deploying or running this whole repo (not for using the
 | `UNSPLASH_APPLICATION_ID` | App ID (kept for completeness; not currently used) |
 | `UNSPLASH_SECRET_KEY` | App secret (only used if we expand to write-style endpoints) |
 
+**Don't have an Unsplash app yet?** Register at
+[unsplash.com/developers](https://unsplash.com/developers) — free,
+no card required. Create a new application; the Access Key,
+Application ID, and Secret all show up on the app's settings page.
+Demo apps get **50 search requests/hour**, plenty for development.
+Production-tier (5000/hr) requires a short review.
+
 ### Required for the R2 image-feed cache
 
 The R2 cache is a small (capped at 50) metadata store that survives
