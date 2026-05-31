@@ -1,7 +1,7 @@
-// milkdrop-bg.ts — boot a butterchurn (Milkdrop) visualizer as the landing
-// page background. Picks a random preset on each load. Starts on a silent
+// milkdrop.ts — boot a butterchurn (Milkdrop) visualizer onto a caller-
+// supplied canvas. Picks a random preset on each load. Starts on a silent
 // source so the visual runs without audio; the caller can call connectAudio()
-// later when tab audio is shared.
+// later when real audio is shared.
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import butterchurnRaw from "butterchurn";

@@ -10,10 +10,9 @@
 // presets (favorites + shadertoys) load asynchronously; runtime.apply
 // returns synchronously after kicking off the load and updating state.
 
-import { nodesByRole, type PrismGraph } from "prism-player";
-
-import type { MilkdropBg } from "../milkdrop-bg";
-import type { ShadertoyBg } from "../shadertoy-bg";
+import type { MilkdropBg } from "./backends/milkdrop";
+import type { ShadertoyBg } from "./backends/shadertoy";
+import { nodesByRole, type PrismGraph } from "./types";
 
 export interface RuntimeContext {
   milkdrop: MilkdropBg;

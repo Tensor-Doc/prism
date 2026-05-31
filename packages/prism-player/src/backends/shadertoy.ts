@@ -1,7 +1,7 @@
-// shadertoy-bg.ts — render a Shadertoy-style GLSL fragment shader to a
-// background canvas. Mirrors milkdrop-bg.ts's role: takes audio in,
-// produces a live visual. The two backends are swapped by GraphRuntime
-// based on whether the graph has a lf.milkdrop or lf.shadertoy node.
+// shadertoy.ts — render a Shadertoy-style GLSL fragment shader to a
+// caller-supplied canvas. Mirrors backends/milkdrop.ts's role: takes audio
+// in, produces a live visual. GraphRuntime swaps between the two based on
+// whether the graph has a lf.milkdrop or lf.shadertoy node.
 //
 // Shadertoy convention: the user shader defines
 //   void mainImage(out vec4 fragColor, in vec2 fragCoord)

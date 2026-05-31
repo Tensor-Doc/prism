@@ -7,11 +7,12 @@ import { Telemetry } from "./telemetry";
 import { Vu } from "./vu";
 import { Spectrum } from "./spectrum";
 import { AudioCapture, type AudioFeatures } from "./audio";
-import { createMilkdropBackground } from "./milkdrop-bg";
-import { createShadertoyBackground } from "./shadertoy-bg";
-import type { PrismGraph } from "prism-player";
-
-import { GraphRuntime } from "./graph/runtime";
+import {
+  createMilkdropBackground,
+  createShadertoyBackground,
+  GraphRuntime,
+  type PrismGraph,
+} from "prism-player";
 import { GraphFlow } from "./graph-flow";
 import { AmbientSignals } from "./ambient-signals";
 import { ChromeIdle } from "./chrome-idle";
