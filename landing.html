@@ -17,15 +17,10 @@
     <div id="prism-stage" aria-hidden="true"></div>
     <canvas id="field" aria-hidden="true"></canvas>
     <canvas id="slideshow" aria-hidden="true"></canvas>
-    <div class="slideshow-card" id="slideshow-card" data-hidden>
-      <button class="slideshow-card__collapse" type="button" id="slideshow-card-collapse" title="Collapse to thumbnail" aria-label="Collapse">
-        <span aria-hidden="true">−</span>
-      </button>
-      <span class="slideshow-card__handle slideshow-card__handle--tl" data-handle="tl" aria-hidden="true"></span>
-      <span class="slideshow-card__handle slideshow-card__handle--tr" data-handle="tr" aria-hidden="true"></span>
-      <span class="slideshow-card__handle slideshow-card__handle--bl" data-handle="bl" aria-hidden="true"></span>
-      <span class="slideshow-card__handle slideshow-card__handle--br" data-handle="br" aria-hidden="true"></span>
-    </div>
+    <!-- #slideshow-card is created dynamically by ImageOverlay
+         (prism-player) using the same .slideshow-card class so the
+         existing CSS still styles it. -->
+
     <div class="vignette" aria-hidden="true"></div>
     <div class="scan" aria-hidden="true"></div>
     <div class="slideshow-progress" id="slideshow-progress" aria-hidden="true"></div>

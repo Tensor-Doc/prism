@@ -103,6 +103,10 @@ export interface Compatibility {
 
 export interface CatalogEntry {
   id: string;
+  /** YouTube-style 6-char base62 share token. Minted once at first
+   *  build-index run; immutable after that so external links never
+   *  rot when an entry's slug or display name is edited. */
+  short_id?: string;
   schema_version: typeof SCHEMA_VERSION;
   source: Source;
   display: Display;

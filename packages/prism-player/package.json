@@ -17,21 +17,10 @@
     "build": "vite build",
     "typecheck": "tsc --noEmit"
   },
-  "peerDependencies": {
+  "dependencies": {
     "butterchurn": "^2.6.7",
     "butterchurn-presets": "^2.4.7",
     "milkdrop-preset-converter": "^0.1.2"
-  },
-  "peerDependenciesMeta": {
-    "butterchurn": {
-      "optional": true
-    },
-    "butterchurn-presets": {
-      "optional": true
-    },
-    "milkdrop-preset-converter": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "typescript": "^5.6.0",

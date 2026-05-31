@@ -581,7 +581,9 @@ body.audio-live .chip__audio-dot {
 .signal[data-active][data-signal="gallery"] .signal__glyph { color: var(--lime); }
 
 .signal--clickable { cursor: pointer; }
-.signal--clickable:hover { opacity: 0.85; }
+/* Lift the whole row (label + glyph + rate) to full contrast on hover
+   so muted "connect" rows become easy to read before they're active. */
+.signal--clickable:hover { opacity: 1; color: var(--fg); }
 .signal--clickable:hover .signal__rate { color: var(--cyan); }
 .signal--clickable[data-active]:hover .signal__rate { color: var(--orange); }
 .signal--clickable[data-active][data-signal="gallery"]:hover .signal__rate { color: var(--lime); }

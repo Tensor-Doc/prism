@@ -1,0 +1,2022 @@
+{
+  "tf1p4d": {
+    "name": "shifter - spincycle c",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-spincycle-c.milk"
+  },
+  "Wxum6n": {
+    "name": "phat + Eo.S. - TesellatingFractal_Mix3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-tesellatingfractal-mix3.milk"
+  },
+  "dLgCse": {
+    "name": "phat + Eo.S. - TesellatingFractal_Mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-tesellatingfractal-mix.milk"
+  },
+  "MVi179": {
+    "name": "phat + Eo.S. - 2ct2V5",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-2ct2v5.milk"
+  },
+  "GhBm5e": {
+    "name": "nil - Vortex of Vortices",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/nil-vortex-of-vortices.milk"
+  },
+  "npT2uv": {
+    "name": "mstress - Scattered gravity (Smoked mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mstress-scattered-gravity-smoked-mix.milk"
+  },
+  "kOzc0s": {
+    "name": "mstress - Cleaning a path - Painterly Crossfire",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mstress-cleaning-a-path-painterly-crossfire.milk"
+  },
+  "I9ooYK": {
+    "name": "fiShbRaiN - the adventures of prismo jenkins",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-the-adventures-of-prismo-jenkins.milk"
+  },
+  "RDy6sq": {
+    "name": "amandio c - new life",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/amandio-c-new-life.milk"
+  },
+  "Kf91oH": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix) 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix-3.milk"
+  },
+  "uNXJWh": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix) 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix-2.milk"
+  },
+  "96nqCN": {
+    "name": "Mig_061",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-061.milk"
+  },
+  "uioEhi": {
+    "name": "Unchained - elite vectronics",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-elite-vectronics.milk"
+  },
+  "qaHSMU": {
+    "name": "Telek - Slow Thing (Spiderman Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/telek-slow-thing-spiderman-mix.milk"
+  },
+  "5vMLPd": {
+    "name": "Telek - Sine Wave",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/telek-sine-wave.milk"
+  },
+  "9up6f0": {
+    "name": "Rovastar - Tripmaker",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-tripmaker.milk"
+  },
+  "Az8g8u": {
+    "name": "Rovastar + Zylot - Narell's Fever",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-zylot-narell-s-fever.milk"
+  },
+  "KeuU8h": {
+    "name": "Rovastar + Unchained - Ambrosia Mystic (Dark Heart Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-unchained-ambrosia-mystic-dark-heart-mix-2.milk"
+  },
+  "tCVMll": {
+    "name": "Rovastar + Telek - Altars of Madness (Rolling Oceans Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-telek-altars-of-madness-rolling-oceans-mix.milk"
+  },
+  "0QA4xS": {
+    "name": "Rovastar + Rocke - Sugar Spun Sister",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-rocke-sugar-spun-sister-2.milk"
+  },
+  "Lrc5R0": {
+    "name": "Rovastar & Unchained - Unified Drag 2 (Ghostly Vision Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-unchained-unified-drag-2-ghostly-vision-mix.milk"
+  },
+  "d8pa1M": {
+    "name": "Rovastar & Rocke - Sugar Spun Sister",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-rocke-sugar-spun-sister.milk"
+  },
+  "UMZdqF": {
+    "name": "Reenen - phoenix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/reenen-phoenix.milk"
+  },
+  "uX6UbW": {
+    "name": "Phat + Eo.S. - Data_swimmer",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-data-swimmer.milk"
+  },
+  "xWFt5r": {
+    "name": "Krash - War Machine (Shifting Complexity Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/krash-war-machine-shifting-complexity-mix.milk"
+  },
+  "0EqR07": {
+    "name": "Krash + Illusion - Spiral Movement",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/krash-illusion-spiral-movement.milk"
+  },
+  "Q8GYVn": {
+    "name": "Illusion & Boz - Hot Air Balloon",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/illusion-boz-hot-air-balloon.milk"
+  },
+  "21EsIq": {
+    "name": "Idiot - When I Get Bored",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/idiot-when-i-get-bored.milk"
+  },
+  "ev6vIF": {
+    "name": "Geiss - Tokamak Plus Painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-tokamak-plus-painterly.milk"
+  },
+  "rsaa2P": {
+    "name": "Geiss - Tokamak Plus 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-tokamak-plus-3.milk"
+  },
+  "RWvefs": {
+    "name": "Geiss - Swirlie 4",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-swirlie-4.milk"
+  },
+  "S6FOvB": {
+    "name": "Geiss - Sound And The Fury",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-sound-and-the-fury.milk"
+  },
+  "tjl532": {
+    "name": "Geiss - Mega Swirl 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mega-swirl-2.milk"
+  },
+  "60PO4U": {
+    "name": "Geiss - Inkblot",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-inkblot.milk"
+  },
+  "SeVaRS": {
+    "name": "Geiss - Cycloid 1 - painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly.milk"
+  },
+  "jDL6Sw": {
+    "name": "Geiss - Cycloid 1 - painterly vortex",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly-vortex.milk"
+  },
+  "Ajw1Df": {
+    "name": "Geiss - Cycloid 1 - painterly vortex 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly-vortex-3.milk"
+  },
+  "GQhtQW": {
+    "name": "Geiss - Cauldron - painterly 3 (saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cauldron-painterly-3-saturation-remix.milk"
+  },
+  "B1T3U8": {
+    "name": "Image Metaball",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/image-metaball.glsl",
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA15985%2FPIA15985~medium.jpg"
+  },
+  "pxJwLi": {
+    "name": "Eo.S. - nematodes E daemon",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-nematodes-e-daemon.milk"
+  },
+  "JPtzJM": {
+    "name": "Eo.S. + Phat - chasers 11 sentinel C_poltergeist_mix response daemon (geiss flicker fix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-chasers-11-sentinel-c-poltergeist-mix-response-daemon-geiss-flicker.milk"
+  },
+  "tWskpA": {
+    "name": "Eo.S. + Phat - chasers 11 sentinel C",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-chasers-11-sentinel-c.milk"
+  },
+  "g5ZlWy": {
+    "name": "Che - Terracarbon Stream",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/che-terracarbon-stream.milk"
+  },
+  "eq9Qbc": {
+    "name": "Aderrasi - The Lurker (Twin Mix) - Bitcore Tweak",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-the-lurker-twin-mix-bitcore-tweak.milk"
+  },
+  "tIMqOl": {
+    "name": "Aderrasi - Ghast (Quarter Past Ghast Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-ghast-quarter-past-ghast-mix.milk"
+  },
+  "JsqzWG": {
+    "name": "Aderrasi - Contortion (Wide Twist Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-contortion-wide-twist-mix.milk"
+  },
+  "eZrZ4U": {
+    "name": "Aderrasi - Airhandler (Last Breath - Eden)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-airhandler-last-breath-eden.milk"
+  },
+  "W8R0Yc": {
+    "name": "Aderrasi - Airhandler (Last Breath - Calm)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-airhandler-last-breath-calm.milk"
+  },
+  "dHmr2t": {
+    "name": "Cosmic Flow",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/cosmic-flow.glsl"
+  },
+  "N6KSf3": {
+    "name": "Image Pool",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/image-pool.glsl",
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA17563%2FPIA17563~medium.jpg"
+  },
+  "LkZ5ho": {
+    "name": "shifter - glassworms flare",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-glassworms-flare.milk"
+  },
+  "TXLytI": {
+    "name": "shifter - escape the worm - Eo.S. + Phat 5362",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-escape-the-worm-eo-s-phat-5362.milk"
+  },
+  "gzetxX": {
+    "name": "shifter + geiss - neon pulse (glow mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-geiss-neon-pulse-glow-mix.milk"
+  },
+  "ALj3eW": {
+    "name": "martin - volcano",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-volcano.milk"
+  },
+  "cldl8y": {
+    "name": "martin - violet flash",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-violet-flash.milk"
+  },
+  "sm0xFa": {
+    "name": "martin - soma in pink (Ati Fix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-soma-in-pink-ati-fix.milk"
+  },
+  "hdJKtV": {
+    "name": "martin - push cx",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-push-cx.milk"
+  },
+  "yES2AZ": {
+    "name": "martin - push ax",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-push-ax.milk"
+  },
+  "Ko6Ekq": {
+    "name": "martin - move this body",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-move-this-body.milk"
+  },
+  "Apnvzf": {
+    "name": "martin - infinity",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-infinity.milk"
+  },
+  "iMXDEP": {
+    "name": "martin - bring up the big guns",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-bring-up-the-big-guns.milk"
+  },
+  "jviFEg": {
+    "name": "martin - another kind of groove",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-another-kind-of-groove.milk"
+  },
+  "aavCbG": {
+    "name": "martin - another kind of groove (Ati Fix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-another-kind-of-groove-ati-fix.milk"
+  },
+  "jPnBOy": {
+    "name": "martin - angel flight",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-angel-flight.milk"
+  },
+  "Rc2xnL": {
+    "name": "martin - Geiss - Psychotic Roulette",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-geiss-psychotic-roulette.milk"
+  },
+  "YCR4TG": {
+    "name": "martin + stahlregen - martin in da mash 12a",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-stahlregen-martin-in-da-mash-12a.milk"
+  },
+  "SKyUN4": {
+    "name": "martin + stahlregen - martin in da mash 12",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-stahlregen-martin-in-da-mash-12.milk"
+  },
+  "fNsmHM": {
+    "name": "idiot - Spectrum",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/idiot-spectrum.milk"
+  },
+  "kFMyOd": {
+    "name": "geiss - liquid beats (jelly v4.5)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-liquid-beats-jelly-v4-5.milk"
+  },
+  "bDifaZ": {
+    "name": "flexi, fishbrain + stahlregen - witchcraft [jelly5.5]",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-fishbrain-stahlregen-witchcraft-jelly5-5.milk"
+  },
+  "xr8pYG": {
+    "name": "flexi - what is the matrix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-what-is-the-matrix.milk"
+  },
+  "Eokjpa": {
+    "name": "flexi - lorenz attractor",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-lorenz-attractor.milk"
+  },
+  "REYygJ": {
+    "name": "flexi - hyperspaceflight (bn cn Jelly 4)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-hyperspaceflight-bn-cn-jelly-4.milk"
+  },
+  "gPB8Ba": {
+    "name": "flexi - bouncing balls [neon mix]",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-bouncing-balls-neon-mix.milk"
+  },
+  "cfZG0z": {
+    "name": "flexi - alien web bouncer",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-alien-web-bouncer.milk"
+  },
+  "oIQu1w": {
+    "name": "flexi + stahlregen - jewelry tiles",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-stahlregen-jewelry-tiles.milk"
+  },
+  "sifRsK": {
+    "name": "flexi + nitorami - beat explorer (cn bc jelly 4)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-nitorami-beat-explorer-cn-bc-jelly-4.milk"
+  },
+  "4GwcDg": {
+    "name": "flexi + geiss - pogo-cubes on tokamak matter [mind over matter remix]2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-geiss-pogo-cubes-on-tokamak-matter-mind-over-matter-remix-2.milk"
+  },
+  "o26wbv": {
+    "name": "flexi + fishbrain - neon mindblob grafitti",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-fishbrain-neon-mindblob-grafitti.milk"
+  },
+  "v91g2p": {
+    "name": "fiShbRaiN + geiss - witchcraft (Stahl's Mirror Crossfire Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-geiss-witchcraft-stahl-s-mirror-crossfire-mix.milk"
+  },
+  "sOX9Ne": {
+    "name": "fiShbRaiN + geiss - witchcraft (Grow Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-geiss-witchcraft-grow-mix.milk"
+  },
+  "4oZk7A": {
+    "name": "fiShbRaiN + geiss - witchcraft (Glow Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-geiss-witchcraft-glow-mix.milk"
+  },
+  "29G3qf": {
+    "name": "fed - slowfast 1.1 (geiss composite remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fed-slowfast-1-1-geiss-composite-remix.milk"
+  },
+  "lY8xa0": {
+    "name": "beta106i - It's the Sun (Brotherhood of Tears) - mash0000 - vascular chemical allergy",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.milk"
+  },
+  "7BOBGh": {
+    "name": "beta106i - Brilliance (Space-Time Breaking) - mash0000 - it's 2009 and you haven't replaced your analog tv with digital",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.milk"
+  },
+  "Y8m1Pt": {
+    "name": "amandio c - salty beats - spiral",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/amandio-c-salty-beats-spiral.milk"
+  },
+  "x5qk8x": {
+    "name": "amandio c - odd star",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/amandio-c-odd-star.milk"
+  },
+  "xDUeFe": {
+    "name": "geiss_experimental__LSB Bass Cubes",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-experimental-lsb-bass-cubes.milk"
+  },
+  "MHYnjw": {
+    "name": "geiss_experimental__Aderrasi - Kevlar Ore Deposit - geiss core stripe mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-experimental-aderrasi-kevlar-ore-deposit-geiss-core-stripe-mix.milk"
+  },
+  "V08viA": {
+    "name": "Geiss - Cosmic Dust 2 - Game of Life - zoom mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-game-of-life-zoom-mix.milk"
+  },
+  "M1IT0g": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix ORIG)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix-orig.milk"
+  },
+  "8e8JOa": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix 2b)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix-2b.milk"
+  },
+  "lYoBpw": {
+    "name": "Mig_Oscilloscope022",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-oscilloscope022.milk"
+  },
+  "boFs3y": {
+    "name": "Mig_Oscilloscope022 b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-oscilloscope022-b.milk"
+  },
+  "lIr7aL": {
+    "name": "Mig_304 - geiss remix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-304-geiss-remix.milk"
+  },
+  "HxWqlq": {
+    "name": "Mig_304 - geiss remix 3b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-304-geiss-remix-3b.milk"
+  },
+  "CzBdsd": {
+    "name": "Mig_304 - geiss remix 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-304-geiss-remix-3.milk"
+  },
+  "WjkAlB": {
+    "name": "Mig_304 - geiss remix 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-304-geiss-remix-2.milk"
+  },
+  "Go59jW": {
+    "name": "Mig_197b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-197b.milk"
+  },
+  "7OsvAQ": {
+    "name": "Mig_146",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-146.milk"
+  },
+  "zmfXPk": {
+    "name": "Mig_120",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-120.milk"
+  },
+  "e6sfNW": {
+    "name": "Mig_091b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-091b.milk"
+  },
+  "jJMXai": {
+    "name": "Mig_091",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-091.milk"
+  },
+  "OZq2ir": {
+    "name": "Mig_085",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-085-2.milk"
+  },
+  "AtXQ4J": {
+    "name": "Mig_082_version2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-082-version2.milk"
+  },
+  "iXU9Y5": {
+    "name": "Mig_068",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-068.milk"
+  },
+  "INkWj7": {
+    "name": "Mig_036_version3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-036-version3.milk"
+  },
+  "jDcvmK": {
+    "name": "Mig_032_version3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-032-version3.milk"
+  },
+  "21Zqxm": {
+    "name": "Mig_010",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mig-010.milk"
+  },
+  "nrnYxI": {
+    "name": "Martin - wire dance (geiss warp shader mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-wire-dance-geiss-warp-shader-mix.milk"
+  },
+  "8240cQ": {
+    "name": "Geiss - Reaction Diffusion (Relief Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-reaction-diffusion-relief-mix-2.milk"
+  },
+  "4G2P6C": {
+    "name": "Geiss - Motion Blur 2 (Relief Mix) c",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-motion-blur-2-relief-mix-c.milk"
+  },
+  "dSobTn": {
+    "name": "Geiss - Confetti (Kaleidoscope Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-confetti-kaleidoscope-mix.milk"
+  },
+  "LBEy1N": {
+    "name": "Eo.S. - glowsticks v2 02 - Geiss HPF",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-02-geiss-hpf.milk"
+  },
+  "hPOltW": {
+    "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-zylot-skylight-stained-glass-majesty-mix-2.milk"
+  },
+  "77FD4m": {
+    "name": "Zylot - Magma Crawl",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/zylot-magma-crawl.milk"
+  },
+  "1C5DYO": {
+    "name": "Zylot - Crossing Over (Geiss Tweak)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/zylot-crossing-over-geiss-tweak.milk"
+  },
+  "3hbbDD": {
+    "name": "Vovan + Geiss - Bass With Flover (Feedback Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/vovan-geiss-bass-with-flover-feedback-mix.milk"
+  },
+  "jcLfPE": {
+    "name": "Unchained - Perverted Dialect",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-perverted-dialect.milk"
+  },
+  "pJqkeg": {
+    "name": "Unchained - Free to Feel (Valium Remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-free-to-feel-valium-remix.milk"
+  },
+  "H3H6Ev": {
+    "name": "Unchained & Rovastar - Rainbow Obscura",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-rovastar-rainbow-obscura.milk"
+  },
+  "YDGm7t": {
+    "name": "Unchained & Rovastar - Luckless",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-rovastar-luckless.milk"
+  },
+  "8DTqcj": {
+    "name": "TobiasWolfBoi - The Pit",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/tobiaswolfboi-the-pit.milk"
+  },
+  "laytNQ": {
+    "name": "Telek - Directive Swagger (Spectral Inferno) with radial blur",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/telek-directive-swagger-spectral-inferno-with-radial-blur.milk"
+  },
+  "QGCZyy": {
+    "name": "Stahlregen - Spiral Beats (Fluctuating Flowers)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/stahlregen-spiral-beats-fluctuating-flowers.milk"
+  },
+  "kfORH5": {
+    "name": "Stahlregen + Unchained - Psychedelic Flower Kung Fu (Corrupt)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/stahlregen-unchained-psychedelic-flower-kung-fu-corrupt.milk"
+  },
+  "qmp9iC": {
+    "name": "Stahlregen & Geiss + TobiasWolfBoi - Space Gelatin (Color Xplosion)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion.milk"
+  },
+  "Qstv6S": {
+    "name": "Stahlregen & Geiss + TobiasWolfBoi - Space Gelatin (Color Xplosion 2)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion-2.milk"
+  },
+  "912K5x": {
+    "name": "Rovastar - Tripmaker (Space Trip Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-tripmaker-space-trip-mix.milk"
+  },
+  "13Ij96": {
+    "name": "Rovastar - Starquake (Sunquake Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-starquake-sunquake-mix.milk"
+  },
+  "jG9qgt": {
+    "name": "Rovastar - Snapshot Of Space",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-snapshot-of-space.milk"
+  },
+  "d1TVbH": {
+    "name": "Rovastar - LabFunk",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-labfunk.milk"
+  },
+  "2WNu94": {
+    "name": "Rovastar - Inner Thoughts (Frantic Thoughts Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-inner-thoughts-frantic-thoughts-mix.milk"
+  },
+  "6yh3Rt": {
+    "name": "Rovastar - Inner Thoughts (Distant Memories Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-inner-thoughts-distant-memories-mix.milk"
+  },
+  "R4buQw": {
+    "name": "Rovastar - Hyperspace",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-hyperspace.milk"
+  },
+  "XewbUX": {
+    "name": "Rovastar - Demon Sunflower (Double Resistance Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-demon-sunflower-double-resistance-mix.milk"
+  },
+  "zbUD7v": {
+    "name": "Rovastar + Rocke - Sugar Spun Sister - Painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-rocke-sugar-spun-sister-painterly.milk"
+  },
+  "mn6kGh": {
+    "name": "Rovastar + Loadus - FractalDrop (Active Sparks Mix) Steady",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-loadus-fractaldrop-active-sparks-mix-steady.milk"
+  },
+  "oZB2yD": {
+    "name": "Rovastar + Loadus + Geiss - Tone-mapped FractalDrop",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-loadus-geiss-tone-mapped-fractaldrop.milk"
+  },
+  "EudJTR": {
+    "name": "Rovastar + Loadus + Geiss - Tone-mapped FractalDrop 7c",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-loadus-geiss-tone-mapped-fractaldrop-7c.milk"
+  },
+  "KyGl4e": {
+    "name": "Rovastar + Loadus + Geiss - FractalDrop (Triple Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-loadus-geiss-fractaldrop-triple-mix.milk"
+  },
+  "3LVtiu": {
+    "name": "Rovastar + Geiss - Snapshot Of Space (LSB mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-geiss-snapshot-of-space-lsb-mix.milk"
+  },
+  "msMe5T": {
+    "name": "Rovastar + Geiss - Bipolar 2 (Vectrip Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-geiss-bipolar-2-vectrip-mix.milk"
+  },
+  "TUDnFe": {
+    "name": "Rovastar + Che - Asylum Animations",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-che-asylum-animations.milk"
+  },
+  "WFzcXl": {
+    "name": "Phat+fiShbRaiN+Eo.S_Mandala_Chasers_remix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-fishbrain-eo-s-mandala-chasers-remix.milk"
+  },
+  "CMgQij": {
+    "name": "ORB - Solar Radiation",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-solar-radiation.milk"
+  },
+  "Zuzg4t": {
+    "name": "ORB - Saturns Rings",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-saturns-rings.milk"
+  },
+  "CqzTGo": {
+    "name": "ORB - Quicksand",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-quicksand.milk"
+  },
+  "rlxaKq": {
+    "name": "ORB - Pastel Primer",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-pastel-primer.milk"
+  },
+  "A674lj": {
+    "name": "ORB - Liquid Fire",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-liquid-fire.milk"
+  },
+  "L90md1": {
+    "name": "ORB - Inferno",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-inferno.milk"
+  },
+  "XrbIZj": {
+    "name": "ORB - Crysal Storm",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-crysal-storm.milk"
+  },
+  "ChEJhr": {
+    "name": "Mstress - Acoustic Nerve Impulses",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mstress-acoustic-nerve-impulses.milk"
+  },
+  "8q0c6X": {
+    "name": "Martin - wire dance",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-wire-dance.milk"
+  },
+  "cMkHlk": {
+    "name": "Martin - journey into space",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-journey-into-space.milk"
+  },
+  "A63DaM": {
+    "name": "Martin - charisma",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-charisma.milk"
+  },
+  "ok4OA3": {
+    "name": "Krash - Vinyl Disk",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/krash-vinyl-disk.milk"
+  },
+  "bgEwSc": {
+    "name": "Krash + Rovastar - Rainbow Orb",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/krash-rovastar-rainbow-orb.milk"
+  },
+  "Jzp5v8": {
+    "name": "Idiot - What Is",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/idiot-what-is.milk"
+  },
+  "d9BWoH": {
+    "name": "Goody - Vertigo - revisited",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/goody-vertigo-revisited.milk"
+  },
+  "Xvmwb5": {
+    "name": "Goody - Unstable Sonic Reactor - Final",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/goody-unstable-sonic-reactor-final.milk"
+  },
+  "WIz7uW": {
+    "name": "Goody - Need - Gloam",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/goody-need-gloam.milk"
+  },
+  "oByLJj": {
+    "name": "Goody - Need - Desire remix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/goody-need-desire-remix.milk"
+  },
+  "5da6qp": {
+    "name": "Goody - LSD Zoomtunnel",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/goody-lsd-zoomtunnel.milk"
+  },
+  "VcUWDG": {
+    "name": "Geiss - Vortex 2 Painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-vortex-2-painterly.milk"
+  },
+  "6C79Ic": {
+    "name": "Geiss - Trampoline",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-trampoline.milk"
+  },
+  "g39XvK": {
+    "name": "Geiss - Tokamak Plus 4",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-tokamak-plus-4.milk"
+  },
+  "prHVsY": {
+    "name": "Geiss - Swirlie 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-swirlie-2.milk"
+  },
+  "UBZwV5": {
+    "name": "Geiss - Smoke Rings",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-smoke-rings.milk"
+  },
+  "BRkffY": {
+    "name": "Geiss - Skin Dots Multi-layer 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-skin-dots-multi-layer-3.milk"
+  },
+  "v8bC4n": {
+    "name": "Geiss - Skin Dots 9",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-skin-dots-9.milk"
+  },
+  "oqxj1M": {
+    "name": "Geiss - Skin Dots 11b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-skin-dots-11b.milk"
+  },
+  "CHdpMB": {
+    "name": "Geiss - Rose 5 Crossfire Beats",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-5-crossfire-beats.milk"
+  },
+  "gO8YZM": {
+    "name": "Geiss - Rose 5 Crossfire Beats - mash0000 - ill gotten slobber catcher",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-5-crossfire-beats-mash0000-ill-gotten-slobber-catcher.milk"
+  },
+  "G3mP9Z": {
+    "name": "Geiss - Rose 5 Crossfire Beats (composite remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-5-crossfire-beats-composite-remix.milk"
+  },
+  "1bVovV": {
+    "name": "Geiss - Rose 4 Shifted Tiles",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-4-shifted-tiles.milk"
+  },
+  "eug6vI": {
+    "name": "Geiss - Rose 4 (composite remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-4-composite-remix.milk"
+  },
+  "lntbPv": {
+    "name": "Geiss - Rose 4 (bccn Jelly V4)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-4-bccn-jelly-v4.milk"
+  },
+  "vVX8fr": {
+    "name": "Geiss - Rose 4 (LSB mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-4-lsb-mix.milk"
+  },
+  "ot9bHP": {
+    "name": "Geiss - Rose 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rose-3.milk"
+  },
+  "iManzA": {
+    "name": "Geiss - Reaction Diffusion (Shifting Sphere Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-reaction-diffusion-shifting-sphere-mix.milk"
+  },
+  "sWDfCG": {
+    "name": "Geiss - Reaction Diffusion (Relief Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-reaction-diffusion-relief-mix.milk"
+  },
+  "CrLXt2": {
+    "name": "Geiss - Reaction Diffusion (Puddle Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-reaction-diffusion-puddle-mix.milk"
+  },
+  "JIKDwH": {
+    "name": "Geiss - Plasma 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-plasma-2.milk"
+  },
+  "EBKwMD": {
+    "name": "Geiss - Pistons",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-pistons.milk"
+  },
+  "duEqhk": {
+    "name": "Geiss - Neutron - radial blur 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-neutron-radial-blur-2.milk"
+  },
+  "W7bEj3": {
+    "name": "Geiss - Motion Blur 2 (Stahl's Neon Jelly 2 RMX)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-motion-blur-2-stahl-s-neon-jelly-2-rmx.milk"
+  },
+  "NXQivi": {
+    "name": "Geiss - Motion Blur 2 (Reverse Jelly V3)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-motion-blur-2-reverse-jelly-v3.milk"
+  },
+  "Hzvvbb": {
+    "name": "Geiss - Motion Blur 2 (Relief Mix 2)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-motion-blur-2-relief-mix-2.milk"
+  },
+  "7GqSRQ": {
+    "name": "Geiss - Mosaic Octopus",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mosaic-octopus.milk"
+  },
+  "ubVJL4": {
+    "name": "Geiss - Mosaic Octopus 7",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mosaic-octopus-7.milk"
+  },
+  "UN6OBT": {
+    "name": "Geiss - MicroCheckers 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-microcheckers-3.milk"
+  },
+  "85CTzj": {
+    "name": "Geiss - MicroCheckers 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-microcheckers-2.milk"
+  },
+  "Ej4WWj": {
+    "name": "Geiss - Mega Swirl 3 (color tweak)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mega-swirl-3-color-tweak.milk"
+  },
+  "aPqQbc": {
+    "name": "Geiss - Mash-Up 1",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mash-up-1.milk"
+  },
+  "bU0fR9": {
+    "name": "Geiss - Liquid Beats 2 (Reverse Jelly V3)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-liquid-beats-2-reverse-jelly-v3.milk"
+  },
+  "383gqZ": {
+    "name": "Geiss - Liquid Beats (janky ripple warp reflecto)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-liquid-beats-janky-ripple-warp-reflecto.milk"
+  },
+  "5OYa4O": {
+    "name": "Geiss - Kaleidoscope 1",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-kaleidoscope-1.milk"
+  },
+  "bpSfLm": {
+    "name": "Geiss - Iris",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-iris.milk"
+  },
+  "zR06bi": {
+    "name": "Geiss - Iris Storm",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-iris-storm.milk"
+  },
+  "pUwwK2": {
+    "name": "Geiss - Hyperion (LSB mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-hyperion-lsb-mix.milk"
+  },
+  "x35qdS": {
+    "name": "Geiss - Hurricane",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-hurricane.milk"
+  },
+  "NOm3NC": {
+    "name": "Geiss - Game of Life",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-game-of-life.milk"
+  },
+  "y0QSRA": {
+    "name": "Geiss - Game of Life 3",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-game-of-life-3.milk"
+  },
+  "1a2niA": {
+    "name": "Geiss - Game of Life 2b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-game-of-life-2b.milk"
+  },
+  "9c1K6i": {
+    "name": "Geiss - Flower",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-flower.milk"
+  },
+  "3usf92": {
+    "name": "Geiss - Flower Blossom",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-flower-blossom.milk"
+  },
+  "Z6UbQa": {
+    "name": "Geiss - Eye of Jupiter",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-eye-of-jupiter.milk"
+  },
+  "Rwa9ja": {
+    "name": "Geiss - Downward Spiral - color invert mirror x",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-downward-spiral-color-invert-mirror-x.milk"
+  },
+  "Qze1QX": {
+    "name": "Geiss - Digitunnel",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-digitunnel.milk"
+  },
+  "kBnBI0": {
+    "name": "Geiss - Diffuser (Red Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-diffuser-red-mix.milk"
+  },
+  "0pIFgC": {
+    "name": "Geiss - Diffuser (Gold Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-diffuser-gold-mix.milk"
+  },
+  "tRyAth": {
+    "name": "Geiss - Desert Rose 4",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-desert-rose-4.milk"
+  },
+  "8FhWXx": {
+    "name": "Geiss - Dancing Spirits",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-dancing-spirits.milk"
+  },
+  "JZ6Wvh": {
+    "name": "Geiss - Dancing Spirits (Bright)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-dancing-spirits-bright.milk"
+  },
+  "ZmiGje": {
+    "name": "Geiss - Cosmic Dust 2 - quasistatic noise dual pane window",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-quasistatic-noise-dual-pane-window.milk"
+  },
+  "IsUYYO": {
+    "name": "Geiss - Cosmic Dust 2 - quasistatic noise desat trails",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-quasistatic-noise-desat-trails.milk"
+  },
+  "bRxPDX": {
+    "name": "Geiss - Cosmic Dust 2 - quasistatic noise desat trails 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-quasistatic-noise-desat-trails-2.milk"
+  },
+  "Qy8in2": {
+    "name": "Geiss - Cosmic Dust 2 - Trails 7",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-trails-7.milk"
+  },
+  "TcZGam": {
+    "name": "Geiss - Cosmic Dust 2 - Tiny Reaction Diffusion Mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-tiny-reaction-diffusion-mix.milk"
+  },
+  "5Yo7Jr": {
+    "name": "Geiss - Cosmic Dust 2 - Game of Life mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2-game-of-life-mix.milk"
+  },
+  "o9k7m7": {
+    "name": "Geiss - Constant Velocity - angular blur",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-constant-velocity-angular-blur.milk"
+  },
+  "8fSxEp": {
+    "name": "Geiss - Confetti (color saturation boosted)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-confetti-color-saturation-boosted.milk"
+  },
+  "0LFkiK": {
+    "name": "Geiss - Color Pox (Van Gogh Mix) (color saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-color-pox-van-gogh-mix-color-saturation-remix.milk"
+  },
+  "VJQq6c": {
+    "name": "Geiss - Color Pox (Measles Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-color-pox-measles-mix.milk"
+  },
+  "XmUCRN": {
+    "name": "Geiss - Color Pox (Acid Impression Mix) (color saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-color-pox-acid-impression-mix-color-saturation-remix.milk"
+  },
+  "Ksg664": {
+    "name": "Geiss - Cepia Dither",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cepia-dither.milk"
+  },
+  "j1nkP3": {
+    "name": "Geiss - Cauldron - painterly 5 (saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cauldron-painterly-5-saturation-remix.milk"
+  },
+  "ks2aOS": {
+    "name": "Geiss - Cauldron - painterly 4 (saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cauldron-painterly-4-saturation-remix.milk"
+  },
+  "tarJU2": {
+    "name": "Geiss - Casino",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-casino.milk"
+  },
+  "Fj7fE6": {
+    "name": "Geiss - All-Spark Sinews",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-all-spark-sinews.milk"
+  },
+  "wxHegg": {
+    "name": "Geiss - All-Spark Polar",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-all-spark-polar.milk"
+  },
+  "7yfapd": {
+    "name": "Geiss - 3 layers",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-3-layers.milk"
+  },
+  "iBsVaJ": {
+    "name": "Geiss - 3 layers (Tunnel Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-3-layers-tunnel-mix.milk"
+  },
+  "6s6AOK": {
+    "name": "Geiss - 3 layers (Rayleigh Scattering Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-3-layers-rayleigh-scattering-mix.milk"
+  },
+  "Sgpe4q": {
+    "name": "Geiss - 3 layers (Planar Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-3-layers-planar-mix.milk"
+  },
+  "NEiYVo": {
+    "name": "Geiss + Rovastar - Julia Fractal (Vectrip Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rovastar-julia-fractal-vectrip-mix.milk"
+  },
+  "hcBhUY": {
+    "name": "Geiss - Cauldron - Tendrils (saturation remix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cauldron-tendrils-saturation-remix.milk"
+  },
+  "NTtk5V": {
+    "name": "Geiss - Eggs",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-eggs.milk"
+  },
+  "vqgPdG": {
+    "name": "Tunnel of Images",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/tunnel-of-images.glsl",
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA13994%2FPIA13994~medium.jpg"
+  },
+  "OJEl9R": {
+    "name": "Image Mosaic",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/image-mosaic.glsl",
+    "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22351%2FPIA22351~medium.jpg"
+  },
+  "b594l9": {
+    "name": "Raymarch Sphere",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/raymarch-sphere.glsl"
+  },
+  "n19hhD": {
+    "name": "Audio Spectrum",
+    "source_type": "shadertoy",
+    "source_loader": "url",
+    "source_url": "/presets/shadertoy/audio-spectrum.glsl"
+  },
+  "ffCuEd": {
+    "name": "Flexi - using jedi forces",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-using-jedi-forces.milk"
+  },
+  "xD7sMo": {
+    "name": "Flexi - layered + Boz - Buckwild",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-layered-boz-buckwild.milk"
+  },
+  "7t90G5": {
+    "name": "Flexi - hue burst",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-hue-burst.milk"
+  },
+  "VIsedw": {
+    "name": "Esotic & Rozzor - Pixie Party Light ((No Wave Invasion) Mandala Chill Red Yellow Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/esotic-rozzor-pixie-party-light-no-wave-invasion-mandala-chill-red-yellow-mix.milk"
+  },
+  "w4P8w9": {
+    "name": "Eo.S.+Phat - spectrum bubble new colors_v2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-spectrum-bubble-new-colors-v2.milk"
+  },
+  "eSScUv": {
+    "name": "Eo.S. and Zylot - skylight (Stained Glass Majesty mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-and-zylot-skylight-stained-glass-majesty-mix.milk"
+  },
+  "q8XM4Q": {
+    "name": "Eo.S. - skylight a1 [music warp switch]",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-skylight-a1-music-warp-switch.milk"
+  },
+  "JmIcYJ": {
+    "name": "Eo.S. - sarc c_Phats Zoom Mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-sarc-c-phats-zoom-mix.milk"
+  },
+  "TMC3YZ": {
+    "name": "Eo.S. - repeater 13 - definitive",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-repeater-13-definitive.milk"
+  },
+  "haCqCh": {
+    "name": "Aderrasi - Airhandler (Kali Mix) - Painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-airhandler-kali-mix-painterly.milk"
+  },
+  "164MuB": {
+    "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code.milk"
+  },
+  "rUYLuL": {
+    "name": "Eo.S. - glowsticks v2 03 music shifter edit b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-03-music-shifter-edit-b.milk"
+  },
+  "uKnfXj": {
+    "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Stahl's Reactive RMX V2i2 - feat. flexi + phat)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-03-music-shifter-edit-b-stahl-s-reactive-rmx-v2i2-feat-flexi.milk"
+  },
+  "LXox04": {
+    "name": "Eo.S. - glowsticks v2 03 music shifter edit b (Jelly V2)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-03-music-shifter-edit-b-jelly-v2.milk"
+  },
+  "qIKWxc": {
+    "name": "Eo.S. + Phat cubetrace (cybercity madness remix) - mash0000 - evaporating crystal pharma",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-cubetrace-cybercity-madness-remix-mash0000-evaporating-crystal-pharma.milk"
+  },
+  "1JVMxZ": {
+    "name": "Eo.S. + Phat - spectrum bubble field",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-spectrum-bubble-field.milk"
+  },
+  "aucRFt": {
+    "name": "Eo.S. + Phat - cubetrace - v2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-cubetrace-v2.milk"
+  },
+  "xpVOei": {
+    "name": "Eo.S. + Phat - chasers 14 sentinel 616",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-chasers-14-sentinel-616.milk"
+  },
+  "j72Wef": {
+    "name": "Eo.S. + Phat + Geiss - chasers 15 sentinels male and female (Dementia Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-geiss-chasers-15-sentinels-male-and-female-dementia-mix.milk"
+  },
+  "HwoUcq": {
+    "name": "Eo.S. + Geiss - glowsticks v2 03 music shifter edit b (Psychedelic Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-geiss-glowsticks-v2-03-music-shifter-edit-b-psychedelic-mix.milk"
+  },
+  "y3PFWY": {
+    "name": "Eo.S. + Geiss - glowsticks v2 02 (Relief Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-geiss-glowsticks-v2-02-relief-mix.milk"
+  },
+  "vCpR86": {
+    "name": "Cope-WIP - Strange Attractor 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/cope-wip-strange-attractor-2.milk"
+  },
+  "eYHXtB": {
+    "name": "Cope - Passage (mandala mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/cope-passage-mandala-mix.milk"
+  },
+  "9sJSry": {
+    "name": "By Adam FX 2 shifter + geiss - neon pulse (glow mix) + Rovastar + Orb  + Mstress - mash0000 - prismatic spectral haze filter",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/by-adam-fx-2-shifter-geiss-neon-pulse-glow-mix-rovastar-orb-mstress-mash0000.milk"
+  },
+  "8yDedA": {
+    "name": "Bmelgren + Krash - Rainbow Orb Peacock (Centred Journey Mix 2)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/bmelgren-krash-rainbow-orb-peacock-centred-journey-mix-2.milk"
+  },
+  "GNrYwr": {
+    "name": "Bmelgren & Krash - Rainbow Orb Peacock (Lonely Signal Gone Mad Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/bmelgren-krash-rainbow-orb-peacock-lonely-signal-gone-mad-mix.milk"
+  },
+  "zH4iVV": {
+    "name": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-storm-of-the-eye-thunder-mash0000-quasi-pseudo-meta-concentrics.milk"
+  },
+  "JYdwqQ": {
+    "name": "Aderrasi - Roaming Star (Himalaya Brach Office) - mash0000 - creaming the summit",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-roaming-star-himalaya-brach-office-mash0000-creaming-the-summit.milk"
+  },
+  "3HN05o": {
+    "name": "Aderrasi - Hackproof - mash0000 - stare at tv static remote viewing technique",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-hackproof-mash0000-stare-at-tv-static-remote-viewing-technique.milk"
+  },
+  "G9voNd": {
+    "name": "Aderrasi - Ghast Entity",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-ghast-entity.milk"
+  },
+  "oyNdIT": {
+    "name": "Aderrasi - Ghast (Full Circle Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-ghast-full-circle-mix.milk"
+  },
+  "RXgbpz": {
+    "name": "Geiss - All-Spark",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-all-spark.milk"
+  },
+  "asrnYp": {
+    "name": "martin - reflections on black tiles",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-reflections-on-black-tiles.milk"
+  },
+  "3Tfp2i": {
+    "name": "shifter - urchin mod",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-urchin-mod.milk"
+  },
+  "nB08bI": {
+    "name": "shifter - spills blender + krash beatdetect - mash0000 - here comb your hair with this planet",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-spills-blender-krash-beatdetect-mash0000-here-comb-your-hair-with-this.milk"
+  },
+  "c9cXzV": {
+    "name": "shifter - neon pulse (reactive)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/shifter-neon-pulse-reactive.milk"
+  },
+  "N4NU63": {
+    "name": "martin - soma in pink",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-soma-in-pink.milk"
+  },
+  "H5hh1F": {
+    "name": "martin - infinity (2010 update)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-infinity-2010-update.milk"
+  },
+  "X2yAeU": {
+    "name": "martin - infinity (2008)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-infinity-2008.milk"
+  },
+  "nlD1AF": {
+    "name": "martin - gate to moria",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-gate-to-moria.milk"
+  },
+  "NXMegV": {
+    "name": "martin - disco mix 4",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-disco-mix-4.milk"
+  },
+  "Oogg6s": {
+    "name": "martin + stahlregen - martin in da mash 10 (infinity mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-stahlregen-martin-in-da-mash-10-infinity-mix.milk"
+  },
+  "5DnU2L": {
+    "name": "martin + flexi - bombyx mori mix2 in the beehive",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/martin-flexi-bombyx-mori-mix2-in-the-beehive.milk"
+  },
+  "0krhfg": {
+    "name": "fiShbRaiN - the dark side of the moon",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-the-dark-side-of-the-moon.milk"
+  },
+  "dqLXQa": {
+    "name": "fiShbRaiN - a quiet death",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fishbrain-a-quiet-death.milk"
+  },
+  "qa1I9P": {
+    "name": "fed - slowfast 1.1",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/fed-slowfast-1-1.milk"
+  },
+  "kh3E8c": {
+    "name": "Unchained - Unified Drag 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-unified-drag-2.milk"
+  },
+  "S33oA8": {
+    "name": "Unchained - Cranked On Failure",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-cranked-on-failure.milk"
+  },
+  "rzSBzp": {
+    "name": "Unchained - All You Can Eat",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/unchained-all-you-can-eat.milk"
+  },
+  "HVjYuU": {
+    "name": "Rozzor & StudioMusic - Vertigyny (Geiss Shape Mod)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rozzor-studiomusic-vertigyny-geiss-shape-mod.milk"
+  },
+  "Q7zyz5": {
+    "name": "Rovastar - VooV's Movement (After Dark Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-voov-s-movement-after-dark-mix.milk"
+  },
+  "RvS5Pe": {
+    "name": "Rovastar - VooV's Movement (After Dark Mix) - Painterly",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-voov-s-movement-after-dark-mix-painterly.milk"
+  },
+  "kLtW3v": {
+    "name": "Rovastar - Fractopia (Upspoken Mix)_Phat_Speak_When_Spoken_2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-fractopia-upspoken-mix-phat-speak-when-spoken-2.milk"
+  },
+  "4E2nFx": {
+    "name": "Rovastar - Fractopia (Upspoken Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-fractopia-upspoken-mix.milk"
+  },
+  "gLgxTP": {
+    "name": "Rovastar + Idiot24-7 - Balk Acid",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-idiot24-7-balk-acid.milk"
+  },
+  "etGSAU": {
+    "name": "Rovastar + Fvese - Mosaic Waves",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-fvese-mosaic-waves.milk"
+  },
+  "iBcSFe": {
+    "name": "Rovastar & Unchained - Demonology (Vampire Soul Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-unchained-demonology-vampire-soul-mix.milk"
+  },
+  "nuozxK": {
+    "name": "Rovastar & Unchained - Ambrosia Mystic (Dark Heart Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/rovastar-unchained-ambrosia-mystic-dark-heart-mix.milk"
+  },
+  "a16Z3X": {
+    "name": "Reenen & Telek - Slow Shift Matrix (bb4.5 (Dynamic Beat) Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/reenen-telek-slow-shift-matrix-bb4-5-dynamic-beat-mix.milk"
+  },
+  "MygiDZ": {
+    "name": "PieturP - triptrap_(ultimate-trip-mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/pieturp-triptrap-ultimate-trip-mix.milk"
+  },
+  "TVjhxk": {
+    "name": "Phat + Eo.S. - rainbow bubble_mid3-f. me dood",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-rainbow-bubble-mid3-f-me-dood.milk"
+  },
+  "v0ESKE": {
+    "name": "Phat + Eo.S. - Swim_waveform_mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/phat-eo-s-swim-waveform-mix.milk"
+  },
+  "9ZbzfC": {
+    "name": "ORB - Waaa",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-waaa-2.milk"
+  },
+  "na7R4N": {
+    "name": "ORB - Nova Sunrise",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-nova-sunrise.milk"
+  },
+  "VdPJGm": {
+    "name": "ORB - Fire and Fumes 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-fire-and-fumes-2.milk"
+  },
+  "WFaI9w": {
+    "name": "ORB - Blue Emotion",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/orb-blue-emotion.milk"
+  },
+  "9eqQnV": {
+    "name": "Mstress & Zylot - Acid UFO",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/mstress-zylot-acid-ufo.milk"
+  },
+  "A3P2IV": {
+    "name": "Ishan - Anuera",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/ishan-anuera.milk"
+  },
+  "qwuNhy": {
+    "name": "Idiot24-7 - Ascending to heaven 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/idiot24-7-ascending-to-heaven-2.milk"
+  },
+  "6nFusM": {
+    "name": "Geiss - Planar Travel",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-planar-travel.milk"
+  },
+  "njxMWO": {
+    "name": "Geiss - Motion Blur 2 (color sat boost)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-motion-blur-2-color-sat-boost.milk"
+  },
+  "6hxTDo": {
+    "name": "Geiss - Mash-Up 4",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-mash-up-4.milk"
+  },
+  "t3xlOK": {
+    "name": "Geiss - Electric Storm Half-Digital 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-electric-storm-half-digital-2.milk"
+  },
+  "75R7sz": {
+    "name": "Geiss - Electric Storm Half-Digital 2 (Fiesta Mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-electric-storm-half-digital-2-fiesta-mix.milk"
+  },
+  "DMJ1SB": {
+    "name": "Geiss - Cosmic Dust 2",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-cosmic-dust-2.milk"
+  },
+  "buwqyb": {
+    "name": "Geiss + Rovastar - The Chaos Of Colours (sprouting dimentia mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix.milk"
+  },
+  "MjmlTk": {
+    "name": "Flexi - self-lubricating",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-self-lubricating.milk"
+  },
+  "t11nN4": {
+    "name": "Flexi - infused with the spiral",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-infused-with-the-spiral.milk"
+  },
+  "bEp10M": {
+    "name": "Flexi + Martin - cascading decay swing",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/flexi-martin-cascading-decay-swing.milk"
+  },
+  "FQqWEr": {
+    "name": "Eo.S.+Phat Emergent factors - Bitcore Tweak",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-emergent-factors-bitcore-tweak.milk"
+  },
+  "OdtDSl": {
+    "name": "Eo.S.+Phat - Flare_dig_mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-flare-dig-mix.milk"
+  },
+  "oABstK": {
+    "name": "Eo.S. - pulsecube f demon - mash0000 - yakuza gut cake",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-pulsecube-f-demon-mash0000-yakuza-gut-cake.milk"
+  },
+  "EqarxT": {
+    "name": "Eo.S. - heater core C_Phat's_class + sparks_mix",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-heater-core-c-phat-s-class-sparks-mix.milk"
+  },
+  "x72Cbv": {
+    "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix07",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix07.milk"
+  },
+  "9pPWpB": {
+    "name": "Eo.S. - glowsticks v2 05 and proton lights (+Krash's beat code) _Phat_remix02b",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-glowsticks-v2-05-and-proton-lights-krash-s-beat-code-phat-remix02b.milk"
+  },
+  "I2HEKG": {
+    "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-zylot-skylight-stained-glass-majesty-mix.milk"
+  },
+  "jjjX2L": {
+    "name": "Eo.S. + Phat - Emergent factors",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/eo-s-phat-emergent-factors.milk"
+  },
+  "mnQbLP": {
+    "name": "Bmelgren - Pentultimate Nerual Slipstream (Tweak 2)",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/bmelgren-pentultimate-nerual-slipstream-tweak-2.milk"
+  },
+  "rZaP5M": {
+    "name": "Aderrasi - What cannot be",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-what-cannot-be.milk"
+  },
+  "xxpUNA": {
+    "name": "Aderrasi - Kevlar Tunnel",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-kevlar-tunnel.milk"
+  },
+  "twWyLm": {
+    "name": "Aderrasi - Kevlar Ore Deposit",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-kevlar-ore-deposit.milk"
+  },
+  "Yu9GG8": {
+    "name": "Aderrasi - Kevlar Abyss",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-kevlar-abyss.milk"
+  },
+  "d3BbId": {
+    "name": "Aderrasi - Curse of the Mirror Emu",
+    "source_type": "milkdrop",
+    "source_loader": "url",
+    "source_url": "/presets/milkdrop/aderrasi-curse-of-the-mirror-emu.milk"
+  }
+}

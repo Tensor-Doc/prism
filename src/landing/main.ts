@@ -2,7 +2,7 @@
 // Orchestrates the background field, telemetry, VU bars, audio capture,
 // and prompt-input keyboard handling. Touches no studio code on this pass.
 
-import { PrismPlayer, type PrismGraph } from "prism-player";
+import { ImageOverlay, PrismPlayer, type PrismGraph } from "prism-player";
 
 import { CursorField } from "./cursor-field";
 import { Telemetry } from "./telemetry";
@@ -228,6 +228,11 @@ const COLD_OPEN_PRESET = COLD_OPEN_POOL[
   Math.floor(Date.now() / 1000) % COLD_OPEN_POOL.length
 ];
 
+// Share-by-URL: ?g=<6-char> resolves to a catalog entry via the bundled
+// registry and swaps to it immediately after the player boots. Wrong /
+// missing token leaves the curated cold-open in place.
+const shareToken = new URLSearchParams(window.location.search).get("g");
+
 const player = new PrismPlayer({
   container: $("#prism-stage"),
   initialPresetName: COLD_OPEN_PRESET,
@@ -252,6 +257,20 @@ const field = new CursorField($<HTMLCanvasElement>("#field"));
 // screen from first paint; swaps to the real graph after each generate.
 const graphFlow = new GraphFlow();
 graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "cold-open");
+
+// Apply ?g=<short_id> after graphFlow exists so we can render the
+// resolved chain inline. Done synchronously; the runtime kicks off any
+// async asset fetch and returns.
+if (shareToken) {
+  const result = player.load(shareToken);
+  if (result.ok) {
+    const active = runtime.current;
+    if (active) graphFlow.render(active);
+    if (result.presetName) updateSkillDisplay(result.presetName, true);
+  } else {
+    console.warn(`[prism] share-token "${shareToken}" did not resolve: ${result.error}`);
+  }
+}
 const ambient = new AmbientSignals();
 
 // ── art mode: auto-fading chrome ────────────────────────────
@@ -397,98 +416,35 @@ const slideshow = new Slideshow(
 );
 
 
-// ── slideshow card: drag / resize / collapse ──────────────
-const slideshowCard = $("#slideshow-card");
-const slideshowCardCollapseBtn = $<HTMLButtonElement>("#slideshow-card-collapse");
-
-function syncSlideshowCard(): void {
-  const r = slideshow.cardRect;
-  slideshowCard.style.left = `${r.x}px`;
-  slideshowCard.style.top = `${r.y}px`;
-  slideshowCard.style.width = `${r.w}px`;
-  slideshowCard.style.height = `${r.h}px`;
-  slideshowCard.toggleAttribute("data-collapsed", slideshow.isCollapsed());
-}
-slideshow.onCardChanged = syncSlideshowCard;
-syncSlideshowCard();
-
-// Clamp a candidate rect so the card stays mostly on-screen.
-function clampRect(r: { x: number; y: number; w: number; h: number }): { x: number; y: number; w: number; h: number } {
-  const minVisible = 60;
-  return {
-    x: Math.max(-(r.w - minVisible), Math.min(window.innerWidth - minVisible, r.x)),
-    y: Math.max(36, Math.min(window.innerHeight - minVisible, r.y)),
-    w: r.w,
-    h: r.h,
-  };
-}
-
-interface DragState {
-  startCard: { x: number; y: number; w: number; h: number };
-  startPointer: { x: number; y: number };
-  handle: string | null;
-}
-let cardDrag: DragState | null = null;
-
-slideshowCard.addEventListener("pointerdown", (e) => {
-  const target = e.target as HTMLElement;
-  // Collapse button has its own click handler; let it through.
-  if (target.closest(".slideshow-card__collapse")) return;
-
-  if (slideshow.isCollapsed()) {
-    // Click anywhere on the thumb expands.
-    e.preventDefault();
-    slideshow.expandCard();
-    return;
-  }
-
-  e.preventDefault();
-  slideshowCard.setPointerCapture(e.pointerId);
-  cardDrag = {
-    startCard: { ...slideshow.cardRect },
-    startPointer: { x: e.clientX, y: e.clientY },
-    handle: target.classList.contains("slideshow-card__handle") ? (target.dataset.handle ?? null) : null,
-  };
+// ── slideshow card (drag / resize / collapse) ─────────────
+// The visible PiP chrome lives in ImageOverlay; this file only owns
+// the bidirectional sync with Slideshow.cardRect (Slideshow reads the
+// rect each frame to constrain its GL viewport) and the show/hide
+// wrappers used by the gallery modal.
+const slideshowOverlay = new ImageOverlay({
+  className: "slideshow-card",
+  initialRect: slideshow.cardRect,
+  onChange: ({ rect, collapsed }) => {
+    slideshow.setCardRect(rect);
+    if (collapsed !== slideshow.isCollapsed()) {
+      if (collapsed) slideshow.collapseCard();
+      else slideshow.expandCard();
+    }
+  },
 });
-
-slideshowCard.addEventListener("pointermove", (e) => {
-  if (!cardDrag) return;
-  e.preventDefault();
-  const dx = e.clientX - cardDrag.startPointer.x;
-  const dy = e.clientY - cardDrag.startPointer.y;
-  const s = cardDrag.startCard;
-  const h = cardDrag.handle;
-
-  if (h === null) {
-    // Drag the whole card.
-    slideshow.setCardRect(clampRect({ x: s.x + dx, y: s.y + dy, w: s.w, h: s.h }));
-    return;
+// Slideshow may resize its own default rect on window resize / first
+// init — mirror that back into the overlay so they stay in sync.
+slideshow.onCardChanged = () => {
+  if (slideshow.isCollapsed() !== slideshowOverlay.isCollapsed()) {
+    if (slideshow.isCollapsed()) slideshowOverlay.collapse();
+    else slideshowOverlay.expand();
+  } else {
+    slideshowOverlay.setRect(slideshow.cardRect);
   }
-
-  // Resize from a corner — minimum 80x45.
-  let nx = s.x, ny = s.y, nw = s.w, nh = s.h;
-  if (h.includes("r")) nw = Math.max(80, s.w + dx);
-  if (h.includes("l")) { nw = Math.max(80, s.w - dx); nx = s.x + (s.w - nw); }
-  if (h.includes("b")) nh = Math.max(45, s.h + dy);
-  if (h.includes("t")) { nh = Math.max(45, s.h - dy); ny = s.y + (s.h - nh); }
-  slideshow.setCardRect({ x: nx, y: ny, w: nw, h: nh });
-});
-
-const endDrag = (e: PointerEvent): void => {
-  if (!cardDrag) return;
-  try { slideshowCard.releasePointerCapture(e.pointerId); } catch { /* ignore */ }
-  cardDrag = null;
 };
-slideshowCard.addEventListener("pointerup", endDrag);
-slideshowCard.addEventListener("pointercancel", endDrag);
 
-slideshowCardCollapseBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  slideshow.collapseCard();
-});
-
-function showSlideshowCard(): void { slideshowCard.removeAttribute("data-hidden"); }
-function hideSlideshowCard(): void { slideshowCard.setAttribute("data-hidden", ""); }
+function showSlideshowCard(): void { slideshowOverlay.show(); }
+function hideSlideshowCard(): void { slideshowOverlay.hide(); }
 
 // ── audio capture ──────────────────────────────────────────
 const audio = new AudioCapture(audioCtx);
