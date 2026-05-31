@@ -137,6 +137,10 @@ export class PrismPlayer {
     this.milkdropCanvas = createCanvas("milkdrop");
     this.shadertoyCanvas = createCanvas("shadertoy");
     this.shadertoyCanvas.classList.add("bg-canvas--hidden");
+    // Inline opacity so visibility works without consumer CSS. Same
+    // override behavior — prism.scott.ai's !important rules win.
+    this.shadertoyCanvas.style.opacity = "0";
+    this.shadertoyCanvas.style.pointerEvents = "none";
     container.appendChild(this.milkdropCanvas);
     container.appendChild(this.shadertoyCanvas);
 
@@ -292,13 +296,21 @@ export class PrismPlayer {
     if (which === "milkdrop") {
       this.milkdropCanvas.classList.remove("bg-canvas--hidden");
       this.milkdropCanvas.classList.add("bg-canvas--active");
+      this.milkdropCanvas.style.opacity = "1";
+      this.milkdropCanvas.style.pointerEvents = "";
       this.shadertoyCanvas.classList.add("bg-canvas--hidden");
       this.shadertoyCanvas.classList.remove("bg-canvas--active");
+      this.shadertoyCanvas.style.opacity = "0";
+      this.shadertoyCanvas.style.pointerEvents = "none";
     } else {
       this.shadertoyCanvas.classList.remove("bg-canvas--hidden");
       this.shadertoyCanvas.classList.add("bg-canvas--active");
+      this.shadertoyCanvas.style.opacity = "1";
+      this.shadertoyCanvas.style.pointerEvents = "";
       this.milkdropCanvas.classList.add("bg-canvas--hidden");
       this.milkdropCanvas.classList.remove("bg-canvas--active");
+      this.milkdropCanvas.style.opacity = "0";
+      this.milkdropCanvas.style.pointerEvents = "none";
     }
   }
 
@@ -391,5 +403,15 @@ function createCanvas(id: string): HTMLCanvasElement {
   canvas.id = id;
   canvas.className = "bg-canvas";
   canvas.setAttribute("aria-hidden", "true");
+  // Inline defaults so the player renders out of the box without
+  // consumer CSS. The deployed prism.scott.ai landing has its own
+  // .bg-canvas rules using !important, which override these and
+  // keep existing layout behavior intact.
+  canvas.style.position = "fixed";
+  canvas.style.inset = "0";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.display = "block";
+  canvas.style.zIndex = "0";
   return canvas;
 }
