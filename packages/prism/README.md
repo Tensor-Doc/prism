@@ -5,7 +5,10 @@ call `new PrismPlayer({ container })`, get a Milkdrop preset or
 Shadertoy fragment shader playing in the browser — reacting to
 whatever audio you connect.
 
-**▶ Try it live: [CodeSandbox demo](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)**
+**▶ Try it live in
+[CodeSandbox](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
+or
+[StackBlitz](https://stackblitz.com/github/Tensor-Doc/prism/tree/main/examples/codesandbox)**
 
 ```bash
 npm install @tensordoc/prism

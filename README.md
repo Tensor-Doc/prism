@@ -20,7 +20,9 @@ AI-generated shaders are in development.
 Live demo at [prism.scott.ai](https://prism.scott.ai).
 
 Play with the two-line embed in
-[CodeSandbox](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox).
+[CodeSandbox](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
+or
+[StackBlitz](https://stackblitz.com/github/Tensor-Doc/prism/tree/main/examples/codesandbox).
 
 Install from npm as [`@tensordoc/prism`](https://www.npmjs.com/package/@tensordoc/prism).
 
