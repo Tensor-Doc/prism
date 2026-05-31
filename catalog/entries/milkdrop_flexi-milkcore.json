@@ -1,5 +1,6 @@
 {
   "id": "milkdrop:flexi-milkcore",
+  "short_id": "JMIR49",
   "schema_version": 2,
   "source": {
     "type": "milkdrop",
