@@ -1,5 +1,9 @@
 # Prism
 
+<p align="center">
+  <img src="docs/hero.webp" alt="Geiss — Inkblot, a Milkdrop preset rendered live by Prism" width="720" />
+</p>
+
 **Generative visualization.** Signals in. Light fields out.
 
 Prism turns real-time signals into live visuals. Audio is one
