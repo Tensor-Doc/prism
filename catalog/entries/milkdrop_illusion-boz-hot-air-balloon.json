@@ -11,9 +11,42 @@
     "name": "Illusion & Boz - Hot Air Balloon",
     "author": "Illusion & Boz"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "gothic",
+      "monochromatic",
+      "atmospheric",
+      "contemplative"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#121316",
+      "#2b2d35",
+      "#606470"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "domain_repetition",
+      "warp_field"
+    ],
+    "technical_notes": "A central custom wave is mirrored bilaterally to form a delicate, gothic arch structure that reacts dynamically to the test signal. A vertical warp field combined with a low decay rate in sampler_main produces persistent, rain-like downward trails. High-frequency transients in the audio loop trigger bursts of fine, point-like custom shapes that disperse symmetrically across the dark canvas.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:24:22.787Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_illusion-boz-hot-air-balloon.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_illusion-boz-hot-air-balloon.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

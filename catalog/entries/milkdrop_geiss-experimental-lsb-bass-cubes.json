@@ -10,9 +10,40 @@
   "display": {
     "name": "geiss_experimental__LSB Bass Cubes"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "linear",
+      "oscilloscope"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#fcdde5",
+      "#dcd0f5"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.2,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A minimalist custom wave renders as a thin diagonal line across a black void. The waveform's vertical displacement and subtle color shifts are driven directly by the audio loop, with a high decay rate ensuring no frame feedback or persistent trails remain. It represents a stark, raw oscilloscope-style aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:41:54.617Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-experimental-lsb-bass-cubes.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-experimental-lsb-bass-cubes.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

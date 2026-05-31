@@ -11,9 +11,43 @@
     "name": "fiShbRaiN - a quiet death",
     "author": "fiShbRaiN"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cyberpunk",
+      "neon-noir",
+      "digital",
+      "reflective"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#0a0512",
+      "#8b00ff",
+      "#ff007f",
+      "#00ff66"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "bloom_glow",
+      "audio_gating"
+    ],
+    "technical_notes": "A central neon-magenta bloom is driven by the bass of the test signal, reflecting across a horizontal mirror plane to create a wet-floor effect. Vertical digital rain elements are rendered using custom waves or a structured warp field, with brightness modulated by treble frequencies. Frame feedback through sampler_main creates persistent vertical trails and a soft, glowing atmosphere.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:54:13.002Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-a-quiet-death.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-a-quiet-death.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

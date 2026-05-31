@@ -11,9 +11,42 @@
     "name": "Geiss - Iris",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "minimalist",
+      "dark",
+      "sparse",
+      "fluid"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#8a8a8a",
+      "#3a4c3f",
+      "#4c3a4b"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail",
+      "frame_feedback"
+    ],
+    "technical_notes": "A single custom wave is rendered as a complex, self-oscillating thread or ribbon against a deep black void. The wave's vertex equations are modulated by the treble and mid bands of the synthetic test signal, producing tight, coiled structures. A high decay rate in the frame feedback loop via sampler_main ensures that trails quickly dissolve, maintaining a stark, minimalist aesthetic.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:51:08.082Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-iris.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-iris.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

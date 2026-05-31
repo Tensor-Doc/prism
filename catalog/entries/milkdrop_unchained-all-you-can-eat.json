@@ -11,9 +11,44 @@
     "name": "Unchained - All You Can Eat",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "frenetic",
+      "scratchy",
+      "kinetic",
+      "electric"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#2e2d2b",
+      "#a68a56",
+      "#8b3a75"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "beat_burst",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A central custom wave draws a chaotic, high-frequency white scribble that reacts to the treble of the test signal. High-frequency feedback through sampler_main combined with a low decay rate produces a dense, scratchy matrix of persistent trails. The warp field is heavily modulated by the synthetic kick, triggering rapid zoom bursts and radial distortions.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:11:08.910Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-all-you-can-eat.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-all-you-can-eat.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

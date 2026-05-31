@@ -11,9 +11,44 @@
     "name": "amandio c - new life",
     "author": "amandio c"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "psychedelic",
+      "microscopic",
+      "golden",
+      "solar"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#e6c335",
+      "#4a2e0b",
+      "#d4b26f"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "custom_wave",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex radial warp field combined with domain repetition creates a recursive, sunflower-like structure. Custom waves are modulated by the test signal's bass and treble to form writhing, tentacle-like structures radiating from a central core. Frame feedback via sampler_main coupled with a high-brightness composite shader produces a shimmering, metallic golden-bronze texture that reacts dynamically to the audio loop.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:43:04.163Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_amandio-c-new-life.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_amandio-c-new-life.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Reenen & Telek - Slow Shift Matrix (bb4.5 (Dynamic Beat) Mix)",
     "author": "Reenen & Telek"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "crystalline",
+      "geometric",
+      "psychedelic",
+      "turbulent"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#8b0000",
+      "#8a2be2",
+      "#2e8b57",
+      "#4682b4"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "hue_cycle",
+      "frame_feedback",
+      "warp_field",
+      "fbm_noise",
+      "domain_repetition"
+    ],
+    "technical_notes": "A complex geometric lattice is generated via domain repetition, overlaid on a turbulent FBM noise background. The entire structure undergoes a rapid hue_cycle, modulating through a wide spectrum in response to the synthetic test signal. Per-pixel warp equations distort the grid lines on bass transients, while sampler_main feedback creates a dense, layered depth.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:42:09.405Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_reenen-telek-slow-shift-matrix-bb4-5-dynamic-beat-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_reenen-telek-slow-shift-matrix-bb4-5-dynamic-beat-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

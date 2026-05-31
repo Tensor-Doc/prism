@@ -11,9 +11,39 @@
     "name": "Geiss - Rose 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "monochrome",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom shape configured as a closed circle deforms subtly in response to the synthetic test signal. The decay rate is set to maximum, leaving no persistent trails in sampler_main and resulting in an extremely stark, minimalist presentation on a pure black background.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:06:26.839Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

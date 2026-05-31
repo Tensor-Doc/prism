@@ -11,9 +11,40 @@
     "name": "Geiss - Game of Life 2b",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "fluid",
+      "void",
+      "stark"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#a78bfa",
+      "#38bdf8",
+      "#22d3ee",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom wave is rendered on a black background, with its vertical displacement modulated by the synthetic test signal. The wave's color cycles slowly through a hue rotation from lavender to cyan and white. The absence of frame feedback or warp fields results in a stark, minimalist oscilloscope aesthetic.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:47:25.202Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-game-of-life-2b.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-game-of-life-2b.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

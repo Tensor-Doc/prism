@@ -11,9 +11,41 @@
     "name": "Geiss - Mega Swirl 3 (color tweak)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "radar",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#ffcc99",
+      "#ff6600",
+      "#ff3300"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A custom wave or custom shape renders a minimalist radar-like circle and radial wedge. The perimeter deforms dynamically based on the bass attenuated of the synthetic test signal, creating a hand-drawn, organic wobble on beat hits. Color shifts from pale peach to deep red, mapping amplitude or time to a simple hue cycle.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:55:00.345Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-mega-swirl-3-color-tweak.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-mega-swirl-3-color-tweak.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Geiss - Hurricane",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "vortex",
+      "minimalist",
+      "fluid",
+      "cosmic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#ffffff",
+      "#222222",
+      "#888888",
+      "#d0e5eb"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A polar warp field drives a continuous spiral rotation, drawing a bright central core outward into smoky trails via frame feedback in sampler_main. A high-frequency custom wave overlays a scribbly oscilloscope trace that orbits the center, reacting dynamically to treble spikes in the synthetic test signal. The central glow and spiral arms expand dramatically on bass kicks, modulated by a moderate decay rate that preserves the fluid vortex structure.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:48:57.065Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-hurricane.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-hurricane.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Krash + Illusion - Spiral Movement",
     "author": "Krash + Illusion"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "calligraphic",
+      "fluid",
+      "organic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#e5c1bd",
+      "#5bb0a5"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "Custom wave ribbons and dotted trails are drawn dynamically, modulated by the high frequencies of the synthetic test signal. A complex per-pixel warp field drives a spiraling feedback loop through sampler_main, creating a swirling, textured vortex that expands and contracts on bass hits. The low decay rate preserves the painterly, high-contrast trails as they are drawn into the central singularity.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:25:25.561Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-illusion-spiral-movement.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-illusion-spiral-movement.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,41 @@
     "name": "Geiss - Cosmic Dust 2 - Game of Life - zoom mix",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "oscilloscope",
+      "void",
+      "electric"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#55aaff",
+      "#ff55aa",
+      "#55ffaa"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom_wave oscilloscope line splits the dark void, modulating its amplitude and thickness in response to the mid and treble bands of the synthetic test signal. The wave transitions from a continuous smooth line to a high-frequency dashed pattern gated by treble transients. Hue cycling rotates the line's color through a simple spectrum against a high-decay black background.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:39:57.740Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2-game-of-life-zoom-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2-game-of-life-zoom-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

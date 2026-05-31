@@ -10,9 +10,40 @@
   "display": {
     "name": "Mig_032_version3"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "oscilloscope",
+      "stark"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#0000ff",
+      "#00e5ff",
+      "#5c5cff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom wave is rendered horizontally across a black void, directly driven by the test signal's waveform. The wave's amplitude and complexity scale with the synthetic kick, while its color cycles through cool tones (blue, cyan, and indigo) via a slow hue rotation. No frame feedback (sampler_main is cleared or decay is set to 1.0) or warp field is present, resulting in a stark, oscilloscope-like aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:24:49.147Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-032-version3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-032-version3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

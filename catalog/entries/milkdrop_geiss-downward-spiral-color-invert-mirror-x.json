@@ -11,9 +11,38 @@
     "name": "Geiss - Downward Spiral - color invert mirror x",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "fluid"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#0077ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave preset rendering a single horizontal ribbon against a black void. The wave's amplitude and vertical thickness are modulated directly by the low-frequency bands of the synthetic test signal. High decay rate ensures no persistent trails or frame feedback, leaving a stark, high-contrast oscilloscope aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:44:18.909Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-downward-spiral-color-invert-mirror-x.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-downward-spiral-color-invert-mirror-x.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

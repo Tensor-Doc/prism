@@ -11,9 +11,41 @@
     "name": "Geiss - Electric Storm Half-Digital 2 (Fiesta Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "dark",
+      "electronic"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#9400d3",
+      "#00ffff",
+      "#0000ff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom_wave renders a thin horizontal oscilloscope line and a sharp diagonal wedge against a pure black background. The wave's vertical displacement is gated by the mid and treble frequencies of the synthetic test signal. With no frame feedback and an instantaneous decay, the visual remains extremely sparse while hue_cycle slowly rotates the line's color.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:44:50.964Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-electric-storm-half-digital-2-fiesta-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-electric-storm-half-digital-2-fiesta-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

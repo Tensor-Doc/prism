@@ -11,9 +11,43 @@
     "name": "Geiss - Cosmic Dust 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "chaotic",
+      "glitchy",
+      "retro-futuristic",
+      "frenetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#8a2be2",
+      "#00ffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex custom wave draws chaotic, scribbled trajectories driven by treble frequencies, superimposed over a perspective-warped grid of motion vectors. High feedback gain in sampler_main combined with low decay causes color-blocked shapes to expand and eventually saturate the screen into a complete white-out. Sudden state transitions and color shifts are gated by the bass transients of the synthetic test signal.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:39:01.264Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

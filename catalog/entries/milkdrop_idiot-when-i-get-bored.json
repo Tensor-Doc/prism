@@ -11,9 +11,42 @@
     "name": "Idiot - When I Get Bored",
     "author": "Idiot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "fluid",
+      "abyssal",
+      "mathematical"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#041c3c",
+      "#124e5f",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A central custom wave draws a high-frequency scribble that expands dynamically with treble transients from the test signal. A spiral warp field driven by per-pixel equations deforms the frame feedback, while a low decay rate in sampler_main preserves the fine, thread-like trails of the rotating vortex. Subtle hue cycling shifts the background color space between deep indigo and oceanic teal.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:23:17.947Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot-when-i-get-bored.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot-when-i-get-bored.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

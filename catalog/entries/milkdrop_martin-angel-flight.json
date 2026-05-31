@@ -11,9 +11,37 @@
     "name": "martin - angel flight",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#5a189a",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single custom wave is rendered at the bottom of the screen, modulated by the low-to-mid frequencies of the synthetic test signal. High decay settings prevent any persistent frame feedback in sampler_main, causing the screen to fall into complete darkness once the wave ceases after five seconds.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:16:37.251Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-angel-flight.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-angel-flight.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

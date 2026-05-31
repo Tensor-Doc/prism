@@ -11,9 +11,42 @@
     "name": "Rovastar + Rocke - Sugar Spun Sister",
     "author": "Rovastar + Rocke"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "kinetic",
+      "vortex",
+      "electric"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#0000cc",
+      "#1a75ff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "beat_burst"
+    ],
+    "technical_notes": "A central custom_wave renders a chaotic, scribbled line structure that expands dynamically with the treble and mid bands of the synthetic test signal. This central element is fed into a per-pixel warp shader that applies a continuous spiral rotation and zoom, creating a deep blue vortex. High frame feedback through sampler_main with a moderate decay rate preserves the calligraphic, swirling trails of the central emitter.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:51:52.688Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-rocke-sugar-spun-sister-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-rocke-sugar-spun-sister-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-golden-mirror.webm",
+    "thumb": "/thumbs/milkdrop_martin-golden-mirror.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -28,6 +30,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

@@ -11,9 +11,37 @@
     "name": "martin - another kind of groove",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "technical"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#70b5eb"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom wave is rendered on a pure black background. The wave's vertical displacement directly maps the waveform of the synthetic test signal, transitioning from smooth low-frequency swells to jagged high-frequency transients. The complete absence of frame feedback or decay trails results in zero persistence, creating a stark, real-time oscilloscope aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:17:38.924Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-another-kind-of-groove.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-another-kind-of-groove.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

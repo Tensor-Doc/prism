@@ -11,7 +11,34 @@
     "name": "Flexi - mindblob [where it's at now]",
     "author": "Flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "monochrome"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave or custom shape draws a minimalist pendulum-like structure consisting of a circle and a vertical line. The line's vertical scale and brightness modulate subtly in response to the bass frequencies of the synthetic test signal. The preset features a completely black background with zero frame feedback or warp field, resulting in a stark, high-contrast monochrome aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:19:21.478Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +47,9 @@
       {
         "name": "pic"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-mindblob-where-it-s-at-now.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-mindblob-where-it-s-at-now.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

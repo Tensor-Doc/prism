@@ -11,9 +11,43 @@
     "name": "Geiss - Cycloid 1 - painterly vortex",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "painterly",
+      "geological",
+      "fluid",
+      "earthy"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#b5891a",
+      "#8c250c",
+      "#5c6b1b"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "Per-pixel warp shader applies a complex advection field driven by the synthetic test signal's bass, while a low decay rate in sampler_main creates highly persistent, painterly striated trails resembling geological strata. Thin, jagged custom waves are modulated by treble transients, tracing bright electrical paths across the organic ridges. The color palette slowly cycles through earthy ochres, deep rusts, and mossy greens via a cosine-based mapping.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:40:09.870Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cycloid-1-painterly-vortex.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cycloid-1-painterly-vortex.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,13 +11,45 @@
     "name": "Geiss - Cosmic Dust 2 - quasistatic noise desat trails 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "stark",
+      "minimalist",
+      "strobe",
+      "geometric"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#00ffff",
+      "#ff00ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
+    ],
+    "technical_notes": "A high decay rate instantly clears the frame buffer, preventing persistent trails in sampler_main. Discrete, solid geometric blocks are triggered via audio_gating on the bass attenuated band of the synthetic test signal. The rendering displays high-contrast, strobing custom shapes that flash in sync with the beat bursts.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:37:25.555Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "fw_wrenches"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-desat-trails-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-desat-trails-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,13 +11,43 @@
     "name": "Geiss - Electric Storm Half-Digital 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#8a00d4",
+      "#00f0ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A minimalist, dark preset consisting of a single custom_wave oscilloscope line and a static diagonal vector on a black background. The horizontal wave's amplitude and ripple modulate in response to the mid-range frequencies of the test signal, while the hue cycles slowly through purple, blue, cyan, and white. The lack of frame_feedback or warp_field results in zero persistent trails, creating a clean, sparse aesthetic.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:45:21.626Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "seaweed"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-electric-storm-half-digital-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-electric-storm-half-digital-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

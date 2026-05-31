@@ -11,9 +11,39 @@
     "name": "Geiss - Constant Velocity - angular blur",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave circle is rendered on a black background, with its radial boundary modulated by the audio loop's frequency bands. The preset lacks any frame feedback or warp shaders, resulting in a stark, high-contrast, zero-decay visual state. The motion is driven entirely by real-time vertex displacement on the custom wave.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:35:18.866Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-constant-velocity-angular-blur.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-constant-velocity-angular-blur.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

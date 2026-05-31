@@ -10,9 +10,40 @@
   "display": {
     "name": "Mig_010"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "geometric"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ff3a21",
+      "#fce4c8"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom shape renders a rotating radial wedge enclosed in a thin circular border against a pitch-black void. The rotation of the wedge is driven by a constant phase accumulator, while its color shifts from cream to orange and deep red, modulated by the synthetic test signal's low-frequency energy. With no frame feedback or warp field active, the screen remains entirely sparse and clean, focusing purely on the central geometric element.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:23:30.658Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-010.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-010.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

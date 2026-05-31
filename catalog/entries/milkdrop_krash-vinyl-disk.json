@@ -11,9 +11,43 @@
     "name": "Krash - Vinyl Disk",
     "author": "Krash"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "stark",
+      "strobe",
+      "kinetic",
+      "electric"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ffffff",
+      "#4cd964",
+      "#4a86e8",
+      "#111111"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "frame_feedback",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central custom wave horizon line and emitter react dynamically to the synthetic test signal. Beat-gated triggers on the synthetic kick drive extreme gamma and brightness adjustments, causing the screen to flash white and expand. During decay phases, frame feedback through sampler_main is constrained into a rotating circular mask, revealing radial motion vectors.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:26:52.007Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-vinyl-disk.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-vinyl-disk.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

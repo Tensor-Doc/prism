@@ -11,9 +11,40 @@
     "name": "Geiss - Rose 5 Crossfire Beats (composite remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "mechanical",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#ff5522",
+      "#ffaa00",
+      "#ff3344"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.3,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom shape draws a central circular gauge with an internal pointer. The outer perimeter deforms dynamically in response to the bass and mid frequencies of the synthetic test signal, while the pointer's angle sweeps. The background remains entirely black with a high decay rate, preventing any frame feedback or trails from persisting.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:09:19.636Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-5-crossfire-beats-composite-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-5-crossfire-beats-composite-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

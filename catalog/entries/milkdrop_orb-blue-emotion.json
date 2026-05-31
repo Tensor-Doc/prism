@@ -11,9 +11,42 @@
     "name": "ORB - Blue Emotion",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "geometric",
+      "recursive",
+      "kaleidoscopic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#0055ff",
+      "#d02080",
+      "#00cc33",
+      "#ccaa22"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "domain_repetition",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A grid-based domain repetition shader tiles the screen, feeding the previous frame back into itself via sampler_main to create a recursive, nested fractal pattern. Concentric circular masks scale dynamically in response to the bass of the synthetic test signal. Rapid hue cycling shifts the entire palette through vibrant primary and secondary colors on treble transients.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:31:30.781Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-blue-emotion.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-blue-emotion.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

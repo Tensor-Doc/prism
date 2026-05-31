@@ -11,9 +11,38 @@
     "name": "flexi + fishbrain - neon mindblob grafitti",
     "author": "flexi + fishbrain"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#00ff00",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave rendering a single horizontal green waveform against a pitch-black background. The decay rate is set to maximum, leaving zero persistent trails or frame feedback in sampler_main. The wave's amplitude and vertical displacement are directly driven by the bass and mid frequencies of the synthetic test signal, creating a clean, classic oscilloscope aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:55:54.002Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-neon-mindblob-grafitti.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-neon-mindblob-grafitti.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

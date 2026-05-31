@@ -11,9 +11,43 @@
     "name": "Geiss - Vortex 2 Painterly",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "minimalist",
+      "organic",
+      "void",
+      "contemplative"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#dcdcdc",
+      "#8b8b8b",
+      "#1a2d30"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "decay_trail"
+    ],
+    "technical_notes": "A highly reactive custom wave acts as a scribbly emitter, jittering in response to the treble and mid bands of the test signal. Frame feedback via sampler_main is processed through a per-pixel warp shader that stretches and distorts the history buffer, generating organic, smoke-like, or spiky scale-like trails. The high decay rate and dark background maintain a sparse, minimalist aesthetic where only the warped history of the wave is visible.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:18:03.959Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-vortex-2-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-vortex-2-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

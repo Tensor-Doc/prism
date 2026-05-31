@@ -11,9 +11,39 @@
     "name": "Geiss - Reaction Diffusion (Relief Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#55ffaa",
+      "#ffaa55"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom_wave diagonal line renders across a dark void, directly plotting the audio waveform of the synthetic test signal. The absence of frame feedback via sampler_main or any warp field equations leaves a completely black background with zero decay trails. The line's color undergoes a continuous hue_cycle, while its amplitude and high-frequency ripples modulate in sync with the treble and mid bands of the test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:21:51.150Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-relief-mix-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-relief-mix-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

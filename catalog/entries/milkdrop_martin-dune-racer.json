@@ -17,7 +17,9 @@
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-dune-racer.webm",
+    "thumb": "/thumbs/milkdrop_martin-dune-racer.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24822 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

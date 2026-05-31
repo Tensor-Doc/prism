@@ -11,9 +11,44 @@
     "name": "Rovastar - Fractopia (Upspoken Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "frenetic",
+      "psychedelic",
+      "retro-comic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#e6df44",
+      "#a370b5"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition"
+    ],
+    "technical_notes": "A recursive scalloped tunnel is generated via zoom and rotation feedback loops sampled through sampler_main. High-contrast thresholding and edge detection in the composite shader render bold, comic-book-style black outlines over flat color fields. Rapid palette swaps and geometric state jumps are heavily driven by audio gating, reacting dynamically to the synthetic kick and transients within the test signal.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:55:00.249Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-fractopia-upspoken-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-fractopia-upspoken-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

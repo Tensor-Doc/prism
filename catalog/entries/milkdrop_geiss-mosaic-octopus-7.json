@@ -11,9 +11,41 @@
     "name": "Geiss - Mosaic Octopus 7",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "geometric",
+      "oscilloscope"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#b0e0e6",
+      "#dda0dd",
+      "#ffc0cb",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave preset rendering a single deformable circular ring and an internal wedge pointer against a solid black background. The outer ring's vertices deform dynamically in response to the low and mid-frequency bands of the synthetic test signal, while the wedge rotates continuously. Colors cycle through a soft pastel palette via a slow hue rotation, with no frame feedback or warp field applied, maintaining a stark, high-contrast aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:56:34.398Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-mosaic-octopus-7.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-mosaic-octopus-7.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

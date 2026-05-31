@@ -11,9 +11,39 @@
     "name": "shifter - robotopia",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "dark",
+      "sparse",
+      "minimalist"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#000000",
+      "#110520",
+      "#080818"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.05,
+      "treble": 0.1
+    },
+    "techniques": [
+      "particle_system",
+      "domain_repetition"
+    ],
+    "technical_notes": "A highly minimalist, dark preset featuring a sparse symmetric layout of single-pixel particles. The system shows almost no response to the synthetic test signal, with high decay rates keeping the screen nearly entirely black except for a few dim, static points of light.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:45:47.395Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-robotopia.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-robotopia.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

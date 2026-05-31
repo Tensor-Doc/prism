@@ -11,9 +11,42 @@
     "name": "Rovastar - Hyperspace",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "strobe",
+      "geometric",
+      "glitchy",
+      "high-contrast"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ffffff",
+      "#20b2aa",
+      "#8b3a3a",
+      "#121212"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "beat_burst",
+      "custom_wave",
+      "frame_feedback",
+      "audio_gating"
+    ],
+    "technical_notes": "The preset exhibits extreme high-contrast strobing driven by beat-gated bursts from the synthetic test signal, causing full-screen whiteouts. A massive, over-brightened geometric custom shape dominates the foreground, while fine, chaotic custom waves react to treble frequencies. The background features a grid of motion vectors and shifts between cyan and reddish-brown palettes via discrete audio-gated state changes.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:56:17.642Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-hyperspace.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-hyperspace.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

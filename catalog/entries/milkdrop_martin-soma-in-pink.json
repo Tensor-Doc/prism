@@ -11,9 +11,37 @@
     "name": "martin - soma in pink",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#9b30ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist preset consisting solely of a custom wave rendered as a horizontal purple line across a black void. The wave reacts to the synthetic test signal by breaking into dashed segments and modulating in amplitude, with no frame feedback (sampler_main) or warp field active. The high decay rate ensures no persistent trails are left behind.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:32:52.459Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-soma-in-pink.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-soma-in-pink.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

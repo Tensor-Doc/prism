@@ -12,7 +12,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_mig-014-version2.webm",
+    "thumb": "/thumbs/milkdrop_mig-014-version2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -20,6 +22,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24822 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

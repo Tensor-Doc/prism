@@ -11,9 +11,41 @@
     "name": "Geiss - Color Pox (Acid Impression Mix) (color saturation remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "vector"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#00ff00",
+      "#0070ff",
+      "#e04080",
+      "#d07020"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist oscilloscope-style preset featuring a custom_wave that renders a single fluid waveform alongside a sharp, reactive needle element. The color of the wave cycles abruptly on detected beats from the synthetic test signal, transitioning through a wide palette on a black background. Minimal decay and the absence of feedback samplers (such as sampler_main) keep the vector lines extremely crisp and clean.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:33:07.487Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-color-pox-acid-impression-mix-color-saturation-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-color-pox-acid-impression-mix-color-saturation-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

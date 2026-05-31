@@ -11,9 +11,42 @@
     "name": "ORB - Saturns Rings",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "vector",
+      "frenetic",
+      "orbital"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#00ff00",
+      "#0000ff",
+      "#ff0000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "Custom waves are rendered as dotted orbital trajectories that spin and warp in a simulated 3D space. The synthetic kick in the test signal triggers rapid hue cycling and sudden radial expansions of the orbits. A high decay rate keeps the background clean, emphasizing the sharp, vector-like precision of the custom wave equations.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:36:41.589Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-saturns-rings.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-saturns-rings.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,7 +11,37 @@
     "name": "martin - push ax",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#0052ff",
+      "#001a66"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A sharp geometric custom wave wedge is instantiated and scaled by beat-gated triggers from the synthetic kick. The preset relies on a high decay rate to quickly dim the shape back into the black void between beats, creating a stark, high-contrast visual. Minimal frame feedback or warp field calculations are present, leaving the background entirely dark.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:30:08.151Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +50,9 @@
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-push-ax.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-push-ax.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

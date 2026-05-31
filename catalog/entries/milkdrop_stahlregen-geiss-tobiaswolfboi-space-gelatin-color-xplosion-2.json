@@ -11,9 +11,38 @@
     "name": "Stahlregen & Geiss + TobiasWolfBoi - Space Gelatin (Color Xplosion 2)",
     "author": "Stahlregen & Geiss + TobiasWolfBoi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#f5a623"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom shape is rendered as a deformed yellow circle with an interior wedge, appearing only during peak audio events. High decay rates instantly clear the screen to black, leaving no persistent trails. The shape's vertex displacement and radius are driven by the bass threshold of the synthetic test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:03:18.509Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

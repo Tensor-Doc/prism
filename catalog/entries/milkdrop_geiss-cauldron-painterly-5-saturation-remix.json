@@ -11,9 +11,40 @@
     "name": "Geiss - Cauldron - painterly 5 (saturation remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "cosmic",
+      "dark"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#00ffff",
+      "#ff0055",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "A custom wave is rendered as a parametric orbiting ribbon against a dark void, with its vertices modulated by the high-frequency components of the synthetic test signal. A high decay rate in the feedback loop ensures that trails fade rapidly, leaving only a sparse, snappy trace. The ribbon's color cycles dynamically through a simple hue rotation scheme.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:32:06.521Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron-painterly-5-saturation-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron-painterly-5-saturation-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

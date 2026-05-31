@@ -11,9 +11,38 @@
     "name": "Geiss - MicroCheckers 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscillographic",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#ece9d8"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.7,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "Two horizontal custom waves are rendered on a pure black background with no frame feedback or warp field. The waves act as real-time oscilloscopes, displaying high-frequency ripples directly modulated by the mid and treble bands of the synthetic test signal. The absence of decay trails or sampler_main feedback creates a stark, instantaneous visual response.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:56:02.756Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-microcheckers-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-microcheckers-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

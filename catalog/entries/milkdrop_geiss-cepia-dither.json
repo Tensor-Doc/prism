@@ -11,9 +11,39 @@
     "name": "Geiss - Cepia Dither",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#c8b0c8",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "Two custom waves render as thin, oscillating lines across a dark void, directly driven by the mid and treble frequencies of the synthetic test signal. High decay rate ensures no persistent trails remain, leaving the screen completely black between audio triggers. Simple and highly minimalist, focusing entirely on raw waveform representation.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:32:35.312Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cepia-dither.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cepia-dither.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

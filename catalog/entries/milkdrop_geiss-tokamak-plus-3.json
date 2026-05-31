@@ -11,9 +11,43 @@
     "name": "Geiss - Tokamak Plus 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "fluid",
+      "hypnotic",
+      "atmospheric"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#121212",
+      "#8fa89b",
+      "#a68c96",
+      "#3d3d3d"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.7,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Custom waves are rendered as high-frequency modulated lines that accumulate in the feedback buffer via sampler_main with a low decay rate, creating dense, ribbon-like trails. A per-pixel warp shader driven by the synthetic test signal's bass frequencies distorts the feedback coordinate space, twisting the trails into complex organic folds. The color palette cycles between muted sage greens and dusty mauves, modulated by low-frequency oscillators.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:15:52.783Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-tokamak-plus-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-tokamak-plus-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

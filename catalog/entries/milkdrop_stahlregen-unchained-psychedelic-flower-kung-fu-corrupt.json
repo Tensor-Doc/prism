@@ -11,9 +11,44 @@
     "name": "Stahlregen + Unchained - Psychedelic Flower Kung Fu (Corrupt)",
     "author": "Stahlregen + Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "strobe",
+      "chaotic",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#ff00ff",
+      "#0000ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "warp_field",
+      "frame_feedback",
+      "chromatic_split",
+      "custom_wave"
+    ],
+    "technical_notes": "The preset exhibits extreme audio gating, flashing from a black void into complex warped tunnels on strong bass transients of the test signal. A per-pixel warp shader combined with high decay in sampler_main creates rapid, sweeping distortions of custom shapes (spheres and concentric rings). Chromatic split artifacts are visible at the boundaries of the geometric elements during peak audio thresholds.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:04:17.784Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_stahlregen-unchained-psychedelic-flower-kung-fu-corrupt.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_stahlregen-unchained-psychedelic-flower-kung-fu-corrupt.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

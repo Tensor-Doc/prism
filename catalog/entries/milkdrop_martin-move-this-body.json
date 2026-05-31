@@ -11,9 +11,42 @@
     "name": "martin - move this body",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "isolated",
+      "geometric"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#a0b0ff",
+      "#a0ffd0",
+      "#ffa0b0",
+      "#d0ff80"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "cosine_palette",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave or shape is rendered in the center of a dark void, with its scale and deformation driven directly by the synthetic test signal. High decay rate prevents any frame feedback or trails, leaving the background entirely black. The shape's color cycles through a pastel cosine palette mapped to a slow time variable, while its vertex displacement reacts to high-frequency transients.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:26:41.529Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-move-this-body.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-move-this-body.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,7 +11,34 @@
     "name": "Martin - journey into space",
     "author": "Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void",
+      "sparse"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#00e5ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.7,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom_wave acts as a stark oscilloscope, rendering the raw audio waveform of the synthetic test signal. The preset lacks any frame feedback or decay, causing the cyan line to update instantaneously against a pure black background. The vertical displacement is driven directly by the real-time amplitude of the audio loop.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:29:02.657Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +47,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-journey-into-space.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-journey-into-space.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

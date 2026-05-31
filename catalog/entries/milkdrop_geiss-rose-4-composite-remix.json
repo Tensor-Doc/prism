@@ -11,9 +11,40 @@
     "name": "Geiss - Rose 4 (composite remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#fbcfe8"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.2,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "An extremely minimalist preset rendering a single custom wave line that acts as a rotating oscilloscope needle in a black void. The needle's length, color, and tip deformation are modulated by the synthetic test signal, with high-frequency transients causing the tip to squiggle. A high decay rate ensures no persistent trails remain, maintaining a stark, high-contrast aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:07:55.519Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-4-composite-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-4-composite-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,44 @@
     "name": "amandio c - salty beats - spiral",
     "author": "amandio c"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "cosmic",
+      "sharp",
+      "retro-futuristic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#b83a4b",
+      "#f5c2c7"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "particle_system",
+      "decay_trail",
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A complex spiral constructed from nested custom shapes (triangles) rotates and zooms in response to the synthetic test signal's bass frequencies. Discrete hexagonal particles are emitted as a particle system, leaving persistent decay trails through frame feedback in sampler_main. The camera's dramatic perspective shifts and coordinate transformations are gated by beat-burst events.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:44:14.462Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_amandio-c-salty-beats-spiral.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_amandio-c-salty-beats-spiral.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

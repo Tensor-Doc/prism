@@ -11,9 +11,38 @@
     "name": "Goody - Need - Gloam",
     "author": "Goody"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "oscillographic"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.8,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave renders as a horizontal oscilloscope line reacting directly to the synthetic test signal. High decay rate prevents frame-to-frame persistence, leaving a stark black void with no sampler_main feedback or warp field active. The waveform segments and modulates in thickness based on high-frequency and mid-band transients.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:20:32.580Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_goody-need-gloam.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_goody-need-gloam.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

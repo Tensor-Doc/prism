@@ -11,13 +11,41 @@
     "name": "martin - gate to moria",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#b000b0"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single custom wave is rendered as a central horizontal ribbon, modulated directly by the mid and treble frequencies of the synthetic test signal. The background remains entirely black with no frame feedback or warp field active, resulting in a highly minimalist and sparse presentation. The ribbon's magenta hue remains constant throughout the capture.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:22:47.236Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-gate-to-moria.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-gate-to-moria.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,34 @@
     "name": "Geiss - Reaction Diffusion (Puddle Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "dark",
+      "minimalist",
+      "silent"
+    ],
+    "motion": 0,
+    "palette_anchor": [
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [],
+    "technical_notes": "The screen remains entirely black throughout the duration of the capture, indicating no active rendering or visual response to the synthetic test signal. No feedback loops, shaders, or custom shapes are visible, resulting in a complete void.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:03:45.712Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-puddle-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-puddle-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

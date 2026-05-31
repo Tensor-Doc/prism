@@ -11,9 +11,41 @@
     "name": "Rovastar + Loadus + Geiss - Tone-mapped FractalDrop 7c",
     "author": "Rovastar + Loadus + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "contemplative",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#0a0202",
+      "#02020a",
+      "#020a02",
+      "#0a0a02"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Two thin horizontal custom_wave elements exhibit subtle vertical displacement driven by the mid-frequencies of the test signal. A slow hue_cycle shifts the minimalist, near-black background through deep red, blue, green, and amber phases. The central region features a faint, soft-edged glow modulated by bass frequencies, utilizing a high decay rate to maintain a stark, atmospheric void.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:49:39.660Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-loadus-geiss-tone-mapped-fractaldrop-7c.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-geiss-tone-mapped-fractaldrop-7c.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

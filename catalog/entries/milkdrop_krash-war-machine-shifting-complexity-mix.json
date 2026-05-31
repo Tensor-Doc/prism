@@ -11,9 +11,43 @@
     "name": "Krash - War Machine (Shifting Complexity Mix)",
     "author": "Krash"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "organic",
+      "textured",
+      "frenetic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#5c0a13",
+      "#a61626",
+      "#ffffff",
+      "#cf6e7a"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "A custom wave rendering a high-frequency oscilloscope trace is fed into a spiraling warp field. Frame feedback through sampler_main with low decay creates a dense, overlapping lattice of crimson trails resembling woven textiles. The synthetic test signal's high-frequency transients drive the erratic displacement of the custom wave, while bass kicks modulate the radial zoom and rotation.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:27:27.066Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-war-machine-shifting-complexity-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-war-machine-shifting-complexity-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

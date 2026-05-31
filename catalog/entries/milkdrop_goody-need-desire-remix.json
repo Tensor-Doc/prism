@@ -11,9 +11,38 @@
     "name": "Goody - Need - Desire remix",
     "author": "Goody"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void",
+      "technical"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.8,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A stark, minimalist oscilloscope rendering a single horizontal custom_wave across a black void. The wave directly plots the time-domain audio displacement of the test signal with zero frame feedback or decay. There are no pixel shaders or warp fields applied, resulting in a pure, raw signal visualization.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:20:00.928Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_goody-need-desire-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_goody-need-desire-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

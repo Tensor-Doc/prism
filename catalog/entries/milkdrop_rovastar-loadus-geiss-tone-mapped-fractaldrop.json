@@ -11,13 +11,41 @@
     "name": "Rovastar + Loadus + Geiss - Tone-mapped FractalDrop",
     "author": "Rovastar + Loadus + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "sterile",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#9ca3db"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single custom wave element renders the raw audio waveform horizontally across a pitch-black screen. The absence of frame feedback or warp shaders results in a stark, instantaneous oscilloscope presentation. The wave's vertical displacement and thickness modulate directly with the amplitude of the synthetic test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:50:12.778Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-loadus-geiss-tone-mapped-fractaldrop.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-geiss-tone-mapped-fractaldrop.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

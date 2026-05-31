@@ -11,9 +11,44 @@
     "name": "Rovastar - Demon Sunflower (Double Resistance Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cybernetic",
+      "frenetic",
+      "metallic",
+      "visceral"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#2b2d30",
+      "#00f0ff",
+      "#b026ff",
+      "#e0e0e0"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "A complex per-pixel warp shader drives a fluid-like feedback loop through sampler_main, creating a metallic, organic texture. High-energy transients in the synthetic test signal trigger a dramatic color inversion and solarization effect in the composite shader, gating the background brightness. The central wireframe custom wave modulates its geometry and color in response to treble frequencies.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:54:21.890Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-demon-sunflower-double-resistance-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-demon-sunflower-double-resistance-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

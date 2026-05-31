@@ -11,13 +11,44 @@
     "name": "ORB - Crysal Storm",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "void",
+      "glitchy"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#7c0010"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist, dark preset that remains in a void state until triggered by the synthetic kick of the test signal. Upon beat detection, a structured grid of horizontal red dashed lines is drawn via custom waves or a repeating per-pixel shader. A very high decay rate ensures an almost instantaneous return to black between audio triggers.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:32:01.243Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "grad3"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-crysal-storm.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-crysal-storm.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -10,9 +10,43 @@
   "display": {
     "name": "Mig_Oscilloscope022 b"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "strobe",
+      "cosmic",
+      "void"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0a0a0a",
+      "#2c3d3d",
+      "#4a3f41",
+      "#f5eef0"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "warp_field",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A high decay rate creates a dark, strobing void where explosive radial warp fields are gated to the bass of the synthetic test signal. During peak transients, custom waves rendering vertical lines and curved waveforms flash into view, composited with a bright bloom pass. The radial zoom and rotation are driven by attenuated audio bands, collapsing rapidly back into a near-black state.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:34:47.904Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-oscilloscope022-b.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-oscilloscope022-b.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

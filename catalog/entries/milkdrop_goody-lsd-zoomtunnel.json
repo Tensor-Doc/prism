@@ -11,9 +11,43 @@
     "name": "Goody - LSD Zoomtunnel",
     "author": "Goody"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "hypnotic",
+      "cosmic",
+      "sparse"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#08080c",
+      "#2b050c",
+      "#49a049",
+      "#801020"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "audio_gating",
+      "hue_cycle",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "Custom waves render concentric rings that are modulated by the audio loop's bass frequencies, creating a pulsing spiral. Frame feedback via sampler_main creates a deep, receding tunnel effect that flashes intensely during bass transients. A low decay rate allows the trails of the custom waves to persist, while a hue cycle shifts the palette from deep greens to fiery reds and purples.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:19:14.095Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_goody-lsd-zoomtunnel.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_goody-lsd-zoomtunnel.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

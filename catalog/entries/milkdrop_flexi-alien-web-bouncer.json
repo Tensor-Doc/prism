@@ -11,9 +11,38 @@
     "name": "flexi - alien web bouncer",
     "author": "flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "fluid",
+      "void"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#00e5ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave is drawn as a closed circle using polar coordinates, with its radial amplitude modulated by the high-frequency bands of the synthetic test signal. The coordinate center of the wave drifts slowly across the screen, guided by low-frequency oscillators. High decay prevents any persistent trails, leaving a stark, clean vector aesthetic against a pure black background.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:58:20.638Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-alien-web-bouncer.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-alien-web-bouncer.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

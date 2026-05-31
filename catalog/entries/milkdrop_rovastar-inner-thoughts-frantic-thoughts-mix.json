@@ -11,9 +11,43 @@
     "name": "Rovastar - Inner Thoughts (Frantic Thoughts Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kinetic",
+      "retro-futuristic",
+      "dark"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#000000",
+      "#e65c00",
+      "#800000",
+      "#ff0055"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "beat_burst"
+    ],
+    "technical_notes": "Custom wave equations render sharp linear segments that spiral inward to form a geometric tunnel. A low decay rate in the frame feedback loop via sampler_main creates persistent, glowing trails that trace the path of the lines. The synthetic test signal's bass kicks trigger sudden zoom and rotation shifts, while mid-frequency energy modulates the undulating waveform on the periphery.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:57:27.805Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-inner-thoughts-frantic-thoughts-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-inner-thoughts-frantic-thoughts-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

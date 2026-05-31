@@ -11,9 +11,43 @@
     "name": "Rovastar + Idiot24-7 - Balk Acid",
     "author": "Rovastar + Idiot24-7"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "strobing",
+      "geometric",
+      "optical"
+    ],
+    "motion": 0.9,
+    "palette_anchor": [
+      "#ffffff",
+      "#8b008b",
+      "#4b0082",
+      "#2e8b57"
+    ],
+    "audio_affinity": {
+      "bass": 0.95,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "warp_field",
+      "hue_cycle"
+    ],
+    "technical_notes": "A high-contrast composite shader clamps the center of a radial grid to pure white, triggered by beat-gated bursts from the synthetic kick of the test signal. The grid itself undergoes extreme per-pixel warp deformation, creating moiré interference patterns that alternate rapidly between green and purple hues. The dramatic expansion and contraction of the central circular mask suggest a highly sensitive audio gating threshold mapped to bass attenuated.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:48:31.841Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-idiot24-7-balk-acid.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-idiot24-7-balk-acid.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

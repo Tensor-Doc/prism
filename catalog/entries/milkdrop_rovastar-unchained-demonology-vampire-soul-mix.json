@@ -11,9 +11,45 @@
     "name": "Rovastar & Unchained - Demonology (Vampire Soul Mix)",
     "author": "Rovastar & Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "neon",
+      "geometric",
+      "strobing"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#8b008b",
+      "#ff0055",
+      "#ffd700",
+      "#00ffcc"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "domain_repetition"
+    ],
+    "technical_notes": "A central custom wave acts as a reactive vector oscilloscope, modulating in shape and brightness with the treble of the synthetic test signal. Bilateral symmetry combined with a per-pixel warp shader creates a stepped, receding tunnel effect through sampler_main feedback. High-amplitude bass kicks trigger instantaneous palette swaps and rapid zoom scaling, driving a highly kinetic, strobing architectural space.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:44:30.060Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-unchained-demonology-vampire-soul-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-unchained-demonology-vampire-soul-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

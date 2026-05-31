@@ -11,9 +11,43 @@
     "name": "Rovastar + Geiss - Bipolar 2 (Vectrip Mix)",
     "author": "Rovastar + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "cosmic",
+      "kinetic",
+      "dark"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#d47a2a",
+      "#ffffff",
+      "#48a86c"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central custom wave acts as a highly reactive oscilloscope, spiking vertically into a bright white and green burst on the bass hits of the synthetic test signal. Symmetrical spiral arms in an amber hue rotate slowly, likely rendered via parametric custom wave equations. High decay prevents feedback accumulation in sampler_main, maintaining a stark, high-contrast black background.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:46:50.171Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-geiss-bipolar-2-vectrip-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-geiss-bipolar-2-vectrip-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

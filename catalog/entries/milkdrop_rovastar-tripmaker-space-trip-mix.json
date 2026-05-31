@@ -11,9 +11,42 @@
     "name": "Rovastar - Tripmaker (Space Trip Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "minimal",
+      "hypnotic",
+      "matrix",
+      "sparse"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#050a08",
+      "#114433",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "warp_field",
+      "domain_repetition",
+      "frame_feedback",
+      "audio_gating"
+    ],
+    "technical_notes": "A rigid grid of custom shape dots is distorted by a spiral per-pixel warp field. The background utilizes a feedback loop via sampler_main with high decay, creating subtle dark green spiraling structures that flare up during bass transients in the test signal. The composition remains dark and sparse, emphasizing geometric deformation over bright color.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:59:43.588Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-tripmaker-space-trip-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-tripmaker-space-trip-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

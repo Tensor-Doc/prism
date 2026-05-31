@@ -11,9 +11,40 @@
     "name": "Geiss - Rose 5 Crossfire Beats - mash0000 - ill gotten slobber catcher",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "minimalist",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#d35400",
+      "#c0392b"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.2,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "domain_repetition",
+      "audio_gating"
+    ],
+    "technical_notes": "Four symmetrical custom waves are rendered in the corners of the screen using domain repetition. High decay rates leave a completely black void, with the waves only appearing during high-frequency transients of the test signal. The rendering is extremely sparse, with no frame feedback or warp field active.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:09:50.540Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-5-crossfire-beats-mash0000-ill-gotten-slobber-catcher.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-5-crossfire-beats-mash0000-ill-gotten-slobber-catcher.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

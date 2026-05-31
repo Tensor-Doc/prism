@@ -11,9 +11,37 @@
     "name": "Geiss - Game of Life 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A stark, ultra-minimalist preset displaying a single custom_wave line drawn across a black void. The line's rotation and high-frequency ripple modulate slightly in response to the synthetic test signal's bass transients, while decay is set to maximum to prevent any frame feedback or persistent trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:47:54.540Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-game-of-life-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-game-of-life-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

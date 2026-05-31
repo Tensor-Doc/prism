@@ -11,9 +11,40 @@
     "name": "geiss - liquid beats (jelly v4.5)",
     "author": "geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "dark",
+      "fleeting"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#c8bfe7",
+      "#ffebcd"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "An extremely minimalist preset where the viewport remains a dark void. A single custom_wave in the center is driven by the audio loop's spectral bands, twisting and spiking into sharp geometric configurations. The absence of frame feedback (sampler_main) or warp fields results in an exceptionally clean, fleeting presentation of the raw test signal.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:06:54.082Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-liquid-beats-jelly-v4-5.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-liquid-beats-jelly-v4-5.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Unchained & Rovastar - Luckless",
     "author": "Unchained & Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "retro",
+      "kinetic",
+      "psychedelic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#20a040",
+      "#102080",
+      "#801080"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "hue_cycle",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A nested rectangular tunnel is generated via frame feedback using sampler_main with a high zoom factor and low decay. The warp field is modulated by the synthetic test signal's bass transients, causing sudden rotational and wave-like distortions. A central custom wave acts as an oscilloscope reacting to high-frequency treble in the test signal, while rapid hue cycling drives the dramatic palette shifts.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:07:36.675Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-rovastar-luckless.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-rovastar-luckless.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

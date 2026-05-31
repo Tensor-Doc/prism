@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_krash-rovastar-rainbow-orb-2-peacock-bmelgren-s-compelling-vision.webm",
+    "thumb": "/thumbs/milkdrop_krash-rovastar-rainbow-orb-2-peacock-bmelgren-s-compelling-vision.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (56093 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

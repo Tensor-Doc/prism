@@ -11,9 +11,43 @@
     "name": "Mstress - Acoustic Nerve Impulses",
     "author": "Mstress"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "mathematical",
+      "dark",
+      "psychedelic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#00ff66",
+      "#ff00ff",
+      "#0066ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "domain_repetition",
+      "audio_gating",
+      "hue_cycle",
+      "custom_wave"
+    ],
+    "technical_notes": "Custom shapes configured as textured squares are arranged in a logarithmic spiral using per-frame equations. Feedback loop via sampler_main with high decay creates a dark, trailing echo of the spiral structure, while domain repetition replicates the spiral pattern in the screen corners. The synthetic kick in the test signal gates the scale, brightness, and rapid hue cycling of the shapes, shifting between vibrant greens, magentas, and blues.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:30:39.090Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mstress-acoustic-nerve-impulses.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mstress-acoustic-nerve-impulses.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

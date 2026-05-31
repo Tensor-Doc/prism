@@ -11,9 +11,41 @@
     "name": "Geiss - Liquid Beats (janky ripple warp reflecto)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "stark"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#fbcfe8",
+      "#c7d2fe",
+      "#a7f3d0"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom wave or shape is rendered at the center of the viewport, reacting erratically to the synthetic test signal. An extremely high decay rate ensures the background remains a pure black void with no frame feedback or persistent trails in sampler_main. The glyph's geometry and color are modulated directly by the audio bands, showing high sensitivity to treble transients.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:52:25.110Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-liquid-beats-janky-ripple-warp-reflecto.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-liquid-beats-janky-ripple-warp-reflecto.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

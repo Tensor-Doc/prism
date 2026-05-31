@@ -11,9 +11,40 @@
     "name": "Geiss - Smoke Rings",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "sparse",
+      "precise"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#ff3300",
+      "#ffcc99",
+      "#ffe6b3"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave rendering a circular oscilloscope alongside a rotating radial wedge. The outer circle's perimeter deforms via per-vertex audio modulation driven by the bass and treble bands of the synthetic test signal. Hue cycles through a warm palette over time, with zero frame feedback (decay = 1.0) ensuring a clean, aliasing-free vector aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:12:29.287Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-smoke-rings.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-smoke-rings.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

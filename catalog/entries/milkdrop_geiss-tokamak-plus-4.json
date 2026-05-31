@@ -11,9 +11,39 @@
     "name": "Geiss - Tokamak Plus 4",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "oscilloscope"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#7ec8f8",
+      "#a2d2ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single radial custom wave acts as an oscilloscope needle sweeping across a dark void. High decay rate prevents any persistent trails in sampler_main, maintaining a stark, high-contrast aesthetic. The outer tip of the wave displays high-frequency jitter directly modulated by the treble and mid-range frequencies of the synthetic test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:16:26.568Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-tokamak-plus-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-tokamak-plus-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

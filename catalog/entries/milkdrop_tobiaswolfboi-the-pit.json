@@ -11,9 +11,37 @@
     "name": "TobiasWolfBoi - The Pit",
     "author": "TobiasWolfBoi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "clinical",
+      "sparse"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist preset displaying a thin white custom wave on a pure black background. The decay rate is set to maximum, preventing any frame feedback or persistent trails in sampler_main. The synthetic test signal's bass transients drive the scale and complexity of the central oscilloscope-like scribble, while higher frequencies modulate its jitter.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:07:00.228Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_tobiaswolfboi-the-pit.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_tobiaswolfboi-the-pit.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

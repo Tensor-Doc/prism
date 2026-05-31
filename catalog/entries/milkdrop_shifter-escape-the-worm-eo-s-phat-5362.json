@@ -11,9 +11,43 @@
     "name": "shifter - escape the worm - Eo.S. + Phat 5362",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "architectural",
+      "geometric",
+      "strobing",
+      "monolithic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#88a078",
+      "#201830"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition"
+    ],
+    "technical_notes": "A structured geometric tunnel is generated via custom waves and a repeating per-pixel warp field. The synthetic kick of the test signal triggers dramatic beat-gated jumps in zoom and rotation, alternating between tunnel perspectives and flat framing borders. Low persistence feedback via a high decay rate in sampler_main ensures clean, sharp transitions between strobing states.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:44:02.380Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-escape-the-worm-eo-s-phat-5362.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-escape-the-worm-eo-s-phat-5362.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

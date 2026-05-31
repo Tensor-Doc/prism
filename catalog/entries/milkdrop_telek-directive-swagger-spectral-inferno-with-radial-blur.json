@@ -11,9 +11,42 @@
     "name": "Telek - Directive Swagger (Spectral Inferno) with radial blur",
     "author": "Telek"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#40e0d0",
+      "#d35400",
+      "#f1c40f"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.2
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "particle_system"
+    ],
+    "technical_notes": "A minimalist layout featuring a static teal custom wave array along the lower third of the frame. Discrete geometric blocks and localized particle bursts are heavily gated to the synthetic test signal, triggering abruptly on bass peaks. High decay rate ensures instant frame-to-frame clearing with zero feedback trails or sampler_main persistence.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:05:20.644Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_telek-directive-swagger-spectral-inferno-with-radial-blur.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_telek-directive-swagger-spectral-inferno-with-radial-blur.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

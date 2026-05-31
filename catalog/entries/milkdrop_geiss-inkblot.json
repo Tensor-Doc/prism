@@ -11,9 +11,44 @@
     "name": "Geiss - Inkblot",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "monochromatic",
+      "kinetic",
+      "organic",
+      "spectral",
+      "electric"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#808080"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "bloom_glow",
+      "decay_trail",
+      "beat_burst"
+    ],
+    "technical_notes": "Symmetrical custom waves draw intricate, hair-like structures and dotted paths that react dynamically to the audio loop. A low decay rate in the feedback loop creates persistent, ghostly trails blended via sampler_main, while a strong central bloom is triggered by the synthetic kick. The per-pixel warp shader applies a complex radial distortion driven by bass attenuated, causing the entire field to expand and contract rhythmically.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:50:00.605Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-inkblot.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-inkblot.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

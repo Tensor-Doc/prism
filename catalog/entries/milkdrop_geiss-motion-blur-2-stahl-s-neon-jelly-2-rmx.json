@@ -11,9 +11,39 @@
     "name": "Geiss - Motion Blur 2 (Stahl's Neon Jelly 2 RMX)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#a0f0d0",
+      "#f0a0d0"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.5,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist oscilloscope rendering utilizing a custom_wave that spans horizontally across a black void. The wave's amplitude and ripple frequency modulate directly with the mid and bass frequencies of the synthetic test signal, while the line color undergoes a continuous hue_cycle. The lack of frame feedback or warp shaders results in a crisp, zero-decay vector aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:59:28.327Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-motion-blur-2-stahl-s-neon-jelly-2-rmx.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-motion-blur-2-stahl-s-neon-jelly-2-rmx.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

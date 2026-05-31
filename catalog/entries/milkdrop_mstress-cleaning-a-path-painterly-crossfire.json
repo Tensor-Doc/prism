@@ -11,9 +11,42 @@
     "name": "mstress - Cleaning a path - Painterly Crossfire",
     "author": "mstress"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "fluid",
+      "organic",
+      "dreamy"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#a2e3c4",
+      "#bca0dc",
+      "#7ec8e3",
+      "#f0e68c"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Per-pixel warp shader applies complex logarithmic spiral transformations, creating a fluid, fractal-like structure. Frame feedback through sampler_main with a low decay rate preserves painterly pastel stripes that swirl continuously. The synthetic test signal's bass kicks drive rapid zoom modulations and coordinate rotations, while treble transients introduce subtle high-frequency edge jitter.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:38:39.919Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mstress-cleaning-a-path-painterly-crossfire.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mstress-cleaning-a-path-painterly-crossfire.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

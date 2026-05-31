@@ -11,9 +11,46 @@
     "name": "Rovastar - Fractopia (Upspoken Mix)_Phat_Speak_When_Spoken_2",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "chaotic",
+      "organic",
+      "frenetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#00ffcc",
+      "#ffff00",
+      "#ff00ff",
+      "#1a0033"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "Per-pixel warp shader creates a swirling, organic reaction-diffusion tunnel, sampling previous frames via sampler_main with high zoom and rotation. Custom waves form a central wireframe core that reacts dynamically to the treble of the test signal. Intense audio gating on the synthetic kick triggers instant palette shifts and zoom bursts, while sampler_blur1 softens the boundaries to produce a glowing, cell-like texture.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:55:41.237Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-fractopia-upspoken-mix-phat-speak-when-spoken-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-fractopia-upspoken-mix-phat-speak-when-spoken-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

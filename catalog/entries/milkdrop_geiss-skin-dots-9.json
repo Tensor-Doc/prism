@@ -11,9 +11,40 @@
     "name": "Geiss - Skin Dots 9",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#e0f7fa"
+    ],
+    "audio_affinity": {
+      "bass": 0.05,
+      "mid": 0.1,
+      "treble": 0.15
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "Two custom waves are rendered as thin, rotating lines against a black background. One wave is rendered as a dotted line, while the other is a solid tapered beam rotating around a common vertex. The rotation is driven by a slow time accumulator, with minimal direct modulation from the synthetic test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:11:21.345Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-skin-dots-9.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-skin-dots-9.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

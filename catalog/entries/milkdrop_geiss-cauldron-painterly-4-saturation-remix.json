@@ -11,9 +11,42 @@
     "name": "Geiss - Cauldron - painterly 4 (saturation remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "fluid",
+      "abstract"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#14505c",
+      "#8a3b3c",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail",
+      "frame_feedback"
+    ],
+    "technical_notes": "A custom wave is rendered as a twisting, segmented ribbon in a dark void, with its vertices modulated by the audio loop. A high decay rate keeps the background mostly black, while subtle frame feedback through sampler_main preserves faint, painterly trails of the ribbon's path. The tip of the wave reacts sharply to treble transients in the test signal, producing bright white highlights.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:31:37.046Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron-painterly-4-saturation-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron-painterly-4-saturation-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

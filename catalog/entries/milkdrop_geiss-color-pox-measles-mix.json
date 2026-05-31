@@ -11,9 +11,42 @@
     "name": "Geiss - Color Pox (Measles Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "graphic",
+      "geometric"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#8a2be2",
+      "#00ff00",
+      "#ff4500",
+      "#1e90ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave"
+    ],
+    "technical_notes": "The preset features flat-shaded, sharp-edged custom waves rendered against a pure black background with a high decay rate, preventing any persistent trails. The ribbon-like geometry and solid color palette switch instantly in response to the synthetic kick of the test signal, utilizing beat-gated triggers. No warp field or sampler_main feedback is employed, resulting in a stark, high-contrast graphic aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:33:39.960Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-color-pox-measles-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-color-pox-measles-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

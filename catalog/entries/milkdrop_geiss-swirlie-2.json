@@ -11,9 +11,38 @@
     "name": "Geiss - Swirlie 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "stark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A stark, minimalist preset consisting of a single white custom wave rendered against a pure black void. The wave's screen position and geometry are modulated by the synthetic test signal, jumping to discrete coordinates on transient peaks with zero frame feedback or decay trails. The rendering relies entirely on a simple custom wave definition with no warp field or post-processing shaders active.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:14:28.925Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-swirlie-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-swirlie-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

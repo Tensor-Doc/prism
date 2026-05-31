@@ -11,9 +11,43 @@
     "name": "Geiss - Cauldron - painterly 3 (saturation remix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "painterly",
+      "fluid",
+      "organic",
+      "atmospheric"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#00a896",
+      "#e63946",
+      "#050c1a",
+      "#1d3557"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle",
+      "warp_field"
+    ],
+    "technical_notes": "A custom wave emitter draws a highly modulated path that is extruded into a painterly, volumetric ribbon via frame feedback in sampler_main. High-frequency transients in the synthetic test signal drive the fine, comb-like serrations at the tip of the ribbon, while bass-driven coordinate rotation sweeps the emitter in a spiral trajectory. Low decay rates allow the extruded ribbon to linger as a thick brushstroke before fading into the dark void.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:31:04.086Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron-painterly-3-saturation-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron-painterly-3-saturation-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "flexi + nitorami - beat explorer (cn bc jelly 4)",
     "author": "flexi + nitorami"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "geometric",
+      "clinical",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#00f0ff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist, sparse vector-style preset consisting of a cyan circle and a rotating wedge drawn on a black background. The outer circular boundary acts as a custom wave, showing subtle vertex deformation in response to the bass frequencies of the synthetic test signal. With no frame feedback (decay set to 1.0) or warp field active, the visualizer remains clinical and geometric.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:57:17.572Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-nitorami-beat-explorer-cn-bc-jelly-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-nitorami-beat-explorer-cn-bc-jelly-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "flexi - what is the matrix",
     "author": "flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "monochrome",
+      "void",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A stark, ultra-minimalist preset featuring a single vertical custom_wave line suspended from a small circular custom shape at the top center. The line's brightness and thickness modulate directly with the bass frequencies of the synthetic test signal, fading to near-total darkness during quieter passages. No warp field or frame feedback is active, resulting in a completely static, high-contrast monochrome composition.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:05:14.862Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-what-is-the-matrix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-what-is-the-matrix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

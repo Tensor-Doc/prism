@@ -11,9 +11,42 @@
     "name": "Zylot - Magma Crawl",
     "author": "Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "volatile",
+      "minimalist",
+      "fluid",
+      "abrasive"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#4a5043",
+      "#f7e3d4",
+      "#fdfdfb"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "bloom_glow",
+      "audio_gating",
+      "decay_trail"
+    ],
+    "technical_notes": "The preset begins with a complex custom wave drawing chaotic white paths over a fluid warp field. A sudden surge in the synthetic test signal's bass triggers an aggressive feedback loop, where a low decay rate and high brighten factor compound in sampler_main to rapidly saturate the frame buffer into a solid white state. A faint vertical seam remains visible near the right edge, pointing to a coordinate clamp or wrapping limit in the per-pixel warp shader.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:16:53.846Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_zylot-magma-crawl.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_zylot-magma-crawl.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

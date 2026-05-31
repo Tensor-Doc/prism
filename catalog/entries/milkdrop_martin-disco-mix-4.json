@@ -11,7 +11,33 @@
     "name": "martin - disco mix 4",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#9b009b"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom_wave is rendered as an undulating 3D ribbon against a stark black void. The high decay rate prevents any persistent frame feedback in sampler_main, keeping the background completely dark. The ribbon's deformation and vertical displacement react directly to the mid and treble frequencies of the synthetic test signal.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:21:23.912Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +46,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-disco-mix-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-disco-mix-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

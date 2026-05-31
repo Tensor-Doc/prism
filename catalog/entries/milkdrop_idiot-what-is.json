@@ -11,9 +11,44 @@
     "name": "Idiot - What Is",
     "author": "Idiot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "psychedelic",
+      "geometric",
+      "tunnel"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#ffffff",
+      "#b050ff",
+      "#a0ffa0",
+      "#ff5070"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "domain_repetition"
+    ],
+    "technical_notes": "A radial coordinate transformation generates a concentric tunnel structure, where a per-pixel warp shader applies zoom and spiral rotation feeding back into sampler_main. The synthetic test signal's bass kicks trigger instantaneous hue shifts via q-variable modulation, while high-frequency concentric ripples are modulated by the treble and mid bands. The feedback loop maintains a clean, high-contrast tunnel aesthetic with minimal decay.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:22:43.853Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot-what-is.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot-what-is.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

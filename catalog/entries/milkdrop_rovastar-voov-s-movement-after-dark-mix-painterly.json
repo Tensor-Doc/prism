@@ -11,9 +11,43 @@
     "name": "Rovastar - VooV's Movement (After Dark Mix) - Painterly",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "psychedelic",
+      "atmospheric"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#1a3c34",
+      "#5c1d5c",
+      "#9e2a2b",
+      "#121e36"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Two horizontal custom_wave elements display high-frequency audio waveforms across the center, shifting in color via a continuous hue_cycle. The background utilizes a fluid per-pixel warp_field combined with a low decay rate in sampler_main feedback to create a painterly, organic texture reminiscent of Geiss's reaction-diffusion lineage. The warp dynamics and zoom are modulated by the bass attenuated from the synthetic test signal, while the wave spikes trace the treble.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:01:00.185Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-voov-s-movement-after-dark-mix-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-voov-s-movement-after-dark-mix-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

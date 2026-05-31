@@ -11,9 +11,37 @@
     "name": "martin - violet flash",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "abstract"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#d8bbf2"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single custom wave is rendered as a sharp, lavender geometric ribbon against a solid black background. The decay rate is absolute, leaving no trails or persistent pixels in sampler_main. The shape's vertices morph and translate in response to the synthetic test signal's frequency bands, particularly jumping on the bass kick.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:37:01.112Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-violet-flash.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-violet-flash.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

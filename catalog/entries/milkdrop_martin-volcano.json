@@ -11,9 +11,38 @@
     "name": "martin - volcano",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "kinetic",
+      "stark"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#f5e03b"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave element is rendered in high-contrast yellow on a pure black background. The wave's vertices and scaling are driven directly by the synthetic test signal's bass and treble bands, causing it to expand and distort into jagged geometric forms. No frame feedback is present, resulting in a clean, high-decay presentation with zero persistent trails in sampler_main.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:37:30.853Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-volcano.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-volcano.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

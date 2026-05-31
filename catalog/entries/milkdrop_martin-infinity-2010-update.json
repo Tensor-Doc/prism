@@ -11,7 +11,32 @@
     "name": "martin - infinity (2010 update)",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "radar",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#ff007f"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom shape or custom wave rendering a simple circular radar sweep on a black void. The wedge rotates at a constant rate with no apparent modulation from the synthetic test signal. Frame feedback is absent, resulting in zero decay trails and a stark, mechanical presentation.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:24:09.597Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +45,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-infinity-2010-update.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-infinity-2010-update.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

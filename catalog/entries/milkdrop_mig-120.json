@@ -10,9 +10,40 @@
   "display": {
     "name": "Mig_120"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "monochrome",
+      "void"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#222222"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.3
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist, high-contrast preset dominated by a central dark, fibrous custom shape that vibrates subtly to mid-frequency bands. Discrete beat-gated events trigger a stark grid of vertical white lines across the screen, driven by the bass threshold of the synthetic test signal. The high decay rate ensures immediate return to a dark, void-like state between beats.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:30:47.018Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-120.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-120.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

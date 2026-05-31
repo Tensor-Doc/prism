@@ -11,9 +11,44 @@
     "name": "Geiss - Cycloid 1 - painterly vortex 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "organic",
+      "sculptural",
+      "skeletal",
+      "visceral"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#d4af37",
+      "#e65c00",
+      "#ffd700"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "frame_feedback",
+      "custom_wave",
+      "decay_trail",
+      "beat_burst",
+      "cosine_palette"
+    ],
+    "technical_notes": "A custom wave is extruded through frame feedback using sampler_main with a low decay rate, creating ribbed, skeletal trails that trace the path of a central emitter. High-amplitude bass transients in the test signal trigger sudden shifts in coordinate scaling and color, culminating in a massive feedback-driven burst that floods the viewport with a warm cosine palette. The organic, bone-like structures emerge from precise per-frame manipulation of zoom and rotation.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:39:35.884Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cycloid-1-painterly-vortex-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cycloid-1-painterly-vortex-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

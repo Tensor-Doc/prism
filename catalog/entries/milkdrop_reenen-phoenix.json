@@ -11,9 +11,43 @@
     "name": "Reenen - phoenix",
     "author": "Reenen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "gothic",
+      "cybernetic",
+      "skeletal",
+      "dark"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#8b1a1a",
+      "#d2691e"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "audio_gating",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "Symmetrical custom wave equations render an intricate, skeletal central column resembling a ribcage or heart. The synthetic kick of the test signal triggers intense red and orange illumination at the core via audio-gated scaling. High decay settings in the frame feedback loop keep the fine, rain-like vertical lines and wireframe structures sharp with minimal persistent ghosting.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:42:46.257Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_reenen-phoenix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_reenen-phoenix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

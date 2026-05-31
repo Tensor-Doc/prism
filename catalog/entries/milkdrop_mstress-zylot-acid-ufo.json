@@ -11,9 +11,45 @@
     "name": "Mstress & Zylot - Acid UFO",
     "author": "Mstress & Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "retro",
+      "frenetic",
+      "glitchy"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ff00ff",
+      "#00ff00",
+      "#ffff00",
+      "#0000ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A spiraling tunnel of nested rectangular frames is generated via frame feedback in sampler_main with high zoom and rotation. A bright white custom wave in the center tracks the treble of the synthetic test signal. Intense beat-gated triggers driven by the synthetic kick cause sudden color inversions, flashing rectangular blocks, and rapid hue cycling.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:30:06.834Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mstress-zylot-acid-ufo.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mstress-zylot-acid-ufo.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

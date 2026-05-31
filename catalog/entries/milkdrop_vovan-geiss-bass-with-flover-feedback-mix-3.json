@@ -11,9 +11,43 @@
     "name": "Vovan + Geiss - Bass With Flover (Feedback Mix) 3",
     "author": "Vovan + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "psychedelic",
+      "metallic",
+      "abyssal"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#1a0500",
+      "#d4af37",
+      "#8b4513",
+      "#e5a93b"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "Concentric circular custom_wave elements act as polar-mapped oscilloscopes, modulated by treble frequencies of the synthetic test signal. The deep, spiraling tunnel is generated via a radial zoom and spiral warp in the per-pixel equations, feeding back through sampler_main with a moderate decay rate to create persistent golden-brown trails. The synthetic kick triggers sudden expansions of the warp field, driving the radial distortion and brightness.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:37:54.299Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_vovan-geiss-bass-with-flover-feedback-mix-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_vovan-geiss-bass-with-flover-feedback-mix-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

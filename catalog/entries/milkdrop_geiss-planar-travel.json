@@ -11,13 +11,45 @@
     "name": "Geiss - Planar Travel",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "linear",
+      "sparse"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#00f0ff",
+      "#e050d0",
+      "#1020d0"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave is rendered as a stark, thin line across a black void. The wave's vertical displacement and slight geometric splitting react to the frequency bands of the test signal. A high decay rate in the frame feedback loop prevents any persistent trails, maintaining a clean, sharp vector aesthetic while the line's color cycles over time.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:02:14.664Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "seaweed"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-planar-travel.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-planar-travel.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

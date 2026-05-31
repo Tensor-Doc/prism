@@ -11,9 +11,40 @@
     "name": "Stahlregen & Geiss + TobiasWolfBoi - Space Gelatin (Color Xplosion)",
     "author": "Stahlregen & Geiss + TobiasWolfBoi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#f5a623"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A highly minimalist, stark preset that remains completely dark for long stretches, punctuated only by a custom circular wave and central triangle rendered in amber. The elements are gated directly by the bass of the synthetic test signal, appearing only during prominent beats. The decay rate is extremely high, leaving no persistent trails in sampler_main.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:03:46.177Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_stahlregen-geiss-tobiaswolfboi-space-gelatin-color-xplosion.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

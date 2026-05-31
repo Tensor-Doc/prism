@@ -11,9 +11,43 @@
     "name": "Phat + Eo.S. - rainbow bubble_mid3-f. me dood",
     "author": "Phat + Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "hypnotic",
+      "geometric",
+      "trippy"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#00ff00",
+      "#0000ff",
+      "#ff0000",
+      "#800080"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "A per-pixel warp shader drives a complex feedback loop through sampler_main, creating dense concentric wave patterns and nested tunnel structures. A rapid hue_cycle continuously rotates the palette, while the synthetic test signal modulates the warp scale and zoom parameters to trigger dramatic structural shifts. The low decay rate preserves sharp, high-frequency lines that define the boundaries of the morphing geometry.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:39:57.380Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_phat-eo-s-rainbow-bubble-mid3-f-me-dood.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_phat-eo-s-rainbow-bubble-mid3-f-me-dood.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

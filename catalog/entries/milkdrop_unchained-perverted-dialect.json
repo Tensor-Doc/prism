@@ -11,9 +11,43 @@
     "name": "Unchained - Perverted Dialect",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "oscillographic",
+      "chaotic",
+      "electric"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#fca1b0",
+      "#76e5a3"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "A complex, tangled nest of oscillographic lines is generated via custom waves modulated by high-frequency transients in the synthetic test signal. The per-pixel warp shader drives dramatic zoom and rotation transitions triggered by the synthetic kick, while a low decay rate in sampler_main allows the white and colored trails to accumulate into dense, glowing structures before dispersing.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:13:32.445Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-perverted-dialect.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-perverted-dialect.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

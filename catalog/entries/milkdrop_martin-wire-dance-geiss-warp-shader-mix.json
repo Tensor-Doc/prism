@@ -11,9 +11,37 @@
     "name": "Martin - wire dance (geiss warp shader mix)",
     "author": "Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "elegant"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#e08030"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom wave renders a single parametric loop in a deep black void. The line's scale and 3D rotation are modulated by the bass and mid bands of the synthetic test signal. High decay rates keep the frame clean of feedback trails, resulting in a stark, elegant vector-like aesthetic.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:22:56.797Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-wire-dance-geiss-warp-shader-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-wire-dance-geiss-warp-shader-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

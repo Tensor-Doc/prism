@@ -11,9 +11,42 @@
     "name": "Unchained - elite vectronics",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "monochromatic",
+      "kinetic",
+      "sketch",
+      "fluid"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ffffff",
+      "#8c8c8c",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central custom_wave renders a chaotic oscilloscope trace reacting dynamically to the synthetic test signal. Per-pixel warp equations generate a fluid, metallic ripple effect in the background, while motion vectors create a rain-like grid of falling lines. Low decay in sampler_main preserves the scribbled trails, blending them into a smoky texture.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:14:39.438Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-elite-vectronics.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-elite-vectronics.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Geiss - Cycloid 1 - painterly",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "painterly",
+      "cavernous",
+      "mystical"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#0a242d",
+      "#4a1225",
+      "#1b3d2f",
+      "#e0f7fc"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "decay_trail",
+      "custom_wave",
+      "hue_cycle",
+      "warp_field"
+    ],
+    "technical_notes": "A central custom wave draws a spiraling trajectory, leaving persistent trails that are preserved by a low decay rate in the frame feedback loop. The feedback buffer, sampled via sampler_main, undergoes a subtle zoom and rotation, transforming the trail into layered, organic scale-like structures. The bright emitter tip flickers in response to treble transients in the synthetic test signal, while the radial expansion of the layers pulses with the synthetic kick.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:40:43.661Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cycloid-1-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cycloid-1-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

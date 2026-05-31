@@ -11,9 +11,39 @@
     "name": "Geiss - Digitunnel",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "geometric"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave configured as a circle is modulated by the bass threshold of the synthetic test signal. The circle expands rapidly upon beat detection and fades out quickly, with no frame feedback or sampler_main persistence, resulting in a stark, high-contrast minimalist display.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:43:49.305Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-digitunnel.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-digitunnel.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

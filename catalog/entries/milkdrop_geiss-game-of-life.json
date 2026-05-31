@@ -11,9 +11,40 @@
     "name": "Geiss - Game of Life",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "oscilloscope",
+      "void",
+      "stark"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#c5f0f5",
+      "#f5e2d5"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A minimalist oscilloscope rendering a single horizontal custom_wave across a pitch-black void. The waveform is drawn directly from the raw audio channels of the synthetic test signal, with subtle hue_cycle shifts modulating the line's color from white to pale cyan and soft peach. No frame feedback or warp field is present, resulting in a clean, zero-decay real-time waveform display.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:48:25.111Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-game-of-life.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-game-of-life.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

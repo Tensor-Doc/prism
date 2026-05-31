@@ -11,9 +11,45 @@
     "name": "ORB - Fire and Fumes 2",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "energetic",
+      "psychedelic",
+      "geometric",
+      "kaleidoscopic"
+    ],
+    "motion": 0.9,
+    "palette_anchor": [
+      "#ff00ff",
+      "#00ffaa",
+      "#00ffff",
+      "#ff3300"
+    ],
+    "audio_affinity": {
+      "bass": 0.95,
+      "mid": 0.75,
+      "treble": 0.85
+    },
+    "techniques": [
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "Overlapping custom shapes and sharp custom waves are rendered with intense additive bloom_glow, driven by beat detection on the synthetic test signal to trigger full-screen whiteout flashes. A rapid hue_cycle rotates the color palette through highly saturated primaries, while frame feedback via sampler_main maintains a persistent trail of geometric layers. The per-pixel warp shader introduces a subtle radial zoom and edge distortion that modulates with treble transients.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:32:34.700Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-fire-and-fumes-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-fire-and-fumes-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

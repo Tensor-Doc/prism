@@ -11,9 +11,38 @@
     "name": "Geiss - MicroCheckers 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "oscillographic"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#e2ede2"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "Two custom waves are rendered as thin diagonal lines across a pitch-black background, acting as a direct oscilloscope of the test signal. The lack of persistent trails indicates a high decay rate with no frame feedback through sampler_main. The lines rotate and ripple in direct response to mid and treble frequencies before gating out entirely during quiet passages.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:55:31.782Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-microcheckers-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-microcheckers-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

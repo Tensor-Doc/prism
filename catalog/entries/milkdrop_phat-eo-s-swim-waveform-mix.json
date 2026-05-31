@@ -11,9 +11,42 @@
     "name": "Phat + Eo.S. - Swim_waveform_mix",
     "author": "Phat + Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "viscous",
+      "psychedelic",
+      "fluid",
+      "chaotic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#e61a24",
+      "#7a29cc",
+      "#1a1a1a",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A highly viscous reaction-diffusion style warp field shears and stretches the canvas, blending elements into painterly fluid trails. High-frequency custom waves are rendered as wireframe-like scribbles that are immediately folded into the feedback loop via sampler_main with a low decay rate. The synthetic kick in the test signal triggers sudden, violent shifts in the warp direction, causing the red and purple pigments to churn against a stark black-and-white background.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:39:18.392Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_phat-eo-s-swim-waveform-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_phat-eo-s-swim-waveform-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

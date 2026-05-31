@@ -10,9 +10,40 @@
   "display": {
     "name": "Mig_095"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#a2e8dd",
+      "#e58fd8"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "An extremely sparse, dark preset where the screen remains almost entirely black. Tiny custom waves or custom shapes are gated to transients in the synthetic test signal, flashing briefly at the screen's center in muted cyan and pink tones. With no frame feedback or warp field active, the decay rate is instantaneous, leaving a completely static, void-like environment between triggers.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:30:16.523Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-095.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-095.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

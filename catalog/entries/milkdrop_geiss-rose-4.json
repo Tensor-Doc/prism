@@ -11,9 +11,38 @@
     "name": "Geiss - Rose 4",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "stark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.3,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist, sparse preset featuring a single custom wave rendered as a thin white line in the center of a black void. The wave reacts to the treble and mid-range frequencies of the test signal with rapid, erratic twitching, while the surrounding screen remains completely dark due to a lack of frame feedback or warp field activity. This represents an extreme reductionist aesthetic with near-zero decay trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:08:50.361Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

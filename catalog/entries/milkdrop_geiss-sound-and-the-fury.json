@@ -11,9 +11,43 @@
     "name": "Geiss - Sound And The Fury",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "skeletal",
+      "monochrome",
+      "frenetic",
+      "organic",
+      "abstract"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ffffff",
+      "#1f1f1f",
+      "#7a7aff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "A complex custom wave renders a skeletal, scribbled 3D ribbon that mimics a neural or spinal structure. High-frequency vertex displacement is driven by the treble of the synthetic test signal, while bass transients trigger dramatic camera zooms and rotations via q-parameter modulation. Frame feedback through sampler_main combined with a high decay rate keeps the trails short and snappy, occasionally blooming into a soft purple glow via sampler_blur1.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:13:29.915Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-sound-and-the-fury.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-sound-and-the-fury.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Rovastar + Telek - Altars of Madness (Rolling Oceans Mix)",
     "author": "Rovastar + Telek"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "oceanic",
+      "organic",
+      "stormy"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#081416",
+      "#124244",
+      "#3ebcb0",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A per-pixel warp shader creates a fluid-like reaction-diffusion simulation, advecting the frame buffer to form swirling, oceanic vortices. Frame feedback through sampler_main with a low decay rate maintains persistent, painterly teal trails, while a highly reactive custom wave rendered in bright white traces the high-frequency transients of the synthetic test signal. The background features a subtle grid of motion vectors modulated by the synthetic kick.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:52:29.581Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-telek-altars-of-madness-rolling-oceans-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-telek-altars-of-madness-rolling-oceans-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

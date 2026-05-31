@@ -10,9 +10,44 @@
   "display": {
     "name": "Phat+fiShbRaiN+Eo.S_Mandala_Chasers_remix"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kaleidoscopic",
+      "kinetic",
+      "psychedelic",
+      "geometric"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#00e5ff",
+      "#a3ff12",
+      "#cc1133",
+      "#0a192f"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.75,
+      "treble": 0.6
+    },
+    "techniques": [
+      "domain_repetition",
+      "custom_wave",
+      "frame_feedback",
+      "bloom_glow",
+      "warp_field",
+      "audio_gating"
+    ],
+    "technical_notes": "Custom waves render as vibrant, warped oscilloscopes that react dynamically to the mid and treble bands of the synthetic test signal. A radial kaleidoscope domain repetition is applied in the composite shader, mirroring the geometry across multiple axes. Frame feedback through sampler_main combined with a moderate decay rate creates persistent, glowing trails of the geometric structures.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:40:31.723Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_phat-fishbrain-eo-s-mandala-chasers-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_phat-fishbrain-eo-s-mandala-chasers-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

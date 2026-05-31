@@ -23,7 +23,9 @@
       {
         "name": "test"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-pixies-party.webm",
+    "thumb": "/thumbs/milkdrop_martin-pixies-party.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -31,6 +33,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24762 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

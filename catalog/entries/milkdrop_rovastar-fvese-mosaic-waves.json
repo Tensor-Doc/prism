@@ -11,9 +11,43 @@
     "name": "Rovastar + Fvese - Mosaic Waves",
     "author": "Rovastar + Fvese"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "fluid",
+      "organic",
+      "glitchy"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#8a1c7a",
+      "#1b5e20",
+      "#d3d3d3"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "Custom waves render as dotted, organic filaments reacting directly to the mid and treble frequencies of the synthetic test signal. A per-pixel warp shader drives a twisting, liquid-like feedback loop using sampler_main with moderate decay, creating persistent, textured trails. Sudden shifts in rotation and color (transitioning from magenta to green) are gated by the bass transients of the test signal.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:46:12.651Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-fvese-mosaic-waves.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-fvese-mosaic-waves.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

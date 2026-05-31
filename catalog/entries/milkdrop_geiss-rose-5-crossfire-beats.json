@@ -11,9 +11,40 @@
     "name": "Geiss - Rose 5 Crossfire Beats",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "minimalist",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#000000",
+      "#d35400"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist, dark preset where the screen remains black except for brief, beat-gated corner waves. A custom wave is replicated across the four corners using radial domain repetition. The visibility of these thin orange lines is driven by audio gating, reacting to the bass transients of the synthetic test signal before decaying rapidly back to black.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:10:20.847Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-5-crossfire-beats.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-5-crossfire-beats.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

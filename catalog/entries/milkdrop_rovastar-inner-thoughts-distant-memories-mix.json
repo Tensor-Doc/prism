@@ -11,9 +11,45 @@
     "name": "Rovastar - Inner Thoughts (Distant Memories Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fiery",
+      "geometric",
+      "kinetic",
+      "kaleidoscopic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#ff3300",
+      "#ffcc00",
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central kaleidoscopic structure with radial symmetry undergoes rapid zoom and rotation via a per-pixel warp field. High-amplitude bass transients in the synthetic test signal trigger sudden state gates, collapsing the geometry into sparse spiraling lines or causing intense full-screen bloom. Frame feedback through sampler_main preserves the sharp, intersecting custom wave vectors as glowing orange trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:56:53.082Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-inner-thoughts-distant-memories-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-inner-thoughts-distant-memories-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,7 +11,33 @@
     "name": "martin - infinity (2008)",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "mechanical"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ec008c"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom shape or custom wave renders a circular outline and a rotating wedge resembling a radar sweep. The motion is driven by a slow, constant temporal rotation equation rather than the synthetic test signal, resulting in near-zero audio affinity. The background remains a stark black void with no frame feedback or warp field applied.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:23:37.973Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +46,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-infinity-2008.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-infinity-2008.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

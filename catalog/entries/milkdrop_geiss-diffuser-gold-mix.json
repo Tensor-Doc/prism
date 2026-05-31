@@ -11,13 +11,42 @@
     "name": "Geiss - Diffuser (Gold Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "void",
+      "monochrome"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A stark, minimalist oscilloscope preset featuring a single horizontal custom_wave that maps the raw waveform of the synthetic test signal. High decay and the complete absence of frame feedback (sampler_main) or warp fields result in an instantaneous, non-persistent rendering. Occasional transient scribbles appear at the center in response to high-frequency treble spikes in the test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:42:47.364Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "rand00"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-diffuser-gold-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-diffuser-gold-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

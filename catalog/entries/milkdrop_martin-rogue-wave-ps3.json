@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_martin-rogue-wave-ps3.webm",
+    "thumb": "/thumbs/milkdrop_martin-rogue-wave-ps3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

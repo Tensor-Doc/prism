@@ -11,9 +11,42 @@
     "name": "Geiss - Pistons",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "stark",
+      "oscillographic",
+      "monochrome",
+      "chaotic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#1a1a1a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom_wave renders high-frequency oscilloscope-like scribbles that expand dramatically into a chaotic ball during transients in the synthetic test signal. Horizontal feedback corridors through sampler_main stretch the central activity outward, while a high decay rate keeps the background starkly dark. The preset operates almost entirely in monochrome, utilizing sharp audio gating on the bass band to drive the scale and complexity of the central line drawing.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:01:40.826Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-pistons.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-pistons.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

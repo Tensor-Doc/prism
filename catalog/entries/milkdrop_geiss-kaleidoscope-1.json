@@ -11,9 +11,40 @@
     "name": "Geiss - Kaleidoscope 1",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "abstract"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#fef7c2",
+      "#f7a1b5",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist preset consisting of a single custom wave rendered at the center of a black void. The wave's vertices and color are modulated by the audio loop's treble and bass transients, transitioning between pale yellow, pink, and green hues. High decay rate ensures that no frame feedback or persistent trails remain, leaving only the raw, transient-driven geometry.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:51:55.553Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-kaleidoscope-1.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-kaleidoscope-1.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "flexi - lorenz attractor",
     "author": "flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "mathematical",
+      "minimalist",
+      "abstract",
+      "sparse"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#ffffff",
+      "#ff3300",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves, tracing elegant white orbits against a dark void. A secondary custom shape draws a sequence of red-orange circular discs along the trajectory, with their scale directly modulated by the bass energy of the synthetic test signal. Minimal frame feedback is used, keeping the background pure black and the vector-like lines exceptionally crisp.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:02:56.390Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-lorenz-attractor.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-lorenz-attractor.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

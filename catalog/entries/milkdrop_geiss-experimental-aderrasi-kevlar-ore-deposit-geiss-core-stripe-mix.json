@@ -11,9 +11,40 @@
     "name": "geiss_experimental__Aderrasi - Kevlar Ore Deposit - geiss core stripe mix",
     "author": "geiss_experimental__Aderrasi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#142414",
+      "#1c0d24"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "The preset presents a minimalist dark void where the main screen remains black due to instant decay. A solid outer border slowly cycles its hue over time, while thin, sketchy custom waves flash sporadically near the screen edges in response to high-frequency transients in the synthetic test signal. No frame feedback or warp fields are active, leaving the visual field almost entirely empty.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:41:24.115Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-experimental-aderrasi-kevlar-ore-deposit-geiss-core-stripe-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-experimental-aderrasi-kevlar-ore-deposit-geiss-core-stripe-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

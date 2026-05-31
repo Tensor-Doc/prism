@@ -11,9 +11,37 @@
     "name": "martin - soma in pink (Ati Fix)",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#8a2be2"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom wave is rendered across the center of the screen, reacting to the synthetic test signal. High-frequency transients in the test signal cause the wave to break into discrete dashed segments, while mid and bass frequencies modulate its vertical amplitude. The background remains entirely dark with a high decay rate, preventing any persistent frame feedback in sampler_main.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:32:21.780Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-soma-in-pink-ati-fix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-soma-in-pink-ati-fix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

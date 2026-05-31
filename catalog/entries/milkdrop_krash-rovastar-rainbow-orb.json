@@ -11,9 +11,43 @@
     "name": "Krash + Rovastar - Rainbow Orb",
     "author": "Krash + Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "explosive",
+      "stroboscopic",
+      "void"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#8a1c1c",
+      "#d4a017"
+    ],
+    "audio_affinity": {
+      "bass": 0.95,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "decay_trail",
+      "frame_feedback"
+    ],
+    "technical_notes": "A central custom shape acts as an audio-reactive emitter, triggering explosive radial bursts on the bass hits of the synthetic test signal. High decay settings in the feedback loop cause the sharp, feathery spikes to quickly recede, returning the canvas to a dark, minimalist void. Radial symmetry and concentric particle rings are modulated by mid and treble frequencies.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:26:17.395Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-rovastar-rainbow-orb.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-rovastar-rainbow-orb.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

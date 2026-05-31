@@ -11,9 +11,37 @@
     "name": "Geiss - Reaction Diffusion (Shifting Sphere Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "void",
+      "dark",
+      "sparse",
+      "minimalist"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#000000",
+      "#111111"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "particle_system"
+    ],
+    "technical_notes": "The screen remains predominantly black throughout the capture, with only extremely sparse, faint white particles or horizontal lines appearing briefly. These minimal elements suggest a highly attenuated particle system or custom wave rendering with near-zero decay and minimal brightness scaling. There is virtually no visible reaction to the synthetic test signal.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:04:46.659Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-shifting-sphere-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-shifting-sphere-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

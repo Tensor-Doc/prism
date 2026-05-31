@@ -10,9 +10,37 @@
   "display": {
     "name": "Mig_025"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "void",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000 slide-in-color-orange-red-ish-amber-ish-something-like-f07030"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.2,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist and sparse preset featuring a single, microscopic custom wave at the center of a black void. The tiny orange glyph or spark modulates its shape and brightness directly in response to the high-frequency treble transients of the test signal. With no frame feedback or warp field enabled, the screen remains almost entirely dark, creating a stark, isolated visual.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:24:18.533Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-025.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-025.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,45 @@
     "name": "ORB - Waaa",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "strobe",
+      "kaleidoscopic",
+      "energetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#ff00ff",
+      "#00ffcc",
+      "#ff3300"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central custom wave acts as a bright light source, casting radial rays that are modulated by the treble and mid frequencies of the test signal. High-intensity bass transients trigger full-screen color inversions and bright flashes, indicating beat-gated code modifying the background decay and gamma. A radial warp field combined with frame feedback via sampler_main creates a spinning, tunnel-like motion vector field that expands outward from the center.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:38:09.962Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-waaa-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-waaa-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

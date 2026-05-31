@@ -11,9 +11,44 @@
     "name": "ORB - Solar Radiation",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "geometric",
+      "stroboscopic",
+      "kaleidoscopic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffcc00",
+      "#0000ff",
+      "#e0115f",
+      "#ff6600"
+    ],
+    "audio_affinity": {
+      "bass": 0.95,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave",
+      "hue_cycle",
+      "frame_feedback"
+    ],
+    "technical_notes": "A highly dynamic, beat-gated preset where each synthetic kick triggers a state transition, altering custom shape equations and radial symmetry parameters via q-variable registers. The rendering utilizes custom shapes with rapid hue cycling, while a high decay rate ensures snappy transitions between distinct geometric states. Radial repetition and rotation are modulated by smoothed audio bands, creating a kaleidoscopic sequence of abstract floral and star-like patterns.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:37:18.410Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-solar-radiation.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-solar-radiation.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,44 @@
     "name": "Rovastar - Tripmaker",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kaleidoscopic",
+      "fluid",
+      "organic",
+      "hypnotic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#20b2aa",
+      "#8a2be2",
+      "#40e0d0",
+      "#da70d6"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "domain_repetition",
+      "bloom_glow",
+      "decay_trail"
+    ],
+    "technical_notes": "A central polar coordinate warp creates a concentric tunnel effect, while domain repetition shapes the outer organic folds. Frame feedback via sampler_main with a slow decay rate preserves the soft, painterly trails of the outer structures. The per-pixel warp shader applies a radial zoom and rotational displacement modulated by the synthetic kick's bass attenuated, while a continuous hue cycle rotates the palette from cool teals to vibrant magentas.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:00:23.951Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-tripmaker.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-tripmaker.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

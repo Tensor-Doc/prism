@@ -11,9 +11,45 @@
     "name": "Ishan - Anuera",
     "author": "Ishan"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "electric",
+      "fluid",
+      "geometric"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#00ff00",
+      "#ff00ff",
+      "#ffaa00",
+      "#8a2be2"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "The preset alternates between a blocky, tiled geometric state and a fluidly warped ring state, triggered by beat detection on the synthetic kick. Custom waves render as thin, high-frequency scribbles that react to the treble of the synthetic test signal. A per-pixel warp shader applies a rotational and radial distortion, blending with previous frames via sampler_main to create smooth, decaying trails.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:24:55.577Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_ishan-anuera.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_ishan-anuera.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,42 @@
     "name": "amandio c - odd star",
     "author": "amandio c"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "optical",
+      "rhythmic",
+      "sharp"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#1b0303",
+      "#ffff00",
+      "#fdfcf7",
+      "#c29b7c"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A complex custom shape draws an impossible isometric five-pointed star composed of repeating chevron segments. Audio gating driven by the synthetic kick in the test signal triggers sudden scaling, rapid rotation, and structural folding of the geometry. The crisp, hard-edged rendering avoids frame feedback or decay trails, maintaining high contrast against the dark background.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:43:39.585Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_amandio-c-odd-star.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_amandio-c-odd-star.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

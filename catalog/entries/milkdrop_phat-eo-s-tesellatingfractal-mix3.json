@@ -11,9 +11,42 @@
     "name": "phat + Eo.S. - TesellatingFractal_Mix3",
     "author": "phat + Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "organic",
+      "psychedelic",
+      "spiral",
+      "fluid"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#10b981",
+      "#b45309",
+      "#06b6d4"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A logarithmic spiral feedback loop is created via zoom and rotation in the per-pixel warp equations, feeding back into sampler_main with a low decay rate to form persistent, organic structures. Wireframe custom shapes are drawn along the spiral path, flickering in response to treble spikes in the synthetic test signal. The overall zoom and rotation speed are modulated dynamically by the synthetic kick.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:41:33.645Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_phat-eo-s-tesellatingfractal-mix3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_phat-eo-s-tesellatingfractal-mix3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

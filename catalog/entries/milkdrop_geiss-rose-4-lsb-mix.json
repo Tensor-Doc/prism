@@ -11,9 +11,41 @@
     "name": "Geiss - Rose 4 (LSB mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "sparse",
+      "minimalist",
+      "void",
+      "stark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#fbe9d0",
+      "#d1c4e9"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A single custom wave element is rendered at the center of the screen, oscillating and rotating in response to the synthetic test signal. The decay rate is extremely high, leaving no persistent trails in sampler_main, resulting in a stark, minimalist void. The color and scale of the wave shift subtly on beat detection, but the overall screen remains mostly black.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:06:57.160Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-4-lsb-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-4-lsb-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

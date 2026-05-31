@@ -11,13 +11,41 @@
     "name": "martin + stahlregen - martin in da mash 10 (infinity mix)",
     "author": "martin + stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#9b42f5"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.4,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A single horizontal custom_wave renders the audio waveform against a completely black background. With no frame feedback or warp field active, the preset exhibits zero persistence, relying entirely on the instantaneous state of the test signal. High-frequency transients cause the purple wave to fragment into dashed segments.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:09:23.696Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-stahlregen-martin-in-da-mash-10-infinity-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stahlregen-martin-in-da-mash-10-infinity-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

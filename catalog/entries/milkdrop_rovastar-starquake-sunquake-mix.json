@@ -11,9 +11,43 @@
     "name": "Rovastar - Starquake (Sunquake Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "strobe",
+      "frenetic",
+      "high-contrast"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#00e5ff",
+      "#1a1a1a",
+      "#fbcfe8"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "warp_field",
+      "hue_cycle",
+      "frame_feedback"
+    ],
+    "technical_notes": "A polar coordinate warp field transforms the screen into rotating, scalloped sectors, with angular frequency modulated by the audio bands. High-amplitude transients from the synthetic kick trigger intense full-screen white flashes, likely modulating the composite shader's exposure or decay parameters. Motion vectors are enabled as a dense grid of white dots, tracing the radial expansion and rotational feedback loops.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:59:11.845Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-starquake-sunquake-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-starquake-sunquake-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

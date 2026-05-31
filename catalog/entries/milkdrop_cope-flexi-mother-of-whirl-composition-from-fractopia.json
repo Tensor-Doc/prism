@@ -17,7 +17,9 @@
       {
         "name": "manyfish"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_cope-flexi-mother-of-whirl-composition-from-fractopia.webm",
+    "thumb": "/thumbs/milkdrop_cope-flexi-mother-of-whirl-composition-from-fractopia.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

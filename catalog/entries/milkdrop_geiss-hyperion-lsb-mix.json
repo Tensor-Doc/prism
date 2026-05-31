@@ -11,9 +11,38 @@
     "name": "Geiss - Hyperion (LSB mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#1fa4ec"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave element is rendered at the center of a dark screen, directly driven by the spectral components of the test signal. The lack of frame feedback (with decay set to maximum) results in a clean, instantaneous trace with no persistent trails. The wave's vertices deform dynamically in response to mid and high-frequency fluctuations in the audio loop.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:49:28.258Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-hyperion-lsb-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-hyperion-lsb-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

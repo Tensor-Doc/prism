@@ -11,9 +11,42 @@
     "name": "shifter + geiss - neon pulse (glow mix)",
     "author": "shifter + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "fleeting"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#00f0ff",
+      "#a020f0",
+      "#ff1493"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist preset where a single custom wave is rendered as a colored bow-tie polygon, triggered directly by transients in the synthetic test signal. The decay rate is set to maximum, resulting in zero persistent trails or frame feedback, leaving sampler_main completely black between triggers. The shape's screen position and hue cycle dynamically with each detected beat-gated event.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:42:22.898Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-geiss-neon-pulse-glow-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-geiss-neon-pulse-glow-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

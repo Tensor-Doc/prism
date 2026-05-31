@@ -11,13 +11,46 @@
     "name": "ORB - Nova Sunrise",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "minimalist",
+      "strobe",
+      "snappy"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#8a8aff",
+      "#9b51e0",
+      "#e0519b",
+      "#27ae60"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "audio_gating",
+      "hue_cycle",
+      "custom_wave",
+      "domain_repetition"
+    ],
+    "technical_notes": "A central custom shape with radial domain repetition scales and rotates dynamically in response to the synthetic test signal. High decay rate prevents any frame feedback or trails, leaving a clean, flat-shaded silhouette against a solid black background. Discrete color shifts and rotation steps are gated directly by bass and mid-frequency thresholds.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:34:11.495Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "cells"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-nova-sunrise.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-nova-sunrise.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

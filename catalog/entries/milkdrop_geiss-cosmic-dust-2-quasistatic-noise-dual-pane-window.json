@@ -11,9 +11,42 @@
     "name": "Geiss - Cosmic Dust 2 - quasistatic noise dual pane window",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "kinetic",
+      "stark",
+      "abstract"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#2b72f5",
+      "#f582ae",
+      "#4cc9f0",
+      "#7209b7"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle"
+    ],
+    "technical_notes": "A single custom wave is rendered in a dark void with high decay, leaving no persistent trails or frame feedback in sampler_main. The vertex positions and overall scale are modulated directly by the bass and treble of the synthetic test signal, causing snappy, kinetic deformations. Abrupt hue shifts are triggered by beat detection on the bass attenuated, gating the color state across a wide palette.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:38:28.038Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-dual-pane-window.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-dual-pane-window.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

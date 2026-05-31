@@ -11,9 +11,43 @@
     "name": "Geiss - Dancing Spirits (Bright)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "calligraphic",
+      "stark",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#fca5c0",
+      "#a2a2fa",
+      "#ffdfb0",
+      "#a3f7df"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.8,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist preset featuring a single custom wave rendered as a calligraphic stroke against a pure black background. The decay rate is set to maximum, preventing any frame feedback or persistent trails in sampler_main. The shape's vertex positions and color are modulated directly by the mid and treble frequencies of the synthetic test signal, while the synthetic kick triggers discrete color-state jumps.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:41:16.785Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-dancing-spirits-bright.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-dancing-spirits-bright.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

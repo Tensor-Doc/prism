@@ -11,9 +11,37 @@
     "name": "beta106i - Burning Form (Seething Mass) - mash0000 - fire paint easter egg internals",
     "author": "beta106i"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "monochromatic",
+      "stark",
+      "bright"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#ffff00",
+      "#ffea00"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "warp_field"
+    ],
+    "technical_notes": "The frame buffer is dominated by a flat, high-brightness yellow color field with a decay rate near 1.0, saturating the screen. Extremely subtle, low-contrast spatial variations sweep across the frame, suggesting a heavily attenuated warp field. No visible reactivity to the synthetic test signal is observed, resulting in a nearly static, high-exposure state.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:45:15.031Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

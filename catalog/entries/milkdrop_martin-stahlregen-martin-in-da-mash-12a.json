@@ -11,9 +11,39 @@
     "name": "martin + stahlregen - martin in da mash 12a",
     "author": "martin + stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "strobe",
+      "void"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#733d00",
+      "#000000",
+      "#b35900"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "The preset exhibits extreme minimalism, rendering solid color fields that flash in synchronization with the synthetic kick of the test signal. The screen alternates between pure black and flat, untextured brown/orange hues, indicating a direct audio-gated thresholding of the background color with zero decay or spatial modulation. No feedback samplers or warp shaders are active, resulting in a stark, stroboscopic visual output.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:10:43.689Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-stahlregen-martin-in-da-mash-12a.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stahlregen-martin-in-da-mash-12a.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Phat + Eo.S. - Data_swimmer",
     "author": "Phat + Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "painterly",
+      "psychedelic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#10b981",
+      "#06b6d4",
+      "#1e3a8a",
+      "#15803d"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom wave draws a complex wireframe sphere whose color and scale modulate with the synthetic test signal. The background employs a per-pixel warp shader to generate a fluid, liquid advection field reminiscent of reaction-diffusion. Frame feedback through sampler_main combined with a low decay rate produces persistent, painterly watercolor trails that sweep diagonally across the screen.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:38:44.675Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_phat-eo-s-data-swimmer.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_phat-eo-s-data-swimmer.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

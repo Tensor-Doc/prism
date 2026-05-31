@@ -11,13 +11,40 @@
     "name": "martin - neon space ps2 (ati fix)",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "static",
+      "monochrome",
+      "stark",
+      "geometric"
+    ],
+    "motion": 0,
+    "palette_anchor": [
+      "#808080",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [],
+    "technical_notes": "A completely static grey geometric block with jagged vertical boundaries rendered against a black background. There is no active motion, feedback, or modulation in response to the synthetic test signal, indicating a deactivated or non-reactive rendering state.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:27:47.700Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-neon-space-ps2-ati-fix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-neon-space-ps2-ati-fix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,9 @@
       {
         "name": "suff5"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_cope-flexi-mother-of-whirl.webm",
+    "thumb": "/thumbs/milkdrop_cope-flexi-mother-of-whirl.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -28,6 +30,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

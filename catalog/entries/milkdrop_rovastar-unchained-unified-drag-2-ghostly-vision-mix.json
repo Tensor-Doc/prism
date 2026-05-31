@@ -11,9 +11,44 @@
     "name": "Rovastar & Unchained - Unified Drag 2 (Ghostly Vision Mix)",
     "author": "Rovastar & Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "pastel",
+      "atmospheric",
+      "geometric",
+      "fluid",
+      "organic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#f0f4f1",
+      "#e8c5e5",
+      "#d2f1d2",
+      "#f7d6c8"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "hue_cycle",
+      "beat_burst",
+      "warp_field",
+      "decay_trail"
+    ],
+    "technical_notes": "A high-exposure composite shader (sampler_fc_main) blends overlapping geometric planes with a persistent decay trail to create a watercolor-like folded paper aesthetic. The synthetic kick triggers sudden, beat-gated shifts in the hue cycle alongside rapid changes in zoom and rotation. A dense grid of motion vectors rendered as fine dots modulates in response to treble frequencies in the test signal.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:45:07.405Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-unchained-unified-drag-2-ghostly-vision-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-unchained-unified-drag-2-ghostly-vision-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

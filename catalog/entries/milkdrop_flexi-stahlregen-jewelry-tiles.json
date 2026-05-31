@@ -11,9 +11,38 @@
     "name": "flexi + stahlregen - jewelry tiles",
     "author": "flexi + stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "monochrome",
+      "void",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0.1,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A stark, high-contrast monochrome preset displaying a single static white wedge extending from the bottom-left corner. Small, discrete tick marks flicker along the left edge of the viewport, reacting subtly to high-frequency transients in the synthetic test signal. The lack of frame feedback or warp fields results in an extremely sparse, nearly static composition.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:57:46.756Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-stahlregen-jewelry-tiles.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-stahlregen-jewelry-tiles.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

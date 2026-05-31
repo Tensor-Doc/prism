@@ -11,9 +11,44 @@
     "name": "shifter - spincycle c",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "fluid",
+      "hypnotic",
+      "gothic",
+      "atmospheric"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#121214",
+      "#2a2a30",
+      "#0a0510",
+      "#4c4c54"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "domain_repetition",
+      "bloom_glow"
+    ],
+    "technical_notes": "A bilateral symmetric warp field generates fluid, smoky structures reminiscent of Geiss's reaction-diffusion lineage. Frame feedback via sampler_main with a low decay rate produces persistent, painterly trails that swell in response to the synthetic test signal's bass kicks. High-frequency transients modulate concentric ripple patterns and fine, sparkling particle-like custom waves.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:46:52.009Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-spincycle-c.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-spincycle-c.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "Zylot - Crossing Over (Geiss Tweak)",
     "author": "Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "sparse"
+    ],
+    "motion": 0.05,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#3b3b6d"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "An extremely stark and minimalist preset consisting of a single thin white circular custom shape centered on a black background. A brief, subtle blue-purple glow is gated to a transient peak in the synthetic test signal at 11 seconds, otherwise leaving the frame completely dark and static. High decay prevents any persistent trails or feedback accumulation.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:16:21.497Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_zylot-crossing-over-geiss-tweak.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_zylot-crossing-over-geiss-tweak.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

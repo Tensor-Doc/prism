@@ -11,9 +11,43 @@
     "name": "Telek - Slow Thing (Spiderman Mix)",
     "author": "Telek"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cavernous",
+      "dark",
+      "hypnotic",
+      "organic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#800000",
+      "#ff0000",
+      "#100050"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "A dense grid of red lines is warped into a cavernous tunnel structure via a per-pixel warp shader. Frame feedback through sampler_main with a low decay rate creates persistent, organic trails that expand dynamically on the synthetic kick. A blue custom wave oscillates in the foreground, modulated by high-frequency components of the test signal.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:06:28.272Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_telek-slow-thing-spiderman-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_telek-slow-thing-spiderman-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,13 +11,44 @@
     "name": "ORB - Inferno",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "stroboscopic",
+      "sparse"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ff0000",
+      "#4a0000"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist, dark preset where a horizontal grid of red custom waves flashes in response to the synthetic test signal. The visual is heavily gated by the bass kick, showing almost instantaneous decay back to a black void. The lack of persistent trails suggests a high decay rate and minimal frame feedback in sampler_main.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:33:06.958Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "grad3"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-inferno.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-inferno.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

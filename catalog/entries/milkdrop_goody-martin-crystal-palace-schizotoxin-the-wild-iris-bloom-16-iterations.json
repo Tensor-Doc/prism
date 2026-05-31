@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_goody-martin-crystal-palace-schizotoxin-the-wild-iris-bloom-16-iterations.webm",
+    "thumb": "/thumbs/milkdrop_goody-martin-crystal-palace-schizotoxin-the-wild-iris-bloom-16-iterations.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

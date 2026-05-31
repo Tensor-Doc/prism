@@ -11,9 +11,44 @@
     "name": "Unchained - Cranked On Failure",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "chaotic",
+      "retro",
+      "energetic"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#e02080",
+      "#39ff14",
+      "#00f0ff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "custom_wave",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom wave draws high-frequency scribbles that spiral outward via a rotational warp field. Nested rectangular borders are generated dynamically, scaling and flashing in response to bass transients in the synthetic test signal. Frame feedback through sampler_main with moderate decay preserves the sharp geometric lines, creating a chaotic, strobing tunnel effect.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:11:43.198Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-cranked-on-failure.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-cranked-on-failure.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

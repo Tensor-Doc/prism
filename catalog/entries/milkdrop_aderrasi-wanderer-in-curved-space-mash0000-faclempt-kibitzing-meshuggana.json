@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana.webm",
+    "thumb": "/thumbs/milkdrop_aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (75364 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

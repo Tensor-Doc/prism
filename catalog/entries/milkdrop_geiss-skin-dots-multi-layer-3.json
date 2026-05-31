@@ -11,9 +11,41 @@
     "name": "Geiss - Skin Dots Multi-layer 3",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "sparse",
+      "mechanical"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#e1f5fe",
+      "#ffebee"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist radar-like sweep rendered using custom shapes or waves. The outer circle and rotating wedge scale in response to the synthetic test signal's low-frequency pulses. Color shifts slowly across a subtle pastel range via a simple hue cycle, while the background remains a pure black void with zero frame feedback.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:11:56.232Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-skin-dots-multi-layer-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-skin-dots-multi-layer-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

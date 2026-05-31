@@ -11,9 +11,44 @@
     "name": "Unchained - Unified Drag 2",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "frenetic",
+      "kaleidoscopic",
+      "geometric",
+      "strobing"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#e066ff",
+      "#ffffff",
+      "#e0f7fa",
+      "#ffd700"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "custom_wave",
+      "domain_repetition"
+    ],
+    "technical_notes": "A central custom wave scribble reacts dynamically to treble in the synthetic test signal. Strong zoom and rotation in the per-frame equations feed into sampler_main, generating a persistent concentric tunnel structure. Beat-gated triggers on the synthetic kick drive rapid hue cycling and high-contrast white-out flashes that decay quickly.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:14:06.632Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-unified-drag-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-unified-drag-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

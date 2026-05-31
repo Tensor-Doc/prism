@@ -11,9 +11,39 @@
     "name": "fiShbRaiN + geiss - witchcraft (Grow Mix 3)",
     "author": "fiShbRaiN + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "stark",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.1,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A highly minimalist preset rendering thin, white custom shapes (circles and arcs) against a pure black background. The shapes are gated by transient spikes in the test signal, appearing instantly and disappearing without any persistent decay trails or sampler_main feedback. The lack of a warp field or color cycling maintains a stark, binary oscilloscope-like aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:52:39.512Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

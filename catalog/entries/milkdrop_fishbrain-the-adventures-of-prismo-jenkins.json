@@ -11,9 +11,42 @@
     "name": "fiShbRaiN - the adventures of prismo jenkins",
     "author": "fiShbRaiN"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "kaleidoscopic",
+      "celestial",
+      "atmospheric"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#dcdcb4",
+      "#5a5560",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.65
+    },
+    "techniques": [
+      "domain_repetition",
+      "particle_system",
+      "beat_burst",
+      "bloom_glow",
+      "frame_feedback"
+    ],
+    "technical_notes": "A kaleidoscopic domain repetition tiles a central starburst pattern, driven by a high-frequency particle system that reacts to the treble of the synthetic test signal. Beat-gated bursts trigger intense full-screen flashes and scale jumps, utilizing sampler_blur2 in the composite shader to create a soft bloom effect. Frame feedback through sampler_main maintains a subtle trailing texture behind the swirling spiral arms.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:54:46.132Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-the-adventures-of-prismo-jenkins.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-the-adventures-of-prismo-jenkins.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

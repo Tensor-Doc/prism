@@ -11,9 +11,42 @@
     "name": "Geiss - Liquid Beats 2 (Reverse Jelly V3)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "sparse",
+      "abstract"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#b39ddb",
+      "#ffab91"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom_wave is rendered at the center of a black screen with a high decay rate, leaving no persistent trails. The wave's vertices are modulated by the audio loop's frequency bands, with treble causing sharp spikes and mid-range frequencies driving the overall wave amplitude. The color of the wave slowly cycles through a simple hue rotation against a stark black void.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:52:55.342Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-liquid-beats-2-reverse-jelly-v3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-liquid-beats-2-reverse-jelly-v3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -17,7 +17,9 @@
       {
         "name": "fw_lichen"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_unchained-furious-spirals-remix-steady.webm",
+    "thumb": "/thumbs/milkdrop_unchained-furious-spirals-remix-steady.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

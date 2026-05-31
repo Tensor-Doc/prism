@@ -10,9 +10,37 @@
   "display": {
     "name": "Mig_091b"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "oscilloscopic"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ff0000"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist rendering featuring a custom wave that acts as a direct oscilloscope for the synthetic test signal. The high decay rate prevents any frame feedback or persistent trails, leaving only a stark red waveform against a pure black void. Subtle high-frequency ripples in the wave trace the treble and mid-range transients of the audio loop.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:29:48.303Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-091b.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-091b.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

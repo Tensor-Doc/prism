@@ -11,9 +11,41 @@
     "name": "Geiss - Reaction Diffusion (Relief Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#e5a93b",
+      "#4da6ff",
+      "#a0a0ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.3,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave renders as a diagonal oscilloscope line across a pitch-black void. The line's amplitude and thickness modulate dynamically in response to the bass and treble of the synthetic test signal. With no frame feedback or warp field active, the visualizer remains starkly minimalist, relying entirely on a slow hue cycle to shift the line's color.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:04:17.629Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-relief-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-relief-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

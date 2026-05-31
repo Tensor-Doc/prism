@@ -11,9 +11,37 @@
     "name": "flexi - bouncing balls [neon mix]",
     "author": "flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "oscilloscope"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#d60000"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.8,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom_wave renders a thin red line across a dark void, directly plotting the waveform of the synthetic test signal. The decay rate is set to maximum, leaving no persistent trails or frame feedback in sampler_main. The vertical displacement and wave amplitude react dynamically to the mid and treble frequencies of the audio loop.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:59:30.352Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-bouncing-balls-neon-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-bouncing-balls-neon-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,40 @@
     "name": "Geiss - Confetti (Kaleidoscope Mix)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#a5f442",
+      "#b2ebf2"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave is rendered at the screen center, with its vertices modulated directly by the test signal's spectral bands. The preset features an extremely high decay rate, leaving no frame feedback or persistent trails in sampler_main, resulting in a stark, minimalist void. Color cycles through a simple hue rotation mapped to the wave's stroke.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:20:13.360Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-confetti-kaleidoscope-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-confetti-kaleidoscope-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

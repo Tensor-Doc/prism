@@ -10,9 +10,44 @@
   "display": {
     "name": "Mig_Oscilloscope022"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "explosive",
+      "dark",
+      "sparse",
+      "cosmic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#4ca6a6",
+      "#a6808c",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "frame_feedback",
+      "domain_repetition",
+      "bloom_glow"
+    ],
+    "technical_notes": "A highly audio-gated preset that remains dark and sparse until triggered by the synthetic kick, which initiates explosive beat bursts. The central structure features intricate custom waves that expand outward through a radial warp field, leaving decaying feedback trails in sampler_main. The color palette shifts dynamically from cool cyans to dusty rose tones during peak transients.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:35:21.209Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-oscilloscope022.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-oscilloscope022.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

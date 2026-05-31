@@ -11,9 +11,44 @@
     "name": "Rovastar - LabFunk",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "graphic",
+      "kinetic",
+      "frenetic",
+      "brutalist",
+      "sketchy"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#e64a2e",
+      "#ffffff",
+      "#222222"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A spiral tunnel vortex is driven by high zoom and rotation parameters in the per-frame equations. Custom waves rendered as thin white lines jitter dynamically in response to the treble of the synthetic test signal, while bass-gated triggers flip the background color state between solid red and dark grey. Frame feedback through sampler_main with a low decay rate produces the deep, receding perspective of the tunnel.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:58:05.156Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-labfunk.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-labfunk.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

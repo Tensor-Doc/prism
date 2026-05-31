@@ -11,9 +11,41 @@
     "name": "Geiss - Trampoline",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "oscilloscope",
+      "cybernetic",
+      "atmospheric"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0d1112",
+      "#8aa3a6",
+      "#d5e2e3"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "decay_trail"
+    ],
+    "technical_notes": "Custom wave equations render horizontal oscilloscope lines that jitter with the treble of the test signal. A per-pixel warp shader combined with feedback through sampler_main distorts these lines into a spiraling, grid-like tunnel structure. Zoom and rotation parameters are modulated dynamically by bass transients in the test signal.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:17:32.366Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-trampoline.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-trampoline.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,42 @@
     "name": "Geiss - Iris Storm",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "sparse",
+      "rhythmic"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#fcd3f2",
+      "#c4faf8",
+      "#baffc9"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.3,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle",
+      "beat_burst"
+    ],
+    "technical_notes": "A minimalist custom wave draws a polar circle and wedge shape against a solid black background. The overall scale is gated by bass attenuated from the synthetic test signal, causing snappy expansions on beat hits, while treble modulates a subtle vertex jitter. A high decay rate prevents frame feedback, keeping the rendering clean, while the stroke color undergoes a slow hue cycle.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:50:35.127Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-iris-storm.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-iris-storm.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

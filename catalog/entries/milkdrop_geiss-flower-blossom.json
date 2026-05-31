@@ -11,9 +11,43 @@
     "name": "Geiss - Flower Blossom",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "minimalist",
+      "atmospheric",
+      "void"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#ffffff",
+      "#1a1a1a",
+      "#8fa09f",
+      "#9e8282"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central circular element is heavily gated by the bass of the synthetic test signal, triggering explosive expansions that decay into a tight, pulsing vortex. Per-pixel warp equations apply a radial zoom and pinch, drawing the frame feedback into the center. The soft, desaturated color shifts between dusty rose and pale teal are modulated by low-to-mid frequency bands, rendered with a high-exposure bloom pass.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:46:22.543Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-flower-blossom.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-flower-blossom.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

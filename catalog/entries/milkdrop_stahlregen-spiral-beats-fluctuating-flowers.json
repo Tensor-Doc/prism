@@ -11,9 +11,41 @@
     "name": "Stahlregen - Spiral Beats (Fluctuating Flowers)",
     "author": "Stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "stark",
+      "geometric"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ff00ff",
+      "#00ffaa",
+      "#0022ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.3,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist preset displaying a single rotating custom wave ray that sweeps across a black background. At the bottom margin, a sparse set of custom shapes acts as a basic spectrum analyzer reacting to the synthetic test signal. High decay prevents any frame feedback or persistent trails, keeping the composition stark and clean.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:04:48.780Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_stahlregen-spiral-beats-fluctuating-flowers.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_stahlregen-spiral-beats-fluctuating-flowers.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

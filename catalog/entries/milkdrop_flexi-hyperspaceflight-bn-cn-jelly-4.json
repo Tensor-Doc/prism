@@ -11,9 +11,39 @@
     "name": "flexi - hyperspaceflight (bn cn Jelly 4)",
     "author": "flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "radar",
+      "stark",
+      "void"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#00f0ff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist custom wave renders a sharp cyan circle containing a rotating wedge sweep. The outer ring's vertices deform dynamically in response to the bass frequencies of the synthetic test signal, while the background remains a pure black void. Lacks any frame feedback, warp shaders, or decay trails, resulting in an exceptionally clean, vector-like aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:01:30.636Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-hyperspaceflight-bn-cn-jelly-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-hyperspaceflight-bn-cn-jelly-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

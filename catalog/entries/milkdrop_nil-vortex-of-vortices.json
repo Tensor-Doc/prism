@@ -11,9 +11,42 @@
     "name": "nil - Vortex of Vortices",
     "author": "nil"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "atmospheric",
+      "dreamy"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#f0f0f0",
+      "#8a8a8a",
+      "#d3d3d3",
+      "#e6e6fa"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A high-key, low-decay feedback loop via sampler_main creates persistent, smoky, ribbon-like trails resembling fluid flow. A complex per-pixel warp field drives a swirling vortex that shifts dynamically in response to the synthetic kick of the test signal. Delicate custom waves render thin, high-frequency lines that flicker in response to treble transients, while subtle color shifts modulate over time.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:39:46.842Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_nil-vortex-of-vortices.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_nil-vortex-of-vortices.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

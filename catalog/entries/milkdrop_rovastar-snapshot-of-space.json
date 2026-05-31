@@ -11,9 +11,43 @@
     "name": "Rovastar - Snapshot Of Space",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "stark",
+      "strobe",
+      "glitchy",
+      "high-contrast"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#4a1d24",
+      "#00f0ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A high-contrast, strobing preset characterized by massive white-out flashes triggered by the synthetic kick of the test signal. A custom wave renders as a jittery, scribbled white line along the edge of a feedback-driven geometric boundary. The composite shader alternates between deep crimson, cyan, and stark white, creating an aggressive, glitch-like visual rhythm.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:58:37.676Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-snapshot-of-space.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-snapshot-of-space.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

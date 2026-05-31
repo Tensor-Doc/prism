@@ -11,9 +11,44 @@
     "name": "shifter - spills blender + krash beatdetect - mash0000 - here comb your hair with this planet",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "gothic",
+      "symmetric",
+      "visceral",
+      "dark"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#000000",
+      "#8a2be2",
+      "#c5a059",
+      "#00ff00"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "Bilateral symmetry and custom wave rings frame a central feedback tunnel sampled via sampler_main. High audio gating driven by the synthetic test signal's bass transients triggers sudden expansions of the warp field and shape scales, which quickly fade due to a high decay rate. The central organic textures evoke Geiss's classic reaction-diffusion cauldron lineage.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:46:21.157Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-spills-blender-krash-beatdetect-mash0000-here-comb-your-hair-with-this.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-spills-blender-krash-beatdetect-mash0000-here-comb-your-hair-with-this.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,41 @@
     "name": "fed - slowfast 1.1",
     "author": "fed"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "radar",
+      "clean"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#ff007f",
+      "#00f0ff",
+      "#80ff80",
+      "#ffcc00"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A custom wave draws a minimalist circular oscilloscope combined with a rotating radial wedge. The perimeter of the circle deforms dynamically in response to the synthetic test signal, with high-frequency ripples driven by treble and larger structural deflections reacting to the synthetic kick. The color of the wave cycles through a vibrant palette over time.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:50:45.433Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fed-slowfast-1-1.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fed-slowfast-1-1.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

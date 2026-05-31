@@ -11,9 +11,39 @@
     "name": "Geiss - Rose 4 (bccn Jelly V4)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "clinical"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#f472b6"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist preset featuring a single custom_wave configured as an oscilloscope needle rotating around the center. The tip of the wave deforms with high-frequency jitter driven by the treble of the synthetic test signal, while the rest of the frame remains a pure black void. With decay set to 1.0, there is no frame feedback through sampler_main, resulting in a stark and clinical aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:07:27.369Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-4-bccn-jelly-v4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-4-bccn-jelly-v4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

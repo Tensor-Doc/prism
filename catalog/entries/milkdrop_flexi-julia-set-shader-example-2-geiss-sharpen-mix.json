@@ -13,7 +13,9 @@
   },
   "annotation": null,
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "/videos/milkdrop_flexi-julia-set-shader-example-2-geiss-sharpen-mix.webm",
+    "thumb": "/thumbs/milkdrop_flexi-julia-set-shader-example-2-geiss-sharpen-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -21,6 +23,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (35191 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

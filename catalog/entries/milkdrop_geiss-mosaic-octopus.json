@@ -11,9 +11,41 @@
     "name": "Geiss - Mosaic Octopus",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "stark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#ff0000",
+      "#00ffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "A highly minimalist preset featuring a single circular custom wave drawn against a black void. The waveform's radial deformation reacts to the mid and treble frequencies of the test signal, while discrete beat-gated triggers on the synthetic kick cause sudden color shifts and brief visibility dropouts. No frame feedback or warp shaders are active, leaving a raw, high-contrast oscilloscope aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:57:07.240Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-mosaic-octopus.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-mosaic-octopus.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

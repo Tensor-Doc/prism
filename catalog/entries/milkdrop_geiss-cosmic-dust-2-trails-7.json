@@ -11,13 +11,45 @@
     "name": "Geiss - Cosmic Dust 2 - Trails 7",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "linear",
+      "dark",
+      "fluid"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#d48a37",
+      "#8c2d38"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail",
+      "audio_gating",
+      "frame_feedback"
+    ],
+    "technical_notes": "Custom waves render horizontal oscilloscopes that multiply and stack via frame feedback in sampler_main. High-amplitude transients in the synthetic test signal trigger a dense cascade of golden, undulating lines modulated by bass attenuated. The low decay rate allows the wave trails to briefly persist before dissolving back into the dark void.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:36:54.694Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "fw_wrenches"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2-trails-7.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2-trails-7.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

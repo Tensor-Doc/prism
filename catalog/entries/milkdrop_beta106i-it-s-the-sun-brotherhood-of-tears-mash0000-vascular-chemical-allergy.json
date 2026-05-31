@@ -11,9 +11,41 @@
     "name": "beta106i - It's the Sun (Brotherhood of Tears) - mash0000 - vascular chemical allergy",
     "author": "beta106i"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "hypnotic",
+      "sparse"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#1e3a5f",
+      "#8c6d31",
+      "#2e5a44"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "audio_gating",
+      "hue_cycle",
+      "custom_wave"
+    ],
+    "technical_notes": "A central custom shape with radial gradient mapping pulses in scale and shifts color in response to the bass of the synthetic test signal. The outer frame lines suggest a simple grid structure modulated by beat-gated triggers. High decay rate ensures clean, snappy frame-to-frame transitions with no persistent feedback trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:45:47.493Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

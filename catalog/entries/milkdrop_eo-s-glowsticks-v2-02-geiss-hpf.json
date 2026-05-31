@@ -11,9 +11,41 @@
     "name": "Eo.S. - glowsticks v2 02 - Geiss HPF",
     "author": "Eo.S."
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "fluid",
+      "geometric"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#00f099",
+      "#00a080"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "A custom wave is rendered as a sweeping, ribbed ribbon that morphs and rotates in a dark void. High decay keeps the background completely black, while the ribbon's width and position modulate with the synthetic test signal's treble and bass transients. The fine line structure within the ribbon suggests high-frequency rendering mapped to audio amplitude.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:18:54.337Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eo-s-glowsticks-v2-02-geiss-hpf.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eo-s-glowsticks-v2-02-geiss-hpf.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
     "author": "Eo.S. + Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kinetic",
+      "psychedelic",
+      "strobing"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#000000",
+      "#00ff66",
+      "#ff007f",
+      "#00e5ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "domain_repetition",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle"
+    ],
+    "technical_notes": "A recursive spiral tunnel is generated via coordinate warping in the per-pixel shader, feeding back into sampler_main to create infinite geometric depth. The synthetic kick drum triggers aggressive audio-gated state changes, shifting the visualizer from a dark wireframe state to highly saturated, blooming kaleidoscope patterns. Hue cycling rotates the palette across high-contrast green, cyan, and magenta ranges.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:18:22.836Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eo-s-zylot-skylight-stained-glass-majesty-mix-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eo-s-zylot-skylight-stained-glass-majesty-mix-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

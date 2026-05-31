@@ -11,7 +11,32 @@
     "name": "martin + flexi - bombyx mori mix2 in the beehive",
     "author": "martin + flexi"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "mechanical"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#ff007f"
+    ],
+    "audio_affinity": {
+      "bass": 0,
+      "mid": 0,
+      "treble": 0
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom shape rendering a pink circular radar sweep against a black void. The rotation is a constant angular sweep over time, showing no visible affinity to the synthetic test signal. The preset is extremely sparse with a high decay rate, leaving no feedback trails in sampler_main.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:08:31.984Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +45,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-flexi-bombyx-mori-mix2-in-the-beehive.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-flexi-bombyx-mori-mix2-in-the-beehive.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

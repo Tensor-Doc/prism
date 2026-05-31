@@ -11,9 +11,44 @@
     "name": "Vovan + Geiss - Bass With Flover (Feedback Mix)",
     "author": "Vovan + Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "visceral",
+      "abyssal",
+      "kinetic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#8b1a1a",
+      "#9fa131",
+      "#000000",
+      "#d4af37"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "Concentric circular custom waves map high-frequency transients from the test signal, while a radial warp field drives a spiraling zoom effect. High-threshold audio gating triggers dramatic state changes, flashing the frame to deep crimson or blacking out the background on strong synthetic kicks. Frame feedback through sampler_main creates a decaying tunnel of painterly, organic textures.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:15:15.131Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_vovan-geiss-bass-with-flover-feedback-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_vovan-geiss-bass-with-flover-feedback-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,42 @@
     "name": "Mig_304 - geiss remix 3",
     "author": "Mig_304"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "kinetic",
+      "retro",
+      "psychedelic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ffff00",
+      "#ff3300",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave"
+    ],
+    "technical_notes": "A logarithmic spiral is generated via per-frame zoom and rotation equations, feeding back into sampler_main to produce a stepped, recursive trail. The synthetic test signal's bass kicks trigger sudden scale expansions and color shifts from bright yellow to deep red. A delicate custom wave oscilloscope is visible near the central attractor, reacting to high-frequency transients.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:33:02.860Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-304-geiss-remix-3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-304-geiss-remix-3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

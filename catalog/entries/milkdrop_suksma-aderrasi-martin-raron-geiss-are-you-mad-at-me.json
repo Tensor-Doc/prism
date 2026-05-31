@@ -11,9 +11,42 @@
     "name": "suksma + aderrasi martin raron geiss - are you mad at me",
     "author": "suksma + aderrasi martin raron geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffff00",
+      "#ff3333",
+      "#33ff33"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "hue_cycle",
+      "beat_burst"
+    ],
+    "technical_notes": "A highly minimalist, sparse preset consisting of a single tiny custom wave or shape at the screen center that flickers and changes color on audio transients. The surrounding field is completely black with no frame feedback or warp field active. The central element's color rotates through a hue cycle driven by the test signal's high-frequency peaks.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:48:16.635Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_suksma-aderrasi-martin-raron-geiss-are-you-mad-at-me.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_suksma-aderrasi-martin-raron-geiss-are-you-mad-at-me.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

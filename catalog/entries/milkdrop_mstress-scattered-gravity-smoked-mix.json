@@ -11,9 +11,42 @@
     "name": "mstress - Scattered gravity (Smoked mix)",
     "author": "mstress"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "psychedelic",
+      "cavernous"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0a2818",
+      "#124024",
+      "#d830b0",
+      "#e0e8e0"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "custom_wave"
+    ],
+    "technical_notes": "A swirling, fluid cauldron effect is generated via persistent frame feedback in sampler_main combined with a complex per-pixel warp field. Custom shapes are injected as discrete bursts modulated by the synthetic kick, leaving highly distorted, painterly trails. The organic green palette is punctured by high-contrast chromatic flares and feedback-stretched artifacts.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:39:13.999Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mstress-scattered-gravity-smoked-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mstress-scattered-gravity-smoked-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

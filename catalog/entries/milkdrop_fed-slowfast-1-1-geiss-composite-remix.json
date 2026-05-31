@@ -11,9 +11,41 @@
     "name": "fed - slowfast 1.1 (geiss composite remix)",
     "author": "fed"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "geometric",
+      "stark",
+      "sparse"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#83f3f5 Melon",
+      "#fbc54b",
+      "#e8310d",
+      "#1919d1"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A minimalist radar-like custom wave rendering a circular boundary and a rotating wedge against a solid black background. The outer circular path deforms dynamically, reacting to the bass frequencies of the synthetic test signal. Color values cycle continuously through a vibrant hue rotation, while the absence of frame feedback or decay trails maintains a stark, high-contrast geometric aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:50:12.915Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fed-slowfast-1-1-geiss-composite-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fed-slowfast-1-1-geiss-composite-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

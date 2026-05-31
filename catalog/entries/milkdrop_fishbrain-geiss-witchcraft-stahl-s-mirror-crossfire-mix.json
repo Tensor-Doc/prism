@@ -11,9 +11,41 @@
     "name": "fiShbRaiN + geiss - witchcraft (Stahl's Mirror Crossfire Mix)",
     "author": "fiShbRaiN + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "geometric"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#1abc9c",
+      "#9b59b6",
+      "#2ecc71"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist, sparse preset consisting almost entirely of a black void punctuated by brief, beat-gated geometric shapes. Custom shapes and waves (circles and lines) are triggered by the synthetic kick of the test signal, flashing in green, cyan, and purple before instantly decaying. The lack of persistent frame feedback through sampler_main or warp fields results in a stark, clean, and non-continuous visual style.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:53:40.416Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-stahl-s-mirror-crossfire-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-stahl-s-mirror-crossfire-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

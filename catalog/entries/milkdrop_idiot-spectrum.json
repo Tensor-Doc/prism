@@ -11,9 +11,43 @@
     "name": "idiot - Spectrum",
     "author": "idiot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "oscillographic",
+      "minimalist",
+      "electric",
+      "linear"
+    ],
+    "motion": 0.5,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#80c000",
+      "#101080"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "hue_cycle",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "Multiple custom_wave elements render a central chaotic scribble and flanking horizontal boundaries that react to the synthetic test signal. A low decay rate creates persistent trails in sampler_main, while a discrete coordinate step function triggers periodic domain repetition, tiling the waveform across a grid. Hue cycling rotates the boundary wave colors from lime green to deep indigo.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:08:00.800Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot-spectrum.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot-spectrum.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,39 @@
     "name": "Geiss - Eye of Jupiter",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "sparse",
+      "dark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#3a0505"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "Two horizontal custom waves render the raw audio waveform of the test signal against a near-total black void. A faint, low-frequency red glow in the bottom-left corner modulates with the bass of the test signal. The preset operates with high decay, causing the waveform lines to vanish instantly without leaving feedback trails.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:45:52.541Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-eye-of-jupiter.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-eye-of-jupiter.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

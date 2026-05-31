@@ -11,9 +11,42 @@
     "name": "Geiss - Motion Blur 2 (color sat boost)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "synthetic",
+      "minimalist",
+      "oscillating"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#22c55e",
+      "#d946ef",
+      "#eab308",
+      "#2563eb"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.8,
+      "treble": 0.9
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating",
+      "beat_burst"
+    ],
+    "technical_notes": "Multiple custom wave formulas render horizontal ribbon-like structures that oscillate dynamically. The amplitude and vertical displacement of these ribbons are modulated by the mid and treble bands of the synthetic test signal, while the synthetic kick triggers sudden multiplication of the active wave instances. A rapid hue cycle rotates the color palette across the spectrum against a clean, high-decay dark background.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:00:00.707Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-motion-blur-2-color-sat-boost.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-motion-blur-2-color-sat-boost.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

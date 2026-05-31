@@ -11,9 +11,44 @@
     "name": "Rovastar + Zylot - Narell's Fever",
     "author": "Rovastar + Zylot"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "hypnotic",
+      "fluid",
+      "psychedelic",
+      "mathematical"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#4af2a1",
+      "#123524",
+      "#ffffff",
+      "#111111"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "custom_wave",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A complex radial warp field and polar domain repetition generate shifting rotational symmetries (2-fold to 6-fold) in response to the synthetic test signal. High-frequency custom waves trace the contours of the warp field, creating fine, ripple-like interference patterns. Frame feedback through sampler_main with a tuned decay rate produces smooth, fluid-like black and white plumes that contrast with the vibrant green hue-cycled background.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:53:45.293Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-zylot-narell-s-fever.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-zylot-narell-s-fever.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

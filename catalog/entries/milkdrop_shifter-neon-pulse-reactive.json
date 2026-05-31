@@ -11,9 +11,44 @@
     "name": "shifter - neon pulse (reactive)",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "bioluminescent",
+      "organic",
+      "electric",
+      "psychedelic"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#00ff66",
+      "#9900ff",
+      "#00e5ff",
+      "#0a0a10"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "hue_cycle",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A complex per-pixel warp shader drives spiraling, fern-like organic structures, utilizing frame feedback via sampler_main with a moderate decay rate to generate persistent trails. High-amplitude transients in the synthetic test signal trigger rapid hue rotation and sudden expansions of the warp field, while treble spikes modulate the brightness of high-frequency neon filaments. The composite pass utilizes sampler_blur1 to yield a soft glow around the sharp, reactive filaments.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:45:14.294Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-neon-pulse-reactive.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-neon-pulse-reactive.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

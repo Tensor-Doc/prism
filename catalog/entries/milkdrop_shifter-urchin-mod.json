@@ -11,9 +11,44 @@
     "name": "shifter - urchin mod",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "psychedelic",
+      "kaleidoscopic",
+      "frenetic",
+      "neon"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#a8ff1a",
+      "#d946ef",
+      "#06b6d4",
+      "#0f172a"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "hue_cycle",
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A 4-way kaleidoscopic domain repetition creates a highly symmetric, pulsating tunnel. Per-pixel warp equations apply high-frequency jagged oscillations driven by the mid and treble frequencies of the test signal. Frame feedback via sampler_main blends with high zoom, while custom waves generate sharp radial spokes that flare outward on bass-gated triggers.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:47:27.236Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-urchin-mod.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-urchin-mod.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

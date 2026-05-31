@@ -11,9 +11,39 @@
     "name": "martin + stahlregen - martin in da mash 12",
     "author": "martin + stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "dark",
+      "sparse",
+      "cosmic",
+      "contemplative"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#e67e22",
+      "#d35400"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist preset featuring a single parametric custom_wave that traces elegant, sweeping amber loops against a pure black void. The wave's scale and spatial translation are modulated by the bass frequencies of the synthetic test signal, while high-frequency jitter along the curve reflects mid-to-treble activity. With decay set to maximum, the frame remains entirely free of persistent trails or feedback artifacts.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:10:12.234Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-stahlregen-martin-in-da-mash-12.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stahlregen-martin-in-da-mash-12.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

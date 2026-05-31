@@ -11,9 +11,39 @@
     "name": "ORB - Liquid Fire",
     "author": "ORB"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "monochrome",
+      "void"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "decay_trail"
+    ],
+    "technical_notes": "A custom_wave drawing routine renders sharp, feathered white sweeps across a dark canvas, triggered by high-frequency transients in the synthetic test signal. High decay rates in the frame feedback loop prevent persistent trails, leaving only brief, stark gestures that quickly fade to black. The rendering relies on simple coordinate translation driven by audio amplitude, bypassing complex warp shaders or feedback loops for a highly minimalist aesthetic.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:33:40.749Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_orb-liquid-fire.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_orb-liquid-fire.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,13 +11,46 @@
     "name": "Geiss - Cosmic Dust 2 - quasistatic noise desat trails",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "strobe",
+      "geometric",
+      "staccato"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#ff00ff",
+      "#00ffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.2,
+      "treble": 0.2
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle",
+      "chromatic_split"
+    ],
+    "technical_notes": "A minimalist, high-contrast preset where discrete rectangular custom shapes are gated directly by the bass threshold of the test signal. A high decay rate ensures instantaneous transitions to a black screen between beats, with chromatic aberration visible at the edges of the blocks. The color of the shapes cycles through a simple hue rotation on successive triggers.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:37:56.238Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "fw_wrenches"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-desat-trails.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cosmic-dust-2-quasistatic-noise-desat-trails.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

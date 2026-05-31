@@ -11,9 +11,39 @@
     "name": "Rovastar + Rocke - Sugar Spun Sister - Painterly",
     "author": "Rovastar + Rocke"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#ff8822",
+      "#ff4400",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A single, highly responsive custom wave is rendered in the center of a black void. The wave's vertices are modulated directly by the synthetic test signal, expanding outwards during bass kicks and jittering with mid-to-high frequencies. With decay set to maximum and no feedback sampler (sampler_main is cleared), there are no persistent trails, resulting in a stark, minimalist aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:51:19.874Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-rocke-sugar-spun-sister-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-rocke-sugar-spun-sister-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

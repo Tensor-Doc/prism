@@ -11,9 +11,42 @@
     "name": "Telek - Sine Wave",
     "author": "Telek"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "industrial",
+      "textural",
+      "glitchy",
+      "kinetic"
+    ],
+    "motion": 0.7,
+    "palette_anchor": [
+      "#7a701a",
+      "#4a120c",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "warp_field",
+      "frame_feedback",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom_wave renders as a high-frequency white scribble, its amplitude and complexity modulated by the treble of the synthetic test signal. The background features a dense, vertical grid-like texture warped by a per-pixel warp shader that creates folding, fabric-like distortions. Feedback loop through sampler_main with a low decay rate maintains the persistent scanline structure, while a slow hue cycle shifts the palette from olive-yellow to deep crimson.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:05:53.052Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_telek-sine-wave.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_telek-sine-wave.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

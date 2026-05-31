@@ -11,13 +11,41 @@
     "name": "Martin - charisma",
     "author": "Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#00ffff",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom wave rendering that acts as a direct oscilloscope of the synthetic test signal. The wave is drawn as a filled cyan ribbon against a solid black background, showing high affinity to the bass and mid-range frequencies of the audio loop. No frame feedback or warp shaders are active, resulting in zero persistent trails or background textures.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:28:32.723Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-charisma.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-charisma.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

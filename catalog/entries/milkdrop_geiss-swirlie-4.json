@@ -11,9 +11,41 @@
     "name": "Geiss - Swirlie 4",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "monochrome",
+      "hypnotic",
+      "intricate",
+      "kinetic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#808080"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail"
+    ],
+    "technical_notes": "A monochrome spiral structure generated via a complex warp field that zooms and rotates, feedback-blended through sampler_main with a low decay rate to create dense, persistent textures. Fine-line custom waves react sharply to the treble of the test signal, scribbling across the central vortex. The global zoom and rotation parameters scale dynamically with the bass attenuated of the synthetic kick.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:14:59.007Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-swirlie-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-swirlie-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

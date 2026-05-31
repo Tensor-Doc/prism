@@ -11,9 +11,44 @@
     "name": "shifter - glassworms flare",
     "author": "shifter"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "kinetic",
+      "luminescent",
+      "frenetic",
+      "cosmic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#1a1a1a",
+      "#a2f0b9",
+      "#e0b0ff",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "frame_feedback",
+      "warp_field",
+      "bloom_glow",
+      "hue_cycle"
+    ],
+    "technical_notes": "A central custom wave ribbon oscillates in response to high-frequency elements of the test signal. Strong beat detection on the synthetic kick triggers a massive zoom factor spike and a full-screen bloom burst via sampler_blur2, transitioning the scene into a feedback-driven warp tunnel. Frame feedback through sampler_main with high decay rates creates persistent dotted trails that trace the warp field's radial and spiral vectors.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:44:37.876Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_shifter-glassworms-flare.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_shifter-glassworms-flare.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

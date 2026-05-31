@@ -11,9 +11,41 @@
     "name": "Geiss - Mash-Up 1",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "stark",
+      "contemplative"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#87ceeb",
+      "#ffb6c1",
+      "#40e0d0"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.3,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly minimalist composition featuring custom waves rendered as thin, sharp lines against a stark black void. The horizontal wave reacts to the synthetic test signal's mid-frequency band with subtle vertical displacement, while the diagonal line remains relatively static. Color mapping relies on a slow hue_cycle that shifts the wave colors through a pastel palette over the course of the capture.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:53:25.904Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-mash-up-1.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-mash-up-1.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

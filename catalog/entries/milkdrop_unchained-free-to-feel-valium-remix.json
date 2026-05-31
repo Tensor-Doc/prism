@@ -11,9 +11,43 @@
     "name": "Unchained - Free to Feel (Valium Remix)",
     "author": "Unchained"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "glitchy",
+      "erratic",
+      "brutalist",
+      "chaotic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#0000ff",
+      "#000000",
+      "#ff0000",
+      "#aacc00"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "The preset exhibits rapid, aggressive state transitions driven by beat-gated audio triggers from the synthetic test signal. A central custom wave reacts dynamically to high-frequency transients, while a per-pixel warp shader combined with feedback through sampler_main generates dense vertical striations and blocky, hard-edged color fields. The extreme shifts in color mapping and geometric layout point to complex per-frame equations modulating texture coordinates and color registers on every detected beat.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:12:22.504Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-free-to-feel-valium-remix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-free-to-feel-valium-remix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

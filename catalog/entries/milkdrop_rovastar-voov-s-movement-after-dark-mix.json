@@ -11,9 +11,43 @@
     "name": "Rovastar - VooV's Movement (After Dark Mix)",
     "author": "Rovastar"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "psychedelic",
+      "organic",
+      "atmospheric"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0a0a14",
+      "#7a5ca6",
+      "#107c82",
+      "#d43f8d"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle",
+      "decay_trail"
+    ],
+    "technical_notes": "Per-pixel warp shader creates a complex fluid advection field resembling reaction-diffusion, driven by a low decay rate in sampler_main to produce persistent, swirling trails. A central custom_wave acts as an oscilloscope, reacting dynamically to the treble and mid-range frequencies of the synthetic test signal. The global color palette undergoes a continuous hue_cycle, transitioning from deep blues and purples to vibrant magentas and warm ochres.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:01:36.646Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-voov-s-movement-after-dark-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-voov-s-movement-after-dark-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

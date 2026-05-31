@@ -11,9 +11,38 @@
     "name": "fiShbRaiN + geiss - witchcraft (Glow Mix)",
     "author": "fiShbRaiN + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "stark"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.1,
+      "treble": 0.1
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist preset consisting almost entirely of a black void. Occasional thin white circles rendered via custom shapes appear and disappear, likely gated by transient peaks in the synthetic test signal. No frame feedback or warp field is active, resulting in a completely clean, non-persistent decay.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:51:36.265Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-glow-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-glow-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

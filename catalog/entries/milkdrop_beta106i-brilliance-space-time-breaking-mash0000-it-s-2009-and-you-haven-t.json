@@ -11,9 +11,41 @@
     "name": "beta106i - Brilliance (Space-Time Breaking) - mash0000 - it's 2009 and you haven't replaced your analog tv with digital",
     "author": "beta106i"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "technical"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ff3333",
+      "#33ff33",
+      "#3333ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.7,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist preset displaying a single custom wave configured as a closed radial loop. The radial displacement of the vertex points is modulated directly by the frequency bands of the synthetic test signal, creating a simple oscilloscope-like deformation. With decay set to maximum and no feedback sampler (sampler_main) blending, the screen remains a stark black void while the line and border colors cycle through primary hues.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:44:46.883Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

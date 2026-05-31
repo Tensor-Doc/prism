@@ -17,7 +17,9 @@
       {
         "name": "fc_wrenches"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_flexi-blame-moebius.webm",
+    "thumb": "/thumbs/milkdrop_flexi-blame-moebius.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (27156 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

@@ -11,13 +11,43 @@
     "name": "Geiss - Rose 4 Shifted Tiles",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "dark",
+      "microscopic"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#fbcfe8"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist oscilloscope-style custom wave renders at the center of a black void. The wave reacts directly to the synthetic test signal's high-frequency transients, twitching and forming tiny loops and spikes. With decay set to maximum, there is no frame feedback or persistent trail, leaving only the raw, instantaneous vector path.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:08:22.638Z"
+  },
   "assets": {
     "textures_needed": [
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-rose-4-shifted-tiles.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-rose-4-shifted-tiles.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

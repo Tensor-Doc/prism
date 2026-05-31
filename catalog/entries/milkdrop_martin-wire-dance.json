@@ -11,9 +11,39 @@
     "name": "Martin - wire dance",
     "author": "Martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "stark",
+      "kinetic"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#000000",
+      "#f07800"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating"
+    ],
+    "technical_notes": "A single custom wave traces a minimalist parametric orbit in a dark void, with its coordinates modulated by the synthetic test signal's treble and mid frequencies. A high decay rate keeps the frame-to-frame buffer nearly clear of persistent trails, maintaining a stark, high-contrast aesthetic until a sudden bass kick triggers a full-screen flash via a beat-gated composite shader override.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:29:33.208Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-wire-dance.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-wire-dance.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

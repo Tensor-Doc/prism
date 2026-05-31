@@ -11,9 +11,43 @@
     "name": "fiShbRaiN - the dark side of the moon",
     "author": "fiShbRaiN"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "dark",
+      "cosmic",
+      "geometric",
+      "atmospheric"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#121212",
+      "#9acd32",
+      "#8b008b",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "audio_gating",
+      "particle_system",
+      "decay_trail"
+    ],
+    "technical_notes": "Central custom waves draw concentric circles and triangles that deform dynamically in response to the treble of the test signal. Large, soft-edged glows in lime green and magenta are gated to bass thresholds, modulating in intensity. A subtle starfield particle system drifts in the background, while a low-decay feedback loop via sampler_main creates soft, smoky trails of the geometric elements.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:55:21.069Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-the-dark-side-of-the-moon.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-the-dark-side-of-the-moon.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

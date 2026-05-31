@@ -11,9 +11,37 @@
     "name": "martin - another kind of groove (Ati Fix)",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "electronic"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#000000",
+      "#80c0ff"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist preset consisting of a single horizontal custom wave rendering the raw audio waveform. The rendering is drawn directly onto a black background with an instantaneous decay rate, leaving no persistent feedback trails in sampler_main. The amplitude and thickness of the blue wave modulate in direct response to the synthetic test signal's bass kicks.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:17:07.330Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-another-kind-of-groove-ati-fix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-another-kind-of-groove-ati-fix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

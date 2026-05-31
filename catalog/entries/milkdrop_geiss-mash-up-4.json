@@ -11,9 +11,37 @@
     "name": "Geiss - Mash-Up 4",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "sparse",
+      "subdued"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#633a82",
+      "#1d112b"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A highly minimalist preset consisting of a solid purple background with a single diagonal custom wave acting as an oscilloscope. The wave reacts to the transients of the synthetic test signal, occasionally rendering as a thin dark or orange line before disappearing back into the background. The decay rate is extremely high, leaving no persistent trails.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:53:57.122Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-mash-up-4.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-mash-up-4.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,37 @@
     "name": "fiShbRaiN + geiss - witchcraft (Grow Mix)",
     "author": "fiShbRaiN + geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "void"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#a2f080",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist oscilloscope-style rendering utilizing a custom_wave to plot the raw waveform of the synthetic test signal. The decay is set to maximum, preventing any frame feedback or persistent trails in sampler_main, resulting in a stark, high-contrast black void. The pale green line modulates its vertical displacement directly in response to the audio loop's mid and treble frequencies.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:53:09.455Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

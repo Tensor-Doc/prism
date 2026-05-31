@@ -10,9 +10,45 @@
   "display": {
     "name": "Mig_061"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "glacial",
+      "painterly",
+      "fluid",
+      "atmospheric",
+      "organic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#4a8cb4",
+      "#0c2454",
+      "#8ca47c",
+      "#14b4a4"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "cosine_palette",
+      "bloom_glow"
+    ],
+    "technical_notes": "Per-pixel warp shader creates a layered, sheared advection pattern reminiscent of glacial shelves or thick paint strokes. Multiple custom_wave elements are rendered as thin, high-frequency lines modulated by the treble bands of the test signal. Frame feedback through sampler_main with a low decay rate preserves the sheared structures, while sudden color transitions are gated by the synthetic kick drum.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:26:45.518Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-061.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-061.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

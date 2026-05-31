@@ -11,9 +11,45 @@
     "name": "Idiot24-7 - Ascending to heaven 2",
     "author": "Idiot24-7"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "electric",
+      "psychedelic",
+      "energetic",
+      "cosmic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#7b1fa2",
+      "#00e5ff",
+      "#d50000",
+      "#ffffff"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "bloom_glow",
+      "beat_burst",
+      "audio_gating"
+    ],
+    "technical_notes": "A central custom wave oscillates rapidly in response to treble transients in the test signal, surrounded by concentric elliptical custom shapes that cycle in hue. A radial warp field combined with frame feedback via sampler_main generates the streaking background rays. High-amplitude bass kicks trigger sudden full-screen strobes and color inversions, while sampler_blur1 softens the high-frequency vector lines into a luminous bloom.",
+    "brand_safe": false,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:23:51.842Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot24-7-ascending-to-heaven-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot24-7-ascending-to-heaven-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

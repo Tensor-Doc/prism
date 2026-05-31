@@ -11,9 +11,42 @@
     "name": "Goody - Unstable Sonic Reactor - Final",
     "author": "Goody"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscilloscope",
+      "geometric",
+      "void"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#ffffff",
+      "#00ff00",
+      "#ff0033",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "audio_gating",
+      "domain_repetition"
+    ],
+    "technical_notes": "Concentric custom waves are mapped to polar coordinates, creating a clean oscilloscope-style circular display against a dark void. High decay prevents persistent trails, keeping the focus entirely on the real-time deformation of the rings. The synthetic test signal's bass kick drives the radial expansion and color-gating of the inner ring, while high-frequency treble transients modulate the outer ring's jagged perimeter.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:21:23.157Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_goody-unstable-sonic-reactor-final.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_goody-unstable-sonic-reactor-final.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

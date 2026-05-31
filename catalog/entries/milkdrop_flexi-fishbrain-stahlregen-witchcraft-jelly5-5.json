@@ -11,9 +11,39 @@
     "name": "flexi, fishbrain + stahlregen - witchcraft [jelly5.5]",
     "author": "flexi, fishbrain + stahlregen"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "dark"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#d000e0"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.2,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "audio_gating"
+    ],
+    "technical_notes": "Discrete custom shapes, rendering as minimalist purple circles and horizontal lines, are gated by transient peaks in the test signal. A high decay rate ensures the screen remains almost entirely black between triggers, with no frame feedback or sampler_main accumulation. The resulting aesthetic is extremely sparse and vector-like.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:05:48.291Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-stahlregen-witchcraft-jelly5-5.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-stahlregen-witchcraft-jelly5-5.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,9 +11,43 @@
     "name": "Geiss - Flower",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "cosmic",
+      "contemplative"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#a0c0c0",
+      "#c0a0b0"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central custom wave draws a complex, spirograph-like orbit that reacts to the treble and mid bands of the synthetic test signal. Frame feedback via sampler_main is configured with a high decay rate and radial zoom, creating a fading, directional trail that pulses outward during synthetic kicks. Subtle hue cycling shifts the monochrome trail through pale cyan and pink tones.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:46:53.440Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-flower.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-flower.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

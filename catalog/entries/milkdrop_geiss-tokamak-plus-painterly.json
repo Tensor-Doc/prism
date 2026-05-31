@@ -11,9 +11,42 @@
     "name": "Geiss - Tokamak Plus Painterly",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "visceral",
+      "organic",
+      "gothic",
+      "fleeting"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#0a0a0a",
+      "#2d1b22",
+      "#c0a9b0"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "beat_burst"
+    ],
+    "technical_notes": "Beat-gated bursts triggered by the synthetic kick drive a sudden expansion of zoom and warp, feeding horizontal custom waves into a low-decay feedback loop via sampler_main. This creates dense, layered, feather-like structures reminiscent of Geiss's reaction-diffusion and cauldron lineages. The visualizer rapidly transitions from a sparse, dark void to a swirling, organic vortex before decaying back to black.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:16:59.403Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-tokamak-plus-painterly.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-tokamak-plus-painterly.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

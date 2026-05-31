@@ -23,7 +23,9 @@
       {
         "name": "fire_dis4"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_cope-inferno-x.webm",
+    "thumb": "/thumbs/milkdrop_cope-inferno-x.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -31,6 +33,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

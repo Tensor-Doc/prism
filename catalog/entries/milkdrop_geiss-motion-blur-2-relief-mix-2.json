@@ -11,9 +11,42 @@
     "name": "Geiss - Motion Blur 2 (Relief Mix 2)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "oscillographic",
+      "sparse",
+      "void"
+    ],
+    "motion": 0.3,
+    "palette_anchor": [
+      "#000000",
+      "#ffdab9",
+      "#b3e5fc",
+      "#ffb3ba"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.7,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A highly minimalist oscilloscope-style preset where a single custom wave is rendered against a pure black background. The wave's vertices are modulated directly by the synthetic test signal's audio bands, showing sharp, geometric transitions on beat hits. An extremely high decay rate leaves no persistent frame feedback in sampler_main, resulting in a stark, clean, vector-like aesthetic.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:58:22.879Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-motion-blur-2-relief-mix-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-motion-blur-2-relief-mix-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

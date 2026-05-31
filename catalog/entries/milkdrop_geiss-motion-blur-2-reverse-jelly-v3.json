@@ -11,9 +11,41 @@
     "name": "Geiss - Motion Blur 2 (Reverse Jelly V3)",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "void",
+      "stark",
+      "linear"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#a1ebd0",
+      "#f7c5cc",
+      "#b8a9c9"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.3,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A minimalist preset featuring a custom wave oscilloscope reacting to the high and mid-frequency components of the synthetic test signal. The rendering uses a single-pixel line width with zero decay or frame feedback, resulting in a stark, clean waveform against a black background. A slow hue_cycle modulates the line color across a pastel palette.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-30T23:58:54.842Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-motion-blur-2-reverse-jelly-v3.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-motion-blur-2-reverse-jelly-v3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

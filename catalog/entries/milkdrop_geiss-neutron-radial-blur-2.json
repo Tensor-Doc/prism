@@ -11,9 +11,39 @@
     "name": "Geiss - Neutron - radial blur 2",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "dark",
+      "sparse"
+    ],
+    "motion": 0.1,
+    "palette_anchor": [
+      "#000000",
+      "#c5a19a",
+      "#e0e0e0"
+    ],
+    "audio_affinity": {
+      "bass": 0.1,
+      "mid": 0.3,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave"
+    ],
+    "technical_notes": "A series of minimalist custom waves are drawn diagonally across a pitch-black screen, exhibiting subtle high-frequency wiggles in response to the treble and mid-range frequencies of the synthetic test signal. There is no frame feedback or warp field, resulting in a stark, high-contrast oscilloscope presentation with near-instantaneous decay.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T00:01:07.698Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-neutron-radial-blur-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-neutron-radial-blur-2.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

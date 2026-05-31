@@ -10,9 +10,44 @@
   "display": {
     "name": "Mig_068"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "geometric",
+      "frenetic",
+      "strobe",
+      "mathematical",
+      "monochrome"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#ffffff",
+      "#000000",
+      "#f5e050",
+      "#201040"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "beat_burst",
+      "domain_repetition",
+      "custom_wave"
+    ],
+    "technical_notes": "A logarithmic spiral warp field drives a zoom and rotation that scales dynamically with the synthetic kick of the test signal. Custom waves render nested geometric polygons and sharp spikes, which are blended into persistent trails via frame feedback in sampler_main. High-contrast thresholding in the composite shader creates a stark, strobing monochrome aesthetic with occasional color fringes.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:27:21.086Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_mig-068.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_mig-068.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

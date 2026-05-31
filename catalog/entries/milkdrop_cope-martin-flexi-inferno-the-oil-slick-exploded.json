@@ -26,7 +26,9 @@
       {
         "name": "fire_dis4"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_cope-martin-flexi-inferno-the-oil-slick-exploded.webm",
+    "thumb": "/thumbs/milkdrop_cope-martin-flexi-inferno-the-oil-slick-exploded.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -34,6 +36,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24814 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

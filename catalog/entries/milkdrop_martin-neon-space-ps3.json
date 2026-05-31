@@ -17,7 +17,9 @@
       {
         "name": "worms"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-neon-space-ps3.webm",
+    "thumb": "/thumbs/milkdrop_martin-neon-space-ps3.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -25,6 +27,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (96940 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

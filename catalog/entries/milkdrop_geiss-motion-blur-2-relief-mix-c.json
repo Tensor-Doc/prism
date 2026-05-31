@@ -11,9 +11,41 @@
     "name": "Geiss - Motion Blur 2 (Relief Mix) c",
     "author": "Geiss"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "void",
+      "sparse",
+      "microscopic"
+    ],
+    "motion": 0.15,
+    "palette_anchor": [
+      "#000000",
+      "#87ceeb",
+      "#ffb6c1",
+      "#f0e68c"
+    ],
+    "audio_affinity": {
+      "bass": 0.4,
+      "mid": 0.3,
+      "treble": 0.6
+    },
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating"
+    ],
+    "technical_notes": "A single, highly contracted custom wave or custom shape is rendered at the center of a completely black screen. With decay set to maximum, there is no frame feedback or sampler_main persistence, leaving only the instantaneous frame state. The vertex positions and scale of the central element jitter in response to the high-frequency components of the synthetic test signal while cycling through a basic hue rotation.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T01:21:02.601Z"
+  },
   "assets": {
-    "textures_needed": []
+    "textures_needed": [],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-motion-blur-2-relief-mix-c.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-motion-blur-2-relief-mix-c.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

@@ -11,7 +11,37 @@
     "name": "martin - push cx",
     "author": "martin"
   },
-  "annotation": null,
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "void",
+      "geometric"
+    ],
+    "motion": 0.2,
+    "palette_anchor": [
+      "#000000",
+      "#0052d6",
+      "#001a5e"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.1
+    },
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "decay_trail",
+      "custom_wave"
+    ],
+    "technical_notes": "A minimalist custom wave renders as a sharp blue wedge against a black void. The shape's scale and opacity are driven by audio gating from the synthetic test signal, with beat bursts triggering sudden side-switching and expansion. A rapid decay trail leaves the screen mostly dark between hits, with no frame feedback or warp field active.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-05-31T02:30:40.350Z"
+  },
   "assets": {
     "textures_needed": [
       {
@@ -20,7 +50,9 @@
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-push-cx.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-push-cx.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
