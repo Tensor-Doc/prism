@@ -43,7 +43,7 @@ Plus the corresponding `.webm` video. That's it. PR it.
 Cost: ~$0.01 in Gemini API + 10-15 seconds per preset.
 
 ```sh
-git clone git@github.com:scottspace/prism.git
+git clone git@github.com:tensordoc/prism.git
 cd prism
 pnpm install
 pnpm add -D puppeteer tsx

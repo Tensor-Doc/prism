@@ -165,7 +165,7 @@ Add presets or shaders you like. Capture them. Annotate them. Send a
 PR.
 
 ```sh
-git clone git@github.com:scottspace/prism.git
+git clone git@github.com:tensordoc/prism.git
 cd prism && pnpm install
 cp .env.example .env       # add GEMINI_API_KEY, R2_*, VITE_GEMINI_API_KEY
 
@@ -212,7 +212,7 @@ A signal is a small module that streams numbers, vectors, or textures.
 ## Quick start
 
 ```sh
-git clone git@github.com:scottspace/prism.git
+git clone git@github.com:tensordoc/prism.git
 cd prism
 pnpm install
 pnpm dev

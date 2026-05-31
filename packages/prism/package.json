@@ -32,10 +32,10 @@
   "homepage": "https://prism.scott.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottspace/prism.git",
+    "url": "https://github.com/tensordoc/prism.git",
     "directory": "packages/prism"
   },
-  "bugs": "https://github.com/scottspace/prism/issues",
+  "bugs": "https://github.com/tensordoc/prism/issues",
   "author": "Scott Penberthy (https://scott.ai)",
   "dependencies": {
     "butterchurn": "^2.6.7",

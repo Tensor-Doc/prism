@@ -171,7 +171,7 @@ The site's own suggestion chips — these all produce good results:
 ```bash
 mkdir -p ~/.claude/skills/prism-visualizer
 curl -o ~/.claude/skills/prism-visualizer/SKILL.md \
-  https://raw.githubusercontent.com/scottspace/prism/main/skills/prism-visualizer/SKILL.md
+  https://raw.githubusercontent.com/tensordoc/prism/main/skills/prism-visualizer/SKILL.md
 ```
 
 Then restart Claude Code; the skill is auto-discovered.
