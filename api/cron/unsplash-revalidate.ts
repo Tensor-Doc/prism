@@ -20,11 +20,8 @@ import {
   isR2Enabled,
   listKeys,
   putJson,
-} from "../_lib/r2";
-import { policy } from "../_lib/unsplash-cache";
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import type {} from "../_lib/r2";
+} from "../../lib/r2";
+import { policy } from "../../lib/unsplash-cache";
 
 export const config = { runtime: "nodejs" };
 

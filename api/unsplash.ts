@@ -15,7 +15,7 @@
 // ---------------
 // The R2 cache is a small (cap 50) dev affordance for surviving rate-limit
 // windows while we're on the Unsplash free tier. See
-// api/_lib/unsplash-cache.ts for the rationale.
+// lib/unsplash-cache.ts for the rationale.
 //
 // On Unsplash 200, we:
 //   - Always return the photos with images.unsplash.com hotlink URLs
@@ -30,11 +30,11 @@
 //     only when bytes are present in R2)
 //   - Otherwise: surface the error (502)
 
-import { exists, getJson, isR2Enabled, listKeys, publicUrl, putJson } from "./_lib/r2";
-import { hasRoom, policy } from "./_lib/unsplash-cache";
+import { exists, getJson, isR2Enabled, listKeys, publicUrl, putJson } from "../lib/r2";
+import { hasRoom, policy } from "../lib/unsplash-cache";
 
 // Vercel runtime config — Node.js so we can use the @aws-sdk/client-s3
-// helpers in api/_lib/r2.ts.
+// helpers in lib/r2.ts.
 export const config = { runtime: "nodejs" };
 
 const CURATED_QUERIES = [
