@@ -723,55 +723,86 @@ galleryDisconnectBtn.addEventListener("click", () => {
 });
 const audioRow = $("#audio-row");
 const audioRate = audioRow.querySelector(".signal__rate") as HTMLElement;
+const micRow = $("#mic-row");
+const micRate = micRow.querySelector(".signal__rate") as HTMLElement;
+const micVu = new Vu($<HTMLCanvasElement>("#vu-mic"), "cyan");
 const audioEnergyEl = $("#audio-energy");
+/** Which audio source is currently driving the analyzer. Mic and tab
+ *  are mutually exclusive — they'd compete for the same AudioContext
+ *  source. Tracked here so the row UIs can reflect the active mode. */
+let audioMode: "tab" | "mic" | null = null;
 const spectrum = new Spectrum($<HTMLCanvasElement>("#spectrum-canvas"));
 
 audio.onEnergy = (f: AudioFeatures) => {
   field.setAudioEnergy(f.energy);
-  audioVu.push(f.energy);
+  // Push to whichever VU bar matches the live mode so the meter
+  // animates on the row the user actually clicked.
+  if (audioMode === "mic") micVu.push(f.energy);
+  else audioVu.push(f.energy);
   spectrum.update(f.bars);
   audioEnergyEl.textContent = f.energy.toFixed(2);
 };
 
-async function armAudio(): Promise<void> {
-  if (audio.isActive) {
+function rowOf(mode: "tab" | "mic"): { row: HTMLElement; rate: HTMLElement } {
+  return mode === "tab" ? { row: audioRow, rate: audioRate } : { row: micRow, rate: micRate };
+}
+
+function clearActiveAudioRows(): void {
+  for (const r of [audioRow, micRow]) {
+    r.removeAttribute("data-active");
+    r.removeAttribute("data-armed");
+  }
+  audioRate.textContent = "connect";
+  micRate.textContent = "connect";
+  document.body.classList.remove("audio-live");
+  field.setAudioEnergy(0);
+  audioMode = null;
+}
+
+async function armAudio(mode: "tab" | "mic" = "tab"): Promise<void> {
+  // Same row clicked while live → toggle off.
+  if (audio.isActive && audioMode === mode) {
     audio.stop();
-    audioRow.removeAttribute("data-active");
-    audioRow.removeAttribute("data-armed");
-    document.body.classList.remove("audio-live");
-    audioRate.textContent = "connect";
-    field.setAudioEnergy(0);
+    clearActiveAudioRows();
     refreshSignalCount();
     return;
   }
-  audioRow.setAttribute("data-armed", "");
-  audioRate.textContent = "sharing…";
-  const result = await audio.start();
-  audioRow.removeAttribute("data-armed");
+  // Other audio source live → swap to the requested mode.
+  if (audio.isActive) {
+    audio.stop();
+    clearActiveAudioRows();
+  }
+  const { row, rate } = rowOf(mode);
+  row.setAttribute("data-armed", "");
+  rate.textContent = mode === "tab" ? "sharing…" : "listening…";
+  const result = await (mode === "mic" ? audio.startMic() : audio.startTab());
+  row.removeAttribute("data-armed");
   if (result.ok) {
+    audioMode = mode;
     document.body.classList.add("audio-live");
-    audioRow.setAttribute("data-active", "");
-    audioRate.textContent = "live";
+    row.setAttribute("data-active", "");
+    rate.textContent = "live";
     refreshSignalCount();
   } else {
     if (result.reason === "no_audio_track") {
-      audioRate.textContent = "no audio";
+      rate.textContent = "no audio";
       setTimeout(() => {
-        if (!audio.isActive) audioRate.textContent = "connect";
+        if (!audio.isActive) rate.textContent = "connect";
       }, 2400);
     } else {
-      audioRate.textContent = "connect";
+      rate.textContent = "connect";
     }
   }
 }
 
-// Click the row (or Enter/Space when focused) to connect audio.
-audioRow.addEventListener("click", () => { void armAudio(); });
+// Click handlers — tab vs mic just pass the mode through.
+audioRow.addEventListener("click", () => { void armAudio("tab"); });
+micRow.addEventListener("click", () => { void armAudio("mic"); });
 
 // Persistent audio pin — same handler as the SOURCES row, but lives
 // outside the fade-on-idle layer so it's the always-reachable lifeline.
 const audioPinBtn = document.getElementById("audio-pin") as HTMLButtonElement | null;
-audioPinBtn?.addEventListener("click", () => { void armAudio(); });
+audioPinBtn?.addEventListener("click", () => { void armAudio("tab"); });
 
 // Test-signal recorder — wire the SOURCES "save 30s as test signal" pill.
 const testSignalBtn = document.getElementById("test-signal-btn") as HTMLButtonElement | null;

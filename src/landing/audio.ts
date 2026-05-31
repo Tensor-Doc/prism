@@ -1,6 +1,8 @@
-// audio.ts — tab-audio capture via getDisplayMedia + FFT analysis.
-// Emits smoothed energy + 3-band split. Video track is requested (browser
-// requires it) and immediately stopped — we only want the audio.
+// audio.ts — audio capture via getDisplayMedia (tab) or getUserMedia
+// (mic) + FFT analysis. Emits smoothed energy + 3-band split. Same
+// instance handles both modes; they're mutually exclusive (one source
+// at a time). Tab-share also wires the video track to a hidden
+// element so the slideshow can sample frames from it.
 
 export interface AudioFeatures {
   energy: number; // 0..1, smoothed
@@ -42,7 +44,10 @@ export class AudioCapture {
 
   get isActive(): boolean { return this.source !== null; }
 
-  async start(): Promise<{ ok: true } | { ok: false; reason: string }> {
+  /** Capture audio from a shared tab/window via getDisplayMedia.
+   *  Browser requires a video track too; we wire it to a hidden
+   *  element so the slideshow can sample frames from it. */
+  async startTab(): Promise<{ ok: true } | { ok: false; reason: string }> {
     try {
       const stream = await navigator.mediaDevices.getDisplayMedia({
         audio: {
@@ -61,11 +66,6 @@ export class AudioCapture {
       if (audioTracks.length === 0) {
         for (const t of stream.getTracks()) t.stop();
         return { ok: false, reason: "no_audio_track" };
-      }
-
-      // Detect user stopping share from the browser chrome (on any track).
-      for (const track of stream.getTracks()) {
-        track.addEventListener("ended", () => this.stop());
       }
 
       // Wire up the video track to a hidden <video> element so consumers
@@ -91,24 +91,63 @@ export class AudioCapture {
         this.onVideo?.(v);
       }
 
-      this.stream = stream;
-      this.context = this.externalCtx ?? new AudioContext();
-      if (this.context.state === "suspended") void this.context.resume();
-      this.analyser = this.context.createAnalyser();
-      this.analyser.fftSize = 1024;
-      this.analyser.smoothingTimeConstant = 0.72;
-      this.fft = new Uint8Array(this.analyser.frequencyBinCount);
-      this.source = this.context.createMediaStreamSource(stream);
-      this.source.connect(this.analyser);
-      this.onSource?.(this.source, this.context);
-
-      this.running = true;
-      this.loop();
-      return { ok: true };
+      return this.attachStream(stream);
     } catch (err) {
-      console.warn("prism: audio capture failed", err);
+      console.warn("prism: tab audio capture failed", err);
       return { ok: false, reason: (err as Error).message ?? "unknown" };
     }
+  }
+
+  /** Capture audio from the system microphone via getUserMedia. Same
+   *  audio-only contract as startTab; no video track. Browser will
+   *  prompt for mic permission on first call. */
+  async startMic(): Promise<{ ok: true } | { ok: false; reason: string }> {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          // Critical for music: keep all the processing OFF or ambient
+          // music gets squashed into mush. Browser default tries to
+          // optimize for voice and kills the bass.
+          echoCancellation: false,
+          noiseSuppression: false,
+          autoGainControl: false,
+        } as MediaTrackConstraints,
+        video: false,
+      });
+      return this.attachStream(stream);
+    } catch (err) {
+      console.warn("prism: mic capture failed", err);
+      return { ok: false, reason: (err as Error).message ?? "unknown" };
+    }
+  }
+
+  /** Backwards-compat alias for the original tab-only entry point. */
+  start(): Promise<{ ok: true } | { ok: false; reason: string }> {
+    return this.startTab();
+  }
+
+  /** Shared post-acquisition wiring: analyzer, FFT loop, ended-track
+   *  cleanup, onSource callback. */
+  private attachStream(stream: MediaStream): { ok: true } {
+    // Detect user stopping share / disconnecting mic from system chrome.
+    for (const track of stream.getTracks()) {
+      track.addEventListener("ended", () => this.stop());
+    }
+
+    this.stream = stream;
+    this.context = this.externalCtx ?? new AudioContext();
+    if (this.context.state === "suspended") void this.context.resume();
+    this.analyser = this.context.createAnalyser();
+    this.analyser.fftSize = 1024;
+    this.analyser.smoothingTimeConstant = 0.72;
+    this.fft = new Uint8Array(this.analyser.frequencyBinCount);
+    this.source = this.context.createMediaStreamSource(stream);
+    this.source.connect(this.analyser);
+    this.onSource?.(this.source, this.context);
+
+    this.running = true;
+    this.loop();
+    return { ok: true };
   }
 
   private loop = (): void => {
