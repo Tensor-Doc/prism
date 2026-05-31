@@ -49,6 +49,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was thin (233789 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
   }
 }

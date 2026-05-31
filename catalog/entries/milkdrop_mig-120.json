@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A minimalist, high-contrast preset dominated by a central dark, fibrous custom shape that vibrates subtly to mid-frequency bands. Discrete beat-gated events trigger a stark grid of vertical white lines across the screen, driven by the bass threshold of the synthetic test signal. The high decay rate ensures immediate return to a dark, void-like state between beats.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:30:47.018Z"

@@ -39,7 +39,7 @@
     ],
     "technical_notes": "Two thin custom_wave elements span horizontally across a dark void, modulating their vertical displacement in response to the high-frequency components of the synthetic test signal. A faint, diffuse central glow cycles slowly through hues (red, blue, green, yellow) via a low-frequency oscillator, while a high decay rate keeps the screen mostly dark and sparse. The overall composition represents a minimalist, oscilloscope-style rendering with minimal feedback propagation.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:49:05.342Z"

@@ -39,7 +39,7 @@
     ],
     "technical_notes": "Custom waves render concentric rings that are modulated by the audio loop's bass frequencies, creating a pulsing spiral. Frame feedback via sampler_main creates a deep, receding tunnel effect that flashes intensely during bass transients. A low decay rate allows the trails of the custom waves to persist, while a hue cycle shifts the palette from deep greens to fiery reds and purples.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:19:14.095Z"

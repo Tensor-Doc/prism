@@ -35,7 +35,7 @@
     ],
     "technical_notes": "Two custom waves render as thin, oscillating lines across a dark void, directly driven by the mid and treble frequencies of the synthetic test signal. High decay rate ensures no persistent trails remain, leaving the screen completely black between audio triggers. Simple and highly minimalist, focusing entirely on raw waveform representation.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:32:35.312Z"

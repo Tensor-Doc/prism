@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A custom wave is rendered as a parametric orbiting ribbon against a dark void, with its vertices modulated by the high-frequency components of the synthetic test signal. A high decay rate in the feedback loop ensures that trails fade rapidly, leaving only a sparse, snappy trace. The ribbon's color cycles dynamically through a simple hue rotation scheme.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:32:06.521Z"

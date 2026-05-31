@@ -34,7 +34,7 @@
     ],
     "technical_notes": "A single custom wave or custom shape is rendered as a sweeping, peach-colored ribbon against a solid black background. The shape's thickness and position modulate in response to the synthetic test signal, while a lack of frame feedback (sampler_main) or decay trails leaves the rest of the viewport entirely dark. The preset exemplifies extreme minimalism with near-zero background activity.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:25:18.763Z"

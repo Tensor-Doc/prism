@@ -37,7 +37,7 @@
     ],
     "technical_notes": "A central custom wave renders an oscilloscope-like scribble reacting sharply to the treble of the test signal. A horizontal per-pixel warp field drives a laminar flow of green and grey lines, while frame feedback through sampler_main preserves the history of the wave's motion. Sudden horizontal flips in the warp direction are triggered by the synthetic kick.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:30:31.817Z"

@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A central custom wave draws a complex, spirograph-like orbit that reacts to the treble and mid bands of the synthetic test signal. Frame feedback via sampler_main is configured with a high decay rate and radial zoom, creating a fading, directional trail that pulses outward during synthetic kicks. Subtle hue cycling shifts the monochrome trail through pale cyan and pink tones.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:46:53.440Z"

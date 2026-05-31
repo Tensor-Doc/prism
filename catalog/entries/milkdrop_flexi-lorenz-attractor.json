@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves, tracing elegant white orbits against a dark void. A secondary custom shape draws a sequence of red-orange circular discs along the trajectory, with their scale directly modulated by the bass energy of the synthetic test signal. Minimal frame feedback is used, keeping the background pure black and the vector-like lines exceptionally crisp.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T02:02:56.390Z"

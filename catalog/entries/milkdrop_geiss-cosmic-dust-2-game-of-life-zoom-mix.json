@@ -37,7 +37,7 @@
     ],
     "technical_notes": "A minimalist custom_wave oscilloscope line splits the dark void, modulating its amplitude and thickness in response to the mid and treble bands of the synthetic test signal. The wave transitions from a continuous smooth line to a high-frequency dashed pattern gated by treble transients. Hue cycling rotates the line's color through a simple spectrum against a high-decay black background.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:39:57.740Z"

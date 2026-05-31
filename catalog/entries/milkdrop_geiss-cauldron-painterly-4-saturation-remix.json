@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A custom wave is rendered as a twisting, segmented ribbon in a dark void, with its vertices modulated by the audio loop. A high decay rate keeps the background mostly black, while subtle frame feedback through sampler_main preserves faint, painterly trails of the ribbon's path. The tip of the wave reacts sharply to treble transients in the test signal, producing bright white highlights.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:31:37.046Z"

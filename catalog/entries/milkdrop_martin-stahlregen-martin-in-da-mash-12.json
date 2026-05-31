@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A highly minimalist preset featuring a single parametric custom_wave that traces elegant, sweeping amber loops against a pure black void. The wave's scale and spatial translation are modulated by the bass frequencies of the synthetic test signal, while high-frequency jitter along the curve reflects mid-to-treble activity. With decay set to maximum, the frame remains entirely free of persistent trails or feedback artifacts.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T02:10:12.234Z"

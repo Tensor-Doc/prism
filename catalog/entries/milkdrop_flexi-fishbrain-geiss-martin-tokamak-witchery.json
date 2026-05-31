@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A highly minimalist, dark preset where custom shapes or waves in the form of thin violet circles are gated to trigger on the bass threshold of the test signal. The screen remains predominantly black between beats due to a very high decay rate that prevents persistent frame feedback in sampler_main. The rendering relies on sparse, discrete custom wave elements that briefly trace circular paths before vanishing.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:23:00.276Z"
@@ -51,6 +51,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was thin (447162 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
   }
 }

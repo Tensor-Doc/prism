@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A polar warp field drives a continuous spiral rotation, drawing a bright central core outward into smoky trails via frame feedback in sampler_main. A high-frequency custom wave overlays a scribbly oscilloscope trace that orbits the center, reacting dynamically to treble spikes in the synthetic test signal. The central glow and spiral arms expand dramatically on bass kicks, modulated by a moderate decay rate that preserves the fluid vortex structure.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:48:57.065Z"

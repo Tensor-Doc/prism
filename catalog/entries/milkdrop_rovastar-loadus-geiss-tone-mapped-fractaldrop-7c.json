@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Two thin horizontal custom_wave elements exhibit subtle vertical displacement driven by the mid-frequencies of the test signal. A slow hue_cycle shifts the minimalist, near-black background through deep red, blue, green, and amber phases. The central region features a faint, soft-edged glow modulated by bass frequencies, utilizing a high decay rate to maintain a stark, atmospheric void.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:49:39.660Z"

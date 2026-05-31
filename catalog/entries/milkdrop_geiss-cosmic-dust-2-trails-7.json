@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Custom waves render horizontal oscilloscopes that multiply and stack via frame feedback in sampler_main. High-amplitude transients in the synthetic test signal trigger a dense cascade of golden, undulating lines modulated by bass attenuated. The low decay rate allows the wave trails to briefly persist before dissolving back into the dark void.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:36:54.694Z"

@@ -35,7 +35,7 @@
     ],
     "technical_notes": "A custom_wave drawing routine renders sharp, feathered white sweeps across a dark canvas, triggered by high-frequency transients in the synthetic test signal. High decay rates in the frame feedback loop prevent persistent trails, leaving only brief, stark gestures that quickly fade to black. The rendering relies on simple coordinate translation driven by audio amplitude, bypassing complex warp shaders or feedback loops for a highly minimalist aesthetic.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:33:40.749Z"

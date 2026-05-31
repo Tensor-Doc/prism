@@ -33,7 +33,7 @@
     ],
     "technical_notes": "A minimalist custom wave renders a single parametric loop in a deep black void. The line's scale and 3D rotation are modulated by the bass and mid bands of the synthetic test signal. High decay rates keep the frame clean of feedback trails, resulting in a stark, elegant vector-like aesthetic.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:22:56.797Z"

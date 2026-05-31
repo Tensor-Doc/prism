@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A highly minimalist preset featuring a single custom wave rendered as a calligraphic stroke against a pure black background. The decay rate is set to maximum, preventing any frame feedback or persistent trails in sampler_main. The shape's vertex positions and color are modulated directly by the mid and treble frequencies of the synthetic test signal, while the synthetic kick triggers discrete color-state jumps.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:41:16.785Z"

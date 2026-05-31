@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A highly minimalist preset consisting of a single custom wave rendered at the center of a black void. The wave's vertices and color are modulated by the audio loop's treble and bass transients, transitioning between pale yellow, pink, and green hues. High decay rate ensures that no frame feedback or persistent trails remain, leaving only the raw, transient-driven geometry.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:51:55.553Z"

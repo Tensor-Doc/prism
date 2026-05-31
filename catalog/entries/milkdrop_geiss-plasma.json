@@ -33,7 +33,7 @@
     ],
     "technical_notes": "A stark, minimalist preset consisting of a single small custom wave in the center of an otherwise black void. The wave is driven by the synthetic test signal's mid and treble frequencies, flickering and changing shape rapidly while the decay rate is set extremely high, leaving no persistent trails in sampler_main. The overall presentation is exceptionally sparse and quiet.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:03:17.266Z"
@@ -49,6 +49,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was thin (423728 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
   }
 }

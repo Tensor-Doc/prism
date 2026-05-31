@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A single custom wave is rendered in a dark void with high decay, leaving no persistent trails or frame feedback in sampler_main. The vertex positions and overall scale are modulated directly by the bass and treble of the synthetic test signal, causing snappy, kinetic deformations. Abrupt hue shifts are triggered by beat detection on the bass attenuated, gating the color state across a wide palette.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:38:28.038Z"

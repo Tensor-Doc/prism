@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A single custom wave is rendered on a black background, with its vertical displacement modulated by the synthetic test signal. The wave's color cycles slowly through a hue rotation from lavender to cyan and white. The absence of frame feedback or warp fields results in a stark, minimalist oscilloscope aesthetic.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:47:25.202Z"

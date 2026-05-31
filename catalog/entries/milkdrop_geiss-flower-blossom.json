@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A central circular element is heavily gated by the bass of the synthetic test signal, triggering explosive expansions that decay into a tight, pulsing vortex. Per-pixel warp equations apply a radial zoom and pinch, drawing the frame feedback into the center. The soft, desaturated color shifts between dusty rose and pale teal are modulated by low-to-mid frequency bands, rendered with a high-exposure bloom pass.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:46:22.543Z"

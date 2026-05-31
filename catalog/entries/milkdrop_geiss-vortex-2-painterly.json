@@ -39,7 +39,7 @@
     ],
     "technical_notes": "A highly reactive custom wave acts as a scribbly emitter, jittering in response to the treble and mid bands of the test signal. Frame feedback via sampler_main is processed through a per-pixel warp shader that stretches and distorts the history buffer, generating organic, smoke-like, or spiky scale-like trails. The high decay rate and dark background maintain a sparse, minimalist aesthetic where only the warped history of the wave is visible.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:18:03.959Z"

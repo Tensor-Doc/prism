@@ -37,7 +37,7 @@
     ],
     "technical_notes": "A custom wave is rendered as a sweeping, ribbed ribbon that morphs and rotates in a dark void. High decay keeps the background completely black, while the ribbon's width and position modulate with the synthetic test signal's treble and bass transients. The fine line structure within the ribbon suggests high-frequency rendering mapped to audio amplitude.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:18:54.337Z"

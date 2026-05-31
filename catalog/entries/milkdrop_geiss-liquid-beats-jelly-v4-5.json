@@ -36,7 +36,7 @@
     ],
     "technical_notes": "An extremely minimalist preset where the viewport remains a dark void. A single custom_wave in the center is driven by the audio loop's spectral bands, twisting and spiking into sharp geometric configurations. The absence of frame feedback (sampler_main) or warp fields results in an exceptionally clean, fleeting presentation of the raw test signal.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T02:06:54.082Z"

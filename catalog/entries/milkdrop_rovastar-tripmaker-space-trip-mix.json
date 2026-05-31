@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A rigid grid of custom shape dots is distorted by a spiral per-pixel warp field. The background utilizes a feedback loop via sampler_main with high decay, creating subtle dark green spiraling structures that flare up during bass transients in the test signal. The composition remains dark and sparse, emphasizing geometric deformation over bright color.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:59:43.588Z"

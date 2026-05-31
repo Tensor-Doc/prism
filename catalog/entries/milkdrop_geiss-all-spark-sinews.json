@@ -34,7 +34,7 @@
     ],
     "technical_notes": "A stark, minimalist custom wave is rendered horizontally against a pure black background, mimicking a classic oscilloscope. The decay rate is set to maximum, preventing any frame feedback in sampler_main and ensuring a crisp, instantaneous response to the music. The wave draws a filled polygon between two distinct audio-driven paths, expanding vertically during bass transients.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:28:12.818Z"

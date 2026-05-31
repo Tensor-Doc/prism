@@ -35,7 +35,7 @@
     ],
     "technical_notes": "An extremely sparse, minimalist preset dominated by a black void. Custom shapes and waves render fleeting purple circles and lines that react directly to the music's bass hits. A high decay rate ensures frames clear immediately, leaving no persistent feedback trails in sampler_main.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:22:29.478Z"
@@ -51,6 +51,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was thin (420947 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
   }
 }

@@ -32,7 +32,7 @@
     ],
     "technical_notes": "A highly minimalist preset consisting of a single custom wave rendered as a thin, pale lavender oscilloscope line against a pitch-black background. The wave oscillates in direct response to the mid and treble frequencies of the synthetic test signal, with no frame feedback or warp field applied. The decay is instantaneous, leaving no persistent trails.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:28:11.755Z"

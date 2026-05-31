@@ -34,7 +34,7 @@
     ],
     "technical_notes": "Two custom wave generators render thin, dark horizontal lines that slowly drift and tilt across a black background. The waves show subtle high-frequency ripples in response to the treble and mid bands of the synthetic test signal, while the overall rotation/tilt is driven by the bass. A high decay rate prevents any frame feedback or persistent trails, keeping the composition extremely sparse and minimal.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:42:17.914Z"

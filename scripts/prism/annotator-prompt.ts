@@ -87,6 +87,11 @@ BRAND RULES:
 - atelier = true if the piece reads as painterly / atmospheric /
   contemplative / fluid / organic — the gallery-grade aesthetic Prism
   features. False for chaotic / geometric / strobing pieces.
+  HARD EXCLUSIONS: atelier MUST be false if vibe contains any of
+  "void", "minimalist", "sparse", "stark", "empty", "blank", or if
+  motion < 0.15 with vibe containing "dark". A barely-rendered black
+  scene is not painterly; it's failed-to-render or intentionally
+  minimal — neither qualifies as gallery-grade.
 
 TONE for technical_notes (2-3 sentences, dialect-appropriate):
 - Name specific Milkdrop mechanics when their action is visually evident:

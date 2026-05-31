@@ -364,7 +364,12 @@ export async function runAnnotateOne(
   // Skip Gemini entirely — its descriptions of black videos confabulate
   // from the preset name. Mark renders:false; the AI router + gallery
   // both filter these out automatically.
-  const EMPTY_RENDER_BYTES = 100_000;
+  // 500 KB threshold. The previous 100 KB caught only pure-black VP9
+  // minima (~24 KB). It missed "broken render with a single static
+  // speck" cases (geiss-plasma at 413 KB) where butterchurn fails to
+  // execute the warp/comp shaders but the cursor sprite still renders.
+  // Real visualizations clear 1 MB easily.
+  const EMPTY_RENDER_BYTES = 500_000;
   if (webmBytes.length < EMPTY_RENDER_BYTES) {
     console.log(`  ⚠ empty render (${(webmBytes.length / 1024).toFixed(0)}KB < 100KB) — marking compatibility.renders=false, skipping Gemini`);
     entry.compatibility = {

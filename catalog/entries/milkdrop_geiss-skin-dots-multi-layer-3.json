@@ -37,7 +37,7 @@
     ],
     "technical_notes": "A minimalist radar-like sweep rendered using custom shapes or waves. The outer circle and rotating wedge scale in response to the synthetic test signal's low-frequency pulses. Color shifts slowly across a subtle pastel range via a simple hue cycle, while the background remains a pure black void with zero frame feedback.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:11:56.232Z"

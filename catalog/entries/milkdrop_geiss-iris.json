@@ -38,7 +38,7 @@
     ],
     "technical_notes": "A single custom wave is rendered as a complex, self-oscillating thread or ribbon against a deep black void. The wave's vertex equations are modulated by the treble and mid bands of the synthetic test signal, producing tight, coiled structures. A high decay rate in the frame feedback loop via sampler_main ensures that trails quickly dissolve, maintaining a stark, minimalist aesthetic.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:51:08.082Z"

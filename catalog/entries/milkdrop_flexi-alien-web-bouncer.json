@@ -34,7 +34,7 @@
     ],
     "technical_notes": "A minimalist custom wave is drawn as a closed circle using polar coordinates, with its radial amplitude modulated by the high-frequency bands of the synthetic test signal. The coordinate center of the wave drifts slowly across the screen, guided by low-frequency oscillators. High decay prevents any persistent trails, leaving a stark, clean vector aesthetic against a pure black background.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T01:58:20.638Z"

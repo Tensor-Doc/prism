@@ -37,7 +37,7 @@
     ],
     "technical_notes": "Custom wave equations render horizontal oscilloscope lines that jitter with the treble of the test signal. A per-pixel warp shader combined with feedback through sampler_main distorts these lines into a spiraling, grid-like tunnel structure. Zoom and rotation parameters are modulated dynamically by bass transients in the test signal.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-31T00:17:32.366Z"

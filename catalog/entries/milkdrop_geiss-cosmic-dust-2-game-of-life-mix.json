@@ -36,7 +36,7 @@
     ],
     "technical_notes": "A highly minimalist preset consisting of custom waves rendered directly onto a black background. The horizontal wave acts as an oscilloscope reacting to the mid-frequencies of the synthetic test signal, while a secondary diagonal line remains mostly static. With no warp field or frame feedback (sampler_main) applied, the rendering is clean and free of decay trails.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:35:50.629Z"

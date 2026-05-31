@@ -37,7 +37,7 @@
     ],
     "technical_notes": "A highly minimalist composition featuring custom waves rendered as thin, sharp lines against a stark black void. The horizontal wave reacts to the synthetic test signal's mid-frequency band with subtle vertical displacement, while the diagonal line remains relatively static. Color mapping relies on a slow hue_cycle that shifts the wave colors through a pastel palette over the course of the capture.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
     "captured_at": "2026-05-30T23:53:25.904Z"
