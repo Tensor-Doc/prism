@@ -16,7 +16,7 @@ state. Anything that streams can drive a visual.
 
 ---
 
-## ▶ Use the visualizer in your code (two lines)
+## ▶ Use the visualizer in your code
 
 ```bash
 npm install @tensordoc/prism
@@ -264,7 +264,7 @@ vectors, or textures.
 
 ---
 
-## Quick start (running the whole repo)
+## Quick start
 
 ```sh
 git clone git@github.com:Tensor-Doc/prism.git
@@ -303,7 +303,7 @@ For deploying or running this whole repo (not for using the
 | `UNSPLASH_APPLICATION_ID` | App ID (kept for completeness; not currently used) |
 | `UNSPLASH_SECRET_KEY` | App secret (only used if we expand to write-style endpoints) |
 
-### Required for the R2 image-feed cache (development affordance)
+### Required for the R2 image-feed cache
 
 The R2 cache is a small (capped at 50) metadata store that survives
 Unsplash rate-limit windows during dev. All four vars must be set for
