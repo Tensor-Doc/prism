@@ -220,6 +220,61 @@ pnpm dev
 # gallery:     http://localhost:5173/gallery.html
 ```
 
+## Environment variables
+
+For deploying or running this whole repo (not for using the
+`@tensordoc/prism` npm package — that needs nothing). Copy `.env` into
+your project root.
+
+### Required for the website
+
+| Var | What for | Where to get |
+|---|---|---|
+| `GEMINI_API_KEY` | `/api/generate` — prompt → graph routing | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| `VITE_GEMINI_API_KEY` | Same key, also exposed to the client for studio dev mode | same as above |
+| `VITE_NASA_API_KEY` | NASA image library calls (image-proxy) | [api.nasa.gov](https://api.nasa.gov) |
+
+### Required for Unsplash as an image source
+
+| Var | What for |
+|---|---|
+| `UNSPLASH_ACCESS_KEY` | Server-side search API key |
+| `UNSPLASH_APPLICATION_ID` | App ID (kept for completeness; not currently used in code) |
+| `UNSPLASH_SECRET_KEY` | App secret (only used if we expand to write-style endpoints) |
+
+### Required for the R2 image-feed cache (development affordance)
+
+The R2 cache is a small (capped at 50) metadata store that survives
+Unsplash rate-limit windows during dev. All four vars must be set for
+the cache to activate; if any are missing, the search endpoint falls
+back to live-only.
+
+| Var | What for |
+|---|---|
+| `R2_ACCOUNT_ID` | Cloudflare R2 account ID |
+| `R2_ACCESS_KEY_ID` | R2 access key |
+| `R2_SECRET_ACCESS_KEY` | R2 secret key |
+| `R2_BUCKET` | Bucket name (e.g. `prism`) |
+| `R2_PUBLIC_BASE` *(optional)* | Public URL prefix (e.g. `https://images.prism.scott.ai`); required if you want the R2 fallback URLs to be reachable from the browser |
+| `R2_KEY_PREFIX` *(optional)* | Namespace inside the bucket |
+
+### Optional toggles
+
+| Var | Default | What for |
+|---|---|---|
+| `UNSPLASH_R2_ENABLED` | `true` if R2 is configured | Set to `false` to disable the cache entirely once on a paid Unsplash tier |
+| `UNSPLASH_R2_CAP` | `50` | Max cached entries. Do not raise without legal sign-off — 50 is the intentional dev-affordance ceiling |
+| `UNSPLASH_TRACK_ENABLED` | `false` | When `true`, fires Unsplash's download-trigger ping (required for prod TOS compliance) |
+| `CRON_SECRET` | unset | If set, the daily revalidate cron requires `Authorization: Bearer <CRON_SECRET>` |
+
+### Never commit your `.env`
+
+The repo's `.gitignore` blocks `.env`, `.env.local`, and `.vercel/`.
+A scan of the full git history confirms no key has ever been
+committed. If you accidentally commit one anyway, rotate it
+immediately at the source (Gemini, Unsplash, R2) — git history is
+forever, even after deletion.
+
 ## Stack
 
 - **Frontend** uses Vite and TypeScript. No framework.

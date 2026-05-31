@@ -1,0 +1,16 @@
+{
+  "name": "tensordoc-prism-codesandbox",
+  "version": "0.1.0",
+  "description": "Live demo of @tensordoc/prism — two-line audio-reactive visualizer.",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@tensordoc/prism": "^0.1.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
