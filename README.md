@@ -310,6 +310,15 @@ Unsplash rate-limit windows during dev. All four vars must be set for
 the cache to activate; if any are missing, the search endpoint falls
 back to live-only.
 
+**Don't have R2 yet?** Sign up at
+[cloudflare.com/products/r2](https://www.cloudflare.com/products/r2/)
+— the free tier covers 10 GB storage, 1 million Class A operations
+per month, and ~zero egress. After enabling R2 in the dashboard,
+create an API token under
+[**R2 → Manage R2 API Tokens**](https://dash.cloudflare.com/?to=/:account/r2/api-tokens)
+to get the Access Key ID + Secret. The account ID is visible in the
+top-right of any Cloudflare dashboard page.
+
 | Var | What for |
 |---|---|
 | `R2_ACCOUNT_ID` | Cloudflare R2 account ID |
