@@ -73,7 +73,7 @@ export class HeadlessSlideshow {
         (err: Error) => {
           // Failure to load one image shouldn't kill the whole feed —
           // leave that slot as null; the render loop skips it.
-          console.warn(`[prism-player] image-feed: ${url} → ${err.message}`);
+          console.warn(`[/prism] image-feed: ${url} → ${err.message}`);
         },
       ),
     );

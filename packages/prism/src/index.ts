@@ -1,4 +1,4 @@
-// Public entry point for prism-player.
+// Public entry point for /prism.
 export {
   PrismPlayer,
   type PrismPlayerOptions,

@@ -10,7 +10,7 @@
 //
 // Styling is class-based with a customisable prefix so the host page
 // can theme it. Defaults to `prism-overlay` with BEM-style modifiers
-// (`__handle`, `__collapse`); prism.run passes `slideshow-card` to
+// (`__handle`, `__collapse`); prism.scott.ai passes `slideshow-card` to
 // inherit its existing styles unchanged.
 
 export interface Rect {

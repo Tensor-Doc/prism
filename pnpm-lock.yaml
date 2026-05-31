@@ -14,6 +14,9 @@ importers:
       '@google/genai':
         specifier: ^2.7.0
         version: 2.7.0
+      '@tensordoc/prism':
+        specifier: workspace:*
+        version: link:packages/prism
       butterchurn:
         specifier: ^2.6.7
         version: 2.6.7
@@ -23,9 +26,6 @@ importers:
       milkdrop-preset-converter:
         specifier: ^0.1.2
         version: 0.1.2
-      prism-player:
-        specifier: workspace:*
-        version: link:packages/prism-player
     devDependencies:
       '@webgpu/types':
         specifier: ^0.1.70
@@ -46,7 +46,7 @@ importers:
         specifier: ^6.0.0
         version: 6.4.2(@types/node@25.9.1)(tsx@4.22.3)
 
-  packages/prism-player:
+  packages/prism:
     dependencies:
       butterchurn:
         specifier: ^2.6.7

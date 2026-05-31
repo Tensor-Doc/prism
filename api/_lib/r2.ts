@@ -11,7 +11,7 @@
 //   R2_SECRET_ACCESS_KEY
 //   R2_BUCKET
 // Optional:
-//   R2_PUBLIC_BASE         (e.g. https://images.prism.run) — public read URL prefix
+//   R2_PUBLIC_BASE         (e.g. https://images.prism.scott.ai) — public read URL prefix
 //   R2_KEY_PREFIX          (e.g. prism) — namespace inside the bucket
 //
 // The functions below short-circuit cleanly when R2 isn't configured so

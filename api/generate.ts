@@ -19,7 +19,7 @@ import catalogIndex from "../catalog/index.json";
 // Build a quick id → short_id lookup once at cold start. The catalog
 // index is the source of truth for share tokens; this lets the
 // generate response include the short_id of the entry Gemini picked so
-// agents (and the website) can construct prism.run/?g=<short_id> URLs
+// agents (and the website) can construct prism.scott.ai/?g=<short_id> URLs
 // directly.
 const SHORT_ID_BY_CATALOG_ID: Record<string, string> = {};
 for (const e of (catalogIndex.entries ?? []) as Array<{ id?: string; short_id?: string }>) {
@@ -28,8 +28,8 @@ for (const e of (catalogIndex.entries ?? []) as Array<{ id?: string; short_id?: 
 
 // NOTE: Vercel's edge-function bundler is finicky about cross-folder TS
 // imports. We duplicate the SCHEMA_VERSION constant + a minimal PrismGraph
-// type here rather than importing from the prism-player workspace package.
-// The canonical schema definition lives in packages/prism-player/src/types.ts;
+// type here rather than importing from the @tensordoc/prism workspace package.
+// The canonical schema definition lives in packages/prism/src/types.ts;
 // keep them in sync.
 const SCHEMA_VERSION = "prism.graph/0.1" as const;
 

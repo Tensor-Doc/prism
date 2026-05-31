@@ -1,15 +1,15 @@
 ---
 name: prism-visualizer
-description: Generate an audio-reactive visualization from a natural-language description and return a shareable prism.run URL the user can open. Trigger when the user asks for a visualization, music visualizer, audio-reactive graphics, ambient background art, a Milkdrop / shadertoy preset, or "something to play while I work."
+description: Generate an audio-reactive visualization from a natural-language description and return a shareable prism.scott.ai URL the user can open. Trigger when the user asks for a visualization, music visualizer, audio-reactive graphics, ambient background art, a Milkdrop / shadertoy preset, or "something to play while I work."
 ---
 
 # prism-visualizer
 
 A Claude Code skill that turns a short prompt into a working
-audio-reactive visualization on **prism.run** — a free, open-source
+audio-reactive visualization on **prism.scott.ai** — a free, open-source
 visualizer engine for Milkdrop presets and Shadertoy fragment
 shaders. The skill is the agent-facing wrapper around the same
-`/api/generate` endpoint that drives the prism.run website.
+`/api/generate` endpoint that drives the prism.scott.ai website.
 
 ## When to invoke
 
@@ -28,14 +28,14 @@ play music against.
 ## How it works
 
 ```
-user prompt → POST prism.run/api/generate
+user prompt → POST prism.scott.ai/api/generate
             → { graph, short_id }
-            → return https://prism.run/?g=<short_id>
+            → return https://prism.scott.ai/?g=<short_id>
 ```
 
 Behind the URL:
 
-- prism.run loads the visualization referenced by `<short_id>`
+- prism.scott.ai loads the visualization referenced by `<short_id>`
 - The user's tab audio / microphone (if granted) drives reactivity
 - The bundled SyntheticSignal driver keeps the visual alive even with no audio
 
@@ -45,7 +45,7 @@ specific catalog entry. URLs are tweet-friendly and survive renames.
 ## Calling the API
 
 ```bash
-curl -X POST https://prism.run/api/generate \
+curl -X POST https://prism.scott.ai/api/generate \
   -H "Content-Type: application/json" \
   -d '{ "prompt": "calming cosmic nebula" }'
 ```
@@ -75,7 +75,7 @@ Response (200):
 
 The two fields you usually want:
 
-- `short_id` — base62 token to build the shareable URL: `https://prism.run/?g=<short_id>`
+- `short_id` — base62 token to build the shareable URL: `https://prism.scott.ai/?g=<short_id>`
 - `graph.intent` — one-sentence description of what the user will see; use as the link's label
 
 ## What to return to the user
@@ -83,7 +83,7 @@ The two fields you usually want:
 For a typical interactive Claude Code session:
 
 ```
-Here's your visualization: https://prism.run/?g=PTzsKc
+Here's your visualization: https://prism.scott.ai/?g=PTzsKc
 
   Intent: A slow cosmic nebula with cyan and orange chroma drifting against deep space.
 
@@ -121,7 +121,7 @@ embed the visualization directly:
 
 ```html
 <script type="module">
-  import { PrismPlayer } from "https://esm.sh/prism-player";
+  import { PrismPlayer } from "https://esm.sh/@tensordoc/prism";
   new PrismPlayer({ container: "viz", graph: "PTzsKc" });
 </script>
 <div id="viz" style="width:100vw;height:100vh"></div>

@@ -133,7 +133,7 @@ export class PrismPlayer {
 
     // Two stacked canvases — opacity-crossfaded by setActiveBackend.
     // Match the legacy id/class pair so existing CSS (cold-open animation,
-    // bg-canvas--hidden/--active modifiers) still applies on prism.run.
+    // bg-canvas--hidden/--active modifiers) still applies on prism.scott.ai.
     this.milkdropCanvas = createCanvas("milkdrop");
     this.shadertoyCanvas = createCanvas("shadertoy");
     this.shadertoyCanvas.classList.add("bg-canvas--hidden");

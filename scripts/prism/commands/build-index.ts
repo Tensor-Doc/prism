@@ -5,7 +5,7 @@
 //
 // Side effect: mints a 6-char short_id for any entry missing one and
 // writes it back to disk. Stable after first mint so external share
-// URLs (prism.run/?g=<short_id>) never rot.
+// URLs (prism.scott.ai/?g=<short_id>) never rot.
 
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -184,7 +184,7 @@ export interface RegistryEntry {
   default_image?: string;
 }
 
-/** The lookup map that ships inside prism-player so consumers can
+/** The lookup map that ships inside /prism so consumers can
  *  resolve a short_id to a playable PrismGraph offline. Keys are short
  *  ids; values are the minimal slice of the catalog entry the runtime
  *  needs to dispatch the right backend. */
@@ -211,8 +211,8 @@ export function runBuildIndex(repoRoot: string): void {
   // Three destinations:
   // - catalog/index.json (alongside the source-of-truth entries; convenient for debugging)
   // - public/catalog/index.json (served by Vite + Vercel at runtime to the gallery)
-  // - packages/prism-player/src/registry.generated.json (bundled into the
-  //   npm package so prism.run/?g=<short_id> resolves offline for consumers).
+  // - packages/prism/src/registry.generated.json (bundled into the
+  //   npm package so prism.scott.ai/?g=<short_id> resolves offline for consumers).
   const json = JSON.stringify(index, null, 2) + "\n";
   const repoOut = join(repoRoot, "catalog/index.json");
   const publicOut = join(repoRoot, "public/catalog/index.json");
@@ -221,8 +221,8 @@ export function runBuildIndex(repoRoot: string): void {
   writeFileSync(publicOut, json);
 
   const registry = buildRegistry(index);
-  const registryOut = join(repoRoot, "packages/prism-player/src/registry.generated.json");
-  if (existsSync(join(repoRoot, "packages/prism-player/src"))) {
+  const registryOut = join(repoRoot, "packages/prism/src/registry.generated.json");
+  if (existsSync(join(repoRoot, "packages/prism/src"))) {
     writeFileSync(registryOut, JSON.stringify(registry, null, 2) + "\n");
   }
 

@@ -2,7 +2,7 @@
 // Orchestrates the background field, telemetry, VU bars, audio capture,
 // and prompt-input keyboard handling. Touches no studio code on this pass.
 
-import { ImageOverlay, PrismPlayer, type PrismGraph } from "prism-player";
+import { ImageOverlay, PrismPlayer, type PrismGraph } from "@tensordoc/prism";
 
 import { CursorField } from "./cursor-field";
 import { Telemetry } from "./telemetry";

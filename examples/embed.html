@@ -25,9 +25,9 @@
     </div>
 
     <!-- Local-workspace import. After `npm publish`, swap to:
-         import { PrismPlayer } from "https://esm.sh/prism-player";    -->
+         import { PrismPlayer } from "https://esm.sh/@tensordoc/prism";  -->
     <script type="module">
-      import { PrismPlayer } from "prism-player";
+      import { PrismPlayer } from "@tensordoc/prism";
 
       // Read ?g=<short_id> so the demo doubles as a share-URL preview.
       const shareToken = new URLSearchParams(location.search).get("g");

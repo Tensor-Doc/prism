@@ -14,7 +14,7 @@
 //   showChain(types)          — synthetic chain for cold-open before any
 //                                prompt has resolved to a real graph
 
-import type { NodeType, PrismGraph } from "prism-player";
+import type { NodeType, PrismGraph } from "@tensordoc/prism";
 
 const LABELS: Partial<Record<NodeType, string>> = {
   "signal.audio": "audio",

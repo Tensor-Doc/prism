@@ -1,6 +1,6 @@
 // registry.ts — share-token lookup for catalog content.
 //
-// Every catalog entry on prism.run has a 6-char base62 token (the
+// Every catalog entry on prism.scott.ai has a 6-char base62 token (the
 // short_id). Consumers pass one to `player.load(...)` or via the URL
 // param `?g=<short_id>` and the player resolves it to a PrismGraph
 // offline — no network call. The map is generated from the catalog at
