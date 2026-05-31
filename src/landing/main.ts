@@ -18,6 +18,7 @@ import { InputPulses } from "./input-pulses";
 import { ImageSlots } from "./image-sources/slots";
 import { TabVideoSource } from "./image-sources/tab-video";
 import { NasaImagesSource } from "./image-sources/nasa-images";
+import { UnsplashImagesSource } from "./image-sources/unsplash-images";
 import { Slideshow } from "./slideshow";
 
 function $<T extends HTMLElement = HTMLElement>(sel: string): T {
@@ -405,8 +406,10 @@ skillPlayBtn.addEventListener("click", () => {
 const imageSlots = new ImageSlots(1, 1280, 720);
 const tabVideoSource = new TabVideoSource();
 const nasaSource = new NasaImagesSource();
-// Begin pre-loading the NASA images so the source is ready when picked.
+const unsplashSource = new UnsplashImagesSource();
+// Begin pre-loading both image feeds so they're ready when picked.
 void nasaSource.ensureLoaded();
+void unsplashSource.ensureLoaded();
 
 const slideshow = new Slideshow(
   imageSlots,
@@ -488,7 +491,7 @@ audio.onVideoEnd = () => {
 };
 
 // ── gallery row + source picker modal ─────────────────────
-type GallerySourceId = "audio-tab" | "nasa-deep-space" | null;
+type GallerySourceId = "audio-tab" | "nasa-deep-space" | "unsplash" | null;
 let currentGallerySource: GallerySourceId = null;
 
 const galleryRow = $("#gallery-row");
@@ -500,10 +503,12 @@ const galleryDisconnectBtn = $<HTMLButtonElement>("#gallery-disconnect");
 const galleryStatus = $("#gallery-modal-status");
 const audioTabBtn = $<HTMLButtonElement>("#src-audio-tab");
 const nasaBtn = $<HTMLButtonElement>("#src-nasa");
+const unsplashBtn = $<HTMLButtonElement>("#src-unsplash");
 
 const SOURCE_LABELS: Record<Exclude<GallerySourceId, null>, string> = {
   "audio-tab": "audio tab",
   "nasa-deep-space": "nasa · deep space",
+  "unsplash": "unsplash",
 };
 
 // Dedicated 1280×720 2D canvas that mirrors the slideshow card's
@@ -551,12 +556,56 @@ function pumpShaderFeed(): void {
 }
 requestAnimationFrame(pumpShaderFeed);
 
+// Per-photo attribution chip (Unsplash TOS — must show photographer
+// name + link, plus the Unsplash brand link). Anchored to the bottom
+// of the slideshow card so it tracks drag/resize naturally.
+const imageCredit = $("#image-credit");
+const imageCreditArtist = $<HTMLAnchorElement>("#image-credit-artist");
+const imageCreditSource = $<HTMLAnchorElement>("#image-credit-source");
+const CREDIT_MARGIN = 8;
+function positionImageCredit(): void {
+  if (imageCredit.hasAttribute("data-hidden")) return;
+  const r = slideshowOverlay.rect;
+  // Anchor: bottom-left of the slideshow card, just outside the frame.
+  imageCredit.style.left = `${r.x}px`;
+  imageCredit.style.top = `${r.y + r.h + CREDIT_MARGIN}px`;
+}
+function hideImageCredit(): void { imageCredit.setAttribute("data-hidden", ""); }
+function updateImageCredit(): void {
+  if (currentGallerySource !== "unsplash") {
+    hideImageCredit();
+    return;
+  }
+  const attr = unsplashSource.currentAttribution();
+  if (!attr) return; // not sampled yet
+  imageCreditArtist.textContent = attr.artist_name;
+  imageCreditArtist.href = attr.artist_profile_url;
+  imageCreditSource.href = `https://unsplash.com/?utm_source=prism&utm_medium=referral`;
+  // Photo permalink is on the artist's photo URL; the prefix opens
+  // Unsplash directly via the source chip.
+  imageCreditArtist.title = `View on Unsplash — ${attr.photo_url}`;
+  imageCredit.removeAttribute("data-hidden");
+  positionImageCredit();
+}
+// Poll the current attribution. The slideshow advances every few seconds,
+// and Unsplash's sample() updates _lastAttribution on each draw; this
+// keeps the chip in lockstep without instrumenting Slideshow itself.
+setInterval(updateImageCredit, 500);
+// Re-position whenever the slideshow card moves/resizes. Chains the
+// existing slideshow ↔ overlay sync set up further up.
+const _priorCardChanged = slideshow.onCardChanged;
+slideshow.onCardChanged = (): void => {
+  _priorCardChanged?.();
+  positionImageCredit();
+};
+
 function setGallerySource(src: GallerySourceId): void {
   currentGallerySource = src;
   if (src === null) {
     imageSlots.bind(0, null);
     slideshow.stop();
     hideSlideshowCard();
+    hideImageCredit();
     galleryRow.removeAttribute("data-active");
     galleryRate.textContent = "connect";
     refreshSignalCount();
@@ -568,6 +617,8 @@ function setGallerySource(src: GallerySourceId): void {
     imageSlots.bind(0, tabVideoSource);
   } else if (src === "nasa-deep-space") {
     imageSlots.bind(0, nasaSource);
+  } else if (src === "unsplash") {
+    imageSlots.bind(0, unsplashSource);
   }
   galleryRow.setAttribute("data-active", "");
   galleryRate.textContent = SOURCE_LABELS[src];
@@ -584,6 +635,7 @@ function setGallerySource(src: GallerySourceId): void {
 function refreshSourceSelection(): void {
   audioTabBtn.toggleAttribute("data-selected", currentGallerySource === "audio-tab");
   nasaBtn.toggleAttribute("data-selected", currentGallerySource === "nasa-deep-space");
+  unsplashBtn.toggleAttribute("data-selected", currentGallerySource === "unsplash");
   galleryDisconnectBtn.toggleAttribute("data-hidden", currentGallerySource === null);
   if (currentGallerySource) {
     galleryStatus.textContent = `live · ${SOURCE_LABELS[currentGallerySource]}`;
@@ -623,6 +675,10 @@ audioTabBtn.addEventListener("click", () => {
 });
 nasaBtn.addEventListener("click", () => {
   setGallerySource("nasa-deep-space");
+  setTimeout(hideGalleryModal, 500);
+});
+unsplashBtn.addEventListener("click", () => {
+  setGallerySource("unsplash");
   setTimeout(hideGalleryModal, 500);
 });
 galleryDisconnectBtn.addEventListener("click", () => {

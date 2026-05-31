@@ -14,6 +14,17 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 import catalogJson from "../catalog/catalog.json";
+import catalogIndex from "../catalog/index.json";
+
+// Build a quick id → short_id lookup once at cold start. The catalog
+// index is the source of truth for share tokens; this lets the
+// generate response include the short_id of the entry Gemini picked so
+// agents (and the website) can construct prism.run/?g=<short_id> URLs
+// directly.
+const SHORT_ID_BY_CATALOG_ID: Record<string, string> = {};
+for (const e of (catalogIndex.entries ?? []) as Array<{ id?: string; short_id?: string }>) {
+  if (e.id && e.short_id) SHORT_ID_BY_CATALOG_ID[e.id] = e.short_id;
+}
 
 // NOTE: Vercel's edge-function bundler is finicky about cross-folder TS
 // imports. We duplicate the SCHEMA_VERSION constant + a minimal PrismGraph
@@ -291,7 +302,8 @@ export default async function handler(req: Request): Promise<Response> {
     output: "out",
   };
 
-  return json(200, { graph });
+  const shortId = SHORT_ID_BY_CATALOG_ID[matched.id] ?? null;
+  return json(200, { graph, short_id: shortId });
 }
 
 async function pickPresetWithGemini(

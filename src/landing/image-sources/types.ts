@@ -7,6 +7,7 @@
 export type ImageSourceType =
   | "tab-video"
   | "nasa-apod"
+  | "unsplash"
   | "url"
   | "upload"
   | "ai-generated"

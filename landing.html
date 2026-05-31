@@ -21,6 +21,16 @@
          (prism-player) using the same .slideshow-card class so the
          existing CSS still styles it. -->
 
+    <!-- Per-photo attribution chip (Unsplash TOS requirement). Anchored
+         to the slideshow card position by JS. Hidden until a photo with
+         attribution data is sampled. -->
+    <div class="image-credit" id="image-credit" data-hidden>
+      <span class="image-credit__prefix">Photo by</span>
+      <a class="image-credit__artist" id="image-credit-artist" target="_blank" rel="noopener"></a>
+      <span class="image-credit__sep">on</span>
+      <a class="image-credit__source" id="image-credit-source" target="_blank" rel="noopener">Unsplash</a>
+    </div>
+
     <div class="vignette" aria-hidden="true"></div>
     <div class="scan" aria-hidden="true"></div>
     <div class="slideshow-progress" id="slideshow-progress" aria-hidden="true"></div>
@@ -275,6 +285,13 @@
               <span class="source-option__body">
                 <span class="source-option__name">nasa · deep space</span>
                 <span class="source-option__desc">hubble + jwst + apod — nebulae, galaxies, deep sky</span>
+              </span>
+            </button>
+            <button class="source-option" type="button" data-source="unsplash" id="src-unsplash">
+              <span class="source-option__glyph" aria-hidden="true">◇</span>
+              <span class="source-option__body">
+                <span class="source-option__name">unsplash · photography</span>
+                <span class="source-option__desc">nebulae, aurora, ocean, abstract — curated photography</span>
               </span>
             </button>
           </div>

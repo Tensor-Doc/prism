@@ -1549,6 +1549,52 @@ body.audio-live .logo__mark { color: var(--cyan); }
 body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animation-duration: 0.6s; }
 
 /* ─────────────────────────────────────────────────────────────
+   Image attribution chip
+   ───────────────────────────────────────────────────────────── */
+.image-credit {
+  position: fixed;
+  z-index: 4;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1;
+  padding: 6px 10px;
+  background: rgba(8, 10, 14, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--fg-muted);
+  opacity: 0;
+  transform: translateY(2px);
+  pointer-events: none;
+  transition: opacity var(--dur-base) var(--ease-spring),
+              transform var(--dur-base) var(--ease-spring),
+              left var(--dur-base) var(--ease-spring),
+              top var(--dur-base) var(--ease-spring);
+}
+.image-credit:not([data-hidden]) {
+  opacity: 0.88;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.image-credit__prefix,
+.image-credit__sep { color: var(--fg-muted); opacity: 0.7; margin: 0 4px; }
+.image-credit__prefix { margin-left: 0; }
+.image-credit__artist,
+.image-credit__source {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring);
+}
+.image-credit__artist:hover,
+.image-credit__source:hover {
+  color: var(--cyan);
+  border-bottom-color: var(--cyan-60);
+}
+
+/* ─────────────────────────────────────────────────────────────
    Webfont declarations
    The WOFF2 files don't yet ship with the repo. They'll be added
    under /public/fonts/ — see public/fonts/README.md. Until then,
