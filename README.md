@@ -10,6 +10,17 @@ Prism turns real-time signals into live visuals. Audio is one
 signal. So are heartbeat, breath, pose, cursor, MIDI, and AI agent
 state. Anything that streams can drive a visual.
 
+This is the start of a generative visualizer, and we're being
+honest about where we are. Today, Prism **composites existing
+visualization code** — [Milkdrop](https://www.geisswerks.com/about_milkdrop.html)
+presets through [butterchurn](https://github.com/jberg/butterchurn),
+[Shadertoy](https://www.shadertoy.com/) fragment shaders through a
+custom WebGL2 runtime — and uses an LLM to route prompts to the
+right one. **In development**: letting an AI generate its own
+shaders end to end, parameterized by the same signal nodes. We're
+starting from a sturdy base that artists have refined for two
+decades; the AI-generation layer is the next frontier.
+
 - **Live demo**: [prism.scott.ai](https://prism.scott.ai)
 - **CodeSandbox**: [two-line embed playground](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
 - **npm**: [`@tensordoc/prism`](https://www.npmjs.com/package/@tensordoc/prism)
@@ -110,19 +121,22 @@ hand it to the user, or pass the graph object directly to
 
 ---
 
-## Prism fills the visualization slot
+## Where Prism fits
 
 | Modality | API |
 |---|---|
 | Voice | ElevenLabs |
-| Image | Stability / Midjourney |
+| Image | Stability, Midjourney |
 | Music | Suno |
-| Video | Runway / Veo |
+| Video | Runway, Veo |
 | **Visualization** | **Prism** |
 
-None of those other APIs are time-streaming-native. Prism is the only
-one that takes a signal-in-motion (audio, heart rate, log volume,
-agent state) and renders it live.
+None of the other modality APIs are time-streaming-native. Prism is
+shaped around streaming input — audio, heart rate, log volume, agent
+state — rendered live. Whether the visualization slot ends up filled
+by us, an OSS competitor, or one of the bigger model providers
+remains to be seen. We think the time-streaming angle is the gap
+worth pursuing.
 
 ---
 
@@ -385,15 +399,25 @@ deletion.
 
 ## Inspiration
 
-Geiss made Milkdrop in 2001. It proved audio-reactive visuals could
-become culture. Quílez launched Shadertoy in 2013. It showed that
-shader sharing could become a community. VIDVOX made ISF. It proved
-that declared inputs turn shaders into instruments. TouchDesigner and
-the broader generative-art world proved data-driven painterly work
-belongs in galleries.
+[Ryan Geiss](https://www.geisswerks.com/) made
+[Milkdrop](https://www.geisswerks.com/about_milkdrop.html) in 2001.
+It proved audio-reactive visuals could become culture — 25 years
+later, Milkdrop presets are still being written and shared.
+[Iñigo Quílez](https://iquilezles.org/) launched
+[Shadertoy](https://www.shadertoy.com/) in 2013, showing that shader
+sharing could become a community. [VIDVOX](https://www.vidvox.net/)
+made [ISF](https://isf.video/) — declared inputs turn shaders into
+instruments. [TouchDesigner](https://derivative.ca/) and the broader
+generative-art world (Cables.gl, vvvv, Notch) proved data-driven
+painterly work belongs in galleries. And
+[butterchurn](https://github.com/jberg/butterchurn) by Jordan Berg is
+what makes Milkdrop run in the browser today — Prism is built on top
+of it.
 
-**Prism is the AI-era extension of all of these. A runtime. A
-catalog. A graph language. A community.**
+Prism is one attempt at extending all of this into the AI era — a
+runtime, a catalog, a graph language, a small community. **Built on
+the work of giants.** If the project earns a place in this list one
+day, we'll be doing well.
 
 ---
 
