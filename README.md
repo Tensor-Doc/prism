@@ -19,7 +19,11 @@ AI-generated shaders are in development.
 
 Live demo at [prism.scott.ai](https://prism.scott.ai).
 
-Play with the two-line embed in
+See the two-line embed running at
+[prism.scott.ai/examples/embed.html](https://prism.scott.ai/examples/embed.html).
+View the source on
+[GitHub](https://github.com/Tensor-Doc/prism/blob/main/examples/codesandbox/main.js).
+Fork it in
 [CodeSandbox](https://codesandbox.io/p/sandbox/github/Tensor-Doc/prism/main/examples/codesandbox)
 or
 [StackBlitz](https://stackblitz.com/github/Tensor-Doc/prism/tree/main/examples/codesandbox).
