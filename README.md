@@ -106,31 +106,23 @@ snow, paper birds, plasma streaks. The
 file lists the planned concept library.
 
 The first showcase shipped with `0.1.4`. Nineteen Refik-tier
-particle concepts are live in the gallery. Sixteen sit in the
-atelier feature pool. Each loads via `prism.scott.ai/?g=<token>`
-or the embed.
+particle concepts are live in the gallery. Click any share token
+below to open it in the player. Once it loads you'll see a "play
+with audio" prompt that connects your microphone or a shared
+browser tab to the visualization.
 
 | Concept | Inspired by | Share token |
 |---|---|---|
-| Solar Wind | NASA Solar Dynamics Observatory | `EqdmpR` |
-| Coral Garden | BBC Blue Planet, Refik "Coral Dreams" | `cJF2H7` |
-| Lava Flow | volcanic flow macros | `jvkmIA` |
-| Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | `U0D2Ci` |
-| Embers Rising | campfire macros, dragon-fire cinema | `P5OFbe` |
-| Schooling Fish | BBC Blue Planet underwater shots | `CziRzn` |
-| Meteor Shower | Perseid astrophotography | `02YaLd` |
-| Comet Field | comet macro telescopes | `9pcVab` |
-| Cherry Blossom Storm | Japanese hanami, anime petals | `5zUZFz` |
-| Origami Flock | paper-crane installations | `Bv8pPx` |
-| Magnetosphere Revisited | Robert Hodgin iTunes 2007 | `re5koJ` |
-| Fairy Lights | long-exposure bokeh | `HDr8CA` |
-| Murmuration | starling flocks at dusk | `1Ydj3x` |
-| Soap Bubbles | macro of real soap film | `aC6lQp` |
-| Fireflies | summer-night macros | `NOszGU` |
-| Aurora Curtains | polar light curtains | `c93P1x` |
-| Confetti Burst | celebration, drop response | `W9PyL6` |
-| Falling Snow | snow-globe close-ups | `rlyB3L` |
-| Galactic Dust | Hubble dust-lane imagery | `35Rx8l` |
+| Solar Wind | NASA Solar Dynamics Observatory | [`EqdmpR`](https://prism.scott.ai/?g=EqdmpR) |
+| Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | [`U0D2Ci`](https://prism.scott.ai/?g=U0D2Ci) |
+| Lava Flow | volcanic flow macros | [`jvkmIA`](https://prism.scott.ai/?g=jvkmIA) |
+| Magnetosphere Revisited | Robert Hodgin iTunes 2007 | [`re5koJ`](https://prism.scott.ai/?g=re5koJ) |
+| Aurora Curtains | polar light curtains | [`c93P1x`](https://prism.scott.ai/?g=c93P1x) |
+
+The other fourteen — including Coral Garden, Embers Rising,
+Schooling Fish, Cherry Blossom Storm, Murmuration, Meteor Shower,
+Soap Bubbles, Fireflies, Comet Field, and more — are at
+[prism.scott.ai/gallery.html](https://prism.scott.ai/gallery.html).
 
 Six of the trail-based concepts (Magnetosphere Revisited, Fairy
 Lights, Aurora Curtains, Comet Field, Meteor Shower, Fireflies)
