@@ -1693,27 +1693,14 @@ body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animat
    under /public/fonts/ — see public/fonts/README.md. Until then,
    the system stack in tokens.css renders cleanly.
    ───────────────────────────────────────────────────────────── */
-@font-face {
-  font-family: "Switzer";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/Switzer-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/PlusJakartaSans-Variable.woff2") format("woff2-variations");
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/JetBrainsMono-Variable.woff2") format("woff2-variations");
-}
+/* Fonts come from Google Fonts CDN. The earlier @font-face rules
+   pointed at /fonts/*.woff2 which were never committed to the repo;
+   they 404'd in prod, falling back to system fonts via font-display:
+   swap. Pulling Plus Jakarta Sans and JetBrains Mono off the public
+   Google Fonts CDN solves it cleanly. Switzer is a Fontshare paid
+   family; dropping that reference altogether — it was only used for
+   one weight and the system stack handles its callsites adequately. */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 /* ── powered-by credit ───────────────────────────────────────────
    Bottom-center, fixed. Deliberately NOT in the chrome-idle fade

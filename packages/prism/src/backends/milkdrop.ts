@@ -86,15 +86,58 @@ export function createMilkdropBackground(
   });
   visualizer.connectAudio(silentSource);
 
-  // Feed butterchurn the texture pack at /textures/ so .milk presets that
-  // reference sampler_<name> (worms, clouds, fire_alpha, manyfish, …) can
-  // actually sample them. Without this, butterchurn only has its own 6
-  // bundled textures and every other reference reads black. Fire-and-
-  // forget — presets that load before this completes will see black
-  // textures until the next loadPreset.
-  void loadTexturePack(visualizer).catch((err) => {
-    console.warn("[milkdrop] texture pack load failed:", err);
-  });
+  // Per-preset texture loading. Most milkdrop presets reference 0-3
+  // textures; loading all 86 up front was hugely wasteful. Instead we
+  // scan each preset's shader source for `sampler_<name>` references
+  // and fetch just those, caching the dataURLs so a preset that
+  // re-uses a texture pays zero cost the second time.
+  const loadedSamplerNames = new Set<string>();
+  let manifestPromise: Promise<Record<string, string>> | null = null;
+  function getManifest(): Promise<Record<string, string>> {
+    if (!manifestPromise) {
+      manifestPromise = fetch("/textures/index.json")
+        .then((r) => (r.ok ? r.json() : {}))
+        .catch(() => ({}));
+    }
+    return manifestPromise;
+  }
+  async function ensureTexturesForPreset(presetData: unknown): Promise<void> {
+    const wanted = scanSamplerNames(presetData);
+    const toLoad: string[] = [];
+    for (const name of wanted) {
+      if (loadedSamplerNames.has(name)) continue;
+      if (BUILTIN_SAMPLER_NAMES.has(name)) {
+        loadedSamplerNames.add(name);
+        continue;
+      }
+      toLoad.push(name);
+    }
+    if (toLoad.length === 0) return;
+    const manifest = await getManifest();
+    const loaded: Record<string, { data: string }> = {};
+    await Promise.all(
+      toLoad.map(async (name) => {
+        try {
+          if (PROCEDURAL_SAMPLER_NAMES.has(name)) {
+            loaded[name] = { data: generateProceduralTexture(name) };
+            return;
+          }
+          const filename = manifest[name];
+          if (!filename) return;
+          const r = await fetch(`/textures/${encodeURIComponent(filename)}`);
+          if (!r.ok) return;
+          const blob = await r.blob();
+          loaded[name] = { data: await blobToDataUrl(blob) };
+        } catch (err) {
+          console.warn(`[milkdrop] texture ${name} failed:`, err);
+        }
+      }),
+    );
+    if (Object.keys(loaded).length > 0) {
+      visualizer.loadExtraImages(loaded);
+    }
+    for (const n of toLoad) loadedSamplerNames.add(n);
+  }
 
   // Pick the curated default if it exists in the bundle; otherwise random.
   const presetMap = butterchurnPresets.getPresets();
@@ -107,7 +150,12 @@ export function createMilkdropBackground(
   } else {
     currentRaw = names[Math.floor(Math.random() * names.length)];
   }
-  visualizer.loadPreset(presetMap[currentRaw], 0);
+  // Cold-open: load textures the curated default needs, then the
+  // preset. ensureTextures returns immediately for presets that
+  // don't reference any extras (the common case).
+  void ensureTexturesForPreset(presetMap[currentRaw]).then(() => {
+    visualizer.loadPreset(presetMap[currentRaw], 0);
+  });
 
   const onResize = (): void => {
     const w = window.innerWidth;
@@ -146,14 +194,20 @@ export function createMilkdropBackground(
     connectAudio: (node) => visualizer.connectAudio(node),
     loadRandom: (blendSeconds = 2.5) => {
       const next = pickNew();
-      visualizer.loadPreset(presetMap[next], blendSeconds);
+      const data = presetMap[next];
+      void ensureTexturesForPreset(data).then(() => {
+        visualizer.loadPreset(data, blendSeconds);
+      });
       currentRaw = next;
       return prettyPresetName(next);
     },
     loadByName: (name, blendSeconds = 2.5) => {
       const key = findPresetKey(names, name);
       if (!key) return null;
-      visualizer.loadPreset(presetMap[key], blendSeconds);
+      const data = presetMap[key];
+      void ensureTexturesForPreset(data).then(() => {
+        visualizer.loadPreset(data, blendSeconds);
+      });
       currentRaw = key;
       return prettyPresetName(key);
     },
@@ -164,6 +218,7 @@ export function createMilkdropBackground(
       }
       const milkText = await res.text();
       const converted = await milkdropConverter.convertPreset(milkText);
+      await ensureTexturesForPreset(converted);
       visualizer.loadPreset(converted, blendSeconds);
       // Display name is derived from the URL's last path segment.
       const stem = url.split("/").pop()?.replace(/\.milk$/, "") ?? url;
@@ -177,62 +232,64 @@ export function createMilkdropBackground(
   };
 }
 
-/** Fetch /textures/index.json and feed every entry to butterchurn via
- *  loadExtraImages(). Names match what .milk presets expect (lowercase,
- *  no extension, underscores for spaces). Each image is fetched as a
- *  Blob and converted to a base64 dataURL because that's the format
- *  butterchurn's loadExtraImages accepts.
- *
- *  Also generates Milkdrop's procedural noise textures (noise_lq, _mq,
- *  _hq plus the pw_* mirrors and rand00/01/02) — Geiss spec is
- *  256x256, 64x64 (cubic-filtered), 32x32 (cubic-filtered) RGBA random
- *  pixels. */
-async function loadTexturePack(visualizer: VisualizerHandle): Promise<void> {
-  const res = await fetch("/textures/index.json");
-  if (!res.ok) {
-    throw new Error(`/textures/index.json → ${res.status}`);
+/** Scan a converted milkdrop preset object for `sampler_<name>`
+ *  references in any of its shader source fields. Returns the
+ *  lowercase names of textures the preset will actually try to
+ *  sample, so we only load those instead of the entire 86-texture
+ *  pack. */
+function scanSamplerNames(preset: unknown): Set<string> {
+  const names = new Set<string>();
+  if (!preset || typeof preset !== "object") return names;
+  const p = preset as Record<string, unknown>;
+  const sources: string[] = [];
+  for (const field of ["warp", "comp", "warp_eqs_str", "comp_eqs_str",
+                        "init_eqs_str", "frame_eqs_str", "pixel_eqs_str"]) {
+    const v = p[field];
+    if (typeof v === "string") sources.push(v);
   }
-  const manifest = (await res.json()) as Record<string, string>;
-  const entries = Object.entries(manifest);
-  const loaded: Record<string, { data: string }> = {};
-  await Promise.all(entries.map(async ([key, filename]) => {
-    try {
-      const r = await fetch(`/textures/${encodeURIComponent(filename)}`);
-      if (!r.ok) throw new Error(`${r.status}`);
-      const blob = await r.blob();
-      const dataUrl = await blobToDataUrl(blob);
-      loaded[key] = { data: dataUrl };
-    } catch (err) {
-      console.warn(`[milkdrop] texture ${key} failed:`, err);
+  // Butterchurn-presets bundled objects sometimes nest the warp/comp
+  // strings inside a `compiledEqs` or `presetText` field. Walk one
+  // level deeper for those.
+  for (const v of Object.values(p)) {
+    if (typeof v === "string" && v.includes("sampler_")) sources.push(v);
+  }
+  const regex = /sampler_([a-z_0-9]+)/gi;
+  for (const src of sources) {
+    let m: RegExpExecArray | null;
+    while ((m = regex.exec(src)) !== null) {
+      names.add(m[1].toLowerCase());
     }
-  }));
-  Object.assign(loaded, generateNoiseTextures());
-  if (Object.keys(loaded).length === 0) return;
-  visualizer.loadExtraImages(loaded);
-  console.log(`[milkdrop] loaded ${Object.keys(loaded).length} textures`);
+  }
+  return names;
 }
 
-/** Generate Milkdrop's procedural 2D noise textures via Canvas.
- *  - noise_lq / pw_noise_lq / rand00-02: 256x256 raw RGBA white noise
- *  - noise_mq / pw_noise_mq: 64x64 white noise upsampled from 16x16
- *    with high-quality smoothing — fakes Milkdrop's cubic filter
- *  - noise_hq / pw_noise_hq: 32x32 from 8x8 upsampled with smoothing
- *  Returns a dataURL map ready for visualizer.loadExtraImages(). */
-function generateNoiseTextures(): Record<string, { data: string }> {
-  const out: Record<string, { data: string }> = {};
-  const lqUrl = randomNoiseDataUrl(256, 256, 1);
-  const mqUrl = smoothNoiseDataUrl(16, 64);
-  const hqUrl = smoothNoiseDataUrl(8, 32);
-  out["noise_lq"] = { data: lqUrl };
-  out["pw_noise_lq"] = { data: lqUrl };
-  out["noise_mq"] = { data: mqUrl };
-  out["pw_noise_mq"] = { data: mqUrl };
-  out["noise_hq"] = { data: hqUrl };
-  out["pw_noise_hq"] = { data: hqUrl };
-  out["rand00"] = { data: randomNoiseDataUrl(256, 256, 2) };
-  out["rand01"] = { data: randomNoiseDataUrl(256, 256, 3) };
-  out["rand02"] = { data: randomNoiseDataUrl(256, 256, 4) };
-  return out;
+/** Butterchurn ships these six textures inside its own bundle, so we
+ *  never need to fetch or generate them ourselves. Plus the framebuffer
+ *  sampler names that aren't textures at all — they're the preset's
+ *  own previous-frame buffers and blur levels. */
+const BUILTIN_SAMPLER_NAMES = new Set([
+  "cells", "lichen", "mage", "prayerwheel", "seaweed", "smalltiled_lizard_scales",
+  "main", "pw_main", "pc_main", "fc_main", "fw_main",
+  "blur1", "blur2", "blur3",
+]);
+
+/** Noise textures Milkdrop generates at runtime. We do the same via
+ *  canvas + putImageData, on demand and cached after first generation. */
+const PROCEDURAL_SAMPLER_NAMES = new Set([
+  "noise_lq", "pw_noise_lq",
+  "noise_mq", "pw_noise_mq",
+  "noise_hq", "pw_noise_hq",
+  "rand00", "rand01", "rand02",
+]);
+
+function generateProceduralTexture(name: string): string {
+  if (name === "noise_lq" || name === "pw_noise_lq") return randomNoiseDataUrl(256, 256, 1);
+  if (name === "noise_mq" || name === "pw_noise_mq") return smoothNoiseDataUrl(16, 64);
+  if (name === "noise_hq" || name === "pw_noise_hq") return smoothNoiseDataUrl(8, 32);
+  if (name === "rand00") return randomNoiseDataUrl(256, 256, 2);
+  if (name === "rand01") return randomNoiseDataUrl(256, 256, 3);
+  if (name === "rand02") return randomNoiseDataUrl(256, 256, 4);
+  return "";
 }
 
 /** Fill a canvas with seeded pseudo-random RGBA pixels and return a

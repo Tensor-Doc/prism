@@ -99,9 +99,10 @@ export class PrismPlayer {
   /** Milkdrop (butterchurn) backend handle. Cold-opens on a random
    *  preset (or `initialPresetName` if you passed one). */
   readonly milkdrop: MilkdropBg;
-  /** Shadertoy backend handle. Idle until a graph with `lf.shadertoy` is
-   *  loaded (or you call `shadertoy.loadFromUrl` directly). */
-  readonly shadertoy: ShadertoyBg;
+  /** Shadertoy backend handle. Lazily instantiated on first lf.shadertoy
+   *  graph or first direct shadertoy.loadFromUrl call. Players that only
+   *  serve milkdrop or particle entries never pay the WebGL2 context cost. */
+  shadertoy: ShadertoyBg | null = null;
   /** Particles backend handle. Idle until a graph with `lf.particles` is
    *  loaded. Lazily instantiated on first use to avoid spinning up
    *  WebGL2 state textures + MRT framebuffers when the player only
@@ -129,6 +130,11 @@ export class PrismPlayer {
    *  so disconnectAudio() can stop the tracks. Null if the caller
    *  passed in their own stream/node (we never stop tracks we don't own). */
   private currentAudioOwnedStream: MediaStream | null = null;
+  /** Deferred state for the shadertoy lazy boot. The bindImage and
+   *  onError values from the constructor opts are stashed here so the
+   *  ensureShadertoy() call later can wire them in. */
+  private pendingDefaultImage: string | null = null;
+  private pendingOnError: ((err: Error) => void) | null = null;
 
   constructor(opts: PrismPlayerOptions) {
     const container = resolveContainer(opts.container);
@@ -163,16 +169,12 @@ export class PrismPlayer {
       opts.onReady,
       { initialPresetName: opts.initialPresetName },
     );
-    this.shadertoy = createShadertoyBackground(
-      this.audioCtx,
-      this.shadertoyCanvas,
-      this.synth.getOutput(),
-    );
-
     if (opts.defaultImage) {
-      void this.shadertoy.bindImage(opts.defaultImage).catch((err: Error) => {
-        opts.onError?.(err);
-      });
+      // Defer the shadertoy boot until the image is needed. ensureShadertoy
+      // is called the first time the runtime dispatches an lf.shadertoy
+      // graph — that's when the bindImage happens.
+      this.pendingDefaultImage = opts.defaultImage;
+      this.pendingOnError = opts.onError ?? null;
     }
 
     // Capture the player for the getter below — object-literal getters
@@ -181,10 +183,12 @@ export class PrismPlayer {
     const player = this;
     this.runtime = new GraphRuntime({
       milkdrop: this.milkdrop,
-      shadertoy: this.shadertoy,
-      // Lazy: the runtime asks the player for the particles backend
-      // when it sees an lf.particles node. The first call spins up
-      // WebGL2 state textures + the curl-noise update + render pipeline.
+      // Lazy getters: shadertoy and particles spin up only when the
+      // runtime actually needs them. Players that only ever render
+      // milkdrop entries never pay the WebGL2 + framebuffer cost.
+      get shadertoy(): ShadertoyBg {
+        return player.ensureShadertoy();
+      },
       get particles(): ParticlesBg {
         return player.ensureParticles();
       },
@@ -235,10 +239,32 @@ export class PrismPlayer {
   async connectAudio(source: "mic" | "tab" | MediaStream | AudioNode): Promise<AudioNode> {
     const { node, owned } = await this.resolveAudioNode(source);
     this.milkdrop.connectAudio(node);
-    this.shadertoy.connectAudio(node);
+    if (this.shadertoy) this.shadertoy.connectAudio(node);
     if (this.particles) this.particles.connectAudio(node);
     this.currentAudioOwnedStream = owned;
     return node;
+  }
+
+  /** Spin up the shadertoy backend on demand. Idempotent — the second
+   *  call returns the same instance. Called by GraphRuntime when it
+   *  encounters an lf.shadertoy node, so milkdrop-only / particle-only
+   *  consumers never pay the WebGL2 fragment-shader cost. */
+  ensureShadertoy(): ShadertoyBg {
+    if (this.shadertoy) return this.shadertoy;
+    this.shadertoy = createShadertoyBackground(
+      this.audioCtx,
+      this.shadertoyCanvas,
+      this.synth.getOutput(),
+    );
+    if (this.pendingDefaultImage) {
+      const url = this.pendingDefaultImage;
+      const onErr = this.pendingOnError;
+      this.pendingDefaultImage = null;
+      void this.shadertoy.bindImage(url).catch((err: Error) => {
+        onErr?.(err);
+      });
+    }
+    return this.shadertoy;
   }
 
   /** Spin up the particles backend on demand. Idempotent — the second
@@ -267,15 +293,17 @@ export class PrismPlayer {
     }
     const fallback = this.synth.getOutput();
     this.milkdrop.connectAudio(fallback);
-    this.shadertoy.connectAudio(fallback);
+    if (this.shadertoy) this.shadertoy.connectAudio(fallback);
+    if (this.particles) this.particles.connectAudio(fallback);
   }
 
   /** Pipe a live source (e.g. a slideshow's canvas) into iChannel1 — its
    *  contents are re-uploaded each frame. Pass null to disable.
    *  Most embedders should prefer connectImage(), which handles
-   *  webcam/tab/slideshow plumbing for you. */
+   *  webcam/tab/slideshow plumbing for you. Spins up the shadertoy
+   *  backend on first call. */
   setLiveSource(source: HTMLCanvasElement | HTMLVideoElement | null): void {
-    this.shadertoy.setLiveSource(source);
+    this.ensureShadertoy().setLiveSource(source);
   }
 
   /** Connect an image source for the shader's iChannel1. Symmetric to
@@ -297,7 +325,7 @@ export class PrismPlayer {
       }
       // Treat any other string as a static image URL.
       this.setLiveSource(null);
-      await this.shadertoy.bindImage(source);
+      await this.ensureShadertoy().bindImage(source);
       return;
     }
     if (Array.isArray(source)) {
@@ -360,10 +388,12 @@ export class PrismPlayer {
       this.currentAudioOwnedStream = null;
     }
     this.milkdrop.destroy();
-    this.shadertoy.destroy();
+    if (this.shadertoy) this.shadertoy.destroy();
+    if (this.particles) this.particles.destroy();
     this.synth.stop();
     this.milkdropCanvas.remove();
     this.shadertoyCanvas.remove();
+    this.particlesCanvas.remove();
     if (this.ownsAudioCtx) {
       void this.audioCtx.close();
     }
