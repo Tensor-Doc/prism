@@ -291,6 +291,22 @@ window.addEventListener("pointerdown", resumeAudio, { once: true });
 window.addEventListener("keydown", resumeAudio, { once: true });
 window.addEventListener("pointermove", resumeAudio, { once: true });
 
+// First-interaction welcome overlay. Sits over everything until the
+// user clicks or types, then fades to expose the visualization +
+// chrome underneath. The overlay click also satisfies the AudioContext
+// user-gesture requirement so audio is live the instant it's revealed.
+const welcomeOverlay = document.getElementById("welcome-overlay");
+if (welcomeOverlay) {
+  const dismissWelcome = (): void => {
+    welcomeOverlay.removeAttribute("data-visible");
+    void audioCtx.resume();
+    // Remove after the fade completes so it doesn't capture clicks.
+    window.setTimeout(() => welcomeOverlay.remove(), 800);
+  };
+  welcomeOverlay.addEventListener("pointerdown", dismissWelcome, { once: true });
+  window.addEventListener("keydown", dismissWelcome, { once: true });
+}
+
 const field = new CursorField($<HTMLCanvasElement>("#field"));
 
 // graph-flow viz — the live prism.graph chain inside the STATE panel.
@@ -439,6 +455,12 @@ skillPlayBtn.addEventListener("click", () => {
   if (skillPlayBtn.hasAttribute("data-playing")) stopRotation();
   else startRotation();
 });
+// Boot in play mode so the page rotates through visualizations on
+// its own. Share-token visitors (?g=...) keep their requested entry
+// for the first rotation cycle before the auto-rotate moves on; this
+// is the same behavior as YouTube auto-playing the next video after
+// the one you shared. Click the play/pause chip to stop.
+startRotation(shareToken ? ROTATE_INTERVAL_MS : AUDIO_FIRST_ROTATION_MS);
 
 // ── image sources + slideshow ──────────────────────────────
 // Slot 0 starts unbound. The user picks a source via the GALLERY row in

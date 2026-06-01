@@ -1702,6 +1702,68 @@ body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animat
    one weight and the system stack handles its callsites adequately. */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
+/* ── welcome overlay ─────────────────────────────────────────────
+   Full-screen "click anywhere to begin" CTA shown on cold-open.
+   Solves two problems at once:
+   1. Browsers require a user gesture before AudioContext.resume()
+      will succeed. The overlay collects that gesture explicitly
+      so audio reactivity is live the instant the visualization
+      becomes visible.
+   2. Without the overlay, visitors land on a page that's already
+      animating and don't realize they need to click for full
+      audio. This makes the gesture obvious.
+
+   Dismissed on first pointerdown / keydown anywhere in the page.
+   The fade-out is 600ms; the visualization underneath has been
+   running the whole time so the reveal feels like a curtain
+   rising, not a load.
+   ───────────────────────────────────────────────────────────── */
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.7) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: opacity 600ms var(--ease-snap);
+  opacity: 1;
+}
+.welcome-overlay:not([data-visible]) {
+  opacity: 0;
+  pointer-events: none;
+}
+.welcome-overlay__content {
+  text-align: center;
+  color: rgba(220, 230, 245, 0.92);
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+.welcome-overlay__title {
+  font-size: clamp(40px, 9vw, 84px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+  color: rgba(220, 230, 245, 0.95);
+}
+.welcome-overlay__sub {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(120, 220, 240, 0.85);
+  animation: welcome-pulse 2.4s ease-in-out infinite;
+}
+@keyframes welcome-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1.0; }
+}
+
 /* ── powered-by credit ───────────────────────────────────────────
    Bottom-center, fixed. Deliberately NOT in the chrome-idle fade
    selector list above, so it stays visible when everything else

@@ -409,6 +409,17 @@
       <span class="thinking__prompt" id="thinking-prompt"></span>
     </div>
 
+    <!-- First-interaction overlay. Browsers require a user gesture
+         before AudioContext can start; this also makes the "click
+         to begin" affordance obvious. Dismisses on first pointerdown
+         or keydown anywhere in the page. -->
+    <div class="welcome-overlay" id="welcome-overlay" data-visible>
+      <div class="welcome-overlay__content">
+        <div class="welcome-overlay__title">prism</div>
+        <div class="welcome-overlay__sub">click anywhere to begin</div>
+      </div>
+    </div>
+
     <!-- Permanent credit. Lives outside the chrome-fade selector list
          in styles.css, so it stays visible even when art-mode hides
          the rest of the UI. Bottom-center because lower-right is
