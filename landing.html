@@ -390,6 +390,18 @@
       <span class="thinking__prompt" id="thinking-prompt"></span>
     </div>
 
+    <!-- Permanent credit. Lives outside the chrome-fade selector list
+         in styles.css, so it stays visible even when art-mode hides
+         the rest of the UI. Bottom-center because lower-right is
+         crowded by audio-pin. -->
+    <div class="powered-by" aria-label="powered by @tensordoc/prism">
+      powered by
+      <a class="powered-by__pkg"
+         href="https://github.com/Tensor-Doc/prism"
+         target="_blank"
+         rel="noopener">@tensordoc/prism</a>
+    </div>
+
     <script type="module" src="/src/landing/main.ts"></script>
   </body>
 </html>

@@ -1709,3 +1709,59 @@ body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animat
   font-display: swap;
   src: url("/fonts/JetBrainsMono-Variable.woff2") format("woff2-variations");
 }
+
+/* ── powered-by credit ───────────────────────────────────────────
+   Bottom-center, fixed. Deliberately NOT in the chrome-idle fade
+   selector list above, so it stays visible when everything else
+   has faded for art-mode. Quiet by default; the @tensordoc/prism
+   link itself reads with a touch more contrast and brightens on
+   hover so the user knows it's clickable. Soft black backdrop
+   keeps it readable against bright visuals without committing to
+   a hard solid bar.
+*/
+.powered-by {
+  position: fixed;
+  /* Sits above the bottom statusbar (--status-bar-height) with a
+     small gap. When art-mode fades the bar, the credit stays put and
+     reads as the only piece of chrome left on the page. */
+  bottom: calc(var(--status-bar-height) + var(--space-3));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: rgba(220, 230, 245, 0.55);
+  pointer-events: auto;
+  user-select: none;
+  transition: color 0.2s ease, background 0.2s ease, bottom 0.4s ease;
+}
+.powered-by:hover {
+  color: rgba(220, 230, 245, 0.85);
+  background: rgba(0, 0, 0, 0.6);
+}
+/* When chrome is faded for art-mode, the bottom statusbar is gone;
+   drop the credit closer to the screen edge so it doesn't float in
+   awkward empty space. The smooth bottom transition handles the
+   movement. */
+body[data-chrome-idle] .powered-by {
+  bottom: var(--space-3);
+}
+.powered-by__pkg {
+  color: rgba(120, 220, 240, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(120, 220, 240, 0.2);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.powered-by__pkg:hover {
+  color: rgba(170, 240, 255, 1);
+  border-bottom-color: rgba(170, 240, 255, 0.6);
+}
