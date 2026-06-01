@@ -21,6 +21,21 @@ const PARTICLE_GRID = 256;                  // 65,536 particles
 const STATE_SIZE = PARTICLE_GRID;
 const PARTICLE_COUNT = STATE_SIZE * STATE_SIZE;
 
+// Spatial-hash flocking grid. We voxelize the simulation volume into
+// FLOCK_GRID³ cells. Cells are stored in a flat 2D texture by
+// stacking z-slices in an FLOCK_GRID_TILES × FLOCK_GRID_TILES grid.
+// WebGL2 can't render directly into a 3D texture without gl_Layer
+// (not in the WebGL2 spec) so this flat layout is the standard
+// workaround. Niagara uses the same approach internally.
+//
+// 32³ = 32k cells. For 65k particles that averages 2 particles per
+// cell when fully populated, which is enough for emergent flocking
+// without over-binning. Texture is 32*6 = 192 in each axis (we use
+// 6x6 = 36 tiles to cover 32 slices = 4 wasted; cheap headroom).
+const FLOCK_GRID = 32;
+const FLOCK_GRID_TILES = 6;
+const FLOCK_TEX_SIZE = FLOCK_GRID * FLOCK_GRID_TILES;  // 192
+
 // ── shader source ──────────────────────────────────────────────────
 
 const VS_FULLSCREEN = `#version 300 es
@@ -50,8 +65,46 @@ uniform float uWaveAmp;     // wave attractor amplitude
 uniform float uFlowDriftX;  // dominant horizontal current
 uniform float uCoronaBoost; // multiplier on bass-driven vertical curl
 
+// Flocking inputs. uGrid0 holds (position_sum, count) per cell, uGrid1
+// holds (velocity_sum, _). All three Reynolds weights at 0 disables
+// the entire flocking term — the lookups still happen but contribute
+// nothing, so existing presets behave identically.
+uniform sampler2D uGrid0;
+uniform sampler2D uGrid1;
+uniform vec3 uVolumeMin;
+uniform vec3 uVolumeMax;
+uniform float uGridSize;
+uniform float uGridTiles;
+uniform float uTexSize;
+uniform float uFlockSeparation;  // weight of separation force
+uniform float uFlockAlignment;   // weight of alignment force
+uniform float uFlockCohesion;    // weight of cohesion force
+uniform float uFlockRadius;      // distance within which neighbors count
+
 layout(location = 0) out vec4 outPos;
 layout(location = 1) out vec4 outVel;
+
+// Sample one cell of the flat-tiled spatial-hash grid. Returns
+// (position_sum, count) in .xyzw of grid0 and (velocity_sum, _) in
+// .xyz of grid1. Pass clamped cell coords in [0, FLOCK_GRID).
+vec4 sampleGrid0(ivec3 cell) {
+  int gridSz = int(uGridSize);
+  int tiles = int(uGridTiles);
+  cell = clamp(cell, ivec3(0), ivec3(gridSz - 1));
+  int sliceX = cell.z % tiles;
+  int sliceY = cell.z / tiles;
+  vec2 uv = (vec2(float(sliceX * gridSz + cell.x), float(sliceY * gridSz + cell.y)) + 0.5) / uTexSize;
+  return texture(uGrid0, uv);
+}
+vec3 sampleGrid1(ivec3 cell) {
+  int gridSz = int(uGridSize);
+  int tiles = int(uGridTiles);
+  cell = clamp(cell, ivec3(0), ivec3(gridSz - 1));
+  int sliceX = cell.z % tiles;
+  int sliceY = cell.z / tiles;
+  vec2 uv = (vec2(float(sliceX * gridSz + cell.x), float(sliceY * gridSz + cell.y)) + 0.5) / uTexSize;
+  return texture(uGrid1, uv).rgb;
+}
 
 // 3D hash + value noise — needed for analytic curl in 3D.
 float hash31(vec3 p) {
@@ -130,6 +183,69 @@ void main() {
   flow.x += uFlowDriftX;
 
   vel = mix(vel, flow * 0.5, 0.15);
+
+  // ── Flocking forces (Reynolds Boids) ─────────────────────
+  // Read 27 cells (3×3×3) around the particle's voxel. Sum the
+  // (position_sum, velocity_sum, count) from each, weight by inverse
+  // distance to the particle so closer cells dominate, then compute
+  // the three steering forces. When all three flock weights are 0
+  // the force is the zero vector and the existing curl + wave system
+  // behaves exactly as before.
+  if (uFlockSeparation > 0.0 || uFlockAlignment > 0.0 || uFlockCohesion > 0.0) {
+    vec3 norm = clamp((pos - uVolumeMin) / (uVolumeMax - uVolumeMin), 0.0, 0.9999);
+    ivec3 myCell = ivec3(norm * uGridSize);
+    vec3 neighborPos = vec3(0.0);
+    vec3 neighborVel = vec3(0.0);
+    vec3 separation = vec3(0.0);
+    float totalCount = 0.0;
+    for (int dz = -1; dz <= 1; dz++) {
+      for (int dy = -1; dy <= 1; dy++) {
+        for (int dx = -1; dx <= 1; dx++) {
+          ivec3 cell = myCell + ivec3(dx, dy, dz);
+          vec4 g0 = sampleGrid0(cell);
+          vec3 g1 = sampleGrid1(cell);
+          if (g0.a > 0.0) {
+            // Subtract THIS particle's own contribution so the
+            // average doesn't include itself.
+            float contrib = g0.a;
+            vec3 sumPos = g0.rgb;
+            vec3 sumVel = g1;
+            // Within-cell average position relative to particle. If
+            // the cell holds our particle plus k-1 others, sumPos
+            // already contains our pos once.
+            vec3 cellCenter = sumPos / contrib;
+            vec3 toCenter = cellCenter - pos;
+            float d = length(toCenter);
+            // Separation: push away from crowded cells, weighted by
+            // inverse distance so very close neighbors push hardest.
+            if (d > 0.0001 && d < uFlockRadius) {
+              separation -= toCenter / max(d * d, 0.01) * contrib;
+            }
+            neighborPos += sumPos;
+            neighborVel += sumVel;
+            totalCount += contrib;
+          }
+        }
+      }
+    }
+    if (totalCount > 1.0) {
+      // Subtract this particle's own contribution from the averages.
+      vec3 avgPos = (neighborPos - pos) / max(totalCount - 1.0, 1.0);
+      vec3 avgVel = (neighborVel - vel) / max(totalCount - 1.0, 1.0);
+      vec3 cohesion = avgPos - pos;
+      vec3 alignment = avgVel - vel;
+      vec3 flockForce = separation * uFlockSeparation
+                      + alignment * uFlockAlignment
+                      + cohesion * uFlockCohesion;
+      // Cap the per-frame influence so flocking doesn't override the
+      // other dynamics. The 0.08 cap is empirical — strong enough
+      // for emergent flocks, weak enough to coexist with curl + wave.
+      float maxForce = 0.08;
+      float fLen = length(flockForce);
+      if (fLen > maxForce) flockForce *= maxForce / fLen;
+      vel += flockForce;
+    }
+  }
 
   // Wave attractor — pull particles toward a layered swell surface
   // in y as a function of (x, z). Four overlapping wave packs at
@@ -321,6 +437,76 @@ void main() {
 }
 `;
 
+// ── flocking spatial-hash scatter ───────────────────────────────
+// Each frame we render PARTICLE_COUNT POINT primitives with additive
+// blending into the spatial-hash grid. The vertex shader reads each
+// particle's state and outputs gl_Position pointing at the texel of
+// the voxel containing that particle. The fragment shader writes the
+// particle's position + 1.0 (a count contribution) into one MRT
+// target, and its velocity into the other. Repeated writes from
+// multiple particles in the same cell accumulate via gl.blendFunc(ONE,
+// ONE) so we get position_sum, velocity_sum, and count per cell in a
+// single draw call.
+const VS_SCATTER = `#version 300 es
+precision highp float;
+
+uniform sampler2D uPos;
+uniform sampler2D uVel;
+uniform vec2 uStateSize;
+uniform vec3 uVolumeMin;
+uniform vec3 uVolumeMax;
+uniform float uGridSize;
+uniform float uGridTiles;
+uniform float uTexSize;
+
+out vec3 vPos;
+out vec3 vVel;
+
+void main() {
+  int instance = gl_VertexID;
+  int sx = int(uStateSize.x);
+  vec2 stateUV = (vec2(float(instance % sx), float(instance / sx)) + 0.5) / uStateSize;
+  vec3 p = texture(uPos, stateUV).rgb;
+  vec3 v = texture(uVel, stateUV).rgb;
+
+  // Map world position into [0, uGridSize) per axis. Particles that
+  // drift outside the simulation volume clamp to the edge cells so we
+  // don't sample garbage; the update pass respawn handles their reset.
+  vec3 norm = clamp((p - uVolumeMin) / (uVolumeMax - uVolumeMin), 0.0, 0.9999);
+  ivec3 cell = ivec3(norm * uGridSize);
+
+  // Pack the 3D cell into a 2D texel coord by tiling z-slices in a
+  // uGridTiles × uGridTiles grid (FLOCK_GRID_TILES × FLOCK_GRID_TILES).
+  int tiles = int(uGridTiles);
+  int gridSz = int(uGridSize);
+  int sliceX = cell.z % tiles;
+  int sliceY = cell.z / tiles;
+  int texelX = sliceX * gridSz + cell.x;
+  int texelY = sliceY * gridSz + cell.y;
+
+  vec2 ndc = (vec2(float(texelX), float(texelY)) + 0.5) / uTexSize * 2.0 - 1.0;
+  gl_Position = vec4(ndc, 0.0, 1.0);
+  gl_PointSize = 1.0;
+  vPos = p;
+  vVel = v;
+}
+`;
+
+const FS_SCATTER = `#version 300 es
+precision highp float;
+
+in vec3 vPos;
+in vec3 vVel;
+
+layout(location = 0) out vec4 outGrid0;  // (position_sum, count_contribution)
+layout(location = 1) out vec4 outGrid1;  // (velocity_sum, unused)
+
+void main() {
+  outGrid0 = vec4(vPos, 1.0);
+  outGrid1 = vec4(vVel, 0.0);
+}
+`;
+
 // ── public API ─────────────────────────────────────────────────────
 
 export interface ParticlesBg {
@@ -372,6 +558,19 @@ export interface ParticlesPreset {
    *  streams. 0.97 = long-persistence light painting. Default 0 so
    *  existing presets aren't affected. */
   trail_decay?: number;
+  /** Reynolds Boids flocking — separation, alignment, cohesion. All
+   *  three default to 0, which short-circuits the scatter pass and
+   *  the flocking computation entirely. Typical strong-flocking
+   *  values: separation 0.5, alignment 0.4, cohesion 0.25, radius 0.3. */
+  flock_separation?: number;
+  flock_alignment?: number;
+  flock_cohesion?: number;
+  /** Neighbor radius in world units. Particles closer than this
+   *  influence each other; particles further apart see no flocking
+   *  force. Must be at most the cell size (about 0.13 world units
+   *  for the default 32³ grid over a 4-unit volume) for the
+   *  spatial-hash approximation to be valid. Default 0.15. */
+  flock_radius?: number;
 }
 
 export function createParticlesBackground(
@@ -418,9 +617,22 @@ export function createParticlesBackground(
   const updateProg = makeProgram(gl, VS_FULLSCREEN, FS_UPDATE);
   const renderProg = makeProgram(gl, VS_RENDER, FS_RENDER);
   const blitProg = makeProgram(gl, VS_FULLSCREEN, FS_BLIT);
+  const scatterProg = makeProgram(gl, VS_SCATTER, FS_SCATTER);
   const dummyVao = gl.createVertexArray()!;
   const loc = (p: WebGLProgram, name: string): WebGLUniformLocation | null =>
     gl.getUniformLocation(p, name);
+
+  // ── flocking spatial-hash grid ────────────────────────
+  // Two RGBA32F textures (FLOCK_TEX_SIZE × FLOCK_TEX_SIZE) holding
+  // accumulated (position_sum, count) and (velocity_sum, _) per voxel.
+  // Cleared and re-scattered each frame just before the update pass.
+  const flockGrid0 = makeColorFloatTexture(gl, FLOCK_TEX_SIZE, FLOCK_TEX_SIZE);
+  const flockGrid1 = makeColorFloatTexture(gl, FLOCK_TEX_SIZE, FLOCK_TEX_SIZE);
+  const flockFbo = gl.createFramebuffer()!;
+  gl.bindFramebuffer(gl.FRAMEBUFFER, flockFbo);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, flockGrid0, 0);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, flockGrid1, 0);
+  gl.bindFramebuffer(gl.FRAMEBUFFER, null);
 
   // ── trail accumulator (ping-pong RGBA8 textures the canvas size) ─
   // Created lazily on first trail-enabled frame, recreated on resize.
@@ -465,6 +677,10 @@ export function createParticlesBackground(
     camera_orbit_speed: 0.025,
     fov_degrees: 50,
     trail_decay: 0,
+    flock_separation: 0,
+    flock_alignment: 0,
+    flock_cohesion: 0,
+    flock_radius: 0.15,
   };
   let running = true;
   const startTime = performance.now();
@@ -496,6 +712,48 @@ export function createParticlesBackground(
     bassRaw = (bassRaw / 12) / 255;
     bassSmooth = bassSmooth * 0.7 + bassRaw * 0.3;
 
+    // ── flocking scatter pass ───────────────────────────
+    // Render 65k POINT primitives into the spatial-hash grid with
+    // additive blending. Each particle's point lands in the 2D
+    // texel of its voxel; the FS writes (position, 1.0) into MRT0
+    // and (velocity, 0) into MRT1. Blending accumulates per-cell.
+    // Skipped entirely when all three Reynolds weights are zero.
+    const flockOn =
+      preset.flock_separation > 0 ||
+      preset.flock_alignment > 0 ||
+      preset.flock_cohesion > 0;
+    if (flockOn) {
+      gl.bindFramebuffer(gl.FRAMEBUFFER, flockFbo);
+      gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1]);
+      gl.viewport(0, 0, FLOCK_TEX_SIZE, FLOCK_TEX_SIZE);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.ONE, gl.ONE);
+      gl.useProgram(scatterProg);
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, readPos);
+      gl.uniform1i(loc(scatterProg, "uPos"), 0);
+      gl.activeTexture(gl.TEXTURE1);
+      gl.bindTexture(gl.TEXTURE_2D, readVel);
+      gl.uniform1i(loc(scatterProg, "uVel"), 1);
+      gl.uniform2f(loc(scatterProg, "uStateSize"), STATE_SIZE, STATE_SIZE);
+      const vmin: [number, number, number] = [
+        -preset.volume_size[0], -preset.volume_size[1] * 3.0, -preset.volume_size[2],
+      ];
+      const vmax: [number, number, number] = [
+        preset.volume_size[0], preset.volume_size[1] * 3.0, preset.volume_size[2],
+      ];
+      gl.uniform3f(loc(scatterProg, "uVolumeMin"), vmin[0], vmin[1], vmin[2]);
+      gl.uniform3f(loc(scatterProg, "uVolumeMax"), vmax[0], vmax[1], vmax[2]);
+      gl.uniform1f(loc(scatterProg, "uGridSize"), FLOCK_GRID);
+      gl.uniform1f(loc(scatterProg, "uGridTiles"), FLOCK_GRID_TILES);
+      gl.uniform1f(loc(scatterProg, "uTexSize"), FLOCK_TEX_SIZE);
+      gl.bindVertexArray(dummyVao);
+      gl.drawArrays(gl.POINTS, 0, PARTICLE_COUNT);
+      gl.disable(gl.BLEND);
+    }
+
     // ── update pass (MRT: both pos + vel) ───────────────
     gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, writePos, 0);
@@ -524,6 +782,26 @@ export function createParticlesBackground(
     gl.uniform1f(loc(updateProg, "uWaveAmp"), preset.wave_amplitude);
     gl.uniform1f(loc(updateProg, "uFlowDriftX"), preset.flow_drift_x);
     gl.uniform1f(loc(updateProg, "uCoronaBoost"), preset.corona_boost);
+    // Flocking inputs. The grid textures contain the cell sums from
+    // this frame's scatter pass; the update pass reads 27 cells around
+    // each particle's voxel to compute Reynolds steering forces.
+    gl.activeTexture(gl.TEXTURE3);
+    gl.bindTexture(gl.TEXTURE_2D, flockGrid0);
+    gl.uniform1i(loc(updateProg, "uGrid0"), 3);
+    gl.activeTexture(gl.TEXTURE4);
+    gl.bindTexture(gl.TEXTURE_2D, flockGrid1);
+    gl.uniform1i(loc(updateProg, "uGrid1"), 4);
+    gl.uniform3f(loc(updateProg, "uVolumeMin"),
+      -preset.volume_size[0], -preset.volume_size[1] * 3.0, -preset.volume_size[2]);
+    gl.uniform3f(loc(updateProg, "uVolumeMax"),
+      preset.volume_size[0], preset.volume_size[1] * 3.0, preset.volume_size[2]);
+    gl.uniform1f(loc(updateProg, "uGridSize"), FLOCK_GRID);
+    gl.uniform1f(loc(updateProg, "uGridTiles"), FLOCK_GRID_TILES);
+    gl.uniform1f(loc(updateProg, "uTexSize"), FLOCK_TEX_SIZE);
+    gl.uniform1f(loc(updateProg, "uFlockSeparation"), preset.flock_separation);
+    gl.uniform1f(loc(updateProg, "uFlockAlignment"), preset.flock_alignment);
+    gl.uniform1f(loc(updateProg, "uFlockCohesion"), preset.flock_cohesion);
+    gl.uniform1f(loc(updateProg, "uFlockRadius"), preset.flock_radius);
     gl.bindVertexArray(dummyVao);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
@@ -745,6 +1023,22 @@ function makeTexture(
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texImage2D(gl.TEXTURE_2D, 0, internal, w, h, 0, format, type, data);
+  return tex;
+}
+
+/** RGBA32F color target. Used by the spatial-hash flocking grid so
+ *  per-voxel sums of position + velocity can overflow safely past the
+ *  255-value cap of RGBA8 — at 65k particles per cell the sums easily
+ *  reach the thousands. NEAREST filtering since we always read at
+ *  texel centers. */
+function makeColorFloatTexture(gl: WebGL2RenderingContext, w: number, h: number): WebGLTexture {
+  const tex = gl.createTexture()!;
+  gl.bindTexture(gl.TEXTURE_2D, tex);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA32F, w, h, 0, gl.RGBA, gl.FLOAT, null);
   return tex;
 }
 
