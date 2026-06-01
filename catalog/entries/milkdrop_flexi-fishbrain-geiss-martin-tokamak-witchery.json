@@ -44,7 +44,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.webm",
-    "thumb": "/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-fishbrain-geiss-martin-tokamak-witchery.jpg",
+    "video_size_bytes": 408199
   },
   "contribution": {
     "added_by": "scottspace",

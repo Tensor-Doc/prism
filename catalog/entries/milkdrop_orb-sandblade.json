@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_orb-sandblade.webm",
-    "thumb": "/thumbs/milkdrop_orb-sandblade.jpg"
+    "thumb": "/thumbs/milkdrop_orb-sandblade.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

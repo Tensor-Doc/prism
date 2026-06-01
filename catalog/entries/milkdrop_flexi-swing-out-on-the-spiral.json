@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-swing-out-on-the-spiral.webm",
-    "thumb": "/thumbs/milkdrop_flexi-swing-out-on-the-spiral.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-swing-out-on-the-spiral.jpg",
+    "video_size_bytes": 24774
   },
   "contribution": {
     "added_by": "scottspace",

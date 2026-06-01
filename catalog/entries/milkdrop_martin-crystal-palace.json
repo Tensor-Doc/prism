@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-crystal-palace.webm",
-    "thumb": "/thumbs/milkdrop_martin-crystal-palace.jpg"
+    "thumb": "/thumbs/milkdrop_martin-crystal-palace.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-sphery-tales-slow-version.webm",
-    "thumb": "/thumbs/milkdrop_martin-sphery-tales-slow-version.jpg"
+    "thumb": "/thumbs/milkdrop_martin-sphery-tales-slow-version.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

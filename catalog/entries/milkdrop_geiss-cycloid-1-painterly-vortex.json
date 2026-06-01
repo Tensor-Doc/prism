@@ -48,7 +48,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cycloid-1-painterly-vortex.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cycloid-1-painterly-vortex.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cycloid-1-painterly-vortex.jpg",
+    "video_size_bytes": 6320918
   },
   "contribution": {
     "added_by": "scottspace",

@@ -23,7 +23,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-disco-mix-2.webm",
-    "thumb": "/thumbs/milkdrop_martin-disco-mix-2.jpg"
+    "thumb": "/thumbs/milkdrop_martin-disco-mix-2.jpg",
+    "video_size_bytes": 24718
   },
   "contribution": {
     "added_by": "scottspace",

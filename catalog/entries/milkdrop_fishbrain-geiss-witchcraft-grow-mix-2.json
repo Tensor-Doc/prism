@@ -43,7 +43,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.webm",
-    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.jpg"
+    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.jpg",
+    "video_size_bytes": 368596
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-neon-space-ps3.webm",
-    "thumb": "/thumbs/milkdrop_martin-neon-space-ps3.jpg"
+    "thumb": "/thumbs/milkdrop_martin-neon-space-ps3.jpg",
+    "video_size_bytes": 96940
   },
   "contribution": {
     "added_by": "scottspace",

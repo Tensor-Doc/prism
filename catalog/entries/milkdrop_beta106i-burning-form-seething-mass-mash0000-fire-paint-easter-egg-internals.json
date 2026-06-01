@@ -42,7 +42,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.webm",
-    "thumb": "/thumbs/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.jpg"
+    "thumb": "/thumbs/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.jpg",
+    "video_size_bytes": 356931
   },
   "contribution": {
     "added_by": "scottspace",

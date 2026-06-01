@@ -45,7 +45,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-neon-space-ps2-ati-fix.webm",
-    "thumb": "/thumbs/milkdrop_martin-neon-space-ps2-ati-fix.jpg"
+    "thumb": "/thumbs/milkdrop_martin-neon-space-ps2-ati-fix.jpg",
+    "video_size_bytes": 103802
   },
   "contribution": {
     "added_by": "scottspace",

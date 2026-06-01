@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-prismo-jenkins-last-expedition.webm",
-    "thumb": "/thumbs/milkdrop_martin-prismo-jenkins-last-expedition.jpg"
+    "thumb": "/thumbs/milkdrop_martin-prismo-jenkins-last-expedition.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

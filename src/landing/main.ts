@@ -94,7 +94,7 @@ interface RotEntry {
   id: string;
   slug: string;
   name: string;
-  source_type: "milkdrop" | "shadertoy" | "isf" | "wgsl";
+  source_type: "milkdrop" | "shadertoy" | "particles" | "isf" | "wgsl";
   source_loader: "url" | "npm-butterchurn-presets";
   source_url?: string;
   source_ref?: string;
@@ -119,10 +119,14 @@ function pickRotationEntry(): RotEntry | null {
 
 function rotEntryToGraph(e: RotEntry): PrismGraph {
   const mainParams: Record<string, string> = {};
-  let mainType: "lf.milkdrop" | "lf.shadertoy";
+  let mainType: "lf.milkdrop" | "lf.shadertoy" | "lf.particles";
   if (e.source_type === "shadertoy") {
     mainType = "lf.shadertoy";
     if (e.source_url) mainParams.shader_url = e.source_url;
+    if (e.default_image) mainParams.image_url = e.default_image;
+  } else if (e.source_type === "particles") {
+    mainType = "lf.particles";
+    if (e.source_url) mainParams.preset_url = e.source_url;
     if (e.default_image) mainParams.image_url = e.default_image;
   } else {
     mainType = "lf.milkdrop";

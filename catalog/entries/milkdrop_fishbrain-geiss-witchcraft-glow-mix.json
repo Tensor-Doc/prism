@@ -43,7 +43,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_fishbrain-geiss-witchcraft-glow-mix.webm",
-    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-glow-mix.jpg"
+    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-glow-mix.jpg",
+    "video_size_bytes": 458668
   },
   "contribution": {
     "added_by": "scottspace",

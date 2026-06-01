@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-reaction-diffusion-3-rippling-leopard-skin.webm",
-    "thumb": "/thumbs/milkdrop_geiss-reaction-diffusion-3-rippling-leopard-skin.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-reaction-diffusion-3-rippling-leopard-skin.jpg",
+    "video_size_bytes": 24718
   },
   "contribution": {
     "added_by": "scottspace",

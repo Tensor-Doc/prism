@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-lorenz-chaser-accidental-shader-lock-mashup-ripples.webm",
-    "thumb": "/thumbs/milkdrop_flexi-lorenz-chaser-accidental-shader-lock-mashup-ripples.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-lorenz-chaser-accidental-shader-lock-mashup-ripples.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

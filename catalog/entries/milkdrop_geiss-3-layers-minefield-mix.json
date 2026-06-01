@@ -45,7 +45,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-3-layers-minefield-mix.webm",
-    "thumb": "/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-3-layers-minefield-mix.jpg",
+    "video_size_bytes": 113153
   },
   "contribution": {
     "added_by": "scottspace",

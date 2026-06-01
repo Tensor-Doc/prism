@@ -1,0 +1,63 @@
+{
+  "id": "particles:refik-fluid-flora",
+  "short_id": "U0D2Ci",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/refik-fluid-flora.json"
+  },
+  "display": {
+    "name": "Refik Rolling Ocean of Flora",
+    "author": "prism",
+    "blurb": "A 3D rolling ocean of botanical particles — flowers drift across a layered wave surface and erupt in solar-corona arcs on bass hits, viewed from sea level by a slowly orbiting camera."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "floral",
+      "psychedelic",
+      "fluid",
+      "lush"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#d6336c",
+      "#fcc419",
+      "#7048e8",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "texture_sample",
+      "custom_wave",
+      "warp_field",
+      "frame_feedback"
+    ],
+    "technical_notes": "Thousands of detailed floral sprites are rendered using texture sampling, mapped onto an undulating 3D surface. The wave's amplitude and frequency are driven by the music's bass and mid bands, creating a rhythmic, organic landscape. Subtle frame feedback through sampler_main softens the edges of the moving sprites, blending them into a continuous tapestry.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T04:34:17.020Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/refik-fluid-flora-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_refik-fluid-flora.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_refik-fluid-flora.jpg",
+    "video_size_bytes": 8043821
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-31T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

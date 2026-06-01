@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-the-forge-of-isengard.webm",
-    "thumb": "/thumbs/milkdrop_martin-the-forge-of-isengard.jpg"
+    "thumb": "/thumbs/milkdrop_martin-the-forge-of-isengard.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

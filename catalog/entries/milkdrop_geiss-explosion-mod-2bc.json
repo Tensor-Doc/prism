@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-explosion-mod-2bc.webm",
-    "thumb": "/thumbs/milkdrop_geiss-explosion-mod-2bc.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-explosion-mod-2bc.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

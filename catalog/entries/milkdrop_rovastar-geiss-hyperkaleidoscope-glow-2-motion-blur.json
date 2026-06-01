@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-motion-blur.webm",
-    "thumb": "/thumbs/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-motion-blur.jpg"
+    "thumb": "/thumbs/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-motion-blur.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

@@ -15,7 +15,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-experimental-wavefronts.webm",
-    "thumb": "/thumbs/milkdrop_geiss-experimental-wavefronts.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-experimental-wavefronts.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

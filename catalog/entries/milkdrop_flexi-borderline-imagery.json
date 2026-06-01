@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-borderline-imagery.webm",
-    "thumb": "/thumbs/milkdrop_flexi-borderline-imagery.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-borderline-imagery.jpg",
+    "video_size_bytes": 24714
   },
   "contribution": {
     "added_by": "scottspace",

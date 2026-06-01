@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_cope-soar-v2-0.webm",
-    "thumb": "/thumbs/milkdrop_cope-soar-v2-0.jpg"
+    "thumb": "/thumbs/milkdrop_cope-soar-v2-0.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

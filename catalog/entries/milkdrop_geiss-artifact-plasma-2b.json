@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-artifact-plasma-2b.webm",
-    "thumb": "/thumbs/milkdrop_geiss-artifact-plasma-2b.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-artifact-plasma-2b.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

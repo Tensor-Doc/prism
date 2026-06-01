@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_goody-martin-crystal-palace-schizotoxin-the-wild-iris-bloom-16-iterations.webm",
-    "thumb": "/thumbs/milkdrop_goody-martin-crystal-palace-schizotoxin-the-wild-iris-bloom-16-iterations.jpg"
+    "thumb": "/thumbs/milkdrop_goody-martin-crystal-palace-schizotoxin-the-wild-iris-bloom-16-iterations.jpg",
+    "video_size_bytes": 24774
   },
   "contribution": {
     "added_by": "scottspace",

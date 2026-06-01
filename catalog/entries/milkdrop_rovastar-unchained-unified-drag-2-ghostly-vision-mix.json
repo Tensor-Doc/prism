@@ -47,7 +47,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-unchained-unified-drag-2-ghostly-vision-mix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-unchained-unified-drag-2-ghostly-vision-mix.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-unchained-unified-drag-2-ghostly-vision-mix.jpg",
+    "video_size_bytes": 6595628
   },
   "contribution": {
     "added_by": "scottspace",

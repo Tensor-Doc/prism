@@ -45,7 +45,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.webm",
-    "thumb": "/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-martin-geiss-dedicated-to-the-sherwin-maxawow.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

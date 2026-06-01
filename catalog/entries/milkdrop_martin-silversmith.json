@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-silversmith.webm",
-    "thumb": "/thumbs/milkdrop_martin-silversmith.jpg"
+    "thumb": "/thumbs/milkdrop_martin-silversmith.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

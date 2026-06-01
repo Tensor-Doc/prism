@@ -48,7 +48,8 @@
       }
     ],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-loadus-fractaldrop-active-sparks-mix-steady.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-fractaldrop-active-sparks-mix-steady.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-fractaldrop-active-sparks-mix-steady.jpg",
+    "video_size_bytes": 4940796
   },
   "contribution": {
     "added_by": "scottspace",

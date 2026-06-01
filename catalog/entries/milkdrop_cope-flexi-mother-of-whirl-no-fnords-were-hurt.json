@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-flexi-mother-of-whirl-no-fnords-were-hurt.webm",
-    "thumb": "/thumbs/milkdrop_cope-flexi-mother-of-whirl-no-fnords-were-hurt.jpg"
+    "thumb": "/thumbs/milkdrop_cope-flexi-mother-of-whirl-no-fnords-were-hurt.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

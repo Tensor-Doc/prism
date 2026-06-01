@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-the-drain-to-heaven.webm",
-    "thumb": "/thumbs/milkdrop_cope-the-drain-to-heaven.jpg"
+    "thumb": "/thumbs/milkdrop_cope-the-drain-to-heaven.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

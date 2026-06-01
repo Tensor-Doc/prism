@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-romanesco-fantasies-motion-blurred.webm",
-    "thumb": "/thumbs/milkdrop_flexi-romanesco-fantasies-motion-blurred.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-romanesco-fantasies-motion-blurred.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

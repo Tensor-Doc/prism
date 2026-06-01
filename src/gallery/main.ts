@@ -11,6 +11,7 @@
 
 interface IndexEntry {
   id: string;
+  short_id: string;
   slug: string;
   name: string;
   author?: string;
@@ -115,7 +116,11 @@ function buildCardTitle(e: IndexEntry): string {
 function renderCard(e: IndexEntry): HTMLElement {
   const card = document.createElement("a");
   card.className = "card";
-  card.href = `/landing.html?preset=${encodeURIComponent(e.slug)}`;
+  // Use the 6-char share token so the landing's existing ?g= handler
+  // routes the entry through PrismPlayer.load(). The /preset= query
+  // string was a leftover from the legacy gallery-only flow and the
+  // landing page never wired it up.
+  card.href = `/landing.html?g=${encodeURIComponent(e.short_id)}`;
   card.title = buildCardTitle(e);
 
   const media = document.createElement("div");
@@ -350,7 +355,7 @@ async function boot(): Promise<void> {
     const pool = applyFilters(catalog.entries);
     if (pool.length === 0) return;
     const pick = pool[Math.floor(Math.random() * pool.length)];
-    window.location.href = `/landing.html?preset=${encodeURIComponent(pick.slug)}`;
+    window.location.href = `/landing.html?g=${encodeURIComponent(pick.short_id)}`;
   });
 
   await refresh();

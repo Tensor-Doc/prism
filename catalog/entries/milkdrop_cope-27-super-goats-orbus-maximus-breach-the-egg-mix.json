@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-27-super-goats-orbus-maximus-breach-the-egg-mix.webm",
-    "thumb": "/thumbs/milkdrop_cope-27-super-goats-orbus-maximus-breach-the-egg-mix.jpg"
+    "thumb": "/thumbs/milkdrop_cope-27-super-goats-orbus-maximus-breach-the-egg-mix.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

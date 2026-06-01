@@ -15,22 +15,22 @@
   },
   "annotation": {
     "vibe": [
-      "baroque",
       "painterly",
-      "atmospheric",
-      "fluid",
-      "gothic"
+      "gothic",
+      "floral",
+      "contemplative",
+      "atmospheric"
     ],
     "motion": 0.25,
     "palette_anchor": [
-      "#121013",
-      "#4a3543",
-      "#7c7453",
-      "#9e9ca1"
+      "#2a1f2d",
+      "#5c4d5a",
+      "#7a7d65",
+      "#121212"
     ],
     "audio_affinity": {
       "bass": 0.3,
-      "mid": 0.25,
+      "mid": 0.4,
       "treble": 0.2
     },
     "techniques": [
@@ -39,18 +39,19 @@
       "frame_feedback",
       "decay_trail"
     ],
-    "technical_notes": "An external floral image texture is mapped and distorted via a fluid per-pixel warp shader, creating a slow-rolling liquid tapestry effect. The warp field is modulated by the low-frequency bands of the audio, causing the dense floral layers to ripple and swell in time with the music. High frame feedback via sampler_main and a low decay rate preserve the soft, painterly edges of the overlapping petals.",
+    "technical_notes": "A custom texture sampler feeds a dense, gothic floral collage into the composite shader, where it is distorted by a slow, undulating per-pixel warp field. The warp is modulated by low-frequency audio bands, creating a gentle, liquid breathing effect across the tapestry of roses and lilies. High decay in the frame feedback loop maintains the crispness of the painterly details while allowing smooth, dreamlike transitions.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-06-01T00:27:37.029Z"
+    "captured_at": "2026-06-01T04:29:27.010Z"
   },
   "assets": {
     "textures_needed": [],
     "default_image": "/presets/shadertoy/refik-fluid-flora-atlas.png",
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_refik-fluid-flora.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_refik-fluid-flora.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_refik-fluid-flora.jpg",
+    "video_size_bytes": 6815814
   },
   "contribution": {
     "added_by": "prism",

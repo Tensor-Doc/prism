@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-crank-prototype.webm",
-    "thumb": "/thumbs/milkdrop_flexi-crank-prototype.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-crank-prototype.jpg",
+    "video_size_bytes": 24726
   },
   "contribution": {
     "added_by": "scottspace",

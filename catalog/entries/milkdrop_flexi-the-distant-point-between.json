@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-the-distant-point-between.webm",
-    "thumb": "/thumbs/milkdrop_flexi-the-distant-point-between.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-the-distant-point-between.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

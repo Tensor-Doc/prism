@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-no-religion.webm",
-    "thumb": "/thumbs/milkdrop_martin-no-religion.jpg"
+    "thumb": "/thumbs/milkdrop_martin-no-religion.jpg",
+    "video_size_bytes": 24825
   },
   "contribution": {
     "added_by": "scottspace",

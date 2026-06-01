@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-chain-breaker-2.webm",
-    "thumb": "/thumbs/milkdrop_martin-chain-breaker-2.jpg"
+    "thumb": "/thumbs/milkdrop_martin-chain-breaker-2.jpg",
+    "video_size_bytes": 24777
   },
   "contribution": {
     "added_by": "scottspace",

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_fishbrain-flexi-witchcraft-2-0-mash0000-no-one-cares-about-mi-the-note-major.webm",
-    "thumb": "/thumbs/milkdrop_fishbrain-flexi-witchcraft-2-0-mash0000-no-one-cares-about-mi-the-note-major.jpg"
+    "thumb": "/thumbs/milkdrop_fishbrain-flexi-witchcraft-2-0-mash0000-no-one-cares-about-mi-the-note-major.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

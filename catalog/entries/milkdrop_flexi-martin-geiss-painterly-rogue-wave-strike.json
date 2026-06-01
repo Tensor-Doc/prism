@@ -45,7 +45,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.webm",
-    "thumb": "/thumbs/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-martin-geiss-painterly-rogue-wave-strike.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

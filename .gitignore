@@ -48,3 +48,4 @@ concepts/iterations/
 # bring-up. Useful as references but not stable enough for CI.
 scripts/particles-smoke.mjs
 scripts/particles-frames.mjs
+scripts/particles-share-smoke.mjs

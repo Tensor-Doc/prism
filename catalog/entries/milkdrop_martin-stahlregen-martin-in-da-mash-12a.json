@@ -44,7 +44,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-stahlregen-martin-in-da-mash-12a.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stahlregen-martin-in-da-mash-12a.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stahlregen-martin-in-da-mash-12a.jpg",
+    "video_size_bytes": 1490997
   },
   "contribution": {
     "added_by": "scottspace",

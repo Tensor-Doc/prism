@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-shifter-armorial-bearings-of-robotopia.webm",
-    "thumb": "/thumbs/milkdrop_martin-shifter-armorial-bearings-of-robotopia.jpg"
+    "thumb": "/thumbs/milkdrop_martin-shifter-armorial-bearings-of-robotopia.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

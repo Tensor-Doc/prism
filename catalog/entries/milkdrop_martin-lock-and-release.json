@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-lock-and-release.webm",
-    "thumb": "/thumbs/milkdrop_martin-lock-and-release.jpg"
+    "thumb": "/thumbs/milkdrop_martin-lock-and-release.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

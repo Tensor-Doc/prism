@@ -47,7 +47,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-it-s-the-sun-brotherhood-of-tears-mash0000-vascular-chemical-allergy.jpg",
+    "video_size_bytes": 3498520
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-castle-in-the-air.webm",
-    "thumb": "/thumbs/milkdrop_martin-castle-in-the-air.jpg"
+    "thumb": "/thumbs/milkdrop_martin-castle-in-the-air.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

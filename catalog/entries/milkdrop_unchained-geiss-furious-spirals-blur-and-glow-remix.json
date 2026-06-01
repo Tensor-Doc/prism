@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_unchained-geiss-furious-spirals-blur-and-glow-remix.webm",
-    "thumb": "/thumbs/milkdrop_unchained-geiss-furious-spirals-blur-and-glow-remix.jpg"
+    "thumb": "/thumbs/milkdrop_unchained-geiss-furious-spirals-blur-and-glow-remix.jpg",
+    "video_size_bytes": 24670
   },
   "contribution": {
     "added_by": "scottspace",

@@ -42,7 +42,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-another-kind-of-groove-ati-fix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-another-kind-of-groove-ati-fix.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-another-kind-of-groove-ati-fix.jpg",
+    "video_size_bytes": 3385334
   },
   "contribution": {
     "added_by": "scottspace",

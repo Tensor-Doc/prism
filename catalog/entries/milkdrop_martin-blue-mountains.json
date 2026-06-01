@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-blue-mountains.webm",
-    "thumb": "/thumbs/milkdrop_martin-blue-mountains.jpg"
+    "thumb": "/thumbs/milkdrop_martin-blue-mountains.jpg",
+    "video_size_bytes": 24815
   },
   "contribution": {
     "added_by": "scottspace",

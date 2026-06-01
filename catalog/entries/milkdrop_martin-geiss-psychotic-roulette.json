@@ -45,7 +45,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-geiss-psychotic-roulette.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-geiss-psychotic-roulette.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-geiss-psychotic-roulette.jpg",
+    "video_size_bytes": 4072776
   },
   "contribution": {
     "added_by": "scottspace",

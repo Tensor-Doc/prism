@@ -44,7 +44,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
-    "thumb": "/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg",
+    "video_size_bytes": 456037
   },
   "contribution": {
     "added_by": "scottspace",

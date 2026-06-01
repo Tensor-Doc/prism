@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-x-portal.webm",
-    "thumb": "/thumbs/milkdrop_martin-x-portal.jpg"
+    "thumb": "/thumbs/milkdrop_martin-x-portal.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

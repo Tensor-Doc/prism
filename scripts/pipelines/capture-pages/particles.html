@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prism capture · particles</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+      #vis { display: block; position: fixed; inset: 0; width: 100vw; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <canvas id="vis"></canvas>
+    <script type="module">
+      // particles.html — Puppeteer harness for capturing particle
+      // backend presets. Same contract as shadertoy.html / milkdrop.html:
+      //   window.__prismReady              true once first frames paintable
+      //   window.__prismStartCapture(ms)   begin recording for `ms` ms
+      //   window.__prismCaptureReady       true once encoded
+      //   window.__prismVideoBase64        base64 webm
+      //
+      // Query params:
+      //   ?presetUrl=<path>   required — particles preset JSON
+
+      import { createParticlesBackground } from "@tensordoc/prism";
+
+      const params = new URLSearchParams(location.search);
+      const presetUrl = params.get("presetUrl");
+      if (!presetUrl) throw new Error("missing ?presetUrl= query parameter");
+
+      const canvas = document.getElementById("vis");
+
+      const audioCtx = new AudioContext();
+
+      // Prefer the recorded test signal so captures are deterministic
+      // across particles + shadertoy + milkdrop. Fall back to a
+      // procedural synth if the file isn't shipped.
+      async function tryRecordedTestSignal() {
+        try {
+          const res = await fetch("/audio/test-signal.webm");
+          if (!res.ok) return null;
+          const buf = await res.arrayBuffer();
+          const audio = await audioCtx.decodeAudioData(buf);
+          const node = audioCtx.createBufferSource();
+          node.buffer = audio;
+          node.loop = true;
+          node.start(0, Math.random() * audio.duration);
+          const gain = audioCtx.createGain();
+          gain.gain.value = 1.0;
+          node.connect(gain);
+          console.log("[capture] using recorded test signal:", audio.duration.toFixed(1) + "s");
+          return gain;
+        } catch (err) {
+          console.warn("[capture] test-signal.webm not available:", err.message);
+          return null;
+        }
+      }
+
+      function buildSynthSignal() {
+        const gain = audioCtx.createGain();
+        gain.gain.value = 0.6;
+        const voices = [
+          { f: 90, type: "sine", g: 0.5 },
+          { f: 220, type: "triangle", g: 0.3 },
+          { f: 600, type: "sawtooth", g: 0.18 },
+          { f: 2400, type: "triangle", g: 0.08 },
+        ];
+        for (const v of voices) {
+          const o = audioCtx.createOscillator();
+          o.type = v.type;
+          o.frequency.value = v.f;
+          const og = audioCtx.createGain();
+          og.gain.value = v.g;
+          const lfo = audioCtx.createOscillator();
+          lfo.frequency.value = 0.13 + Math.random() * 0.4;
+          const lfoGain = audioCtx.createGain();
+          lfoGain.gain.value = v.f * 0.05;
+          lfo.connect(lfoGain).connect(o.frequency);
+          o.connect(og).connect(gain);
+          o.start();
+          lfo.start();
+        }
+        setInterval(() => {
+          const now = audioCtx.currentTime;
+          gain.gain.cancelScheduledValues(now);
+          gain.gain.setValueAtTime(gain.gain.value, now);
+          gain.gain.linearRampToValueAtTime(1.1, now + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.45, now + 0.25);
+        }, 700 + Math.random() * 400);
+        console.log("[capture] using synthetic fallback signal");
+        return gain;
+      }
+
+      const audioSource = (await tryRecordedTestSignal()) ?? buildSynthSignal();
+      await audioCtx.resume();
+
+      console.log("[capture] loading preset:", presetUrl);
+      const bg = createParticlesBackground(audioCtx, canvas, audioSource);
+      const name = await bg.loadFromUrl(presetUrl);
+      console.log("[capture] preset loaded:", name);
+
+      // Settle so first frames paint + audio analyser populates before capture.
+      await new Promise((r) => setTimeout(r, 1500));
+      window.__prismReady = true;
+
+      window.__prismStartCapture = (durationMs) => {
+        const stream = canvas.captureStream(30);
+        const chunks = [];
+        const rec = new MediaRecorder(stream, {
+          mimeType: "video/webm;codecs=vp9",
+          videoBitsPerSecond: 4_000_000,
+        });
+        rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
+        rec.onstop = async () => {
+          const blob = new Blob(chunks, { type: "video/webm" });
+          const buf = await blob.arrayBuffer();
+          const bytes = new Uint8Array(buf);
+          let binary = "";
+          const CHUNK = 8192;
+          for (let i = 0; i < bytes.length; i += CHUNK) {
+            binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+          }
+          window.__prismVideoBase64 = btoa(binary);
+          window.__prismCaptureReady = true;
+        };
+        rec.start();
+        setTimeout(() => rec.stop(), durationMs);
+      };
+    </script>
+  </body>
+</html>

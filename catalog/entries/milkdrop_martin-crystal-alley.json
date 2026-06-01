@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-crystal-alley.webm",
-    "thumb": "/thumbs/milkdrop_martin-crystal-alley.jpg"
+    "thumb": "/thumbs/milkdrop_martin-crystal-alley.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

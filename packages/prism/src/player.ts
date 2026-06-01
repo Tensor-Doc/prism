@@ -16,6 +16,7 @@
 
 import { createMilkdropBackground, type MilkdropBg } from "./backends/milkdrop";
 import { createShadertoyBackground, type ShadertoyBg } from "./backends/shadertoy";
+import { createParticlesBackground, type ParticlesBg } from "./backends/particles";
 import { HeadlessSlideshow } from "./image-feed";
 import { shortIdToGraph } from "./registry";
 import { GraphRuntime, type ApplyResult } from "./runtime";
@@ -101,6 +102,11 @@ export class PrismPlayer {
   /** Shadertoy backend handle. Idle until a graph with `lf.shadertoy` is
    *  loaded (or you call `shadertoy.loadFromUrl` directly). */
   readonly shadertoy: ShadertoyBg;
+  /** Particles backend handle. Idle until a graph with `lf.particles` is
+   *  loaded. Lazily instantiated on first use to avoid spinning up
+   *  WebGL2 state textures + MRT framebuffers when the player only
+   *  serves milkdrop / shadertoy entries. */
+  particles: ParticlesBg | null = null;
   /** Graph executor — dispatches to the right backend based on the
    *  graph's light-field generator node. */
   readonly runtime: GraphRuntime;
@@ -109,6 +115,7 @@ export class PrismPlayer {
 
   private readonly milkdropCanvas: HTMLCanvasElement;
   private readonly shadertoyCanvas: HTMLCanvasElement;
+  private readonly particlesCanvas: HTMLCanvasElement;
   private readonly ownsAudioCtx: boolean;
   /** Default hold per image when `image` is a URL list; set in ctor. */
   private readonly defaultHoldSeconds: number;
@@ -136,13 +143,18 @@ export class PrismPlayer {
     // bg-canvas--hidden/--active modifiers) still applies on prism.scott.ai.
     this.milkdropCanvas = createCanvas("milkdrop");
     this.shadertoyCanvas = createCanvas("shadertoy");
+    this.particlesCanvas = createCanvas("particles");
     this.shadertoyCanvas.classList.add("bg-canvas--hidden");
+    this.particlesCanvas.classList.add("bg-canvas--hidden");
     // Inline opacity so visibility works without consumer CSS. Same
     // override behavior — prism.scott.ai's !important rules win.
     this.shadertoyCanvas.style.opacity = "0";
     this.shadertoyCanvas.style.pointerEvents = "none";
+    this.particlesCanvas.style.opacity = "0";
+    this.particlesCanvas.style.pointerEvents = "none";
     container.appendChild(this.milkdropCanvas);
     container.appendChild(this.shadertoyCanvas);
+    container.appendChild(this.particlesCanvas);
 
     this.milkdrop = createMilkdropBackground(
       this.audioCtx,
@@ -163,9 +175,19 @@ export class PrismPlayer {
       });
     }
 
+    // Capture the player for the getter below — object-literal getters
+    // don't have access to `this` from the enclosing constructor.
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const player = this;
     this.runtime = new GraphRuntime({
       milkdrop: this.milkdrop,
       shadertoy: this.shadertoy,
+      // Lazy: the runtime asks the player for the particles backend
+      // when it sees an lf.particles node. The first call spins up
+      // WebGL2 state textures + the curl-noise update + render pipeline.
+      get particles(): ParticlesBg {
+        return player.ensureParticles();
+      },
       setActiveBackend: (which) => this.setActiveBackend(which),
     });
 
@@ -214,8 +236,23 @@ export class PrismPlayer {
     const { node, owned } = await this.resolveAudioNode(source);
     this.milkdrop.connectAudio(node);
     this.shadertoy.connectAudio(node);
+    if (this.particles) this.particles.connectAudio(node);
     this.currentAudioOwnedStream = owned;
     return node;
+  }
+
+  /** Spin up the particles backend on demand. Idempotent — the second
+   *  call returns the same instance. Called by GraphRuntime when it
+   *  encounters an lf.particles node, so milkdrop-only / shadertoy-only
+   *  consumers never pay the WebGL2 state-texture cost. */
+  ensureParticles(): ParticlesBg {
+    if (this.particles) return this.particles;
+    this.particles = createParticlesBackground(
+      this.audioCtx,
+      this.particlesCanvas,
+      this.synth.getOutput(),
+    );
+    return this.particles;
   }
 
   /** Disconnect the current audio source and revert both backends to
@@ -293,29 +330,25 @@ export class PrismPlayer {
    *  callers can flip it manually too (rare). */
   setActiveBackend(which: "milkdrop" | "shadertoy" | "particles"): void {
     this.activeBackend = which;
-    // The particles backend doesn't have a dedicated canvas in the
-    // player yet; standalone particle previews instantiate it on their
-    // own canvas. When routed via the player we no-op visually for now.
-    if (which === "particles") return;
-    if (which === "milkdrop") {
-      this.milkdropCanvas.classList.remove("bg-canvas--hidden");
-      this.milkdropCanvas.classList.add("bg-canvas--active");
-      this.milkdropCanvas.style.opacity = "1";
-      this.milkdropCanvas.style.pointerEvents = "";
-      this.shadertoyCanvas.classList.add("bg-canvas--hidden");
-      this.shadertoyCanvas.classList.remove("bg-canvas--active");
-      this.shadertoyCanvas.style.opacity = "0";
-      this.shadertoyCanvas.style.pointerEvents = "none";
-    } else {
-      this.shadertoyCanvas.classList.remove("bg-canvas--hidden");
-      this.shadertoyCanvas.classList.add("bg-canvas--active");
-      this.shadertoyCanvas.style.opacity = "1";
-      this.shadertoyCanvas.style.pointerEvents = "";
-      this.milkdropCanvas.classList.add("bg-canvas--hidden");
-      this.milkdropCanvas.classList.remove("bg-canvas--active");
-      this.milkdropCanvas.style.opacity = "0";
-      this.milkdropCanvas.style.pointerEvents = "none";
-    }
+    // Show whichever canvas matches, hide the other two. Three-way
+    // crossfade via opacity. The hidden ones get pointerEvents:none so
+    // they don't intercept clicks on overlays underneath them.
+    const setVisible = (c: HTMLCanvasElement, on: boolean): void => {
+      if (on) {
+        c.classList.remove("bg-canvas--hidden");
+        c.classList.add("bg-canvas--active");
+        c.style.opacity = "1";
+        c.style.pointerEvents = "";
+      } else {
+        c.classList.add("bg-canvas--hidden");
+        c.classList.remove("bg-canvas--active");
+        c.style.opacity = "0";
+        c.style.pointerEvents = "none";
+      }
+    };
+    setVisible(this.milkdropCanvas, which === "milkdrop");
+    setVisible(this.shadertoyCanvas, which === "shadertoy");
+    setVisible(this.particlesCanvas, which === "particles");
   }
 
   /** Stop animation, free GL resources, detach canvases, close the

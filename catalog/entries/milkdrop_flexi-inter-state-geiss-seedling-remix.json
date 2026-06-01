@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-inter-state-geiss-seedling-remix.webm",
-    "thumb": "/thumbs/milkdrop_flexi-inter-state-geiss-seedling-remix.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-inter-state-geiss-seedling-remix.jpg",
+    "video_size_bytes": 24825
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-organic-light.webm",
-    "thumb": "/thumbs/milkdrop_martin-organic-light.jpg"
+    "thumb": "/thumbs/milkdrop_martin-organic-light.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

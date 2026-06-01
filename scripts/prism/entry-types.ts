@@ -7,7 +7,7 @@
 
 export const SCHEMA_VERSION = 2 as const;
 
-export type SourceType = "milkdrop" | "shadertoy" | "isf" | "wgsl";
+export type SourceType = "milkdrop" | "shadertoy" | "particles" | "isf" | "wgsl";
 
 export type LoaderType =
   /** Load from a static URL under public/presets/<source>/. */
@@ -78,6 +78,12 @@ export interface TextureNeed {
 export interface Assets {
   video?: string;
   thumb?: string;
+  /** Size of the captured WebM in bytes. Used by the gallery sort as a
+   *  visual-richness proxy — pure-black or near-empty renders compress
+   *  to tiny VP9 files; vivid colorful ones are megabytes. Sorting
+   *  by this within each tier surfaces the most striking presets first
+   *  and pushes weak captures toward the end. */
+  video_size_bytes?: number;
   /** sampler_* references parsed from the shader, minus built-ins. */
   textures_needed?: TextureNeed[];
   /** Optional default image bound to iChannel1 for image-input shaders.

@@ -26,7 +26,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-pixies-party.webm",
-    "thumb": "/thumbs/milkdrop_martin-pixies-party.jpg"
+    "thumb": "/thumbs/milkdrop_martin-pixies-party.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-digital-sea.webm",
-    "thumb": "/thumbs/milkdrop_cope-digital-sea.jpg"
+    "thumb": "/thumbs/milkdrop_cope-digital-sea.jpg",
+    "video_size_bytes": 54481
   },
   "contribution": {
     "added_by": "scottspace",

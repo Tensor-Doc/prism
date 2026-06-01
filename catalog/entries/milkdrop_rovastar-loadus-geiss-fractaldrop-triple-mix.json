@@ -45,7 +45,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_rovastar-loadus-geiss-fractaldrop-triple-mix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-geiss-fractaldrop-triple-mix.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_rovastar-loadus-geiss-fractaldrop-triple-mix.jpg",
+    "video_size_bytes": 3923506
   },
   "contribution": {
     "added_by": "scottspace",

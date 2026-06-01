@@ -44,6 +44,7 @@ import { isR2Enabled, uploadFile } from "../r2";
 const DEV_URL = "http://localhost:5173";
 const MILKDROP_CAPTURE_PAGE = "/scripts/pipelines/capture-pages/milkdrop.html";
 const SHADERTOY_CAPTURE_PAGE = "/scripts/pipelines/capture-pages/shadertoy.html";
+const PARTICLES_CAPTURE_PAGE = "/scripts/pipelines/capture-pages/particles.html";
 const CAPTURE_DURATION_MS = 15_000;
 const CAPTURE_WIDTH = 1280;
 const CAPTURE_HEIGHT = 720;
@@ -99,7 +100,14 @@ function entryFilename(slug: string): string {
 /** Resolve a slug (e.g. "cosmic-flow") to its catalog entry path, trying
  *  both milkdrop_ and shadertoy_ prefixes. Returns null if neither exists. */
 function findEntryPath(repoRoot: string, slug: string): string | null {
-  for (const prefix of ["milkdrop", "shadertoy"]) {
+  // Allow an explicit prefix in the slug ("particles:refik-fluid-flora")
+  // so callers can disambiguate when multiple backends share a name.
+  if (slug.includes(":")) {
+    const [prefix, name] = slug.split(":", 2);
+    const p = join(repoRoot, "catalog/entries", `${prefix}_${name}.json`);
+    return existsSync(p) ? p : null;
+  }
+  for (const prefix of ["milkdrop", "shadertoy", "particles"]) {
     const p = join(repoRoot, "catalog/entries", `${prefix}_${slug}.json`);
     if (existsSync(p)) return p;
   }
@@ -137,6 +145,9 @@ function buildCaptureUrl(entry: CatalogEntry): string {
     const img = entry.assets.default_image;
     if (img) params.set("imageUrl", img);
     return `${DEV_URL}${SHADERTOY_CAPTURE_PAGE}?${params.toString()}`;
+  }
+  if (source.type === "particles") {
+    return `${DEV_URL}${PARTICLES_CAPTURE_PAGE}?presetUrl=${encodeURIComponent(source.url ?? "")}`;
   }
   // milkdrop default
   return `${DEV_URL}${MILKDROP_CAPTURE_PAGE}?presetUrl=${encodeURIComponent(source.url ?? "")}`;
@@ -334,10 +345,13 @@ export async function runAnnotateOne(
   console.log(`  textures: ${(entry.assets.textures_needed ?? []).map((t) => t.name).join(", ") || "none"}`);
 
   // Asset filename prefix matches the entry source.type so milkdrop +
-  // shadertoy captures don't collide on slug.
-  const assetPrefix = entry.source.type; // "milkdrop" | "shadertoy"
-  const videoOut = join(repoRoot, "public/videos", `${assetPrefix}_${slug}.webm`);
-  const thumbOut = join(repoRoot, "public/thumbs", `${assetPrefix}_${slug}.jpg`);
+  // shadertoy + particles captures don't collide on slug. Strip any
+  // explicit "<type>:" disambiguator the caller may have passed since
+  // the type is already in the prefix.
+  const assetPrefix = entry.source.type;
+  const bareSlug = slug.includes(":") ? slug.split(":", 2)[1] : slug;
+  const videoOut = join(repoRoot, "public/videos", `${assetPrefix}_${bareSlug}.webm`);
+  const thumbOut = join(repoRoot, "public/thumbs", `${assetPrefix}_${bareSlug}.jpg`);
 
   let webmBytes: Buffer;
   let renderMs = 0;
@@ -379,8 +393,8 @@ export async function runAnnotateOne(
       renders: false,
       note: `capture was empty (${webmBytes.length} bytes); preset doesn't render meaningfully against the current test signal`,
     };
-    entry.assets.video = `/videos/${assetPrefix}_${slug}.webm`;
-    entry.assets.thumb = `/thumbs/${assetPrefix}_${slug}.jpg`;
+    entry.assets.video = `/videos/${assetPrefix}_${bareSlug}.webm`;
+    entry.assets.thumb = `/thumbs/${assetPrefix}_${bareSlug}.jpg`;
     writeFileSync(entryPath, JSON.stringify(entry, null, 2) + "\n");
     progress.update(slug, {
       status: "annotated", // counted as done so bulk doesn't retry
@@ -407,14 +421,15 @@ export async function runAnnotateOne(
   // Default URLs are the local public/ paths. If R2 is configured,
   // upload + replace with the public R2 URLs so the live site streams
   // from CDN without bloating the Vercel deploy.
-  entry.assets.video = `/videos/milkdrop_${slug}.webm`;
-  entry.assets.thumb = `/thumbs/milkdrop_${slug}.jpg`;
+  entry.assets.video = `/videos/${assetPrefix}_${bareSlug}.webm`;
+  entry.assets.thumb = `/thumbs/${assetPrefix}_${bareSlug}.jpg`;
+  entry.assets.video_size_bytes = webmBytes.length;
   if (isR2Enabled()) {
     try {
       const t2 = Date.now();
       const [videoUrl, thumbUrl] = await Promise.all([
-        uploadFile(videoOut, `videos/${assetPrefix}_${slug}.webm`, "video/webm"),
-        uploadFile(thumbOut, `thumbs/${assetPrefix}_${slug}.jpg`, "image/jpeg"),
+        uploadFile(videoOut, `videos/${assetPrefix}_${bareSlug}.webm`, "video/webm"),
+        uploadFile(thumbOut, `thumbs/${assetPrefix}_${bareSlug}.jpg`, "image/jpeg"),
       ]);
       console.log(`  R2: uploaded video + thumb in ${Date.now() - t2}ms`);
       if (videoUrl && thumbUrl) {

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_amandio-c-martin-edit-trick-with-cubes.webm",
-    "thumb": "/thumbs/milkdrop_amandio-c-martin-edit-trick-with-cubes.jpg"
+    "thumb": "/thumbs/milkdrop_amandio-c-martin-edit-trick-with-cubes.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

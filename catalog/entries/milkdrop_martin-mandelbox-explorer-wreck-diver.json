@@ -26,7 +26,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-mandelbox-explorer-wreck-diver.webm",
-    "thumb": "/thumbs/milkdrop_martin-mandelbox-explorer-wreck-diver.jpg"
+    "thumb": "/thumbs/milkdrop_martin-mandelbox-explorer-wreck-diver.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

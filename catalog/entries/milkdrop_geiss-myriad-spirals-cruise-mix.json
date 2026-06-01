@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-myriad-spirals-cruise-mix.webm",
-    "thumb": "/thumbs/milkdrop_geiss-myriad-spirals-cruise-mix.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-myriad-spirals-cruise-mix.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

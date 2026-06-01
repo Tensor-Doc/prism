@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_orb-quicksand-lab.webm",
-    "thumb": "/thumbs/milkdrop_orb-quicksand-lab.jpg"
+    "thumb": "/thumbs/milkdrop_orb-quicksand-lab.jpg",
+    "video_size_bytes": 24821
   },
   "contribution": {
     "added_by": "scottspace",

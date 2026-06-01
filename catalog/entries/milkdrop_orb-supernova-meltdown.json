@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_orb-supernova-meltdown.webm",
-    "thumb": "/thumbs/milkdrop_orb-supernova-meltdown.jpg"
+    "thumb": "/thumbs/milkdrop_orb-supernova-meltdown.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

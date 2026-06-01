@@ -1,10 +1,20 @@
 {
-  "name": "Refik Fluid of Flora (particles)",
+  "name": "Refik Rolling Ocean of Flora",
   "atlas_url": "/presets/particles/refik-fluid-flora-atlas.png",
   "atlas_size": 4,
-  "particle_size": 0.025,
-  "velocity_stretch": 3.5,
-  "curl_scale": 5.0,
+  "particle_size": 0.055,
+  "size_variance": 0.9,
+  "velocity_stretch": 1.8,
+  "curl_scale": 0.7,
   "velocity_damp": 0.985,
-  "audio_gain": 1.4
+  "audio_gain": 1.6,
+  "volume_size": [3.5, 0.4, 3.5],
+  "wave_amplitude": 0.55,
+  "flow_drift_x": 0.7,
+  "corona_boost": 4.5,
+  "dance_amount": 0.5,
+  "camera_radius": 4.5,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.025,
+  "fov_degrees": 50
 }

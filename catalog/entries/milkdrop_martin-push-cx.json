@@ -53,7 +53,8 @@
       }
     ],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-push-cx.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-push-cx.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-push-cx.jpg",
+    "video_size_bytes": 1091492
   },
   "contribution": {
     "added_by": "scottspace",

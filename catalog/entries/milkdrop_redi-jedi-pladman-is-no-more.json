@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_redi-jedi-pladman-is-no-more.webm",
-    "thumb": "/thumbs/milkdrop_redi-jedi-pladman-is-no-more.jpg"
+    "thumb": "/thumbs/milkdrop_redi-jedi-pladman-is-no-more.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

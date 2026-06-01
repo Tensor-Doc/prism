@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-dune-racer.webm",
-    "thumb": "/thumbs/milkdrop_martin-dune-racer.jpg"
+    "thumb": "/thumbs/milkdrop_martin-dune-racer.jpg",
+    "video_size_bytes": 24811
   },
   "contribution": {
     "added_by": "scottspace",

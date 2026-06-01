@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-funky-illusions.webm",
-    "thumb": "/thumbs/milkdrop_martin-funky-illusions.jpg"
+    "thumb": "/thumbs/milkdrop_martin-funky-illusions.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

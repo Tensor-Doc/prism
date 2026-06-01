@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-orbit-trap-playground.webm",
-    "thumb": "/thumbs/milkdrop_martin-orbit-trap-playground.jpg"
+    "thumb": "/thumbs/milkdrop_martin-orbit-trap-playground.jpg",
+    "video_size_bytes": 24670
   },
   "contribution": {
     "added_by": "scottspace",

@@ -23,7 +23,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-golden-mirror.webm",
-    "thumb": "/thumbs/milkdrop_martin-golden-mirror.jpg"
+    "thumb": "/thumbs/milkdrop_martin-golden-mirror.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

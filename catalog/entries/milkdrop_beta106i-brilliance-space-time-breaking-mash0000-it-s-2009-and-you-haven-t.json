@@ -46,7 +46,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-brilliance-space-time-breaking-mash0000-it-s-2009-and-you-haven-t.jpg",
+    "video_size_bytes": 3665591
   },
   "contribution": {
     "added_by": "scottspace",

@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_flexi-blame-moebius.webm",
-    "thumb": "/thumbs/milkdrop_flexi-blame-moebius.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-blame-moebius.jpg",
+    "video_size_bytes": 27420
   },
   "contribution": {
     "added_by": "scottspace",

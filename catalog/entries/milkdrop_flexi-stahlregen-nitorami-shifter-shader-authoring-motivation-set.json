@@ -46,7 +46,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.webm",
-    "thumb": "/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-stahlregen-nitorami-shifter-shader-authoring-motivation-set.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

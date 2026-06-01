@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_goody-lights-in-the-sky.webm",
-    "thumb": "/thumbs/milkdrop_goody-lights-in-the-sky.jpg"
+    "thumb": "/thumbs/milkdrop_goody-lights-in-the-sky.jpg",
+    "video_size_bytes": 24762
   },
   "contribution": {
     "added_by": "scottspace",

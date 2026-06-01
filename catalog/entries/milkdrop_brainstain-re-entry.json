@@ -46,7 +46,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_brainstain-re-entry.webm",
-    "thumb": "/thumbs/milkdrop_brainstain-re-entry.jpg"
+    "thumb": "/thumbs/milkdrop_brainstain-re-entry.jpg",
+    "video_size_bytes": 184626
   },
   "contribution": {
     "added_by": "scottspace",

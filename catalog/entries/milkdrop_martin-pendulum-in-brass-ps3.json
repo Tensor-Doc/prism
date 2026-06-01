@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-pendulum-in-brass-ps3.webm",
-    "thumb": "/thumbs/milkdrop_martin-pendulum-in-brass-ps3.jpg"
+    "thumb": "/thumbs/milkdrop_martin-pendulum-in-brass-ps3.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

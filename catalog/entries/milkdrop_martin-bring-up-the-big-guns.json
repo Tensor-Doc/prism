@@ -47,7 +47,8 @@
       }
     ],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-bring-up-the-big-guns.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-bring-up-the-big-guns.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-bring-up-the-big-guns.jpg",
+    "video_size_bytes": 3210315
   },
   "contribution": {
     "added_by": "scottspace",

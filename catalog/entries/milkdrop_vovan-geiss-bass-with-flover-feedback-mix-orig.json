@@ -47,7 +47,8 @@
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_vovan-geiss-bass-with-flover-feedback-mix-orig.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_vovan-geiss-bass-with-flover-feedback-mix-orig.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_vovan-geiss-bass-with-flover-feedback-mix-orig.jpg",
+    "video_size_bytes": 5648670
   },
   "contribution": {
     "added_by": "scottspace",

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast-geiss-impulse.webm",
-    "thumb": "/thumbs/milkdrop_aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast-geiss-impulse.jpg"
+    "thumb": "/thumbs/milkdrop_aderrasi-geiss-airhandler-kali-mix-painterly-tendrils-colorfast-geiss-impulse.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

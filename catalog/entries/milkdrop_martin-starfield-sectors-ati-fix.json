@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-starfield-sectors-ati-fix.webm",
-    "thumb": "/thumbs/milkdrop_martin-starfield-sectors-ati-fix.jpg"
+    "thumb": "/thumbs/milkdrop_martin-starfield-sectors-ati-fix.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

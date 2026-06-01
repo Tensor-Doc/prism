@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana-3.webm",
-    "thumb": "/thumbs/milkdrop_aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana-3.jpg"
+    "thumb": "/thumbs/milkdrop_aderrasi-wanderer-in-curved-space-mash0000-faclempt-kibitzing-meshuggana-3.jpg",
+    "video_size_bytes": 89021
   },
   "contribution": {
     "added_by": "scottspace",

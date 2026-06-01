@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-martin-flexi-the-slickery-of-alternative-varnish.webm",
-    "thumb": "/thumbs/milkdrop_cope-martin-flexi-the-slickery-of-alternative-varnish.jpg"
+    "thumb": "/thumbs/milkdrop_cope-martin-flexi-the-slickery-of-alternative-varnish.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

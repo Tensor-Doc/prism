@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-amandio-c-a-different-view-of-the-green-machine.webm",
-    "thumb": "/thumbs/milkdrop_martin-amandio-c-a-different-view-of-the-green-machine.jpg"
+    "thumb": "/thumbs/milkdrop_martin-amandio-c-a-different-view-of-the-green-machine.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

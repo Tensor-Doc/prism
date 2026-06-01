@@ -23,7 +23,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-musicogenic-epilepsy.webm",
-    "thumb": "/thumbs/milkdrop_martin-musicogenic-epilepsy.jpg"
+    "thumb": "/thumbs/milkdrop_martin-musicogenic-epilepsy.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

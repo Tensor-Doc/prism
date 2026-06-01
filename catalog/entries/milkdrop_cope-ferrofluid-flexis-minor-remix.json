@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-ferrofluid-flexis-minor-remix.webm",
-    "thumb": "/thumbs/milkdrop_cope-ferrofluid-flexis-minor-remix.jpg"
+    "thumb": "/thumbs/milkdrop_cope-ferrofluid-flexis-minor-remix.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

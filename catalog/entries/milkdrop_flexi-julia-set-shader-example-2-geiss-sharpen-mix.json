@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-julia-set-shader-example-2-geiss-sharpen-mix.webm",
-    "thumb": "/thumbs/milkdrop_flexi-julia-set-shader-example-2-geiss-sharpen-mix.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-julia-set-shader-example-2-geiss-sharpen-mix.jpg",
+    "video_size_bytes": 35512
   },
   "contribution": {
     "added_by": "scottspace",

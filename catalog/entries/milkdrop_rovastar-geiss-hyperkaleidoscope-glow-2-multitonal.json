@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-multitonal.webm",
-    "thumb": "/thumbs/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-multitonal.jpg"
+    "thumb": "/thumbs/milkdrop_rovastar-geiss-hyperkaleidoscope-glow-2-multitonal.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

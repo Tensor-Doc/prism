@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-blame-hexcollie-twice.webm",
-    "thumb": "/thumbs/milkdrop_flexi-blame-hexcollie-twice.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-blame-hexcollie-twice.jpg",
+    "video_size_bytes": 24822
   },
   "contribution": {
     "added_by": "scottspace",

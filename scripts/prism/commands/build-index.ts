@@ -43,6 +43,11 @@ export interface IndexEntry {
   default_image?: string;
   video?: string;
   thumb?: string;
+  /** WebM byte size — used by the gallery sort as a visual-richness
+   *  proxy (pure-black VP9 compresses to ~24KB; vivid colorful
+   *  captures are megabytes). Sort descending within tier so the
+   *  most striking presets surface first. */
+  video_size_bytes?: number;
   added_by?: string;
   /** ISO timestamp the entry was added to the catalog (PR merge / ingest). */
   added_at?: string;
@@ -131,6 +136,7 @@ export function buildIndex(repoRoot: string): CatalogIndex {
       default_image: entry.assets.default_image,
       video: entry.assets.video,
       thumb: entry.assets.thumb,
+      video_size_bytes: entry.assets.video_size_bytes,
       added_by: entry.contribution.added_by,
       added_at: entry.contribution.added_at,
       captured_at: a.captured_at,
@@ -151,6 +157,13 @@ export function buildIndex(repoRoot: string): CatalogIndex {
   annotated.sort((a, b) => {
     const tA = tier(a), tB = tier(b);
     if (tA !== tB) return tA - tB;
+    // Within tier: bigger WebM (= richer visuals) first. Missing sizes
+    // sort last so unmeasured legacy entries don't outrank known-good
+    // ones. Treats anything under 100KB as effectively empty so weak
+    // captures cluster at the end.
+    const aSz = a.video_size_bytes ?? 0;
+    const bSz = b.video_size_bytes ?? 0;
+    if (aSz !== bSz) return bSz - aSz;
     const aT = a.captured_at ?? a.added_at ?? "";
     const bT = b.captured_at ?? b.added_at ?? "";
     if (aT !== bT) return aT < bT ? 1 : -1;

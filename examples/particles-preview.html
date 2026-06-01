@@ -18,6 +18,28 @@
         pointer-events: none;
       }
       #hud code { color: #9cf; }
+      #tab-btn {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background: rgba(20, 30, 40, 0.85);
+        color: #cce8ff;
+        border: 1px solid rgba(120, 180, 220, 0.6);
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 13px;
+        cursor: pointer;
+        z-index: 6;
+        backdrop-filter: blur(4px);
+      }
+      #tab-btn:hover { background: rgba(30, 50, 70, 0.95); }
+      #tab-btn[data-active] {
+        background: rgba(40, 110, 60, 0.9);
+        border-color: rgba(120, 220, 150, 0.7);
+        color: #d8ffe2;
+      }
+      #tab-btn[data-active]::before { content: "● "; color: #5cff89; }
     </style>
   </head>
   <body>
@@ -28,6 +50,7 @@
       <span id="name">loading…</span> ·
       <span id="fps">— fps</span>
     </div>
+    <button id="tab-btn">Listen to tab</button>
 
     <script type="module">
       import { createParticlesBackground } from "@tensordoc/prism";
@@ -71,6 +94,57 @@
         console.error("[preview] preset load failed:", err);
         nameEl.textContent = `load failed: ${err.message}`;
       }
+
+      // Tab-audio button. Browser requires getDisplayMedia to include
+      // a video track even when we only want audio, so we ask for both
+      // and discard the video. Picking the right tab in Chrome's share
+      // picker (and checking "Share tab audio") is on the user.
+      const tabBtn = document.getElementById("tab-btn");
+      let tabStream = null;
+      tabBtn.addEventListener("click", async () => {
+        if (tabStream) {
+          // Already listening — stop, reconnect the silent/default source.
+          for (const t of tabStream.getTracks()) t.stop();
+          tabStream = null;
+          bg.connectAudio(audioSource);
+          tabBtn.textContent = "Listen to tab";
+          tabBtn.removeAttribute("data-active");
+          return;
+        }
+        try {
+          const stream = await navigator.mediaDevices.getDisplayMedia({
+            audio: {
+              echoCancellation: false,
+              noiseSuppression: false,
+              autoGainControl: false,
+            },
+            video: { width: 1280, height: 720, frameRate: 30 },
+          });
+          const audioTracks = stream.getAudioTracks();
+          if (audioTracks.length === 0) {
+            for (const t of stream.getTracks()) t.stop();
+            alert("No audio in that share. Pick a tab and check 'Share tab audio'.");
+            return;
+          }
+          // Drop the video track — we only want audio for the visualizer.
+          for (const t of stream.getVideoTracks()) t.stop();
+          await audioCtx.resume();
+          const node = audioCtx.createMediaStreamSource(new MediaStream(audioTracks));
+          bg.connectAudio(node);
+          tabStream = stream;
+          tabBtn.textContent = "Stop tab audio";
+          tabBtn.setAttribute("data-active", "");
+          // If the user revokes sharing from the browser UI, snap back.
+          audioTracks[0].addEventListener("ended", () => {
+            tabStream = null;
+            bg.connectAudio(audioSource);
+            tabBtn.textContent = "Listen to tab";
+            tabBtn.removeAttribute("data-active");
+          });
+        } catch (err) {
+          console.warn("[preview] tab capture failed:", err);
+        }
+      });
 
       // Simple FPS counter.
       let frames = 0;

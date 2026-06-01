@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-martin-mandelbox-explorer-high-speed-demo-version-fire-mix.webm",
-    "thumb": "/thumbs/milkdrop_geiss-martin-mandelbox-explorer-high-speed-demo-version-fire-mix.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-martin-mandelbox-explorer-high-speed-demo-version-fire-mix.jpg",
+    "video_size_bytes": 24762
   },
   "contribution": {
     "added_by": "scottspace",

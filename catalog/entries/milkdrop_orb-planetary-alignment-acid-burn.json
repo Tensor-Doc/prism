@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_orb-planetary-alignment-acid-burn.webm",
-    "thumb": "/thumbs/milkdrop_orb-planetary-alignment-acid-burn.jpg"
+    "thumb": "/thumbs/milkdrop_orb-planetary-alignment-acid-burn.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_geiss-mstress-cleaning-a-path-painterly-crossfire-crisp-emboss-mix.webm",
-    "thumb": "/thumbs/milkdrop_geiss-mstress-cleaning-a-path-painterly-crossfire-crisp-emboss-mix.jpg"
+    "thumb": "/thumbs/milkdrop_geiss-mstress-cleaning-a-path-painterly-crossfire-crisp-emboss-mix.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

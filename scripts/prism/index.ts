@@ -33,6 +33,7 @@ loadDotenv(process.cwd());
 import { runAnnotate } from "./commands/annotate";
 import { runBuildIndex } from "./commands/build-index";
 import { runBuildTextures } from "./commands/build-textures";
+import { runBackfillVideoSizes } from "./commands/backfill-video-sizes";
 import { runIngest } from "./commands/ingest";
 import { runIterateShader } from "./commands/iterate-shader";
 import { runMigrate } from "./commands/migrate";
@@ -102,6 +103,10 @@ function main(): void {
     }
     case "build-textures": {
       runBuildTextures(repoRoot);
+      break;
+    }
+    case "backfill-video-sizes": {
+      runBackfillVideoSizes(repoRoot);
       break;
     }
     case "iterate-shader": {

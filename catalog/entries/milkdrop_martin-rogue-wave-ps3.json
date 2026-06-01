@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-rogue-wave-ps3.webm",
-    "thumb": "/thumbs/milkdrop_martin-rogue-wave-ps3.jpg"
+    "thumb": "/thumbs/milkdrop_martin-rogue-wave-ps3.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

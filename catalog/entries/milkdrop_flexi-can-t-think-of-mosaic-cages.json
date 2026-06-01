@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-can-t-think-of-mosaic-cages.webm",
-    "thumb": "/thumbs/milkdrop_flexi-can-t-think-of-mosaic-cages.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-can-t-think-of-mosaic-cages.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-julia-island-output-stage.webm",
-    "thumb": "/thumbs/milkdrop_flexi-julia-island-output-stage.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-julia-island-output-stage.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

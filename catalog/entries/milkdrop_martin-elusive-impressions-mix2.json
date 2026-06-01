@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_martin-elusive-impressions-mix2.webm",
-    "thumb": "/thumbs/milkdrop_martin-elusive-impressions-mix2.jpg"
+    "thumb": "/thumbs/milkdrop_martin-elusive-impressions-mix2.jpg",
+    "video_size_bytes": 24715
   },
   "contribution": {
     "added_by": "scottspace",

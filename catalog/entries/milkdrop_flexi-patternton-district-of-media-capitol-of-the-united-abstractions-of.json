@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-patternton-district-of-media-capitol-of-the-united-abstractions-of.webm",
-    "thumb": "/thumbs/milkdrop_flexi-patternton-district-of-media-capitol-of-the-united-abstractions-of.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-patternton-district-of-media-capitol-of-the-united-abstractions-of.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

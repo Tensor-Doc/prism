@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_cope-ferrofluid.webm",
-    "thumb": "/thumbs/milkdrop_cope-ferrofluid.jpg"
+    "thumb": "/thumbs/milkdrop_cope-ferrofluid.jpg",
+    "video_size_bytes": 24810
   },
   "contribution": {
     "added_by": "scottspace",

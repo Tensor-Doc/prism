@@ -11,7 +11,7 @@ import { SCHEMA_VERSION, type NodeDef, type NodeType, type PrismGraph } from "./
 
 export interface RegistryEntry {
   name: string;
-  source_type: "milkdrop" | "shadertoy" | "isf" | "wgsl";
+  source_type: "milkdrop" | "shadertoy" | "particles" | "isf" | "wgsl";
   source_loader: "url" | "npm-butterchurn-presets";
   source_url?: string;
   source_ref?: string;
@@ -46,6 +46,10 @@ function entryToGraph(shortId: string, entry: RegistryEntry): PrismGraph {
   if (entry.source_type === "shadertoy") {
     mainType = "lf.shadertoy";
     if (entry.source_url) mainParams.shader_url = entry.source_url;
+    if (entry.default_image) mainParams.image_url = entry.default_image;
+  } else if (entry.source_type === "particles") {
+    mainType = "lf.particles";
+    if (entry.source_url) mainParams.preset_url = entry.source_url;
     if (entry.default_image) mainParams.image_url = entry.default_image;
   } else {
     mainType = "lf.milkdrop";

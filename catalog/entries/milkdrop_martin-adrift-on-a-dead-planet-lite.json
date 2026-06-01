@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-adrift-on-a-dead-planet-lite.webm",
-    "thumb": "/thumbs/milkdrop_martin-adrift-on-a-dead-planet-lite.jpg"
+    "thumb": "/thumbs/milkdrop_martin-adrift-on-a-dead-planet-lite.jpg",
+    "video_size_bytes": 24811
   },
   "contribution": {
     "added_by": "scottspace",

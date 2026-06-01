@@ -23,7 +23,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-butterflies.webm",
-    "thumb": "/thumbs/milkdrop_martin-butterflies.jpg"
+    "thumb": "/thumbs/milkdrop_martin-butterflies.jpg",
+    "video_size_bytes": 24766
   },
   "contribution": {
     "added_by": "scottspace",

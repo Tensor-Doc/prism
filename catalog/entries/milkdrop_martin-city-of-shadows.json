@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-city-of-shadows.webm",
-    "thumb": "/thumbs/milkdrop_martin-city-of-shadows.jpg"
+    "thumb": "/thumbs/milkdrop_martin-city-of-shadows.jpg",
+    "video_size_bytes": 24718
   },
   "contribution": {
     "added_by": "scottspace",

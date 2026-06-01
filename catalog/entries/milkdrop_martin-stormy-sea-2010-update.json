@@ -20,7 +20,8 @@
       }
     ],
     "video": "/videos/milkdrop_martin-stormy-sea-2010-update.webm",
-    "thumb": "/thumbs/milkdrop_martin-stormy-sea-2010-update.jpg"
+    "thumb": "/thumbs/milkdrop_martin-stormy-sea-2010-update.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

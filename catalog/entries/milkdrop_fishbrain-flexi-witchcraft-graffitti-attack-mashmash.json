@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_fishbrain-flexi-witchcraft-graffitti-attack-mashmash.webm",
-    "thumb": "/thumbs/milkdrop_fishbrain-flexi-witchcraft-graffitti-attack-mashmash.jpg"
+    "thumb": "/thumbs/milkdrop_fishbrain-flexi-witchcraft-graffitti-attack-mashmash.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

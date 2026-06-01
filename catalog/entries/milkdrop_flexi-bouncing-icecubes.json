@@ -23,7 +23,8 @@
       }
     ],
     "video": "/videos/milkdrop_flexi-bouncing-icecubes.webm",
-    "thumb": "/thumbs/milkdrop_flexi-bouncing-icecubes.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-bouncing-icecubes.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",

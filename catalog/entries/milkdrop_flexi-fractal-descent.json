@@ -16,7 +16,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_flexi-fractal-descent.webm",
-    "thumb": "/thumbs/milkdrop_flexi-fractal-descent.jpg"
+    "thumb": "/thumbs/milkdrop_flexi-fractal-descent.jpg",
+    "video_size_bytes": 24718
   },
   "contribution": {
     "added_by": "scottspace",

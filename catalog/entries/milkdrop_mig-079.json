@@ -15,7 +15,8 @@
   "assets": {
     "textures_needed": [],
     "video": "/videos/milkdrop_mig-079.webm",
-    "thumb": "/thumbs/milkdrop_mig-079.jpg"
+    "thumb": "/thumbs/milkdrop_mig-079.jpg",
+    "video_size_bytes": 24814
   },
   "contribution": {
     "added_by": "scottspace",
