@@ -115,9 +115,9 @@ browser tab to the visualization.
 |---|---|---|
 | Solar Wind | NASA Solar Dynamics Observatory | [`EqdmpR`](https://prism.scott.ai/?g=EqdmpR) |
 | Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | [`U0D2Ci`](https://prism.scott.ai/?g=U0D2Ci) |
-| Lava Flow | volcanic flow macros | [`jvkmIA`](https://prism.scott.ai/?g=jvkmIA) |
+| Schooling Fish | BBC Blue Planet underwater shots | [`CziRzn`](https://prism.scott.ai/?g=CziRzn) |
+| Murmuration | starling flocks at dusk | [`1Ydj3x`](https://prism.scott.ai/?g=1Ydj3x) |
 | Magnetosphere Revisited | Robert Hodgin iTunes 2007 | [`re5koJ`](https://prism.scott.ai/?g=re5koJ) |
-| Aurora Curtains | polar light curtains | [`c93P1x`](https://prism.scott.ai/?g=c93P1x) |
 
 The other fourteen — including Coral Garden, Embers Rising,
 Schooling Fish, Cherry Blossom Storm, Murmuration, Meteor Shower,
