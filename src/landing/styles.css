@@ -1721,12 +1721,15 @@ body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animat
 */
 .powered-by {
   position: fixed;
-  /* Sits above the bottom statusbar (--status-bar-height) with a
-     small gap. When art-mode fades the bar, the credit stays put and
-     reads as the only piece of chrome left on the page. */
-  bottom: calc(var(--status-bar-height) + var(--space-3));
-  left: 50%;
-  transform: translateX(-50%);
+  /* Bottom-LEFT, vertically centered over the bottom statusbar's
+     row. The pill is ~22px tall; the bar is --status-bar-height
+     (36px). bottom = (36 - 22) / 2 ≈ 7px lines the pill's center
+     up with the bar's center, so the credit reads as part of the
+     bar row visually even though it's a separate element that
+     doesn't fade. When chrome fades the bar disappears underneath
+     and the credit stays put as the only piece of chrome left. */
+  bottom: 7px;
+  left: var(--space-3);
   z-index: 50;
   display: inline-flex;
   align-items: baseline;
@@ -1748,13 +1751,10 @@ body.audio-live #play-with-sound .dot--breathe { background: var(--cyan); animat
   color: rgba(220, 230, 245, 0.85);
   background: rgba(0, 0, 0, 0.6);
 }
-/* When chrome is faded for art-mode, the bottom statusbar is gone;
-   drop the credit closer to the screen edge so it doesn't float in
-   awkward empty space. The smooth bottom transition handles the
-   movement. */
-body[data-chrome-idle] .powered-by {
-  bottom: var(--space-3);
-}
+/* In art-mode the bar fades. Credit stays exactly where it is
+   so the page reads continuously between modes — the visual
+   anchor in the lower-left doesn't shift on every chrome
+   transition. */
 .powered-by__pkg {
   color: rgba(120, 220, 240, 0.85);
   text-decoration: none;
