@@ -16,32 +16,32 @@
     "vibe": [
       "minimalist",
       "sparse",
-      "void",
+      "stark",
       "geometric"
     ],
-    "motion": 0.15,
+    "motion": 0.25,
     "palette_anchor": [
       "#000000",
-      "#1abc9c",
-      "#9b59b6",
-      "#2ecc71"
+      "#55efc4",
+      "#81ecec",
+      "#a29bfe"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.2,
-      "treble": 0.4
+      "mid": 0.3,
+      "treble": 0.2
     },
     "techniques": [
-      "custom_wave",
+      "audio_gating",
       "beat_burst",
-      "audio_gating"
+      "custom_wave"
     ],
-    "technical_notes": "A highly minimalist, sparse preset consisting almost entirely of a black void punctuated by brief, beat-gated geometric shapes. Custom shapes and waves (circles and lines) are triggered by the synthetic kick of the test signal, flashing in green, cyan, and purple before instantly decaying. The lack of persistent frame feedback through sampler_main or warp fields results in a stark, clean, and non-continuous visual style.",
+    "technical_notes": "Discrete custom shapes and lines are rendered as instantaneous beat bursts driven by the audio loop's transient peaks. A near-instantaneous decay rate prevents any frame feedback or persistent trails in sampler_main, maintaining a completely stark black background. The active shape color cycles through a basic palette on each detected beat event.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:53:40.416Z"
+    "captured_at": "2026-06-01T00:17:18.598Z"
   },
   "assets": {
     "textures_needed": [],

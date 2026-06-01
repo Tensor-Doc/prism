@@ -43,8 +43,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg"
+    "video": "/videos/milkdrop_flexi-fishbrain-martin-witchery.webm",
+    "thumb": "/thumbs/milkdrop_flexi-fishbrain-martin-witchery.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -53,6 +53,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (420947 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (456037 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

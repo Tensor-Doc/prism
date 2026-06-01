@@ -14,32 +14,31 @@
   },
   "annotation": {
     "vibe": [
+      "void",
       "minimalist",
       "sparse",
-      "void",
-      "dark"
+      "stark"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#d000e0"
+      "#8a008a"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.2,
-      "treble": 0.6
+      "bass": 0.1,
+      "mid": 0.1,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
-      "beat_burst",
       "audio_gating"
     ],
-    "technical_notes": "Discrete custom shapes, rendering as minimalist purple circles and horizontal lines, are gated by transient peaks in the test signal. A high decay rate ensures the screen remains almost entirely black between triggers, with no frame feedback or sampler_main accumulation. The resulting aesthetic is extremely sparse and vector-like.",
+    "technical_notes": "An extremely sparse and minimalist preset rendering a black void punctuated only by a single custom shape circle and occasional thin line segments. The position and visibility of the circle are gated by the audio loop's high frequencies, while a high decay rate ensures no persistent trails or feedback remain in sampler_main.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:05:48.291Z"
+    "captured_at": "2026-06-01T01:23:26.873Z"
   },
   "assets": {
     "textures_needed": [],

@@ -16,28 +16,29 @@
     "vibe": [
       "minimalist",
       "sparse",
-      "sterile",
-      "dark"
+      "stark",
+      "dark",
+      "void"
     ],
-    "motion": 0.15,
+    "motion": 0.08,
     "palette_anchor": [
       "#000000",
-      "#9ca3db"
+      "#a5abf2"
     ],
     "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.5,
-      "treble": 0.3
+      "bass": 0.1,
+      "mid": 0.3,
+      "treble": 0.4
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A single custom wave element renders the raw audio waveform horizontally across a pitch-black screen. The absence of frame feedback or warp shaders results in a stark, instantaneous oscilloscope presentation. The wave's vertical displacement and thickness modulate directly with the amplitude of the synthetic test signal.",
+    "technical_notes": "A highly minimalist oscilloscope-style rendering utilizing a custom_wave to display the raw audio waveform. The horizontal wave ripples gently in response to mid and treble frequencies against a solid black background, while a secondary diagonal line remains relatively static. Lacks any frame_feedback or warp_field, resulting in an instantaneous, zero-decay visual state.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:50:12.778Z"
+    "captured_at": "2026-05-31T23:02:21.487Z"
   },
   "assets": {
     "textures_needed": [

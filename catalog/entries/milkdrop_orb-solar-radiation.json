@@ -14,37 +14,37 @@
   },
   "annotation": {
     "vibe": [
-      "kinetic",
       "geometric",
-      "stroboscopic",
+      "kinetic",
+      "pulsating",
       "kaleidoscopic"
     ],
     "motion": 0.85,
     "palette_anchor": [
-      "#ffcc00",
       "#0000ff",
-      "#e0115f",
-      "#ff6600"
+      "#ffcc00",
+      "#ff00ff",
+      "#ff3300"
     ],
     "audio_affinity": {
-      "bass": 0.95,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.6
     },
     "techniques": [
+      "custom_wave",
       "audio_gating",
       "beat_burst",
-      "domain_repetition",
-      "custom_wave",
       "hue_cycle",
-      "frame_feedback"
+      "frame_feedback",
+      "domain_repetition"
     ],
-    "technical_notes": "A highly dynamic, beat-gated preset where each synthetic kick triggers a state transition, altering custom shape equations and radial symmetry parameters via q-variable registers. The rendering utilizes custom shapes with rapid hue cycling, while a high decay rate ensures snappy transitions between distinct geometric states. Radial repetition and rotation are modulated by smoothed audio bands, creating a kaleidoscopic sequence of abstract floral and star-like patterns.",
+    "technical_notes": "Custom waves and shapes are rendered with radial symmetry, forming intricate geometric stars and floral patterns that react dynamically to the audio. Aggressive audio gating on bass hits triggers instant color palette shifts and scale jumps, while a zoom-heavy feedback loop in sampler_main creates a deep tunnel effect. The rapid decay rate ensures high-contrast, strobing transitions between active states and near-black voids.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:37:18.410Z"
+    "captured_at": "2026-05-31T22:48:48.910Z"
   },
   "assets": {
     "textures_needed": [],

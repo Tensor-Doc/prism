@@ -15,34 +15,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "digital",
       "sparse",
-      "rhythmic"
+      "stark",
+      "void"
     ],
-    "motion": 0.3,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#d4af37",
-      "#00ffff",
-      "#ff4500"
+      "#d4e878",
+      "#ffffff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.3
+      "mid": 0.2,
+      "treble": 0.2
     },
     "techniques": [
-      "audio_gating",
+      "beat_burst",
       "custom_wave",
-      "hue_cycle",
-      "domain_repetition"
+      "audio_gating"
     ],
-    "technical_notes": "A series of vertical custom waves are arranged via domain repetition across the screen, modulated by a central horizontal deformation. Extreme audio gating causes the entire grid to snap to black in coordination with the synthetic test signal's decay. The active lines undergo a rapid hue cycle, shifting from gold to red and cyan before gating off.",
+    "technical_notes": "The visualizer remains mostly dark, punctuated by brief, beat-gated bursts of vertical dashed lines. These lines appear as a structured grid of custom waves that flash in response to the audio's transient peaks. High decay rates ensure the screen instantly returns to black, creating a stark, minimalist presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:35:49.737Z"
+    "captured_at": "2026-05-31T22:47:21.382Z"
   },
   "assets": {
     "textures_needed": [

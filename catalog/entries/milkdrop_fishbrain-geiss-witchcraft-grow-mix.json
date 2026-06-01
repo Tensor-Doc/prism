@@ -15,29 +15,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "sparse",
       "stark",
       "oscilloscope",
       "void"
     ],
-    "motion": 0.15,
+    "motion": 0.12,
     "palette_anchor": [
-      "#a2f080",
+      "#a2f06c",
       "#000000"
     ],
     "audio_affinity": {
       "bass": 0.2,
-      "mid": 0.6,
-      "treble": 0.5
+      "mid": 0.5,
+      "treble": 0.7
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist oscilloscope-style rendering utilizing a custom_wave to plot the raw waveform of the synthetic test signal. The decay is set to maximum, preventing any frame feedback or persistent trails in sampler_main, resulting in a stark, high-contrast black void. The pale green line modulates its vertical displacement directly in response to the audio loop's mid and treble frequencies.",
+    "technical_notes": "A highly minimalist oscilloscope emulation displaying a raw audio waveform via a custom_wave. The preset lacks frame feedback or warp shaders, leaving a stark black background where only the real-time treble and mid-frequency ripples of the audio loop deform the green vector line.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:53:09.455Z"
+    "captured_at": "2026-06-01T00:16:08.177Z"
   },
   "assets": {
     "textures_needed": [],

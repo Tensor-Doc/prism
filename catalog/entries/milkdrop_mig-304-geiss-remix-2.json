@@ -14,36 +14,35 @@
   },
   "annotation": {
     "vibe": [
+      "energetic",
+      "electric",
       "stark",
-      "kinetic",
-      "glitchy",
-      "high-contrast"
+      "dynamic"
     ],
     "motion": 0.75,
     "palette_anchor": [
-      "#ffeb00",
-      "#e60000",
-      "#3a00e6",
+      "#ffd700",
+      "#ff0000",
+      "#3f51b5",
       "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.9,
+      "bass": 0.85,
       "mid": 0.5,
       "treble": 0.4
     },
     "techniques": [
-      "frame_feedback",
       "audio_gating",
       "beat_burst",
-      "chromatic_split",
-      "custom_wave"
+      "frame_feedback",
+      "warp_field"
     ],
-    "technical_notes": "A central custom wave forms a wispy blue flame, while a highly reactive, chromatically split polygon sweeps across the canvas. The geometry's scale and visibility are gated by the bass threshold of the synthetic test signal, causing sudden blackouts and expansions. Feedback through sampler_main creates sharp RGB-split trails along the edges of the moving block.",
+    "technical_notes": "A sharp, high-contrast wedge shape scales and rotates dynamically, driven by bass energy from the music. A delicate, blue-violet custom wave twists at the center in response to mid-frequencies. High decay in the feedback loop ensures the bright yellow and red sweeps recede quickly, maintaining a stark, strobing aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:32:30.363Z"
+    "captured_at": "2026-05-31T23:50:55.005Z"
   },
   "assets": {
     "textures_needed": [],

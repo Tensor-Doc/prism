@@ -16,28 +16,28 @@
     "vibe": [
       "minimalist",
       "stark",
-      "void",
-      "oscilloscope"
+      "oscilloscope",
+      "dark"
     ],
-    "motion": 0.25,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#d60000"
+      "#d10a10"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.8,
-      "treble": 0.5
+      "bass": 0.5,
+      "mid": 0.7,
+      "treble": 0.4
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist custom_wave renders a thin red line across a dark void, directly plotting the waveform of the synthetic test signal. The decay rate is set to maximum, leaving no persistent trails or frame feedback in sampler_main. The vertical displacement and wave amplitude react dynamically to the mid and treble frequencies of the audio loop.",
+    "technical_notes": "A single horizontal custom_wave acts as a classic oscilloscope, deforming directly in response to the audio waveform. The preset features an extremely high decay rate on a pure black background, leaving no persistent trails or frame feedback. The rendering is stripped down to its bare essentials, visualizing raw amplitude modulation in a stark red hue.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:59:30.352Z"
+    "captured_at": "2026-06-01T00:25:32.525Z"
   },
   "assets": {
     "textures_needed": [],

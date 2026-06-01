@@ -15,11 +15,11 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "sparse",
       "stark",
-      "oscilloscope",
-      "void"
+      "dark"
     ],
-    "motion": 0.35,
+    "motion": 0.2,
     "palette_anchor": [
       "#00ff00",
       "#000000"
@@ -30,15 +30,14 @@
       "treble": 0.2
     },
     "techniques": [
-      "custom_wave",
-      "audio_gating"
+      "custom_wave"
     ],
-    "technical_notes": "A minimalist custom wave rendering a single horizontal green waveform against a pitch-black background. The decay rate is set to maximum, leaving zero persistent trails or frame feedback in sampler_main. The wave's amplitude and vertical displacement are directly driven by the bass and mid frequencies of the synthetic test signal, creating a clean, classic oscilloscope aesthetic.",
+    "technical_notes": "A minimalist custom wave rendering of the audio waveform in a vibrant green hue against a solid black background. The preset features no frame feedback or warp field, resulting in a clean, zero-decay oscilloscope effect that directly tracks the amplitude of the audio. The wave's vertical displacement is tightly coupled to the audio signal's real-time voltage.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:55:54.002Z"
+    "captured_at": "2026-06-01T00:20:52.340Z"
   },
   "assets": {
     "textures_needed": [],

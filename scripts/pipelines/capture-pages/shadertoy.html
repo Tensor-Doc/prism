@@ -38,6 +38,16 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
+      // Pre-create the WebGL2 context with preserveDrawingBuffer: true so
+      // canvas.captureStream() reads non-empty frames.
+      const preGl = canvas.getContext("webgl2", {
+        alpha: false,
+        antialias: false,
+        preserveDrawingBuffer: true,
+        powerPreference: "high-performance",
+      });
+      console.log("[capture] context attributes:", JSON.stringify(preGl.getContextAttributes()));
+
       const audioCtx = new AudioContext();
 
       async function tryRecordedTestSignal() {

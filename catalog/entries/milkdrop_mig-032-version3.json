@@ -14,32 +14,33 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
-      "oscilloscope",
-      "stark"
+      "sparse",
+      "stark",
+      "dark",
+      "fluid"
     ],
-    "motion": 0.3,
+    "motion": 0.25,
     "palette_anchor": [
       "#0000ff",
-      "#00e5ff",
+      "#00ffff",
       "#5c5cff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.3
+      "mid": 0.4,
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave",
-      "audio_gating",
-      "hue_cycle"
+      "hue_cycle",
+      "audio_gating"
     ],
-    "technical_notes": "A single custom wave is rendered horizontally across a black void, directly driven by the test signal's waveform. The wave's amplitude and complexity scale with the synthetic kick, while its color cycles through cool tones (blue, cyan, and indigo) via a slow hue rotation. No frame feedback (sampler_main is cleared or decay is set to 1.0) or warp field is present, resulting in a stark, oscilloscope-like aesthetic.",
+    "technical_notes": "A minimalist custom wave rendered as a single horizontal ribbon across a black background. The wave's amplitude and complex deformation are driven directly by the audio loop's bass frequencies, while its color cycles through cool tones of blue, cyan, and purple. Lacks any frame feedback or warp shaders, resulting in zero persistent trails.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:24:49.147Z"
+    "captured_at": "2026-05-31T23:38:44.959Z"
   },
   "assets": {
     "textures_needed": [],

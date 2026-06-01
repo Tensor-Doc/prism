@@ -15,34 +15,34 @@
   "annotation": {
     "vibe": [
       "kinetic",
-      "electric",
-      "digital",
-      "hypnotic"
+      "optical",
+      "geometric",
+      "vibrant"
     ],
     "motion": 0.75,
     "palette_anchor": [
-      "#101a75",
-      "#f7f02d",
-      "#b3156c"
+      "#1a1aff",
+      "#f0e61c",
+      "#e61c5c"
     ],
     "audio_affinity": {
       "bass": 0.85,
       "mid": 0.5,
-      "treble": 0.4
+      "treble": 0.6
     },
     "techniques": [
       "warp_field",
-      "audio_gating",
-      "beat_burst",
       "frame_feedback",
-      "hue_cycle"
+      "hue_cycle",
+      "audio_gating",
+      "beat_burst"
     ],
-    "technical_notes": "A spiral warp field drives a dense array of motion vectors toward a central sink, creating a high-frequency vortex. A sharp geometric sector is gated to the bass of the synthetic test signal, bursting into bright yellow and magenta states on beat hits. High-frequency line persistence is maintained via frame feedback in sampler_main.",
-    "brand_safe": true,
+    "technical_notes": "A per-pixel warp shader drives a spiraling vortex motion field, twisting the feedback loop into a tight central sink. A rotating wedge shape is drawn into the buffer, with its color and brightness modulated by the audio's bass and treble bands. High-frequency pulsing on beats triggers sudden color shifts and expansion, while persistent trails are maintained via sampler_main feedback.",
+    "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:34:14.127Z"
+    "captured_at": "2026-05-31T23:52:56.338Z"
   },
   "assets": {
     "textures_needed": [],

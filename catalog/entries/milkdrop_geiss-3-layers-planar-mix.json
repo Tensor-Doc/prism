@@ -15,12 +15,12 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
-      "dark",
       "sparse",
-      "stark"
+      "stark",
+      "dark",
+      "oscilloscope"
     ],
-    "motion": 0.1,
+    "motion": 0.12,
     "palette_anchor": [
       "#000000",
       "#ffffff"
@@ -28,17 +28,17 @@
     "audio_affinity": {
       "bass": 0.2,
       "mid": 0.4,
-      "treble": 0.3
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "Two custom_wave elements are rendered as thin, stark white lines across a black void. They display the raw waveform of the test signal with minimal processing, slowly rotating in orientation over the 15-second capture. No frame feedback or warp shaders are active, resulting in a completely clean, zero-decay presentation.",
+    "technical_notes": "Two custom waves are rendered as thin, single-pixel lines across a dark viewport, directly mapping the audio waveform. Per-frame equations slowly rotate the coordinate space of the waves over time. The lack of frame feedback or decay results in a stark, oscilloscope-like presentation with no persistent trails.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:25:42.117Z"
+    "captured_at": "2026-05-31T21:23:49.223Z"
   },
   "assets": {
     "textures_needed": [],

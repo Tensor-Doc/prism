@@ -15,31 +15,28 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "geometric",
-      "radar",
       "stark",
-      "void"
+      "sparse",
+      "geometric"
     ],
-    "motion": 0.3,
+    "motion": 0.15,
     "palette_anchor": [
-      "#00f0ff",
-      "#000000"
+      "#00f3ff"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.3,
-      "treble": 0.2
+      "bass": 0.4,
+      "mid": 0.2,
+      "treble": 0.1
     },
     "techniques": [
-      "custom_wave",
-      "audio_gating"
+      "custom_wave"
     ],
-    "technical_notes": "A minimalist custom wave renders a sharp cyan circle containing a rotating wedge sweep. The outer ring's vertices deform dynamically in response to the bass frequencies of the synthetic test signal, while the background remains a pure black void. Lacks any frame feedback, warp shaders, or decay trails, resulting in an exceptionally clean, vector-like aesthetic.",
+    "technical_notes": "A minimalist custom wave renders a cyan circle and a rotating wedge against a black background. The outer circle's vertices deform slightly in response to the audio's bass frequencies, while the wedge rotates at a constant rate. There is no frame feedback or complex shader warp, resulting in a stark, high-contrast vector aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:01:30.636Z"
+    "captured_at": "2026-06-01T00:27:41.427Z"
   },
   "assets": {
     "textures_needed": [],

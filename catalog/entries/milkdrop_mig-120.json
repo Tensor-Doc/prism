@@ -13,33 +13,34 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
       "stark",
-      "monochrome",
-      "void"
+      "minimalist",
+      "dark",
+      "void",
+      "monochrome"
     ],
     "motion": 0.2,
     "palette_anchor": [
       "#000000",
       "#ffffff",
-      "#222222"
+      "#333333"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.3,
-      "treble": 0.3
+      "mid": 0.1,
+      "treble": 0.1
     },
     "techniques": [
       "audio_gating",
       "beat_burst",
       "custom_wave"
     ],
-    "technical_notes": "A minimalist, high-contrast preset dominated by a central dark, fibrous custom shape that vibrates subtly to mid-frequency bands. Discrete beat-gated events trigger a stark grid of vertical white lines across the screen, driven by the bass threshold of the synthetic test signal. The high decay rate ensures immediate return to a dark, void-like state between beats.",
+    "technical_notes": "A stark monochrome composition centered around a dense custom wave starburst over a faint radial gradient. Strong transients in the audio trigger beat-gated vertical lines that instantly segment and decay into the background. The overall presentation is highly minimalist, relying on sudden, high-contrast bursts to punctuate the darkness.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:30:47.018Z"
+    "captured_at": "2026-05-31T23:45:00.693Z"
   },
   "assets": {
     "textures_needed": [],

@@ -14,33 +14,33 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
       "void",
-      "dark",
-      "sparse"
+      "minimalist",
+      "sparse",
+      "dark"
     ],
-    "motion": 0.1,
+    "motion": 0.08,
     "palette_anchor": [
       "#000000",
-      "#142414",
-      "#1c0d24"
+      "#1a2416",
+      "#251525",
+      "#0c1b2d"
     ],
     "audio_affinity": {
-      "bass": 0.1,
-      "mid": 0.4,
-      "treble": 0.6
+      "bass": 0.05,
+      "mid": 0.15,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
-      "audio_gating",
-      "hue_cycle"
+      "decay_trail"
     ],
-    "technical_notes": "The preset presents a minimalist dark void where the main screen remains black due to instant decay. A solid outer border slowly cycles its hue over time, while thin, sketchy custom waves flash sporadically near the screen edges in response to high-frequency transients in the synthetic test signal. No frame feedback or warp fields are active, leaving the visual field almost entirely empty.",
+    "technical_notes": "A highly minimalist preset consisting of a solid black canvas framed by a color-cycling border. Occasional thin, fleeting custom waves react to high-frequency transients in the audio, disappearing almost instantly due to a high decay rate. The overall composition remains dark and empty for the vast majority of the duration.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:41:24.115Z"
+    "captured_at": "2026-06-01T00:01:06.378Z"
   },
   "assets": {
     "textures_needed": [],

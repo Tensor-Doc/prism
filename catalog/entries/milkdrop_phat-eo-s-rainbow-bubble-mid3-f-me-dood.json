@@ -15,16 +15,16 @@
   "annotation": {
     "vibe": [
       "psychedelic",
-      "hypnotic",
-      "geometric",
-      "trippy"
+      "kinetic",
+      "organic",
+      "hypnotic"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
       "#00ff00",
       "#0000ff",
-      "#ff0000",
-      "#800080"
+      "#800080",
+      "#d01010"
     ],
     "audio_affinity": {
       "bass": 0.8,
@@ -35,15 +35,15 @@
       "frame_feedback",
       "warp_field",
       "hue_cycle",
-      "domain_repetition",
+      "custom_wave",
       "decay_trail"
     ],
-    "technical_notes": "A per-pixel warp shader drives a complex feedback loop through sampler_main, creating dense concentric wave patterns and nested tunnel structures. A rapid hue_cycle continuously rotates the palette, while the synthetic test signal modulates the warp scale and zoom parameters to trigger dramatic structural shifts. The low decay rate preserves sharp, high-frequency lines that define the boundaries of the morphing geometry.",
+    "technical_notes": "Per-pixel warp equations generate a highly structured, oscillating feedback loop resembling a complex moiré pattern. The central morphing shape is modulated by the audio's bass frequencies, while rapid hue cycling shifts the palette across high-contrast primary pairs. Low decay in sampler_main preserves the tightly packed wave boundaries, creating a deep, tunnel-like feedback effect.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:39:57.380Z"
+    "captured_at": "2026-05-31T22:51:47.116Z"
   },
   "assets": {
     "textures_needed": [],

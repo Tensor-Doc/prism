@@ -16,31 +16,33 @@
     "vibe": [
       "minimalist",
       "sparse",
-      "cosmic",
-      "dark"
+      "void",
+      "cosmic"
     ],
-    "motion": 0.3,
+    "motion": 0.25,
     "palette_anchor": [
-      "#00ffff",
+      "#000000",
+      "#00f0ff",
       "#ff0055",
-      "#000000"
+      "#0055ff"
     ],
     "audio_affinity": {
       "bass": 0.2,
-      "mid": 0.4,
-      "treble": 0.7
+      "mid": 0.3,
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
-      "hue_cycle",
-      "decay_trail"
+      "decay_trail",
+      "frame_feedback",
+      "hue_cycle"
     ],
-    "technical_notes": "A custom wave is rendered as a parametric orbiting ribbon against a dark void, with its vertices modulated by the high-frequency components of the synthetic test signal. A high decay rate in the feedback loop ensures that trails fade rapidly, leaving only a sparse, snappy trace. The ribbon's color cycles dynamically through a simple hue rotation scheme.",
+    "technical_notes": "A single custom wave ribbon orbits in a dark void, driven by parametric equations. High decay rate in the frame feedback loop keeps the screen mostly black, leaving only brief, fading trails of the moving emitter. Subtle high-frequency audio modulation jitter is visible along the ribbon's path.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:32:06.521Z"
+    "captured_at": "2026-05-31T21:31:07.054Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,33 +15,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "linear",
+      "sparse",
       "dark",
-      "fluid"
+      "void"
     ],
-    "motion": 0.35,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#d48a37",
-      "#8c2d38"
+      "#a83232",
+      "#e07a5f"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.3
+      "mid": 0.3,
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave",
-      "decay_trail",
       "audio_gating",
-      "frame_feedback"
+      "decay_trail"
     ],
-    "technical_notes": "Custom waves render horizontal oscilloscopes that multiply and stack via frame feedback in sampler_main. High-amplitude transients in the synthetic test signal trigger a dense cascade of golden, undulating lines modulated by bass attenuated. The low decay rate allows the wave trails to briefly persist before dissolving back into the dark void.",
+    "technical_notes": "Custom wave equations render horizontal undulating lines that are strongly gated by the bass of the audio, appearing as brief bursts before quickly decaying to black. The frame feedback uses a high decay rate, preventing persistent trails and maintaining a stark, minimalist aesthetic. The color palette is restricted to deep reds and warm ochres against a pure black background.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:36:54.694Z"
+    "captured_at": "2026-05-31T21:36:15.270Z"
   },
   "assets": {
     "textures_needed": [

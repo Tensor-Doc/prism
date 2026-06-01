@@ -15,29 +15,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
       "stark",
+      "technical",
+      "void",
       "sparse"
     ],
-    "motion": 0.1,
+    "motion": 0.12,
     "palette_anchor": [
-      "#000000",
-      "#ffffff"
+      "#ffffff",
+      "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.1,
-      "mid": 0.3,
-      "treble": 0.4
+      "bass": 0.5,
+      "mid": 0.5,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A highly minimalist preset consisting of a single custom_wave oscilloscope line rendered against a pitch-black background. The line exhibits high-frequency ripples in response to the mid and treble bands of the music, while a high decay rate ensures no persistent trails or frame feedback remain. The absence of warp shaders or sampler_main feedback leaves the screen completely dark between activations.",
+    "technical_notes": "A single custom wave acts as a minimalist oscilloscope line, plotting the raw audio waveform across a black background. The line slowly rotates over time via per-frame equations modulating its angle. With no frame feedback or decay trails, the rendering remains stark, clean, and instantaneous.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:27:14.468Z"
+    "captured_at": "2026-05-31T21:25:30.778Z"
   },
   "assets": {
     "textures_needed": [],

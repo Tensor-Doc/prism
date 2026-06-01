@@ -17,29 +17,29 @@
       "minimalist",
       "geometric",
       "dark",
-      "sculptural"
+      "stark"
     ],
-    "motion": 0.4,
+    "motion": 0.3,
     "palette_anchor": [
-      "#ff0022",
-      "#4b0082",
-      "#1100b8"
+      "#ff001a",
+      "#0d0080",
+      "#5c006b"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.4,
-      "treble": 0.3
+      "bass": 0.2,
+      "mid": 0.1,
+      "treble": 0.1
     },
     "techniques": [
       "custom_wave",
-      "audio_gating"
+      "cosine_palette"
     ],
-    "technical_notes": "A single custom wave is configured to render a faceted, twisting 3D ribbon composed of interconnected triangular meshes. The ribbon's rotation, scale, and deformation are modulated by the music's bass and mid bands, while the lack of frame feedback through sampler_main results in a perfectly clean, high-contrast render against a solid black background.",
-    "brand_safe": false,
+    "technical_notes": "A custom wave renders a braided, open-ring 3D mesh rotating against a black background. The vertex colors transition from red to blue, with high decay leaving no trails in the frame buffer. The motion is largely parametric, with subtle scale modulation driven by the bass.",
+    "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T20:08:47.344Z"
+    "captured_at": "2026-06-01T01:14:47.358Z"
   },
   "assets": {
     "textures_needed": [
@@ -47,8 +47,8 @@
         "name": "manyfish"
       }
     ],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-infused-with-the-spiral.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-infused-with-the-spiral.jpg"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-infused-with-the-spiral.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-infused-with-the-spiral.jpg"
   },
   "contribution": {
     "added_by": "scottspace",

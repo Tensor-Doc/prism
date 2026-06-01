@@ -13,36 +13,36 @@
   },
   "annotation": {
     "vibe": [
-      "dark",
       "strobe",
       "cosmic",
-      "void"
+      "kinetic",
+      "electric"
     ],
-    "motion": 0.65,
+    "motion": 0.75,
     "palette_anchor": [
       "#0a0a0a",
-      "#2c3d3d",
-      "#4a3f41",
-      "#f5eef0"
+      "#4de6d9",
+      "#ffffff",
+      "#4a3f43"
     ],
     "audio_affinity": {
       "bass": 0.9,
-      "mid": 0.4,
-      "treble": 0.5
+      "mid": 0.5,
+      "treble": 0.4
     },
     "techniques": [
-      "audio_gating",
       "beat_burst",
+      "bloom_glow",
       "warp_field",
-      "custom_wave",
-      "decay_trail"
+      "frame_feedback",
+      "custom_wave"
     ],
-    "technical_notes": "A high decay rate creates a dark, strobing void where explosive radial warp fields are gated to the bass of the synthetic test signal. During peak transients, custom waves rendering vertical lines and curved waveforms flash into view, composited with a bright bloom pass. The radial zoom and rotation are driven by attenuated audio bands, collapsing rapidly back into a near-black state.",
+    "technical_notes": "Beat-gated bursts trigger explosive full-screen flashes that bloom outwards using the blur pyramid via sampler_blur1 and sampler_blur2. Custom waves render concentric arcs and radial lines that expand rapidly on heavy bass hits. During quiet passages, the visualizer contracts into a dark, high-decay tunnel with a tiny central slit, driven by a subtle per-pixel warp field.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:34:47.904Z"
+    "captured_at": "2026-05-31T23:53:53.944Z"
   },
   "assets": {
     "textures_needed": [],

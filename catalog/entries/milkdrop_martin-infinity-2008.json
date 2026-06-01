@@ -15,14 +15,14 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
       "stark",
-      "mechanical"
+      "sparse",
+      "mechanical",
+      "dark"
     ],
     "motion": 0.1,
     "palette_anchor": [
-      "#000000",
-      "#ec008c"
+      "#ff007f','#000000"
     ],
     "audio_affinity": {
       "bass": 0,
@@ -32,12 +32,12 @@
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist custom shape or custom wave renders a circular outline and a rotating wedge resembling a radar sweep. The motion is driven by a slow, constant temporal rotation equation rather than the synthetic test signal, resulting in near-zero audio affinity. The background remains a stark black void with no frame feedback or warp field applied.",
+    "technical_notes": "A minimalist custom shape renders a simple pink circle and a rotating wedge against a solid black background. The motion is entirely procedural, driven by a constant time parameter with no apparent audio reactivity or frame feedback. The lack of decay or warp field results in a stark, clean vector aesthetic.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:23:37.973Z"
+    "captured_at": "2026-06-01T00:51:52.664Z"
   },
   "assets": {
     "textures_needed": [

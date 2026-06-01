@@ -14,36 +14,36 @@
   },
   "annotation": {
     "vibe": [
-      "dark",
-      "sparse",
-      "glitchy",
-      "chaotic"
+      "psychedelic",
+      "vortex",
+      "fluid",
+      "dark"
     ],
-    "motion": 0.6,
+    "motion": 0.75,
     "palette_anchor": [
       "#000000",
-      "#1a5c1a",
-      "#9c1c1c",
-      "#a81e80"
+      "#1b3a1a",
+      "#7a2b8a",
+      "#a2d149"
     ],
     "audio_affinity": {
-      "bass": 0.7,
+      "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.6
+      "treble": 0.7
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
       "custom_wave",
       "decay_trail",
-      "audio_gating"
+      "hue_cycle"
     ],
-    "technical_notes": "A high decay rate in the main buffer creates a dark, sparse environment where thin custom waves leave faint, swirling trails. A complex per-pixel warp field drives a spiral feedback pattern via sampler_main that stretches and shears on bass hits from the synthetic test signal. Camera zoom and rotation are modulated by smoothed audio bands, creating abrupt perspective shifts during high-amplitude transients.",
+    "technical_notes": "Custom waves drawn as dotted, multicolored trajectories are fed into a powerful rotational warp field. The per-pixel warp shader applies a spiraling zoom-and-rotate feedback loop driven by the audio's bass, drawing elements into a central vortex. Low decay in sampler_main creates persistent, fluid trails that mimic reaction-diffusion structures over time.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:45:42.354Z"
+    "captured_at": "2026-05-31T22:57:42.956Z"
   },
   "assets": {
     "textures_needed": [],

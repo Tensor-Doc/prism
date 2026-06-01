@@ -16,29 +16,29 @@
     "vibe": [
       "minimalist",
       "stark",
-      "monochrome",
-      "void",
-      "sparse"
+      "sparse",
+      "dark",
+      "void"
     ],
-    "motion": 0.1,
+    "motion": 0.05,
     "palette_anchor": [
       "#000000",
       "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0,
+      "bass": 0.1,
       "mid": 0.1,
-      "treble": 0.3
+      "treble": 0.1
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A stark, high-contrast monochrome preset displaying a single static white wedge extending from the bottom-left corner. Small, discrete tick marks flicker along the left edge of the viewport, reacting subtly to high-frequency transients in the synthetic test signal. The lack of frame feedback or warp fields results in an extremely sparse, nearly static composition.",
+    "technical_notes": "A highly minimalist, stark black-and-white preset featuring a static diagonal custom wave stretching from the bottom-left corner. Tiny, discrete tick marks along the left edge respond minimally to the audio's frequency bands. The scene lacks complex feedback loops, warp fields, or color shaders, maintaining a nearly static, void-like presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:57:46.756Z"
+    "captured_at": "2026-06-01T00:23:28.157Z"
   },
   "assets": {
     "textures_needed": [],

@@ -16,32 +16,31 @@
     "vibe": [
       "minimalist",
       "stark",
+      "void",
       "geometric",
-      "void"
+      "dark"
     ],
-    "motion": 0.25,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#0052ff",
-      "#001a66"
+      "#002288",
+      "#0055d4"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.1,
+      "mid": 0.2,
       "treble": 0.1
     },
     "techniques": [
-      "custom_wave",
       "audio_gating",
-      "beat_burst",
-      "decay_trail"
+      "beat_burst"
     ],
-    "technical_notes": "A sharp geometric custom wave wedge is instantiated and scaled by beat-gated triggers from the synthetic kick. The preset relies on a high decay rate to quickly dim the shape back into the black void between beats, creating a stark, high-contrast visual. Minimal frame feedback or warp field calculations are present, leaving the background entirely dark.",
+    "technical_notes": "A highly minimalist custom shape rendering a sharp blue gradient wedge that decays in width over time. Discrete beat detection on the bass attenuated of the audio triggers sudden horizontal flips and position resets of the wedge. The background remains a pure black void with zero frame feedback or warp field modulation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:30:08.151Z"
+    "captured_at": "2026-06-01T00:58:20.925Z"
   },
   "assets": {
     "textures_needed": [

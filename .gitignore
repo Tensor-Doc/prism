@@ -35,3 +35,16 @@ public/catalog/index.json
 # copies live in public/presets/ + public/textures/ after `pnpm prism
 # ingest`; favorites/ stays local-only.
 favorites/
+
+# Per-iteration shader generation outputs (atlases, screenshots,
+# critiques). The source of truth is concepts/shaders.json +
+# concepts/prompts/; iter-NNN directories are regeneratable scratch.
+concepts/iterations/
+
+# Claude Code local state (per-user; not for the repo).
+.claude/
+
+# Standalone smoke-test scripts written during particles backend
+# bring-up. Useful as references but not stable enough for CI.
+scripts/particles-smoke.mjs
+scripts/particles-frames.mjs

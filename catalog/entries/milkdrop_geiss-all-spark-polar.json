@@ -16,29 +16,28 @@
     "vibe": [
       "minimalist",
       "stark",
-      "void",
-      "monochrome",
-      "oscilloscope"
+      "sparse",
+      "dark"
     ],
-    "motion": 0.3,
+    "motion": 0.25,
     "palette_anchor": [
       "#000000",
-      "#999999"
+      "#9e9e9e"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.8,
-      "treble": 0.3
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist oscilloscope-style preset rendering a single horizontal custom wave against a solid black background. The waveform's amplitude and vertical displacement react directly to the music's mid and bass frequencies. A high decay rate prevents any persistent trails, maintaining a stark, raw signal aesthetic with no feedback or post-processing shaders.",
+    "technical_notes": "A single custom wave renders the raw audio waveform as a sharp, filled polygon spanning horizontally across a black screen. The lack of frame feedback and warp filtering results in a stark, instantaneous oscilloscope display. The vertical displacement is directly gated by the audio amplitude, creating sharp geometric peaks during loud transients.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:27:43.023Z"
+    "captured_at": "2026-05-31T21:26:06.493Z"
   },
   "assets": {
     "textures_needed": [],

@@ -17,34 +17,33 @@
       "organic",
       "psychedelic",
       "microscopic",
-      "golden",
-      "solar"
+      "radiant"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
-      "#e6c335",
-      "#4a2e0b",
-      "#d4b26f"
+      "#fcd116",
+      "#8b5a2b",
+      "#fff8dc",
+      "#3d2314"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.7
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.5
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
+      "audio_gating",
       "domain_repetition",
-      "custom_wave",
-      "bloom_glow",
-      "decay_trail"
+      "bloom_glow"
     ],
-    "technical_notes": "A complex radial warp field combined with domain repetition creates a recursive, sunflower-like structure. Custom waves are modulated by the test signal's bass and treble to form writhing, tentacle-like structures radiating from a central core. Frame feedback via sampler_main coupled with a high-brightness composite shader produces a shimmering, metallic golden-bronze texture that reacts dynamically to the audio loop.",
+    "technical_notes": "An infinite zoom feedback loop through sampler_main creates a deep radial tunnel of organic, cellular structures. The per-pixel warp shader applies a complex sinusoidal distortion that makes the flagella-like tendrils wriggle in sync with the mids and treble of the audio. Dynamic scaling and brightness spikes are heavily gated by the bass, causing the golden core to burst outward on strong beats.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:43:04.163Z"
+    "captured_at": "2026-06-01T00:03:39.376Z"
   },
   "assets": {
     "textures_needed": [],

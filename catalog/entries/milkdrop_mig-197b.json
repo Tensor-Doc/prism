@@ -14,18 +14,18 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
+      "sparse",
       "stark",
-      "isolated"
+      "dark"
     ],
-    "motion": 0.2,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#3b82f6"
+      "#2b7cff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.4,
+      "mid": 0.5,
       "treble": 0.3
     },
     "techniques": [
@@ -33,12 +33,12 @@
       "audio_gating",
       "beat_burst"
     ],
-    "technical_notes": "A single blue custom wave or shape is rendered in the center of a black screen, modulated directly by the test signal's bass attenuated. High decay rate prevents any persistent trails, leaving a stark, minimalist void where only the blue vector shape reacts to transient beats.",
+    "technical_notes": "A minimalist preset featuring a custom wave rendered as a blue vector shape in the center of a dark void. The shape is highly audio-gated, expanding and distorting into complex calligraphic loops during intense transients in the audio, while decaying rapidly back to a near-invisible point during quiet passages. High decay rate prevents persistent trails, keeping the composition stark and focused.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:31:50.262Z"
+    "captured_at": "2026-05-31T23:50:15.167Z"
   },
   "assets": {
     "textures_needed": [],

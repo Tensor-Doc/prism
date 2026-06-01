@@ -11,15 +11,17 @@
 // returns synchronously after kicking off the load and updating state.
 
 import type { MilkdropBg } from "./backends/milkdrop";
+import type { ParticlesBg } from "./backends/particles";
 import type { ShadertoyBg } from "./backends/shadertoy";
 import { nodesByRole, type PrismGraph } from "./types";
 
 export interface RuntimeContext {
   milkdrop: MilkdropBg;
   shadertoy: ShadertoyBg;
+  particles?: ParticlesBg;
   /** Called to toggle which backend's canvas is visible.
    *  Implementations set CSS opacity/display on the two canvases. */
-  setActiveBackend: (which: "milkdrop" | "shadertoy") => void;
+  setActiveBackend: (which: "milkdrop" | "shadertoy" | "particles") => void;
 }
 
 export interface ApplyResult {
@@ -28,7 +30,7 @@ export interface ApplyResult {
   /** Display name of the preset that was loaded, if any. */
   presetName?: string;
   /** Which backend handled this graph. */
-  backend?: "milkdrop" | "shadertoy";
+  backend?: "milkdrop" | "shadertoy" | "particles";
 }
 
 export class GraphRuntime {
@@ -68,6 +70,29 @@ export class GraphRuntime {
       }
       this.active = graph;
       return { ok: true, presetName: loaded, backend: "milkdrop" };
+    }
+
+    if (node.type === "lf.particles") {
+      if (!this.ctx.particles) {
+        return { ok: false, error: "lf.particles requires particles backend in runtime context" };
+      }
+      const url = node.params?.preset_url;
+      if (typeof url !== "string") {
+        return { ok: false, error: "lf.particles missing preset_url" };
+      }
+      const imageUrl = node.params?.image_url;
+      this.ctx.setActiveBackend("particles");
+      void this.ctx.particles.loadFromUrl(url).catch((err: Error) => {
+        console.warn("[runtime] particles loadFromUrl failed:", err.message);
+      });
+      if (typeof imageUrl === "string") {
+        void this.ctx.particles.bindImage(imageUrl).catch((err: Error) => {
+          console.warn("[runtime] particles bindImage failed:", err.message);
+        });
+      }
+      this.active = graph;
+      const name = url.split("/").pop()?.replace(/\.json$/, "") ?? url;
+      return { ok: true, presetName: name, backend: "particles" };
     }
 
     if (node.type === "lf.shadertoy") {

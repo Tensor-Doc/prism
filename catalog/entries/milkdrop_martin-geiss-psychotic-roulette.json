@@ -17,30 +17,30 @@
       "minimalist",
       "stark",
       "geometric",
-      "angular",
-      "glitchy"
+      "monochrome",
+      "angular"
     ],
-    "motion": 0.75,
+    "motion": 0.6,
     "palette_anchor": [
-      "#ffffff",
-      "#000000"
+      "#000000",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.9,
-      "mid": 0.4,
-      "treble": 0.3
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
       "beat_burst"
     ],
-    "technical_notes": "Stark, high-contrast custom shapes are rendered as sharp polygonal ribbons with zero frame feedback, resulting in a clean monochrome aesthetic. The scale and vertex coordinates of these polygons are modulated directly by the bass frequencies of the synthetic test signal, causing sudden geometric expansions on beat hits. The lack of decay or sampler_main feedback ensures instantaneous transitions between frames.",
+    "technical_notes": "A stark monochrome custom wave renders sharp, folding geometric polygons directly onto a black background. The vertices snap and scale dynamically in response to the audio loop's bass transients and treble spikes. With no frame feedback or decay trails, the rendering remains perfectly crisp and high-contrast.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:13:40.987Z"
+    "captured_at": "2026-06-01T00:41:14.078Z"
   },
   "assets": {
     "textures_needed": [],

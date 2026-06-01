@@ -14,29 +14,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "stark",
       "sparse",
+      "stark",
+      "dark",
       "void"
     ],
-    "motion": 0.1,
+    "motion": 0.08,
     "palette_anchor": [
       "#000000",
-      "#9ca1cc"
+      "#9ba0f5"
     ],
     "audio_affinity": {
-      "bass": 0.1,
-      "mid": 0.3,
-      "treble": 0.4
+      "bass": 0.05,
+      "mid": 0.2,
+      "treble": 0.15
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A highly minimalist preset consisting of a single custom wave rendered as a thin, pale lavender oscilloscope line against a pitch-black background. The wave oscillates in direct response to the mid and treble frequencies of the synthetic test signal, with no frame feedback or warp field applied. The decay is instantaneous, leaving no persistent trails.",
+    "technical_notes": "A custom wave renders a thin, horizontal oscillographic waveform across the screen, while a second custom shape draws a sharp diagonal wedge. The absence of frame feedback via sampler_main keeps the background completely black, resulting in a stark, minimalist aesthetic. Audio reactivity is limited to subtle vertical displacement of the wave vertices driven by the mid and treble bands of the music.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:28:11.755Z"
+    "captured_at": "2026-05-31T23:42:22.479Z"
   },
   "assets": {
     "textures_needed": [],

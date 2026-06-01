@@ -15,33 +15,31 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "geometric",
       "stark",
-      "graphic"
+      "geometric",
+      "sparse"
     ],
-    "motion": 0.4,
+    "motion": 0.1,
     "palette_anchor": [
+      "#000000",
       "#ffffff",
-      "#ffffdd",
-      "#ffff33",
-      "#ccffcc"
+      "#ffff55"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.3,
-      "treble": 0.5
+      "mid": 0.1,
+      "treble": 0.1
     },
     "techniques": [
       "audio_gating",
-      "beat_burst",
       "custom_wave"
     ],
-    "technical_notes": "Discrete custom shapes are rendered with flat coloring, triggered directly by beat detection on the synthetic test signal. The preset uses a very high decay rate to instantly clear the screen between hits, completely avoiding frame feedback or warp fields. The resulting aesthetic is a stark, hard-edged minimalist composition with no post-processing or blur pyramid sampling.",
+    "technical_notes": "A minimalist custom shape with a rounded corner is rendered in the bottom-right quadrant, flashing off and on in response to the audio's bass beats. The shape's color modulates from stark white to a bright yellow. No complex warp field or frame feedback is active, leaving a clean, high-contrast geometric composition.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:34:47.077Z"
+    "captured_at": "2026-05-31T21:33:58.255Z"
   },
   "assets": {
     "textures_needed": [],

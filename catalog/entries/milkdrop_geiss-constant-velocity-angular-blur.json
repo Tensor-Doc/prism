@@ -15,10 +15,10 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "stark",
       "sparse",
-      "geometric",
-      "void"
+      "stark",
+      "void",
+      "dark"
     ],
     "motion": 0.1,
     "palette_anchor": [
@@ -26,20 +26,20 @@
       "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.3,
-      "treble": 0.2
+      "bass": 0.2,
+      "mid": 0.6,
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave circle is rendered on a black background, with its radial boundary modulated by the audio loop's frequency bands. The preset lacks any frame feedback or warp shaders, resulting in a stark, high-contrast, zero-decay visual state. The motion is driven entirely by real-time vertex displacement on the custom wave.",
+    "technical_notes": "A single custom wave is rendered as a closed circular loop on a black background, with its vertices modulated by the audio loop. High-frequency ripples along the perimeter react directly to treble and mid bands. The preset features no frame feedback or warp shader, resulting in an extremely stark, zero-decay minimalist presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:35:18.866Z"
+    "captured_at": "2026-05-31T21:34:29.592Z"
   },
   "assets": {
     "textures_needed": [],

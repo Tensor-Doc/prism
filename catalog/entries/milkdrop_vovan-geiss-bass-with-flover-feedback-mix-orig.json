@@ -15,35 +15,34 @@
   "annotation": {
     "vibe": [
       "hypnotic",
-      "tunnel",
-      "dark",
-      "rhythmic"
+      "psychedelic",
+      "frenetic",
+      "retro"
     ],
-    "motion": 0.75,
+    "motion": 0.7,
     "palette_anchor": [
-      "#000000",
-      "#8a7d1a",
-      "#4a0e0e",
-      "#d1be3f"
+      "#d4af37",
+      "#3a0d03",
+      "#000000"
     ],
     "audio_affinity": {
       "bass": 0.85,
-      "mid": 0.6,
+      "mid": 0.5,
       "treble": 0.75
     },
     "techniques": [
-      "custom_wave",
       "frame_feedback",
-      "warp_field",
+      "custom_wave",
       "audio_gating",
-      "decay_trail"
+      "beat_burst",
+      "domain_repetition"
     ],
-    "technical_notes": "Concentric circular custom_wave elements are modulated by high-frequency treble in the test signal, mapping amplitude to radial displacement. A zoom-and-rotate feedback loop using sampler_main creates a deep tunnel effect, while a low decay rate maintains the persistent spiral structure. Sudden state transitions, such as the deep red flash and subsequent blackouts, indicate threshold-based audio_gating driven by the synthetic kick drum.",
+    "technical_notes": "Concentric custom waves render high-frequency oscilloscope lines that spiral inward. A low decay rate in the frame feedback loop using sampler_main creates a deep, receding tunnel effect. Sudden state transitions and color inversions are gated by bass beats in the music, shifting between a golden-yellow spiral and a dark, minimalist ring view.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:36:45.402Z"
+    "captured_at": "2026-05-31T23:55:54.789Z"
   },
   "assets": {
     "textures_needed": [],

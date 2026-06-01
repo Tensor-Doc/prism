@@ -15,33 +15,33 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "geometric",
       "stark",
-      "sparse"
+      "geometric",
+      "radar"
     ],
-    "motion": 0.3,
+    "motion": 0.25,
     "palette_anchor": [
-      "#83f3f5 Melon",
-      "#fbc54b",
-      "#e8310d",
-      "#1919d1"
+      "#00ff66",
+      "#00ffff",
+      "#ff3300",
+      "#3333ff"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.4,
+      "bass": 0.6,
+      "mid": 0.3,
       "treble": 0.3
     },
     "techniques": [
       "custom_wave",
-      "hue_cycle",
-      "audio_gating"
+      "audio_gating",
+      "beat_burst"
     ],
-    "technical_notes": "A minimalist radar-like custom wave rendering a circular boundary and a rotating wedge against a solid black background. The outer circular path deforms dynamically, reacting to the bass frequencies of the synthetic test signal. Color values cycle continuously through a vibrant hue rotation, while the absence of frame feedback or decay trails maintains a stark, high-contrast geometric aesthetic.",
+    "technical_notes": "A minimalist custom wave draws a circular oscilloscope and a rotating radar-like wedge against a solid black background. The outer ring deforms in response to the audio loop's bass frequencies, while discrete color shifts are gated to beat detection events. With no decay trails or feedback samplers enabled, the frame-to-frame rendering remains perfectly sharp and clean.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:50:12.915Z"
+    "captured_at": "2026-06-01T00:12:02.098Z"
   },
   "assets": {
     "textures_needed": [],

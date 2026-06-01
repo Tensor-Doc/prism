@@ -14,36 +14,37 @@
   "annotation": {
     "vibe": [
       "kaleidoscopic",
-      "kinetic",
       "psychedelic",
+      "frenetic",
       "geometric"
     ],
-    "motion": 0.75,
+    "motion": 0.85,
     "palette_anchor": [
-      "#00e5ff",
-      "#a3ff12",
-      "#cc1133",
-      "#0a192f"
+      "#00f0ff",
+      "#ff2a2a",
+      "#aaff00",
+      "#0000ff"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.75,
-      "treble": 0.6
+      "bass": 0.85,
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
+      "frame_feedback",
+      "warp_field",
       "domain_repetition",
       "custom_wave",
-      "frame_feedback",
-      "bloom_glow",
-      "warp_field",
-      "audio_gating"
+      "beat_burst",
+      "hue_cycle",
+      "bloom_glow"
     ],
-    "technical_notes": "Custom waves render as vibrant, warped oscilloscopes that react dynamically to the mid and treble bands of the synthetic test signal. A radial kaleidoscope domain repetition is applied in the composite shader, mirroring the geometry across multiple axes. Frame feedback through sampler_main combined with a moderate decay rate creates persistent, glowing trails of the geometric structures.",
+    "technical_notes": "A complex radial domain repetition creates a multi-layered kaleidoscope driven by audio-reactive zoom and rotation. Custom wave ribbons oscillate intensely to the treble and mid frequencies of the audio, while a per-pixel warp shader utilizing sampler_fw_main generates a repeating geometric tunnel. Beat-gated transitions trigger rapid inversion of the feedback loop's direction, blended with a high-exposure bloom pass via sampler_blur2.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:40:31.723Z"
+    "captured_at": "2026-05-31T22:52:22.852Z"
   },
   "assets": {
     "textures_needed": [],

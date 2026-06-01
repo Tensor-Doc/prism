@@ -15,35 +15,34 @@
   "annotation": {
     "vibe": [
       "gothic",
-      "cybernetic",
-      "skeletal",
-      "dark"
+      "intricate",
+      "organic",
+      "mystical"
     ],
-    "motion": 0.4,
+    "motion": 0.45,
     "palette_anchor": [
-      "#000000",
+      "#0a0a0a",
       "#ffffff",
-      "#8b1a1a",
-      "#d2691e"
+      "#a81d1d",
+      "#f07810"
     ],
     "audio_affinity": {
       "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.6
+      "treble": 0.4
     },
     "techniques": [
       "custom_wave",
       "frame_feedback",
       "audio_gating",
-      "domain_repetition",
-      "decay_trail"
+      "domain_repetition"
     ],
-    "technical_notes": "Symmetrical custom wave equations render an intricate, skeletal central column resembling a ribcage or heart. The synthetic kick of the test signal triggers intense red and orange illumination at the core via audio-gated scaling. High decay settings in the frame feedback loop keep the fine, rain-like vertical lines and wireframe structures sharp with minimal persistent ghosting.",
+    "technical_notes": "Symmetrical custom waves are rendered as an intricate, gothic wireframe web that mirrors across the vertical axis. The central column acts as an audio-gated custom shape, pulsing with intense red and orange hues driven by the bass of the music. A high-frequency jitter in the fine lines reacts to treble transients, while a low decay rate in sampler_main maintains a delicate, ghostly persistence.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:42:46.257Z"
+    "captured_at": "2026-05-31T22:54:29.594Z"
   },
   "assets": {
     "textures_needed": [],

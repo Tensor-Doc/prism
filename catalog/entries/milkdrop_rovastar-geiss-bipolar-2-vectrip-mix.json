@@ -15,35 +15,33 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "stark",
       "cosmic",
-      "kinetic",
       "dark"
     ],
-    "motion": 0.4,
+    "motion": 0.35,
     "palette_anchor": [
-      "#000000",
-      "#d47a2a",
       "#ffffff",
-      "#48a86c"
+      "#d97706",
+      "#2563eb",
+      "#15803d"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.6
+      "bass": 0.4,
+      "mid": 0.7,
+      "treble": 0.9
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
-      "beat_burst",
-      "hue_cycle",
-      "bloom_glow"
+      "particle_system"
     ],
-    "technical_notes": "A central custom wave acts as a highly reactive oscilloscope, spiking vertically into a bright white and green burst on the bass hits of the synthetic test signal. Symmetrical spiral arms in an amber hue rotate slowly, likely rendered via parametric custom wave equations. High decay prevents feedback accumulation in sampler_main, maintaining a stark, high-contrast black background.",
+    "technical_notes": "A central custom wave renders high-frequency audio bands as a spiky, bright white and blue oscilloscope that reacts instantly to treble transients. Two symmetrical, dotted orange spiral arms rotate around the center, modulating their radial expansion in response to the bass. A high decay rate keeps the background completely dark, ensuring a stark, high-contrast focus on the kinetic central elements.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:46:50.171Z"
+    "captured_at": "2026-05-31T22:58:53.723Z"
   },
   "assets": {
     "textures_needed": [],

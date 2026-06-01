@@ -14,35 +14,35 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
-      "strobe",
+      "stark",
       "geometric",
-      "staccato"
+      "strobing",
+      "glitchy",
+      "digital"
     ],
-    "motion": 0.3,
+    "motion": 0.75,
     "palette_anchor": [
       "#ffffff",
-      "#000000",
       "#ff00ff",
-      "#00ffff"
+      "#00ffff",
+      "#000000"
     ],
     "audio_affinity": {
       "bass": 0.9,
-      "mid": 0.2,
-      "treble": 0.2
+      "mid": 0.4,
+      "treble": 0.6
     },
     "techniques": [
       "audio_gating",
       "beat_burst",
-      "hue_cycle",
       "chromatic_split"
     ],
-    "technical_notes": "A minimalist, high-contrast preset where discrete rectangular custom shapes are gated directly by the bass threshold of the test signal. A high decay rate ensures instantaneous transitions to a black screen between beats, with chromatic aberration visible at the edges of the blocks. The color of the shapes cycles through a simple hue rotation on successive triggers.",
-    "brand_safe": true,
+    "technical_notes": "A stark, high-contrast geometric composition where large rectangular custom shapes flash and shift position in direct response to the audio. Beat-gated triggers drive sudden color state changes between solid white, vibrant magenta, and cyan, while a high decay rate ensures snappy, near-instantaneous transitions. Subtle chromatic split fringing appears at the boundaries of the shapes during peak transients.",
+    "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:37:56.238Z"
+    "captured_at": "2026-05-31T21:37:22.239Z"
   },
   "assets": {
     "textures_needed": [

@@ -14,16 +14,17 @@
   },
   "annotation": {
     "vibe": [
-      "gothic",
       "fluid",
-      "visceral",
-      "kaleidoscopic"
+      "rorschach",
+      "organic",
+      "kaleidoscopic",
+      "hypnotic"
     ],
     "motion": 0.65,
     "palette_anchor": [
       "#000000",
-      "#a83279",
-      "#40a070",
+      "#a8208a",
+      "#14a3a1",
       "#ffffff"
     ],
     "audio_affinity": {
@@ -34,18 +35,17 @@
     "techniques": [
       "frame_feedback",
       "warp_field",
-      "audio_gating",
-      "beat_burst",
-      "domain_repetition",
       "custom_wave",
-      "decay_trail"
+      "hue_cycle",
+      "beat_burst",
+      "domain_repetition"
     ],
-    "technical_notes": "A central custom_wave renders complex, symmetric wireframe structures that react sharply to the treble of the test signal. High-frequency beat detection gates sudden transitions between distinct color palettes (emerald green, deep magenta, and grayscale) and drives a bilateral warp_field. Persistent frame feedback through sampler_main combined with a fluid advection warp creates organic, ink-in-water decay trails.",
+    "technical_notes": "A central custom wave draws delicate, symmetric wireframe lines that react sharply to the treble of the music. The surrounding organic Rorschach patterns are generated via a per-pixel warp shader combined with frame feedback in sampler_main, modulated by a low decay rate. Beat-gated bursts trigger sudden palette shifts and radial expansions, driving the kaleidoscopic symmetry.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:53:08.477Z"
+    "captured_at": "2026-05-31T23:05:26.102Z"
   },
   "assets": {
     "textures_needed": [],

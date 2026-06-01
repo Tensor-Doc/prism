@@ -27,6 +27,7 @@ export type NodeType =
   // light field generators — produce a frame from signals
   | "lf.milkdrop"
   | "lf.shadertoy"
+  | "lf.particles"
   | "lf.isf"
   // light field operators — frame(s) → frame
   | "op.blend"

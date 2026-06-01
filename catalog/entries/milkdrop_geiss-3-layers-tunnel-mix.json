@@ -15,31 +15,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "stark",
       "radar",
-      "dark",
-      "sparse",
-      "mechanical"
+      "dark"
     ],
-    "motion": 0.15,
+    "motion": 0.2,
     "palette_anchor": [
       "#ff0000",
       "#000000"
     ],
     "audio_affinity": {
       "bass": 0.4,
-      "mid": 0.1,
+      "mid": 0.2,
       "treble": 0.1
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A minimalist custom wave renders a red circular boundary with a rotating radial pointer resembling a radar sweep. The circular perimeter deforms slightly in response to the bass transients of the music. High decay rates and the absence of frame feedback through sampler_main keep the background entirely dark and free of trails.",
+    "technical_notes": "A minimalist custom wave draws a red circular oscilloscope in the center of a black screen. The outer ring deforms slightly in response to the audio's bass frequencies, while an inner wedge rotates continuously like a radar sweep. High decay rates prevent any frame feedback or trails, maintaining a stark vector aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:26:44.173Z"
+    "captured_at": "2026-05-31T21:24:55.718Z"
   },
   "assets": {
     "textures_needed": [],

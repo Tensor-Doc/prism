@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "description": "Twenty Prism shader concepts. Weighted toward image-input techniques so that AI-generated and curated texture sets become a first-class part of the catalog. The Refik Fluid concept is the first one to implement; once its skill prompt is tuned, the same iteration loop runs against the other 19.",
+  "concepts": [
+    {
+      "id": "refik-fluid-flora",
+      "name": "Refik fluid of flora",
+      "description": "Fluid simulation where each particle is a small sprite sampled from an image atlas of flowers, leaves, and natural forms. Bass drives wave amplitude. Mid-band drives flow speed. Inspired by Refik Anadol's Machine Hallucinations series.",
+      "originator": "Refik Anadol inspiration plus Jos Stam fluid simulation",
+      "inputs": ["image_atlas", "audio"],
+      "vibe": ["atelier", "dreamy", "painterly"],
+      "priority": 1,
+      "default_image_prompt": "a single photograph of a flower, isolated on a soft dark background, atmospheric lighting, square composition, 512x512"
+    },
+    {
+      "id": "refik-fluid-architecture",
+      "name": "Refik fluid of architecture",
+      "description": "Same fluid technique as flora. Image atlas is buildings, archways, brutalist facades, ornate cornices. Slower flow, longer wavelengths.",
+      "originator": "Refik Anadol inspiration",
+      "inputs": ["image_atlas", "audio"],
+      "vibe": ["epic", "melancholy", "monumental"],
+      "priority": 2,
+      "default_image_prompt": "a single photograph of architectural detail, brutalist or ornate, isolated on dark background, dramatic lighting, square 512x512"
+    },
+    {
+      "id": "ai-dataset-waves",
+      "name": "AI-generated dataset waves",
+      "description": "User prompt generates a themed image set via Nano Banana. Fluid simulation flows them as substance. The image source is the variable. The shader is the constant.",
+      "originator": "Refik Anadol direct lineage",
+      "inputs": ["image_atlas", "audio"],
+      "vibe": ["infinitely customisable", "personal"],
+      "priority": 1
+    },
+    {
+      "id": "image-atlas-mosaic-pulse",
+      "name": "Image atlas mosaic with audio cells",
+      "description": "Image atlas displayed as a grid of cells. Individual cells pulse, zoom, and offset on beats. Audio gates the cell animations.",
+      "originator": "atlas rendering standard",
+      "inputs": ["image_atlas", "audio"],
+      "vibe": ["rhythmic", "alive"],
+      "priority": 2
+    },
+    {
+      "id": "kaleidoscope-of-photo",
+      "name": "Kaleidoscope of a photograph",
+      "description": "Single image folded through n-fold rotational symmetry. Audio modulates the fold count and rotation speed.",
+      "originator": "folding technique",
+      "inputs": ["image", "audio"],
+      "vibe": ["rich", "hypnotic"],
+      "priority": 2
+    },
+    {
+      "id": "image-fbm-displacement",
+      "name": "Image displacement through FBM noise",
+      "description": "Photograph wobbles and breathes through layered fractal noise. Slow continuous motion. Bass amplifies displacement magnitude.",
+      "originator": "iq FBM",
+      "inputs": ["image", "audio"],
+      "vibe": ["dreamy", "slow"],
+      "priority": 1
+    },
+    {
+      "id": "caustic-over-photo",
+      "name": "Caustic underwater light over photograph",
+      "description": "Water caustic light patterns dance over an image. Treble drives caustic frequency.",
+      "originator": "water caustic rendering",
+      "inputs": ["image", "audio"],
+      "vibe": ["serene", "blue"],
+      "priority": 2
+    },
+    {
+      "id": "image-cubist-facets",
+      "name": "Image cubist breakdown into rotating facets",
+      "description": "Photograph broken into rotating triangular shards. Each shard samples a different region. Audio rotates the shards.",
+      "originator": "mosaicing tradition",
+      "inputs": ["image", "audio"],
+      "vibe": ["analytic", "modern"],
+      "priority": 3
+    },
+    {
+      "id": "image-stained-glass",
+      "name": "Image through procedural stained glass",
+      "description": "Photograph refracted by a procedural stained glass pattern. Slow rotation. Bass drives caustic brightness.",
+      "originator": "volumetric light",
+      "inputs": ["image"],
+      "vibe": ["reverent", "slow"],
+      "priority": 3
+    },
+    {
+      "id": "image-as-terrain",
+      "name": "Image as raymarched terrain",
+      "description": "Luminance of an image becomes 3D height. Camera flies over the landscape. Bass drives elevation amplitude.",
+      "originator": "iq raymarching",
+      "inputs": ["image", "audio"],
+      "vibe": ["sculptural", "vast"],
+      "priority": 2
+    },
+    {
+      "id": "particle-storm-photos",
+      "name": "Particle storm of photographs",
+      "description": "Thousands of small image instances swept by audio-driven wind field. Each particle samples a tile from an image atlas.",
+      "originator": "particle system standard",
+      "inputs": ["image_atlas", "audio"],
+      "vibe": ["celebratory", "dense"],
+      "priority": 1
+    },
+    {
+      "id": "painterly-remix",
+      "name": "Painterly remix of an image",
+      "description": "Photograph rendered as brush strokes. Stroke length, direction, and color are sampled from the underlying image. Audio modulates stroke density.",
+      "originator": "physically-based painting",
+      "inputs": ["image", "audio"],
+      "vibe": ["atmospheric", "soft"],
+      "priority": 2
+    },
+    {
+      "id": "voronoi-image-cells",
+      "name": "Voronoi cells filled with image patches",
+      "description": "Voronoi diagram where each cell samples a region of an image. Cell membranes glow on beats.",
+      "originator": "Worley noise",
+      "inputs": ["image", "audio"],
+      "vibe": ["crystalline", "organic"],
+      "priority": 2
+    },
+    {
+      "id": "bokeh-dream",
+      "name": "Bokeh dream sequence",
+      "description": "Photograph with simulated depth of field. Focus animates slowly on bass. Out-of-focus regions become circular bokeh blobs.",
+      "originator": "optical simulation",
+      "inputs": ["image", "audio"],
+      "vibe": ["filmic", "meditative"],
+      "priority": 2
+    },
+    {
+      "id": "reaction-diffusion-image",
+      "name": "Reaction-diffusion seeded from image",
+      "description": "Gray-Scott reaction-diffusion seeded by the colors of an image. Patterns emerge over time. Audio modulates diffusion rates.",
+      "originator": "Turing patterns",
+      "inputs": ["image", "audio"],
+      "vibe": ["organic", "slow"],
+      "priority": 3
+    },
+    {
+      "id": "hex-image-mosaic",
+      "name": "Hexagonal mosaic of image samples",
+      "description": "Image rendered as a hexagonal grid of color samples. Audio offsets hex positions and triggers cascading color shifts.",
+      "originator": "hex grid math",
+      "inputs": ["image", "audio"],
+      "vibe": ["geometric", "calming"],
+      "priority": 3
+    },
+    {
+      "id": "mandelbox-image-surface",
+      "name": "Image inside a Mandelbox SDF",
+      "description": "Raymarched Mandelbox fractal whose surface is textured by an image. Camera orbits slowly. Audio modulates the fractal fold parameter.",
+      "originator": "iq SDF library",
+      "inputs": ["image", "audio"],
+      "vibe": ["infinite", "otherworldly"],
+      "priority": 2
+    },
+    {
+      "id": "image-bubble-fragmentation",
+      "name": "Image fragmentation to floating bubbles",
+      "description": "Image splits into floating spherical bubbles. Each bubble refracts a different region of the source image. Bass triggers bubble bursts.",
+      "originator": "particle bokeh",
+      "inputs": ["image", "audio"],
+      "vibe": ["playful", "airy"],
+      "priority": 3
+    },
+    {
+      "id": "fft-spectrum-bloom",
+      "name": "FFT spectrum bars with bloom and particle trails",
+      "description": "64 mirrored FFT bars. Soft bloom around each bar. Particle trails decay from peaks.",
+      "originator": "community standard",
+      "inputs": ["audio"],
+      "vibe": ["energetic", "neon"],
+      "priority": 2
+    },
+    {
+      "id": "mandelbrot-zoom",
+      "name": "Audio-reactive Mandelbrot zoom",
+      "description": "Classic deep Mandelbrot fractal zoom. Bass drives zoom speed and palette cycle. Pure procedural, no image input.",
+      "originator": "public-domain mathematics",
+      "inputs": ["audio"],
+      "vibe": ["sharp", "infinite"],
+      "priority": 3
+    }
+  ]
+}

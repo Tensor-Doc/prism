@@ -16,29 +16,28 @@
     "vibe": [
       "minimalist",
       "stark",
-      "sparse",
       "void",
       "monochrome"
     ],
-    "motion": 0.15,
+    "motion": 0.12,
     "palette_anchor": [
-      "#ffffff",
-      "#000000"
+      "#000000",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.4,
+      "bass": 0.3,
+      "mid": 0.2,
       "treble": 0.5
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A stark, minimalist oscilloscope preset featuring a single horizontal custom_wave that maps the raw waveform of the synthetic test signal. High decay and the complete absence of frame feedback (sampler_main) or warp fields result in an instantaneous, non-persistent rendering. Occasional transient scribbles appear at the center in response to high-frequency treble spikes in the test signal.",
+    "technical_notes": "A highly minimalist preset consisting of a single horizontal custom wave oscilloscope rendered against a solid black background. The decay rate is set to maximum, preventing any frame feedback or persistent trails in sampler_main. Subtle high-frequency ripples and central loop distortions react directly to the treble and bass frequencies of the audio.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:42:47.364Z"
+    "captured_at": "2026-05-31T21:42:23.602Z"
   },
   "assets": {
     "textures_needed": [

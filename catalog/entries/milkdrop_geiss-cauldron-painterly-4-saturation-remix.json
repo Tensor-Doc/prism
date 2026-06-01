@@ -14,35 +14,34 @@
   },
   "annotation": {
     "vibe": [
+      "void",
       "minimalist",
-      "dark",
       "sparse",
-      "fluid",
-      "abstract"
+      "fluid"
     ],
-    "motion": 0.3,
+    "motion": 0.25,
     "palette_anchor": [
-      "#000000",
-      "#14505c",
-      "#8a3b3c",
-      "#ffffff"
+      "#00b4d8",
+      "#b83b5e",
+      "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.3,
-      "treble": 0.6
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
       "decay_trail",
-      "frame_feedback"
+      "frame_feedback",
+      "warp_field"
     ],
-    "technical_notes": "A custom wave is rendered as a twisting, segmented ribbon in a dark void, with its vertices modulated by the audio loop. A high decay rate keeps the background mostly black, while subtle frame feedback through sampler_main preserves faint, painterly trails of the ribbon's path. The tip of the wave reacts sharply to treble transients in the test signal, producing bright white highlights.",
+    "technical_notes": "A single custom wave ribbon is drawn across the screen, with its vertex displacement modulated by the audio. Frame feedback through sampler_main with a high decay rate creates a brief, trailing ribbon effect that quickly fades into the black void. A subtle warp field gently bends the path of the trail over time.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:31:37.046Z"
+    "captured_at": "2026-05-31T21:30:30.688Z"
   },
   "assets": {
     "textures_needed": [],

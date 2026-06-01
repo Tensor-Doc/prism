@@ -13,38 +13,36 @@
   },
   "annotation": {
     "vibe": [
-      "glacial",
-      "painterly",
       "fluid",
+      "painterly",
       "atmospheric",
       "organic"
     ],
-    "motion": 0.65,
+    "motion": 0.45,
     "palette_anchor": [
-      "#4a8cb4",
-      "#0c2454",
-      "#8ca47c",
-      "#14b4a4"
+      "#0c1b40",
+      "#4b548a",
+      "#11051c",
+      "#0f3c3a"
     ],
     "audio_affinity": {
-      "bass": 0.8,
+      "bass": 0.7,
       "mid": 0.5,
-      "treble": 0.7
+      "treble": 0.8
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
       "custom_wave",
-      "decay_trail",
-      "cosine_palette",
-      "bloom_glow"
+      "hue_cycle",
+      "decay_trail"
     ],
-    "technical_notes": "Per-pixel warp shader creates a layered, sheared advection pattern reminiscent of glacial shelves or thick paint strokes. Multiple custom_wave elements are rendered as thin, high-frequency lines modulated by the treble bands of the test signal. Frame feedback through sampler_main with a low decay rate preserves the sheared structures, while sudden color transitions are gated by the synthetic kick drum.",
+    "technical_notes": "Multiple horizontal custom waves are modulated by high-frequency treble, rendering as jittering lines. A low decay rate in the frame feedback loop (sampler_main) allows these waveforms to accumulate into dense, painterly ridges resembling folded fabric. A per-pixel warp shader drives a slow downward drift, while beat-gated transitions cycle the color palette through deep blues, greens, and purples.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:26:45.518Z"
+    "captured_at": "2026-05-31T23:40:50.325Z"
   },
   "assets": {
     "textures_needed": [],

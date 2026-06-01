@@ -170,7 +170,10 @@ async function captureVideo(captureUrl: string): Promise<{ webmBase64: string; f
     page.on("pageerror", (e) => console.error(`  [page-error] ${e.message}\n  ${e.stack ?? ""}`));
     page.on("console", (msg) => {
       const t = msg.type();
-      if (t === "error" || t === "warning") {
+      // Surface all log/warn/error from the page. Helps diagnose why
+      // certain presets render empty (preset-converter rejections,
+      // missing samplers, NaN propagation from unsupported functions).
+      if (t === "error" || t === "warning" || t === "log") {
         console.error(`  [page-${t}] ${msg.text()}`);
       }
     });

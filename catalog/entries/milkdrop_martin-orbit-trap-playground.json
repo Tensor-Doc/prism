@@ -18,7 +18,9 @@
       {
         "name": "manyfish"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-orbit-trap-playground.webm",
+    "thumb": "/thumbs/milkdrop_martin-orbit-trap-playground.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -26,6 +28,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24670 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

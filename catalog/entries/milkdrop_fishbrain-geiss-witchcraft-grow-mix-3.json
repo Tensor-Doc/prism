@@ -17,9 +17,10 @@
       "minimalist",
       "sparse",
       "stark",
-      "void"
+      "void",
+      "dark"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
       "#ffffff"
@@ -27,19 +28,19 @@
     "audio_affinity": {
       "bass": 0.3,
       "mid": 0.1,
-      "treble": 0.6
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave",
-      "audio_gating",
-      "beat_burst"
+      "beat_burst",
+      "audio_gating"
     ],
-    "technical_notes": "A highly minimalist preset rendering thin, white custom shapes (circles and arcs) against a pure black background. The shapes are gated by transient spikes in the test signal, appearing instantly and disappearing without any persistent decay trails or sampler_main feedback. The lack of a warp field or color cycling maintains a stark, binary oscilloscope-like aesthetic.",
+    "technical_notes": "A stark, minimalist preset consisting of simple white custom shapes, such as circles and dotted lines, appearing briefly against a solid black background. These elements are gated by the audio loop's transient events with near-zero decay, leaving the screen mostly empty and dark. No feedback samplers or complex shaders are active.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:52:39.512Z"
+    "captured_at": "2026-06-01T00:14:58.034Z"
   },
   "assets": {
     "textures_needed": [],

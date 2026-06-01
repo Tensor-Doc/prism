@@ -13,37 +13,36 @@
   },
   "annotation": {
     "vibe": [
+      "stark",
+      "cosmic",
       "explosive",
-      "dark",
-      "sparse",
-      "cosmic"
+      "void"
     ],
-    "motion": 0.6,
+    "motion": 0.65,
     "palette_anchor": [
-      "#000000",
-      "#4ca6a6",
-      "#a6808c",
-      "#ffffff"
+      "#050505",
+      "#8ec5c5",
+      "#d8c3c3"
     ],
     "audio_affinity": {
-      "bass": 0.9,
+      "bass": 0.85,
       "mid": 0.5,
-      "treble": 0.7
+      "treble": 0.6
     },
     "techniques": [
+      "frame_feedback",
+      "warp_field",
       "audio_gating",
       "beat_burst",
       "custom_wave",
-      "frame_feedback",
-      "domain_repetition",
       "bloom_glow"
     ],
-    "technical_notes": "A highly audio-gated preset that remains dark and sparse until triggered by the synthetic kick, which initiates explosive beat bursts. The central structure features intricate custom waves that expand outward through a radial warp field, leaving decaying feedback trails in sampler_main. The color palette shifts dynamically from cool cyans to dusty rose tones during peak transients.",
+    "technical_notes": "A central, intricate custom wave structure is surrounded by a smoky glow generated via sampler_blur passes and frame feedback. The preset is heavily audio-gated, transitioning from a dark, sparse void into explosive full-screen radial warp bursts triggered by the bass in the audio loop. During these peaks, high-frequency zoom and decay modulation create a strobing tunnel effect before collapsing back into the central core.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:35:21.209Z"
+    "captured_at": "2026-05-31T23:54:28.105Z"
   },
   "assets": {
     "textures_needed": [],

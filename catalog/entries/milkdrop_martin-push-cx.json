@@ -16,32 +16,32 @@
     "vibe": [
       "minimalist",
       "stark",
-      "void",
-      "geometric"
+      "geometric",
+      "dark",
+      "sparse"
     ],
-    "motion": 0.2,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#0052d6",
-      "#001a5e"
+      "#0044cc",
+      "#001133"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.2,
+      "mid": 0.1,
       "treble": 0.1
     },
     "techniques": [
       "audio_gating",
       "beat_burst",
-      "decay_trail",
       "custom_wave"
     ],
-    "technical_notes": "A minimalist custom wave renders as a sharp blue wedge against a black void. The shape's scale and opacity are driven by audio gating from the synthetic test signal, with beat bursts triggering sudden side-switching and expansion. A rapid decay trail leaves the screen mostly dark between hits, with no frame feedback or warp field active.",
+    "technical_notes": "A custom shape draws a sharp, gradient-filled triangular wedge triggered by beat detection on the bass band. High decay settings in the feedback loop cause the geometry to quickly fade into the black background, resulting in a highly sparse, intermittent visualizer state.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:30:40.350Z"
+    "captured_at": "2026-06-01T00:58:53.174Z"
   },
   "assets": {
     "textures_needed": [

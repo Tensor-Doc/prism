@@ -13,32 +13,31 @@
   },
   "annotation": {
     "vibe": [
-      "stark",
       "minimalist",
-      "dark",
-      "energetic"
+      "stark",
+      "electric",
+      "void"
     ],
-    "motion": 0.4,
+    "motion": 0.3,
     "palette_anchor": [
       "#ff0000",
       "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.3
+      "bass": 0.3,
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
-      "audio_gating",
-      "beat_burst"
+      "audio_gating"
     ],
-    "technical_notes": "A single red custom wave is rendered as a sharp, oscillating ribbon in the center of a pure black void. High decay prevents any frame feedback in sampler_main, resulting in zero persistent trails. The wave's vertices and overall scale are modulated directly by the bass and mid frequencies of the synthetic test signal, causing it to contort and expand sharply on beat hits.",
+    "technical_notes": "A single custom wave rendered in high-contrast red is centered on a black background, deforming directly in response to the audio. High decay rates prevent any persistent frame feedback in sampler_main, leaving a completely stark, clean void around the waveform. The shape's complexity and scale modulate dynamically with mid and treble transients.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:29:15.103Z"
+    "captured_at": "2026-05-31T23:43:30.779Z"
   },
   "assets": {
     "textures_needed": [],

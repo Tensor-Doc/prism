@@ -15,32 +15,31 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "sparse",
       "stark",
-      "void"
+      "dark",
+      "oscilloscope"
     ],
-    "motion": 0.15,
+    "motion": 0.25,
     "palette_anchor": [
       "#000000",
-      "#00ffff",
-      "#ff007f",
-      "#ffff80"
+      "#e2f9d2",
+      "#8be0ff"
     ],
     "audio_affinity": {
-      "bass": 0.1,
+      "bass": 0.3,
       "mid": 0.6,
-      "treble": 0.8
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
       "hue_cycle"
     ],
-    "technical_notes": "A highly minimalist preset consisting of custom waves rendered as thin lines against a black void. The horizontal wave functions as a direct oscilloscope reacting to the treble and mid-frequency components of the synthetic test signal, while a secondary diagonal custom shape anchors the right side. Hue cycling shifts the line colors across a wide spectrum with zero frame feedback or decay trails.",
+    "technical_notes": "A minimalist oscilloscope-style custom wave spans horizontally across a pitch-black background. The wave's vertices deform directly in response to the audio's waveform, while its color cycles slowly through a spectrum of pastel hues. Lacking frame feedback or a warp field, the rendering remains stark and instantaneous.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:36:22.410Z"
+    "captured_at": "2026-05-31T21:35:42.006Z"
   },
   "assets": {
     "textures_needed": [],

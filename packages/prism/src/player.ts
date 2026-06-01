@@ -105,7 +105,7 @@ export class PrismPlayer {
    *  graph's light-field generator node. */
   readonly runtime: GraphRuntime;
   /** Tracks which backend's canvas is currently visible. */
-  activeBackend: "milkdrop" | "shadertoy" = "milkdrop";
+  activeBackend: "milkdrop" | "shadertoy" | "particles" = "milkdrop";
 
   private readonly milkdropCanvas: HTMLCanvasElement;
   private readonly shadertoyCanvas: HTMLCanvasElement;
@@ -291,8 +291,12 @@ export class PrismPlayer {
 
   /** Toggle which backend's canvas is visible. Called by GraphRuntime;
    *  callers can flip it manually too (rare). */
-  setActiveBackend(which: "milkdrop" | "shadertoy"): void {
+  setActiveBackend(which: "milkdrop" | "shadertoy" | "particles"): void {
     this.activeBackend = which;
+    // The particles backend doesn't have a dedicated canvas in the
+    // player yet; standalone particle previews instantiate it on their
+    // own canvas. When routed via the player we no-op visually for now.
+    if (which === "particles") return;
     if (which === "milkdrop") {
       this.milkdropCanvas.classList.remove("bg-canvas--hidden");
       this.milkdropCanvas.classList.add("bg-canvas--active");

@@ -15,31 +15,32 @@
   "annotation": {
     "vibe": [
       "mathematical",
+      "stark",
       "minimalist",
-      "abstract",
-      "sparse"
+      "abstract"
     ],
-    "motion": 0.4,
+    "motion": 0.45,
     "palette_anchor": [
+      "#000000",
       "#ffffff",
-      "#ff3300",
-      "#000000"
+      "#ff3300"
     ],
     "audio_affinity": {
       "bass": 0.7,
-      "mid": 0.3,
-      "treble": 0.2
+      "mid": 0.4,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
-      "audio_gating"
+      "audio_gating",
+      "particle_system"
     ],
-    "technical_notes": "A 3D strange attractor is plotted in real-time using custom waves, tracing elegant white orbits against a dark void. A secondary custom shape draws a sequence of red-orange circular discs along the trajectory, with their scale directly modulated by the bass energy of the synthetic test signal. Minimal frame feedback is used, keeping the background pure black and the vector-like lines exceptionally crisp.",
+    "technical_notes": "A custom wave system plots a chaotic mathematical attractor in 3D space, projected onto the 2D viewport as a continuous white line. A secondary set of custom shapes renders red, glowing circular nodes along the attractor's trajectory, with their size and brightness modulated by the bass frequencies of the audio loop. The absence of frame feedback or sampler_main decay trails maintains a stark, high-contrast aesthetic against a pure black background.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:02:56.390Z"
+    "captured_at": "2026-06-01T00:29:21.741Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,31 +15,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "sparse",
       "stark",
-      "dark",
-      "sparse"
+      "void",
+      "dark"
     ],
-    "motion": 0.2,
+    "motion": 0.12,
     "palette_anchor": [
-      "#ff8822",
-      "#ff4400",
-      "#000000"
+      "#000000",
+      "#f07020",
+      "#e08010"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.5,
-      "treble": 0.4
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A single, highly responsive custom wave is rendered in the center of a black void. The wave's vertices are modulated directly by the synthetic test signal, expanding outwards during bass kicks and jittering with mid-to-high frequencies. With decay set to maximum and no feedback sampler (sampler_main is cleared), there are no persistent trails, resulting in a stark, minimalist aesthetic.",
+    "technical_notes": "A single custom wave is rendered at the center of a black screen with zero decay and no frame feedback. The wave's vertices are directly modulated by the audio's high-frequency components, creating a jittery, calligraphic orange squiggle. The lack of feedback samplers like sampler_main or warp shaders results in a stark, instantaneous response to the audio.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:51:19.874Z"
+    "captured_at": "2026-05-31T23:03:37.581Z"
   },
   "assets": {
     "textures_needed": [],

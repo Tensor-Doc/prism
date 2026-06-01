@@ -15,31 +15,31 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "dark",
       "sparse",
-      "cosmic",
-      "contemplative"
+      "stark",
+      "kinetic"
     ],
-    "motion": 0.4,
+    "motion": 0.25,
     "palette_anchor": [
-      "#000000",
       "#e67e22",
-      "#d35400"
+      "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.4,
-      "treble": 0.3
+      "bass": 0.8,
+      "mid": 0.2,
+      "treble": 0.2
     },
     "techniques": [
-      "custom_wave"
+      "custom_wave",
+      "audio_gating",
+      "beat_burst"
     ],
-    "technical_notes": "A highly minimalist preset featuring a single parametric custom_wave that traces elegant, sweeping amber loops against a pure black void. The wave's scale and spatial translation are modulated by the bass frequencies of the synthetic test signal, while high-frequency jitter along the curve reflects mid-to-treble activity. With decay set to maximum, the frame remains entirely free of persistent trails or feedback artifacts.",
+    "technical_notes": "A single custom wave traces an orbital Lissajous path across a dark field, modulated by the audio. A sudden, massive zoom-in is triggered by the bass kick of the music, briefly flooding the screen with solid orange. The absence of decay trails or feedback samplers like sampler_main keeps the rendering extremely crisp and minimalist.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:10:12.234Z"
+    "captured_at": "2026-06-01T00:37:23.683Z"
   },
   "assets": {
     "textures_needed": [],

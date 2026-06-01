@@ -16,9 +16,10 @@
       "minimalist",
       "stark",
       "void",
-      "oscilloscopic"
+      "dark",
+      "sparse"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
       "#ff0000"
@@ -26,17 +27,17 @@
     "audio_affinity": {
       "bass": 0.1,
       "mid": 0.4,
-      "treble": 0.5
+      "treble": 0.1
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist rendering featuring a custom wave that acts as a direct oscilloscope for the synthetic test signal. The high decay rate prevents any frame feedback or persistent trails, leaving only a stark red waveform against a pure black void. Subtle high-frequency ripples in the wave trace the treble and mid-range transients of the audio loop.",
+    "technical_notes": "A custom wave renders a sharp, single-pixel red line representing the audio waveform against a pure black background. High decay prevents any persistent trails in sampler_main, resulting in an extremely stark, real-time oscilloscope aesthetic. The line rotates slowly, driven by a low-frequency timer.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:29:48.303Z"
+    "captured_at": "2026-05-31T23:44:07.379Z"
   },
   "assets": {
     "textures_needed": [],

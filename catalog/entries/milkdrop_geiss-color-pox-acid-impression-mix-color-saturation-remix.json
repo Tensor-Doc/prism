@@ -16,32 +16,32 @@
     "vibe": [
       "minimalist",
       "stark",
-      "oscilloscope",
-      "vector"
+      "sparse",
+      "oscilloscope"
     ],
-    "motion": 0.4,
+    "motion": 0.45,
     "palette_anchor": [
-      "#00ff00",
-      "#0070ff",
-      "#e04080",
-      "#d07020"
+      "#80ff00",
+      "#ff33cc",
+      "#00bfff",
+      "#ff6633"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.3
+      "bass": 0.3,
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
       "hue_cycle",
       "audio_gating"
     ],
-    "technical_notes": "A minimalist oscilloscope-style preset featuring a custom_wave that renders a single fluid waveform alongside a sharp, reactive needle element. The color of the wave cycles abruptly on detected beats from the synthetic test signal, transitioning through a wide palette on a black background. Minimal decay and the absence of feedback samplers (such as sampler_main) keep the vector lines extremely crisp and clean.",
+    "technical_notes": "A minimalist oscilloscope visualization rendering a highly responsive custom wave alongside a sharp custom shape wedge. The color of the elements rotates rapidly through a hue cycle driven by time. High decay rate ensures no persistent trails, leaving a stark, clean waveform on a pure black background.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:33:07.487Z"
+    "captured_at": "2026-05-31T21:32:13.089Z"
   },
   "assets": {
     "textures_needed": [],

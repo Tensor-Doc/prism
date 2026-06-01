@@ -15,35 +15,34 @@
   "annotation": {
     "vibe": [
       "cyberpunk",
-      "neon-noir",
       "digital",
+      "neon",
       "reflective"
     ],
-    "motion": 0.45,
+    "motion": 0.5,
     "palette_anchor": [
-      "#0a0512",
-      "#8b00ff",
-      "#ff007f",
-      "#00ff66"
+      "#d904e9",
+      "#110022",
+      "#00f0a0"
     ],
     "audio_affinity": {
       "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.6
+      "treble": 0.4
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
-      "domain_repetition",
+      "beat_burst",
       "bloom_glow",
-      "audio_gating"
+      "decay_trail"
     ],
-    "technical_notes": "A central neon-magenta bloom is driven by the bass of the test signal, reflecting across a horizontal mirror plane to create a wet-floor effect. Vertical digital rain elements are rendered using custom waves or a structured warp field, with brightness modulated by treble frequencies. Frame feedback through sampler_main creates persistent vertical trails and a soft, glowing atmosphere.",
+    "technical_notes": "A central horizontal mirror symmetry splits the viewport, where a bright magenta glow at the core is modulated by bass-driven beat detection. Vertical matrix-like custom waves are warped into curved paths via a per-pixel warp shader, leaving persistent trails through sampler_main feedback with low decay. High-frequency transients in the music trigger subtle green and cyan sparkles across the upper and lower fields.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:54:13.002Z"
+    "captured_at": "2026-06-01T00:18:17.312Z"
   },
   "assets": {
     "textures_needed": [],

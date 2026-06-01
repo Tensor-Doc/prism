@@ -15,35 +15,35 @@
   "annotation": {
     "vibe": [
       "hypnotic",
-      "visceral",
+      "kinetic",
       "abyssal",
-      "organic"
+      "gothic"
     ],
-    "motion": 0.75,
+    "motion": 0.65,
     "palette_anchor": [
       "#000000",
-      "#8a851c",
-      "#5a0c0c",
-      "#d1b838"
+      "#4a0505",
+      "#b5a642"
     ],
     "audio_affinity": {
-      "bass": 0.85,
+      "bass": 0.9,
       "mid": 0.5,
-      "treble": 0.7
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
       "frame_feedback",
-      "warp_field",
+      "audio_gating",
       "beat_burst",
+      "domain_repetition",
       "decay_trail"
     ],
-    "technical_notes": "A concentric spiral custom wave is modulated into a deep tunnel structure, with frame feedback in sampler_main creating persistent decaying trails. The synthetic kick in the test signal triggers sudden radial warp expansions and drives a crimson-to-gold color shift in the center. High-frequency transients in the audio loop introduce sharp jitter along the wave vertices.",
+    "technical_notes": "A concentric custom_wave structure acts as the central anchor, feeding into a spiraling tunnel generated via frame feedback in sampler_main. Strong audio gating driven by the bass in the music triggers sudden, high-intensity bursts of golden radial textures that warp and expand outward. Between beats, a high decay rate quickly returns the canvas to a dark, minimalist crimson void.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:37:20.656Z"
+    "captured_at": "2026-05-31T23:56:28.212Z"
   },
   "assets": {
     "textures_needed": [],

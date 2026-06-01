@@ -15,35 +15,35 @@
   "annotation": {
     "vibe": [
       "organic",
-      "painterly",
-      "cavernous",
-      "mystical"
+      "fluid",
+      "atmospheric",
+      "serpentine"
     ],
     "motion": 0.45,
     "palette_anchor": [
-      "#0a242d",
-      "#4a1225",
-      "#1b3d2f",
-      "#e0f7fc"
+      "#050505",
+      "#1a3038",
+      "#4a1525",
+      "#ffffff"
     ],
     "audio_affinity": {
       "bass": 0.6,
       "mid": 0.4,
-      "treble": 0.7
+      "treble": 0.8
     },
     "techniques": [
       "frame_feedback",
-      "decay_trail",
+      "warp_field",
       "custom_wave",
-      "hue_cycle",
-      "warp_field"
+      "decay_trail",
+      "hue_cycle"
     ],
-    "technical_notes": "A central custom wave draws a spiraling trajectory, leaving persistent trails that are preserved by a low decay rate in the frame feedback loop. The feedback buffer, sampled via sampler_main, undergoes a subtle zoom and rotation, transforming the trail into layered, organic scale-like structures. The bright emitter tip flickers in response to treble transients in the synthetic test signal, while the radial expansion of the layers pulses with the synthetic kick.",
+    "technical_notes": "A high-frequency custom wave reacts sharply to treble, serving as the seed emitter for a complex feedback loop. Per-pixel warp equations distort the previous frame (sampled via sampler_main) into overlapping, scale-like structures resembling organic feathers or ink brushstrokes. A slow decay rate and low-frequency hue cycle shift the palette from slate grey to deep teal and eventually rich crimson.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:40:43.661Z"
+    "captured_at": "2026-05-31T21:40:11.299Z"
   },
   "assets": {
     "textures_needed": [],

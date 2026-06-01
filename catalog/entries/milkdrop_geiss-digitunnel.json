@@ -17,29 +17,29 @@
       "minimalist",
       "stark",
       "void",
-      "geometric"
+      "dark",
+      "sparse"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
       "#ffffff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.2,
-      "treble": 0.1
+      "mid": 0.3,
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
-      "beat_burst",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave configured as a circle is modulated by the bass threshold of the synthetic test signal. The circle expands rapidly upon beat detection and fades out quickly, with no frame feedback or sampler_main persistence, resulting in a stark, high-contrast minimalist display.",
+    "technical_notes": "A single custom wave configured as a circle deforms and scales in response to the audio. High decay rates ensure no persistent trails remain in the frame feedback buffer (sampler_main), leaving a stark, high-contrast black void between beat-gated activations. The perimeter of the circle exhibits minor high-frequency rippling driven by treble frequencies.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:43:49.305Z"
+    "captured_at": "2026-05-31T21:43:28.934Z"
   },
   "assets": {
     "textures_needed": [],

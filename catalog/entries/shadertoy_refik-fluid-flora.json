@@ -1,0 +1,63 @@
+{
+  "id": "shadertoy:refik-fluid-flora",
+  "short_id": "e7XhYu",
+  "schema_version": 2,
+  "source": {
+    "type": "shadertoy",
+    "loader": "url",
+    "url": "/presets/shadertoy/refik-fluid-flora.glsl",
+    "format": "glsl-300es"
+  },
+  "display": {
+    "name": "Refik Fluid of Flora",
+    "author": "prism",
+    "blurb": "A slow horizontal current of botanical imagery suspended in a dark gallery void, with luminous warm accents catching the light."
+  },
+  "annotation": {
+    "vibe": [
+      "baroque",
+      "painterly",
+      "atmospheric",
+      "fluid",
+      "gothic"
+    ],
+    "motion": 0.25,
+    "palette_anchor": [
+      "#121013",
+      "#4a3543",
+      "#7c7453",
+      "#9e9ca1"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.25,
+      "treble": 0.2
+    },
+    "techniques": [
+      "texture_sample",
+      "warp_field",
+      "frame_feedback",
+      "decay_trail"
+    ],
+    "technical_notes": "An external floral image texture is mapped and distorted via a fluid per-pixel warp shader, creating a slow-rolling liquid tapestry effect. The warp field is modulated by the low-frequency bands of the audio, causing the dense floral layers to ripple and swell in time with the music. High frame feedback via sampler_main and a low decay rate preserve the soft, painterly edges of the overlapping petals.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T00:27:37.029Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/shadertoy/refik-fluid-flora-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/shadertoy_refik-fluid-flora.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/shadertoy_refik-fluid-flora.jpg"
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-05-31T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -15,30 +15,31 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "stark",
       "sparse",
-      "void",
-      "monochrome"
+      "stark",
+      "oscilloscope",
+      "dark"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
       "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.2,
-      "treble": 0.2
+      "bass": 0.1,
+      "mid": 0.4,
+      "treble": 0.8
     },
     "techniques": [
-      "custom_wave"
+      "custom_wave",
+      "audio_gating"
     ],
-    "technical_notes": "A single horizontal custom wave is rendered across the screen as an oscilloscope, modulating in response to the synthetic test signal. The preset features an extremely high decay rate, maintaining a stark black void with virtually no frame feedback or persistent trails in sampler_main. A faint, transient central shape occasionally appears, but the visual remains strictly minimalist.",
+    "technical_notes": "A custom wave renders a horizontal oscilloscope trace of the audio waveform across the center of the screen. High-frequency transients in the audio loop trigger brief, fast-decaying custom shapes that draw glyphs in the center. The background remains completely black with zero frame feedback or decay trails, resulting in a stark, minimalist aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:43:19.066Z"
+    "captured_at": "2026-05-31T21:42:57.421Z"
   },
   "assets": {
     "textures_needed": [

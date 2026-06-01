@@ -16,34 +16,34 @@
     "vibe": [
       "hypnotic",
       "psychedelic",
-      "metallic",
-      "abyssal"
+      "amber",
+      "tunnel"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
-      "#1a0500",
+      "#3a0d05",
+      "#8b5a2b",
       "#d4af37",
-      "#8b4513",
-      "#e5a93b"
+      "#1a0502"
     ],
     "audio_affinity": {
       "bass": 0.85,
       "mid": 0.5,
-      "treble": 0.6
+      "treble": 0.7
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
       "custom_wave",
-      "domain_repetition",
-      "decay_trail"
+      "audio_gating",
+      "domain_repetition"
     ],
-    "technical_notes": "Concentric circular custom_wave elements act as polar-mapped oscilloscopes, modulated by treble frequencies of the synthetic test signal. The deep, spiraling tunnel is generated via a radial zoom and spiral warp in the per-pixel equations, feeding back through sampler_main with a moderate decay rate to create persistent golden-brown trails. The synthetic kick triggers sudden expansions of the warp field, driving the radial distortion and brightness.",
+    "technical_notes": "Concentric custom waves are modulated by high-frequency audio, creating delicate, squiggly circular rings. A spiral per-pixel warp shader drives a continuous zoom and rotation into a central vortex, using feedback via sampler_main to build a deep tunnel. Bass hits trigger sudden expansions and shift the color palette between deep crimson and brilliant gold.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:37:54.299Z"
+    "captured_at": "2026-05-31T23:57:09.171Z"
   },
   "assets": {
     "textures_needed": [],

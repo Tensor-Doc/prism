@@ -14,36 +14,33 @@
   },
   "annotation": {
     "vibe": [
-      "dark",
       "minimalist",
-      "void",
-      "ambient",
-      "sparse"
+      "dark",
+      "sparse",
+      "void"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
-      "#020208",
-      "#050a18",
-      "#081208",
-      "#120e04"
+      "#080303",
+      "#03030c",
+      "#030803",
+      "#080803"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.4,
-      "treble": 0.6
+      "bass": 0.1,
+      "mid": 0.2,
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave",
-      "hue_cycle",
-      "decay_trail",
-      "frame_feedback"
+      "hue_cycle"
     ],
-    "technical_notes": "Two thin custom_wave elements span horizontally across a dark void, modulating their vertical displacement in response to the high-frequency components of the synthetic test signal. A faint, diffuse central glow cycles slowly through hues (red, blue, green, yellow) via a low-frequency oscillator, while a high decay rate keeps the screen mostly dark and sparse. The overall composition represents a minimalist, oscilloscope-style rendering with minimal feedback propagation.",
+    "technical_notes": "Two horizontal custom_wave elements render the audio waveform as thin, delicate lines across a near-black screen. A faint, diffuse background glow shifts slowly via a hue_cycle from dark red to blue, green, and yellow. The preset maintains an extremely sparse, minimalist aesthetic with minimal motion and high decay.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:49:05.342Z"
+    "captured_at": "2026-05-31T23:01:11.985Z"
   },
   "assets": {
     "textures_needed": [],

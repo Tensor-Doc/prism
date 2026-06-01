@@ -16,32 +16,31 @@
     "vibe": [
       "stark",
       "minimalist",
-      "strobe",
-      "geometric"
+      "void",
+      "stroboscopic"
     ],
-    "motion": 0.6,
+    "motion": 0.15,
     "palette_anchor": [
-      "#000000",
       "#ffffff",
-      "#00ffff",
-      "#ff00ff"
+      "#00e5ff",
+      "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.9,
+      "bass": 0.8,
       "mid": 0.2,
-      "treble": 0.1
+      "treble": 0.4
     },
     "techniques": [
       "audio_gating",
       "beat_burst",
-      "custom_wave"
+      "chromatic_split"
     ],
-    "technical_notes": "A high decay rate instantly clears the frame buffer, preventing persistent trails in sampler_main. Discrete, solid geometric blocks are triggered via audio_gating on the bass attenuated band of the synthetic test signal. The rendering displays high-contrast, strobing custom shapes that flash in sync with the beat bursts.",
+    "technical_notes": "Custom shapes are heavily gated by beat detection on bass attenuated, flashing briefly before a high decay rate instantly clears the frame buffer. The lack of persistent feedback in sampler_main results in a stark, stroboscopic presentation with minimal interpolation between active frames. A subtle chromatic split is visible at the geometry boundaries during peak audio events.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:37:25.555Z"
+    "captured_at": "2026-05-31T21:36:50.173Z"
   },
   "assets": {
     "textures_needed": [

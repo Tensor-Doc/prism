@@ -16,14 +16,15 @@
     "vibe": [
       "geometric",
       "kinetic",
-      "retro",
-      "psychedelic"
+      "psychedelic",
+      "vortex"
     ],
     "motion": 0.75,
     "palette_anchor": [
       "#ffff00",
-      "#ff3300",
-      "#0a0a0a"
+      "#ff0000",
+      "#ff7f00",
+      "#000000"
     ],
     "audio_affinity": {
       "bass": 0.85,
@@ -37,12 +38,12 @@
       "beat_burst",
       "custom_wave"
     ],
-    "technical_notes": "A logarithmic spiral is generated via per-frame zoom and rotation equations, feeding back into sampler_main to produce a stepped, recursive trail. The synthetic test signal's bass kicks trigger sudden scale expansions and color shifts from bright yellow to deep red. A delicate custom wave oscilloscope is visible near the central attractor, reacting to high-frequency transients.",
+    "technical_notes": "Per-frame equations drive a tight zoom and rotation feedback loop, generating a stepped spiral vortex. The expansion and rotation speed are heavily gated by the music's bass, causing dramatic bursts on beat hits. A delicate custom wave oscillates at the spiral's origin, reacting to treble transients.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:33:02.860Z"
+    "captured_at": "2026-05-31T23:51:50.906Z"
   },
   "assets": {
     "textures_needed": [],

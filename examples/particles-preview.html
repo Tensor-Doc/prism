@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prism · particles preview</title>
+    <style>
+      html, body { margin: 0; padding: 0; background: #000; overflow: hidden; font-family: ui-sans-serif, system-ui, sans-serif; color: #ccc; }
+      #stage { display: block; position: fixed; inset: 0; width: 100vw; height: 100vh; }
+      #hud {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        background: rgba(0,0,0,0.55);
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        z-index: 5;
+        pointer-events: none;
+      }
+      #hud code { color: #9cf; }
+    </style>
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+    <div id="hud">
+      Particles preview ·
+      <code>?preset=&lt;url&gt;</code> ·
+      <span id="name">loading…</span> ·
+      <span id="fps">— fps</span>
+    </div>
+
+    <script type="module">
+      import { createParticlesBackground } from "@tensordoc/prism";
+
+      const params = new URLSearchParams(location.search);
+      const presetUrl = params.get("preset") ?? "/presets/particles/refik-fluid-flora.json";
+
+      const canvas = document.getElementById("stage");
+      const nameEl = document.getElementById("name");
+      const fpsEl = document.getElementById("fps");
+
+      // Audio: try the recorded test signal, fall back to silent (the
+      // shader still drifts on curl noise alone). Auto-play policy in
+      // Chrome blocks until first gesture — we attach a one-shot
+      // pointer listener to resume.
+      const audioCtx = new AudioContext();
+      let audioSource;
+      try {
+        const res = await fetch("/audio/test-signal.webm");
+        if (res.ok) {
+          const buf = await res.arrayBuffer();
+          const audio = await audioCtx.decodeAudioData(buf);
+          const node = audioCtx.createBufferSource();
+          node.buffer = audio;
+          node.loop = true;
+          node.start(0, Math.random() * audio.duration);
+          audioSource = node;
+        }
+      } catch (err) {
+        console.warn("[preview] test-signal load failed:", err.message);
+      }
+      if (!audioSource) audioSource = audioCtx.createGain();
+
+      window.addEventListener("pointerdown", () => audioCtx.resume(), { once: true });
+
+      const bg = createParticlesBackground(audioCtx, canvas, audioSource);
+      try {
+        const name = await bg.loadFromUrl(presetUrl);
+        nameEl.textContent = name;
+      } catch (err) {
+        console.error("[preview] preset load failed:", err);
+        nameEl.textContent = `load failed: ${err.message}`;
+      }
+
+      // Simple FPS counter.
+      let frames = 0;
+      let last = performance.now();
+      const tick = () => {
+        frames++;
+        const now = performance.now();
+        if (now - last > 500) {
+          const fps = (frames * 1000) / (now - last);
+          fpsEl.textContent = `${fps.toFixed(0)} fps`;
+          frames = 0;
+          last = now;
+        }
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    </script>
+  </body>
+</html>

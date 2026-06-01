@@ -16,28 +16,29 @@
     "vibe": [
       "minimalist",
       "stark",
+      "sparse",
       "void",
       "dark"
     ],
     "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#8a2be2"
+      "#9400d3"
     ],
     "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.4,
-      "treble": 0.6
+      "bass": 0.1,
+      "mid": 0.5,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A single horizontal custom wave is rendered across the center of the screen, reacting to the synthetic test signal. High-frequency transients in the test signal cause the wave to break into discrete dashed segments, while mid and bass frequencies modulate its vertical amplitude. The background remains entirely dark with a high decay rate, preventing any persistent frame feedback in sampler_main.",
+    "technical_notes": "A single horizontal custom wave functions as a direct oscilloscope, rendering a thin violet line across a black background. With decay set to maximum, there is no frame feedback or persistent trailing, resulting in an instantaneous response to the audio. The waveform breaks into dashed segments and flatlines to silence during quieter passages in the music.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:32:21.780Z"
+    "captured_at": "2026-06-01T01:00:39.099Z"
   },
   "assets": {
     "textures_needed": [],

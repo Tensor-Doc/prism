@@ -15,29 +15,30 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
+      "stark",
       "sparse",
       "dark"
     ],
-    "motion": 0.2,
+    "motion": 0.25,
     "palette_anchor": [
-      "#000000",
-      "#b000b0"
+      "#9400d3",
+      "#000000"
     ],
     "audio_affinity": {
       "bass": 0.2,
-      "mid": 0.6,
-      "treble": 0.5
+      "mid": 0.7,
+      "treble": 0.6
     },
     "techniques": [
-      "custom_wave"
+      "custom_wave",
+      "audio_gating"
     ],
-    "technical_notes": "A single custom wave is rendered as a central horizontal ribbon, modulated directly by the mid and treble frequencies of the synthetic test signal. The background remains entirely black with no frame feedback or warp field active, resulting in a highly minimalist and sparse presentation. The ribbon's magenta hue remains constant throughout the capture.",
+    "technical_notes": "A single custom wave is rendered as a filled ribbon in the center of the screen, directly plotting the audio waveform. The absence of frame feedback through sampler_main or decay trails leaves a stark, isolated shape against a pure black background. The wave's vertical displacement and jagged geometry react dynamically to the mid and treble frequencies of the audio.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:22:47.236Z"
+    "captured_at": "2026-06-01T00:51:00.753Z"
   },
   "assets": {
     "textures_needed": [

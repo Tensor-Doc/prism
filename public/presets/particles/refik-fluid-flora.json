@@ -1,0 +1,10 @@
+{
+  "name": "Refik Fluid of Flora (particles)",
+  "atlas_url": "/presets/particles/refik-fluid-flora-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.025,
+  "velocity_stretch": 3.5,
+  "curl_scale": 5.0,
+  "velocity_damp": 0.985,
+  "audio_gain": 1.4
+}

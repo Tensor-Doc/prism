@@ -14,32 +14,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
       "stark",
-      "linear",
-      "oscilloscope"
+      "void",
+      "sparse",
+      "dark"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#fcdde5",
-      "#dcd0f5"
+      "#ffffff",
+      "#fcdbe3"
     ],
     "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.2,
-      "treble": 0.4
+      "bass": 0.1,
+      "mid": 0.3,
+      "treble": 0.3
     },
     "techniques": [
       "custom_wave",
       "hue_cycle"
     ],
-    "technical_notes": "A minimalist custom wave renders as a thin diagonal line across a black void. The waveform's vertical displacement and subtle color shifts are driven directly by the audio loop, with a high decay rate ensuring no frame feedback or persistent trails remain. It represents a stark, raw oscilloscope-style aesthetic.",
+    "technical_notes": "A single custom_wave is rendered as a thin diagonal line across a black screen, with its vertices modulated by the audio. High decay rate and lack of frame feedback through sampler_main results in no persistent trails, leaving a stark, empty field. The wave color slowly cycles through pale hues over time.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:41:54.617Z"
+    "captured_at": "2026-06-01T00:02:10.820Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,13 +15,13 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "geometric",
       "stark",
-      "void"
+      "mechanical",
+      "dark"
     ],
-    "motion": 0.2,
+    "motion": 0.15,
     "palette_anchor": [
-      "#ff007f",
+      "#f0007f",
       "#000000"
     ],
     "audio_affinity": {
@@ -32,12 +32,12 @@
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist custom shape rendering a rotating magenta radar wedge inside a circular outline. There is no visible response to the synthetic test signal, and the absence of frame feedback or decay trails results in a stark, aliased geometric display against a pure black background.",
+    "technical_notes": "A minimalist custom shape rendering a simple circular radar sweep or clock face. The pink wedge rotates at a constant speed with no apparent reaction to the audio, set against a solid black background. Likely driven by basic per-frame time variables without feedback or warp shaders.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:24:39.755Z"
+    "captured_at": "2026-06-01T00:52:57.576Z"
   },
   "assets": {
     "textures_needed": [

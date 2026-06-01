@@ -15,21 +15,21 @@
   "annotation": {
     "vibe": [
       "stark",
-      "graphic",
       "kinetic",
-      "minimalist"
+      "geometric",
+      "erratic"
     ],
-    "motion": 0.8,
+    "motion": 0.65,
     "palette_anchor": [
-      "#000000",
-      "#00ff00",
-      "#e0115f",
-      "#1e90ff"
+      "#39ff14",
+      "#00a2ff",
+      "#ff5e00",
+      "#d84b80"
     ],
     "audio_affinity": {
       "bass": 0.9,
-      "mid": 0.5,
-      "treble": 0.4
+      "mid": 0.4,
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
@@ -37,12 +37,12 @@
       "beat_burst",
       "hue_cycle"
     ],
-    "technical_notes": "Thick, flat-shaded custom waves are rendered as bold vector-like ribbons against a solid black background, indicating a high decay setting that prevents frame feedback. The vertex equations deform the ribbons dynamically in response to the synthetic test signal, while sudden color shifts and structural transformations are gated directly by bass transients. The lack of sampler_main feedback highlights the clean, high-contrast geometric aesthetic.",
+    "technical_notes": "Custom wave equations render sharp, jagged ribbon-like polygons that burst onto a pitch-black background. An extremely high decay rate ensures that each shape vanishes instantly, leaving no feedback trails in sampler_main. The visual state, position, and color of the waves are heavily gated by beat detection on the audio, creating a highly staccato, rhythmic presentation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:34:15.256Z"
+    "captured_at": "2026-05-31T21:33:24.426Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,30 +15,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "dark",
+      "stark",
       "sparse",
-      "void",
-      "contemplative"
+      "dark",
+      "void"
     ],
-    "motion": 0.1,
+    "motion": 0.2,
     "palette_anchor": [
       "#000000",
-      "#10081c"
+      "#1f1525",
+      "#3c3542"
     ],
     "audio_affinity": {
       "bass": 0.3,
-      "mid": 0.2,
-      "treble": 0.2
+      "mid": 0.4,
+      "treble": 0.6
     },
     "techniques": [
-      "custom_wave"
+      "custom_wave",
+      "decay_trail"
     ],
-    "technical_notes": "Two custom wave generators render thin, dark horizontal lines that slowly drift and tilt across a black background. The waves show subtle high-frequency ripples in response to the treble and mid bands of the synthetic test signal, while the overall rotation/tilt is driven by the bass. A high decay rate prevents any frame feedback or persistent trails, keeping the composition extremely sparse and minimal.",
+    "technical_notes": "Two custom waves span horizontally across a pitch-black canvas, rendering as thin, jittery lines. Their vertical displacement and high-frequency noise are modulated by the audio's treble and mid bands. High decay and the absence of frame feedback keep the screen completely dark, leaving only the instantaneous waveform visible.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:42:17.914Z"
+    "captured_at": "2026-05-31T21:41:50.941Z"
   },
   "assets": {
     "textures_needed": [

@@ -17,33 +17,32 @@
       "dark",
       "cosmic",
       "geometric",
-      "atmospheric"
+      "mysterious"
     ],
-    "motion": 0.45,
+    "motion": 0.4,
     "palette_anchor": [
-      "#121212",
-      "#9acd32",
-      "#8b008b",
-      "#ffffff"
+      "#121115",
+      "#dcdcdc",
+      "#8e3a8e",
+      "#6b7a52"
     ],
     "audio_affinity": {
-      "bass": 0.8,
+      "bass": 0.6,
       "mid": 0.4,
-      "treble": 0.6
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
-      "frame_feedback",
-      "audio_gating",
       "particle_system",
-      "decay_trail"
+      "frame_feedback",
+      "audio_gating"
     ],
-    "technical_notes": "Central custom waves draw concentric circles and triangles that deform dynamically in response to the treble of the test signal. Large, soft-edged glows in lime green and magenta are gated to bass thresholds, modulating in intensity. A subtle starfield particle system drifts in the background, while a low-decay feedback loop via sampler_main creates soft, smoky trails of the geometric elements.",
-    "brand_safe": false,
-    "atelier": true,
+    "technical_notes": "A central custom_wave renders as a pulsing, rotating wireframe that alternates between a triangle and concentric circles, scaling dynamically with the audio. A sparse particle_system of diamond-shaped sprites drifts outward against a background of gaseous clouds, which shift in hue from purple to green via a low-decay frame_feedback loop. A fine grid of background motion vectors reacts subtly to treble frequencies.",
+    "brand_safe": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:55:21.069Z"
+    "captured_at": "2026-06-01T00:20:04.592Z"
   },
   "assets": {
     "textures_needed": [],

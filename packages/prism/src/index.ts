@@ -23,5 +23,10 @@ export {
   createShadertoyBackground,
   type ShadertoyBg,
 } from "./backends/shadertoy";
+export {
+  createParticlesBackground,
+  type ParticlesBg,
+  type ParticlesPreset,
+} from "./backends/particles";
 export { lookup, shortIds, shortIdToGraph, type RegistryEntry } from "./registry";
 export * from "./types";

@@ -15,21 +15,22 @@
   "annotation": {
     "vibe": [
       "geometric",
-      "optical",
-      "rhythmic",
-      "sharp"
+      "isometric",
+      "kinetic",
+      "sharp",
+      "retro"
     ],
-    "motion": 0.65,
+    "motion": 0.75,
     "palette_anchor": [
-      "#1b0303",
-      "#ffff00",
-      "#fdfcf7",
-      "#c29b7c"
+      "#ffeb00",
+      "#fff8e7",
+      "#8b5a2b",
+      "#1a0505"
     ],
     "audio_affinity": {
       "bass": 0.85,
-      "mid": 0.4,
-      "treble": 0.3
+      "mid": 0.5,
+      "treble": 0.4
     },
     "techniques": [
       "audio_gating",
@@ -37,12 +38,12 @@
       "domain_repetition",
       "custom_wave"
     ],
-    "technical_notes": "A complex custom shape draws an impossible isometric five-pointed star composed of repeating chevron segments. Audio gating driven by the synthetic kick in the test signal triggers sudden scaling, rapid rotation, and structural folding of the geometry. The crisp, hard-edged rendering avoids frame feedback or decay trails, maintaining high contrast against the dark background.",
+    "technical_notes": "An interlocking isometric star structure is rendered using custom wave equations, creating a 3D-shaded block aesthetic. Sharp zoom and rotation modulations are gated directly by the bass of the audio, causing the geometric form to snap and pulse in sync with the beat. The clean, aliased edges and rapid state transitions suggest high decay and minimal frame feedback.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:43:39.585Z"
+    "captured_at": "2026-06-01T00:04:20.606Z"
   },
   "assets": {
     "textures_needed": [],

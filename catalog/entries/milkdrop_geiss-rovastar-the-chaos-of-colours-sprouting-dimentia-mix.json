@@ -16,32 +16,33 @@
     "vibe": [
       "psychedelic",
       "kaleidoscopic",
-      "frenetic",
-      "geometric"
+      "geometric",
+      "frenetic"
     ],
     "motion": 0.8,
     "palette_anchor": [
-      "#e000ff",
-      "#00f0ff",
-      "#ccff00"
+      "#39ff14",
+      "#8a2be2",
+      "#ff007f",
+      "#00ffff"
     ],
     "audio_affinity": {
       "bass": 0.85,
       "mid": 0.6,
-      "treble": 0.5
+      "treble": 0.75
     },
     "techniques": [
       "frame_feedback",
       "domain_repetition",
       "hue_cycle",
-      "audio_gating"
+      "beat_burst"
     ],
-    "technical_notes": "Central custom shapes (triangles and quadrilaterals) are recursively tiled into a dense background using radial domain repetition. Feedback through sampler_main creates a complex, self-similar fractal pattern that scales dynamically with the bass of the music. A sudden transition at 00:10 temporarily clears the feedback buffer, leaving high-contrast shapes against a dark void before resuming the dense, hue-cycled feedback loop.",
+    "technical_notes": "Custom geometric shapes (triangles, squares, and circles) are rendered at the center and modulated by audio bands. A complex per-pixel warp shader combined with recursive frame feedback through sampler_main creates a dense, kaleidoscopic fractal field. Sudden transitions and dramatic scale shifts are gated by beat detection on the bass, occasionally collapsing the feedback loop into a dark field before bursting back into high-density patterns.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:24:40.247Z"
+    "captured_at": "2026-05-31T21:22:55.283Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,35 +15,34 @@
   "annotation": {
     "vibe": [
       "dark",
+      "sparse",
       "fluid",
-      "organic",
-      "glitchy"
+      "spectral"
     ],
-    "motion": 0.6,
+    "motion": 0.3,
     "palette_anchor": [
       "#000000",
-      "#8a1c7a",
-      "#1b5e20",
-      "#d3d3d3"
+      "#8c1d6a",
+      "#3e783b",
+      "#707070"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.5,
-      "treble": 0.6
+      "bass": 0.5,
+      "mid": 0.6,
+      "treble": 0.4
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
       "custom_wave",
-      "decay_trail",
-      "audio_gating"
+      "decay_trail"
     ],
-    "technical_notes": "Custom waves render as dotted, organic filaments reacting directly to the mid and treble frequencies of the synthetic test signal. A per-pixel warp shader drives a twisting, liquid-like feedback loop using sampler_main with moderate decay, creating persistent, textured trails. Sudden shifts in rotation and color (transitioning from magenta to green) are gated by the bass transients of the test signal.",
-    "brand_safe": false,
-    "atelier": true,
+    "technical_notes": "Custom waves are rendered as dotted trails that spiral inward through a vortex warp field. The per-pixel warp shader applies a rotational force modulated by the music's bass, while the mid-range frequencies trigger the jittery emission of magenta and green particles. High decay in sampler_main ensures the dotted structures quickly dissolve into the dark background.",
+    "brand_safe": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:46:12.651Z"
+    "captured_at": "2026-05-31T22:58:16.546Z"
   },
   "assets": {
     "textures_needed": [],

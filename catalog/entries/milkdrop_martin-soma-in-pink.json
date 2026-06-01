@@ -15,29 +15,29 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
-      "sparse",
-      "dark"
+      "stark",
+      "dark",
+      "void"
     ],
-    "motion": 0.1,
+    "motion": 0.15,
     "palette_anchor": [
       "#000000",
-      "#9b30ff"
+      "#a020f0"
     ],
     "audio_affinity": {
       "bass": 0.2,
-      "mid": 0.6,
-      "treble": 0.4
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A highly minimalist preset consisting solely of a custom wave rendered as a horizontal purple line across a black void. The wave reacts to the synthetic test signal by breaking into dashed segments and modulating in amplitude, with no frame feedback (sampler_main) or warp field active. The high decay rate ensures no persistent trails are left behind.",
+    "technical_notes": "A single horizontal custom wave acts as a minimalist oscilloscope, rendering the raw audio waveform directly against a solid black background. The purple line exhibits high-frequency ripples corresponding to treble transients in the audio loop, with no frame feedback or warp field applied. The rendering is extremely stark and snappy, with a high decay rate that prevents any persistent trails.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:32:52.459Z"
+    "captured_at": "2026-06-01T01:01:12.886Z"
   },
   "assets": {
     "textures_needed": [],

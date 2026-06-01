@@ -21,7 +21,9 @@
       {
         "name": "pw_noise_lq"
       }
-    ]
+    ],
+    "video": "/videos/milkdrop_martin-butterflies.webm",
+    "thumb": "/thumbs/milkdrop_martin-butterflies.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -29,6 +31,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (24766 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

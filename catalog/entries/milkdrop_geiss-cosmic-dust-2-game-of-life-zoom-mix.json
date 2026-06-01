@@ -15,33 +15,31 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "oscilloscope",
-      "void",
-      "electric"
+      "sparse",
+      "stark",
+      "dark"
     ],
-    "motion": 0.25,
+    "motion": 0.1,
     "palette_anchor": [
       "#000000",
-      "#55aaff",
-      "#ff55aa",
-      "#55ffaa"
+      "#7fa2ff",
+      "#fca3b7"
     ],
     "audio_affinity": {
-      "bass": 0.2,
-      "mid": 0.6,
-      "treble": 0.7
+      "bass": 0.3,
+      "mid": 0.5,
+      "treble": 0.4
     },
     "techniques": [
       "custom_wave",
-      "hue_cycle",
-      "audio_gating"
+      "hue_cycle"
     ],
-    "technical_notes": "A minimalist custom_wave oscilloscope line splits the dark void, modulating its amplitude and thickness in response to the mid and treble bands of the synthetic test signal. The wave transitions from a continuous smooth line to a high-frequency dashed pattern gated by treble transients. Hue cycling rotates the line's color through a simple spectrum against a high-decay black background.",
+    "technical_notes": "A minimalist custom wave renders the audio waveform directly onto a black screen with no frame feedback or warp field. The line's color undergoes a slow hue cycle, shifting from cool blues to pinks and yellows. The lack of decay or sampler_main feedback results in an instantaneous, stark oscilloscope-like display.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:39:57.740Z"
+    "captured_at": "2026-05-31T23:59:28.455Z"
   },
   "assets": {
     "textures_needed": [],

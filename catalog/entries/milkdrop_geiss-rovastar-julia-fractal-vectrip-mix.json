@@ -14,34 +14,33 @@
   },
   "annotation": {
     "vibe": [
+      "void",
       "minimalist",
       "sparse",
-      "dark",
       "erratic"
     ],
-    "motion": 0.25,
+    "motion": 0.12,
     "palette_anchor": [
       "#000000",
-      "#e066ff",
       "#39ff14",
-      "#ffffff"
+      "#ff007f"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.5,
+      "bass": 0.1,
+      "mid": 0.4,
       "treble": 0.8
     },
     "techniques": [
       "custom_wave",
-      "beat_burst",
-      "audio_gating"
+      "audio_gating",
+      "beat_burst"
     ],
-    "technical_notes": "A highly minimalist preset that renders transient custom waves on an entirely black background. Each wave is gated by high-frequency transients in the music, causing them to spawn at randomized screen coordinates with rapid color shifts. High decay settings prevent persistent trails in sampler_main, resulting in a clean, stark, and glitch-like presentation.",
+    "technical_notes": "An extremely sparse preset where custom wave scribbles flash briefly on screen before being instantly cleared by a high decay rate. The position, rotation, and color of these vector-like shapes are gated by high-frequency audio transients. The lack of persistent frame feedback or sampler_main accumulation leaves the screen mostly in total darkness.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:24:05.459Z"
+    "captured_at": "2026-05-31T21:22:18.754Z"
   },
   "assets": {
     "textures_needed": [

@@ -14,36 +14,37 @@
   },
   "annotation": {
     "vibe": [
-      "chaotic",
       "glitchy",
-      "retro-futuristic",
-      "frenetic"
+      "chaotic",
+      "frenetic",
+      "digital",
+      "strobing"
     ],
-    "motion": 0.85,
+    "motion": 0.9,
     "palette_anchor": [
       "#ffffff",
       "#000000",
-      "#8a2be2",
-      "#00ffff"
+      "#55aaff",
+      "#d040d0"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.4,
-      "treble": 0.7
+      "bass": 0.85,
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
-      "frame_feedback",
       "audio_gating",
       "beat_burst",
-      "decay_trail"
+      "frame_feedback",
+      "domain_repetition"
     ],
-    "technical_notes": "A complex custom wave draws chaotic, scribbled trajectories driven by treble frequencies, superimposed over a perspective-warped grid of motion vectors. High feedback gain in sampler_main combined with low decay causes color-blocked shapes to expand and eventually saturate the screen into a complete white-out. Sudden state transitions and color shifts are gated by the bass transients of the synthetic test signal.",
-    "brand_safe": false,
+    "technical_notes": "A chaotic, glitch-aesthetic preset featuring custom waves that render as dense, scribbled white wireframes and radiating dotted lines. Audio gating on the bass and treble drives sudden, high-contrast color shifts, scaling of rectangular feedback layers, and full-screen whiteouts. Feedback loops through sampler_main with extremely low decay create rapid, strobing persistence of geometric frames before they are overwritten by new beat-driven bursts.",
+    "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:39:01.264Z"
+    "captured_at": "2026-05-31T21:38:28.384Z"
   },
   "assets": {
     "textures_needed": [],

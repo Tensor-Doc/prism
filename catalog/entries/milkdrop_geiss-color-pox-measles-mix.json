@@ -14,35 +14,34 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
+      "frenetic",
       "stark",
-      "graphic",
+      "kinetic",
       "geometric"
     ],
-    "motion": 0.75,
+    "motion": 0.85,
     "palette_anchor": [
-      "#8a2be2",
       "#00ff00",
-      "#ff4500",
-      "#1e90ff"
+      "#00e5ff",
+      "#ffd54f",
+      "#e91e63"
     ],
     "audio_affinity": {
       "bass": 0.9,
-      "mid": 0.4,
-      "treble": 0.3
+      "mid": 0.5,
+      "treble": 0.7
     },
     "techniques": [
+      "custom_wave",
       "audio_gating",
-      "beat_burst",
-      "hue_cycle",
-      "custom_wave"
+      "beat_burst"
     ],
-    "technical_notes": "The preset features flat-shaded, sharp-edged custom waves rendered against a pure black background with a high decay rate, preventing any persistent trails. The ribbon-like geometry and solid color palette switch instantly in response to the synthetic kick of the test signal, utilizing beat-gated triggers. No warp field or sampler_main feedback is employed, resulting in a stark, high-contrast graphic aesthetic.",
+    "technical_notes": "A custom wave is rendered as a flat-shaded, closed-loop ribbon with zero decay, producing sharp and instantaneous geometric transitions. The shape's vertices, scale, and rotation are driven directly by the audio's bass and treble bands, causing explosive full-screen expansions on beat hits. Color states swap abruptly with each detected beat, contrasting starkly against a solid black background.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:33:39.960Z"
+    "captured_at": "2026-05-31T21:32:48.960Z"
   },
   "assets": {
     "textures_needed": [],

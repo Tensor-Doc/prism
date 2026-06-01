@@ -16,30 +16,29 @@
     "vibe": [
       "minimalist",
       "stark",
-      "monochrome",
+      "sparse",
       "void",
-      "sparse"
+      "mechanical"
     ],
     "motion": 0.1,
     "palette_anchor": [
-      "#000000",
+      "#000000 stream",
       "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.2,
+      "bass": 0.4,
+      "mid": 0.1,
       "treble": 0.1
     },
     "techniques": [
-      "custom_wave",
-      "audio_gating"
+      "custom_wave"
     ],
-    "technical_notes": "A stark, ultra-minimalist preset featuring a single vertical custom_wave line suspended from a small circular custom shape at the top center. The line's brightness and thickness modulate directly with the bass frequencies of the synthetic test signal, fading to near-total darkness during quieter passages. No warp field or frame feedback is active, resulting in a completely static, high-contrast monochrome composition.",
+    "technical_notes": "A stark, minimalist preset rendering a single custom wave shaped like a pendulum or needle. The vertical line scales and thickens in response to the bass in the audio, while the overall frame remains almost entirely black with high decay preventing any persistent trails. No complex feedback samplers or warp fields are active, leaving a raw, vector-like geometric representation.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:05:14.862Z"
+    "captured_at": "2026-06-01T00:31:43.830Z"
   },
   "assets": {
     "textures_needed": [],

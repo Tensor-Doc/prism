@@ -14,17 +14,17 @@
   },
   "annotation": {
     "vibe": [
-      "geometric",
-      "vector",
-      "frenetic",
+      "cosmic",
+      "kinetic",
+      "mathematical",
       "orbital"
     ],
-    "motion": 0.8,
+    "motion": 0.65,
     "palette_anchor": [
-      "#00ff00",
-      "#0000ff",
-      "#ff0000",
-      "#ffffff"
+      "#ff3344",
+      "#33ff77",
+      "#3366ff",
+      "#ffcc33"
     ],
     "audio_affinity": {
       "bass": 0.8,
@@ -37,12 +37,12 @@
       "beat_burst",
       "decay_trail"
     ],
-    "technical_notes": "Custom waves are rendered as dotted orbital trajectories that spin and warp in a simulated 3D space. The synthetic kick in the test signal triggers rapid hue cycling and sudden radial expansions of the orbits. A high decay rate keeps the background clean, emphasizing the sharp, vector-like precision of the custom wave equations.",
+    "technical_notes": "Parametric custom waves generate nested, rotating 3D orbital paths that mimic a complex particle system. Beat detection on the bass triggers sudden scale expansions and shifts in the orbital plane, while the treble modulates the brightness of the dotted lines. A high decay rate in the frame feedback loop keeps the vector-like trails sharp and distinct.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:36:41.589Z"
+    "captured_at": "2026-05-31T22:48:13.881Z"
   },
   "assets": {
     "textures_needed": [],

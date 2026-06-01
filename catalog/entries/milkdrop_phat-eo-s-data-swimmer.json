@@ -21,29 +21,28 @@
     ],
     "motion": 0.65,
     "palette_anchor": [
-      "#10b981",
-      "#06b6d4",
-      "#1e3a8a",
-      "#15803d"
+      "#10b5a3",
+      "#76d72f",
+      "#04558c",
+      "#479f3d"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.6,
-      "treble": 0.5
+      "mid": 0.5,
+      "treble": 0.7
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
       "custom_wave",
-      "hue_cycle",
       "decay_trail"
     ],
-    "technical_notes": "A central custom wave draws a complex wireframe sphere whose color and scale modulate with the synthetic test signal. The background employs a per-pixel warp shader to generate a fluid, liquid advection field reminiscent of reaction-diffusion. Frame feedback through sampler_main combined with a low decay rate produces persistent, painterly watercolor trails that sweep diagonally across the screen.",
+    "technical_notes": "A per-pixel warp shader creates a fluid, liquid-like advection field driven by the bass of the music. A custom wave renders a wireframe spiral sphere that deforms dynamically with the mid and treble frequencies. Feedback loops through sampler_main with a low decay rate produce persistent, painterly trails that blend the vibrant green and cyan palette into organic, marbled textures.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:38:44.675Z"
+    "captured_at": "2026-05-31T22:50:27.140Z"
   },
   "assets": {
     "textures_needed": [],

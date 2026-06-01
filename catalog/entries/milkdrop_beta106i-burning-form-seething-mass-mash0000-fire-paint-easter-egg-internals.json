@@ -41,8 +41,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.jpg"
+    "video": "/videos/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.webm",
+    "thumb": "/thumbs/milkdrop_beta106i-burning-form-seething-mass-mash0000-fire-paint-easter-egg-internals.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -51,6 +51,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (233789 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (356931 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

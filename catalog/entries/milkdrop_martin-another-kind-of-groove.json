@@ -16,28 +16,29 @@
     "vibe": [
       "minimalist",
       "stark",
+      "oscilloscope",
       "sparse",
-      "technical"
+      "dark"
     ],
-    "motion": 0.3,
+    "motion": 0.35,
     "palette_anchor": [
       "#000000",
-      "#70b5eb"
+      "#73b9ee"
     ],
     "audio_affinity": {
-      "bass": 0.4,
+      "bass": 0.8,
       "mid": 0.6,
-      "treble": 0.5
+      "treble": 0.4
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A single horizontal custom wave is rendered on a pure black background. The wave's vertical displacement directly maps the waveform of the synthetic test signal, transitioning from smooth low-frequency swells to jagged high-frequency transients. The complete absence of frame feedback or decay trails results in zero persistence, creating a stark, real-time oscilloscope aesthetic.",
+    "technical_notes": "A single custom wave is rendered as a horizontal oscilloscope line reacting directly to the audio waveform. With no frame feedback (decay set to 1.0) and no warp shader active, the screen remains entirely black except for the instantaneous blue waveform. This represents a stark, minimalist utility aesthetic with zero persistent trails.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:17:38.924Z"
+    "captured_at": "2026-06-01T00:45:42.169Z"
   },
   "assets": {
     "textures_needed": [],

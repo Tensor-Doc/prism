@@ -14,36 +14,36 @@
   },
   "annotation": {
     "vibe": [
-      "painterly",
       "fluid",
       "organic",
+      "sculptural",
       "atmospheric"
     ],
     "motion": 0.6,
     "palette_anchor": [
       "#00a896",
-      "#e63946",
-      "#050c1a",
-      "#1d3557"
+      "#d90429",
+      "#028090",
+      "#050505"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.5,
+      "bass": 0.5,
+      "mid": 0.6,
       "treble": 0.8
     },
     "techniques": [
       "frame_feedback",
-      "custom_wave",
       "decay_trail",
+      "custom_wave",
       "hue_cycle",
       "warp_field"
     ],
-    "technical_notes": "A custom wave emitter draws a highly modulated path that is extruded into a painterly, volumetric ribbon via frame feedback in sampler_main. High-frequency transients in the synthetic test signal drive the fine, comb-like serrations at the tip of the ribbon, while bass-driven coordinate rotation sweeps the emitter in a spiral trajectory. Low decay rates allow the extruded ribbon to linger as a thick brushstroke before fading into the dark void.",
+    "technical_notes": "A custom wave draws a high-frequency trailing path that is extruded into a sculptural ribbon via frame feedback. The warp field applies a spiral zoom and rotation, while a low decay rate in sampler_main preserves the layered, feathered edges. High-frequency treble transients drive the jittery, bright leading tip of the wave, while the overall color palette cycles dynamically.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:31:04.086Z"
+    "captured_at": "2026-05-31T21:29:54.335Z"
   },
   "assets": {
     "textures_needed": [],

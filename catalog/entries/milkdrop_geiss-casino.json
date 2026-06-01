@@ -14,21 +14,22 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
       "fluid",
-      "oscilloscope",
-      "technical"
+      "topographic",
+      "hypnotic",
+      "organic"
     ],
-    "motion": 0.45,
+    "motion": 0.5,
     "palette_anchor": [
-      "#7fa185",
-      "#101511",
-      "#ffffff"
+      "#000000",
+      "#8cb894",
+      "#ffffff",
+      "#1e3524"
     ],
     "audio_affinity": {
-      "bass": 0.8,
+      "bass": 0.6,
       "mid": 0.5,
-      "treble": 0.7
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
@@ -36,12 +37,12 @@
       "warp_field",
       "decay_trail"
     ],
-    "technical_notes": "A central custom wave renders an oscilloscope-like scribble reacting sharply to the treble of the test signal. A horizontal per-pixel warp field drives a laminar flow of green and grey lines, while frame feedback through sampler_main preserves the history of the wave's motion. Sudden horizontal flips in the warp direction are triggered by the synthetic kick.",
+    "technical_notes": "A central custom_wave acts as a high-frequency oscilloscope, reacting sharply to the treble of the audio. The background consists of horizontal topographic lines modulated by a per-pixel warp shader that simulates a fluid, undulating flow field. Frame feedback through sampler_main with a low decay rate creates a persistent trailing history of the central waveform as it drifts horizontally across the screen.",
     "brand_safe": true,
-    "atelier": false,
+    "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:30:31.817Z"
+    "captured_at": "2026-05-31T21:29:14.872Z"
   },
   "assets": {
     "textures_needed": [],

@@ -14,36 +14,36 @@
   },
   "annotation": {
     "vibe": [
-      "hypnotic",
-      "strobing",
       "geometric",
-      "optical"
+      "strobing",
+      "kinetic",
+      "psychedelic"
     ],
-    "motion": 0.9,
+    "motion": 0.85,
     "palette_anchor": [
       "#ffffff",
-      "#8b008b",
-      "#4b0082",
-      "#2e8b57"
+      "#9b30b5",
+      "#4caf50",
+      "#1a1a1a"
     ],
     "audio_affinity": {
-      "bass": 0.95,
-      "mid": 0.5,
-      "treble": 0.7
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.5
     },
     "techniques": [
-      "audio_gating",
       "beat_burst",
       "domain_repetition",
       "warp_field",
-      "hue_cycle"
+      "frame_feedback",
+      "custom_wave"
     ],
-    "technical_notes": "A high-contrast composite shader clamps the center of a radial grid to pure white, triggered by beat-gated bursts from the synthetic kick of the test signal. The grid itself undergoes extreme per-pixel warp deformation, creating moiré interference patterns that alternate rapidly between green and purple hues. The dramatic expansion and contraction of the central circular mask suggest a highly sensitive audio gating threshold mapped to bass attenuated.",
+    "technical_notes": "A highly reactive grid layout undergoes intense radial distortion and zoom driven by the audio. Beat detection on bass triggers massive white-out bursts that expand from the center, temporarily over-saturating the frame. A custom wave grid overlay is warped dynamically via a per-pixel warp shader, creating kaleidoscopic patterns and domain repetition, while feedback loops in sampler_main preserve the grid lines.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:48:31.841Z"
+    "captured_at": "2026-05-31T23:00:40.242Z"
   },
   "assets": {
     "textures_needed": [],

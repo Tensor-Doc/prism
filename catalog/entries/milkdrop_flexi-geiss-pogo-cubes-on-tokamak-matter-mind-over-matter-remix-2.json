@@ -16,28 +16,28 @@
     "vibe": [
       "minimalist",
       "stark",
-      "monochrome",
-      "void"
+      "void",
+      "oscilloscope"
     ],
-    "motion": 0.3,
+    "motion": 0.15,
     "palette_anchor": [
       "#ffffff",
       "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.2
+      "bass": 0.2,
+      "mid": 0.8,
+      "treble": 0.1
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A minimalist oscilloscope rendering where a single custom_wave displays the raw audio waveform of the test signal. The background remains completely black with an instantaneous decay rate, bypassing sampler_main feedback entirely to produce a stark, zero-persistence display. The wave's vertical displacement directly tracks the amplitude of the incoming audio.",
+    "technical_notes": "A single custom wave renders a horizontal oscilloscope trace across the center of the screen. The wave's vertical displacement is driven directly by the audio waveform, showing snappy, real-time response with zero decay or frame feedback. The background remains entirely black with no post-processing or warp shaders applied.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:56:24.650Z"
+    "captured_at": "2026-06-01T00:21:40.414Z"
   },
   "assets": {
     "textures_needed": [],

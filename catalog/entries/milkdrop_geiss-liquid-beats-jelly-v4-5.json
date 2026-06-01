@@ -15,32 +15,34 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
+      "sparse",
+      "stark",
       "dark",
-      "fleeting"
+      "abstract"
     ],
-    "motion": 0.15,
+    "motion": 0.25,
     "palette_anchor": [
-      "#000000",
       "#ffffff",
-      "#c8bfe7",
-      "#ffebcd"
+      "#f5d6c6",
+      "#fca3b7",
+      "#b19ffb"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.6,
-      "treble": 0.7
+      "bass": 0.8,
+      "mid": 0.3,
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
-      "audio_gating"
+      "audio_gating",
+      "beat_burst"
     ],
-    "technical_notes": "An extremely minimalist preset where the viewport remains a dark void. A single custom_wave in the center is driven by the audio loop's spectral bands, twisting and spiking into sharp geometric configurations. The absence of frame feedback (sampler_main) or warp fields results in an exceptionally clean, fleeting presentation of the raw test signal.",
+    "technical_notes": "A single custom wave is rendered in the center of a black screen, with its geometry modulated directly by the audio. An extremely high decay rate prevents any frame feedback or persistent trails, leaving only the instantaneous state of the wave. The color of the wave cycles dynamically on detected beats.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:06:54.082Z"
+    "captured_at": "2026-06-01T00:33:29.734Z"
   },
   "assets": {
     "textures_needed": [],

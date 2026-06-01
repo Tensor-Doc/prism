@@ -16,35 +16,33 @@
     "vibe": [
       "geometric",
       "cosmic",
-      "sharp",
-      "retro-futuristic"
+      "kinetic",
+      "sharp"
     ],
-    "motion": 0.8,
+    "motion": 0.75,
     "palette_anchor": [
-      "#000000",
       "#ffffff",
-      "#b83a4b",
-      "#f5c2c7"
+      "#e5989b",
+      "#b56576",
+      "#000000"
     ],
     "audio_affinity": {
-      "bass": 0.85,
+      "bass": 0.8,
       "mid": 0.5,
       "treble": 0.7
     },
     "techniques": [
-      "custom_wave",
       "particle_system",
-      "decay_trail",
-      "frame_feedback",
-      "audio_gating",
-      "beat_burst"
+      "custom_wave",
+      "beat_burst",
+      "frame_feedback"
     ],
-    "technical_notes": "A complex spiral constructed from nested custom shapes (triangles) rotates and zooms in response to the synthetic test signal's bass frequencies. Discrete hexagonal particles are emitted as a particle system, leaving persistent decay trails through frame feedback in sampler_main. The camera's dramatic perspective shifts and coordinate transformations are gated by beat-burst events.",
-    "brand_safe": true,
+    "technical_notes": "A complex custom shape draws a spiral of interlocking 3D-like triangles that scales and rotates dynamically to the audio. A secondary particle system of hexagonal elements shoots outward from the center, with velocity and emission gated by bass beats. Low decay on the primary geometry maintains sharp, crisp polygonal edges against the dark background.",
+    "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:44:14.462Z"
+    "captured_at": "2026-06-01T00:05:14.042Z"
   },
   "assets": {
     "textures_needed": [],

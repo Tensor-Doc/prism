@@ -15,35 +15,34 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "calligraphic",
-      "stark",
       "sparse",
-      "dark"
+      "stark",
+      "kinetic",
+      "erratic"
     ],
-    "motion": 0.25,
+    "motion": 0.45,
     "palette_anchor": [
-      "#fca5c0",
-      "#a2a2fa",
-      "#ffdfb0",
-      "#a3f7df"
+      "#f48fb1",
+      "#ffe0b2",
+      "#b39ddb",
+      "#80cbc4"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.8,
-      "treble": 0.8
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
-      "beat_burst",
       "hue_cycle"
     ],
-    "technical_notes": "A highly minimalist preset featuring a single custom wave rendered as a calligraphic stroke against a pure black background. The decay rate is set to maximum, preventing any frame feedback or persistent trails in sampler_main. The shape's vertex positions and color are modulated directly by the mid and treble frequencies of the synthetic test signal, while the synthetic kick triggers discrete color-state jumps.",
+    "technical_notes": "A single custom wave or shape is rendered in the center of a black screen, with its vertices directly modulated by the audio bands. The lack of frame feedback (high decay) results in a stark, instantaneous rendering with zero persistent trails. The color of the stroke cycles abruptly, likely driven by beat-gated triggers or a rapid hue cycle.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:41:16.785Z"
+    "captured_at": "2026-05-31T21:40:44.785Z"
   },
   "assets": {
     "textures_needed": [],

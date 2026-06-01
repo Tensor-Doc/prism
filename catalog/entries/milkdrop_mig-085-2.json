@@ -14,32 +14,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
-      "geometric",
-      "precise"
+      "sparse",
+      "dark",
+      "geometric"
     ],
-    "motion": 0.4,
+    "motion": 0.3,
     "palette_anchor": [
-      "#000000",
-      "#00ff66",
-      "#0055ff",
-      "#ff00aa"
+      "#0000ff",
+      "#00ff00",
+      "#ff00ff",
+      "#ffaa00"
     ],
     "audio_affinity": {
-      "bass": 0.3,
+      "bass": 0.2,
       "mid": 0.5,
-      "treble": 0.7
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
       "hue_cycle"
     ],
-    "technical_notes": "A minimalist preset featuring a single custom wave rendered as a sweeping, textured arc against a pure black void. High-frequency components of the synthetic test signal modulate the fine, comb-like inner structure of the ribbon, while its overall position and radius sweep smoothly. The absence of frame feedback (decay set to 1.0) and warp shaders ensures a perfectly clean, sharp render with a slow hue cycle driving the gradient.",
+    "technical_notes": "A single custom wave is rendered along a rotating circular arc, with its high-frequency oscillations driven directly by the treble and mid bands of the audio. The complete absence of frame feedback (decay set to maximum) and warp shaders leaves the background entirely black, emphasizing the sharp, clean vector-like line. The wave's color continuously cycles through a full HSV gradient over time.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:28:45.225Z"
+    "captured_at": "2026-05-31T23:42:58.748Z"
   },
   "assets": {
     "textures_needed": [],

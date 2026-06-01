@@ -15,30 +15,29 @@
     "vibe": [
       "minimalist",
       "stark",
-      "sparse",
-      "void",
-      "dark"
+      "calligraphic",
+      "kinetic"
     ],
-    "motion": 0.25,
+    "motion": 0.6,
     "palette_anchor": [
       "#000000",
-      "#fca374"
+      "#f4a47d"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.3,
-      "treble": 0.1
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.7
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A single custom wave or custom shape is rendered as a sweeping, peach-colored ribbon against a solid black background. The shape's thickness and position modulate in response to the synthetic test signal, while a lack of frame feedback (sampler_main) or decay trails leaves the rest of the viewport entirely dark. The preset exemplifies extreme minimalism with near-zero background activity.",
+    "technical_notes": "A single custom wave renders a sweeping, calligraphic ribbon against a stark black background. High decay settings ensure no persistent trails remain, resulting in a snappy, instantaneous frame-to-frame response. High-frequency treble modulations produce the serrated, jagged edges along the ribbon, while bass transients drive its sudden, sweeping spatial transitions.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:25:18.763Z"
+    "captured_at": "2026-05-31T23:39:17.642Z"
   },
   "assets": {
     "textures_needed": [],

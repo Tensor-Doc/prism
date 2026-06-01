@@ -15,33 +15,32 @@
   "annotation": {
     "vibe": [
       "minimalist",
+      "sparse",
       "stark",
-      "void",
-      "sparse"
+      "void"
     ],
     "motion": 0.4,
     "palette_anchor": [
-      "#000000",
-      "#ffb7b2",
-      "#80e5ff",
+      "#f3b0b3",
+      "#a2f2f5",
       "#ffffff"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.4,
-      "treble": 0.7
+      "mid": 0.5,
+      "treble": 0.6
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
-      "beat_burst"
+      "hue_cycle"
     ],
-    "technical_notes": "A single highly reactive custom wave is rendered against a stark black void, exhibiting an extremely high decay rate that eliminates frame feedback or persistent trails. High-frequency elements of the synthetic test signal drive the jagged, erratic vertex displacements of the ribbon, while bass transients trigger instantaneous color shifts between pastel pink, cyan, and white. The rendering relies entirely on direct wave drawing without a per-pixel warp or composite shader pass.",
+    "technical_notes": "A single custom wave or shape oscillates in the center of a completely black screen, reacting directly to the audio loop. High decay prevents any persistent trails or feedback, resulting in a stark, isolated vector-like scribble. The color of the waveform cycles discretely between pink, cyan, and white, driven by audio gating.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:47:39.719Z"
+    "captured_at": "2026-05-31T22:59:46.966Z"
   },
   "assets": {
     "textures_needed": [],

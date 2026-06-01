@@ -14,34 +14,33 @@
   },
   "annotation": {
     "vibe": [
-      "minimalist",
       "dark",
-      "contemplative",
-      "void"
+      "minimalist",
+      "sparse",
+      "ambient"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
-      "#0a0202",
-      "#02020a",
-      "#020a02",
-      "#0a0a02"
+      "#0d0202",
+      "#02020e",
+      "#020d02",
+      "#0d0d02"
     ],
     "audio_affinity": {
-      "bass": 0.3,
+      "bass": 0.1,
       "mid": 0.2,
-      "treble": 0.1
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave",
-      "hue_cycle",
-      "decay_trail"
+      "hue_cycle"
     ],
-    "technical_notes": "Two thin horizontal custom_wave elements exhibit subtle vertical displacement driven by the mid-frequencies of the test signal. A slow hue_cycle shifts the minimalist, near-black background through deep red, blue, green, and amber phases. The central region features a faint, soft-edged glow modulated by bass frequencies, utilizing a high decay rate to maintain a stark, atmospheric void.",
+    "technical_notes": "Two horizontal custom waves undulate gently across a near-black field, reacting subtly to the mid and treble frequencies of the audio. Faint, diffuse background glows shift slowly in hue on a long cycle, modulated by low-frequency bass energy. The high decay rate keeps the screen exceptionally dark and sparse, leaving only the thin wave traces visible.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:49:39.660Z"
+    "captured_at": "2026-05-31T23:01:50.258Z"
   },
   "assets": {
     "textures_needed": [],

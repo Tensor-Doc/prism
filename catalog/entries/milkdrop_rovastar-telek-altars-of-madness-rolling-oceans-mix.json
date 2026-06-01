@@ -15,15 +15,15 @@
   "annotation": {
     "vibe": [
       "fluid",
-      "oceanic",
       "organic",
-      "stormy"
+      "electric",
+      "aquatic"
     ],
     "motion": 0.65,
     "palette_anchor": [
-      "#081416",
-      "#124244",
-      "#3ebcb0",
+      "#082e30",
+      "#3be0c8",
+      "#116e4e",
       "#ffffff"
     ],
     "audio_affinity": {
@@ -36,14 +36,14 @@
       "warp_field",
       "custom_wave",
       "decay_trail",
-      "bloom_glow"
+      "audio_gating"
     ],
-    "technical_notes": "A per-pixel warp shader creates a fluid-like reaction-diffusion simulation, advecting the frame buffer to form swirling, oceanic vortices. Frame feedback through sampler_main with a low decay rate maintains persistent, painterly teal trails, while a highly reactive custom wave rendered in bright white traces the high-frequency transients of the synthetic test signal. The background features a subtle grid of motion vectors modulated by the synthetic kick.",
+    "technical_notes": "A central custom wave draws a highly reactive, flickering white scribble driven by the treble and mid bands of the audio. The surrounding field uses a per-pixel warp shader to generate fluid, curly reaction-diffusion vortexes that slowly drift and dissolve. Low decay in the frame feedback loop through sampler_main preserves these organic, painterly waves, while bass hits trigger sudden transitions from deep teal to vibrant emerald green.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:52:29.581Z"
+    "captured_at": "2026-05-31T23:04:49.149Z"
   },
   "assets": {
     "textures_needed": [],

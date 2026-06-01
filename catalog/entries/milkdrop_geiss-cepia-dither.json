@@ -15,31 +15,29 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
       "sparse",
-      "dark"
+      "stark",
+      "dark",
+      "void"
     ],
-    "motion": 0.15,
+    "motion": 0.1,
     "palette_anchor": [
-      "#000000",
-      "#c8b0c8",
-      "#ffffff"
+      "#000000"
     ],
     "audio_affinity": {
       "bass": 0.1,
-      "mid": 0.6,
-      "treble": 0.4
+      "mid": 0.4,
+      "treble": 0.3
     },
     "techniques": [
-      "custom_wave",
-      "hue_cycle"
+      "custom_wave"
     ],
-    "technical_notes": "Two custom waves render as thin, oscillating lines across a dark void, directly driven by the mid and treble frequencies of the synthetic test signal. High decay rate ensures no persistent trails remain, leaving the screen completely black between audio triggers. Simple and highly minimalist, focusing entirely on raw waveform representation.",
+    "technical_notes": "A highly minimalist preset consisting of thin, transient custom waves that trace across a black void. The waves appear briefly in response to the audio, showing almost no frame feedback or decay trails, leaving the screen completely dark for most of the duration.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:32:35.312Z"
+    "captured_at": "2026-05-31T21:31:41.314Z"
   },
   "assets": {
     "textures_needed": [],

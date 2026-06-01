@@ -24,6 +24,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was empty (24822 bytes); preset doesn't render meaningfully against the current test signal"
+    "note": "capture was empty (24810 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

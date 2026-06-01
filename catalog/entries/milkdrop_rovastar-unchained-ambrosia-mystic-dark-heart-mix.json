@@ -15,16 +15,17 @@
   "annotation": {
     "vibe": [
       "gothic",
-      "fluid",
       "rorschach",
-      "electric"
+      "electric",
+      "spectral",
+      "organic"
     ],
     "motion": 0.65,
     "palette_anchor": [
       "#000000",
       "#ffffff",
-      "#a12482",
-      "#1da2b4"
+      "#1fa363",
+      "#dcd3b6"
     ],
     "audio_affinity": {
       "bass": 0.8,
@@ -32,21 +33,19 @@
       "treble": 0.7
     },
     "techniques": [
+      "custom_wave",
       "frame_feedback",
-      "warp_field",
+      "domain_repetition",
       "audio_gating",
       "beat_burst",
-      "hue_cycle",
-      "domain_repetition",
-      "custom_wave",
       "decay_trail"
     ],
-    "technical_notes": "A central custom_wave oscillates with high-frequency jitter driven by the treble of the test signal, while bilateral and radial domain_repetition mirrors the visual field into a Rorschach-like structure. Per-pixel warp equations combined with frame feedback via sampler_main produce fluid, smoke-like organic trails that decay slowly. Sudden color shifts and scale expansions are gated to the bass transients of the synthetic test signal, cycling through magenta, cyan, and monochrome phases.",
-    "brand_safe": false,
+    "technical_notes": "Central custom waves react to high-frequency audio with rapid, electric oscillations, mirrored across a bilateral symmetry axis. Low-frequency beats trigger audio-gated color bursts of emerald green and gold, which diffuse outwards via a symmetric warp field. Moderate decay in sampler_main creates smoky, Rorschach-like feedback trails that dissolve into the dark background.",
+    "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:43:53.719Z"
+    "captured_at": "2026-05-31T22:55:48.210Z"
   },
   "assets": {
     "textures_needed": [],

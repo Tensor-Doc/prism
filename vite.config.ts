@@ -27,8 +27,24 @@ const BUILD_TIME = new Date().toISOString();
 // for local dev, never for prod.
 const landingOnly = process.env.VITE_LANDING_ONLY === "1";
 
+// Mirror the Vercel rewrite (`/` → `/landing.html`) in dev so the local
+// experience matches prod and `localhost:5173/?g=…` resolves the landing
+// page rather than the legacy studio app.
+const rewriteRootToLanding = {
+  name: "rewrite-root-to-landing",
+  configureServer(server: import("vite").ViteDevServer) {
+    server.middlewares.use((req, _res, next) => {
+      if (req.url === "/" || req.url?.startsWith("/?")) {
+        req.url = "/landing.html" + (req.url === "/" ? "" : req.url.slice(1));
+      }
+      next();
+    });
+  },
+};
+
 export default defineConfig({
   server: { port: 5173 },
+  plugins: [rewriteRootToLanding],
   define: {
     __PRISM_BUILD_SHA__: JSON.stringify(BUILD_SHA),
     __PRISM_BUILD_TIME__: JSON.stringify(BUILD_TIME),

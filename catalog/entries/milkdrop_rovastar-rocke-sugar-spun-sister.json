@@ -14,16 +14,18 @@
   },
   "annotation": {
     "vibe": [
+      "electric",
+      "energetic",
       "cosmic",
-      "fluid",
-      "vortex",
-      "energetic"
+      "frenetic",
+      "vortex"
     ],
-    "motion": 0.7,
+    "motion": 0.8,
     "palette_anchor": [
-      "#0000d0",
+      "#0000ff",
       "#ffffff",
-      "#4040ff"
+      "#00008b",
+      "#7a9eff"
     ],
     "audio_affinity": {
       "bass": 0.85,
@@ -31,18 +33,18 @@
       "treble": 0.75
     },
     "techniques": [
-      "frame_feedback",
       "custom_wave",
+      "frame_feedback",
+      "beat_burst",
       "warp_field",
-      "bloom_glow",
       "decay_trail"
     ],
-    "technical_notes": "A highly reactive custom wave forms a wispy, energetic central spiral that expands dramatically on the bass hits of the synthetic test signal. Per-pixel warp equations apply a continuous zoom and rotational vortex, drawing the wave's trails outward into the deep blue background. Frame feedback through sampler_main combined with sampler_blur1 creates a soft, glowing bloom around the high-intensity white core.",
+    "technical_notes": "A central custom wave draws a highly energetic, spinning double-helix structure that reacts dynamically to the audio. A spiral warp field combined with frame feedback through sampler_main creates expanding blue vortex trails that decay slowly. High-frequency treble drives the chaotic, scribble-like noise of the central core, while bass kicks trigger dramatic radial expansions.",
     "brand_safe": true,
-    "atelier": true,
+    "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:43:20.554Z"
+    "captured_at": "2026-05-31T22:55:04.980Z"
   },
   "assets": {
     "textures_needed": [],

@@ -15,34 +15,33 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
       "sparse",
-      "erratic"
+      "stark",
+      "dark",
+      "abstract"
     ],
     "motion": 0.25,
     "palette_anchor": [
-      "#000000",
-      "#fbcce3",
-      "#d0e1fd",
-      "#fbe3c5"
+      "#fca5c7",
+      "#c2f0e3",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.5,
-      "treble": 0.7
+      "bass": 0.3,
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
-      "beat_burst",
       "hue_cycle"
     ],
-    "technical_notes": "A single custom wave or custom shape is rendered at the center of a dark void, with its vertices and scaling driven directly by the transient bands of the synthetic test signal. The decay rate is extremely high, leaving no persistent trails or frame feedback in sampler_main. The shape's color cycles through a pale palette on beat-gated triggers.",
+    "technical_notes": "A single custom wave is drawn on a completely black background with an extremely high decay rate, preventing any frame feedback or trails. The wave's shape and color are gated by the audio, morphing and shifting hue rapidly on mid and treble transients. This creates a stark, minimalist oscilloscope aesthetic.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:41:48.650Z"
+    "captured_at": "2026-05-31T21:41:16.159Z"
   },
   "assets": {
     "textures_needed": [],

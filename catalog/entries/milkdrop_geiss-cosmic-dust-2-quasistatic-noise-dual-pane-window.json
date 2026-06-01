@@ -15,16 +15,17 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "kinetic",
       "stark",
-      "abstract"
+      "erratic",
+      "sparse",
+      "dark"
     ],
-    "motion": 0.65,
+    "motion": 0.5,
     "palette_anchor": [
-      "#2b72f5",
-      "#f582ae",
-      "#4cc9f0",
-      "#7209b7"
+      "#5b83e8",
+      "#f48fb1",
+      "#80cbc4",
+      "#e040fb"
     ],
     "audio_affinity": {
       "bass": 0.8,
@@ -33,16 +34,15 @@
     },
     "techniques": [
       "custom_wave",
-      "audio_gating",
-      "beat_burst",
-      "hue_cycle"
+      "hue_cycle",
+      "audio_gating"
     ],
-    "technical_notes": "A single custom wave is rendered in a dark void with high decay, leaving no persistent trails or frame feedback in sampler_main. The vertex positions and overall scale are modulated directly by the bass and treble of the synthetic test signal, causing snappy, kinetic deformations. Abrupt hue shifts are triggered by beat detection on the bass attenuated, gating the color state across a wide palette.",
+    "technical_notes": "A single custom wave is rendered on a black background with an extremely high decay rate, preventing any persistent trails or feedback. The wave's scale and vertex displacement are gated by the audio loop's bass transients, creating sharp, erratic geometric transformations. The ribbon's color cycles continuously through a wide hue range.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-30T23:38:28.038Z"
+    "captured_at": "2026-05-31T21:37:54.495Z"
   },
   "assets": {
     "textures_needed": [],

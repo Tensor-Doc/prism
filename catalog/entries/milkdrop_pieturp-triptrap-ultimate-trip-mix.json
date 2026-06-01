@@ -14,37 +14,35 @@
   },
   "annotation": {
     "vibe": [
-      "chaotic",
       "geometric",
-      "psychedelic",
-      "glitchy"
+      "glitchy",
+      "kinetic",
+      "psychedelic"
     ],
-    "motion": 0.8,
+    "motion": 0.75,
     "palette_anchor": [
-      "#a200ff",
-      "#00d2ff",
-      "#39ff14",
-      "#ff00aa"
+      "#9b00e8",
+      "#39b54a",
+      "#e0008c",
+      "#8cc63f"
     ],
     "audio_affinity": {
-      "bass": 0.85,
-      "mid": 0.6,
+      "bass": 0.8,
+      "mid": 0.5,
       "treble": 0.7
     },
     "techniques": [
       "frame_feedback",
-      "warp_field",
       "audio_gating",
-      "beat_burst",
       "hue_cycle",
       "domain_repetition"
     ],
-    "technical_notes": "A complex feedback loop utilizing sampler_main with low decay creates recursive geometric trails of nested squares. The per-pixel warp shader applies a kaleidoscopic domain repetition modulated by the synthetic test signal's bass transients. A rapid hue_cycle in the composite shader shifts the entire palette across vibrant neon spectrums on every major beat burst.",
+    "technical_notes": "Custom square shapes are rendered with high feedback persistence, creating recursive geometric trails through sampler_main. Audio gating driven by the music's bass and treble modulates the rotation angle and scale of the shapes, while a rapid hue cycle shifts the palette across distinct color fields. The composition exhibits a digital, glitch-like geometric aesthetic with strong beat-responsive transformations.",
     "brand_safe": false,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:41:09.574Z"
+    "captured_at": "2026-05-31T22:52:56.645Z"
   },
   "assets": {
     "textures_needed": [],

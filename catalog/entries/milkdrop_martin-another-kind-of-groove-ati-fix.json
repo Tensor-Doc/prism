@@ -16,28 +16,28 @@
     "vibe": [
       "minimalist",
       "stark",
-      "void",
-      "electronic"
+      "oscilloscope",
+      "sparse"
     ],
     "motion": 0.25,
     "palette_anchor": [
       "#000000",
-      "#80c0ff"
+      "rgb(130,182,226)"
     ],
     "audio_affinity": {
       "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.3
+      "treble": 0.2
     },
     "techniques": [
       "custom_wave"
     ],
-    "technical_notes": "A highly minimalist preset consisting of a single horizontal custom wave rendering the raw audio waveform. The rendering is drawn directly onto a black background with an instantaneous decay rate, leaving no persistent feedback trails in sampler_main. The amplitude and thickness of the blue wave modulate in direct response to the synthetic test signal's bass kicks.",
+    "technical_notes": "A single horizontal custom wave is rendered across the center of the screen, displaying the raw audio waveform. The background is completely black with high decay, leaving no persistent trails or feedback. The wave's vertical displacement is driven directly by the audio amplitude, creating a classic oscilloscope effect.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T02:17:07.330Z"
+    "captured_at": "2026-06-01T00:45:07.665Z"
   },
   "assets": {
     "textures_needed": [],

@@ -13,37 +13,36 @@
   },
   "annotation": {
     "vibe": [
+      "psychedelic",
       "geometric",
       "frenetic",
-      "strobe",
-      "mathematical",
-      "monochrome"
+      "hypnotic"
     ],
-    "motion": 0.85,
+    "motion": 0.8,
     "palette_anchor": [
-      "#ffffff",
       "#000000",
-      "#f5e050",
-      "#201040"
+      "#ffffff",
+      "#c85ae0",
+      "#4be3e3"
     ],
     "audio_affinity": {
-      "bass": 0.9,
-      "mid": 0.5,
-      "treble": 0.7
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
     },
     "techniques": [
       "frame_feedback",
       "warp_field",
+      "audio_gating",
       "beat_burst",
-      "domain_repetition",
-      "custom_wave"
+      "domain_repetition"
     ],
-    "technical_notes": "A logarithmic spiral warp field drives a zoom and rotation that scales dynamically with the synthetic kick of the test signal. Custom waves render nested geometric polygons and sharp spikes, which are blended into persistent trails via frame feedback in sampler_main. High-contrast thresholding in the composite shader creates a stark, strobing monochrome aesthetic with occasional color fringes.",
+    "technical_notes": "A complex logarithmic spiral is generated via recursive polar domain manipulation and feedback. The per-pixel warp shader combines zoom and rotation driven by the music's bass and mid bands, feeding into sampler_main with low decay to maintain sharp geometric trails. Sudden beat-gated transitions trigger dramatic shifts in the spiral's polygonal symmetry and flash bright color bursts across the screen.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:27:21.086Z"
+    "captured_at": "2026-05-31T23:41:29.064Z"
   },
   "assets": {
     "textures_needed": [],

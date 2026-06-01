@@ -16,31 +16,30 @@
     "vibe": [
       "minimalist",
       "stark",
-      "kinetic",
-      "abstract"
+      "geometric",
+      "kinetic"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
       "#000000",
-      "#a1a6fe"
+      "#9fa8f6"
     ],
     "audio_affinity": {
-      "bass": 0.8,
+      "bass": 0.9,
       "mid": 0.4,
-      "treble": 0.3
+      "treble": 0.5
     },
     "techniques": [
       "custom_wave",
       "audio_gating",
-      "beat_burst",
-      "warp_field"
+      "beat_burst"
     ],
-    "technical_notes": "A single custom wave is rendered as a stark, self-intersecting ribbon in a solid periwinkle hue against a black background. The zoom and rotation parameters are heavily modulated by the bass of the synthetic test signal, causing rapid, dramatic scale transitions that jump between extreme close-ups and centralized loops. The absence of frame feedback in sampler_main or decay trails preserves a clean, vector-like high-contrast aesthetic.",
+    "technical_notes": "A sharp, flat-shaded custom wave loop is rendered in a periwinkle hue against a stark black background. Beat detection on the bass band triggers rapid, explosive zoom scaling that expands the geometry past the screen edges, while treble frequencies modulate the jaggedness of the perimeter. The absence of frame feedback in sampler_main ensures instantaneous transitions without any persistent trails.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:50:47.530Z"
+    "captured_at": "2026-05-31T23:03:03.612Z"
   },
   "assets": {
     "textures_needed": [

@@ -14,35 +14,35 @@
   },
   "annotation": {
     "vibe": [
+      "electric",
       "cosmic",
-      "kinetic",
-      "vortex",
-      "electric"
+      "fluid",
+      "kinetic"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
-      "#0000cc",
-      "#1a75ff",
-      "#ffffff"
+      "#0000ff",
+      "#ffffff",
+      "#8a9eff"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.6,
-      "treble": 0.7
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.75
     },
     "techniques": [
+      "custom_wave",
       "frame_feedback",
       "warp_field",
-      "custom_wave",
-      "decay_trail",
-      "beat_burst"
+      "beat_burst",
+      "bloom_glow"
     ],
-    "technical_notes": "A central custom_wave renders a chaotic, scribbled line structure that expands dynamically with the treble and mid bands of the synthetic test signal. This central element is fed into a per-pixel warp shader that applies a continuous spiral rotation and zoom, creating a deep blue vortex. High frame feedback through sampler_main with a moderate decay rate preserves the calligraphic, swirling trails of the central emitter.",
+    "technical_notes": "A central custom wave draws high-frequency scribbles driven by the treble of the music, while a rotational warp field spirals the feedback buffer outward. Low decay in sampler_main allows the white waveforms to smear into elegant, swirling blue vortex arms. Beat detection on the bass triggers sudden zoom-in and zoom-out scaling pulses, creating a dramatic expansion and contraction cycle.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:51:52.688Z"
+    "captured_at": "2026-05-31T23:04:09.142Z"
   },
   "assets": {
     "textures_needed": [],

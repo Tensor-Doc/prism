@@ -42,8 +42,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-glow-mix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-glow-mix.jpg"
+    "video": "/videos/milkdrop_fishbrain-geiss-witchcraft-glow-mix.webm",
+    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-glow-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -51,6 +51,7 @@
     "license": "MIT"
   },
   "compatibility": {
-    "renders": true
+    "renders": false,
+    "note": "capture was empty (458668 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

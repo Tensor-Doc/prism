@@ -15,34 +15,36 @@
   "annotation": {
     "vibe": [
       "cosmic",
-      "kaleidoscopic",
       "celestial",
-      "atmospheric"
+      "kaleidoscopic",
+      "explosive"
     ],
     "motion": 0.65,
     "palette_anchor": [
-      "#dcdcb4",
-      "#5a5560",
-      "#ffffff"
+      "#8a8a68",
+      "#d8c8d8",
+      "#fffff0",
+      "#222222"
     ],
     "audio_affinity": {
-      "bass": 0.85,
+      "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.65
+      "treble": 0.7
     },
     "techniques": [
+      "frame_feedback",
       "domain_repetition",
-      "particle_system",
       "beat_burst",
       "bloom_glow",
-      "frame_feedback"
+      "particle_system",
+      "custom_wave"
     ],
-    "technical_notes": "A kaleidoscopic domain repetition tiles a central starburst pattern, driven by a high-frequency particle system that reacts to the treble of the synthetic test signal. Beat-gated bursts trigger intense full-screen flashes and scale jumps, utilizing sampler_blur2 in the composite shader to create a soft bloom effect. Frame feedback through sampler_main maintains a subtle trailing texture behind the swirling spiral arms.",
+    "technical_notes": "A central glowing core undergoes dramatic beat-gated expansions, utilizing radial domain repetition to form kaleidoscopic geometric shells. High-frequency transients trigger intense bloom_glow flashes via the composite shader, while persistent particle systems spiral outward through a subtle warp field. Feedback loops in sampler_main maintain a soft, dusty trail of previous frames, blending organic noise with sharp geometric structures.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:54:46.132Z"
+    "captured_at": "2026-06-01T00:19:05.981Z"
   },
   "assets": {
     "textures_needed": [],
