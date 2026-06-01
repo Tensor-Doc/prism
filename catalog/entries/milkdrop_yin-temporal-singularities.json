@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "spacetime",
-      "cosmic",
-      "dreamy"
+      "glitchy",
+      "chaotic",
+      "abrasive",
+      "high-contrast"
     ],
-    "motion": 0.6,
+    "motion": 0.85,
     "palette_anchor": [
-      "#3aaaff",
-      "#ffaa3a",
-      "#0a0a1a"
+      "#ffffff",
+      "#120a2a",
+      "#4a90e2",
+      "#7ed321"
     ],
     "audio_affinity": {
-      "bass": 0.55,
-      "mid": 0.55,
-      "treble": 0.55
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "chromatic_split"
+    ],
+    "technical_notes": "A highly unstable feedback loop in sampler_main quickly saturates into a blown-out white field, driven by high gain and additive blending triggered by bass beats. The right margin displays a vertical band of digital glitch patterns, where custom waves and horizontal line slices react to the music's mid and treble frequencies. Per-pixel warp equations create a lateral shearing motion, pushing the feedback buffer leftward into an over-brightened, high-contrast void.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:55:34.685Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_yin-temporal-singularities.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_yin-temporal-singularities.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_yin-temporal-singularities.jpg",
+    "video_size_bytes": 5266029
   },
   "contribution": {
     "added_by": "scottspace",

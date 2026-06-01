@@ -1,10 +1,49 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T05:48:29.707Z",
+  "generated_at": "2026-06-01T05:57:45.251Z",
   "total": 664,
-  "annotated_count": 381,
-  "pending_count": 283,
+  "annotated_count": 386,
+  "pending_count": 278,
   "entries": [
+    {
+      "id": "milkdrop:tony-davinci-balloon",
+      "short_id": "ctFshC",
+      "slug": "tony-davinci-balloon",
+      "name": "TonyMilkdrop - Da Vinci's Balloon",
+      "author": "TonyMilkdrop",
+      "blurb": "A Renaissance balloon drifting through a mechanical sky.",
+      "vibe": [
+        "organic",
+        "cellular",
+        "fluid",
+        "biomorphic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.3
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "fbm_noise"
+      ],
+      "technical_notes": "A classic reaction-diffusion simulation generated via a per-pixel warp shader and heavy frame feedback in sampler_main. The high-contrast, biomorphic cellular structures expand and morph in response to the bass in the audio, while background noise textures are modulated by mid frequencies. A slow hue cycle rotates the background color washes from deep purples to vibrant greens.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "TonyMilkdrop - Leonardo Da Vinci's Balloon [Flexi - merry-go-round + techstyle]",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_tony-davinci-balloon.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_tony-davinci-balloon.jpg",
+      "video_size_bytes": 10828065,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:51:29.872Z"
+    },
     {
       "id": "particles:solar-wind",
       "short_id": "EqdmpR",
@@ -2981,6 +3020,47 @@
       "captured_at": "2026-06-01T05:44:33.704Z"
     },
     {
+      "id": "milkdrop:suksma-variabowl",
+      "short_id": "JJfZGa",
+      "slug": "suksma-variabowl",
+      "name": "Suksma - uninitialized variabowl",
+      "author": "Suksma",
+      "blurb": "Organic shapes bloom and unfurl like time-lapse vegetation.",
+      "vibe": [
+        "psychedelic",
+        "fluid",
+        "chaotic",
+        "metallic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "chromatic_split",
+        "hue_cycle",
+        "bloom_glow"
+      ],
+      "technical_notes": "A central singularity acts as the origin for a complex per-pixel warp field, driving a fluid, folding reaction-diffusion aesthetic. High-frequency transients in the music trigger a fan of custom wave particles at the center, while bass kicks modulate the zoom and feedback loop via sampler_main. A pronounced chromatic split is visible along the edges of the warped color fields, creating a highly saturated, metallic sheen.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "suksma - uninitialized variabowl (hydroponic chronic)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_suksma-variabowl.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_suksma-variabowl.jpg",
+      "video_size_bytes": 7095086,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:48:31.870Z"
+    },
+    {
       "id": "milkdrop:martin-qbikal-turbulence",
       "short_id": "JZgp3x",
       "slug": "martin-qbikal-turbulence",
@@ -3799,6 +3879,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.411Z",
       "captured_at": "2026-05-31T23:54:28.105Z"
+    },
+    {
+      "id": "milkdrop:yin-temporal-singularities",
+      "short_id": "x3wTfX",
+      "slug": "yin-temporal-singularities",
+      "name": "Yin - Temporal singularities",
+      "author": "Yin",
+      "blurb": "Temporal singularities warp spacetime in slow cosmic majesty.",
+      "vibe": [
+        "glitchy",
+        "chaotic",
+        "abrasive",
+        "high-contrast"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "chromatic_split"
+      ],
+      "technical_notes": "A highly unstable feedback loop in sampler_main quickly saturates into a blown-out white field, driven by high gain and additive blending triggered by bass beats. The right margin displays a vertical band of digital glitch patterns, where custom waves and horizontal line slices react to the music's mid and treble frequencies. Per-pixel warp equations create a lateral shearing motion, pushing the feedback buffer leftward into an over-brightened, high-contrast void.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "yin - 191 - Temporal singularities",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_yin-temporal-singularities.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_yin-temporal-singularities.jpg",
+      "video_size_bytes": 5266029,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:55:34.685Z"
     },
     {
       "id": "milkdrop:martin-stormy-sea",
@@ -12049,6 +12169,86 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:11:22.637Z"
+    },
+    {
+      "id": "milkdrop:tokamak-witchery",
+      "short_id": "Spy00j",
+      "slug": "tokamak-witchery",
+      "name": "Tokamak witchery",
+      "author": "Flexi/fishbrain/Geiss/Martin",
+      "blurb": "Magnetic plasma fields twist in a confinement vortex; bass tightens the spiral.",
+      "vibe": [
+        "psychedelic",
+        "metallic",
+        "geological",
+        "frenetic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "hue_cycle"
+      ],
+      "technical_notes": "A highly distorted feedback loop utilizes a per-pixel warp shader to displace the buffer, creating sharp, metallic, cliff-like ridges that shear violently to the bass. Fine-lined custom waves (spirals and geometric vectors) are overlaid, twitching rapidly to the treble. The color palette cycles through highly saturated hues, blending deep oranges and purples via sampler_main feedback.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Flexi, fishbrain, Geiss + Martin - tokamak witchery",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_tokamak-witchery.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_tokamak-witchery.jpg",
+      "video_size_bytes": 7579200,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:49:32.999Z"
+    },
+    {
+      "id": "milkdrop:unchained-rewop",
+      "short_id": "z2H680",
+      "slug": "unchained-rewop",
+      "name": "Unchained - Rewop",
+      "author": "Unchained",
+      "blurb": "Dark industrial intensity that throbs with each kick.",
+      "vibe": [
+        "geometric",
+        "kaleidoscopic",
+        "kinetic",
+        "vibrant",
+        "sharp"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "domain_repetition",
+        "audio_gating",
+        "hue_cycle",
+        "beat_burst",
+        "frame_feedback"
+      ],
+      "technical_notes": "A kaleidoscopic domain repetition creates a complex web of intersecting geometric lines resembling stained glass. High audio affinity triggers rapid palette swaps and full-screen inversions on bass beats, utilizing audio gating to cycle through vibrant hues. The composite shader overlays sharp polygonal masks with high-contrast borders, resulting in a frenetic, strobing visual experience.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Unchained - Rewop",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-rewop.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-rewop.jpg",
+      "video_size_bytes": 7523485,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:52:54.740Z"
     },
     {
       "id": "milkdrop:geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix",

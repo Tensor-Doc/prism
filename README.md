@@ -284,8 +284,8 @@ examples/embed.html proves the two-line pitch
 BRAND.md            design system and aesthetic decisions
 ```
 
-The catalog is the heart of Prism. Today there are **337 annotated
-entries out of 646 total**. All videos are captured headless.
+The catalog is the heart of Prism. Today there are **386 annotated
+entries out of 664 total**. All videos are captured headless.
 Cloudflare R2 hosts them.
 
 ---

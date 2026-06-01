@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "sphere",
-      "floating",
-      "renaissance"
+      "organic",
+      "cellular",
+      "fluid",
+      "biomorphic"
     ],
-    "motion": 0.55,
+    "motion": 0.65,
     "palette_anchor": [
-      "#f0d59a",
-      "#b87a3a",
-      "#3a7aaf"
+      "#ffffff",
+      "#000000",
+      "#a8226d",
+      "#27ae60"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.3
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "fbm_noise"
+    ],
+    "technical_notes": "A classic reaction-diffusion simulation generated via a per-pixel warp shader and heavy frame feedback in sampler_main. The high-contrast, biomorphic cellular structures expand and morph in response to the bass in the audio, while background noise textures are modulated by mid frequencies. A slow hue cycle rotates the background color washes from deep purples to vibrant greens.",
     "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:51:29.872Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_tony-davinci-balloon.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_tony-davinci-balloon.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_tony-davinci-balloon.jpg",
+    "video_size_bytes": 10828065
   },
   "contribution": {
     "added_by": "scottspace",

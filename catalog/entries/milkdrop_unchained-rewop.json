@@ -15,31 +15,42 @@
   },
   "annotation": {
     "vibe": [
-      "dark",
-      "intense",
-      "industrial"
+      "geometric",
+      "kaleidoscopic",
+      "kinetic",
+      "vibrant",
+      "sharp"
     ],
-    "motion": 0.7,
+    "motion": 0.8,
     "palette_anchor": [
-      "#ff3a3a",
-      "#3aaaff",
-      "#0a0a0a"
+      "#e02080",
+      "#20c0a0",
+      "#f0e040",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.6,
-      "treble": 0.4
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "domain_repetition",
+      "audio_gating",
+      "hue_cycle",
+      "beat_burst",
+      "frame_feedback"
+    ],
+    "technical_notes": "A kaleidoscopic domain repetition creates a complex web of intersecting geometric lines resembling stained glass. High audio affinity triggers rapid palette swaps and full-screen inversions on bass beats, utilizing audio gating to cycle through vibrant hues. The composite shader overlays sharp polygonal masks with high-contrast borders, resulting in a frenetic, strobing visual experience.",
+    "brand_safe": false,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:52:54.740Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_unchained-rewop.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_unchained-rewop.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_unchained-rewop.jpg",
+    "video_size_bytes": 7523485
   },
   "contribution": {
     "added_by": "scottspace",

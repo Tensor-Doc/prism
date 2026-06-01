@@ -1,4 +1,10 @@
 {
+  "ctFshC": {
+    "name": "TonyMilkdrop - Da Vinci's Balloon",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "TonyMilkdrop - Leonardo Da Vinci's Balloon [Flexi - merry-go-round + techstyle]"
+  },
   "EqdmpR": {
     "name": "Solar Wind",
     "source_type": "particles",
@@ -475,6 +481,12 @@
     "source_url": "/presets/particles/confetti-burst.json",
     "default_image": "/presets/particles/confetti-burst-atlas.png"
   },
+  "JJfZGa": {
+    "name": "Suksma - uninitialized variabowl",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "suksma - uninitialized variabowl (hydroponic chronic)"
+  },
   "JZgp3x": {
     "name": "Martin - QBikal - Surface Turbulence",
     "source_type": "milkdrop",
@@ -600,6 +612,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-oscilloscope022.milk"
+  },
+  "x3wTfX": {
+    "name": "Yin - Temporal singularities",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "yin - 191 - Temporal singularities"
   },
   "lnSxrz": {
     "name": "Martin - stormy sea",
@@ -1942,6 +1960,18 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "flexi + amandio c - organic [random mashup]"
+  },
+  "Spy00j": {
+    "name": "Tokamak witchery",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Flexi, fishbrain, Geiss + Martin - tokamak witchery"
+  },
+  "z2H680": {
+    "name": "Unchained - Rewop",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Unchained - Rewop"
   },
   "buwqyb": {
     "name": "Geiss + Rovastar - The Chaos Of Colours (sprouting dimentia mix)",
