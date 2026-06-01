@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T05:57:45.251Z",
-  "total": 664,
-  "annotated_count": 386,
+  "generated_at": "2026-06-01T12:25:43.818Z",
+  "total": 670,
+  "annotated_count": 392,
   "pending_count": 278,
   "entries": [
     {
@@ -128,6 +128,47 @@
       "captured_at": "2026-06-01T05:19:35.070Z"
     },
     {
+      "id": "particles:bee-swarm",
+      "short_id": "48C6af",
+      "slug": "bee-swarm",
+      "name": "Bee Swarm",
+      "author": "prism",
+      "blurb": "A swarm of golden honeybees moving as one organism, separation pushing them apart while alignment keeps the entire mass flying the same direction.",
+      "vibe": [
+        "organic",
+        "cosmic",
+        "shimmering",
+        "fluid",
+        "atmospheric"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail"
+      ],
+      "technical_notes": "A dense particle system of golden elements is instanced via custom waves to form a shifting 3D terrain. The height and displacement of this shimmering landscape are modulated by the bass and treble bands of the audio, causing waves of light to ripple across the field. Frame feedback through sampler_main with a controlled decay rate blends the individual points into a fluid, organic texture.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/bee-swarm.json",
+      "default_image": "/presets/particles/bee-swarm-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_bee-swarm.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_bee-swarm.jpg",
+      "video_size_bytes": 8114924,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:17:58.002Z"
+    },
+    {
       "id": "particles:lava-flow",
       "short_id": "jvkmIA",
       "slug": "lava-flow",
@@ -210,6 +251,165 @@
       "captured_at": "2026-06-01T04:34:17.020Z"
     },
     {
+      "id": "particles:murmuration",
+      "short_id": "1Ydj3x",
+      "slug": "murmuration",
+      "name": "Murmuration",
+      "author": "prism",
+      "blurb": "Thousands of starlings emergently flocking against a dusk sky, their swarm shape morphing on the music's pulse.",
+      "vibe": [
+        "organic",
+        "cellular",
+        "earthy",
+        "textured"
+      ],
+      "motion": 0.55,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.4,
+        "treble": 0.5
+      },
+      "techniques": [
+        "particle_system",
+        "warp_field",
+        "fbm_noise",
+        "beat_burst"
+      ],
+      "technical_notes": "A dense cellular particle system is projected onto a 3D plane, creating a bubbling, organic texture reminiscent of boiling mud or foam. High-frequency micro-vibrations are driven by a per-pixel warp shader, while bass transients trigger dramatic vertical eruptions via beat-gated bursts. The earthy copper palette is defined by procedural noise and subtle lighting calculations within the composite shader.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/murmuration.json",
+      "default_image": "/presets/particles/murmuration-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_murmuration.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_murmuration.jpg",
+      "video_size_bytes": 7996160,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T11:57:14.114Z"
+    },
+    {
+      "id": "particles:jellyfish-bloom",
+      "short_id": "39EmFh",
+      "slug": "jellyfish-bloom",
+      "name": "Jellyfish Bloom",
+      "author": "prism",
+      "blurb": "A bioluminescent bloom of jellyfish drifting in deep ocean current, their soft pulsing glow synchronized to bass frequencies.",
+      "vibe": [
+        "bioluminescent",
+        "aquatic",
+        "organic",
+        "swarm",
+        "fluid"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "texture_sample",
+        "frame_feedback",
+        "decay_trail",
+        "domain_repetition"
+      ],
+      "technical_notes": "A dense field of bioluminescent jellyfish sprites is instanced and modulated across a 3D landscape using custom shapes and texture sampling. Per-pixel warp equations create an undulating wave motion driven by the audio's bass frequencies, while feedback trails in sampler_main with low decay preserve the delicate, glowing tentacles. The cyan and violet palette shimmers in response to high-frequency transients.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/jellyfish-bloom.json",
+      "default_image": "/presets/particles/jellyfish-bloom-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_jellyfish-bloom.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_jellyfish-bloom.jpg",
+      "video_size_bytes": 7957927,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:22:01.412Z"
+    },
+    {
+      "id": "particles:schooling-fish",
+      "short_id": "CziRzn",
+      "slug": "schooling-fish",
+      "name": "Schooling Fish",
+      "author": "prism",
+      "blurb": "A tight school of silver fish moving as one organism through a tropical reef, dappled light, slow camera orbit at depth.",
+      "vibe": [
+        "crystalline",
+        "aquatic",
+        "undulating",
+        "organic"
+      ],
+      "motion": 0.6,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "warp_field"
+      ],
+      "technical_notes": "A dense field of crystalline particles is generated via custom wave equations, forming an undulating 3D terrain. Per-frame equations drive the vertical displacement and wave amplitude in response to the bass, while mid-range frequencies induce a high-frequency jitter across the individual shards. A subtle warp field keeps the particle grid fluidly drifting across the dark viewport.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/schooling-fish.json",
+      "default_image": "/presets/particles/schooling-fish-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_schooling-fish.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_schooling-fish.jpg",
+      "video_size_bytes": 7865167,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T11:56:26.828Z"
+    },
+    {
+      "id": "particles:bat-cave-emergence",
+      "short_id": "mSqXS1",
+      "slug": "bat-cave-emergence",
+      "name": "Bat Cave Emergence",
+      "author": "prism",
+      "blurb": "Thousands of bats spiraling out of a cave at dusk, separation keeping them from collision, strong alignment driving the whole mass out into the open sky.",
+      "vibe": [
+        "organic",
+        "autumnal",
+        "earthy",
+        "textured"
+      ],
+      "motion": 0.35,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "particle_system",
+        "frame_feedback",
+        "decay_trail"
+      ],
+      "technical_notes": "An undulating landscape composed of thousands of leaf-like custom shapes is driven by the audio's bass frequencies, creating rolling hills. A low decay rate in the frame feedback loop (sampler_main) preserves the dense, textured structure of the shards. Mid and treble frequencies introduce subtle jitter and scattering among the individual particles.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/bat-cave-emergence.json",
+      "default_image": "/presets/particles/bat-cave-emergence-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_bat-cave-emergence.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_bat-cave-emergence.jpg",
+      "video_size_bytes": 7786700,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:20:00.267Z"
+    },
+    {
       "id": "particles:embers-rising",
       "short_id": "P5OFbe",
       "slug": "embers-rising",
@@ -289,47 +489,6 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.428Z",
       "captured_at": "2026-06-01T00:03:39.376Z"
-    },
-    {
-      "id": "particles:schooling-fish",
-      "short_id": "CziRzn",
-      "slug": "schooling-fish",
-      "name": "Schooling Fish",
-      "author": "prism",
-      "blurb": "A tight school of silver fish moving as one organism through a tropical reef, dappled light, slow camera orbit at depth.",
-      "vibe": [
-        "crystalline",
-        "fluid",
-        "bioluminescent",
-        "organic",
-        "mysterious"
-      ],
-      "motion": 0.65,
-      "audio_affinity": {
-        "bass": 0.7,
-        "mid": 0.5,
-        "treble": 0.8
-      },
-      "techniques": [
-        "particle_system",
-        "custom_wave",
-        "audio_gating",
-        "frame_feedback"
-      ],
-      "technical_notes": "A dense swarm of custom shapes resembling crystalline crosses is animated via per-frame equations to form an undulating 3D sheet. Bass transients drive the amplitude of the wave-like displacement, while treble frequencies modulate the individual particle rotation and brightness. Low decay in the feedback loop preserves a subtle trail behind the dispersing swarm.",
-      "atelier": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "particles",
-      "source_loader": "url",
-      "source_url": "/presets/particles/schooling-fish.json",
-      "default_image": "/presets/particles/schooling-fish-atlas.png",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_schooling-fish.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_schooling-fish.jpg",
-      "video_size_bytes": 7500006,
-      "added_by": "prism",
-      "added_at": "2026-06-01T00:00:00.000Z",
-      "captured_at": "2026-06-01T05:13:48.481Z"
     },
     {
       "id": "milkdrop:rovastar-unchained-ambrosia-mystic-dark-heart-mix",
@@ -963,46 +1122,6 @@
       "captured_at": "2026-05-31T21:39:36.308Z"
     },
     {
-      "id": "particles:murmuration",
-      "short_id": "1Ydj3x",
-      "slug": "murmuration",
-      "name": "Murmuration",
-      "author": "prism",
-      "blurb": "Thousands of starlings emergently flocking against a dusk sky, their swarm shape morphing on the music's pulse.",
-      "vibe": [
-        "fluid",
-        "organic",
-        "metallic",
-        "cellular"
-      ],
-      "motion": 0.45,
-      "audio_affinity": {
-        "bass": 0.8,
-        "mid": 0.6,
-        "treble": 0.4
-      },
-      "techniques": [
-        "frame_feedback",
-        "warp_field",
-        "decay_trail",
-        "particle_system"
-      ],
-      "technical_notes": "A fluid, metallic cellular structure resembling liquid copper is driven by a per-pixel warp shader simulating fluid advection. Frame feedback through sampler_main with high decay maintains sharp, non-bleeding boundaries on the droplets. The structure reacts dynamically to the music, breaking into crystalline particles as the camera zooms in.",
-      "atelier": true,
-      "brand_safe": true,
-      "textures_needed": [],
-      "source_type": "particles",
-      "source_loader": "url",
-      "source_url": "/presets/particles/murmuration.json",
-      "default_image": "/presets/particles/murmuration-atlas.png",
-      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_murmuration.webm",
-      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_murmuration.jpg",
-      "video_size_bytes": 6196118,
-      "added_by": "prism",
-      "added_at": "2026-06-01T00:00:00.000Z",
-      "captured_at": "2026-06-01T05:14:52.906Z"
-    },
-    {
       "id": "milkdrop:martin-extreme-heat",
       "short_id": "edsgxK",
       "slug": "martin-extreme-heat",
@@ -1083,6 +1202,46 @@
       "added_by": "prism",
       "added_at": "2026-06-01T00:00:00.000Z",
       "captured_at": "2026-06-01T05:48:14.407Z"
+    },
+    {
+      "id": "particles:salmon-run",
+      "short_id": "p8fmxR",
+      "slug": "salmon-run",
+      "name": "Salmon Run",
+      "author": "prism",
+      "blurb": "Silver salmon swimming upstream against a powerful current, the entire school holding formation while individual fish push through the flow.",
+      "vibe": [
+        "cosmic",
+        "fluid",
+        "digital",
+        "atmospheric"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.6,
+        "mid": 0.4,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "frame_feedback",
+        "domain_repetition"
+      ],
+      "technical_notes": "A 3D field of custom shapes configured as tiny star-like particles forms an undulating terrain. The vertical displacement of the grid is modulated by the audio's bass, while treble transients trigger shimmering brightness and scaling of individual elements. Subtle frame feedback via sampler_main preserves the trailing particles as the camera pans through the digital landscape.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/salmon-run.json",
+      "default_image": "/presets/particles/salmon-run-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_salmon-run.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_salmon-run.jpg",
+      "video_size_bytes": 6055575,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:20:52.967Z"
     },
     {
       "id": "milkdrop:fishbrain-the-adventures-of-prismo-jenkins",
@@ -2857,6 +3016,87 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:22:57.596Z"
+    },
+    {
+      "id": "particles:flocking-bananas",
+      "short_id": "3E2ZSh",
+      "slug": "flocking-bananas",
+      "name": "Flocking Bananas",
+      "author": "prism",
+      "blurb": "A literal joke for the developer community — what if Nano Banana drew bananas, and they flocked? Bright yellow curved shapes in formation, set to upbeat music.",
+      "vibe": [
+        "eccentric",
+        "chaotic",
+        "kinetic",
+        "psychedelic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.4,
+        "treble": 0.5
+      },
+      "techniques": [
+        "texture_sample",
+        "domain_repetition",
+        "warp_field",
+        "frame_feedback",
+        "beat_burst"
+      ],
+      "technical_notes": "An external image texture is replicated across the screen using domain repetition to create a dense field of sprites. The per-pixel warp shader applies a complex deformation field driven by the audio, while bass-gated zoom spikes trigger dramatic camera rushes. Feedback through sampler_main creates persistent trails of cascading elements during intense musical moments.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/flocking-bananas.json",
+      "default_image": "/presets/particles/flocking-bananas-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_flocking-bananas.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_flocking-bananas.jpg",
+      "video_size_bytes": 11013206,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:25:23.228Z"
+    },
+    {
+      "id": "particles:hummingbird-garden",
+      "short_id": "wxcu85",
+      "slug": "hummingbird-garden",
+      "name": "Hummingbird Garden",
+      "author": "prism",
+      "blurb": "Iridescent hummingbirds darting through a tropical garden, separation and high audio reactivity producing the characteristic zigzag flight pattern.",
+      "vibe": [
+        "swarm",
+        "microscopic",
+        "chaotic",
+        "dark"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "fbm_noise",
+        "decay_trail"
+      ],
+      "technical_notes": "A dense particle system of custom shapes is driven by a turbulent field, creating an undulating swarm that reacts dynamically to the audio. The vertical distribution and velocity of the particles scale with the bass and mid bands, causing the cloud to surge during intense beats. A high decay rate in the frame feedback loop keeps the individual elements sharp and distinct against the black background.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/hummingbird-garden.json",
+      "default_image": "/presets/particles/hummingbird-garden-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_hummingbird-garden.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_hummingbird-garden.jpg",
+      "video_size_bytes": 8009661,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T12:23:28.859Z"
     },
     {
       "id": "milkdrop:adamfx-martin-infusion",

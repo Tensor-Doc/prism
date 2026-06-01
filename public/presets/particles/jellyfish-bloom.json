@@ -1,0 +1,29 @@
+{
+  "name": "Jellyfish Bloom",
+  "atlas_url": "/presets/particles/jellyfish-bloom-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.06,
+  "size_variance": 0.85,
+  "velocity_stretch": 0.8,
+  "curl_scale": 0.4,
+  "velocity_damp": 0.997,
+  "audio_gain": 0.9,
+  "volume_size": [
+    4,
+    1.8,
+    4
+  ],
+  "wave_amplitude": 0.2,
+  "flow_drift_x": 0.15,
+  "corona_boost": 2.5,
+  "dance_amount": 0.3,
+  "camera_radius": 4.5,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.022,
+  "fov_degrees": 55,
+  "trail_decay": 0.92,
+  "flock_separation": 0.35,
+  "flock_alignment": 0.2,
+  "flock_cohesion": 0.4,
+  "flock_radius": 0.25
+}

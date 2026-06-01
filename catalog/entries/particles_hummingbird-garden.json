@@ -1,0 +1,62 @@
+{
+  "id": "particles:hummingbird-garden",
+  "short_id": "wxcu85",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/hummingbird-garden.json"
+  },
+  "display": {
+    "name": "Hummingbird Garden",
+    "author": "prism",
+    "blurb": "Iridescent hummingbirds darting through a tropical garden, separation and high audio reactivity producing the characteristic zigzag flight pattern."
+  },
+  "annotation": {
+    "vibe": [
+      "swarm",
+      "microscopic",
+      "chaotic",
+      "dark"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#000000",
+      "#8a2be2",
+      "#00ffff",
+      "#32cd32"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "fbm_noise",
+      "decay_trail"
+    ],
+    "technical_notes": "A dense particle system of custom shapes is driven by a turbulent field, creating an undulating swarm that reacts dynamically to the audio. The vertical distribution and velocity of the particles scale with the bass and mid bands, causing the cloud to surge during intense beats. A high decay rate in the frame feedback loop keeps the individual elements sharp and distinct against the black background.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:23:28.859Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/hummingbird-garden-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_hummingbird-garden.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_hummingbird-garden.jpg",
+    "video_size_bytes": 8009661
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Hummingbird Garden",
+  "atlas_url": "/presets/particles/hummingbird-garden-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.035,
+  "size_variance": 0.6,
+  "velocity_stretch": 1.8,
+  "curl_scale": 1.6,
+  "velocity_damp": 0.985,
+  "audio_gain": 1.8,
+  "volume_size": [
+    3,
+    1.2,
+    3
+  ],
+  "wave_amplitude": 0.2,
+  "flow_drift_x": 0.3,
+  "corona_boost": 3.5,
+  "dance_amount": 0.2,
+  "camera_radius": 3.8,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.035,
+  "fov_degrees": 55,
+  "trail_decay": 0,
+  "flock_separation": 0.7,
+  "flock_alignment": 0.15,
+  "flock_cohesion": 0.15,
+  "flock_radius": 0.14
+}

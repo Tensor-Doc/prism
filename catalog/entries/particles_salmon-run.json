@@ -1,0 +1,61 @@
+{
+  "id": "particles:salmon-run",
+  "short_id": "p8fmxR",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/salmon-run.json"
+  },
+  "display": {
+    "name": "Salmon Run",
+    "author": "prism",
+    "blurb": "Silver salmon swimming upstream against a powerful current, the entire school holding formation while individual fish push through the flow."
+  },
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "fluid",
+      "digital",
+      "atmospheric"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#000000",
+      "#0b2b30",
+      "#3fa0a6"
+    ],
+    "audio_affinity": {
+      "bass": 0.6,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "frame_feedback",
+      "domain_repetition"
+    ],
+    "technical_notes": "A 3D field of custom shapes configured as tiny star-like particles forms an undulating terrain. The vertical displacement of the grid is modulated by the audio's bass, while treble transients trigger shimmering brightness and scaling of individual elements. Subtle frame feedback via sampler_main preserves the trailing particles as the camera pans through the digital landscape.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:20:52.967Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/salmon-run-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_salmon-run.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_salmon-run.jpg",
+    "video_size_bytes": 6055575
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

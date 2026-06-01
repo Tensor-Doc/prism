@@ -20,5 +20,9 @@
   "camera_radius": 5,
   "camera_height": 0.7,
   "camera_orbit_speed": 0.03,
-  "fov_degrees": 55
+  "fov_degrees": 55,
+  "flock_separation": 0.4,
+  "flock_alignment": 0.55,
+  "flock_cohesion": 0.35,
+  "flock_radius": 0.2
 }

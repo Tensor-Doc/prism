@@ -15,41 +15,39 @@
   "annotation": {
     "vibe": [
       "crystalline",
-      "fluid",
-      "bioluminescent",
-      "organic",
-      "mysterious"
+      "aquatic",
+      "undulating",
+      "organic"
     ],
-    "motion": 0.65,
+    "motion": 0.6,
     "palette_anchor": [
-      "#000000",
-      "#123038",
-      "#408890"
+      "#081416",
+      "#1b3d42",
+      "#4a838c"
     ],
     "audio_affinity": {
       "bass": 0.7,
       "mid": 0.5,
-      "treble": 0.8
+      "treble": 0.4
     },
     "techniques": [
       "particle_system",
       "custom_wave",
-      "audio_gating",
-      "frame_feedback"
+      "warp_field"
     ],
-    "technical_notes": "A dense swarm of custom shapes resembling crystalline crosses is animated via per-frame equations to form an undulating 3D sheet. Bass transients drive the amplitude of the wave-like displacement, while treble frequencies modulate the individual particle rotation and brightness. Low decay in the feedback loop preserves a subtle trail behind the dispersing swarm.",
+    "technical_notes": "A dense field of crystalline particles is generated via custom wave equations, forming an undulating 3D terrain. Per-frame equations drive the vertical displacement and wave amplitude in response to the bass, while mid-range frequencies induce a high-frequency jitter across the individual shards. A subtle warp field keeps the particle grid fluidly drifting across the dark viewport.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-06-01T05:13:48.481Z"
+    "captured_at": "2026-06-01T11:56:26.828Z"
   },
   "assets": {
     "textures_needed": [],
     "default_image": "/presets/particles/schooling-fish-atlas.png",
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_schooling-fish.webm",
     "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_schooling-fish.jpg",
-    "video_size_bytes": 7500006
+    "video_size_bytes": 7865167
   },
   "contribution": {
     "added_by": "prism",

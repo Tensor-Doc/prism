@@ -1,0 +1,62 @@
+{
+  "id": "particles:jellyfish-bloom",
+  "short_id": "39EmFh",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/jellyfish-bloom.json"
+  },
+  "display": {
+    "name": "Jellyfish Bloom",
+    "author": "prism",
+    "blurb": "A bioluminescent bloom of jellyfish drifting in deep ocean current, their soft pulsing glow synchronized to bass frequencies."
+  },
+  "annotation": {
+    "vibe": [
+      "bioluminescent",
+      "aquatic",
+      "organic",
+      "swarm",
+      "fluid"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#121b2d",
+      "#29a3a3",
+      "#7a5299"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "texture_sample",
+      "frame_feedback",
+      "decay_trail",
+      "domain_repetition"
+    ],
+    "technical_notes": "A dense field of bioluminescent jellyfish sprites is instanced and modulated across a 3D landscape using custom shapes and texture sampling. Per-pixel warp equations create an undulating wave motion driven by the audio's bass frequencies, while feedback trails in sampler_main with low decay preserve the delicate, glowing tentacles. The cyan and violet palette shimmers in response to high-frequency transients.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:22:01.412Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/jellyfish-bloom-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_jellyfish-bloom.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_jellyfish-bloom.jpg",
+    "video_size_bytes": 7957927
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

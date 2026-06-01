@@ -19,6 +19,13 @@
     "source_url": "/presets/particles/coral-garden.json",
     "default_image": "/presets/particles/coral-garden-atlas.png"
   },
+  "48C6af": {
+    "name": "Bee Swarm",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/bee-swarm.json",
+    "default_image": "/presets/particles/bee-swarm-atlas.png"
+  },
   "jvkmIA": {
     "name": "Lava Flow",
     "source_type": "particles",
@@ -33,6 +40,34 @@
     "source_url": "/presets/particles/refik-fluid-flora.json",
     "default_image": "/presets/particles/refik-fluid-flora-atlas.png"
   },
+  "1Ydj3x": {
+    "name": "Murmuration",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/murmuration.json",
+    "default_image": "/presets/particles/murmuration-atlas.png"
+  },
+  "39EmFh": {
+    "name": "Jellyfish Bloom",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/jellyfish-bloom.json",
+    "default_image": "/presets/particles/jellyfish-bloom-atlas.png"
+  },
+  "CziRzn": {
+    "name": "Schooling Fish",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/schooling-fish.json",
+    "default_image": "/presets/particles/schooling-fish-atlas.png"
+  },
+  "mSqXS1": {
+    "name": "Bat Cave Emergence",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/bat-cave-emergence.json",
+    "default_image": "/presets/particles/bat-cave-emergence-atlas.png"
+  },
   "P5OFbe": {
     "name": "Embers Rising",
     "source_type": "particles",
@@ -45,13 +80,6 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/amandio-c-new-life.milk"
-  },
-  "CziRzn": {
-    "name": "Schooling Fish",
-    "source_type": "particles",
-    "source_loader": "url",
-    "source_url": "/presets/particles/schooling-fish.json",
-    "default_image": "/presets/particles/schooling-fish-atlas.png"
   },
   "nuozxK": {
     "name": "Rovastar & Unchained - Ambrosia Mystic (Dark Heart Mix)",
@@ -156,13 +184,6 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly-vortex.milk"
   },
-  "1Ydj3x": {
-    "name": "Murmuration",
-    "source_type": "particles",
-    "source_loader": "url",
-    "source_url": "/presets/particles/murmuration.json",
-    "default_image": "/presets/particles/murmuration-atlas.png"
-  },
   "edsgxK": {
     "name": "Martin - extreme heat",
     "source_type": "milkdrop",
@@ -175,6 +196,13 @@
     "source_loader": "url",
     "source_url": "/presets/particles/soap-bubbles.json",
     "default_image": "/presets/particles/soap-bubbles-atlas.png"
+  },
+  "p8fmxR": {
+    "name": "Salmon Run",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/salmon-run.json",
+    "default_image": "/presets/particles/salmon-run-atlas.png"
   },
   "I9ooYK": {
     "name": "fiShbRaiN - the adventures of prismo jenkins",
@@ -455,6 +483,20 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "Geiss - Reaction Diffusion 2"
+  },
+  "3E2ZSh": {
+    "name": "Flocking Bananas",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/flocking-bananas.json",
+    "default_image": "/presets/particles/flocking-bananas-atlas.png"
+  },
+  "wxcu85": {
+    "name": "Hummingbird Garden",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/hummingbird-garden.json",
+    "default_image": "/presets/particles/hummingbird-garden-atlas.png"
   },
   "75TH6R": {
     "name": "AdamFx + Martin Infusion - Tactile Disfunction",

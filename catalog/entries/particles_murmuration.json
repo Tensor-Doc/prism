@@ -14,41 +14,41 @@
   },
   "annotation": {
     "vibe": [
-      "fluid",
       "organic",
-      "metallic",
-      "cellular"
+      "cellular",
+      "earthy",
+      "textured"
     ],
-    "motion": 0.45,
+    "motion": 0.55,
     "palette_anchor": [
-      "#b88673",
-      "#8c5d4e",
-      "#1a0f0b"
+      "#8c625a",
+      "#b5877a",
+      "#3b2521"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.6,
-      "treble": 0.4
+      "bass": 0.7,
+      "mid": 0.4,
+      "treble": 0.5
     },
     "techniques": [
-      "frame_feedback",
+      "particle_system",
       "warp_field",
-      "decay_trail",
-      "particle_system"
+      "fbm_noise",
+      "beat_burst"
     ],
-    "technical_notes": "A fluid, metallic cellular structure resembling liquid copper is driven by a per-pixel warp shader simulating fluid advection. Frame feedback through sampler_main with high decay maintains sharp, non-bleeding boundaries on the droplets. The structure reacts dynamically to the music, breaking into crystalline particles as the camera zooms in.",
+    "technical_notes": "A dense cellular particle system is projected onto a 3D plane, creating a bubbling, organic texture reminiscent of boiling mud or foam. High-frequency micro-vibrations are driven by a per-pixel warp shader, while bass transients trigger dramatic vertical eruptions via beat-gated bursts. The earthy copper palette is defined by procedural noise and subtle lighting calculations within the composite shader.",
     "brand_safe": true,
     "atelier": true,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-06-01T05:14:52.906Z"
+    "captured_at": "2026-06-01T11:57:14.114Z"
   },
   "assets": {
     "textures_needed": [],
     "default_image": "/presets/particles/murmuration-atlas.png",
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_murmuration.webm",
     "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_murmuration.jpg",
-    "video_size_bytes": 6196118
+    "video_size_bytes": 7996160
   },
   "contribution": {
     "added_by": "prism",

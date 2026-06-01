@@ -1,0 +1,62 @@
+{
+  "id": "particles:bee-swarm",
+  "short_id": "48C6af",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/bee-swarm.json"
+  },
+  "display": {
+    "name": "Bee Swarm",
+    "author": "prism",
+    "blurb": "A swarm of golden honeybees moving as one organism, separation pushing them apart while alignment keeps the entire mass flying the same direction."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "cosmic",
+      "shimmering",
+      "fluid",
+      "atmospheric"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#d4af37",
+      "#aa7c11",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail"
+    ],
+    "technical_notes": "A dense particle system of golden elements is instanced via custom waves to form a shifting 3D terrain. The height and displacement of this shimmering landscape are modulated by the bass and treble bands of the audio, causing waves of light to ripple across the field. Frame feedback through sampler_main with a controlled decay rate blends the individual points into a fluid, organic texture.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:17:58.002Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/bee-swarm-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_bee-swarm.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_bee-swarm.jpg",
+    "video_size_bytes": 8114924
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

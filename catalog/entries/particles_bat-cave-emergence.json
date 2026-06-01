@@ -1,0 +1,61 @@
+{
+  "id": "particles:bat-cave-emergence",
+  "short_id": "mSqXS1",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/bat-cave-emergence.json"
+  },
+  "display": {
+    "name": "Bat Cave Emergence",
+    "author": "prism",
+    "blurb": "Thousands of bats spiraling out of a cave at dusk, separation keeping them from collision, strong alignment driving the whole mass out into the open sky."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "autumnal",
+      "earthy",
+      "textured"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#8a4f35",
+      "#4a2e35",
+      "#d27d46",
+      "#120a15"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "particle_system",
+      "frame_feedback",
+      "decay_trail"
+    ],
+    "technical_notes": "An undulating landscape composed of thousands of leaf-like custom shapes is driven by the audio's bass frequencies, creating rolling hills. A low decay rate in the frame feedback loop (sampler_main) preserves the dense, textured structure of the shards. Mid and treble frequencies introduce subtle jitter and scattering among the individual particles.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:20:00.267Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/bat-cave-emergence-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_bat-cave-emergence.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_bat-cave-emergence.jpg",
+    "video_size_bytes": 7786700
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

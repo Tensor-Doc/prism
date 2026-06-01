@@ -1,0 +1,62 @@
+{
+  "id": "particles:flocking-bananas",
+  "short_id": "3E2ZSh",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/flocking-bananas.json"
+  },
+  "display": {
+    "name": "Flocking Bananas",
+    "author": "prism",
+    "blurb": "A literal joke for the developer community — what if Nano Banana drew bananas, and they flocked? Bright yellow curved shapes in formation, set to upbeat music."
+  },
+  "annotation": {
+    "vibe": [
+      "eccentric",
+      "chaotic",
+      "kinetic",
+      "psychedelic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#e1c01e",
+      "#8b9c14",
+      "#0a0a0a"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.4,
+      "treble": 0.5
+    },
+    "techniques": [
+      "texture_sample",
+      "domain_repetition",
+      "warp_field",
+      "frame_feedback",
+      "beat_burst"
+    ],
+    "technical_notes": "An external image texture is replicated across the screen using domain repetition to create a dense field of sprites. The per-pixel warp shader applies a complex deformation field driven by the audio, while bass-gated zoom spikes trigger dramatic camera rushes. Feedback through sampler_main creates persistent trails of cascading elements during intense musical moments.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T12:25:23.228Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/flocking-bananas-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_flocking-bananas.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_flocking-bananas.jpg",
+    "video_size_bytes": 11013206
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}
