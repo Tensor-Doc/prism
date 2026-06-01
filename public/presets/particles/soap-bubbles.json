@@ -1,0 +1,25 @@
+{
+  "name": "Soap Bubbles",
+  "atlas_url": "/presets/particles/soap-bubbles-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.07,
+  "size_variance": 0.95,
+  "velocity_stretch": 0.8,
+  "curl_scale": 0.5,
+  "velocity_damp": 0.997,
+  "audio_gain": 0.7,
+  "volume_size": [
+    3.5,
+    1.5,
+    3.5
+  ],
+  "wave_amplitude": 0.2,
+  "flow_drift_x": 0.15,
+  "corona_boost": 1.5,
+  "dance_amount": 0.3,
+  "camera_radius": 4,
+  "camera_height": 0.6,
+  "camera_orbit_speed": 0.02,
+  "fov_degrees": 55,
+  "trail_decay": 0
+}

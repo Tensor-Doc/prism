@@ -1,0 +1,61 @@
+{
+  "id": "particles:meteor-shower",
+  "short_id": "02YaLd",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/meteor-shower.json"
+  },
+  "display": {
+    "name": "Meteor Shower",
+    "author": "prism",
+    "blurb": "A Perseid-style meteor shower across the night sky, bright streaks crossing the canvas, the rare ones bursting bright."
+  },
+  "annotation": {
+    "vibe": [
+      "dark",
+      "cybernetic",
+      "atmospheric",
+      "scifi"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#08080c",
+      "#1a2a4a",
+      "#b89848"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.3,
+      "treble": 0.8
+    },
+    "techniques": [
+      "raymarch_sdf",
+      "domain_repetition",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A dense, raymarched signed distance field (SDF) landscape utilizes domain repetition to create an infinite field of ribbed, metallic structures. The surface specular highlights are modulated by treble bands in the audio, causing tiny points of light to sparkle across the ridges. A subtle warp field combined with frame feedback through sampler_main creates a slow, undulating motion driven by the bass.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:46:55.306Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/meteor-shower-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_meteor-shower.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_meteor-shower.jpg",
+    "video_size_bytes": 7435969
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

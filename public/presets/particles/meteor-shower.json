@@ -1,0 +1,25 @@
+{
+  "name": "Meteor Shower",
+  "atlas_url": "/presets/particles/meteor-shower-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.025,
+  "size_variance": 1,
+  "velocity_stretch": 6,
+  "curl_scale": 0.4,
+  "velocity_damp": 0.99,
+  "audio_gain": 2,
+  "volume_size": [
+    5,
+    1.5,
+    5
+  ],
+  "wave_amplitude": 0.05,
+  "flow_drift_x": 2,
+  "corona_boost": 4.5,
+  "dance_amount": 0,
+  "camera_radius": 5,
+  "camera_height": 0.65,
+  "camera_orbit_speed": 0.03,
+  "fov_degrees": 60,
+  "trail_decay": 0.97
+}

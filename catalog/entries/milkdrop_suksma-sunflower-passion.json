@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "floral",
-      "radiant",
-      "warm"
+      "psychedelic",
+      "frenetic",
+      "fractal",
+      "chaotic"
     ],
-    "motion": 0.6,
+    "motion": 0.85,
     "palette_anchor": [
-      "#ffd23a",
-      "#ff8a3a",
-      "#3a2a1a"
+      "#00ff00",
+      "#ff0000",
+      "#0000ff",
+      "#00ffff"
     ],
     "audio_affinity": {
-      "bass": 0.5,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "domain_repetition",
+      "beat_burst"
+    ],
+    "technical_notes": "A complex per-pixel warp shader drives a recursive fractal zoom feedback loop through sampler_main, mimicking a dynamic Julia set. Low decay rates allow the warped iterations to accumulate into dense, self-similar structures. High-energy bass transients in the music trigger sudden zoom steps and rotate the coordinate space, while treble transients modulate the highly saturated color lookup.",
     "brand_safe": true,
-    "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:47:37.125Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_suksma-sunflower-passion.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_suksma-sunflower-passion.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_suksma-sunflower-passion.jpg",
+    "video_size_bytes": 7283271
   },
   "contribution": {
     "added_by": "scottspace",

@@ -1,0 +1,64 @@
+{
+  "id": "particles:soap-bubbles",
+  "short_id": "aC6lQp",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/soap-bubbles.json"
+  },
+  "display": {
+    "name": "Soap Bubbles",
+    "author": "prism",
+    "blurb": "Iridescent soap bubbles rising and shimmering through soft afternoon light, gentle and contemplative."
+  },
+  "annotation": {
+    "vibe": [
+      "microscopic",
+      "organic",
+      "cellular",
+      "fluid",
+      "psychedelic"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#c2c8b5",
+      "#8a927a",
+      "#e2d5c5",
+      "#3a3d35"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "bloom_glow",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A dense custom wave resembling a microscopic cellular colony morphs and stretches across a dark void. A dramatic zoom transition, driven by the audio's bass energy, plunges the camera into the structure, scattering iridescent, bubble-like particles across the screen. Persistent trails are maintained via sampler_main feedback with low decay, while treble-driven specular highlights create a shimmering bloom_glow on the cell walls.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:48:14.407Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/soap-bubbles-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_soap-bubbles.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_soap-bubbles.jpg",
+    "video_size_bytes": 6100218
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

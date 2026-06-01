@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T05:44:48.769Z",
-  "total": 662,
-  "annotated_count": 378,
-  "pending_count": 284,
+  "generated_at": "2026-06-01T05:48:29.707Z",
+  "total": 664,
+  "annotated_count": 381,
+  "pending_count": 283,
   "entries": [
     {
       "id": "particles:solar-wind",
@@ -371,6 +371,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.345Z",
       "captured_at": "2026-05-31T23:04:49.149Z"
+    },
+    {
+      "id": "particles:meteor-shower",
+      "short_id": "02YaLd",
+      "slug": "meteor-shower",
+      "name": "Meteor Shower",
+      "author": "prism",
+      "blurb": "A Perseid-style meteor shower across the night sky, bright streaks crossing the canvas, the rare ones bursting bright.",
+      "vibe": [
+        "dark",
+        "cybernetic",
+        "atmospheric",
+        "scifi"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.5,
+        "mid": 0.3,
+        "treble": 0.8
+      },
+      "techniques": [
+        "raymarch_sdf",
+        "domain_repetition",
+        "frame_feedback",
+        "warp_field"
+      ],
+      "technical_notes": "A dense, raymarched signed distance field (SDF) landscape utilizes domain repetition to create an infinite field of ribbed, metallic structures. The surface specular highlights are modulated by treble bands in the audio, causing tiny points of light to sparkle across the ridges. A subtle warp field combined with frame feedback through sampler_main creates a slow, undulating motion driven by the bass.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/meteor-shower.json",
+      "default_image": "/presets/particles/meteor-shower-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_meteor-shower.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_meteor-shower.jpg",
+      "video_size_bytes": 7435969,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:46:55.306Z"
     },
     {
       "id": "milkdrop:geiss-thumb-drum",
@@ -962,6 +1002,48 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:29:59.926Z"
+    },
+    {
+      "id": "particles:soap-bubbles",
+      "short_id": "aC6lQp",
+      "slug": "soap-bubbles",
+      "name": "Soap Bubbles",
+      "author": "prism",
+      "blurb": "Iridescent soap bubbles rising and shimmering through soft afternoon light, gentle and contemplative.",
+      "vibe": [
+        "microscopic",
+        "organic",
+        "cellular",
+        "fluid",
+        "psychedelic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "bloom_glow",
+        "frame_feedback",
+        "warp_field"
+      ],
+      "technical_notes": "A dense custom wave resembling a microscopic cellular colony morphs and stretches across a dark void. A dramatic zoom transition, driven by the audio's bass energy, plunges the camera into the structure, scattering iridescent, bubble-like particles across the screen. Persistent trails are maintained via sampler_main feedback with low decay, while treble-driven specular highlights create a shimmering bloom_glow on the cell walls.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/soap-bubbles.json",
+      "default_image": "/presets/particles/soap-bubbles-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_soap-bubbles.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_soap-bubbles.jpg",
+      "video_size_bytes": 6100218,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:48:14.407Z"
     },
     {
       "id": "milkdrop:fishbrain-the-adventures-of-prismo-jenkins",
@@ -2817,6 +2899,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:27:12.684Z"
+    },
+    {
+      "id": "milkdrop:suksma-sunflower-passion",
+      "short_id": "SqLd6K",
+      "slug": "suksma-sunflower-passion",
+      "name": "Suksma - Sunflower Passion",
+      "author": "Suksma + Rovastar",
+      "blurb": "A sunflower opens at the speed of music — heliotropic and golden.",
+      "vibe": [
+        "psychedelic",
+        "frenetic",
+        "fractal",
+        "chaotic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "domain_repetition",
+        "beat_burst"
+      ],
+      "technical_notes": "A complex per-pixel warp shader drives a recursive fractal zoom feedback loop through sampler_main, mimicking a dynamic Julia set. Low decay rates allow the warped iterations to accumulate into dense, self-similar structures. High-energy bass transients in the music trigger sudden zoom steps and rotate the coordinate space, while treble transients modulate the highly saturated color lookup.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "suksma - Rovastar - Sunflower Passion (Enlightment Mix)_Phat_edit + flexi und martin shaders - circumflex in character classes in regular expression",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_suksma-sunflower-passion.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_suksma-sunflower-passion.jpg",
+      "video_size_bytes": 7283271,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:47:37.125Z"
     },
     {
       "id": "particles:confetti-burst",

@@ -59,6 +59,13 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/rovastar-telek-altars-of-madness-rolling-oceans-mix.milk"
   },
+  "02YaLd": {
+    "name": "Meteor Shower",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/meteor-shower.json",
+    "default_image": "/presets/particles/meteor-shower-atlas.png"
+  },
   "YUqOPN": {
     "name": "Geiss - Thumb Drum",
     "source_type": "milkdrop",
@@ -155,6 +162,13 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "martin - extreme heat"
+  },
+  "aC6lQp": {
+    "name": "Soap Bubbles",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/soap-bubbles.json",
+    "default_image": "/presets/particles/soap-bubbles-atlas.png"
   },
   "I9ooYK": {
     "name": "fiShbRaiN - the adventures of prismo jenkins",
@@ -447,6 +461,12 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "Martin - acid wiring"
+  },
+  "SqLd6K": {
+    "name": "Suksma - Sunflower Passion",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "suksma - Rovastar - Sunflower Passion (Enlightment Mix)_Phat_edit + flexi und martin shaders - circumflex in character classes in regular expression"
   },
   "W9PyL6": {
     "name": "Confetti Burst",

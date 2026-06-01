@@ -15,31 +15,42 @@
   },
   "annotation": {
     "vibe": [
-      "organic",
-      "growing",
-      "lush"
+      "psychedelic",
+      "fluid",
+      "chaotic",
+      "metallic"
     ],
-    "motion": 0.5,
+    "motion": 0.8,
     "palette_anchor": [
-      "#3affae",
-      "#ffba3a",
-      "#0a1a0a"
+      "#12a30d",
+      "#f7e613",
+      "#d61111",
+      "#0b1cb0"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.55,
-      "treble": 0.4
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "chromatic_split",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A central singularity acts as the origin for a complex per-pixel warp field, driving a fluid, folding reaction-diffusion aesthetic. High-frequency transients in the music trigger a fan of custom wave particles at the center, while bass kicks modulate the zoom and feedback loop via sampler_main. A pronounced chromatic split is visible along the edges of the warped color fields, creating a highly saturated, metallic sheen.",
     "brand_safe": true,
-    "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:48:31.870Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_suksma-variabowl.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_suksma-variabowl.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_suksma-variabowl.jpg",
+    "video_size_bytes": 7095086
   },
   "contribution": {
     "added_by": "scottspace",
