@@ -1,0 +1,25 @@
+{
+  "name": "Aurora Curtains",
+  "atlas_url": "/presets/particles/aurora-curtains-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.06,
+  "size_variance": 0.8,
+  "velocity_stretch": 1.6,
+  "curl_scale": 0.5,
+  "velocity_damp": 0.995,
+  "audio_gain": 1.2,
+  "volume_size": [
+    4.5,
+    2.2,
+    4.5
+  ],
+  "wave_amplitude": 0.1,
+  "flow_drift_x": 0.15,
+  "corona_boost": 2.5,
+  "dance_amount": 0,
+  "camera_radius": 5,
+  "camera_height": 1.1,
+  "camera_orbit_speed": 0.02,
+  "fov_degrees": 60,
+  "trail_decay": 0.93
+}

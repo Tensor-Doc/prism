@@ -1,0 +1,25 @@
+{
+  "name": "Fairy Lights",
+  "atlas_url": "/presets/particles/fairy-lights-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.045,
+  "size_variance": 0.85,
+  "velocity_stretch": 2.4,
+  "curl_scale": 0.9,
+  "velocity_damp": 0.99,
+  "audio_gain": 1.8,
+  "volume_size": [
+    4,
+    1.2,
+    4
+  ],
+  "wave_amplitude": 0.1,
+  "flow_drift_x": 0.45,
+  "corona_boost": 5,
+  "dance_amount": 0,
+  "camera_radius": 4.5,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.045,
+  "fov_degrees": 55,
+  "trail_decay": 0.95
+}

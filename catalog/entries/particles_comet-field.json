@@ -1,0 +1,63 @@
+{
+  "id": "particles:comet-field",
+  "short_id": "9pcVab",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/comet-field.json"
+  },
+  "display": {
+    "name": "Comet Field",
+    "author": "prism",
+    "blurb": "A field of comets streaking through deep space, bright nuclei pulled into elongated tails by velocity and trail decay."
+  },
+  "annotation": {
+    "vibe": [
+      "metallic",
+      "organic",
+      "fluid",
+      "kinetic",
+      "textured"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#0a121a",
+      "#b56c2c",
+      "#3e7a8a",
+      "#cfdadf"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "audio_gating"
+    ],
+    "technical_notes": "A complex per-pixel warp shader distorts the feedback buffer into a dense, self-replicating texture resembling metallic scales or liquid metal threads. Extremely low decay in sampler_main allows these structures to persist and accumulate into a rich, organic landscape. The audio's bass frequencies drive dramatic vertical surges and zoom modulations, causing the entire textured field to ripple dynamically.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:39:21.159Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/comet-field-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_comet-field.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_comet-field.jpg",
+    "video_size_bytes": 7406600
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "particles:aurora-curtains",
+  "short_id": "c93P1x",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/aurora-curtains.json"
+  },
+  "display": {
+    "name": "Aurora Curtains",
+    "author": "prism",
+    "blurb": "Vertical curtains of green and teal light shimmering across a polar night sky, undulating slowly with the music."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "biomorphic",
+      "fluid",
+      "microscopic"
+    ],
+    "motion": 0.6,
+    "palette_anchor": [
+      "#09261a",
+      "#121d33",
+      "#2a8a5e",
+      "#050b0d"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.6,
+      "treble": 0.8
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "fbm_noise",
+      "decay_trail"
+    ],
+    "technical_notes": "A central custom shape, textured with a high-frequency noise pattern, is deformed by a per-pixel warp field. As the camera zooms in, frame feedback via sampler_main creates persistent trails that eventually fracture into a field of glowing, organic filaments. The high-frequency glittering of the green and blue cells is modulated by the treble and mid bands of the audio.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:38:14.905Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/aurora-curtains-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_aurora-curtains.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_aurora-curtains.jpg",
+    "video_size_bytes": 4529635
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

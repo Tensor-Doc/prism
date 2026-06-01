@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "ocean",
-      "stormy",
-      "turbulent"
+      "aquatic",
+      "minimalist",
+      "stark",
+      "dark",
+      "atmospheric"
     ],
-    "motion": 0.7,
+    "motion": 0.3,
     "palette_anchor": [
-      "#3a7a9a",
-      "#dceaff",
-      "#1a2a3a"
+      "#000000",
+      "#122422",
+      "#2e4c47",
+      "#73928e"
     ],
     "audio_affinity": {
-      "bass": 0.7,
+      "bass": 0.4,
       "mid": 0.5,
-      "treble": 0.3
+      "treble": 0.8
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "warp_field",
+      "audio_gating"
+    ],
+    "technical_notes": "A custom wave formulation renders a dark, undulating aquatic plane against a black void. High-frequency transients in the audio trigger sharp, jagged vertical spikes along the horizon boundary. The water's surface ripples are driven by a subtle warp field modulated by mid-range frequencies.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:34:54.531Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-stormy-sea.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-stormy-sea.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-stormy-sea.jpg",
+    "video_size_bytes": 5251846
   },
   "contribution": {
     "added_by": "scottspace",

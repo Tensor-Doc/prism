@@ -58,6 +58,13 @@
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "Geiss - Thumb Drum"
   },
+  "9pcVab": {
+    "name": "Comet Field",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/comet-field.json",
+    "default_image": "/presets/particles/comet-field-atlas.png"
+  },
   "96nqCN": {
     "name": "Mig_061",
     "source_type": "milkdrop",
@@ -115,6 +122,13 @@
     "source_loader": "url",
     "source_url": "/presets/particles/magnetosphere-revisited.json",
     "default_image": "/presets/particles/magnetosphere-revisited-atlas.png"
+  },
+  "HDr8CA": {
+    "name": "Fairy Lights",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/fairy-lights.json",
+    "default_image": "/presets/particles/fairy-lights-atlas.png"
   },
   "jDL6Sw": {
     "name": "Geiss - Cycloid 1 - painterly vortex",
@@ -182,6 +196,13 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/geiss-cauldron-painterly-3-saturation-remix.milk"
+  },
+  "c93P1x": {
+    "name": "Aurora Curtains",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/aurora-curtains.json",
+    "default_image": "/presets/particles/aurora-curtains-atlas.png"
   },
   "Ajw1Df": {
     "name": "Geiss - Cycloid 1 - painterly vortex 3",
@@ -455,6 +476,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/phat-fishbrain-eo-s-mandala-chasers-remix.milk"
   },
+  "4631K3": {
+    "name": "Martin - witchcraft reloaded",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "martin - witchcraft reloaded"
+  },
   "uNXJWh": {
     "name": "Vovan + Geiss - Bass With Flover (Feedback Mix) 2",
     "source_type": "milkdrop",
@@ -532,6 +559,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-oscilloscope022.milk"
+  },
+  "lnSxrz": {
+    "name": "Martin - stormy sea",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "martin - stormy sea (2010 update)"
   },
   "etGSAU": {
     "name": "Rovastar + Fvese - Mosaic Waves",

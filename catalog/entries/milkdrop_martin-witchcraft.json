@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "mystical",
-      "swirling",
-      "occult"
+      "cosmic",
+      "kinetic",
+      "electric",
+      "playful"
     ],
-    "motion": 0.7,
+    "motion": 0.75,
     "palette_anchor": [
-      "#ff3a8a",
-      "#3aaaff",
-      "#1a1a1a"
+      "#00ff00",
+      "#ffff00",
+      "#ff007f",
+      "#4b0082"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "bloom_glow",
+      "hue_cycle",
+      "frame_feedback"
+    ],
+    "technical_notes": "Custom waves are rendered as beaded strings of light tracing complex 3D trajectories modulated by the audio. A bright custom shape with an intense additive bloom_glow acts as a central star flare, scaling and flashing in response to bass hits. Low decay in the frame feedback loop allows the glowing beads to leave faint, transient trails against the dark background.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:36:52.126Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-witchcraft.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-witchcraft.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-witchcraft.jpg",
+    "video_size_bytes": 6090579
   },
   "contribution": {
     "added_by": "scottspace",

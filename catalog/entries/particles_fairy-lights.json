@@ -1,0 +1,63 @@
+{
+  "id": "particles:fairy-lights",
+  "short_id": "HDr8CA",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/fairy-lights.json"
+  },
+  "display": {
+    "name": "Fairy Lights",
+    "author": "prism",
+    "blurb": "Soft glowing orbs of light streaming across a dark canvas, leaving long persistent trails like a long-exposure photograph of moving lights."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "fluid",
+      "psychedelic",
+      "playful"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#3a86c8",
+      "#e02443",
+      "#f1c40f",
+      "#9b59b6"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "warp_field",
+      "audio_gating"
+    ],
+    "technical_notes": "Custom shapes are instanced as glossy, multi-colored spheres that trace complex paths across the screen. A low decay rate in the feedback loop creates persistent, winding trails of these beaded structures that mimic physical threads. The entire system reacts dynamically to the audio, with bass hits triggering a massive expansion that fills the viewport with undulating waves of beads.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:36:39.777Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/fairy-lights-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_fairy-lights.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_fairy-lights.jpg",
+    "video_size_bytes": 6321346
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}
