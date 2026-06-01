@@ -1,0 +1,61 @@
+{
+  "id": "particles:murmuration",
+  "short_id": "1Ydj3x",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/murmuration.json"
+  },
+  "display": {
+    "name": "Murmuration",
+    "author": "prism",
+    "blurb": "Thousands of starlings emergently flocking against a dusk sky, their swarm shape morphing on the music's pulse."
+  },
+  "annotation": {
+    "vibe": [
+      "fluid",
+      "organic",
+      "metallic",
+      "cellular"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#b88673",
+      "#8c5d4e",
+      "#1a0f0b"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.4
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "decay_trail",
+      "particle_system"
+    ],
+    "technical_notes": "A fluid, metallic cellular structure resembling liquid copper is driven by a per-pixel warp shader simulating fluid advection. Frame feedback through sampler_main with high decay maintains sharp, non-bleeding boundaries on the droplets. The structure reacts dynamically to the music, breaking into crystalline particles as the camera zooms in.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:14:52.906Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/murmuration-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_murmuration.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_murmuration.jpg",
+    "video_size_bytes": 6196118
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

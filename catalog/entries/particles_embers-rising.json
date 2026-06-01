@@ -1,0 +1,64 @@
+{
+  "id": "particles:embers-rising",
+  "short_id": "P5OFbe",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/embers-rising.json"
+  },
+  "display": {
+    "name": "Embers Rising",
+    "author": "prism",
+    "blurb": "Hot embers from a campfire spiraling upward through still night air, bursting into corona arcs on bass hits."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "fluid",
+      "cosmic",
+      "glittering",
+      "atmospheric"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#000000",
+      "#d47a3c",
+      "#f9b26c",
+      "#5c2e16"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "warp_field",
+      "audio_gating",
+      "beat_burst",
+      "decay_trail"
+    ],
+    "technical_notes": "A dense particle system of amber-hued elements is driven by a turbulent warp field that reacts dynamically to the audio. The bass drives the expansion and swirling turbulence of the particle cloud, while treble transients modulate the brightness and sparkle of individual elements. Persistent trails are maintained via a low decay rate in sampler_main, creating a fluid, organic ribbon of light.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:21:36.569Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/embers-rising-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_embers-rising.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_embers-rising.jpg",
+    "video_size_bytes": 7729915
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -149,7 +149,13 @@ function buildCaptureUrl(entry: CatalogEntry): string {
   if (source.type === "particles") {
     return `${DEV_URL}${PARTICLES_CAPTURE_PAGE}?presetUrl=${encodeURIComponent(source.url ?? "")}`;
   }
-  // milkdrop default
+  // milkdrop: prefer URL-loaded captures (the contributor-friendly path),
+  // but the catalog still has legacy entries pulled from the npm
+  // butterchurn-presets bundle. Those reference a preset by exact name
+  // in the bundle and the capture page handles them via ?preset=.
+  if (source.loader === "npm-butterchurn-presets" && source.ref) {
+    return `${DEV_URL}${MILKDROP_CAPTURE_PAGE}?preset=${encodeURIComponent(source.ref)}`;
+  }
   return `${DEV_URL}${MILKDROP_CAPTURE_PAGE}?presetUrl=${encodeURIComponent(source.url ?? "")}`;
 }
 
@@ -334,8 +340,10 @@ export async function runAnnotateOne(
     throw new Error(`no catalog entry for slug "${slug}" (tried milkdrop_ + shadertoy_ prefixes)`);
   }
   const entry = JSON.parse(readFileSync(entryPath, "utf-8")) as CatalogEntry;
-  if (!entry.source.url) {
-    throw new Error(`entry ${slug} has no source.url — only url-loader entries can be annotated`);
+  const hasUrl = !!entry.source.url;
+  const hasNpmRef = entry.source.loader === "npm-butterchurn-presets" && !!entry.source.ref;
+  if (!hasUrl && !hasNpmRef) {
+    throw new Error(`entry ${slug} has no source.url or npm-bundle ref — can't capture`);
   }
 
   const progress = new Progress(progressPath(repoRoot));

@@ -42,8 +42,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.jpg"
+    "video": "/videos/milkdrop_flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.webm",
+    "thumb": "/thumbs/milkdrop_flexi-evolution-3-mash0000-orbiting-satellite-coral-reef-time-lapse.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -52,6 +52,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (451367 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (417464 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

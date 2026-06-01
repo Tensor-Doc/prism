@@ -15,9 +15,9 @@
   "annotation": {
     "vibe": [
       "minimalist",
-      "void",
+      "sparse",
       "stark",
-      "sparse"
+      "void"
     ],
     "motion": 0.1,
     "palette_anchor": [
@@ -26,23 +26,25 @@
     ],
     "audio_affinity": {
       "bass": 0.2,
-      "mid": 0.6,
-      "treble": 0.7
+      "mid": 0.7,
+      "treble": 0.8
     },
     "techniques": [
-      "custom_wave"
+      "custom_wave",
+      "audio_gating"
     ],
-    "technical_notes": "A stark, minimalist preset consisting of a single small custom wave in the center of an otherwise black void. The wave is driven by the synthetic test signal's mid and treble frequencies, flickering and changing shape rapidly while the decay rate is set extremely high, leaving no persistent trails in sampler_main. The overall presentation is exceptionally sparse and quiet.",
+    "technical_notes": "A minimalist custom wave is rendered at the center of a pitch-black viewport, driven directly by the audio loop's mid and treble frequencies. With no frame feedback or decay trails, the screen clears instantly between transients, resulting in a stark, high-contrast display.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T00:03:17.266Z"
+    "captured_at": "2026-06-01T05:20:19.687Z"
   },
   "assets": {
     "textures_needed": [],
     "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-plasma.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-plasma.jpg"
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-plasma.jpg",
+    "video_size_bytes": 507657
   },
   "contribution": {
     "added_by": "scottspace",

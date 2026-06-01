@@ -34,6 +34,8 @@ import { runAnnotate } from "./commands/annotate";
 import { runBuildIndex } from "./commands/build-index";
 import { runBuildTextures } from "./commands/build-textures";
 import { runBackfillVideoSizes } from "./commands/backfill-video-sizes";
+import { runRecoverGap } from "./commands/recover-gap";
+import { runBuildParticleShowcase } from "./commands/build-particle-showcase";
 import { runIngest } from "./commands/ingest";
 import { runIterateShader } from "./commands/iterate-shader";
 import { runMigrate } from "./commands/migrate";
@@ -107,6 +109,25 @@ function main(): void {
     }
     case "backfill-video-sizes": {
       runBackfillVideoSizes(repoRoot);
+      break;
+    }
+    case "recover-gap": {
+      const limitArg = args.find((a) => a.startsWith("--limit="));
+      const limit = limitArg ? Number(limitArg.split("=")[1]) : undefined;
+      void runRecoverGap(repoRoot, { limit }).catch((err: Error) => {
+        console.error(`[recover-gap] FAILED: ${err.message}`);
+        process.exit(2);
+      });
+      break;
+    }
+    case "build-particle-showcase": {
+      const onlyArg = args.find((a) => a.startsWith("--only="));
+      const only = onlyArg ? onlyArg.split("=")[1] : undefined;
+      const skipAnnotate = args.includes("--skip-annotate");
+      void runBuildParticleShowcase(repoRoot, { only, skipAnnotate }).catch((err: Error) => {
+        console.error(`[showcase] FAILED: ${err.message}`);
+        process.exit(2);
+      });
       break;
     }
     case "iterate-shader": {

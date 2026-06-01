@@ -1,0 +1,60 @@
+{
+  "id": "particles:galactic-dust",
+  "short_id": "35Rx8l",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/galactic-dust.json"
+  },
+  "display": {
+    "name": "Galactic Dust",
+    "author": "prism",
+    "blurb": "Cosmic dust and distant stars drifting in slow orbit, camera moving through an interstellar field at a dreamlike pace."
+  },
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "sparse",
+      "dark",
+      "mysterious"
+    ],
+    "motion": 0.12,
+    "palette_anchor": [
+      "#000000",
+      "#3a2a4e",
+      "#1b182a",
+      "#7a6b90"
+    ],
+    "audio_affinity": {
+      "bass": 0.05,
+      "mid": 0.15,
+      "treble": 0.4
+    },
+    "techniques": [
+      "custom_wave",
+      "fbm_noise"
+    ],
+    "technical_notes": "A delicate custom wave ribbon textured with fine procedural noise slowly propagates across a black void. The internal noise shimmers in response to the treble in the audio, while the overall path undulates gently. High decay rates keep the background completely dark, leaving only the glittering thread visible.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:17:42.406Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/galactic-dust-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_galactic-dust.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_galactic-dust.jpg",
+    "video_size_bytes": 3069481
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

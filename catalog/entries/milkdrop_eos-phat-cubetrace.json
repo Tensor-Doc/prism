@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "3d",
       "geometric",
-      "shapes"
+      "cyberpunk",
+      "cosmic",
+      "electric"
     ],
-    "motion": 0.7,
+    "motion": 0.65,
     "palette_anchor": [
-      "#3afff8",
-      "#ff3a96",
-      "#0a0a1a"
+      "#000000",
+      "#001188",
+      "#00d8ff",
+      "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.6,
-      "treble": 0.4
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.6
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "beat_burst",
+      "bloom_glow",
+      "frame_feedback",
+      "audio_gating"
+    ],
+    "technical_notes": "Custom waves draw the labyrinthine blue grid and circular lens flares, while Milkdrop's native motion vectors are configured as radiating white streaks. Beat detection on the music's bass triggers sudden camera rotation and intense additive bloom bursts via sampler_blur1 in the composite shader. A low decay rate in the frame feedback loop maintains faint trails of the geometric structures as they rotate.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:05:51.395Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_eos-phat-cubetrace.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eos-phat-cubetrace.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eos-phat-cubetrace.jpg",
+    "video_size_bytes": 5447943
   },
   "contribution": {
     "added_by": "scottspace",

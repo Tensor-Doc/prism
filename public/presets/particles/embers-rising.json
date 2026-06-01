@@ -1,0 +1,24 @@
+{
+  "name": "Embers Rising",
+  "atlas_url": "/presets/particles/embers-rising-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.035,
+  "size_variance": 1,
+  "velocity_stretch": 2.5,
+  "curl_scale": 1.8,
+  "velocity_damp": 0.99,
+  "audio_gain": 2.5,
+  "volume_size": [
+    3,
+    1.2,
+    3
+  ],
+  "wave_amplitude": 0.15,
+  "flow_drift_x": 0.3,
+  "corona_boost": 8,
+  "dance_amount": 0.2,
+  "camera_radius": 4,
+  "camera_height": 0.35,
+  "camera_orbit_speed": 0.025,
+  "fov_degrees": 55
+}

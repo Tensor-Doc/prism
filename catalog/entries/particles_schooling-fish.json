@@ -1,0 +1,62 @@
+{
+  "id": "particles:schooling-fish",
+  "short_id": "CziRzn",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/schooling-fish.json"
+  },
+  "display": {
+    "name": "Schooling Fish",
+    "author": "prism",
+    "blurb": "A tight school of silver fish moving as one organism through a tropical reef, dappled light, slow camera orbit at depth."
+  },
+  "annotation": {
+    "vibe": [
+      "crystalline",
+      "fluid",
+      "bioluminescent",
+      "organic",
+      "mysterious"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#000000",
+      "#123038",
+      "#408890"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.8
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "audio_gating",
+      "frame_feedback"
+    ],
+    "technical_notes": "A dense swarm of custom shapes resembling crystalline crosses is animated via per-frame equations to form an undulating 3D sheet. Bass transients drive the amplitude of the wave-like displacement, while treble frequencies modulate the individual particle rotation and brightness. Low decay in the feedback loop preserves a subtle trail behind the dispersing swarm.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:13:48.481Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/schooling-fish-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_schooling-fish.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_schooling-fish.jpg",
+    "video_size_bytes": 7500006
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

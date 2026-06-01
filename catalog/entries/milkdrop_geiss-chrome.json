@@ -49,8 +49,8 @@
         "name": "fw_clouds"
       }
     ],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-chrome.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-chrome.jpg"
+    "video": "/videos/milkdrop_geiss-chrome.webm",
+    "thumb": "/thumbs/milkdrop_geiss-chrome.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -59,6 +59,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (346877 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (254400 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

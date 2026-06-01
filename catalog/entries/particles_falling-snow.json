@@ -1,0 +1,60 @@
+{
+  "id": "particles:falling-snow",
+  "short_id": "rlyB3L",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/falling-snow.json"
+  },
+  "display": {
+    "name": "Falling Snow",
+    "author": "prism",
+    "blurb": "Snowflakes drifting slowly past the camera through a quiet winter night, the only motion when the music pulses."
+  },
+  "annotation": {
+    "vibe": [
+      "minimalist",
+      "stark",
+      "wintry",
+      "monochrome"
+    ],
+    "motion": 0.35,
+    "palette_anchor": [
+      "#000000",
+      "#ffffff",
+      "#8a929a"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.2,
+      "treble": 0.2
+    },
+    "techniques": [
+      "custom_wave",
+      "particle_system",
+      "texture_sample"
+    ],
+    "technical_notes": "A textured ribbon-like custom wave, rendered with a high-contrast noise pattern, undulates across a dark void. High decay in the feedback loop prevents persistent trails, maintaining a stark monochrome aesthetic. In the latter half, a particle system of instanced snowflake textures drifts across the viewport, likely triggered by a temporal threshold or audio event.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:16:55.098Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/falling-snow-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_falling-snow.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_falling-snow.jpg",
+    "video_size_bytes": 4660712
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

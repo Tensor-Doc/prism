@@ -1,0 +1,63 @@
+{
+  "id": "particles:solar-wind",
+  "short_id": "EqdmpR",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/solar-wind.json"
+  },
+  "display": {
+    "name": "Solar Wind",
+    "author": "prism",
+    "blurb": "Charged plasma streaks racing past the camera in a coronal magnetic field, audio bass intensifying the eruption arcs."
+  },
+  "annotation": {
+    "vibe": [
+      "cosmic",
+      "energetic",
+      "dramatic",
+      "stellar",
+      "fiery"
+    ],
+    "motion": 0.85,
+    "palette_anchor": [
+      "#000000",
+      "#3a0e02",
+      "#dd5a1a",
+      "#ffeb70"
+    ],
+    "audio_affinity": {
+      "bass": 0.9,
+      "mid": 0.6,
+      "treble": 0.3
+    },
+    "techniques": [
+      "instanced_particles",
+      "velocity_stretching",
+      "corona_arcs",
+      "image_atlas_sampling"
+    ],
+    "technical_notes": "65,536 plasma streaks race through a strongly stretched curl-noise field with a dominant horizontal current. Velocity stretching is set very high so each particle reads as a streak rather than a sprite. Bass amplifies vertical curl strongly, producing solar corona arcs erupting from the medium on every kick.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "seed",
+    "version": 1,
+    "captured_at": "2026-06-01T05:12:32.823Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/solar-wind-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_solar-wind.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_solar-wind.jpg",
+    "video_size_bytes": 8901675
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

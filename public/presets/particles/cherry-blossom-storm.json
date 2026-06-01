@@ -1,0 +1,24 @@
+{
+  "name": "Cherry Blossom Storm",
+  "atlas_url": "/presets/particles/cherry-blossom-storm-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.045,
+  "size_variance": 0.95,
+  "velocity_stretch": 1.2,
+  "curl_scale": 0.6,
+  "velocity_damp": 0.99,
+  "audio_gain": 0.7,
+  "volume_size": [
+    5,
+    0.8,
+    5
+  ],
+  "wave_amplitude": 0.25,
+  "flow_drift_x": 1,
+  "corona_boost": 1.2,
+  "dance_amount": 0.3,
+  "camera_radius": 5.5,
+  "camera_height": 0.4,
+  "camera_orbit_speed": 0.02,
+  "fov_degrees": 55
+}

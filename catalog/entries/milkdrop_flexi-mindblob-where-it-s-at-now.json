@@ -49,8 +49,8 @@
         "name": "pic"
       }
     ],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-mindblob-where-it-s-at-now.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-mindblob-where-it-s-at-now.jpg"
+    "video": "/videos/milkdrop_flexi-mindblob-where-it-s-at-now.webm",
+    "thumb": "/thumbs/milkdrop_flexi-mindblob-where-it-s-at-now.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -59,6 +59,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (433568 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (424155 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

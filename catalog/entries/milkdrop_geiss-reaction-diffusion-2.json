@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "fluid",
+      "cellular",
       "organic",
-      "calm"
+      "kinetic",
+      "biological"
     ],
-    "motion": 0.35,
+    "motion": 0.8,
     "palette_anchor": [
-      "#3a8aff",
-      "#ff8c3a",
-      "#1a1a2a"
+      "#ffffff",
+      "#1a0c02",
+      "#e5a93b"
     ],
     "audio_affinity": {
-      "bass": 0.7,
+      "bass": 0.85,
       "mid": 0.5,
-      "treble": 0.2
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "fbm_noise",
+      "bloom_glow"
+    ],
+    "technical_notes": "A reaction-diffusion system driven by a per-pixel warp shader that alternates between a high-frequency procedural noise field and structured cellular patterns. High-contrast thresholding in the composite shader creates glowing, organic liquid cells from the feedback loop. The transitions are sharply gated by the audio's bass and treble dynamics.",
     "brand_safe": true,
-    "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:22:57.596Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_geiss-reaction-diffusion-2.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-2.jpg",
+    "video_size_bytes": 11013326
   },
   "contribution": {
     "added_by": "scottspace",

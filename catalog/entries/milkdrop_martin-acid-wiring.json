@@ -15,31 +15,42 @@
   },
   "annotation": {
     "vibe": [
-      "electric",
-      "mechanical",
+      "energetic",
+      "geometric",
+      "chaotic",
       "neon"
     ],
-    "motion": 0.75,
+    "motion": 0.85,
     "palette_anchor": [
-      "#3affae",
-      "#ff3a3a",
-      "#0a0a0a"
+      "#00ff55",
+      "#ff0044",
+      "#0c0d12",
+      "#9400d3"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.7,
-      "treble": 0.6
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "domain_repetition",
+      "frame_feedback",
+      "audio_gating",
+      "beat_burst",
+      "hue_cycle"
+    ],
+    "technical_notes": "Custom wave overlays render rotating wireframe cubes that scale and warp in response to the audio's mid and treble bands. A complex domain repetition grid multiplies these elements across the screen, while a high-decay frame feedback loop combined with sampler_blur1 creates glowing trails. Strobe-like flashes and color shifts are gated directly by bass attenuated spikes.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:27:12.684Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-acid-wiring.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-acid-wiring.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-acid-wiring.jpg",
+    "video_size_bytes": 7538934
   },
   "contribution": {
     "added_by": "scottspace",

@@ -1,0 +1,59 @@
+{
+  "id": "particles:origami-flock",
+  "short_id": "Bv8pPx",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/origami-flock.json"
+  },
+  "display": {
+    "name": "Origami Flock",
+    "author": "prism",
+    "blurb": "Paper birds and butterflies drifting through a warm museum atrium, each one nodding to the music with its own tempo."
+  },
+  "annotation": {
+    "vibe": [
+      "atmospheric",
+      "surreal",
+      "delicate",
+      "dreamy"
+    ],
+    "motion": 0.4,
+    "palette_anchor": [
+      "#c5b3c9",
+      "#a8dfc9",
+      "#e2b6c5"
+    ],
+    "audio_affinity": {
+      "bass": 0.3,
+      "mid": 0.4,
+      "treble": 0.6
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave"
+    ],
+    "technical_notes": "A vast field of instanced custom shapes resembling origami cranes is distributed across a 3D terrain. High-frequency treble modulations drive the fluttering rotation of individual shapes, while the camera sweeps backward to reveal the scale of the particle system. The rendering relies on clean geometry passes without heavy frame feedback, maintaining sharp edges on a dark background.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:18:27.666Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/origami-flock-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_origami-flock.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_origami-flock.jpg",
+    "video_size_bytes": 6529086
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Origami Flock",
+  "atlas_url": "/presets/particles/origami-flock-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.05,
+  "size_variance": 0.5,
+  "velocity_stretch": 0.8,
+  "curl_scale": 0.6,
+  "velocity_damp": 0.992,
+  "audio_gain": 0.6,
+  "volume_size": [
+    4,
+    1,
+    4
+  ],
+  "wave_amplitude": 0.2,
+  "flow_drift_x": 0.4,
+  "corona_boost": 1,
+  "dance_amount": 1.4,
+  "camera_radius": 4.5,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.025,
+  "fov_degrees": 52
+}

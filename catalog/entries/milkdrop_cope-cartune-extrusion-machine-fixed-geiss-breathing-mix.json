@@ -48,8 +48,8 @@
         "name": "cartunemask1"
       }
     ],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.jpg"
+    "video": "/videos/milkdrop_cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.webm",
+    "thumb": "/thumbs/milkdrop_cope-cartune-extrusion-machine-fixed-geiss-breathing-mix.jpg"
   },
   "contribution": {
     "added_by": "scottspace",
@@ -58,6 +58,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (178156 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (210539 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

@@ -1,4 +1,18 @@
 {
+  "EqdmpR": {
+    "name": "Solar Wind",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/solar-wind.json",
+    "default_image": "/presets/particles/solar-wind-atlas.png"
+  },
+  "cJF2H7": {
+    "name": "Coral Garden",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/coral-garden.json",
+    "default_image": "/presets/particles/coral-garden-atlas.png"
+  },
   "U0D2Ci": {
     "name": "Refik Rolling Ocean of Flora",
     "source_type": "particles",
@@ -6,11 +20,25 @@
     "source_url": "/presets/particles/refik-fluid-flora.json",
     "default_image": "/presets/particles/refik-fluid-flora-atlas.png"
   },
+  "P5OFbe": {
+    "name": "Embers Rising",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/embers-rising.json",
+    "default_image": "/presets/particles/embers-rising-atlas.png"
+  },
   "RDy6sq": {
     "name": "amandio c - new life",
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/amandio-c-new-life.milk"
+  },
+  "CziRzn": {
+    "name": "Schooling Fish",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/schooling-fish.json",
+    "default_image": "/presets/particles/schooling-fish-atlas.png"
   },
   "nuozxK": {
     "name": "Rovastar & Unchained - Ambrosia Mystic (Dark Heart Mix)",
@@ -24,11 +52,24 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/rovastar-telek-altars-of-madness-rolling-oceans-mix.milk"
   },
+  "YUqOPN": {
+    "name": "Geiss - Thumb Drum",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Geiss - Thumb Drum"
+  },
   "96nqCN": {
     "name": "Mig_061",
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-061.milk"
+  },
+  "5zUZFz": {
+    "name": "Cherry Blossom Storm",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/cherry-blossom-storm.json",
+    "default_image": "/presets/particles/cherry-blossom-storm-atlas.png"
   },
   "e7XhYu": {
     "name": "Refik Fluid of Flora",
@@ -55,6 +96,13 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/rovastar-unchained-unified-drag-2-ghostly-vision-mix.milk"
   },
+  "Bv8pPx": {
+    "name": "Origami Flock",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/origami-flock.json",
+    "default_image": "/presets/particles/origami-flock-atlas.png"
+  },
   "UMZdqF": {
     "name": "Reenen - phoenix",
     "source_type": "milkdrop",
@@ -66,6 +114,13 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly-vortex.milk"
+  },
+  "1Ydj3x": {
+    "name": "Murmuration",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/murmuration.json",
+    "default_image": "/presets/particles/murmuration-atlas.png"
   },
   "I9ooYK": {
     "name": "fiShbRaiN - the adventures of prismo jenkins",
@@ -108,6 +163,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly-vortex-3.milk"
+  },
+  "P7rm5h": {
+    "name": "Flexi - mom, why the sky looks different today",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "flexi - mom, why the sky looks different today"
   },
   "tf1p4d": {
     "name": "shifter - spincycle c",
@@ -309,6 +370,24 @@
     "source_url": "/presets/shadertoy/image-pool.glsl",
     "default_image": "/api/image-proxy?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA17563%2FPIA17563~medium.jpg"
   },
+  "7ICBTf": {
+    "name": "Geiss - Reaction Diffusion 2",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Geiss - Reaction Diffusion 2"
+  },
+  "75TH6R": {
+    "name": "AdamFx + Martin Infusion - Tactile Disfunction",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "An AdamFX n Martin Infusion 2 flexi - Why The Sky Looks Diffrent Today - AdamFx n Martin Infusion - Tack Tile Disfunction B"
+  },
+  "gomlny": {
+    "name": "Eo.S. + Zylot - skylight",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)"
+  },
   "Zuzg4t": {
     "name": "ORB - Saturns Rings",
     "source_type": "milkdrop",
@@ -393,6 +472,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/orb-solar-radiation.milk"
   },
+  "D4lnVp": {
+    "name": "Eo.S. + Phat - cubetrace",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Eo.S. + Phat - cubetrace - v2"
+  },
   "VJQq6c": {
     "name": "Geiss - Color Pox (Measles Mix)",
     "source_type": "milkdrop",
@@ -452,6 +537,13 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-304-geiss-remix-3b.milk"
+  },
+  "rlyB3L": {
+    "name": "Falling Snow",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/falling-snow.json",
+    "default_image": "/presets/particles/falling-snow-atlas.png"
   },
   "Qy8in2": {
     "name": "Geiss - Cosmic Dust 2 - Trails 7",
@@ -561,6 +653,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/flexi-fishbrain-neon-mindblob-grafitti.milk"
   },
+  "e9yMqX": {
+    "name": "Geiss - Cauldron (painterly)",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Geiss - Cauldron - painterly 2 (saturation remix)"
+  },
   "o9k7m7": {
     "name": "Geiss - Constant Velocity - angular blur",
     "source_type": "milkdrop",
@@ -650,6 +748,13 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/martin-stahlregen-martin-in-da-mash-12.milk"
+  },
+  "35Rx8l": {
+    "name": "Galactic Dust",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/galactic-dust.json",
+    "default_image": "/presets/particles/galactic-dust-atlas.png"
   },
   "OZq2ir": {
     "name": "Mig_085",
@@ -854,6 +959,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-197b.milk"
+  },
+  "uwiOaO": {
+    "name": "HD CosmoFX",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Milk Artist At our Best - FED - SlowFast Ft AdamFX n Martin - HD CosmoFX"
   },
   "bRxPDX": {
     "name": "Geiss - Cosmic Dust 2 - quasistatic noise desat trails 2",
@@ -1691,6 +1802,18 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-304-geiss-remix.milk"
   },
+  "BbRu9e": {
+    "name": "Aderrasi - Storm of the Eye",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics"
+  },
+  "50UQd8": {
+    "name": "Flexi + amandio - organic",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "flexi + amandio c - organic [random mashup]"
+  },
   "buwqyb": {
     "name": "Geiss + Rovastar - The Chaos Of Colours (sprouting dimentia mix)",
     "source_type": "milkdrop",
@@ -1720,6 +1843,24 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/phat-eo-s-rainbow-bubble-mid3-f-me-dood.milk"
+  },
+  "lqeU1g": {
+    "name": "Flexi - bouncing balls (neon)",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "flexi - bouncing balls [double mindblob neon mix]"
+  },
+  "kyB3gS": {
+    "name": "Aderrasi - Songflower (Moss Posy)",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Aderrasi - Songflower (Moss Posy)"
+  },
+  "yKtPkC": {
+    "name": "Flexi - alien fish pond",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Flexi - alien fish pond"
   },
   "gLgxTP": {
     "name": "Rovastar + Idiot24-7 - Balk Acid",

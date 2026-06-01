@@ -1,0 +1,24 @@
+{
+  "name": "Galactic Dust",
+  "atlas_url": "/presets/particles/galactic-dust-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.06,
+  "size_variance": 1,
+  "velocity_stretch": 0.8,
+  "curl_scale": 0.3,
+  "velocity_damp": 0.998,
+  "audio_gain": 0.5,
+  "volume_size": [
+    7,
+    2,
+    7
+  ],
+  "wave_amplitude": 0.1,
+  "flow_drift_x": 0.1,
+  "corona_boost": 0.5,
+  "dance_amount": 0.1,
+  "camera_radius": 7.5,
+  "camera_height": 0.8,
+  "camera_orbit_speed": 0.015,
+  "fov_degrees": 60
+}

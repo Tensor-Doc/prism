@@ -16,30 +16,42 @@
   "annotation": {
     "vibe": [
       "organic",
-      "undulating",
-      "biological"
+      "cellular",
+      "psychedelic",
+      "fluid",
+      "microscopic"
     ],
-    "motion": 0.55,
+    "motion": 0.65,
     "palette_anchor": [
-      "#d99a3a",
-      "#3aaa8a",
-      "#221a14"
+      "#b8004f",
+      "#1e0030",
+      "#5cb83c",
+      "#d4af37"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.6,
-      "treble": 0.3
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "audio_gating",
+      "domain_repetition",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A complex reaction-diffusion system simulates organic cellular growth, where per-pixel warp equations drive a fluid advection field. A tiled hexagonal grid is modulated by the audio, with bass transients triggering vertical displacement and treble spikes accelerating cellular division and decay. Feedback loops through sampler_main and sampler_blur2 preserve the painterly, petri-dish textures.",
+    "brand_safe": false,
     "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:11:22.637Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_flexi-amandio-organic.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-amandio-organic.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-amandio-organic.jpg",
+    "video_size_bytes": 7660715
   },
   "contribution": {
     "added_by": "scottspace",

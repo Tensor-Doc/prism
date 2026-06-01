@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "sky",
-      "atmospheric",
-      "shifting"
+      "hypnotic",
+      "organic",
+      "fluid",
+      "dark"
     ],
-    "motion": 0.5,
+    "motion": 0.45,
     "palette_anchor": [
-      "#3acfff",
-      "#ffba9a",
-      "#2a1a3a"
+      "#000000",
+      "#1a2230",
+      "#8fa9c4",
+      "#4a5360"
     ],
     "audio_affinity": {
-      "bass": 0.3,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.4,
+      "treble": 0.3
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "domain_repetition",
+      "decay_trail"
+    ],
+    "technical_notes": "A pair of custom shapes are rendered symmetrically along a diagonal axis, scaling dynamically with the music's bass. High zoom and a moderate decay rate in the per-pixel warp shader create a cascading, feather-like feedback trail through sampler_main. The muted, near-monochromatic palette emphasizes the fluid, organic geometry of the repeating domain.",
     "brand_safe": true,
     "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:17:58.866Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_flexi-sky-different-today.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-sky-different-today.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-sky-different-today.jpg",
+    "video_size_bytes": 3546400
   },
   "contribution": {
     "added_by": "scottspace",

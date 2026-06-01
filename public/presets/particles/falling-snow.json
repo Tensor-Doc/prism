@@ -1,0 +1,24 @@
+{
+  "name": "Falling Snow",
+  "atlas_url": "/presets/particles/falling-snow-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.04,
+  "size_variance": 0.9,
+  "velocity_stretch": 0.6,
+  "curl_scale": 0.4,
+  "velocity_damp": 0.995,
+  "audio_gain": 0.4,
+  "volume_size": [
+    4.5,
+    1.5,
+    4.5
+  ],
+  "wave_amplitude": 0.15,
+  "flow_drift_x": 0.15,
+  "corona_boost": 0.4,
+  "dance_amount": 0.15,
+  "camera_radius": 4.5,
+  "camera_height": 1,
+  "camera_orbit_speed": 0.018,
+  "fov_degrees": 55
+}

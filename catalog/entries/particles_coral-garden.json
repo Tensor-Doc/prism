@@ -1,0 +1,64 @@
+{
+  "id": "particles:coral-garden",
+  "short_id": "cJF2H7",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/coral-garden.json"
+  },
+  "display": {
+    "name": "Coral Garden",
+    "author": "prism",
+    "blurb": "A living reef of coral polyps gently swaying in current, deep ocean color, slow camera at the seafloor."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "psychedelic",
+      "underwater",
+      "dense",
+      "botanical"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#d84a36",
+      "#8c2d6c",
+      "#22a38a",
+      "#e08a24"
+    ],
+    "audio_affinity": {
+      "bass": 0.7,
+      "mid": 0.5,
+      "treble": 0.6
+    },
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A dense, undulating landscape of coral-like structures is generated using custom shapes and waves replicated through frame feedback. A low decay rate in sampler_main allows these colorful floral clusters to persist and accumulate into a continuous 3D terrain. The camera's sweeping flight path and the terrain's rippling motion are driven by per-pixel warp equations modulated by the music's bass and mid-frequency bands.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:19:35.070Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/coral-garden-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_coral-garden.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_coral-garden.jpg",
+    "video_size_bytes": 8309459
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

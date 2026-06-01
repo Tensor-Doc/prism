@@ -15,31 +15,37 @@
   },
   "annotation": {
     "vibe": [
-      "percussive",
-      "rhythmic",
-      "abstract"
+      "organic",
+      "fluid",
+      "hypnotic",
+      "monochrome"
     ],
-    "motion": 0.65,
+    "motion": 0.35,
     "palette_anchor": [
-      "#ff3a8a",
-      "#ffd23a",
-      "#0e0e1a"
+      "#555555",
+      "#9e9e9e",
+      "#d0d0d0"
     ],
     "audio_affinity": {
-      "bass": 0.85,
+      "bass": 0.3,
       "mid": 0.4,
-      "treble": 0.2
+      "treble": 0.5
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A reaction-diffusion system generates organic Turing patterns resembling fingerprints or fluid currents. The per-pixel warp shader drives the swirling vortex motion, while feedback through sampler_main is sharpened in the composite pass to maintain high-contrast boundaries. High-frequency details shimmer in response to treble in the audio.",
     "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:24:34.741Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_geiss-thumb-drum.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-thumb-drum.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-thumb-drum.jpg",
+    "video_size_bytes": 7413517
   },
   "contribution": {
     "added_by": "scottspace",

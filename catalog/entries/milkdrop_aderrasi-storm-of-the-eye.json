@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "storm",
-      "thunder",
-      "atmospheric"
+      "psychedelic",
+      "hypnotic",
+      "kinetic",
+      "optical"
     ],
-    "motion": 0.7,
+    "motion": 0.85,
     "palette_anchor": [
-      "#3a4a6a",
-      "#e0e0e0",
-      "#0e0e1a"
+      "#ffffff",
+      "#000000",
+      "#1a5c1a",
+      "#d61ca5"
     ],
     "audio_affinity": {
       "bass": 0.8,
-      "mid": 0.5,
-      "treble": 0.4
+      "mid": 0.6,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "chromatic_split",
+      "audio_gating"
+    ],
+    "technical_notes": "A per-pixel warp shader applies a tight rotational spiral and radial zoom, twisting high-contrast black and white stripes into a dense moiré vortex. Feedback through sampler_main with minimal decay preserves the sharp geometric lines, while the music's bass transients trigger sudden zoom pulses and background color swaps. Rapid hue cycling and chromatic split aberration fringe the swirling boundaries with vibrant, shifting hues.",
+    "brand_safe": false,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:02:27.191Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_aderrasi-storm-of-the-eye.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_aderrasi-storm-of-the-eye.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_aderrasi-storm-of-the-eye.jpg",
+    "video_size_bytes": 7745019
   },
   "contribution": {
     "added_by": "scottspace",

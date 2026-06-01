@@ -14,8 +14,10 @@ Today, Prism composites existing visualization code. It runs
 [Milkdrop](https://www.geisswerks.com/about_milkdrop.html) presets
 through [butterchurn](https://github.com/jberg/butterchurn). It runs
 [Shadertoy](https://www.shadertoy.com/) fragment shaders through a
-custom WebGL2 runtime. An LLM routes prompts to the right one.
-AI-generated shaders are in development.
+custom WebGL2 runtime. It also runs a native particle backend with
+3D curl-noise flow, wave attractors, and atlas-textured sprites. An
+LLM routes prompts to the right one. AI-generated shaders and
+particle presets are in development.
 
 Live demo at [prism.scott.ai](https://prism.scott.ai).
 
@@ -74,6 +76,52 @@ new PrismPlayer({ container: "viz", image: ["a.jpg", "b.jpg"] });
 ```
 
 Full API in [`packages/prism/README.md`](packages/prism/README.md).
+
+## 🌊 The Particles backend
+
+`0.1.4` adds a third visualization source. A native 3D GPU particle
+system whose medium is **an image atlas you supply**. Each particle
+is a small textured sprite drifting through a curl-noise flow field
+with audio reactivity wired directly into the update shader.
+
+The system already supports per-particle 3D rotation, wave attractor
+surfaces, solar-corona arcs on bass spikes, per-particle power-law
+size variance, crossed-billboard sprites for fake-3D depth, and a
+slow camera orbit. Rendering 65,536 particles instanced per frame.
+
+```js
+new PrismPlayer({
+  container: "viz",
+  graph: "U0D2Ci",  // Refik Rolling Ocean of Flora
+});
+```
+
+Each particle preset is a small JSON document with about twenty
+tunables. Atlas URL, particle size, velocity stretch, curl scale,
+wave amplitude, camera radius, audio gain, plus all the
+visualization-specific knobs. Trading atlas plus tunables produces
+visually distinct concepts on the same runtime — flowers, embers,
+snow, paper birds, plasma streaks. The
+[`concepts/particles-showcase.md`](concepts/particles-showcase.md)
+file lists the planned concept library.
+
+The first showcase batch shipped with `0.1.4`. Ten Refik-tier
+particle concepts are live in the gallery.
+
+| Rank | Concept | Inspired by | Share token |
+|---|---|---|---|
+| #1 | Solar Wind | NASA Solar Dynamics Observatory | `EqdmpR` |
+| #2 | Coral Garden | BBC Blue Planet, Refik "Coral Dreams" | `cJF2H7` |
+| #3 | Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | `U0D2Ci` |
+| #4 | Embers Rising | campfire macros, dragon-fire cinema | `P5OFbe` |
+| #6 | Schooling Fish | BBC Blue Planet underwater shots | `CziRzn` |
+| #11 | Cherry Blossom Storm | Japanese hanami, anime petal sequences | `5zUZFz` |
+| #16 | Origami Flock | paper-crane installations | `Bv8pPx` |
+| #19 | Murmuration | starling flocks at dusk | `1Ydj3x` |
+| #89 | Falling Snow | snow-globe close-ups | `rlyB3L` |
+| #124 | Galactic Dust | Hubble dust-lane imagery | `35Rx8l` |
+
+Each loads via `prism.scott.ai/?g=<token>` or the embed.
 
 ## 🤖 Use the visualizer from an AI agent
 
@@ -179,7 +227,7 @@ Five node roles.
 |---|---|---|
 | `signal.*` | Makes a stream of data | `signal.audio`, `signal.cursor`, `signal.heartbeat` |
 | `xform.*` | Changes a signal | `xform.gain`, `xform.beat` |
-| `lf.*` | Makes frames from signals | `lf.milkdrop`, `lf.shadertoy` |
+| `lf.*` | Makes frames from signals | `lf.milkdrop`, `lf.shadertoy`, `lf.particles` |
 | `op.*` | Changes frames | `op.blend`, `op.displace`, `op.feedback` |
 | `sink.*` | Sends frames somewhere | `sink.display`, `sink.recorder` |
 
@@ -221,8 +269,8 @@ examples/embed.html proves the two-line pitch
 BRAND.md            design system and aesthetic decisions
 ```
 
-The catalog is the heart of Prism. Today there are **336 annotated
-entries out of 644 total**. All videos are captured headless.
+The catalog is the heart of Prism. Today there are **337 annotated
+entries out of 646 total**. All videos are captured headless.
 Cloudflare R2 hosts them.
 
 ---
@@ -261,9 +309,11 @@ fallback exists, but every Geiss preset times out under it.
 
 ### 2. Add a new visualization source
 
-Today Prism runs two sources. **Milkdrop** through butterchurn.
-**Shadertoy** through a custom WebGL2 runtime. Next on the list are
-ISF and hand-written WGSL.
+Today Prism runs three sources. **Milkdrop** through butterchurn.
+**Shadertoy** through a custom WebGL2 runtime. **Particles** through
+a native instanced GPU particle backend with curl-noise flow and
+atlas-textured sprites. Next on the list are ISF and hand-written
+WGSL.
 
 Each new source needs two files.
 
@@ -378,8 +428,10 @@ deletion.
 ## Stack
 
 - **Frontend** uses Vite and TypeScript. No framework.
-- **Runtimes** are butterchurn for Milkdrop and a custom WebGL2
-  runtime for Shadertoy 300-es with iChannel uniforms.
+- **Runtimes** are butterchurn for Milkdrop, a custom WebGL2 runtime
+  for Shadertoy 300-es with iChannel uniforms, and a native particle
+  backend with state-texture ping-pong, MRT update passes, and
+  instanced crossed-billboard sprites.
 - **AI** is `gemini-flash-latest` through the `@google/genai` SDK.
   It handles annotation and prompt-to-graph.
 - **Storage** is Cloudflare R2 for captured WebMs and thumbnails.

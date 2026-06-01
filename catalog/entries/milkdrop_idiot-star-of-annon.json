@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "stellar",
-      "burst",
-      "radiant"
+      "fluid",
+      "luminescent",
+      "psychedelic",
+      "kinetic"
     ],
-    "motion": 0.75,
+    "motion": 0.65,
     "palette_anchor": [
-      "#ffba3a",
-      "#3aaaff",
-      "#0a0a0a"
+      "#ffffff",
+      "#b0b5c3",
+      "#d3c2e0",
+      "#a2cbd1"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.4
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "beat_burst",
+      "bloom_glow",
+      "hue_cycle"
+    ],
+    "technical_notes": "A high-exposure central core is driven by aggressive brighten and gamma settings, creating a high-contrast bloom. The per-pixel warp shader applies a swirling vortex motion, accumulating in sampler_main with a low decay rate to form fluid, metallic-looking concentric bands. Discrete rectangular custom shapes are triggered as beat bursts by the audio's bass peaks, scaling rapidly outward before dissolving into the feedback loop.",
     "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:25:57.042Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_idiot-star-of-annon.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot-star-of-annon.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot-star-of-annon.jpg",
+    "video_size_bytes": 5193713
   },
   "contribution": {
     "added_by": "scottspace",

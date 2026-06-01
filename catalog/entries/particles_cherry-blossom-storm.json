@@ -1,0 +1,62 @@
+{
+  "id": "particles:cherry-blossom-storm",
+  "short_id": "5zUZFz",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/cherry-blossom-storm.json"
+  },
+  "display": {
+    "name": "Cherry Blossom Storm",
+    "author": "prism",
+    "blurb": "A swirling current of cherry blossom petals carried on a slow spring wind, sky gradient overhead, camera drifting through the storm at eye level."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "floral",
+      "dreamy",
+      "fluid"
+    ],
+    "motion": 0.65,
+    "palette_anchor": [
+      "#f3c1d3",
+      "#e19bb0",
+      "#b25271",
+      "#000000"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.6,
+      "treble": 0.7
+    },
+    "techniques": [
+      "texture_sample",
+      "particle_system",
+      "frame_feedback",
+      "audio_gating"
+    ],
+    "technical_notes": "A massive array of custom shapes maps cherry blossom textures via texture_sample, instanced as a dense particle system. The 3D camera perspective and wave-like displacement are modulated by the audio's bass and mid frequencies, creating an undulating floral landscape. A subtle reflection in the lower screen space is generated via composite shader feedback, blending previous frames with a low decay rate.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:21:17.816Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/cherry-blossom-storm-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_cherry-blossom-storm.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_cherry-blossom-storm.jpg",
+    "video_size_bytes": 6933969
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

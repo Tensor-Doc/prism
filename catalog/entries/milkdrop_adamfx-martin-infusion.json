@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "abstract",
-      "structured",
-      "evolving"
+      "electric",
+      "kinetic",
+      "dark",
+      "sparse"
     ],
-    "motion": 0.6,
+    "motion": 0.65,
     "palette_anchor": [
-      "#3aaaff",
-      "#ff8a3a",
-      "#1a1a1a"
+      "#050515",
+      "#1e40ff",
+      "#d61c3c",
+      "#8faeff"
     ],
     "audio_affinity": {
-      "bass": 0.6,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.9,
+      "mid": 0.4,
+      "treble": 0.8
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "audio_gating",
+      "beat_burst",
+      "custom_wave",
+      "domain_repetition",
+      "frame_feedback"
+    ],
+    "technical_notes": "The preset remains mostly dark and sparse until heavy bass peaks trigger explosive, beat-gated bursts of a glossy, reflective grid of 3D tiles. During these high-energy moments, custom waves rendering electrical lightning arcs react dynamically to treble frequencies. The feedback loop in sampler_main maintains a receding tunnel perspective that collapses back into darkness as the audio decays.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T04:58:56.506Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_adamfx-martin-infusion.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_adamfx-martin-infusion.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_adamfx-martin-infusion.jpg",
+    "video_size_bytes": 7581785
   },
   "contribution": {
     "added_by": "scottspace",

@@ -1,10 +1,93 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T04:36:44.869Z",
-  "total": 646,
-  "annotated_count": 337,
-  "pending_count": 309,
+  "generated_at": "2026-06-01T05:25:52.383Z",
+  "total": 655,
+  "annotated_count": 359,
+  "pending_count": 296,
   "entries": [
+    {
+      "id": "particles:solar-wind",
+      "short_id": "EqdmpR",
+      "slug": "solar-wind",
+      "name": "Solar Wind",
+      "author": "prism",
+      "blurb": "Charged plasma streaks racing past the camera in a coronal magnetic field, audio bass intensifying the eruption arcs.",
+      "vibe": [
+        "cosmic",
+        "energetic",
+        "dramatic",
+        "stellar",
+        "fiery"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.6,
+        "treble": 0.3
+      },
+      "techniques": [
+        "instanced_particles",
+        "velocity_stretching",
+        "corona_arcs",
+        "image_atlas_sampling"
+      ],
+      "technical_notes": "65,536 plasma streaks race through a strongly stretched curl-noise field with a dominant horizontal current. Velocity stretching is set very high so each particle reads as a streak rather than a sprite. Bass amplifies vertical curl strongly, producing solar corona arcs erupting from the medium on every kick.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/solar-wind.json",
+      "default_image": "/presets/particles/solar-wind-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_solar-wind.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_solar-wind.jpg",
+      "video_size_bytes": 8901675,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:12:32.823Z"
+    },
+    {
+      "id": "particles:coral-garden",
+      "short_id": "cJF2H7",
+      "slug": "coral-garden",
+      "name": "Coral Garden",
+      "author": "prism",
+      "blurb": "A living reef of coral polyps gently swaying in current, deep ocean color, slow camera at the seafloor.",
+      "vibe": [
+        "organic",
+        "psychedelic",
+        "underwater",
+        "dense",
+        "botanical"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "technical_notes": "A dense, undulating landscape of coral-like structures is generated using custom shapes and waves replicated through frame feedback. A low decay rate in sampler_main allows these colorful floral clusters to persist and accumulate into a continuous 3D terrain. The camera's sweeping flight path and the terrain's rippling motion are driven by per-pixel warp equations modulated by the music's bass and mid-frequency bands.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/coral-garden.json",
+      "default_image": "/presets/particles/coral-garden-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_coral-garden.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_coral-garden.jpg",
+      "video_size_bytes": 8309459,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:19:35.070Z"
+    },
     {
       "id": "particles:refik-fluid-flora",
       "short_id": "U0D2Ci",
@@ -47,6 +130,48 @@
       "captured_at": "2026-06-01T04:34:17.020Z"
     },
     {
+      "id": "particles:embers-rising",
+      "short_id": "P5OFbe",
+      "slug": "embers-rising",
+      "name": "Embers Rising",
+      "author": "prism",
+      "blurb": "Hot embers from a campfire spiraling upward through still night air, bursting into corona arcs on bass hits.",
+      "vibe": [
+        "organic",
+        "fluid",
+        "cosmic",
+        "glittering",
+        "atmospheric"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "warp_field",
+        "audio_gating",
+        "beat_burst",
+        "decay_trail"
+      ],
+      "technical_notes": "A dense particle system of amber-hued elements is driven by a turbulent warp field that reacts dynamically to the audio. The bass drives the expansion and swirling turbulence of the particle cloud, while treble transients modulate the brightness and sparkle of individual elements. Persistent trails are maintained via a low decay rate in sampler_main, creating a fluid, organic ribbon of light.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/embers-rising.json",
+      "default_image": "/presets/particles/embers-rising-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_embers-rising.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_embers-rising.jpg",
+      "video_size_bytes": 7729915,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:21:36.569Z"
+    },
+    {
       "id": "milkdrop:amandio-c-new-life",
       "short_id": "RDy6sq",
       "slug": "amandio-c-new-life",
@@ -84,6 +209,47 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.428Z",
       "captured_at": "2026-06-01T00:03:39.376Z"
+    },
+    {
+      "id": "particles:schooling-fish",
+      "short_id": "CziRzn",
+      "slug": "schooling-fish",
+      "name": "Schooling Fish",
+      "author": "prism",
+      "blurb": "A tight school of silver fish moving as one organism through a tropical reef, dappled light, slow camera orbit at depth.",
+      "vibe": [
+        "crystalline",
+        "fluid",
+        "bioluminescent",
+        "organic",
+        "mysterious"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "audio_gating",
+        "frame_feedback"
+      ],
+      "technical_notes": "A dense swarm of custom shapes resembling crystalline crosses is animated via per-frame equations to form an undulating 3D sheet. Bass transients drive the amplitude of the wave-like displacement, while treble frequencies modulate the individual particle rotation and brightness. Low decay in the feedback loop preserves a subtle trail behind the dispersing swarm.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/schooling-fish.json",
+      "default_image": "/presets/particles/schooling-fish-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_schooling-fish.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_schooling-fish.jpg",
+      "video_size_bytes": 7500006,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:13:48.481Z"
     },
     {
       "id": "milkdrop:rovastar-unchained-ambrosia-mystic-dark-heart-mix",
@@ -166,6 +332,43 @@
       "captured_at": "2026-05-31T23:04:49.149Z"
     },
     {
+      "id": "milkdrop:geiss-thumb-drum",
+      "short_id": "YUqOPN",
+      "slug": "geiss-thumb-drum",
+      "name": "Geiss - Thumb Drum",
+      "author": "Geiss",
+      "blurb": "Tight kick-driven thumps that radiate outward like sonar pings.",
+      "vibe": [
+        "organic",
+        "fluid",
+        "hypnotic",
+        "monochrome"
+      ],
+      "motion": 0.35,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.4,
+        "treble": 0.5
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field"
+      ],
+      "technical_notes": "A reaction-diffusion system generates organic Turing patterns resembling fingerprints or fluid currents. The per-pixel warp shader drives the swirling vortex motion, while feedback through sampler_main is sharpened in the composite pass to maintain high-contrast boundaries. High-frequency details shimmer in response to treble in the audio.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Geiss - Thumb Drum",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-thumb-drum.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-thumb-drum.jpg",
+      "video_size_bytes": 7413517,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:24:34.741Z"
+    },
+    {
       "id": "milkdrop:mig-061",
       "short_id": "96nqCN",
       "slug": "mig-061",
@@ -202,6 +405,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.398Z",
       "captured_at": "2026-05-31T23:40:50.325Z"
+    },
+    {
+      "id": "particles:cherry-blossom-storm",
+      "short_id": "5zUZFz",
+      "slug": "cherry-blossom-storm",
+      "name": "Cherry Blossom Storm",
+      "author": "prism",
+      "blurb": "A swirling current of cherry blossom petals carried on a slow spring wind, sky gradient overhead, camera drifting through the storm at eye level.",
+      "vibe": [
+        "organic",
+        "floral",
+        "dreamy",
+        "fluid"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "texture_sample",
+        "particle_system",
+        "frame_feedback",
+        "audio_gating"
+      ],
+      "technical_notes": "A massive array of custom shapes maps cherry blossom textures via texture_sample, instanced as a dense particle system. The 3D camera perspective and wave-like displacement are modulated by the audio's bass and mid frequencies, creating an undulating floral landscape. A subtle reflection in the lower screen space is generated via composite shader feedback, blending previous frames with a low decay rate.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/cherry-blossom-storm.json",
+      "default_image": "/presets/particles/cherry-blossom-storm-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_cherry-blossom-storm.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_cherry-blossom-storm.jpg",
+      "video_size_bytes": 6933969,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:21:17.816Z"
     },
     {
       "id": "shadertoy:refik-fluid-flora",
@@ -360,6 +603,44 @@
       "captured_at": "2026-05-31T22:57:05.141Z"
     },
     {
+      "id": "particles:origami-flock",
+      "short_id": "Bv8pPx",
+      "slug": "origami-flock",
+      "name": "Origami Flock",
+      "author": "prism",
+      "blurb": "Paper birds and butterflies drifting through a warm museum atrium, each one nodding to the music with its own tempo.",
+      "vibe": [
+        "atmospheric",
+        "surreal",
+        "delicate",
+        "dreamy"
+      ],
+      "motion": 0.4,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.4,
+        "treble": 0.6
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave"
+      ],
+      "technical_notes": "A vast field of instanced custom shapes resembling origami cranes is distributed across a 3D terrain. High-frequency treble modulations drive the fluttering rotation of individual shapes, while the camera sweeps backward to reveal the scale of the particle system. The rendering relies on clean geometry passes without heavy frame feedback, maintaining sharp edges on a dark background.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/origami-flock.json",
+      "default_image": "/presets/particles/origami-flock-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_origami-flock.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_origami-flock.jpg",
+      "video_size_bytes": 6529086,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:18:27.666Z"
+    },
+    {
       "id": "milkdrop:reenen-phoenix",
       "short_id": "UMZdqF",
       "slug": "reenen-phoenix",
@@ -436,6 +717,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.233Z",
       "captured_at": "2026-05-31T21:39:36.308Z"
+    },
+    {
+      "id": "particles:murmuration",
+      "short_id": "1Ydj3x",
+      "slug": "murmuration",
+      "name": "Murmuration",
+      "author": "prism",
+      "blurb": "Thousands of starlings emergently flocking against a dusk sky, their swarm shape morphing on the music's pulse.",
+      "vibe": [
+        "fluid",
+        "organic",
+        "metallic",
+        "cellular"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "decay_trail",
+        "particle_system"
+      ],
+      "technical_notes": "A fluid, metallic cellular structure resembling liquid copper is driven by a per-pixel warp shader simulating fluid advection. Frame feedback through sampler_main with high decay maintains sharp, non-bleeding boundaries on the droplets. The structure reacts dynamically to the music, breaking into crystalline particles as the camera zooms in.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/murmuration.json",
+      "default_image": "/presets/particles/murmuration-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_murmuration.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_murmuration.jpg",
+      "video_size_bytes": 6196118,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:14:52.906Z"
     },
     {
       "id": "milkdrop:fishbrain-the-adventures-of-prismo-jenkins",
@@ -711,6 +1032,45 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.232Z",
       "captured_at": "2026-05-31T21:39:03.643Z"
+    },
+    {
+      "id": "milkdrop:flexi-sky-different-today",
+      "short_id": "P7rm5h",
+      "slug": "flexi-sky-different-today",
+      "name": "Flexi - mom, why the sky looks different today",
+      "author": "Flexi",
+      "blurb": "An alien sky shifts overhead — clouds remembering they could move.",
+      "vibe": [
+        "hypnotic",
+        "organic",
+        "fluid",
+        "dark"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.4,
+        "treble": 0.3
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "domain_repetition",
+        "decay_trail"
+      ],
+      "technical_notes": "A pair of custom shapes are rendered symmetrically along a diagonal axis, scaling dynamically with the music's bass. High zoom and a moderate decay rate in the per-pixel warp shader create a cascading, feather-like feedback trail through sampler_main. The muted, near-monochromatic palette emphasizes the fluid, organic geometry of the repeating domain.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "flexi - mom, why the sky looks different today",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-sky-different-today.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-sky-different-today.jpg",
+      "video_size_bytes": 3546400,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:17:58.866Z"
     },
     {
       "id": "milkdrop:shifter-spincycle-c",
@@ -1971,6 +2331,127 @@
       "captured_at": "2026-05-30T21:32:59.773Z"
     },
     {
+      "id": "milkdrop:geiss-reaction-diffusion-2",
+      "short_id": "7ICBTf",
+      "slug": "geiss-reaction-diffusion-2",
+      "name": "Geiss - Reaction Diffusion 2",
+      "author": "Geiss",
+      "blurb": "Slow chromatic fluid that breathes with bass — like ink dispersing.",
+      "vibe": [
+        "cellular",
+        "organic",
+        "kinetic",
+        "biological"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "fbm_noise",
+        "bloom_glow"
+      ],
+      "technical_notes": "A reaction-diffusion system driven by a per-pixel warp shader that alternates between a high-frequency procedural noise field and structured cellular patterns. High-contrast thresholding in the composite shader creates glowing, organic liquid cells from the feedback loop. The transitions are sharply gated by the audio's bass and treble dynamics.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Geiss - Reaction Diffusion 2",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-reaction-diffusion-2.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-reaction-diffusion-2.jpg",
+      "video_size_bytes": 11013326,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:22:57.596Z"
+    },
+    {
+      "id": "milkdrop:adamfx-martin-infusion",
+      "short_id": "75TH6R",
+      "slug": "adamfx-martin-infusion",
+      "name": "AdamFx + Martin Infusion - Tactile Disfunction",
+      "author": "AdamFX/Martin/Flexi",
+      "blurb": "Abstract structures morph against a shifting palette.",
+      "vibe": [
+        "electric",
+        "kinetic",
+        "dark",
+        "sparse"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.4,
+        "treble": 0.8
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst",
+        "custom_wave",
+        "domain_repetition",
+        "frame_feedback"
+      ],
+      "technical_notes": "The preset remains mostly dark and sparse until heavy bass peaks trigger explosive, beat-gated bursts of a glossy, reflective grid of 3D tiles. During these high-energy moments, custom waves rendering electrical lightning arcs react dynamically to treble frequencies. The feedback loop in sampler_main maintains a receding tunnel perspective that collapses back into darkness as the audio decays.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "An AdamFX n Martin Infusion 2 flexi - Why The Sky Looks Diffrent Today - AdamFx n Martin Infusion - Tack Tile Disfunction B",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_adamfx-martin-infusion.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_adamfx-martin-infusion.jpg",
+      "video_size_bytes": 7581785,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T04:58:56.506Z"
+    },
+    {
+      "id": "milkdrop:eos-zylot-skylight",
+      "short_id": "gomlny",
+      "slug": "eos-zylot-skylight",
+      "name": "Eo.S. + Zylot - skylight",
+      "author": "Eo.S. + Zylot",
+      "blurb": "Stained-glass skylight cascading downward — slow, devotional, warm.",
+      "vibe": [
+        "geometric",
+        "hypnotic",
+        "psychedelic",
+        "frenetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.8
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "custom_wave",
+        "domain_repetition",
+        "hue_cycle",
+        "beat_burst"
+      ],
+      "technical_notes": "A highly geometric spiral structure is generated using custom waves and shapes, driven by rapid zoom and rotation equations. High-frequency feedback through sampler_main with minimal decay creates dense, nested polygonal patterns that shift dynamically. Sudden beat-gated bursts trigger a dramatic transition from a bright yellow spiral to a green/teal kaleidoscopic lattice.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Eo.S. + Zylot - skylight (Stained Glass Majesty mix)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eos-zylot-skylight.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eos-zylot-skylight.jpg",
+      "video_size_bytes": 7026975,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:06:30.917Z"
+    },
+    {
       "id": "milkdrop:orb-saturns-rings",
       "short_id": "Zuzg4t",
       "slug": "orb-saturns-rings",
@@ -2517,6 +2998,46 @@
       "captured_at": "2026-05-31T22:48:48.910Z"
     },
     {
+      "id": "milkdrop:eos-phat-cubetrace",
+      "short_id": "D4lnVp",
+      "slug": "eos-phat-cubetrace",
+      "name": "Eo.S. + Phat - cubetrace",
+      "author": "Eo.S./Phat",
+      "blurb": "Cubes trace paths through 3D space, driven hard by bass kicks.",
+      "vibe": [
+        "geometric",
+        "cyberpunk",
+        "cosmic",
+        "electric"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "beat_burst",
+        "bloom_glow",
+        "frame_feedback",
+        "audio_gating"
+      ],
+      "technical_notes": "Custom waves draw the labyrinthine blue grid and circular lens flares, while Milkdrop's native motion vectors are configured as radiating white streaks. Beat detection on the music's bass triggers sudden camera rotation and intense additive bloom bursts via sampler_blur1 in the composite shader. A low decay rate in the frame feedback loop maintains faint trails of the geometric structures as they rotate.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Eo.S. + Phat - cubetrace - v2",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eos-phat-cubetrace.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eos-phat-cubetrace.jpg",
+      "video_size_bytes": 5447943,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:05:51.395Z"
+    },
+    {
       "id": "milkdrop:geiss-color-pox-measles-mix",
       "short_id": "VJQq6c",
       "slug": "geiss-color-pox-measles-mix",
@@ -2901,6 +3422,45 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.409Z",
       "captured_at": "2026-05-31T01:33:37.353Z"
+    },
+    {
+      "id": "particles:falling-snow",
+      "short_id": "rlyB3L",
+      "slug": "falling-snow",
+      "name": "Falling Snow",
+      "author": "prism",
+      "blurb": "Snowflakes drifting slowly past the camera through a quiet winter night, the only motion when the music pulses.",
+      "vibe": [
+        "minimalist",
+        "stark",
+        "wintry",
+        "monochrome"
+      ],
+      "motion": 0.35,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.2,
+        "treble": 0.2
+      },
+      "techniques": [
+        "custom_wave",
+        "particle_system",
+        "texture_sample"
+      ],
+      "technical_notes": "A textured ribbon-like custom wave, rendered with a high-contrast noise pattern, undulates across a dark void. High decay in the feedback loop prevents persistent trails, maintaining a stark monochrome aesthetic. In the latter half, a particle system of instanced snowflake textures drifts across the viewport, likely triggered by a temporal threshold or audio event.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/falling-snow.json",
+      "default_image": "/presets/particles/falling-snow-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_falling-snow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_falling-snow.jpg",
+      "video_size_bytes": 4660712,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:16:55.098Z"
     },
     {
       "id": "milkdrop:geiss-cosmic-dust-2-trails-7",
@@ -3566,6 +4126,45 @@
       "captured_at": "2026-06-01T00:20:52.340Z"
     },
     {
+      "id": "milkdrop:geiss-cauldron",
+      "short_id": "e9yMqX",
+      "slug": "geiss-cauldron",
+      "name": "Geiss - Cauldron (painterly)",
+      "author": "Geiss",
+      "blurb": "Boiling brushstrokes in warm oils — paint stirred by audio energy.",
+      "vibe": [
+        "fluid",
+        "ribbon",
+        "minimalist",
+        "dark"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.3,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "decay_trail",
+        "frame_feedback",
+        "hue_cycle"
+      ],
+      "technical_notes": "A custom wave draws a highly reactive, jittering line driven by treble frequencies, while a low decay rate in sampler_main feedback creates a sweeping, ribbon-like extrusion across the dark canvas. The spatial displacement in the feedback loop translates the previous frame, forming a pseudo-3D trail that tracks the wave's motion. Color cycles dynamically, mapping a shifting palette across the extruded ribbon.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Geiss - Cauldron - painterly 2 (saturation remix)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_geiss-cauldron.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_geiss-cauldron.jpg",
+      "video_size_bytes": 3566177,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:19:09.857Z"
+    },
+    {
       "id": "milkdrop:geiss-constant-velocity-angular-blur",
       "short_id": "o9k7m7",
       "slug": "geiss-constant-velocity-angular-blur",
@@ -4113,6 +4712,44 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.487Z",
       "captured_at": "2026-06-01T00:37:23.683Z"
+    },
+    {
+      "id": "particles:galactic-dust",
+      "short_id": "35Rx8l",
+      "slug": "galactic-dust",
+      "name": "Galactic Dust",
+      "author": "prism",
+      "blurb": "Cosmic dust and distant stars drifting in slow orbit, camera moving through an interstellar field at a dreamlike pace.",
+      "vibe": [
+        "minimalist",
+        "sparse",
+        "dark",
+        "mysterious"
+      ],
+      "motion": 0.12,
+      "audio_affinity": {
+        "bass": 0.05,
+        "mid": 0.15,
+        "treble": 0.4
+      },
+      "techniques": [
+        "custom_wave",
+        "fbm_noise"
+      ],
+      "technical_notes": "A delicate custom wave ribbon textured with fine procedural noise slowly propagates across a black void. The internal noise shimmers in response to the treble in the audio, while the overall path undulates gently. High decay rates keep the background completely dark, leaving only the glittering thread visible.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/galactic-dust.json",
+      "default_image": "/presets/particles/galactic-dust-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_galactic-dust.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_galactic-dust.jpg",
+      "video_size_bytes": 3069481,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:17:42.406Z"
     },
     {
       "id": "milkdrop:mig-085-2",
@@ -5366,6 +6003,43 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.406Z",
       "captured_at": "2026-05-31T23:50:15.167Z"
+    },
+    {
+      "id": "milkdrop:hd-cosmofx",
+      "short_id": "uwiOaO",
+      "slug": "hd-cosmofx",
+      "name": "HD CosmoFX",
+      "author": "FED/AdamFX/Martin",
+      "blurb": "Deep space cosmos pulses with psychedelic galactic light.",
+      "vibe": [
+        "minimalist",
+        "sparse",
+        "glitch",
+        "stark"
+      ],
+      "motion": 0.12,
+      "audio_affinity": {
+        "bass": 0.1,
+        "mid": 0.1,
+        "treble": 0.3
+      },
+      "techniques": [
+        "audio_gating",
+        "beat_burst"
+      ],
+      "technical_notes": "The rendering canvas is dominated by a flat, static gray background, indicating a high decay rate and minimal frame feedback. Brief, localized pixel-stretching glitches and custom shape bursts are gated to high-frequency transients in the audio loop. These sudden vertical extrusion artifacts suggest a custom composite shader triggered by beat detection.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Milk Artist At our Best - FED - SlowFast Ft AdamFX n Martin - HD CosmoFX",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_hd-cosmofx.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_hd-cosmofx.jpg",
+      "video_size_bytes": 908498,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:25:17.448Z"
     },
     {
       "id": "milkdrop:geiss-cosmic-dust-2-quasistatic-noise-desat-trails-2",
@@ -10491,6 +11165,88 @@
       "captured_at": "2026-05-31T23:52:56.338Z"
     },
     {
+      "id": "milkdrop:aderrasi-storm-of-the-eye",
+      "short_id": "BbRu9e",
+      "slug": "aderrasi-storm-of-the-eye",
+      "name": "Aderrasi - Storm of the Eye",
+      "author": "Aderrasi",
+      "blurb": "Concentric rings ripple through a thunder-charged sky.",
+      "vibe": [
+        "psychedelic",
+        "hypnotic",
+        "kinetic",
+        "optical"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "chromatic_split",
+        "audio_gating"
+      ],
+      "technical_notes": "A per-pixel warp shader applies a tight rotational spiral and radial zoom, twisting high-contrast black and white stripes into a dense moiré vortex. Feedback through sampler_main with minimal decay preserves the sharp geometric lines, while the music's bass transients trigger sudden zoom pulses and background color swaps. Rapid hue cycling and chromatic split aberration fringe the swirling boundaries with vibrant, shifting hues.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Aderrasi - Storm of the Eye (Thunder) - mash0000 - quasi pseudo meta concentrics",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_aderrasi-storm-of-the-eye.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_aderrasi-storm-of-the-eye.jpg",
+      "video_size_bytes": 7745019,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:02:27.191Z"
+    },
+    {
+      "id": "milkdrop:flexi-amandio-organic",
+      "short_id": "50UQd8",
+      "slug": "flexi-amandio-organic",
+      "name": "Flexi + amandio - organic",
+      "author": "Flexi + amandio c",
+      "blurb": "Writhing organic forms swell and breathe with the music.",
+      "vibe": [
+        "organic",
+        "cellular",
+        "psychedelic",
+        "fluid",
+        "microscopic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "audio_gating",
+        "domain_repetition",
+        "decay_trail",
+        "bloom_glow"
+      ],
+      "technical_notes": "A complex reaction-diffusion system simulates organic cellular growth, where per-pixel warp equations drive a fluid advection field. A tiled hexagonal grid is modulated by the audio, with bass transients triggering vertical displacement and treble spikes accelerating cellular division and decay. Feedback loops through sampler_main and sampler_blur2 preserve the painterly, petri-dish textures.",
+      "atelier": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "flexi + amandio c - organic [random mashup]",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-amandio-organic.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-amandio-organic.jpg",
+      "video_size_bytes": 7660715,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:11:22.637Z"
+    },
+    {
       "id": "milkdrop:geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix",
       "short_id": "buwqyb",
       "slug": "geiss-rovastar-the-chaos-of-colours-sprouting-dimentia-mix",
@@ -10684,6 +11440,124 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.324Z",
       "captured_at": "2026-05-31T22:51:47.116Z"
+    },
+    {
+      "id": "milkdrop:flexi-bouncing-balls",
+      "short_id": "lqeU1g",
+      "slug": "flexi-bouncing-balls",
+      "name": "Flexi - bouncing balls (neon)",
+      "author": "Flexi",
+      "blurb": "Neon orbs ricochet through space, syncing their tempo to the bass.",
+      "vibe": [
+        "fluid",
+        "psychedelic",
+        "organic",
+        "cellular"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "decay_trail",
+        "bloom_glow"
+      ],
+      "technical_notes": "A complex per-pixel warp shader generates a fluid, swirling advection field that mimics organic cellular division. High-frequency neon boundaries are composited via sampler_main with a low decay rate, preserving the painterly, liquid-like trails. The color palette undergoes a continuous hue cycle, shifting from vivid greens and blues to deep magentas and fiery oranges in response to the audio's frequency bands.",
+      "atelier": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "flexi - bouncing balls [double mindblob neon mix]",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-bouncing-balls.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-bouncing-balls.jpg",
+      "video_size_bytes": 6675501,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:13:17.424Z"
+    },
+    {
+      "id": "milkdrop:aderrasi-songflower-moss",
+      "short_id": "kyB3gS",
+      "slug": "aderrasi-songflower-moss",
+      "name": "Aderrasi - Songflower (Moss Posy)",
+      "author": "Aderrasi",
+      "blurb": "Petals and moss bloom outward — verdant, breath-paced, alive.",
+      "vibe": [
+        "psychedelic",
+        "geometric",
+        "woven",
+        "trippy"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "domain_repetition"
+      ],
+      "technical_notes": "A complex woven lattice is generated using domain repetition, which is then distorted by a per-pixel warp shader driven by the audio's bass frequencies. Frame feedback through sampler_main creates nested, recursive layers of the grid within its own negative spaces. The color palette undergoes a continuous hue cycle, shifting between vibrant magentas, teals, and yellows.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Aderrasi - Songflower (Moss Posy)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_aderrasi-songflower-moss.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_aderrasi-songflower-moss.jpg",
+      "video_size_bytes": 6516796,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:01:38.612Z"
+    },
+    {
+      "id": "milkdrop:flexi-alien-fish-pond",
+      "short_id": "yKtPkC",
+      "slug": "flexi-alien-fish-pond",
+      "name": "Flexi - alien fish pond",
+      "author": "Flexi",
+      "blurb": "Translucent creatures drift through a glowing aquarium current.",
+      "vibe": [
+        "organic",
+        "biological",
+        "fluid",
+        "psychedelic"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "fbm_noise"
+      ],
+      "technical_notes": "An organic reaction-diffusion simulation generates self-replicating, cell-like structures with dark, slit-like nuclei. A per-pixel warp shader combined with feedback through sampler_main drives the fluid, biological drift, while the entire system undergoes a slow hue cycle. The expansion and pulsation of the cell membranes are modulated dynamically by the bass and mid-range frequencies of the audio.",
+      "atelier": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Flexi - alien fish pond",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-alien-fish-pond.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-alien-fish-pond.jpg",
+      "video_size_bytes": 6465615,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:08:52.423Z"
     },
     {
       "id": "milkdrop:rovastar-idiot24-7-balk-acid",

@@ -15,31 +15,38 @@
   },
   "annotation": {
     "vibe": [
-      "spiral",
-      "hypnotic",
-      "rotating"
+      "minimalist",
+      "sparse",
+      "dark",
+      "void"
     ],
-    "motion": 0.65,
+    "motion": 0.3,
     "palette_anchor": [
-      "#3aaaff",
-      "#ffaa3a",
-      "#0a0a0a"
+      "#000000",
+      "#5f9ea0",
+      "#ffb6c1"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.5,
-      "treble": 0.3
+      "bass": 0.3,
+      "mid": 0.6,
+      "treble": 0.8
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "warp_field",
+      "frame_feedback"
+    ],
+    "technical_notes": "Custom waves trace delicate, jittery orbits across a dark void, with their high-frequency displacement modulated by the treble and mid bands of the audio. A subtle per-pixel warp shader combined with frame feedback through sampler_main creates a spiraling, decaying trail of past waveforms. The high decay rate ensures a sparse, clean aesthetic with minimal persistent clutter.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:26:30.800Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_krash-illusion-spiral.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-illusion-spiral.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-illusion-spiral.jpg",
+    "video_size_bytes": 3845286
   },
   "contribution": {
     "added_by": "scottspace",

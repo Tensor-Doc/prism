@@ -44,8 +44,8 @@
   },
   "assets": {
     "textures_needed": [],
-    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.webm",
-    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.jpg",
+    "video": "/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.webm",
+    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-3.jpg",
     "video_size_bytes": 548399
   },
   "contribution": {
@@ -55,6 +55,6 @@
   },
   "compatibility": {
     "renders": false,
-    "note": "capture was thin (462961 bytes); below the 500KB threshold — likely butterchurn compatibility gap"
+    "note": "capture was empty (369790 bytes); preset doesn't render meaningfully against the current test signal"
   }
 }

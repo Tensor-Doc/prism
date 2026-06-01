@@ -16,35 +16,36 @@
     "vibe": [
       "minimalist",
       "void",
+      "sparse",
       "stark",
-      "geometric"
+      "dark"
     ],
-    "motion": 0.15,
+    "motion": 0.12,
     "palette_anchor": [
       "#000000",
       "#ffffff"
     ],
     "audio_affinity": {
-      "bass": 0.4,
-      "mid": 0.1,
+      "bass": 0.6,
+      "mid": 0.3,
       "treble": 0.2
     },
     "techniques": [
       "custom_wave",
       "audio_gating"
     ],
-    "technical_notes": "A stark, minimalist preset rendering a single white circular custom shape against a pure black background. The shape's scale and position modulate in response to the synthetic test signal's bass kicks, with a high decay rate preventing any persistent trails. It represents an extremely stripped-back, geometric aesthetic with near-zero feedback.",
+    "technical_notes": "A single custom shape circle is rendered against a solid black background, with its scale and screen coordinates driven directly by the audio loop. The decay is set to maximum, preventing any frame feedback or persistent trails in sampler_main. This results in a stark, highly minimalist visualizer that flashes and jumps in sync with the beat.",
     "brand_safe": true,
     "atelier": false,
     "model": "gemini-flash-latest",
     "version": 2,
-    "captured_at": "2026-05-31T01:52:07.141Z"
+    "captured_at": "2026-06-01T05:07:28.232Z"
   },
   "assets": {
     "textures_needed": [],
-    "video": "/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.webm",
-    "thumb": "/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.jpg",
-    "video_size_bytes": 368596
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_fishbrain-geiss-witchcraft-grow-mix-2.jpg",
+    "video_size_bytes": 523409
   },
   "contribution": {
     "added_by": "scottspace",

@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "rhythmic",
-      "geometric",
-      "neon"
+      "fluid",
+      "psychedelic",
+      "organic",
+      "cellular"
     ],
-    "motion": 0.8,
+    "motion": 0.75,
     "palette_anchor": [
-      "#3affae",
-      "#ff3a3a",
-      "#0a0a0a"
+      "#00ff66",
+      "#9900ff",
+      "#ff3300",
+      "#0000ff"
     ],
     "audio_affinity": {
-      "bass": 0.85,
-      "mid": 0.6,
-      "treble": 0.4
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "decay_trail",
+      "bloom_glow"
+    ],
+    "technical_notes": "A complex per-pixel warp shader generates a fluid, swirling advection field that mimics organic cellular division. High-frequency neon boundaries are composited via sampler_main with a low decay rate, preserving the painterly, liquid-like trails. The color palette undergoes a continuous hue cycle, shifting from vivid greens and blues to deep magentas and fiery oranges in response to the audio's frequency bands.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:13:17.424Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_flexi-bouncing-balls.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-bouncing-balls.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-bouncing-balls.jpg",
+    "video_size_bytes": 6675501
   },
   "contribution": {
     "added_by": "scottspace",

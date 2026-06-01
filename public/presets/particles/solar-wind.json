@@ -1,0 +1,24 @@
+{
+  "name": "Solar Wind",
+  "atlas_url": "/presets/particles/solar-wind-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.05,
+  "size_variance": 0.7,
+  "velocity_stretch": 4.5,
+  "curl_scale": 1.4,
+  "velocity_damp": 0.98,
+  "audio_gain": 2.2,
+  "volume_size": [
+    4.5,
+    0.6,
+    4.5
+  ],
+  "wave_amplitude": 0.3,
+  "flow_drift_x": 1.5,
+  "corona_boost": 6.5,
+  "dance_amount": 0.2,
+  "camera_radius": 5.5,
+  "camera_height": 0.5,
+  "camera_orbit_speed": 0.03,
+  "fov_degrees": 55
+}

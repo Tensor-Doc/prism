@@ -1,0 +1,24 @@
+{
+  "name": "Coral Garden",
+  "atlas_url": "/presets/particles/coral-garden-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.06,
+  "size_variance": 0.8,
+  "velocity_stretch": 0.6,
+  "curl_scale": 0.5,
+  "velocity_damp": 0.995,
+  "audio_gain": 1,
+  "volume_size": [
+    3.5,
+    0.5,
+    3.5
+  ],
+  "wave_amplitude": 0.8,
+  "flow_drift_x": 0.15,
+  "corona_boost": 1.5,
+  "dance_amount": 0.7,
+  "camera_radius": 4,
+  "camera_height": 0.3,
+  "camera_orbit_speed": 0.02,
+  "fov_degrees": 55
+}

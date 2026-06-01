@@ -15,31 +15,42 @@
   },
   "annotation": {
     "vibe": [
-      "sky",
-      "luminous",
-      "cathedral"
+      "geometric",
+      "hypnotic",
+      "psychedelic",
+      "frenetic"
     ],
-    "motion": 0.4,
+    "motion": 0.8,
     "palette_anchor": [
-      "#ffba3a",
-      "#3a8acf",
-      "#1a1a2a"
+      "#ffffff",
+      "#fce33c",
+      "#34d399",
+      "#1e1b4b"
     ],
     "audio_affinity": {
-      "bass": 0.3,
+      "bass": 0.85,
       "mid": 0.5,
-      "treble": 0.5
+      "treble": 0.8
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "domain_repetition",
+      "hue_cycle",
+      "beat_burst"
+    ],
+    "technical_notes": "A highly geometric spiral structure is generated using custom waves and shapes, driven by rapid zoom and rotation equations. High-frequency feedback through sampler_main with minimal decay creates dense, nested polygonal patterns that shift dynamically. Sudden beat-gated bursts trigger a dramatic transition from a bright yellow spiral to a green/teal kaleidoscopic lattice.",
     "brand_safe": true,
-    "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:06:30.917Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_eos-zylot-skylight.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_eos-zylot-skylight.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_eos-zylot-skylight.jpg",
+    "video_size_bytes": 7026975
   },
   "contribution": {
     "added_by": "scottspace",

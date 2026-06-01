@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "aquatic",
-      "dreamy",
-      "biological"
+      "organic",
+      "biological",
+      "fluid",
+      "psychedelic"
     ],
-    "motion": 0.55,
+    "motion": 0.45,
     "palette_anchor": [
-      "#3acfff",
-      "#ffba3a",
-      "#0a2a3a"
+      "#00ff66",
+      "#8a00e6",
+      "#ff0055",
+      "#ccff00"
     ],
     "audio_affinity": {
-      "bass": 0.5,
-      "mid": 0.6,
+      "bass": 0.8,
+      "mid": 0.5,
       "treble": 0.4
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "fbm_noise"
+    ],
+    "technical_notes": "An organic reaction-diffusion simulation generates self-replicating, cell-like structures with dark, slit-like nuclei. A per-pixel warp shader combined with feedback through sampler_main drives the fluid, biological drift, while the entire system undergoes a slow hue cycle. The expansion and pulsation of the cell membranes are modulated dynamically by the bass and mid-range frequencies of the audio.",
+    "brand_safe": false,
     "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:08:52.423Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_flexi-alien-fish-pond.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_flexi-alien-fish-pond.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_flexi-alien-fish-pond.jpg",
+    "video_size_bytes": 6465615
   },
   "contribution": {
     "added_by": "scottspace",
