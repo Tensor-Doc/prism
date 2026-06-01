@@ -23,27 +23,40 @@ distinguishing feature.
 - **Atlas tile sampling** with soft elliptical mask + life fade-in
   + depth-based fog
 
-## Currently shipped — Tier 1 batch (10 concepts)
+## Currently shipped — 19 concepts as of `0.1.4`
 
-All ten Tier 1 concepts are live in the gallery as of `0.1.4`.
-
-| Rank | Concept | Short ID | Capture size |
+| Concept | Short ID | Trails? | Capture |
 |---|---|---|---|
-| #1 | Solar Wind | `EqdmpR` | 8.7 MB |
-| #2 | Coral Garden | `cJF2H7` | 8.1 MB |
-| #3 | Refik Rolling Ocean of Flora | `U0D2Ci` | 7.9 MB |
-| #4 | Embers Rising | `P5OFbe` | 7.5 MB |
-| #6 | Schooling Fish | `CziRzn` | 7.3 MB |
-| #11 | Cherry Blossom Storm | `5zUZFz` | 6.8 MB |
-| #16 | Origami Flock | `Bv8pPx` | 6.4 MB |
-| #19 | Murmuration | `1Ydj3x` | 6.0 MB |
-| #89 | Falling Snow | `rlyB3L` | 4.6 MB |
-| #124 | Galactic Dust | `35Rx8l` | 3.0 MB |
+| Solar Wind | `EqdmpR` | no | 8.7 MB |
+| Coral Garden | `cJF2H7` | no | 8.1 MB |
+| Lava Flow | `jvkmIA` | no | 7.9 MB |
+| Refik Rolling Ocean of Flora | `U0D2Ci` | no | 7.9 MB |
+| Embers Rising | `P5OFbe` | no | 7.5 MB |
+| Schooling Fish | `CziRzn` | no | 7.3 MB |
+| Meteor Shower | `02YaLd` | 0.97 | 7.3 MB |
+| Comet Field | `9pcVab` | 0.96 | 7.2 MB |
+| Cherry Blossom Storm | `5zUZFz` | no | 6.8 MB |
+| Origami Flock | `Bv8pPx` | no | 6.4 MB |
+| Magnetosphere Revisited | `re5koJ` | 0.94 | 6.2 MB |
+| Fairy Lights | `HDr8CA` | 0.95 | 6.2 MB |
+| Murmuration | `1Ydj3x` | no | 6.1 MB |
+| Soap Bubbles | `aC6lQp` | no | 6.0 MB |
+| Fireflies | `NOszGU` | 0.91 | 5.1 MB |
+| Aurora Curtains | `c93P1x` | 0.93 | 4.4 MB |
+| Confetti Burst | `W9PyL6` | no | 7.1 MB |
+| Falling Snow | `rlyB3L` | no | 4.6 MB |
+| Galactic Dust | `35Rx8l` | no | 3.0 MB |
 
-Eight of ten are in the tier-0 feature pool (atelier + motion > 0.2).
-Falling Snow and Galactic Dust sit deeper in the gallery because
-they are intentionally low-motion meditative pieces and Gemini
-classified them outside atelier accordingly.
+Sixteen of nineteen sit in the tier-0 atelier feature pool. The
+three lower-ranked entries (Confetti Burst, Falling Snow, Galactic
+Dust) are either celebratory-saturated (not atelier per Gemini)
+or intentionally meditative below the motion threshold.
+
+The `trail_decay` feature ships with `0.1.4` and powers six of the
+concepts above — the screen-space accumulator-based trails effect
+that defined Robert Hodgin's iTunes Magnetosphere visualizer.
+Decay values of 0.91–0.97 produce trails of progressively longer
+persistence, from soft glow to clean meteor streaks.
 
 The full atlases and per-concept tunables live under
 `public/presets/particles/`. The pipeline that produced them is

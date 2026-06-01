@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "plasma",
-      "magnetic",
-      "swirling"
+      "psychedelic",
+      "metallic",
+      "geological",
+      "frenetic"
     ],
     "motion": 0.75,
     "palette_anchor": [
-      "#ff3a3a",
-      "#3aaaff",
-      "#080808"
+      "#e05a10",
+      "#8a1ae6",
+      "#10c030",
+      "#1a7be6"
     ],
     "audio_affinity": {
-      "bass": 0.7,
-      "mid": 0.6,
-      "treble": 0.5
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "custom_wave",
+      "hue_cycle"
+    ],
+    "technical_notes": "A highly distorted feedback loop utilizes a per-pixel warp shader to displace the buffer, creating sharp, metallic, cliff-like ridges that shear violently to the bass. Fine-lined custom waves (spirals and geometric vectors) are overlaid, twitching rapidly to the treble. The color palette cycles through highly saturated hues, blending deep oranges and purples via sampler_main feedback.",
+    "brand_safe": false,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:49:32.999Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_tokamak-witchery.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_tokamak-witchery.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_tokamak-witchery.jpg",
+    "video_size_bytes": 7579200
   },
   "contribution": {
     "added_by": "scottspace",

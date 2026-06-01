@@ -105,23 +105,38 @@ snow, paper birds, plasma streaks. The
 [`concepts/particles-showcase.md`](concepts/particles-showcase.md)
 file lists the planned concept library.
 
-The first showcase batch shipped with `0.1.4`. Ten Refik-tier
-particle concepts are live in the gallery.
+The first showcase shipped with `0.1.4`. Nineteen Refik-tier
+particle concepts are live in the gallery. Sixteen sit in the
+atelier feature pool. Each loads via `prism.scott.ai/?g=<token>`
+or the embed.
 
-| Rank | Concept | Inspired by | Share token |
-|---|---|---|---|
-| #1 | Solar Wind | NASA Solar Dynamics Observatory | `EqdmpR` |
-| #2 | Coral Garden | BBC Blue Planet, Refik "Coral Dreams" | `cJF2H7` |
-| #3 | Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | `U0D2Ci` |
-| #4 | Embers Rising | campfire macros, dragon-fire cinema | `P5OFbe` |
-| #6 | Schooling Fish | BBC Blue Planet underwater shots | `CziRzn` |
-| #11 | Cherry Blossom Storm | Japanese hanami, anime petal sequences | `5zUZFz` |
-| #16 | Origami Flock | paper-crane installations | `Bv8pPx` |
-| #19 | Murmuration | starling flocks at dusk | `1Ydj3x` |
-| #89 | Falling Snow | snow-globe close-ups | `rlyB3L` |
-| #124 | Galactic Dust | Hubble dust-lane imagery | `35Rx8l` |
+| Concept | Inspired by | Share token |
+|---|---|---|
+| Solar Wind | NASA Solar Dynamics Observatory | `EqdmpR` |
+| Coral Garden | BBC Blue Planet, Refik "Coral Dreams" | `cJF2H7` |
+| Lava Flow | volcanic flow macros | `jvkmIA` |
+| Refik Rolling Ocean of Flora | Refik Anadol "Machine Hallucinations" | `U0D2Ci` |
+| Embers Rising | campfire macros, dragon-fire cinema | `P5OFbe` |
+| Schooling Fish | BBC Blue Planet underwater shots | `CziRzn` |
+| Meteor Shower | Perseid astrophotography | `02YaLd` |
+| Comet Field | comet macro telescopes | `9pcVab` |
+| Cherry Blossom Storm | Japanese hanami, anime petals | `5zUZFz` |
+| Origami Flock | paper-crane installations | `Bv8pPx` |
+| Magnetosphere Revisited | Robert Hodgin iTunes 2007 | `re5koJ` |
+| Fairy Lights | long-exposure bokeh | `HDr8CA` |
+| Murmuration | starling flocks at dusk | `1Ydj3x` |
+| Soap Bubbles | macro of real soap film | `aC6lQp` |
+| Fireflies | summer-night macros | `NOszGU` |
+| Aurora Curtains | polar light curtains | `c93P1x` |
+| Confetti Burst | celebration, drop response | `W9PyL6` |
+| Falling Snow | snow-globe close-ups | `rlyB3L` |
+| Galactic Dust | Hubble dust-lane imagery | `35Rx8l` |
 
-Each loads via `prism.scott.ai/?g=<token>` or the embed.
+Six of the trail-based concepts (Magnetosphere Revisited, Fairy
+Lights, Aurora Curtains, Comet Field, Meteor Shower, Fireflies)
+use the `trail_decay` accumulator added in `0.1.4` to leave
+persistent painted streams across the canvas — the classic Robert
+Hodgin / iTunes Magnetosphere look.
 
 ## 🤖 Use the visualizer from an AI agent
 
