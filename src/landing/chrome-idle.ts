@@ -65,8 +65,17 @@ export class ChromeIdle {
     }
   }
 
-  private wake = (): void => {
+  private wake = (event?: Event): void => {
     if (this.destroyed) return;
+    // Exempt clicks on the audio-pin (the "play with audio" CTA) so
+    // the chrome doesn't immediately re-summon underneath the
+    // user's hand and fade the pill out before the browser audio
+    // permission dialog resolves. Without this exemption the pill
+    // disappears the instant the user presses it, which reads as a
+    // "the button ran away" bug.
+    if (event?.target instanceof HTMLElement && event.target.closest("#audio-pin")) {
+      return;
+    }
     document.body.removeAttribute("data-chrome-idle");
     document.body.style.cursor = "";
     this.scheduleFade();
