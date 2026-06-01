@@ -49,13 +49,18 @@ body[data-chrome-idle] .prompt {
    ───────────────────────────────────────────────────────────── */
 .audio-pin {
   position: fixed;
-  bottom: var(--space-5);
-  right: var(--space-5);
+  /* Aligned with .powered-by on the opposite (right) side. Both pills
+     share the same baseline (bottom: 7px) so when the chrome fades and
+     this CTA appears, it reads as a sibling of the credit rather than
+     floating above it. The audio-pin keeps its cyan border + glow so
+     it still feels like a call-to-action, just on the same row. */
+  bottom: 7px;
+  right: var(--space-3);
   z-index: 100;
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 10px 16px;
+  padding: 6px 14px;
   border: 1px solid var(--cyan-60);
   border-radius: 999px;
   color: var(--cyan);
