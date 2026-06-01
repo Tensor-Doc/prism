@@ -1,0 +1,25 @@
+{
+  "name": "Lava Flow",
+  "atlas_url": "/presets/particles/lava-flow-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.07,
+  "size_variance": 0.9,
+  "velocity_stretch": 0.8,
+  "curl_scale": 0.4,
+  "velocity_damp": 0.995,
+  "audio_gain": 1.6,
+  "volume_size": [
+    4,
+    0.4,
+    4
+  ],
+  "wave_amplitude": 0.35,
+  "flow_drift_x": 0.4,
+  "corona_boost": 5,
+  "dance_amount": 0.1,
+  "camera_radius": 4,
+  "camera_height": 0.4,
+  "camera_orbit_speed": 0.018,
+  "fov_degrees": 55,
+  "trail_decay": 0
+}

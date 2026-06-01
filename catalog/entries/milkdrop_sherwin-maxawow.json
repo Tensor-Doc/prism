@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "maximalist",
-      "explosive",
-      "kaleidoscopic"
+      "painterly",
+      "fluid",
+      "psychedelic",
+      "organic"
     ],
-    "motion": 0.9,
+    "motion": 0.75,
     "palette_anchor": [
-      "#ff3a3a",
-      "#3afff8",
-      "#ffd23a"
+      "#e6007e",
+      "#ffd200",
+      "#5c0067",
+      "#ff4e00"
     ],
     "audio_affinity": {
-      "bass": 0.8,
-      "mid": 0.7,
-      "treble": 0.6
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "techniques": [
+      "frame_feedback",
+      "warp_field",
+      "cosine_palette",
+      "fbm_noise"
+    ],
+    "technical_notes": "A heavy impasto oil-paint aesthetic is achieved through a composite shader that calculates normals from sampler_main and sampler_blur to apply specular lighting. A turbulent per-pixel warp field drives fluid advection, while low decay in the frame feedback loop allows colors to bleed and blend organically. Dramatic shifts in the color fields and structural layout are gated by bass transients in the audio.",
+    "brand_safe": false,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:44:28.871Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_sherwin-maxawow.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_sherwin-maxawow.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_sherwin-maxawow.jpg",
+    "video_size_bytes": 8407407
   },
   "contribution": {
     "added_by": "scottspace",

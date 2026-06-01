@@ -1,0 +1,63 @@
+{
+  "id": "particles:lava-flow",
+  "short_id": "jvkmIA",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/lava-flow.json"
+  },
+  "display": {
+    "name": "Lava Flow",
+    "author": "prism",
+    "blurb": "A river of molten lava crawling slowly across the canvas, hot orange-red glowing through dark crust, bass triggering plumes of fire."
+  },
+  "annotation": {
+    "vibe": [
+      "organic",
+      "fiery",
+      "visceral",
+      "kinetic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#1a0502",
+      "#591105",
+      "#d95204",
+      "#f2a20c"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.5,
+      "treble": 0.4
+    },
+    "techniques": [
+      "particle_system",
+      "beat_burst",
+      "texture_sample",
+      "audio_gating",
+      "frame_feedback"
+    ],
+    "technical_notes": "A dense particle system of custom-textured organic pods flows along a wave-like trajectory. A dramatic beat-gated event at ~0:05 triggers a camera dive and a burst of larger, textured elements toward the screen, driven by bass-attenuated thresholds. The rendering utilizes custom texture sampling combined with a dark background decay, creating a visceral, fiery landscape of organic embers.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:42:35.567Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/lava-flow-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_lava-flow.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_lava-flow.jpg",
+    "video_size_bytes": 8066770
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

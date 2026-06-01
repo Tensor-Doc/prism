@@ -1,0 +1,63 @@
+{
+  "id": "particles:fireflies",
+  "short_id": "NOszGU",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/fireflies.json"
+  },
+  "display": {
+    "name": "Fireflies",
+    "author": "prism",
+    "blurb": "A field of fireflies blinking on a warm summer night, soft trails as they drift between visible flashes."
+  },
+  "annotation": {
+    "vibe": [
+      "bioluminescent",
+      "organic",
+      "fluid",
+      "mysterious"
+    ],
+    "motion": 0.45,
+    "palette_anchor": [
+      "#080c02",
+      "#4a5d18",
+      "#a2b53c",
+      "#d4e860"
+    ],
+    "audio_affinity": {
+      "bass": 0.5,
+      "mid": 0.4,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "decay_trail",
+      "frame_feedback",
+      "warp_field"
+    ],
+    "technical_notes": "A custom wave system generates a stream of bioluminescent golden-green particles that multiply and swarm across the screen. Per-pixel warp equations create a fluid, swimming advection field, while a low decay rate in the frame feedback loop preserves the glowing trails. The brightness and density of the particle field modulate dynamically in response to the high-frequency treble and mid-range transients of the audio.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:43:36.586Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/fireflies-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_fireflies.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_fireflies.jpg",
+    "video_size_bytes": 5252832
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

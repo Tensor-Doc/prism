@@ -15,31 +15,42 @@
   },
   "annotation": {
     "vibe": [
-      "chaotic",
-      "geometric",
-      "energetic"
+      "energetic",
+      "neon",
+      "psychedelic",
+      "chaotic"
     ],
     "motion": 0.85,
     "palette_anchor": [
-      "#ff3aae",
-      "#3affae",
-      "#1a1a3a"
+      "#00f0ff",
+      "#ff00b0",
+      "#d4ff00",
+      "#ff0000"
     ],
     "audio_affinity": {
-      "bass": 0.85,
-      "mid": 0.6,
-      "treble": 0.4
+      "bass": 0.9,
+      "mid": 0.7,
+      "treble": 0.8
     },
-    "techniques": null,
-    "technical_notes": null,
-    "brand_safe": true,
+    "techniques": [
+      "custom_wave",
+      "domain_repetition",
+      "beat_burst",
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle"
+    ],
+    "technical_notes": "Custom waves are modulated by the audio to produce energetic, oscillating neon ribbons. A radial symmetry domain repetition in the per-pixel warp shader replicates these elements across a kaleidoscopic field. Beat-gated triggers drive sudden zoom and rotational shifts, while feedback through sampler_main with a moderate decay rate creates brief, high-contrast trails.",
+    "brand_safe": false,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:40:38.574Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_royal-mashup-197.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_royal-mashup-197.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_royal-mashup-197.jpg",
+    "video_size_bytes": 6940969
   },
   "contribution": {
     "added_by": "scottspace",

@@ -13,6 +13,13 @@
     "source_url": "/presets/particles/coral-garden.json",
     "default_image": "/presets/particles/coral-garden-atlas.png"
   },
+  "jvkmIA": {
+    "name": "Lava Flow",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/lava-flow.json",
+    "default_image": "/presets/particles/lava-flow-atlas.png"
+  },
   "U0D2Ci": {
     "name": "Refik Rolling Ocean of Flora",
     "source_type": "particles",
@@ -184,6 +191,13 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "martin [shadow harlequins shape code] - fata morgana"
+  },
+  "NOszGU": {
+    "name": "Fireflies",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/fireflies.json",
+    "default_image": "/presets/particles/fireflies-atlas.png"
   },
   "lI5Szc": {
     "name": "Idiot - Star Of Annon",
@@ -433,6 +447,13 @@
     "source_type": "milkdrop",
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "Martin - acid wiring"
+  },
+  "W9PyL6": {
+    "name": "Confetti Burst",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/confetti-burst.json",
+    "default_image": "/presets/particles/confetti-burst-atlas.png"
   },
   "JZgp3x": {
     "name": "Martin - QBikal - Surface Turbulence",
@@ -1884,6 +1905,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/mig-304-geiss-remix.milk"
   },
+  "Dc0zQI": {
+    "name": "Dedicated to Sherwin Maxawow",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Flexi, martin + geiss - dedicated to the sherwin maxawow"
+  },
   "BbRu9e": {
     "name": "Aderrasi - Storm of the Eye",
     "source_type": "milkdrop",
@@ -1914,6 +1941,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/rovastar-unchained-demonology-vampire-soul-mix.milk"
   },
+  "2Z8euz": {
+    "name": "$$$ Royal - Mashup (431)",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "$$$ Royal - Mashup (431)"
+  },
   "v0ESKE": {
     "name": "Phat + Eo.S. - Swim_waveform_mix",
     "source_type": "milkdrop",
@@ -1925,6 +1958,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/phat-eo-s-rainbow-bubble-mid3-f-me-dood.milk"
+  },
+  "vMyTAU": {
+    "name": "$$$ Royal - Mashup (197)",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "$$$ Royal - Mashup (197)"
   },
   "lqeU1g": {
     "name": "Flexi - bouncing balls (neon)",

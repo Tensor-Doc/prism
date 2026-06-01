@@ -1,0 +1,25 @@
+{
+  "name": "Fireflies",
+  "atlas_url": "/presets/particles/fireflies-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.035,
+  "size_variance": 1,
+  "velocity_stretch": 1.5,
+  "curl_scale": 0.7,
+  "velocity_damp": 0.992,
+  "audio_gain": 1.4,
+  "volume_size": [
+    4,
+    1.5,
+    4
+  ],
+  "wave_amplitude": 0.15,
+  "flow_drift_x": 0.2,
+  "corona_boost": 3.5,
+  "dance_amount": 0,
+  "camera_radius": 4.5,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.025,
+  "fov_degrees": 55,
+  "trail_decay": 0.91
+}

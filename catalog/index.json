@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T05:39:34.825Z",
-  "total": 659,
-  "annotated_count": 372,
-  "pending_count": 287,
+  "generated_at": "2026-06-01T05:44:48.769Z",
+  "total": 662,
+  "annotated_count": 378,
+  "pending_count": 284,
   "entries": [
     {
       "id": "particles:solar-wind",
@@ -87,6 +87,47 @@
       "added_by": "prism",
       "added_at": "2026-06-01T00:00:00.000Z",
       "captured_at": "2026-06-01T05:19:35.070Z"
+    },
+    {
+      "id": "particles:lava-flow",
+      "short_id": "jvkmIA",
+      "slug": "lava-flow",
+      "name": "Lava Flow",
+      "author": "prism",
+      "blurb": "A river of molten lava crawling slowly across the canvas, hot orange-red glowing through dark crust, bass triggering plumes of fire.",
+      "vibe": [
+        "organic",
+        "fiery",
+        "visceral",
+        "kinetic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "particle_system",
+        "beat_burst",
+        "texture_sample",
+        "audio_gating",
+        "frame_feedback"
+      ],
+      "technical_notes": "A dense particle system of custom-textured organic pods flows along a wave-like trajectory. A dramatic beat-gated event at ~0:05 triggers a camera dive and a burst of larger, textured elements toward the screen, driven by bass-attenuated thresholds. The rendering utilizes custom texture sampling combined with a dark background decay, creating a visceral, fiery landscape of organic embers.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/lava-flow.json",
+      "default_image": "/presets/particles/lava-flow-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_lava-flow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_lava-flow.jpg",
+      "video_size_bytes": 8066770,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:42:35.567Z"
     },
     {
       "id": "particles:refik-fluid-flora",
@@ -1158,6 +1199,47 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:30:42.756Z"
+    },
+    {
+      "id": "particles:fireflies",
+      "short_id": "NOszGU",
+      "slug": "fireflies",
+      "name": "Fireflies",
+      "author": "prism",
+      "blurb": "A field of fireflies blinking on a warm summer night, soft trails as they drift between visible flashes.",
+      "vibe": [
+        "bioluminescent",
+        "organic",
+        "fluid",
+        "mysterious"
+      ],
+      "motion": 0.45,
+      "audio_affinity": {
+        "bass": 0.5,
+        "mid": 0.4,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "decay_trail",
+        "frame_feedback",
+        "warp_field"
+      ],
+      "technical_notes": "A custom wave system generates a stream of bioluminescent golden-green particles that multiply and swarm across the screen. Per-pixel warp equations create a fluid, swimming advection field, while a low decay rate in the frame feedback loop preserves the glowing trails. The brightness and density of the particle field modulate dynamically in response to the high-frequency treble and mid-range transients of the audio.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/fireflies.json",
+      "default_image": "/presets/particles/fireflies-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_fireflies.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_fireflies.jpg",
+      "video_size_bytes": 5252832,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:43:36.586Z"
     },
     {
       "id": "milkdrop:idiot-star-of-annon",
@@ -2735,6 +2817,46 @@
       "added_by": "scottspace",
       "added_at": "2026-05-29T00:00:00.000Z",
       "captured_at": "2026-06-01T05:27:12.684Z"
+    },
+    {
+      "id": "particles:confetti-burst",
+      "short_id": "W9PyL6",
+      "slug": "confetti-burst",
+      "name": "Confetti Burst",
+      "author": "prism",
+      "blurb": "Bright confetti exploding outward in celebration, dense multicolored bursts on every drop, joyful and kinetic.",
+      "vibe": [
+        "frenetic",
+        "playful",
+        "vibrant",
+        "psychedelic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "custom_wave",
+        "decay_trail",
+        "hue_cycle"
+      ],
+      "technical_notes": "A dense particle system of custom 3D shapes—including stars, rings, and spheres—is driven along complex, swirling trajectories. The audio loop's bass transients modulate the overall scale and dispersion of the ribbon, while treble frequencies trigger rapid flickering and scattering of individual elements. Persistent trails are maintained via frame feedback with low decay, creating a vibrant, high-contrast stream against the dark background.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/confetti-burst.json",
+      "default_image": "/presets/particles/confetti-burst-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_confetti-burst.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_confetti-burst.jpg",
+      "video_size_bytes": 7273916,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:44:33.704Z"
     },
     {
       "id": "milkdrop:martin-qbikal-turbulence",
@@ -11686,6 +11808,45 @@
       "captured_at": "2026-05-31T23:52:56.338Z"
     },
     {
+      "id": "milkdrop:sherwin-maxawow",
+      "short_id": "Dc0zQI",
+      "slug": "sherwin-maxawow",
+      "name": "Dedicated to Sherwin Maxawow",
+      "author": "Flexi/Martin/Geiss",
+      "blurb": "Three-author mashup of effects layered into a kaleidoscopic explosion.",
+      "vibe": [
+        "painterly",
+        "fluid",
+        "psychedelic",
+        "organic"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "cosine_palette",
+        "fbm_noise"
+      ],
+      "technical_notes": "A heavy impasto oil-paint aesthetic is achieved through a composite shader that calculates normals from sampler_main and sampler_blur to apply specular lighting. A turbulent per-pixel warp field drives fluid advection, while low decay in the frame feedback loop allows colors to bleed and blend organically. Dramatic shifts in the color fields and structural layout are gated by bass transients in the audio.",
+      "atelier": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Flexi, martin + geiss - dedicated to the sherwin maxawow",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_sherwin-maxawow.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_sherwin-maxawow.jpg",
+      "video_size_bytes": 8407407,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:44:28.871Z"
+    },
+    {
       "id": "milkdrop:aderrasi-storm-of-the-eye",
       "short_id": "BbRu9e",
       "slug": "aderrasi-storm-of-the-eye",
@@ -11885,6 +12046,47 @@
       "captured_at": "2026-05-31T22:56:25.744Z"
     },
     {
+      "id": "milkdrop:royal-mashup-431",
+      "short_id": "2Z8euz",
+      "slug": "royal-mashup-431",
+      "name": "$$$ Royal - Mashup (431)",
+      "author": "$$$ Royal",
+      "blurb": "Layered chaos that pulses with multiple overlapping rhythms.",
+      "vibe": [
+        "fluid",
+        "metallic",
+        "psychedelic",
+        "viscous",
+        "organic"
+      ],
+      "motion": 0.7,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "chromatic_split",
+        "bloom_glow",
+        "hue_cycle"
+      ],
+      "technical_notes": "A viscous, metallic fluid simulation driven by a per-pixel warp shader that mimics liquid mercury or oil-slick dynamics. Chromatic aberration fringes the edges of the cellular droplets, which expand and divide in response to the audio's bass transients. Frame feedback through sampler_main with high-frequency noise creates a shimmering, organic texture that cycles through vivid purple, green, and blue hues.",
+      "atelier": true,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "$$$ Royal - Mashup (431)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_royal-mashup-431.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_royal-mashup-431.jpg",
+      "video_size_bytes": 7042195,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:42:34.183Z"
+    },
+    {
       "id": "milkdrop:phat-eo-s-swim-waveform-mix",
       "short_id": "v0ESKE",
       "slug": "phat-eo-s-swim-waveform-mix",
@@ -11961,6 +12163,47 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.324Z",
       "captured_at": "2026-05-31T22:51:47.116Z"
+    },
+    {
+      "id": "milkdrop:royal-mashup-197",
+      "short_id": "vMyTAU",
+      "slug": "royal-mashup-197",
+      "name": "$$$ Royal - Mashup (197)",
+      "author": "$$$ Royal",
+      "blurb": "High-energy geometric mashup that pounds with every kick.",
+      "vibe": [
+        "energetic",
+        "neon",
+        "psychedelic",
+        "chaotic"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.9,
+        "mid": 0.7,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "domain_repetition",
+        "beat_burst",
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle"
+      ],
+      "technical_notes": "Custom waves are modulated by the audio to produce energetic, oscillating neon ribbons. A radial symmetry domain repetition in the per-pixel warp shader replicates these elements across a kaleidoscopic field. Beat-gated triggers drive sudden zoom and rotational shifts, while feedback through sampler_main with a moderate decay rate creates brief, high-contrast trails.",
+      "atelier": false,
+      "brand_safe": false,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "$$$ Royal - Mashup (197)",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_royal-mashup-197.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_royal-mashup-197.jpg",
+      "video_size_bytes": 6940969,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:40:38.574Z"
     },
     {
       "id": "milkdrop:flexi-bouncing-balls",

@@ -1,0 +1,62 @@
+{
+  "id": "particles:confetti-burst",
+  "short_id": "W9PyL6",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/confetti-burst.json"
+  },
+  "display": {
+    "name": "Confetti Burst",
+    "author": "prism",
+    "blurb": "Bright confetti exploding outward in celebration, dense multicolored bursts on every drop, joyful and kinetic."
+  },
+  "annotation": {
+    "vibe": [
+      "frenetic",
+      "playful",
+      "vibrant",
+      "psychedelic"
+    ],
+    "motion": 0.75,
+    "palette_anchor": [
+      "#ff007f",
+      "#00f0ff",
+      "#ffe600",
+      "#39ff14"
+    ],
+    "audio_affinity": {
+      "bass": 0.8,
+      "mid": 0.5,
+      "treble": 0.7
+    },
+    "techniques": [
+      "particle_system",
+      "custom_wave",
+      "decay_trail",
+      "hue_cycle"
+    ],
+    "technical_notes": "A dense particle system of custom 3D shapes—including stars, rings, and spheres—is driven along complex, swirling trajectories. The audio loop's bass transients modulate the overall scale and dispersion of the ribbon, while treble frequencies trigger rapid flickering and scattering of individual elements. Persistent trails are maintained via frame feedback with low decay, creating a vibrant, high-contrast stream against the dark background.",
+    "brand_safe": true,
+    "atelier": false,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:44:33.704Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/confetti-burst-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_confetti-burst.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_confetti-burst.jpg",
+    "video_size_bytes": 7273916
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}
