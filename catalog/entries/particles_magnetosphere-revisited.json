@@ -1,0 +1,64 @@
+{
+  "id": "particles:magnetosphere-revisited",
+  "short_id": "re5koJ",
+  "schema_version": 2,
+  "source": {
+    "type": "particles",
+    "loader": "url",
+    "url": "/presets/particles/magnetosphere-revisited.json"
+  },
+  "display": {
+    "name": "Magnetosphere Revisited",
+    "author": "prism",
+    "blurb": "A modern take on Robert Hodgin's iTunes visualizer. Soft-light strands trail across the screen leaving glowing wakes, dramatic camera moves, bass-driven bloom on every drop."
+  },
+  "annotation": {
+    "vibe": [
+      "biomechanical",
+      "metallic",
+      "fluid",
+      "organic",
+      "kinetic"
+    ],
+    "motion": 0.8,
+    "palette_anchor": [
+      "#000000",
+      "#c0c0c0",
+      "#8a8a8a",
+      "#e5e5e5"
+    ],
+    "audio_affinity": {
+      "bass": 0.85,
+      "mid": 0.6,
+      "treble": 0.75
+    },
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "decay_trail",
+      "warp_field",
+      "beat_burst"
+    ],
+    "technical_notes": "A dense array of custom shapes rendered as metallic, reflective spheres is animated along complex parametric paths. High-decay frame feedback through sampler_main generates persistent, worm-like chrome trails. The visual reacts to the music with dramatic zoom and rotation driven by bass-frequency peaks, eventually engulfing the screen in a chaotic, biomechanical web of specular highlights.",
+    "brand_safe": true,
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:33:29.159Z"
+  },
+  "assets": {
+    "textures_needed": [],
+    "default_image": "/presets/particles/magnetosphere-revisited-atlas.png",
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_magnetosphere-revisited.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_magnetosphere-revisited.jpg",
+    "video_size_bytes": 6353292
+  },
+  "contribution": {
+    "added_by": "prism",
+    "added_at": "2026-06-01T00:00:00.000Z",
+    "license": "MIT"
+  },
+  "compatibility": {
+    "renders": true
+  }
+}

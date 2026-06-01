@@ -304,6 +304,23 @@ void main() {
 }
 `;
 
+// Blit pass — copies a texture to the current render target with an
+// optional alpha multiplier. Used by the trails pipeline to fade the
+// previous accumulator frame before drawing the new particles on top,
+// and to display the final accumulator to the canvas.
+const FS_BLIT = `#version 300 es
+precision highp float;
+uniform sampler2D uTex;
+uniform vec2 uResolution;
+uniform float uAlpha;
+out vec4 outColor;
+void main() {
+  vec2 uv = gl_FragCoord.xy / uResolution;
+  vec4 c = texture(uTex, uv);
+  outColor = vec4(c.rgb * uAlpha, c.a * uAlpha);
+}
+`;
+
 // ── public API ─────────────────────────────────────────────────────
 
 export interface ParticlesBg {
@@ -350,6 +367,11 @@ export interface ParticlesPreset {
   camera_orbit_speed?: number;
   /** Vertical FOV in degrees. Default 50. */
   fov_degrees?: number;
+  /** Screen-space trail decay per frame. 0 = no trails (particles
+   *  redraw fresh each frame). 0.92 = Magnetosphere-style smoky
+   *  streams. 0.97 = long-persistence light painting. Default 0 so
+   *  existing presets aren't affected. */
+  trail_decay?: number;
 }
 
 export function createParticlesBackground(
@@ -395,9 +417,29 @@ export function createParticlesBackground(
   // ── programs ──────────────────────────────────────────
   const updateProg = makeProgram(gl, VS_FULLSCREEN, FS_UPDATE);
   const renderProg = makeProgram(gl, VS_RENDER, FS_RENDER);
+  const blitProg = makeProgram(gl, VS_FULLSCREEN, FS_BLIT);
   const dummyVao = gl.createVertexArray()!;
   const loc = (p: WebGLProgram, name: string): WebGLUniformLocation | null =>
     gl.getUniformLocation(p, name);
+
+  // ── trail accumulator (ping-pong RGBA8 textures the canvas size) ─
+  // Created lazily on first trail-enabled frame, recreated on resize.
+  // When trail_decay = 0 the whole path is skipped and we render
+  // directly to the canvas as before.
+  let trailA: WebGLTexture | null = null;
+  let trailB: WebGLTexture | null = null;
+  let trailW = 0, trailH = 0;
+  const trailFbo = gl.createFramebuffer()!;
+
+  function ensureTrailTextures(w: number, h: number): void {
+    if (trailA && trailB && trailW === w && trailH === h) return;
+    if (trailA) gl.deleteTexture(trailA);
+    if (trailB) gl.deleteTexture(trailB);
+    trailA = makeColorTexture(gl, w, h);
+    trailB = makeColorTexture(gl, w, h);
+    trailW = w;
+    trailH = h;
+  }
 
   // ── runtime state ─────────────────────────────────────
   let currentUrl: string | null = null;
@@ -422,6 +464,7 @@ export function createParticlesBackground(
     camera_height: 0.6,
     camera_orbit_speed: 0.025,
     fov_degrees: 50,
+    trail_decay: 0,
   };
   let running = true;
   const startTime = performance.now();
@@ -489,10 +532,36 @@ export function createParticlesBackground(
     [readVel, writeVel] = [writeVel, readVel];
 
     // ── render pass ─────────────────────────────────────
-    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    gl.viewport(0, 0, canvas.width, canvas.height);
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    // When trail_decay > 0 we render into a ping-pong accumulator
+    // texture: first blit the previous accumulator into the new one
+    // with alpha = trail_decay (fades old content), then draw the new
+    // particles on top, then display the accumulator to the canvas.
+    // When trail_decay = 0 we render directly to the canvas as before.
+    const trailDecay = preset.trail_decay;
+    if (trailDecay > 0) {
+      ensureTrailTextures(canvas.width, canvas.height);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, trailFbo);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, trailB!, 0);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, null, 0);
+      gl.drawBuffers([gl.COLOR_ATTACHMENT0]);
+      gl.viewport(0, 0, trailW, trailH);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.disable(gl.BLEND);
+      gl.useProgram(blitProg);
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, trailA!);
+      gl.uniform1i(loc(blitProg, "uTex"), 0);
+      gl.uniform2f(loc(blitProg, "uResolution"), trailW, trailH);
+      gl.uniform1f(loc(blitProg, "uAlpha"), trailDecay);
+      gl.bindVertexArray(dummyVao);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    } else {
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0.0, 0.0, 0.0, 1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    }
 
     gl.enable(gl.BLEND);
     // Standard alpha over compositing. Particles aren't depth-sorted
@@ -543,6 +612,25 @@ export function createParticlesBackground(
     gl.drawArraysInstanced(gl.TRIANGLES, 0, 12, PARTICLE_COUNT);
 
     gl.disable(gl.BLEND);
+
+    // ── trail display pass ─────────────────────────────────
+    // If we rendered into the accumulator, swap and blit the now-
+    // current trail to the canvas at full alpha.
+    if (trailDecay > 0) {
+      [trailA, trailB] = [trailB, trailA];
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0, 0, 0, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.useProgram(blitProg);
+      gl.activeTexture(gl.TEXTURE0);
+      gl.bindTexture(gl.TEXTURE_2D, trailA!);
+      gl.uniform1i(loc(blitProg, "uTex"), 0);
+      gl.uniform2f(loc(blitProg, "uResolution"), canvas.width, canvas.height);
+      gl.uniform1f(loc(blitProg, "uAlpha"), 1.0);
+      gl.bindVertexArray(dummyVao);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
 
     requestAnimationFrame(frameLoop);
   }
@@ -657,6 +745,20 @@ function makeTexture(
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.texImage2D(gl.TEXTURE_2D, 0, internal, w, h, 0, format, type, data);
+  return tex;
+}
+
+/** RGBA8 color target sized to the canvas. Used by the trail
+ *  ping-pong accumulator. LINEAR filtering so the blit pass reads
+ *  smoothly even when the canvas is on a fractional pixel offset. */
+function makeColorTexture(gl: WebGL2RenderingContext, w: number, h: number): WebGLTexture {
+  const tex = gl.createTexture()!;
+  gl.bindTexture(gl.TEXTURE_2D, tex);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
   return tex;
 }
 

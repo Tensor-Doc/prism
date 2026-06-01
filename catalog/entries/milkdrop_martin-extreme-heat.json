@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "fire",
-      "intense",
-      "warm"
+      "apocalyptic",
+      "fiery",
+      "dramatic",
+      "atmospheric"
     ],
-    "motion": 0.85,
+    "motion": 0.75,
     "palette_anchor": [
-      "#ff3a3a",
-      "#ffd23a",
-      "#1a0a0a"
+      "#000000",
+      "#d35400",
+      "#f1c40f",
+      "#78281f"
     ],
     "audio_affinity": {
       "bass": 0.85,
-      "mid": 0.7,
-      "treble": 0.5
+      "mid": 0.5,
+      "treble": 0.7
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "particle_system",
+      "fbm_noise",
+      "frame_feedback",
+      "beat_burst",
+      "bloom_glow"
+    ],
+    "technical_notes": "A dramatic volcanic landscape is rendered using procedural FBM noise to generate turbulent, burning clouds in the sky. Discrete particle system bursts are triggered by beat detection on the bass, launching bright sparks that rain down with gravity-simulating equations. The lower half uses a coordinate-distorted reflection pass via sampler_main to simulate realistic water ripples reflecting the fiery sky and particle trails.",
     "brand_safe": true,
-    "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "atelier": true,
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:29:59.926Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-extreme-heat.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-extreme-heat.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-extreme-heat.jpg",
+    "video_size_bytes": 6177002
   },
   "contribution": {
     "added_by": "scottspace",

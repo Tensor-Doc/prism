@@ -1,0 +1,25 @@
+{
+  "name": "Magnetosphere Revisited",
+  "atlas_url": "/presets/particles/magnetosphere-revisited-atlas.png",
+  "atlas_size": 4,
+  "particle_size": 0.04,
+  "size_variance": 0.7,
+  "velocity_stretch": 3.2,
+  "curl_scale": 1.1,
+  "velocity_damp": 0.99,
+  "audio_gain": 1.8,
+  "volume_size": [
+    3.5,
+    1,
+    3.5
+  ],
+  "wave_amplitude": 0.05,
+  "flow_drift_x": 0.35,
+  "corona_boost": 5.5,
+  "dance_amount": 0,
+  "camera_radius": 4.2,
+  "camera_height": 0.55,
+  "camera_orbit_speed": 0.04,
+  "fov_degrees": 55,
+  "trail_decay": 0.94
+}

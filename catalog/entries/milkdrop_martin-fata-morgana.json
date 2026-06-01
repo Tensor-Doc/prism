@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "mirage",
-      "shifting",
+      "cosmic",
+      "psychedelic",
+      "fluid",
       "atmospheric"
     ],
-    "motion": 0.55,
+    "motion": 0.65,
     "palette_anchor": [
-      "#ffba3a",
-      "#3aaaff",
-      "#1a1a1a"
+      "#05051a",
+      "#ff00ea",
+      "#00ff99",
+      "#121212"
     ],
     "audio_affinity": {
-      "bass": 0.6,
+      "bass": 0.8,
       "mid": 0.5,
-      "treble": 0.5
+      "treble": 0.6
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "frame_feedback",
+      "warp_field",
+      "hue_cycle",
+      "bloom_glow"
+    ],
+    "technical_notes": "A split-screen composite shader divides the scene into a starry sky and a reflective water plane. Custom waves are rendered as colorful, swirling trails that streak across the sky, with their scale and brightness modulated by the audio. The lower half of the screen uses a per-pixel warp shader to simulate water ripples, sampling sampler_main with a vertical reflection and distortion offset to create dynamic reflections of the sky elements.",
     "brand_safe": true,
     "atelier": true,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:30:42.756Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-fata-morgana.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-fata-morgana.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-fata-morgana.jpg",
+    "video_size_bytes": 5296194
   },
   "contribution": {
     "added_by": "scottspace",

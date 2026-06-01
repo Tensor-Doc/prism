@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-01T05:25:52.383Z",
-  "total": 655,
-  "annotated_count": 359,
-  "pending_count": 296,
+  "generated_at": "2026-06-01T05:33:45.505Z",
+  "total": 656,
+  "annotated_count": 367,
+  "pending_count": 289,
   "entries": [
     {
       "id": "particles:solar-wind",
@@ -679,6 +679,48 @@
       "captured_at": "2026-05-31T22:54:29.594Z"
     },
     {
+      "id": "particles:magnetosphere-revisited",
+      "short_id": "re5koJ",
+      "slug": "magnetosphere-revisited",
+      "name": "Magnetosphere Revisited",
+      "author": "prism",
+      "blurb": "A modern take on Robert Hodgin's iTunes visualizer. Soft-light strands trail across the screen leaving glowing wakes, dramatic camera moves, bass-driven bloom on every drop.",
+      "vibe": [
+        "biomechanical",
+        "metallic",
+        "fluid",
+        "organic",
+        "kinetic"
+      ],
+      "motion": 0.8,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.6,
+        "treble": 0.75
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "decay_trail",
+        "warp_field",
+        "beat_burst"
+      ],
+      "technical_notes": "A dense array of custom shapes rendered as metallic, reflective spheres is animated along complex parametric paths. High-decay frame feedback through sampler_main generates persistent, worm-like chrome trails. The visual reacts to the music with dramatic zoom and rotation driven by bass-frequency peaks, eventually engulfing the screen in a chaotic, biomechanical web of specular highlights.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "particles",
+      "source_loader": "url",
+      "source_url": "/presets/particles/magnetosphere-revisited.json",
+      "default_image": "/presets/particles/magnetosphere-revisited-atlas.png",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/particles_magnetosphere-revisited.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/particles_magnetosphere-revisited.jpg",
+      "video_size_bytes": 6353292,
+      "added_by": "prism",
+      "added_at": "2026-06-01T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:33:29.159Z"
+    },
+    {
       "id": "milkdrop:geiss-cycloid-1-painterly-vortex",
       "short_id": "jDL6Sw",
       "slug": "geiss-cycloid-1-painterly-vortex",
@@ -757,6 +799,46 @@
       "added_by": "prism",
       "added_at": "2026-06-01T00:00:00.000Z",
       "captured_at": "2026-06-01T05:14:52.906Z"
+    },
+    {
+      "id": "milkdrop:martin-extreme-heat",
+      "short_id": "edsgxK",
+      "slug": "martin-extreme-heat",
+      "name": "Martin - extreme heat",
+      "author": "Martin",
+      "blurb": "Blazing thermal energy radiates and warps under audio pressure.",
+      "vibe": [
+        "apocalyptic",
+        "fiery",
+        "dramatic",
+        "atmospheric"
+      ],
+      "motion": 0.75,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.5,
+        "treble": 0.7
+      },
+      "techniques": [
+        "particle_system",
+        "fbm_noise",
+        "frame_feedback",
+        "beat_burst",
+        "bloom_glow"
+      ],
+      "technical_notes": "A dramatic volcanic landscape is rendered using procedural FBM noise to generate turbulent, burning clouds in the sky. Discrete particle system bursts are triggered by beat detection on the bass, launching bright sparks that rain down with gravity-simulating equations. The lower half uses a coordinate-distorted reflection pass via sampler_main to simulate realistic water ripples reflecting the fiery sky and particle trails.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "martin - extreme heat",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-extreme-heat.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-extreme-heat.jpg",
+      "video_size_bytes": 6177002,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:29:59.926Z"
     },
     {
       "id": "milkdrop:fishbrain-the-adventures-of-prismo-jenkins",
@@ -954,6 +1036,86 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.234Z",
       "captured_at": "2026-05-31T21:40:11.299Z"
+    },
+    {
+      "id": "milkdrop:martin-fata-morgana",
+      "short_id": "yU0LtK",
+      "slug": "martin-fata-morgana",
+      "name": "Martin - fata morgana",
+      "author": "Martin/shadow harlequins",
+      "blurb": "An optical mirage shifts atmospheric layers in subtle waves.",
+      "vibe": [
+        "cosmic",
+        "psychedelic",
+        "fluid",
+        "atmospheric"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.6
+      },
+      "techniques": [
+        "custom_wave",
+        "frame_feedback",
+        "warp_field",
+        "hue_cycle",
+        "bloom_glow"
+      ],
+      "technical_notes": "A split-screen composite shader divides the scene into a starry sky and a reflective water plane. Custom waves are rendered as colorful, swirling trails that streak across the sky, with their scale and brightness modulated by the audio. The lower half of the screen uses a per-pixel warp shader to simulate water ripples, sampling sampler_main with a vertical reflection and distortion offset to create dynamic reflections of the sky elements.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "martin [shadow harlequins shape code] - fata morgana",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-fata-morgana.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-fata-morgana.jpg",
+      "video_size_bytes": 5296194,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:30:42.756Z"
+    },
+    {
+      "id": "milkdrop:idiot-star-of-annon",
+      "short_id": "lI5Szc",
+      "slug": "idiot-star-of-annon",
+      "name": "Idiot - Star Of Annon",
+      "author": "Idiot",
+      "blurb": "Stellar bursts radiate outward from a brilliant central star.",
+      "vibe": [
+        "fluid",
+        "luminescent",
+        "psychedelic",
+        "kinetic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.5,
+        "treble": 0.4
+      },
+      "techniques": [
+        "frame_feedback",
+        "warp_field",
+        "beat_burst",
+        "bloom_glow",
+        "hue_cycle"
+      ],
+      "technical_notes": "A high-exposure central core is driven by aggressive brighten and gamma settings, creating a high-contrast bloom. The per-pixel warp shader applies a swirling vortex motion, accumulating in sampler_main with a low decay rate to form fluid, metallic-looking concentric bands. Discrete rectangular custom shapes are triggered as beat bursts by the audio's bass peaks, scaling rapidly outward before dissolving into the feedback loop.",
+      "atelier": true,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Idiot - Star Of Annon",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_idiot-star-of-annon.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_idiot-star-of-annon.jpg",
+      "video_size_bytes": 5193713,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:25:57.042Z"
     },
     {
       "id": "milkdrop:geiss-cauldron-painterly-3-saturation-remix",
@@ -2411,6 +2573,86 @@
       "captured_at": "2026-06-01T04:58:56.506Z"
     },
     {
+      "id": "milkdrop:martin-acid-wiring",
+      "short_id": "cTbX2F",
+      "slug": "martin-acid-wiring",
+      "name": "Martin - acid wiring",
+      "author": "Martin",
+      "blurb": "Electric circuitry pulses with neon energy and current.",
+      "vibe": [
+        "energetic",
+        "geometric",
+        "chaotic",
+        "neon"
+      ],
+      "motion": 0.85,
+      "audio_affinity": {
+        "bass": 0.8,
+        "mid": 0.6,
+        "treble": 0.7
+      },
+      "techniques": [
+        "custom_wave",
+        "domain_repetition",
+        "frame_feedback",
+        "audio_gating",
+        "beat_burst",
+        "hue_cycle"
+      ],
+      "technical_notes": "Custom wave overlays render rotating wireframe cubes that scale and warp in response to the audio's mid and treble bands. A complex domain repetition grid multiplies these elements across the screen, while a high-decay frame feedback loop combined with sampler_blur1 creates glowing trails. Strobe-like flashes and color shifts are gated directly by bass attenuated spikes.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Martin - acid wiring",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-acid-wiring.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-acid-wiring.jpg",
+      "video_size_bytes": 7538934,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:27:12.684Z"
+    },
+    {
+      "id": "milkdrop:martin-qbikal-turbulence",
+      "short_id": "JZgp3x",
+      "slug": "martin-qbikal-turbulence",
+      "name": "Martin - QBikal - Surface Turbulence",
+      "author": "Martin/QBikal",
+      "blurb": "Surface turbulence rippling like water disturbed by sound.",
+      "vibe": [
+        "metallic",
+        "structural",
+        "fluid",
+        "kinetic"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.7,
+        "mid": 0.6,
+        "treble": 0.5
+      },
+      "techniques": [
+        "custom_wave",
+        "hue_cycle",
+        "audio_gating",
+        "frame_feedback"
+      ],
+      "technical_notes": "A complex 3D custom wave is rendered as a serpentine metallic ribbon, with its central region undergoing fluid, ripple-like deformations driven by the audio's mid and bass frequencies. The background plane transitions through a slow hue cycle of rich gradients, while a textured ground plane provides depth. The overall structure rotates dynamically in 3D space, utilizing per-frame equations to modulate perspective and orientation.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Martin - QBikal - Surface Turbulence IIb",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-qbikal-turbulence.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-qbikal-turbulence.jpg",
+      "video_size_bytes": 7057122,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:33:32.191Z"
+    },
+    {
       "id": "milkdrop:eos-zylot-skylight",
       "short_id": "gomlny",
       "slug": "eos-zylot-skylight",
@@ -3578,6 +3820,46 @@
       "captured_at": "2026-05-31T22:47:21.382Z"
     },
     {
+      "id": "milkdrop:martin-chain-breaker",
+      "short_id": "UAB9UR",
+      "slug": "martin-chain-breaker",
+      "name": "Martin - chain breaker",
+      "author": "Martin",
+      "blurb": "Industrial chains snap and break with each heavy kick.",
+      "vibe": [
+        "cosmic",
+        "kinetic",
+        "explosive",
+        "celestial"
+      ],
+      "motion": 0.65,
+      "audio_affinity": {
+        "bass": 0.85,
+        "mid": 0.4,
+        "treble": 0.6
+      },
+      "techniques": [
+        "particle_system",
+        "beat_burst",
+        "decay_trail",
+        "bloom_glow",
+        "frame_feedback"
+      ],
+      "technical_notes": "Custom waves configured as dotted particle trails radiate outward, with their radial velocity and scale driven by the music's bass. A high decay rate in the frame feedback loop causes the trails to quickly dissolve into sparse points between beat-gated bursts. The background features a subtle gradient shift while the particles maintain vibrant, distinct hues.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "martin - chain breaker",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-chain-breaker.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-chain-breaker.jpg",
+      "video_size_bytes": 4315039,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:29:19.706Z"
+    },
+    {
       "id": "milkdrop:flexi-infused-with-the-spiral",
       "short_id": "t11nN4",
       "slug": "flexi-infused-with-the-spiral",
@@ -3763,6 +4045,44 @@
       "added_by": "scottspace",
       "added_at": "2026-05-30T17:43:37.337Z",
       "captured_at": "2026-05-31T23:01:11.985Z"
+    },
+    {
+      "id": "milkdrop:krash-illusion-spiral",
+      "short_id": "HrPXRc",
+      "slug": "krash-illusion-spiral",
+      "name": "Krash + Illusion - Spiral Movement",
+      "author": "Krash/Illusion",
+      "blurb": "Hypnotic spiraling motion that rotates with each beat.",
+      "vibe": [
+        "minimalist",
+        "sparse",
+        "dark",
+        "void"
+      ],
+      "motion": 0.3,
+      "audio_affinity": {
+        "bass": 0.3,
+        "mid": 0.6,
+        "treble": 0.8
+      },
+      "techniques": [
+        "custom_wave",
+        "warp_field",
+        "frame_feedback"
+      ],
+      "technical_notes": "Custom waves trace delicate, jittery orbits across a dark void, with their high-frequency displacement modulated by the treble and mid bands of the audio. A subtle per-pixel warp shader combined with frame feedback through sampler_main creates a spiraling, decaying trail of past waveforms. The high decay rate ensures a sparse, clean aesthetic with minimal persistent clutter.",
+      "atelier": false,
+      "brand_safe": true,
+      "textures_needed": [],
+      "source_type": "milkdrop",
+      "source_loader": "npm-butterchurn-presets",
+      "source_ref": "Krash + Illusion - Spiral Movement",
+      "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_krash-illusion-spiral.webm",
+      "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_krash-illusion-spiral.jpg",
+      "video_size_bytes": 3845286,
+      "added_by": "scottspace",
+      "added_at": "2026-05-29T00:00:00.000Z",
+      "captured_at": "2026-06-01T05:26:30.800Z"
     },
     {
       "id": "milkdrop:geiss-3-layers-planar-mix",

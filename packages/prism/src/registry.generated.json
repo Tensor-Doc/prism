@@ -109,6 +109,13 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/reenen-phoenix.milk"
   },
+  "re5koJ": {
+    "name": "Magnetosphere Revisited",
+    "source_type": "particles",
+    "source_loader": "url",
+    "source_url": "/presets/particles/magnetosphere-revisited.json",
+    "default_image": "/presets/particles/magnetosphere-revisited-atlas.png"
+  },
   "jDL6Sw": {
     "name": "Geiss - Cycloid 1 - painterly vortex",
     "source_type": "milkdrop",
@@ -121,6 +128,12 @@
     "source_loader": "url",
     "source_url": "/presets/particles/murmuration.json",
     "default_image": "/presets/particles/murmuration-atlas.png"
+  },
+  "edsgxK": {
+    "name": "Martin - extreme heat",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "martin - extreme heat"
   },
   "I9ooYK": {
     "name": "fiShbRaiN - the adventures of prismo jenkins",
@@ -151,6 +164,18 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/geiss-cycloid-1-painterly.milk"
+  },
+  "yU0LtK": {
+    "name": "Martin - fata morgana",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "martin [shadow harlequins shape code] - fata morgana"
+  },
+  "lI5Szc": {
+    "name": "Idiot - Star Of Annon",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Idiot - Star Of Annon"
   },
   "GQhtQW": {
     "name": "Geiss - Cauldron - painterly 3 (saturation remix)",
@@ -382,6 +407,18 @@
     "source_loader": "npm-butterchurn-presets",
     "source_ref": "An AdamFX n Martin Infusion 2 flexi - Why The Sky Looks Diffrent Today - AdamFx n Martin Infusion - Tack Tile Disfunction B"
   },
+  "cTbX2F": {
+    "name": "Martin - acid wiring",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Martin - acid wiring"
+  },
+  "JZgp3x": {
+    "name": "Martin - QBikal - Surface Turbulence",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Martin - QBikal - Surface Turbulence IIb"
+  },
   "gomlny": {
     "name": "Eo.S. + Zylot - skylight",
     "source_type": "milkdrop",
@@ -563,6 +600,12 @@
     "source_loader": "url",
     "source_url": "/presets/milkdrop/orb-quicksand.milk"
   },
+  "UAB9UR": {
+    "name": "Martin - chain breaker",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "martin - chain breaker"
+  },
   "t11nN4": {
     "name": "Flexi - infused with the spiral",
     "source_type": "milkdrop",
@@ -592,6 +635,12 @@
     "source_type": "milkdrop",
     "source_loader": "url",
     "source_url": "/presets/milkdrop/rovastar-loadus-geiss-fractaldrop-triple-mix.milk"
+  },
+  "HrPXRc": {
+    "name": "Krash + Illusion - Spiral Movement",
+    "source_type": "milkdrop",
+    "source_loader": "npm-butterchurn-presets",
+    "source_ref": "Krash + Illusion - Spiral Movement"
   },
   "Sgpe4q": {
     "name": "Geiss - 3 layers (Planar Mix)",

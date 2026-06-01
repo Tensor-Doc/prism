@@ -15,31 +15,40 @@
   },
   "annotation": {
     "vibe": [
-      "turbulent",
-      "textured",
-      "flowing"
+      "metallic",
+      "structural",
+      "fluid",
+      "kinetic"
     ],
-    "motion": 0.7,
+    "motion": 0.65,
     "palette_anchor": [
-      "#3aaaff",
-      "#ff8a3a",
-      "#1a1a1a"
+      "#c0c0c0",
+      "#1a2a4a",
+      "#a84020",
+      "#186840"
     ],
     "audio_affinity": {
-      "bass": 0.65,
+      "bass": 0.7,
       "mid": 0.6,
       "treble": 0.5
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "custom_wave",
+      "hue_cycle",
+      "audio_gating",
+      "frame_feedback"
+    ],
+    "technical_notes": "A complex 3D custom wave is rendered as a serpentine metallic ribbon, with its central region undergoing fluid, ripple-like deformations driven by the audio's mid and bass frequencies. The background plane transitions through a slow hue cycle of rich gradients, while a textured ground plane provides depth. The overall structure rotates dynamically in 3D space, utilizing per-frame equations to modulate perspective and orientation.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:33:32.191Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-qbikal-turbulence.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-qbikal-turbulence.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-qbikal-turbulence.jpg",
+    "video_size_bytes": 7057122
   },
   "contribution": {
     "added_by": "scottspace",

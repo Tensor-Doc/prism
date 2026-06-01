@@ -15,31 +15,41 @@
   },
   "annotation": {
     "vibe": [
-      "mechanical",
-      "rhythmic",
-      "industrial"
+      "cosmic",
+      "kinetic",
+      "explosive",
+      "celestial"
     ],
-    "motion": 0.75,
+    "motion": 0.65,
     "palette_anchor": [
-      "#ff8a3a",
-      "#3aaaff",
-      "#0a0a0a"
+      "#0a0512",
+      "#d9267c",
+      "#86d926",
+      "#26d9b9"
     ],
     "audio_affinity": {
       "bass": 0.85,
-      "mid": 0.6,
-      "treble": 0.3
+      "mid": 0.4,
+      "treble": 0.6
     },
-    "techniques": null,
-    "technical_notes": null,
+    "techniques": [
+      "particle_system",
+      "beat_burst",
+      "decay_trail",
+      "bloom_glow",
+      "frame_feedback"
+    ],
+    "technical_notes": "Custom waves configured as dotted particle trails radiate outward, with their radial velocity and scale driven by the music's bass. A high decay rate in the frame feedback loop causes the trails to quickly dissolve into sparse points between beat-gated bursts. The background features a subtle gradient shift while the particles maintain vibrant, distinct hues.",
     "brand_safe": true,
     "atelier": false,
-    "model": "seed",
-    "version": 1,
-    "captured_at": "2026-05-29T00:00:00.000Z"
+    "model": "gemini-flash-latest",
+    "version": 2,
+    "captured_at": "2026-06-01T05:29:19.706Z"
   },
   "assets": {
-    "video": "/videos/milkdrop_martin-chain-breaker.webm"
+    "video": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/videos/milkdrop_martin-chain-breaker.webm",
+    "thumb": "https://pub-1d10399b1ce14a8ca47adb13f9f79a8a.r2.dev/thumbs/milkdrop_martin-chain-breaker.jpg",
+    "video_size_bytes": 4315039
   },
   "contribution": {
     "added_by": "scottspace",
