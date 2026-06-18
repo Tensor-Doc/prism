@@ -210,6 +210,14 @@ wss.on("connection", (ws) => {
 const tickIntervalMs = 1000 / TICK_HZ;
 let lastTickAt = Date.now();
 setInterval(() => {
+  // No listeners → no work. Fly's auto_stop_machines will eventually
+  // stop the machine, but until then we shouldn't keep walking the
+  // slot pool for no reason. Re-arm `lastTickAt` so the first frame
+  // after someone connects doesn't see a giant `dt`.
+  if (wss.clients.size === 0) {
+    lastTickAt = Date.now();
+    return;
+  }
   const now = Date.now();
   const dt = (now - lastTickAt) / 1000;
   lastTickAt = now;
