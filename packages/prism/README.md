@@ -162,6 +162,31 @@ lookup("7Hq3pK");          // { name, source_type, source_url, ... }
 shortIdToGraph("7Hq3pK");  // ready-to-use PrismGraph
 ```
 
+## External signals (drive the visualization from anywhere)
+
+Two methods let you steer the visualization from non-audio sources —
+a network packet, an IoT heartbeat, another peer's cursor:
+
+- `player.milkdrop.setCxCy(cx, cy)` pins the active preset's flow
+  center (`cx`, `cy` are `0..1`). The override runs *after* the
+  preset's per-frame eqs, so it always wins. Pass `null` on either
+  axis to release. Persists across preset swaps — patches the
+  butterchurn equation runner prototype once on first call.
+- `player.synth.readBars(count = 16)` returns a log-binned spectrum
+  from the synthetic pad keeping milkdrop animated when no real
+  audio is shared. Useful for broadcasting a "house pad" out to
+  other clients, or for driving a VU / spectrum widget without
+  running your own analyser.
+
+The deployed [`prism.scott.ai`](https://prism.scott.ai) site
+composes these with a tiny WebSocket broadcast relay to produce
+synchronised **multi-user visualization**: ghost cursors, heart-
+pulse stars, host-scheduled preset swaps, and a center-of-mass
+crosshair you can pull around by clicking. Hit the `shared`
+segment in the top-right pill to try it. The relay (~60 lines),
+the client glue, and the rest of the recipe are
+[in the parent repo](https://github.com/Tensor-Doc/prism/tree/main/api/swarm-relay).
+
 ## Constructor options (full)
 
 ```ts

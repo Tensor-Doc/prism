@@ -130,6 +130,50 @@ use the `trail_decay` accumulator added in `0.1.4` to leave
 persistent painted streams across the canvas — the classic Robert
 Hodgin / iTunes Magnetosphere look.
 
+## 👥 Shared mode — visualize together
+
+The `shared` segment in the top-right pill drops you into a live
+multi-user room. Six "agent" cursors are already there, drifting
+around the canvas, each pulsing on its own random 60–80 BPM
+heartbeat. Joining warms one of them into your colour and starts it
+beating on your own rate. Anyone else in the room shows up the same
+way. Past six humans, the relay grows the pool dynamically; when
+you leave, the agent reclaims your slot.
+
+The first visitor in a session is the **host**. The pill says
+`shared · host` for them, `shared · audience` for everyone else.
+The host's preset rotation drives a `schedule` packet so every
+browser swaps to the new preset at the same wall-clock moment 2.5 s
+later. The host's audio capture — or, when nothing has been shared,
+the synthetic pad already keeping milkdrop alive — is broadcast as
+a compact 16-band spectrum at 30 Hz, so the whole room reacts to
+the same signal and renders the same VU and spectrum bars.
+
+The cyan crosshair sits at the swarm's **center of mass**. Click
+anywhere to pull it toward you — each click adds a weighted virtual
+peer at the click location that decays over ~2 s. One click on a
+five-peer room nudges the centroid ~38% toward you; three quick
+clicks dominate at ~65%; stop and the swarm reclaims its center.
+The same point pins milkdrop's `cx` / `cy` flow center for
+everyone, so the visualization itself follows the room's collective
+attention.
+
+Two slower signals run underneath. Every star pulses with a sonar
+shockwave on each peer's heartbeat. The crosshair's outer ring
+*breathes* at a speed driven by the **pooled-beat-train RMSSD** —
+coherent group beats give a slow majestic breath, scattered beats
+give a quick jittery one. That's the "synchronizing fireflies"
+signal a few neuroscience studies pick up in co-present groups
+(Goldstein et al., 2017, on couples; cardiac-coupling work in
+choirs and audiences).
+
+The relay itself is a 60-line `ws` broadcast server at
+[`api/swarm-relay/server.mjs`](api/swarm-relay/server.mjs), running
+on a small auto-stopping Fly machine. Point the site at a different
+relay with `?swarm=wss://your-relay.example.com`. Use
+`?swarm=mock` for in-process fake peers with no network at all —
+the same harness used in dev.
+
 ## 🤖 Use the visualizer from an AI agent
 
 A Claude Code skill ships with the repo. It lets any agent generate
