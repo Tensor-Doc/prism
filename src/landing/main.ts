@@ -602,8 +602,10 @@ conductor.onSwap = ({ graph, presetName }) => {
 };
 
 // Role changes inside shared mode: audience pauses local rotation;
-// host (re)starts it so the room keeps cycling.
+// host (re)starts it so the room keeps cycling. Also repaint the
+// pill so the visitor sees who's driving.
 swarmClient.onRoleChange = (role) => {
+  paintModePill(currentMode);
   if (currentMode !== "shared") return;
   if (role === "host") {
     if (rotateTimer == null) startRotation(AUDIO_FIRST_ROTATION_MS);
@@ -647,12 +649,35 @@ const modeSharedBtn = $<HTMLButtonElement>("#mode-shared");
 function paintModePill(mode: AppMode): void {
   modeSoloBtn.setAttribute("aria-pressed", String(mode === "solo"));
   modeSharedBtn.setAttribute("aria-pressed", String(mode === "shared"));
+  // Surface the role so the visitor can tell at a glance whether they
+  // are driving the room or watching it. Role lands a few hundred ms
+  // after entering shared (server-assigned via the hello packet), so
+  // we paint a transient "joining…" until it arrives.
+  if (mode === "shared") {
+    const role = swarmClient.currentRole;
+    modeSharedBtn.textContent = role === "host" ? "shared · host" : "shared · audience";
+  } else {
+    modeSharedBtn.textContent = "shared";
+  }
 }
 modeSoloBtn.addEventListener("click", () => {
-  void modeController.setMode("solo").then(() => paintModePill("solo"));
+  // Update mode-tracking state synchronously so the swarmLoop +
+  // onRoleChange handler see "solo" before the mode controller's
+  // async enterSolo path resolves. Without this, role packets can
+  // arrive mid-await and be ignored as not-in-shared.
+  currentMode = "solo";
+  paintModePill("solo");
+  // Belt-and-braces release of the milkdrop preset's cx/cy override —
+  // rapid pill toggles can otherwise leave a preset locked at an
+  // extreme flow-center long enough to look "saturated".
+  milkdrop.setCxCy(null, null);
+  milkdropCxCyOverridden = false;
+  void modeController.setMode("solo");
 });
 modeSharedBtn.addEventListener("click", () => {
-  void modeController.setMode("shared").then(() => paintModePill("shared"));
+  currentMode = "shared";
+  paintModePill("shared");
+  void modeController.setMode("shared");
 });
 
 // Per-frame loop active only in shared mode. Pulls swarm center-of-mass

@@ -75,14 +75,22 @@ export class WebSocketTransport implements SwarmTransport {
 
   private open(): void {
     if (this.intentionallyClosed) return;
+    // Close any in-flight socket from a prior start() so we don't leak
+    // a parallel connection to the relay (each one occupies a slot).
+    if (this.ws) {
+      try { this.ws.close(1000, "client-restart"); } catch { /* ignore */ }
+      this.ws = null;
+    }
+    let myWs: WebSocket;
     try {
-      this.ws = new WebSocket(this.url);
+      myWs = new WebSocket(this.url);
     } catch (err) {
       console.warn("[swarm-ws] construct failed:", err);
       this.scheduleReconnect();
       return;
     }
-    this.ws.addEventListener("open", () => {
+    this.ws = myWs;
+    myWs.addEventListener("open", () => {
       this.backoff = INITIAL_BACKOFF_MS;
       // Flush any packets we buffered while disconnected.
       for (const p of this.outboundQueue) {
@@ -90,14 +98,16 @@ export class WebSocketTransport implements SwarmTransport {
       }
       this.outboundQueue.length = 0;
     });
-    this.ws.addEventListener("message", (ev) => {
+    myWs.addEventListener("message", (ev) => {
+      // If a newer connection has taken over, ignore stale messages
+      // arriving on an older socket (it's been close()'d but the close
+      // event hasn't fired yet).
+      if (this.ws !== myWs) return;
       let msg: ServerPacket;
       try { msg = JSON.parse(typeof ev.data === "string" ? ev.data : ""); }
       catch { return; }
       if (msg.kind === "hello") {
         this.serverId = msg.id;
-        // Surface the initial role through the same packet stream that
-        // handles later role changes — SwarmClient subscribes once.
         if (msg.role) {
           for (const cb of this.subscribers) {
             cb({ kind: "role", role: msg.role, t: Date.now() });
@@ -113,12 +123,15 @@ export class WebSocketTransport implements SwarmTransport {
         for (const cb of this.subscribers) cb(msg);
       }
     });
-    this.ws.addEventListener("close", () => {
+    myWs.addEventListener("close", () => {
+      // Only react if this is still the active socket — a newer one
+      // could already be in place after a rapid stop/start cycle.
+      if (this.ws !== myWs) return;
       this.ws = null;
       this.serverId = null;
       this.scheduleReconnect();
     });
-    this.ws.addEventListener("error", () => {
+    myWs.addEventListener("error", () => {
       // Close handler also fires after error; reconnect lives there.
     });
   }
