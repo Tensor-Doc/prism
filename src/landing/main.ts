@@ -21,6 +21,15 @@ import { TabVideoSource } from "./image-sources/tab-video";
 import { NasaImagesSource } from "./image-sources/nasa-images";
 import { UnsplashImagesSource } from "./image-sources/unsplash-images";
 import { Slideshow } from "./slideshow";
+import { SwarmClient } from "./swarm/client";
+import { MockSwarmTransport } from "./swarm/mock-transport";
+import { WebSocketTransport } from "./swarm/ws-transport";
+import type { SwarmTransport } from "./swarm/transport";
+import { SwarmOverlay } from "./swarm/overlay";
+import { BroadcastBridge } from "./swarm/audio-bridge";
+import { ModeController, type AppMode } from "./swarm/mode";
+import { HeartFallback } from "./swarm/heart-fallback";
+import { Conductor } from "./swarm/conductor";
 
 function $<T extends HTMLElement = HTMLElement>(sel: string): T {
   const el = document.querySelector<T>(sel);
@@ -189,34 +198,44 @@ function hideThinking(): void {
   thinkingPopup?.setAttribute("data-hidden", "");
 }
 
-function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
-  if (rotateTimer != null) return;
-  const tick = (): void => {
-    // Try the atelier pool first — picks across both milkdrop and
-    // shadertoy entries flagged brand_safe + atelier. The runtime
-    // handles backend switching, so the play button visibly cycles
-    // no matter which backend was active.
-    const entry = pickRotationEntry();
-    if (entry) {
-      const graph = rotEntryToGraph(entry);
+/** Apply a rotation tick locally (solo mode) or via the conductor
+ *  (shared+host). In shared+audience we don't get here — the timer
+ *  is stopped when entering audience role. */
+function triggerRotationTick(): void {
+  const entry = pickRotationEntry();
+  if (entry) {
+    const graph = rotEntryToGraph(entry);
+    if (currentMode === "shared" && swarmClient.currentRole === "host") {
+      // Host: broadcast the swap. Local apply will fire from
+      // conductor.onSwap when the scheduled moment arrives.
+      conductor.broadcast(graph, entry.name);
+    } else {
       const result = runtime.apply(graph, ROTATE_BLEND_S);
       if (result.ok) {
         graphFlow.render(graph);
         refreshShaderFeed();
         updateSkillDisplay(entry.name);
       }
-    } else {
-      // Catalog hasn't loaded yet — fall back to bundle random so the
-      // button isn't dead on first ticks. Same milkdrop-only safeguard
-      // as before: drop back to milkdrop so the swap is visible.
-      if (player.activeBackend === "shadertoy") {
-        player.setActiveBackend("milkdrop");
-        graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
-        refreshShaderFeed();
-      }
-      const newName = milkdrop.loadRandom(ROTATE_BLEND_S);
-      updateSkillDisplay(newName);
     }
+  } else {
+    // Catalog hasn't loaded yet — fall back to bundle random so the
+    // button isn't dead on first ticks. Skip in shared mode since
+    // milkdrop.loadRandom can't be synchronised across clients.
+    if (currentMode === "shared") return;
+    if (player.activeBackend === "shadertoy") {
+      player.setActiveBackend("milkdrop");
+      graphFlow.showChain(["signal.audio", "lf.milkdrop", "sink.display"], "rotate");
+      refreshShaderFeed();
+    }
+    const newName = milkdrop.loadRandom(ROTATE_BLEND_S);
+    updateSkillDisplay(newName);
+  }
+}
+
+function startRotation(initialMs = ROTATE_INTERVAL_MS): void {
+  if (rotateTimer != null) return;
+  const tick = (): void => {
+    triggerRotationTick();
     rotateTimer = window.setTimeout(tick, ROTATE_INTERVAL_MS);
   };
   rotateTimer = window.setTimeout(tick, initialMs);
@@ -284,6 +303,12 @@ const player = new PrismPlayer({
 });
 const { audioCtx, synth, milkdrop, runtime } = player;
 
+// Dev-only debug hook so puppeteer probes (and devtools) can reach
+// the player. Stripped from prod by Vite's import.meta.env replacement.
+if (import.meta.env.DEV) {
+  (window as unknown as { __prism?: typeof player }).__prism = player;
+}
+
 const resumeAudio = (): void => {
   if (audioCtx.state === "suspended") void audioCtx.resume();
 };
@@ -339,6 +364,10 @@ new ChromeIdle({ idleMs: 4_000, cursorHideExtraMs: 2_000, startFaded: artModeFro
 // Pump the synth's energy into cursor-field so its halo also breathes with
 // the same "music" milkdrop is reacting to. Stopped once real audio kicks in.
 let synthDrivesCursor = true;
+// Mirror of modeController.current — declared up here so handlers wired
+// before the swarm block (e.g. field.onCursorVelocity) can read it
+// without hitting a TDZ on the modeController const.
+let currentMode: AppMode = "solo";
 
 // Centralised input pulses (click/dblclick), consume-on-read each frame.
 // Pulses are control variables — see input-pulses.ts.
@@ -412,7 +441,11 @@ dimToggle.addEventListener("click", () => {
 
 // ── VU bars ────────────────────────────────────────────────
 const cursorVu = new Vu($<HTMLCanvasElement>("#vu-cursor"), "cyan");
-const audioVu = new Vu($<HTMLCanvasElement>("#vu-audio"), "cyan");
+// Audio row uses a mini-spectrum (same widget class as the big STATE
+// spectrum) so it reads as a tiny version of it — same bands, same
+// orientation (bass on left, treble on right). Cursor + watch stay as
+// time-history Vus since they're 1-D scalars over time.
+const audioMiniSpectrum = new Spectrum($<HTMLCanvasElement>("#vu-audio"));
 const watchVu = new Vu($<HTMLCanvasElement>("#vu-watch"), "orange");
 
 // Drive cursor VU + readout from field velocity
@@ -426,7 +459,10 @@ field.onCursorVelocity = (speedPxPerSec) => {
   // cursor modulate it: position controls bass/treble balance, velocity
   // triggers a beat envelope. This is what makes milkdrop visibly react
   // to mouse movement before real audio is shared.
-  if (synthDrivesCursor) {
+  //
+  // In shared mode the swarm's center-of-mass drives the synth instead
+  // (see swarmLoop) — skip the local-cursor path so the two don't fight.
+  if (synthDrivesCursor && currentMode === "solo") {
     const c = field.cursorPosition;
     if (c.x > -1000) {
       const x01 = c.x / window.innerWidth;
@@ -514,6 +550,180 @@ function hideSlideshowCard(): void { slideshowOverlay.hide(); }
 // ── audio capture ──────────────────────────────────────────
 const audio = new AudioCapture(audioCtx);
 let liveAudioSource: { ctx: AudioContext; node: AudioNode } | null = null;
+/** Which local audio source is currently driving the analyzer. Mic and
+ *  tab are mutually exclusive (they'd compete for the same context).
+ *  Declared up here so the swarm wiring below can read it; mutated by
+ *  armAudio / clearActiveAudioRows lower in the file. */
+let audioMode: "tab" | "mic" | null = null;
+
+// ── swarm (multi-user mode) ────────────────────────────────
+// Solo is the default; the user opts in via the top-status mode pill.
+// Shared mode goes through the deployed Fly relay by default — no
+// URL flag needed. Overrides:
+//   ?swarm=mock          — in-process fake peers (offline test harness).
+//   ?swarm=local         — ws://localhost:8081 (dev with `pnpm swarm-relay`).
+//   ?swarm=<ws[s]://...> — any custom relay URL.
+const PROD_RELAY_URL = "wss://prism-swarm-relay.fly.dev";
+const DEV_RELAY_URL = "ws://localhost:8081";
+const swarmTransport: SwarmTransport = (() => {
+  const flag = new URLSearchParams(window.location.search).get("swarm");
+  if (flag === "mock") return new MockSwarmTransport();
+  if (flag === "local") return new WebSocketTransport(DEV_RELAY_URL);
+  if (flag && (flag.startsWith("ws://") || flag.startsWith("wss://"))) {
+    return new WebSocketTransport(flag);
+  }
+  // Default: deployed Fly relay. Real shared mode without ceremony.
+  return new WebSocketTransport(PROD_RELAY_URL);
+})();
+const swarmClient = new SwarmClient(swarmTransport);
+const swarmOverlay = new SwarmOverlay($<HTMLCanvasElement>("#swarm-overlay"), swarmClient);
+const broadcastBridge = new BroadcastBridge(swarmClient);
+// Heart fallback: emits beats at a stable per-session fake BPM whenever
+// the user is in shared mode and doesn't have a real watch connected.
+// (Real Pulsoid HR would replace this — wire-up is a follow-up.)
+const heartFallback = new HeartFallback(swarmClient);
+// Pulse the local cursor halo on every local beat so the visitor sees
+// their own heartbeat — the swarm overlay only renders other peers.
+heartFallback.onLocalBeat = () => {
+  field.emitRingAtCursor(0.6, "61, 255, 229");
+};
+
+// Conductor: synchronises preset swaps across all clients in shared
+// mode. Host broadcasts a schedule packet 2.5 s ahead; everyone fires
+// the swap at the same wall-clock moment. UI updates come from onSwap,
+// not the rotation tick, so the host stays in sync with audience too.
+const conductor = new Conductor(swarmClient, player);
+conductor.onSwap = ({ graph, presetName }) => {
+  if (typeof graph === "object" && graph !== null && "schema" in graph) {
+    graphFlow.render(graph as PrismGraph);
+  }
+  refreshShaderFeed();
+  if (presetName) updateSkillDisplay(presetName);
+};
+
+// Role changes inside shared mode: audience pauses local rotation;
+// host (re)starts it so the room keeps cycling.
+swarmClient.onRoleChange = (role) => {
+  if (currentMode !== "shared") return;
+  if (role === "host") {
+    if (rotateTimer == null) startRotation(AUDIO_FIRST_ROTATION_MS);
+  } else {
+    stopRotation();
+    conductor.cancelPending();
+  }
+};
+const modeController = new ModeController({
+  player,
+  swarm: swarmClient,
+  getSavedAudio: () => liveAudioSource?.node ?? null,
+  setBodyMode: (m) => document.body.setAttribute("data-app-mode", m),
+  onChange: (m) => {
+    currentMode = m;
+    swarmOverlay.setActive(m === "shared");
+    if (m === "shared") {
+      heartFallback.start();
+      // Audience: stop local rotation — host's schedule packets will
+      // drive swaps. Host: keep rotation running. Role isn't known
+      // immediately — onRoleChange fires when hello arrives and will
+      // toggle correctly.
+      if (swarmClient.currentRole !== "host") {
+        stopRotation();
+      }
+    } else {
+      heartFallback.stop();
+      conductor.cancelPending();
+      // Returning to solo — make sure the rotation is running again.
+      if (rotateTimer == null) startRotation();
+    }
+    // Light up the audio row + hide the "play with audio" pin while
+    // the swarm feed is providing audio.
+    refreshAudioRowUI();
+  },
+});
+document.body.setAttribute("data-app-mode", "solo");
+
+const modeSoloBtn = $<HTMLButtonElement>("#mode-solo");
+const modeSharedBtn = $<HTMLButtonElement>("#mode-shared");
+function paintModePill(mode: AppMode): void {
+  modeSoloBtn.setAttribute("aria-pressed", String(mode === "solo"));
+  modeSharedBtn.setAttribute("aria-pressed", String(mode === "shared"));
+}
+modeSoloBtn.addEventListener("click", () => {
+  void modeController.setMode("solo").then(() => paintModePill("solo"));
+});
+modeSharedBtn.addEventListener("click", () => {
+  void modeController.setMode("shared").then(() => paintModePill("shared"));
+});
+
+// Per-frame loop active only in shared mode. Pulls swarm center-of-mass
+// into the player's cursor-modulation surface so the milkdrop preset
+// reacts to the *collective* motion, and broadcasts this client's own
+// cursor to the swarm at the same cadence so other visitors see it.
+function swarmLoop(): void {
+  requestAnimationFrame(swarmLoop);
+  if (currentMode !== "shared") {
+    // Solo — make sure any prior milkdrop cx/cy override is released.
+    if (milkdropCxCyOverridden) {
+      milkdrop.setCxCy(null, null);
+      milkdropCxCyOverridden = false;
+    }
+    return;
+  }
+
+  // Drive the synth + milkdrop flow-center from the collective cursor.
+  const com = swarmClient.centerOfMass();
+  if (com.peerCount > 0) {
+    synth.setCursorModulation(com.x01, com.y01, com.magnitude);
+    // y01 is screen-space (top→bottom). Milkdrop's cy convention is the
+    // same — 0 = top, 1 = bottom — so we can pass straight through.
+    milkdrop.setCxCy(com.x01, com.y01);
+    milkdropCxCyOverridden = true;
+  } else if (milkdropCxCyOverridden) {
+    // Shared mode, no peers — release the override so the preset's
+    // own per_frame eqs reclaim the flow-center.
+    milkdrop.setCxCy(null, null);
+    milkdropCxCyOverridden = false;
+  }
+
+  // Audio without a local source: keep the row alive from whatever's
+  // actually driving milkdrop. Host pulls the local SyntheticSignal's
+  // spectrum and broadcasts it; audience reads incoming spectrum off
+  // the wire. Both drive the same VU + spectrum widgets, so the room
+  // animates from a real signal — not a flat 3-scalar smoothing.
+  if (audioMode === null) {
+    const isHost = swarmClient.currentRole === "host";
+    let audio: number[];
+    if (isHost) {
+      audio = synth.readBars(16);
+      broadcastBridge.push(audio);
+    } else {
+      audio = swarmClient.getAudioBars();
+      // Until the host has broadcast (fresh join), fall back to the
+      // local synth so the meters don't read dead.
+      if (audio.length === 0 || audio.every((v) => v < 0.005)) {
+        audio = synth.readBars(16);
+      }
+    }
+    spectrum.update(audio);
+    audioMiniSpectrum.update(audio);
+    // Loudest band drives the cursor halo so it pulses with the
+    // visible peaks of the spectrum, not a smoothed scalar.
+    let peak = 0;
+    for (const v of audio) if (v > peak) peak = v;
+    field.setAudioEnergy(peak);
+  }
+
+  // Broadcast our own cursor (normalised to viewport bounds).
+  const c = field.cursorPosition;
+  if (c.x > -1000) {
+    const x01 = c.x / window.innerWidth;
+    const y01 = c.y / window.innerHeight;
+    swarmClient.sendCursor(x01, y01);
+  }
+}
+let milkdropCxCyOverridden = false;
+requestAnimationFrame(swarmLoop);
+
 audio.onSource = (source, ctx) => {
   // Real audio is here — stop the synthetic driver and route the real
   // source into the player (which routes it to both backends).
@@ -753,24 +963,67 @@ const micRow = $("#mic-row");
 const micRate = micRow.querySelector(".signal__rate") as HTMLElement;
 const micVu = new Vu($<HTMLCanvasElement>("#vu-mic"), "cyan");
 const audioEnergyEl = $("#audio-energy");
-/** Which audio source is currently driving the analyzer. Mic and tab
- *  are mutually exclusive — they'd compete for the same AudioContext
- *  source. Tracked here so the row UIs can reflect the active mode. */
-let audioMode: "tab" | "mic" | null = null;
 const spectrum = new Spectrum($<HTMLCanvasElement>("#spectrum-canvas"));
 
 audio.onEnergy = (f: AudioFeatures) => {
   field.setAudioEnergy(f.energy);
-  // Push to whichever VU bar matches the live mode so the meter
-  // animates on the row the user actually clicked.
-  if (audioMode === "mic") micVu.push(f.energy);
-  else audioVu.push(f.energy);
+  if (audioMode === "mic") {
+    // Mic energy stays a 1-D peak in its mini Vu — micVu is a Vu
+    // history widget. Audio row is now a mini-spectrum: same bars
+    // as the big STATE spectrum.
+    let peak = 0;
+    for (const v of f.bars) if (v > peak) peak = v;
+    micVu.push(peak);
+  } else {
+    audioMiniSpectrum.update(f.bars);
+  }
   spectrum.update(f.bars);
   audioEnergyEl.textContent = f.energy.toFixed(2);
+
+  if (currentMode === "shared") {
+    broadcastBridge.push(downsampleBars(f.bars, 16));
+  }
 };
+
+/** Average source bars down to `targetN` output bands. Used to fit
+ *  the local AudioCapture's 24-band spectrum into the swarm's 16-band
+ *  packet shape without losing the overall envelope. */
+function downsampleBars(src: number[], targetN: number): number[] {
+  const out = new Array<number>(targetN).fill(0);
+  if (src.length === 0) return out;
+  for (let i = 0; i < targetN; i++) {
+    const lo = Math.floor((i * src.length) / targetN);
+    const hi = Math.max(lo + 1, Math.floor(((i + 1) * src.length) / targetN));
+    let s = 0;
+    for (let j = lo; j < hi && j < src.length; j++) s += src[j];
+    out[i] = s / Math.max(1, hi - lo);
+  }
+  return out;
+}
 
 function rowOf(mode: "tab" | "mic"): { row: HTMLElement; rate: HTMLElement } {
   return mode === "tab" ? { row: audioRow, rate: audioRate } : { row: micRow, rate: micRate };
+}
+
+/** Reconcile the audio-row UI with the current state. Local audio
+ *  source wins (rendered as "live"); otherwise shared mode displays
+ *  "shared" — meaning we're receiving the audio feed from the host.
+ *  Solo with no source falls back to the connect-prompt baseline. */
+function refreshAudioRowUI(): void {
+  if (audioMode !== null) {
+    // Local audio active — the armAudio path already set the row up.
+    document.body.classList.add("audio-live");
+    return;
+  }
+  if (currentMode === "shared") {
+    audioRow.setAttribute("data-active", "");
+    audioRate.textContent = "shared";
+    document.body.classList.add("audio-live");
+  } else {
+    audioRow.removeAttribute("data-active");
+    audioRate.textContent = "connect";
+    document.body.classList.remove("audio-live");
+  }
 }
 
 function clearActiveAudioRows(): void {
@@ -780,9 +1033,12 @@ function clearActiveAudioRows(): void {
   }
   audioRate.textContent = "connect";
   micRate.textContent = "connect";
-  document.body.classList.remove("audio-live");
   field.setAudioEnergy(0);
   audioMode = null;
+  // refreshAudioRowUI will re-apply the "shared" treatment if we're
+  // still in shared mode — the user stopping local audio shouldn't
+  // make the swarm feed look offline.
+  refreshAudioRowUI();
 }
 
 async function armAudio(mode: "tab" | "mic" = "tab"): Promise<void> {

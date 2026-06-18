@@ -72,6 +72,29 @@ export class SyntheticSignal {
     return s / 255 / this.fft.length;
   }
 
+  /** Log-binned spectrum bars (0..1 each) for display widgets. The
+   *  default 16 is compact enough to broadcast over a thin channel
+   *  (e.g., a multi-user relay) while preserving enough resolution
+   *  to read as a real spectrum. */
+  readBars(count = 16): number[] {
+    if (this.stopped) return new Array<number>(count).fill(0);
+    this.analyser.getByteFrequencyData(this.fft as unknown as Uint8Array<ArrayBuffer>);
+    const n = this.fft.length;
+    const minBin = 2; // skip DC + sub-bass artifacts
+    const out: number[] = new Array<number>(count).fill(0);
+    for (let b = 0; b < count; b++) {
+      const t0 = b / count;
+      const t1 = (b + 1) / count;
+      const lo = Math.max(minBin, Math.floor(minBin + (n - minBin) * (t0 * t0)));
+      const hi = Math.max(lo + 1, Math.floor(minBin + (n - minBin) * (t1 * t1)));
+      let s = 0;
+      let cnt = 0;
+      for (let i = lo; i < hi && i < n; i++) { s += this.fft[i]; cnt++; }
+      out[b] = cnt > 0 ? (s / cnt) / 255 : 0;
+    }
+    return out;
+  }
+
   /** Returns smoothed bass/mid/treble bands (0..1 each). */
   readBands(): { bass: number; mid: number; treble: number } {
     if (this.stopped) return { bass: 0, mid: 0, treble: 0 };

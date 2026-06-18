@@ -921,7 +921,10 @@ export function createParticlesBackground(
     get presetName(): string { return currentName; },
     get currentUrl(): string | null { return currentUrl; },
     connectAudio: (node) => {
-      audioSource.disconnect(analyser);
+      // Defensive: a sibling backend's earlier connectAudio may have
+      // unhooked the prior source via a no-arg disconnect (see
+      // shadertoy.ts), or the prior source may already be stopped.
+      try { audioSource.disconnect(analyser); } catch { /* already gone */ }
       audioSource = node;
       audioSource.connect(analyser);
     },

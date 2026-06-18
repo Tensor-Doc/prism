@@ -54,6 +54,13 @@ export interface MilkdropBg {
    *  at public/presets/milkdrop/<slug>.milk. Returns the pretty name on
    *  success; throws on fetch / parse error so callers can surface it. */
   loadFromUrl: (url: string, blendSeconds?: number) => Promise<string>;
+  /** Override the preset's flow-center coords (cx, cy) every frame.
+   *  Pass null on either axis to release that override. Values are 0..1
+   *  (0.5, 0.5 = canvas center; (0,0) = top-left). Persists across
+   *  preset swaps. Implemented as a one-time prototype patch on
+   *  butterchurn's PresetEquationRunner that runs *after* the preset's
+   *  per_frame eqs, so it wins regardless of what the preset writes. */
+  setCxCy: (cx: number | null, cy: number | null) => void;
   destroy: () => void;
 }
 
@@ -165,10 +172,51 @@ export function createMilkdropBackground(
   };
   window.addEventListener("resize", onResize, { passive: true });
 
+  // ── cx/cy override ──────────────────────────────────────────
+  // Butterchurn's PresetEquationRunner writes cx/cy into mdVSFrame
+  // during runFrameEquations(). The warp pass reads them right after.
+  // To override from outside, we patch the runner's prototype once so
+  // every preset's per_frame eqs run, then our values stomp the result.
+  // Lazy: the runner only exists after the first preset loads, so we
+  // try to patch on each render until it succeeds, then no-op forever.
+  let overrideCx: number | null = null;
+  let overrideCy: number | null = null;
+  let prototypePatched = false;
+  const tryPatchPrototype = (): void => {
+    if (prototypePatched) return;
+    const vAny = visualizer as unknown as {
+      renderer?: { presetEquationRunner?: object };
+    };
+    const runner = vAny.renderer?.presetEquationRunner;
+    if (!runner) return;
+    const proto = Object.getPrototypeOf(runner) as {
+      runFrameEquations: (globalVars: unknown) => void;
+      __prismPatched?: boolean;
+    };
+    if (proto.__prismPatched) {
+      prototypePatched = true;
+      return;
+    }
+    const original = proto.runFrameEquations;
+    proto.runFrameEquations = function patched(
+      this: { mdVSFrame?: Record<string, number> },
+      globalVars: unknown,
+    ): void {
+      original.call(this, globalVars);
+      if (this.mdVSFrame) {
+        if (overrideCx !== null) this.mdVSFrame.cx = overrideCx;
+        if (overrideCy !== null) this.mdVSFrame.cy = overrideCy;
+      }
+    };
+    proto.__prismPatched = true;
+    prototypePatched = true;
+  };
+
   let running = true;
   let firstFrame = true;
   const loop = (): void => {
     if (!running) return;
+    if (!prototypePatched) tryPatchPrototype();
     visualizer.render();
     if (firstFrame) {
       firstFrame = false;
@@ -224,6 +272,10 @@ export function createMilkdropBackground(
       const stem = url.split("/").pop()?.replace(/\.milk$/, "") ?? url;
       currentRaw = stem;
       return prettyPresetName(stem);
+    },
+    setCxCy: (cx, cy) => {
+      overrideCx = cx;
+      overrideCy = cy;
     },
     destroy: () => {
       running = false;

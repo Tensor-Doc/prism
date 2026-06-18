@@ -57,6 +57,10 @@
     </div>
 
     <div id="prism-stage" aria-hidden="true"></div>
+    <!-- Multi-user ghost cursors + center-of-mass marker. Paints under
+         #field so the local cursor halo always sits on top. Hidden in
+         solo mode (display:none via [data-app-mode="solo"] body attr). -->
+    <canvas id="swarm-overlay" aria-hidden="true"></canvas>
     <canvas id="field" aria-hidden="true"></canvas>
     <canvas id="slideshow" aria-hidden="true"></canvas>
     <!-- #slideshow-card is created dynamically by ImageOverlay
@@ -105,6 +109,14 @@
         <span class="version-tag" id="version-tag" title=""></span>
       </div>
       <div class="statusbar__right">
+        <!-- Solo / Shared mode toggle. Solo (default) is what the page
+             has always been: local cursor + audio. Shared boots a mock
+             swarm transport (no server in this pass) so visitors can
+             see ghost cursors + a collective center-of-mass overlay. -->
+        <div class="mode-pill" role="group" aria-label="App mode" id="mode-pill">
+          <button class="mode-pill__seg" type="button" id="mode-solo" aria-pressed="true" title="Solo — local cursor + audio only">solo</button>
+          <button class="mode-pill__seg" type="button" id="mode-shared" aria-pressed="false" title="Shared — see other visitors as ghost cursors">shared</button>
+        </div>
         <button class="chip chip--dim" type="button" id="dim-toggle" title="Dim background (cycle)">
           <span class="chip__symbol" aria-hidden="true"></span>
         </button>

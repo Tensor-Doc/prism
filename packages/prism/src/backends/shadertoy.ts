@@ -228,7 +228,12 @@ export function createShadertoyBackground(
     get presetName(): string { return currentName; },
     get currentUrl(): string | null { return currentUrl; },
     connectAudio: (node) => {
-      audioSource.disconnect();
+      // Disconnect only THIS backend's analyser — the no-argument form
+      // disconnect() would unhook the source from every destination it
+      // feeds (milkdrop's analyser, particles', etc.) and break sibling
+      // backends mid-swap. Guard against the prior connection already
+      // being gone (e.g. a stopped synthetic source).
+      try { audioSource.disconnect(analyser); } catch { /* already gone */ }
       audioSource = node;
       audioSource.connect(analyser);
     },

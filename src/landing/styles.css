@@ -29,6 +29,14 @@ body[data-chrome-idle] .bracket {
   opacity: 0;
   pointer-events: none;
 }
+/* …but once a panel has been explicitly collapsed, its expand chip is
+   the only path back. Keep it visible even when the rest of the chrome
+   has faded so the user can always recover the panel. */
+body[data-chrome-idle] .chip--sources[data-visible],
+body[data-chrome-idle] .chip--state[data-visible] {
+  opacity: 1;
+  pointer-events: auto;
+}
 /* .prompt has a hardcoded base opacity:0 (line ~905, needed for the
    flash-free entrance) AND its own transition list that overrides
    opacity transitions. We bypass the base with inline opacity:1 set
@@ -140,12 +148,28 @@ body[data-dim="2"] .bg-canvas { opacity: 0.28; filter: saturate(0.3); }
   width: 100vw;
   height: 100vh;
   display: block;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   opacity: 0;
   mix-blend-mode: screen;
   animation: field-in 1400ms var(--ease-spring) 200ms forwards;
 }
+/* Swarm overlay — ghost cursors + center-of-mass marker. Sits below
+   #field so the local cursor halo always paints on top. Visible only
+   in shared mode (toggled by body[data-app-mode]). */
+#swarm-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 200ms var(--ease-spring);
+}
+body[data-app-mode="shared"] #swarm-overlay { opacity: 1; }
 
 #slideshow {
   position: fixed;
@@ -413,6 +437,40 @@ body[data-dim="2"] .bg-canvas { opacity: 0.28; filter: saturate(0.3); }
 
 .chip--auth { padding: 0 var(--space-4); }
 
+/* Solo / Shared mode pill — segmented control in the top statusbar.
+   Same height + radius as the chips on either side; active segment
+   uses the cyan accent so the current mode reads at a glance. */
+.mode-pill {
+  display: inline-flex;
+  align-items: stretch;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+.mode-pill__seg {
+  padding: 0 var(--space-3);
+  background: transparent;
+  border: 0;
+  color: var(--fg-muted);
+  font: inherit;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background var(--dur-quick) var(--ease-spring),
+              color var(--dur-quick) var(--ease-spring);
+}
+.mode-pill__seg + .mode-pill__seg {
+  border-left: 1px solid var(--glass-border);
+}
+.mode-pill__seg:hover { color: var(--fg); }
+.mode-pill__seg[aria-pressed="true"] {
+  background: var(--cyan-12);
+  color: var(--cyan);
+}
+
 .chip__sep { color: var(--mid); }
 
 /* Dim toggle chip — three-state cycle: full / dim / very dim */
@@ -587,8 +645,12 @@ body.audio-live .chip__audio-dot {
 
 .signal--clickable { cursor: pointer; }
 /* Lift the whole row (label + glyph + rate) to full contrast on hover
-   so muted "connect" rows become easy to read before they're active. */
+   so muted "connect" rows become easy to read before they're active.
+   .signal__name carries .label which pins color to --fg-muted with
+   higher specificity than the row's :hover — override explicitly. */
 .signal--clickable:hover { opacity: 1; color: var(--fg); }
+.signal--clickable:hover .signal__name { color: var(--fg); }
+.signal--clickable:hover .signal__glyph { color: var(--fg); }
 .signal--clickable:hover .signal__rate { color: var(--cyan); }
 .signal--clickable[data-active]:hover .signal__rate { color: var(--orange); }
 .signal--clickable[data-active][data-signal="gallery"]:hover .signal__rate { color: var(--lime); }

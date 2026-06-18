@@ -1,0 +1,11 @@
+{
+  "name": "prism-swarm-relay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.21.0"
+  }
+}
