@@ -118,7 +118,7 @@ export class WebSocketTransport implements SwarmTransport {
       if (
         msg.kind === "cursor" || msg.kind === "audio" || msg.kind === "beat" ||
         msg.kind === "bpm"    || msg.kind === "bye"   || msg.kind === "schedule" ||
-        msg.kind === "role"
+        msg.kind === "role"   || msg.kind === "pull"
       ) {
         for (const cb of this.subscribers) cb(msg);
       }

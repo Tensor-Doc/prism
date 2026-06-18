@@ -16,6 +16,16 @@ const PEER_TTL_MS = 4_000;       // an agent slot ticks every 33 ms, so 4 s is "
 const TRAIL_LEN = 12;
 const BEAT_HISTORY_MS = 30_000;
 const BEAT_HISTORY_MAX = 600;    // hard cap to bound memory
+/** Per-pull weight (in "virtual peers"). 3 peers means one click on a
+ *  5-peer room nudges the CoM ~38% toward the click; pile on quickly
+ *  and you dominate. */
+const PULL_WEIGHT = 3;
+/** Exponential time-constant for pull decay (seconds). Keep clicking
+ *  to maintain pressure; stop and the swarm reclaims its center. */
+const PULL_TAU = 2.0;
+/** Hard cap on stored pulls — one click every ~10 ms for ~300 ms still
+ *  fits, and old ones are decayed near-zero anyway. */
+const PULL_MAX = 32;
 
 export interface PeerTrailPoint { x01: number; y01: number; t: number }
 
@@ -57,12 +67,19 @@ export interface MetaHRV {
   samples: number;
 }
 
+interface PullEvent { x01: number; y01: number; bornAt: number }
+
 export class SwarmClient {
   private readonly transport: SwarmTransport;
   private readonly peers = new Map<string, PeerState>();
   /** Pooled beat timestamps from all peers in the recent past, used
    *  for meta-HRV. Ordered oldest-first; trimmed each gc. */
   private readonly beatTrain: number[] = [];
+  /** Recent click-pulls from any peer (including self). Each entry
+   *  decays exponentially; centerOfMass() integrates them as weighted
+   *  virtual peers so the swarm's center drifts toward where people
+   *  are clicking. Ordered oldest-first; trimmed each gc. */
+  private readonly pulls: PullEvent[] = [];
   private currentAudioBars: number[] = EMPTY_AUDIO;
   private unsub: (() => void) | null = null;
   private gcTimer: number | null = null;
@@ -104,6 +121,7 @@ export class SwarmClient {
     if (this.gcTimer != null) { clearInterval(this.gcTimer); this.gcTimer = null; }
     this.peers.clear();
     this.beatTrain.length = 0;
+    this.pulls.length = 0;
     this.currentAudioBars = EMPTY_AUDIO;
     this.serverOffsetMs = 0;
     this.offsetSamples = 0;
@@ -175,12 +193,29 @@ export class SwarmClient {
     this.transport.send({ kind: "bpm", id: "self", bpm, t: performance.now() });
   }
 
+  /** Click as a pull on the center-of-mass. Broadcasts AND applies
+   *  locally (the relay doesn't echo back to sender, but we want the
+   *  clicker's own CoM to react immediately too). */
+  sendPull(x01: number, y01: number): void {
+    if (!this.running) return;
+    this.transport.send({ kind: "pull", id: "self", x01, y01, t: performance.now() });
+    this.addPullLocal(x01, y01);
+  }
+
+  /** Internal: record a pull for the CoM weighting. */
+  private addPullLocal(x01: number, y01: number): void {
+    this.pulls.push({ x01, y01, bornAt: performance.now() });
+    if (this.pulls.length > PULL_MAX) this.pulls.shift();
+  }
+
   centerOfMass(): CenterOfMass {
     const peers = this.getPeers();
     if (peers.length === 0) {
       return { x01: 0.5, y01: 0.5, magnitude: 0, direction: 0, peerCount: 0 };
     }
+    // Peer contributions — each peer = 1 unit of weight.
     let sx = 0, sy = 0, svx = 0, svy = 0;
+    let totalW = peers.length;
     for (const p of peers) {
       sx += p.x01;
       sy += p.y01;
@@ -192,13 +227,25 @@ export class SwarmClient {
         svy += (b.y01 - a.y01) / dt;
       }
     }
+    // Pull contributions — each unfaded click adds a weighted virtual
+    // peer at the click location. Clicks build pressure; stop and the
+    // weight decays back to 0 over ~6× tau.
+    const nowPerf = performance.now();
+    for (const pull of this.pulls) {
+      const age = (nowPerf - pull.bornAt) / 1000;
+      const w = PULL_WEIGHT * Math.exp(-age / PULL_TAU);
+      if (w < 0.01) continue;
+      sx += pull.x01 * w;
+      sy += pull.y01 * w;
+      totalW += w;
+    }
     const n = peers.length;
     const avgVx = svx / n;
     const avgVy = svy / n;
     const speed = Math.hypot(avgVx, avgVy);
     return {
-      x01: sx / n,
-      y01: sy / n,
+      x01: sx / totalW,
+      y01: sy / totalW,
       magnitude: Math.min(1, speed / 1.5),
       direction: speed > 0.01 ? Math.atan2(avgVy, avgVx) : 0,
       peerCount: n,
@@ -296,6 +343,8 @@ export class SwarmClient {
     } else if (p.kind === "role") {
       this.role = p.role;
       if (this.onRoleChange) this.onRoleChange(p.role);
+    } else if (p.kind === "pull") {
+      this.addPullLocal(p.x01, p.y01);
     }
   }
 
@@ -316,6 +365,12 @@ export class SwarmClient {
     const beats = this.beatTrain;
     while (beats.length > 0 && beats[beats.length - 1] - beats[0] > BEAT_HISTORY_MS) {
       beats.shift();
+    }
+    // Drop pulls whose weight has decayed below the threshold the CoM
+    // skip already enforces (≈6× tau). Cheap, just keeps the array bounded.
+    const pullCutoff = nowPerf - PULL_TAU * 6 * 1000;
+    while (this.pulls.length > 0 && this.pulls[0].bornAt < pullCutoff) {
+      this.pulls.shift();
     }
   }
 }

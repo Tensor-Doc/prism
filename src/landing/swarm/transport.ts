@@ -44,7 +44,12 @@ export type SwarmPacket =
     }
   /** Server tells this specific client its role has changed. Only the
    *  affected client receives a `role` packet. */
-  | { kind: "role"; role: SwarmRole; t: number };
+  | { kind: "role"; role: SwarmRole; t: number }
+  /** Click-as-pull: this peer pulls the swarm's center-of-mass toward
+   *  (x01, y01). Each pull contributes a weighted virtual peer to the
+   *  CoM and decays exponentially over ~2 s, so the user has to keep
+   *  clicking to maintain the bias. */
+  | { kind: "pull"; id: string; x01: number; y01: number; t: number };
 
 export type SwarmRole = "host" | "audience";
 

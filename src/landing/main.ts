@@ -384,6 +384,15 @@ function ambientLoop(): void {
   if (pulses.click.fired) {
     // Cursor field: cyan shockwave at click location
     field.emitRing(pulses.click.x, pulses.click.y, 1.0, CYAN);
+    // Shared mode: broadcast a pull on the swarm's center-of-mass.
+    // Each click adds a weighted virtual peer at the click location
+    // that decays over ~2 s — keep clicking to maintain the bias.
+    if (currentMode === "shared") {
+      swarmClient.sendPull(
+        pulses.click.x / window.innerWidth,
+        pulses.click.y / window.innerHeight,
+      );
+    }
   }
   if (pulses.dblclick.fired) {
     // Cursor field: bigger, orange double-pulse (two rings + halo flash)
@@ -391,6 +400,14 @@ function ambientLoop(): void {
     field.emitRing(pulses.dblclick.x, pulses.dblclick.y, 0.9, CYAN);
     // Synth: full-intensity bass kick — milkdrop sees a beat on every dblclick
     if (synthDrivesCursor) synth.pulseBeat(1.0);
+    // Shared mode: a second pull from the double-click stacks on top
+    // of the click's, so a dblclick effectively pulls twice as hard.
+    if (currentMode === "shared") {
+      swarmClient.sendPull(
+        pulses.dblclick.x / window.innerWidth,
+        pulses.dblclick.y / window.innerHeight,
+      );
+    }
   }
 
   requestAnimationFrame(ambientLoop);
